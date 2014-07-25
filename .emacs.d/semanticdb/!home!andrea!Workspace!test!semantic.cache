@@ -1,0 +1,36 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "for.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("for" code nil nil [1 37]))          
+    :file "for.py"
+    :pointmax 37
+    :fsize 36
+    :lastmodtime '(20873 1489)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "frame.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [1 11])
+            ("one" function nil nil [13 34])
+            ("two" function nil nil [35 58])
+            ("three" function nil nil [59 163])
+            ("show_frame" function (:arguments 
+              ( ("num" variable nil (reparse-symbol function_parameters) [179 182])
+                ("frame" variable nil (reparse-symbol function_parameters) [184 189]))              ) nil [164 389])
+            ("one" code nil nil [390 395]))          
+    :file "frame.py"
+    :pointmax 396
+    :fsize 395
+    :lastmodtime '(20874 22075)
+    :unmatched-syntax '((NAME 402 . 405) ($EOI 407 . 407) (NAME 402 . 405) ($EOI 407 . 407) (INDENT_BLOCK 290 . 515) (INDENT_BLOCK 290 . 515) (INDENT_BLOCK 212 . 807))
+    )
+   )
+  :file "!home!andrea!Workspace!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

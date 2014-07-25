@@ -1,0 +1,48 @@
+;; Object new_manual/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "new_manual/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SPHINXOPTS" variable nil nil [93 109])
+            ("SPHINXBUILD" variable (:default-value ("sphinx-build")) nil [109 138])
+            ("PAPER" variable nil nil [138 154])
+            ("BUILDDIR" variable (:default-value ("_build")) nil [154 177])
+            ("PAPEROPT_a4" variable (:default-value ("-D" "latex_paper_size=a4")) nil [200 241])
+            ("PAPEROPT_letter" variable (:default-value ("-D" "latex_paper_size=letter")) nil [241 286])
+            ("ALLSPHINXOPTS" variable (:default-value ("-d" "$(BUILDDIR)/doctrees" "$(PAPEROPT_$(PAPER))" "$(SPHINXOPTS)" ".")) nil [286 365])
+            ("I18NSPHINXOPTS" variable (:default-value ("$(PAPEROPT_$(PAPER))" "$(SPHINXOPTS)" ".")) nil [442 497])
+            (".PHONY" function (:arguments ("help" "clean" "html" "dirhtml" "singlehtml" "pickle" "json" "htmlhelp" "qthelp" "devhelp" "epub" "latex" "latexpdf" "text" "man" "changes" "linkcheck" "doctest" "gettext")) nil [498 640])
+            ("help" function nil nil [641 1834])
+            ("clean" function nil nil [1835 1865])
+            ("html" function nil nil [1866 2002])
+            ("dirhtml" function nil nil [2003 2151])
+            ("singlehtml" function nil nil [2152 2310])
+            ("pickle" function nil nil [2311 2451])
+            ("json" function nil nil [2452 2584])
+            ("htmlhelp" function nil nil [2585 2791])
+            ("qthelp" function nil nil [2792 3166])
+            ("devhelp" function nil nil [3167 3448])
+            ("epub" function nil nil [3449 3583])
+            ("latex" function nil nil [3584 3861])
+            ("latexpdf" function nil nil [3862 4087])
+            ("text" function nil nil [4088 4224])
+            ("man" function nil nil [4225 4359])
+            ("texinfo" function nil nil [4360 4641])
+            ("info" function nil nil [4642 4868])
+            ("gettext" function nil nil [4869 5022])
+            ("changes" function nil nil [5023 5157])
+            ("linkcheck" function nil nil [5158 5366])
+            ("doctest" function nil nil [5367 5561]))          
+    :file "Makefile"
+    :pointmax 5561
+    :fsize 5560
+    :lastmodtime '(20643 37769)
+    :unmatched-syntax '((shell-command 5441 . 5560) (bol 5440 . 5440))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex_tag!new_manual!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

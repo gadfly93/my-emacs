@@ -1,0 +1,808 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables (list 
+    (semanticdb-table "OCLBULbYe.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1223]))          
+    :file "OCLBULbYe.cl"
+    :pointmax 1224
+    :fsize 1223
+    :lastmodtime '(21077 43123)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLybqAo8.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1223]))          
+    :file "OCLybqAo8.cl"
+    :pointmax 1224
+    :fsize 1223
+    :lastmodtime '(21077 43263)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCL9bbMQy.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1223]))          
+    :file "OCL9bbMQy.cl"
+    :pointmax 1224
+    :fsize 1223
+    :lastmodtime '(21077 43413)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCL7RvGPJ.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [683 699])
+                    ("" variable (:type ("clndim" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [699 706]))                  
+                :type "void")
+                nil [482 1244]))          
+    :file "OCL7RvGPJ.cl"
+    :pointmax 1245
+    :fsize 1244
+    :lastmodtime '(21077 43518)
+    :unmatched-syntax '((punctuation 698 . 699) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLtI4WXb.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [683 699])
+                    ("" variable (:type ("clndim" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [699 706]))                  
+                :type "void")
+                nil [482 1244]))          
+    :file "OCLtI4WXb.cl"
+    :pointmax 1245
+    :fsize 1244
+    :lastmodtime '(21077 44073)
+    :unmatched-syntax '((punctuation 698 . 699) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLK4Ubdg.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [683 699])
+                    ("" variable (:type ("clndim" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [699 706]))                  
+                :type "void")
+                nil [482 1244]))          
+    :file "OCLK4Ubdg.cl"
+    :pointmax 1245
+    :fsize 1244
+    :lastmodtime '(21077 44449)
+    :unmatched-syntax '((punctuation 698 . 699) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLD0bOIH.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [596 612])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [612 617])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [638 654])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [654 664]))                  
+                :type "void")
+                nil [482 1248]))          
+    :file "OCLD0bOIH.cl"
+    :pointmax 1242
+    :fsize 1248
+    :lastmodtime '(21077 45233)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "OCLMExGyB.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [638 654])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [654 659]))                  
+                :type "void")
+                nil [482 1246]))          
+    :file "OCLMExGyB.cl"
+    :pointmax 1247
+    :fsize 1246
+    :lastmodtime '(21077 45366)
+    :unmatched-syntax '((punctuation 653 . 654) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLohGIlm.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("kchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 516])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [517 533])
+                    ("" variable (:type ("kclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [533 543])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [564 580])
+                    ("" variable (:type ("kchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [580 590])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [635 651])
+                    ("" variable (:type ("knouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [651 660]))                  
+                :type "void")
+                nil [482 1247]))          
+    :file "OCLohGIlm.cl"
+    :pointmax 1247
+    :fsize 1247
+    :lastmodtime '(21077 45590)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "OCLRVAxi1.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [638 654])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [654 659]))                  
+                :type "void")
+                nil [482 1246]))          
+    :file "OCLRVAxi1.cl"
+    :pointmax 1247
+    :fsize 1246
+    :lastmodtime '(21077 45599)
+    :unmatched-syntax '((punctuation 653 . 654) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLwFwiEU.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [638 654])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [654 659]))                  
+                :type "void")
+                nil [482 1246]))          
+    :file "OCLwFwiEU.cl"
+    :pointmax 1247
+    :fsize 1246
+    :lastmodtime '(21077 45701)
+    :unmatched-syntax '((punctuation 653 . 654) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLcsyizM.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("krargs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 617]))                  
+                :type "void")
+                nil [482 1228]))          
+    :file "OCLcsyizM.cl"
+    :pointmax 1229
+    :fsize 1228
+    :lastmodtime '(21077 45819)
+    :unmatched-syntax '((punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLBwuR1z.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("krargs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 617]))                  
+                :type "void")
+                nil [482 1228]))          
+    :file "OCLBwuR1z.cl"
+    :pointmax 1229
+    :fsize 1228
+    :lastmodtime '(21077 46085)
+    :unmatched-syntax '((punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLpp9IoB.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615]))                  
+                :type "void")
+                nil [482 1226]))          
+    :file "OCLpp9IoB.cl"
+    :pointmax 1227
+    :fsize 1226
+    :lastmodtime '(21077 46126)
+    :unmatched-syntax '((punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLhqtT14.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("krnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1177]))          
+    :file "OCLhqtT14.cl"
+    :pointmax 1178
+    :fsize 1177
+    :lastmodtime '(21077 46356)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLKnHFt7.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("krnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1177]))          
+    :file "OCLKnHFt7.cl"
+    :pointmax 1178
+    :fsize 1177
+    :lastmodtime '(21077 46403)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLPuVKfm.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1182]))          
+    :file "OCLPuVKfm.cl"
+    :pointmax 1183
+    :fsize 1182
+    :lastmodtime '(21077 46593)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509))
+    )
+   (semanticdb-table "OCLf0csow.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("krnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1174]))          
+    :file "OCLf0csow.cl"
+    :pointmax 1175
+    :fsize 1174
+    :lastmodtime '(21077 46599)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLy6U192.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("krchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("krclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("krchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("krnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1174]))          
+    :file "OCLy6U192.cl"
+    :pointmax 1175
+    :fsize 1174
+    :lastmodtime '(21077 46624)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLK2FwNe.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1183]))          
+    :file "OCLK2FwNe.cl"
+    :pointmax 1184
+    :fsize 1183
+    :lastmodtime '(21077 46692)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLEkKGW0.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662]))                  
+                :type "void")
+                nil [482 1183]))          
+    :file "OCLEkKGW0.cl"
+    :pointmax 1184
+    :fsize 1183
+    :lastmodtime '(21077 46717)
+    :unmatched-syntax '((punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLz52sTs.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [663 679])
+                    ("" variable (:type ("clninds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [679 687])
+                    ("clvres" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [699 712]))                  
+                :type "void")
+                nil [482 1233]))          
+    :file "OCLz52sTs.cl"
+    :pointmax 1234
+    :fsize 1233
+    :lastmodtime '(21077 46980)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "OCL9nN3wh.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [663 679])
+                    ("" variable (:type ("clninds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [679 687]))                  
+                :type "void")
+                nil [482 1208]))          
+    :file "OCL9nN3wh.cl"
+    :pointmax 1209
+    :fsize 1208
+    :lastmodtime '(21077 47161)
+    :unmatched-syntax '((punctuation 678 . 679) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   (semanticdb-table "OCLXogBE8.cl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("int32" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [429 447])
+            ("int64" type
+               (:typedef ("long int")
+                :superclasses "long int"
+                :type "typedef")
+                nil [448 471])
+            ("CovCl" function
+               (:arguments 
+                  ( ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [493 509])
+                    ("" variable (:type ("clchunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 517])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 534])
+                    ("" variable (:type ("clclassind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [534 545])
+                    ("int64" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 582])
+                    ("" variable (:type ("clchunklen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 610])
+                    ("" variable (:type ("cled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [610 615])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 652])
+                    ("" variable (:type ("clnouttot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 662])
+                    ("int32" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [663 679])
+                    ("" variable (:type ("clninds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [679 687])
+                    ("" variable (:type ("__global" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [708 721])
+                    ("clvres" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [717 730]))                  
+                :type "void")
+                nil [482 1251]))          
+    :file "OCLXogBE8.cl"
+    :pointmax 1252
+    :fsize 1251
+    :lastmodtime '(21077 47210)
+    :unmatched-syntax '((punctuation 678 . 679) (punctuation 651 . 652) (punctuation 609 . 610) (punctuation 581 . 582) (punctuation 533 . 534) (punctuation 508 . 509) (symbol 473 . 481))
+    )
+   )
+  :file "!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

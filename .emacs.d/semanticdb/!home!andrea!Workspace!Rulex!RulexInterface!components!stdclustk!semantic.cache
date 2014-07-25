@@ -1,0 +1,35 @@
+;; Object stdclustk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "stdclustk/"
+  :tables (list 
+   (semanticdb-table "RulexCompStdclustk.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("components.RulexComponentBase" include nil nil [146 189])
+            ("stdclustk" include nil nil [190 224])
+            ("RulexCompStdclustk" type
+               (:superclasses ("RulexComponentBase" "Ui_Stdclustk")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [304 308])
+                        ("item" variable nil (reparse-symbol function_parameters) [310 314])
+                        ("parent" variable nil (reparse-symbol function_parameters) [316 322]))                      ) (reparse-symbol indented_block_body) [291 1051])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1084 1088]))                      ) (reparse-symbol indented_block_body) [1064 1361])
+                    ("UpdateMonitor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1392 1396]))                      ) (reparse-symbol indented_block_body) [1374 1439]))                  
+                :type "class")
+                nil [226 1439])
+            ("if" code nil nil [1448 1606]))          
+    :file "RulexCompStdclustk.py"
+    :pointmax 1614
+    :fsize 1661
+    :lastmodtime '(20550 4634)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!components!stdclustk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

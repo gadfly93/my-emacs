@@ -1,0 +1,171 @@
+;; Object oclReduction/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "oclReduction/"
+  :tables (list 
+   (semanticdb-table "oclReduction.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("oclUtils.h" include (:system-flag t) nil [1825 1846])
+            ("shrQATest.h" include (:system-flag t) nil [1847 1869])
+            ("sstream" include (:system-flag t) nil [1894 1912])
+            ("oclReduction.h" include (:system-flag t) nil [1913 1938])
+            ("ReduceType" type
+               (:members 
+                  ( ("REDUCE_INT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2087 2098])
+                    ("REDUCE_FLOAT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2103 2116])
+                    ("REDUCE_DOUBLE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2121 2136]))                  
+                :type "enum")
+                nil [2065 2137])
+            ("runTest" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2172 2181])
+                    ("argv" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2182 2200])
+                    ("datatype" variable (:type ("ReduceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2201 2221]))                  
+                :prototype-flag t)
+                nil [2139 2222])
+            ("MAX_BLOCK_DIM_SIZE" variable (:constant-flag t) nil [2232 2250])
+            ("isPow2" function
+               (:arguments 
+                  ( ("x" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2281 2296]))                  
+                :type "bool")
+                nil [2269 2327])
+            ("getReductionKernel" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("datatype" variable (:type ("ReduceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2358 2378])
+                    ("whichKernel" variable (:type "int") (reparse-symbol arg-sub-list) [2379 2395])
+                    ("blockSize" variable (:type "int") (reparse-symbol arg-sub-list) [2396 2410])
+                    ("isPowOf2" variable (:type "int") (reparse-symbol arg-sub-list) [2411 2424]))                  
+                :type ("cl_kernel" type (:type "class") nil nil))
+                nil [2329 2425])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2528 2537])
+                    ("argv" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2538 2556]))                  
+                :type "int")
+                nil [2518 5414])
+            ("reduceCPU" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5865 5873])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [5874 5883]))                  )
+                nil [5835 6119])
+            ("nextPow2" function
+               (:arguments 
+                  ( ("x" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6144 6160]))                  
+                :type "unsigned int")
+                nil [6121 6275])
+            ("getNumBlocksAndThreads" function
+               (:arguments 
+                  ( ("whichKernel" variable (:type "int") (reparse-symbol arg-sub-list) [6850 6866])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [6867 6873])
+                    ("maxBlocks" variable (:type "int") (reparse-symbol arg-sub-list) [6874 6888])
+                    ("maxThreads" variable (:type "int") (reparse-symbol arg-sub-list) [6889 6904])
+                    ("blocks" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6905 6917])
+                    ("threads" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6918 6931]))                  
+                :type "void")
+                nil [6822 7311])
+            ("profileReduce" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("datatype" variable (:type ("ReduceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7626 7646])
+                    ("n" variable (:type ("cl_int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7665 7675])
+                    ("numThreads" variable (:type "int") (reparse-symbol arg-sub-list) [7695 7711])
+                    ("numBlocks" variable (:type "int") (reparse-symbol arg-sub-list) [7730 7745])
+                    ("maxThreads" variable (:type "int") (reparse-symbol arg-sub-list) [7764 7780])
+                    ("maxBlocks" variable (:type "int") (reparse-symbol arg-sub-list) [7799 7814])
+                    ("whichKernel" variable (:type "int") (reparse-symbol arg-sub-list) [7833 7850])
+                    ("testIterations" variable (:type "int") (reparse-symbol arg-sub-list) [7870 7890])
+                    ("cpuFinalReduction" variable (:type "bool") (reparse-symbol arg-sub-list) [7909 7932])
+                    ("cpuFinalThreshold" variable (:type "int") (reparse-symbol arg-sub-list) [7951 7974])
+                    ("dTotalTime" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7993 8012])
+                    ("h_odata" variable
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8031 8042])
+                    ("d_idata" variable (:type ("cl_mem" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8061 8076])
+                    ("d_odata" variable (:type ("cl_mem" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8096 8111]))                  )
+                nil [7591 12811])
+            ("shmoo" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("minN" variable (:type "int") (reparse-symbol arg-sub-list) [13281 13290])
+                    ("maxN" variable (:type "int") (reparse-symbol arg-sub-list) [13291 13300])
+                    ("maxThreads" variable (:type "int") (reparse-symbol arg-sub-list) [13301 13316])
+                    ("maxBlocks" variable (:type "int") (reparse-symbol arg-sub-list) [13317 13331])
+                    ("datatype" variable (:type ("ReduceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13332 13352]))                  )
+                nil [13251 15415])
+            ("runTest" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [15664 15673])
+                    ("argv" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15674 15692])
+                    ("datatype" variable (:type ("ReduceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15693 15713]))                  )
+                nil [15631 19769])
+            ("getReductionKernel" function
+               (:arguments 
+                  ( ("datatype" variable (:type ("ReduceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19931 19951])
+                    ("whichKernel" variable (:type "int") (reparse-symbol arg-sub-list) [19952 19968])
+                    ("blockSize" variable (:type "int") (reparse-symbol arg-sub-list) [19969 19983])
+                    ("isPowOf2" variable (:type "int") (reparse-symbol arg-sub-list) [19984 19997]))                  
+                :type ("cl_kernel" type (:type "class") nil nil))
+                nil [19902 22134]))          
+    :file "oclReduction.cpp"
+    :pointmax 22135
+    :fsize 22770
+    :lastmodtime '(20257 15183)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_BLOCK_DIM_SIZE" . ((number "65535" 2251 . 2256)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!NVIDIA GPU Computing SDK!OpenCL!src!oclReduction!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

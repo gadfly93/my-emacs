@@ -1,0 +1,269 @@
+;; Object ctypes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ctypes/"
+  :tables (list 
+   (semanticdb-table "__init__.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""create and manipulate C data types in Python"""" code nil nil [214 264])
+            ("os" include nil nil [266 295])
+            ("__version__" variable nil nil [297 318])
+            ("_ctypes" include nil nil [320 363])
+            ("_ctypes" include nil nil [364 392])
+            ("_ctypes" include nil nil [393 434])
+            ("_ctypes" include nil nil [435 485])
+            ("_ctypes" include nil nil [486 529])
+            ("_ctypes" include nil nil [530 563])
+            ("struct" include nil nil [565 605])
+            ("if" code nil nil [607 719])
+            ("if" code nil nil [720 785])
+            ("DEFAULT_MODE" variable nil nil [786 811])
+            ("if" code nil nil [812 1128])
+            ("_ctypes" include nil nil [1129 1340])
+            (""""
+WINOLEAPI -> HRESULT
+WINOLEAPI_(type)
+
+STDMETHODCALLTYPE
+
+STDMETHOD(name)
+STDMETHOD_(type, name)
+
+STDAPICALLTYPE
+"""" code nil nil [1342 1462])
+            ("create_string_buffer" function (:arguments 
+              ( ("init" variable nil (reparse-symbol function_parameters) [1489 1493])
+                ("size" variable nil (reparse-symbol function_parameters) [1495 1499]))              ) nil [1464 2028])
+            ("c_buffer" function (:arguments 
+              ( ("init" variable nil (reparse-symbol function_parameters) [2042 2046])
+                ("size" variable nil (reparse-symbol function_parameters) [2048 2052]))              ) nil [2029 2313])
+            ("_c_functype_cache" variable nil nil [2314 2336])
+            ("CFUNCTYPE" function (:arguments 
+              ( ("restype" variable nil (reparse-symbol function_parameters) [2351 2358])
+                ("argtypes" variable nil (reparse-symbol function_parameters) [2360 2369])
+                ("kw" variable nil (reparse-symbol function_parameters) [2371 2375]))              ) nil [2337 3692])
+            ("if" code nil nil [3693 4949])
+            ("_ctypes" include nil nil [4950 5013])
+            ("_ctypes" include nil nil [5014 5054])
+            ("_ctypes" include nil nil [5055 5087])
+            ("_check_size" function (:arguments 
+              ( ("typ" variable nil (reparse-symbol function_parameters) [5105 5108])
+                ("typecode" variable nil (reparse-symbol function_parameters) [5110 5118]))              ) nil [5089 5600])
+            ("py_object" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [5636 5648])
+                    ("__repr__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5666 5670]))                      ) (reparse-symbol indented_block_body) [5653 5820]))                  
+                :type "class")
+                nil [5601 5820])
+            ("_check_size" code nil nil [5820 5847])
+            ("c_short" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [5882 5894]))                  
+                :type "class")
+                nil [5849 5895])
+            ("_check_size" code nil nil [5895 5915])
+            ("c_ushort" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [5951 5963]))                  
+                :type "class")
+                nil [5917 5964])
+            ("_check_size" code nil nil [5964 5985])
+            ("c_long" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [6019 6031]))                  
+                :type "class")
+                nil [5987 6032])
+            ("_check_size" code nil nil [6032 6051])
+            ("c_ulong" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [6086 6098]))                  
+                :type "class")
+                nil [6053 6099])
+            ("_check_size" code nil nil [6099 6119])
+            ("if" code nil nil [6121 6430])
+            ("c_float" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [6464 6476]))                  
+                :type "class")
+                nil [6431 6477])
+            ("_check_size" code nil nil [6477 6497])
+            ("c_double" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [6533 6545]))                  
+                :type "class")
+                nil [6499 6546])
+            ("_check_size" code nil nil [6546 6567])
+            ("c_longdouble" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [6607 6619]))                  
+                :type "class")
+                nil [6569 6620])
+            ("if" code nil nil [6620 6693])
+            ("if" code nil nil [6694 7171])
+            ("c_ubyte" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [7205 7217]))                  
+                :type "class")
+                nil [7172 7218])
+            ("c_ubyte" variable nil nil [7218 7271])
+            ("_check_size" code nil nil [7318 7338])
+            ("c_byte" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [7372 7384]))                  
+                :type "class")
+                nil [7340 7385])
+            ("c_byte" variable nil nil [7385 7435])
+            ("_check_size" code nil nil [7436 7455])
+            ("c_char" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [7489 7501]))                  
+                :type "class")
+                nil [7457 7502])
+            ("c_char" variable nil nil [7502 7552])
+            ("_check_size" code nil nil [7553 7572])
+            ("c_char_p" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [7608 7620])
+                    ("if" code nil (reparse-symbol indented_block_body) [7625 8014]))                  
+                :type "class")
+                nil [7574 8014])
+            ("_check_size" code nil nil [8014 8040])
+            ("c_void_p" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [8076 8088]))                  
+                :type "class")
+                nil [8042 8089])
+            ("c_voidp" variable nil nil [8089 8107])
+            ("_check_size" code nil nil [8145 8166])
+            ("c_bool" type
+               (:superclasses ("_SimpleCData")
+                :members 
+                  ( ("_type_" variable nil (reparse-symbol indented_block_body) [8200 8212]))                  
+                :type "class")
+                nil [8168 8213])
+            ("_ctypes" include nil nil [8214 8271])
+            ("try" code nil nil [8273 9335])
+            ("POINTER" variable nil nil [9336 9384])
+            ("SetPointerType" function (:arguments 
+              ( ("pointer" variable nil (reparse-symbol function_parameters) [9456 9463])
+                ("cls" variable nil (reparse-symbol function_parameters) [9465 9468]))              ) nil [9437 9792])
+            ("ARRAY" function (:arguments 
+              ( ("typ" variable nil (reparse-symbol function_parameters) [9820 9823])
+                ("len" variable nil (reparse-symbol function_parameters) [9825 9828]))              ) nil [9810 9852])
+            ("CDLL" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""An instance of this class represents a loaded dll/shared
+    library, exporting functions using the standard C calling
+    convention (named 'cdecl' on Windows).
+
+    The exported functions can be accessed as attributes, or by
+    indexing with the function name.  Examples:
+
+    <obj>.qsort -> callable object
+    <obj>['qsort'] -> callable object
+
+    Calling the functions releases the Python GIL during the call and
+    reacquires it afterwards.
+    """" code nil (reparse-symbol indented_block_body) [9944 10404])
+                    ("_func_flags_" variable nil (reparse-symbol indented_block_body) [10409 10439])
+                    ("_func_restype_" variable nil (reparse-symbol indented_block_body) [10444 10466])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10485 10489])
+                        ("name" variable nil (reparse-symbol function_parameters) [10491 10495])
+                        ("mode" variable nil (reparse-symbol function_parameters) [10497 10501])
+                        ("handle" variable nil (reparse-symbol function_parameters) [10516 10522])
+                        ("use_errno" variable nil (reparse-symbol function_parameters) [10546 10555])
+                        ("use_last_error" variable nil (reparse-symbol function_parameters) [10580 10594]))                      ) (reparse-symbol indented_block_body) [10472 11068])
+                    ("__repr__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11086 11090]))                      ) (reparse-symbol indented_block_body) [11073 11296])
+                    ("__getattr__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11317 11321])
+                        ("name" variable nil (reparse-symbol function_parameters) [11323 11327]))                      ) (reparse-symbol indented_block_body) [11301 11519])
+                    ("__getitem__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11540 11544])
+                        ("name_or_ordinal" variable nil (reparse-symbol function_parameters) [11546 11561]))                      ) (reparse-symbol indented_block_body) [11524 11739]))                  
+                :type "class")
+                nil [9920 11739])
+            ("PyDLL" type
+               (:superclasses ("CDLL")
+                :members 
+                  ( (""""This class represents the Python library itself.  It allows to
+    access Python API functions.  The GIL is not released, and
+    Python exceptions are handled correctly.
+    """" code nil (reparse-symbol indented_block_body) [11763 11944])
+                    ("_func_flags_" code nil (reparse-symbol indented_block_body) [11949 12001]))                  
+                :type "class")
+                nil [11740 12002])
+            ("if" code nil nil [12003 13286])
+            ("LibraryLoader" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13333 13337])
+                        ("dlltype" variable nil (reparse-symbol function_parameters) [13339 13346]))                      ) (reparse-symbol indented_block_body) [13320 13381])
+                    ("__getattr__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13402 13406])
+                        ("name" variable nil (reparse-symbol function_parameters) [13408 13412]))                      ) (reparse-symbol indented_block_body) [13386 13567])
+                    ("__getitem__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13588 13592])
+                        ("name" variable nil (reparse-symbol function_parameters) [13594 13598]))                      ) (reparse-symbol indented_block_body) [13572 13636])
+                    ("LoadLibrary" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13657 13661])
+                        ("name" variable nil (reparse-symbol function_parameters) [13663 13667]))                      ) (reparse-symbol indented_block_body) [13641 13705]))                  
+                :type "class")
+                nil [13287 13705])
+            ("cdll" variable nil nil [13706 13732])
+            ("pydll" variable nil nil [13733 13761])
+            ("if" code nil nil [13763 13984])
+            ("if" code nil nil [13986 14493])
+            ("_pointer_type_cache" variable nil nil [14494 14530])
+            ("if" code nil nil [14532 14803])
+            ("_ctypes" include nil nil [14817 14893])
+            ("memmove" variable nil nil [14943 15017])
+            ("memset" variable nil nil [15056 15125])
+            ("PYFUNCTYPE" function (:arguments 
+              ( ("restype" variable nil (reparse-symbol function_parameters) [15142 15149])
+                ("argtypes" variable nil (reparse-symbol function_parameters) [15151 15160]))              ) nil [15127 15338])
+            ("_cast" variable nil nil [15339 15412])
+            ("cast" function (:arguments 
+              ( ("obj" variable nil (reparse-symbol function_parameters) [15422 15425])
+                ("typ" variable nil (reparse-symbol function_parameters) [15427 15430]))              ) nil [15413 15465])
+            ("_string_at" variable nil nil [15466 15534])
+            ("string_at" function (:arguments 
+              ( ("ptr" variable nil (reparse-symbol function_parameters) [15549 15552])
+                ("size" variable nil (reparse-symbol function_parameters) [15554 15558]))              ) nil [15535 15673])
+            ("try" code nil nil [15674 15987])
+            ("if" code nil nil [15989 16566])
+            ("ctypes._endian" include nil nil [16567 16635])
+            ("c_int8" variable nil nil [16672 16687])
+            ("c_uint8" variable nil nil [16688 16705])
+            ("for" code nil nil [16706 16883])
+            ("for" code nil nil [16883 17067])
+            ("del" code nil nil [17067 17076])
+            ("CFUNCTYPE" code nil nil [17353 17383]))          
+    :file "__init__.py"
+    :pointmax 17384
+    :fsize 17383
+    :lastmodtime '(20107 31093)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!lib!python2.7!ctypes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

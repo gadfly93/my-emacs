@@ -1,0 +1,19 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("nobase_include_HEADERS" variable (:default-value ("lci/il.h")) nil [1 35]))          
+    :file "Makefile.am"
+    :pointmax 36
+    :fsize 35
+    :lastmodtime '(21351 15207 391573 672000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!lely!lci!liblci-il!trunk!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

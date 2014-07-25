@@ -1,0 +1,34 @@
+;; Object jni/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jni/"
+  :tables (list 
+   (semanticdb-table "Android.mk"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("LOCAL_PATH" variable (:default-value ("$(call my-dir)")) nil [57 86])
+            ("$(CLEAR_VARS)" include nil nil [87 109])
+            ("LOCAL_MODULE" variable (:default-value ("rulex")) nil [109 131])
+            ("LOCAL_SRC_FILES" variable (:default-value ("hw.c")) nil [131 155])
+            ("$(BUILD_EXECUTABLE)" include nil nil [156 184]))          
+    :file "Android.mk"
+    :pointmax 475
+    :fsize 183
+    :lastmodtime '(20338 63022)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hw.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function (:type "int") nil [21 68]))          
+    :file "hw.c"
+    :pointmax 69
+    :fsize 68
+    :lastmodtime '(20338 63037)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!android-ndk-r7b!samples!hellow!jni!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

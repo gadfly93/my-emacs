@@ -1,0 +1,20 @@
+;; Object trunk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trunk/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("SUBDIRS" variable (:default-value ("src")) nil [1 15])
+            ("EXTRA_DIST" variable (:default-value ("autogen.sh")) nil [16 40]))          
+    :file "Makefile.am"
+    :pointmax 41
+    :fsize 40
+    :lastmodtime '(21351 15210 581127 594000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!LCI!lci-daemon!trunk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

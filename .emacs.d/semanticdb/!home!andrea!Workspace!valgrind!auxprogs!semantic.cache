@@ -1,0 +1,28 @@
+;; Object auxprogs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "auxprogs/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("$(top_srcdir)/Makefile.all.am" include nil nil [1 39])
+            ("dist_noinst_SCRIPTS" variable (:default-value ("change-copyright-year" "dump_insn_ppc.sh" "gen-mdg" "gsl16test" "gsl19test" "nightly-build-summary" "update-demangler" "posixtestsuite-1.5.1-diff-results")) nil [40 226])
+            ("EXTRA_DIST" variable (:default-value ("DotToScc.hs" "Merge3Way.hs" "gsl16-badfree.patch" "gsl16-wavelet.patch" "posixtestsuite-1.5.1-diff.txt" "ppcfround.c" "ppc64shifts.c" "primes.c")) nil [227 394])
+            ("bin_PROGRAMS" variable (:default-value ("valgrind-listener")) nil [608 641])
+            ("valgrind_listener_SOURCES" variable (:default-value ("valgrind-listener.c")) nil [642 690])
+            ("valgrind_listener_CPPFLAGS" variable (:default-value ("$(AM_CPPFLAGS_PRI)" "-I$(top_srcdir)/coregrind")) nil [690 765])
+            ("valgrind_listener_CFLAGS" variable (:default-value ("$(AM_CFLAGS_PRI)")) nil [765 812])
+            ("valgrind_listener_CCASFLAGS" variable (:default-value ("$(AM_CCASFLAGS_PRI)")) nil [812 862])
+            ("valgrind_listener_LDFLAGS" variable (:default-value ("$(AM_CFLAGS_PRI)")) nil [862 909])
+            ("valgrind_listener_LDFLAGS" variable (:default-value ("-Wl,-read_only_relocs" "-Wl,suppress")) nil [948 1014]))          
+    :file "Makefile.am"
+    :pointmax 1020
+    :fsize 1019
+    :lastmodtime '(20341 25745)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!valgrind!auxprogs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

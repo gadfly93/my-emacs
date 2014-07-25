@@ -1,0 +1,28 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("noinst_LIBRARIES" variable (:default-value ("libbc.a")) nil [59 86])
+            ("INCLUDES" variable (:default-value ("-I." "-I.." "-I$(srcdir)/../h")) nil [87 124])
+            ("libbc_a_SOURCES" variable (:default-value ("getopt.c" "getopt1.c" "vfprintf.c" "number.c")) nil [125 182])
+            ("DEFS" variable (:default-value ("@DEFS@" "$(DEFSADD)")) nil [183 208])
+            ("CFLAGS" variable (:default-value ("@CFLAGS@" "-Wall" "-funsigned-char")) nil [209 249])
+            ("MAINTAINERCLEANFILES" variable (:default-value ("Makefile.in" "number.c")) nil [250 294])
+            ("newnumber.o" function (:arguments ("number.c" "muldigits.h")) nil [295 407])
+            ("muldigits.h" function (:arguments ("testmul")) nil [408 502])
+            ("testmul" function (:arguments ("testmul.o" "number.o")) nil [503 578])
+            ("specialnumber" function (:arguments ("newnumber.o")) nil [579 631]))          
+    :file "Makefile.am"
+    :pointmax 632
+    :fsize 631
+    :lastmodtime '(14777 6297)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!bc-1.06!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

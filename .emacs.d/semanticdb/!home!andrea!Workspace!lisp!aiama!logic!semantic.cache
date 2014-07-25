@@ -1,0 +1,21 @@
+;; Object logic/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "logic/"
+  :tables (list 
+   (semanticdb-table "README.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Logic (Subsystem of AIMA Code)" section nil nil [15 118])
+            ("Logic (Subsystem of AIMA Code)" section (:members 
+              ( ("Logic (Subsystem of AIMA Code)" section nil nil [145 2286]))              ) nil [118 2286]))          
+    :file "README.html"
+    :pointmax 2286
+    :fsize 2285
+    :lastmodtime '(13138 52957 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!lisp!aiama!logic!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

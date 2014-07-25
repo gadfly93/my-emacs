@@ -1,0 +1,51 @@
+;; Object Include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Include/"
+  :tables (list 
+   (semanticdb-table "test.rl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stamp" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11 13]))                  
+                :type ("def" type (:type "class") nil nil))
+                nil [1 43])
+            ("ignore" variable (:type "int") nil [51 62])
+            ("b" variable (:type ("on" type (:type "class") nil nil)) nil [70 91])
+            ("a" variable (:type ("on" type (:type "class") nil nil)) nil [70 91]))          
+    :file "test.rl"
+    :pointmax 92
+    :fsize 91
+    :lastmodtime '(20274 29416)
+    :unmatched-syntax '((symbol 64 . 69) (punctuation 63 . 64) (punctuation 50 . 51) (string 45 . 50) (punctuation 44 . 45))
+    )
+   (semanticdb-table "math.rl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("pow" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9 11])
+                    ("" variable (:type ("y" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12 14]))                  
+                :type ("def" type (:type "class") nil nil))
+                nil [1 73]))          
+    :file "math.rl"
+    :pointmax 74
+    :fsize 73
+    :lastmodtime '(20273 13725)
+    :unmatched-syntax '((semantic-list 93 . 101) (FOR 90 . 93) (semantic-list 77 . 87) (FOR 74 . 77) (semantic-list 93 . 101) (FOR 90 . 93) (semantic-list 77 . 87) (FOR 74 . 77))
+    )
+   (semanticdb-table "console.rl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("brk" function (:type ("def" type (:type "class") nil nil)) nil [1 81]))          
+    :file "console.rl"
+    :pointmax 95
+    :fsize 81
+    :lastmodtime '(20275 50078)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!Include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

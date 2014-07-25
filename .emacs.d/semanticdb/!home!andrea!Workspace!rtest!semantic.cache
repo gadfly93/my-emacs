@@ -1,0 +1,393 @@
+;; Object rtest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rtest/"
+  :tables (list 
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("matplotlib.pyplot" include nil nil [20 51])
+            ("matplotlib.cm" include nil nil [52 78])
+            ("FindFirst" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [95 96]))              ) nil [80 270])
+            ("NotVoid" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [283 284]))              ) nil [271 464])
+            ("Area" function (:arguments 
+              ( ("x1" variable nil (reparse-symbol function_parameters) [474 476])
+                ("y1" variable nil (reparse-symbol function_parameters) [478 480])
+                ("x2" variable nil (reparse-symbol function_parameters) [482 484])
+                ("y2" variable nil (reparse-symbol function_parameters) [486 488]))              ) nil [465 518])
+            ("VerifyRect" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [534 535])
+                ("x1" variable nil (reparse-symbol function_parameters) [537 539])
+                ("y1" variable nil (reparse-symbol function_parameters) [541 543])
+                ("x2" variable nil (reparse-symbol function_parameters) [545 547])
+                ("y2" variable nil (reparse-symbol function_parameters) [549 551]))              ) nil [519 838])
+            ("FindFrom" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [852 853])
+                ("y" variable nil (reparse-symbol function_parameters) [855 856])
+                ("m" variable nil (reparse-symbol function_parameters) [858 859]))              ) nil [839 1457])
+            ("RemoveRect" function (:arguments 
+              ( ("x1" variable nil (reparse-symbol function_parameters) [1473 1475])
+                ("y1" variable nil (reparse-symbol function_parameters) [1477 1479])
+                ("x2" variable nil (reparse-symbol function_parameters) [1481 1483])
+                ("y2" variable nil (reparse-symbol function_parameters) [1485 1487])
+                ("m" variable nil (reparse-symbol function_parameters) [1489 1490]))              ) nil [1458 1593])
+            ("m" variable nil nil [1594 1972])
+            ("fig, ax" code nil nil [3174 3198])
+            ("m1" variable nil nil [3199 3212])
+            ("ax" code nil nil [3213 3251])
+            ("i" variable nil nil [3253 3256])
+            ("while" code nil nil [3257 3459])
+            ("plt" code nil nil [3460 3470]))          
+    :file "test.py"
+    :pointmax 3471
+    :fsize 3470
+    :lastmodtime '(21047 4310)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test_pattern.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("matplotlib.pyplot" include nil nil [20 51])
+            ("Covering" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [66 74])
+                ("edges" variable nil (reparse-symbol function_parameters) [76 81])
+                ("m" variable nil (reparse-symbol function_parameters) [83 84]))              ) nil [53 372])
+            ("VerifyRect" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [389 397])
+                ("edges" variable nil (reparse-symbol function_parameters) [399 404])
+                ("m" variable nil (reparse-symbol function_parameters) [406 407]))              ) nil [374 723])
+            ("FindFrom" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [737 745])
+                ("m" variable nil (reparse-symbol function_parameters) [747 748]))              ) nil [724 1452])
+            ("PurgePatterns" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [1471 1479])
+                ("edges" variable nil (reparse-symbol function_parameters) [1481 1486])
+                ("m" variable nil (reparse-symbol function_parameters) [1488 1489]))              ) nil [1453 1825])
+            ("m1" variable nil nil [1826 2043])
+            ("m0" variable nil nil [2045 2236])
+            ("m" variable nil nil [2238 2242])
+            ("m" code nil nil [2243 2255])
+            ("m" code nil nil [2256 2268])
+            ("m0orig" variable nil nil [2269 2287])
+            ("m1orig" variable nil nil [2288 2306])
+            ("morig" variable nil nil [2307 2316])
+            ("ncol" variable nil nil [2317 2336])
+            ("nrow" variable nil nil [2337 2358])
+            ("limits" variable nil nil [2359 2370])
+            ("mtot" variable nil nil [2371 2414])
+            ("for" code nil nil [2415 2488])
+            ("tmp" variable nil nil [2488 2510])
+            ("limits" variable nil nil [2511 2522])
+            ("for" code nil nil [2523 2573])
+            ("plt" code nil nil [2604 2651])
+            ("plt" code nil nil [2652 2699])
+            ("nrules" variable nil nil [2701 2711])
+            ("for" code nil nil [2712 3217])
+            ("plt" code nil nil [3218 3228]))          
+    :file "test_pattern.py"
+    :pointmax 3229
+    :fsize 3228
+    :lastmodtime '(21047 50476)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test_pattern2.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("prepare_set" include nil nil [1 26])
+            ("numpy" include nil nil [27 45])
+            ("matplotlib.pyplot" include nil nil [46 77])
+            ("itertools" include nil nil [78 100])
+            ("time" include nil nil [101 112])
+            ("FRACT_STEP" variable nil nil [114 128])
+            ("PrintRule" function (:arguments 
+              ( ("limits" variable nil (reparse-symbol function_parameters) [144 150])
+                ("ed" variable nil (reparse-symbol function_parameters) [152 154])
+                ("curratts" variable nil (reparse-symbol function_parameters) [156 164])
+                ("cov" variable nil (reparse-symbol function_parameters) [166 169])
+                ("err" variable nil (reparse-symbol function_parameters) [171 174]))              ) nil [130 580])
+            ("Perm" function (:arguments 
+              ( ("len" variable nil (reparse-symbol function_parameters) [590 593])
+                ("ng" variable nil (reparse-symbol function_parameters) [595 597]))              ) nil [581 751])
+            ("FindLimits" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [768 769]))              ) nil [752 995])
+            ("Covering" function (:arguments 
+              ( ("edges" variable nil (reparse-symbol function_parameters) [1024 1029])
+                ("m" variable nil (reparse-symbol function_parameters) [1031 1032]))              ) nil [996 1320])
+            ("VerifyRect" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [1336 1344])
+                ("edges" variable nil (reparse-symbol function_parameters) [1346 1351])
+                ("m" variable nil (reparse-symbol function_parameters) [1353 1354]))              ) nil [1321 1694])
+            ("FindFrom" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [1708 1716])
+                ("limits" variable nil (reparse-symbol function_parameters) [1718 1724])
+                ("m" variable nil (reparse-symbol function_parameters) [1726 1727]))              ) nil [1695 2826])
+            ("PurgePatterns" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [2845 2853])
+                ("edges" variable nil (reparse-symbol function_parameters) [2855 2860])
+                ("m" variable nil (reparse-symbol function_parameters) [2862 2863]))              ) nil [2827 3199])
+            ("m0, m1" code nil nil [3696 3717])
+            ("SaveSet" code nil nil [3718 3733])
+            ("m" variable nil nil [3734 3738])
+            ("morig" variable nil nil [3739 3747])
+            ("m" code nil nil [3748 3760])
+            ("m" code nil nil [3761 3773])
+            ("m0orig" variable nil nil [3774 3792])
+            ("m1orig" variable nil nil [3793 3811])
+            ("morig" code nil nil [3812 3832])
+            ("morig" code nil nil [3833 3853])
+            ("ncol" variable nil nil [3854 3873])
+            ("nrow" variable nil nil [3874 3895])
+            ("mtot" variable nil nil [3995 4038])
+            ("limits" variable nil nil [4039 4064])
+            ("ncondmin" variable nil nil [4066 4126])
+            ("ncondmax" variable nil nil [4127 4187])
+            ("if" code nil nil [4188 4272])
+            ("rules0" variable nil nil [4272 4283])
+            ("rules1" variable nil nil [4284 4295])
+            ("metriclist0" variable nil nil [4296 4312])
+            ("metriclist1" variable nil nil [4313 4329])
+            ("start" variable nil nil [4330 4349])
+            ("for" code nil nil [4350 5877])
+            ("k" variable nil nil [5933 5938])
+            ("print" code nil nil [5939 5965])
+            ("for" code nil nil [5966 6229])
+            ("k" variable nil nil [6229 6234])
+            ("print" code nil nil [6235 6261])
+            ("for" code nil nil [6262 6525])
+            ("end" variable nil nil [6525 6542])
+            ("print" code nil nil [6543 6597]))          
+    :file "test_pattern2.py"
+    :pointmax 6610
+    :fsize 6527
+    :lastmodtime '(21049 48172)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "permutation.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("itertools" include nil nil [1 23])
+            ("k" variable nil nil [65 70])
+            ("for" code nil nil [71 122])
+            ("print" code nil nil [122 142]))          
+    :file "permutation.py"
+    :pointmax 143
+    :fsize 142
+    :lastmodtime '(21048 32292)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "prepare_set.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [25 43])
+            ("matplotlib.pyplot" include nil nil [44 75])
+            ("random" include nil nil [77 103])
+            ("MINVAL" variable nil nil [105 115])
+            ("MAXVAL" variable nil nil [116 130])
+            ("PrepareSet" function nil nil [132 1433])
+            ("SaveSet" function (:arguments 
+              ( ("m0" variable nil (reparse-symbol function_parameters) [1446 1448])
+                ("m1" variable nil (reparse-symbol function_parameters) [1450 1452])
+                ("name" variable nil (reparse-symbol function_parameters) [1454 1458]))              ) nil [1434 1696])
+            ("if" code nil nil [1697 1837]))          
+    :file "prepare_set.py"
+    :pointmax 1837
+    :fsize 1743
+    :lastmodtime '(21068 56810)
+    :unmatched-syntax '(($EOI 1837 . 1837))
+    )
+   (semanticdb-table "test_pattern3.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("prepare_set" include nil nil [1 26])
+            ("load" include nil nil [27 45])
+            ("numpy" include nil nil [46 64])
+            ("matplotlib.pyplot" include nil nil [65 96])
+            ("itertools" include nil nil [97 119])
+            ("time" include nil nil [120 131])
+            ("FRACT_STEP" variable nil nil [133 147])
+            ("CountRulesByDim" function (:arguments 
+              ( ("dimmax" variable nil (reparse-symbol function_parameters) [169 175])
+                ("rules" variable nil (reparse-symbol function_parameters) [177 182]))              ) nil [149 330])
+            ("DrawFigure" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [346 347]))              ) nil [331 469])
+            ("PrintRule" function (:arguments 
+              ( ("limits" variable nil (reparse-symbol function_parameters) [484 490])
+                ("ed" variable nil (reparse-symbol function_parameters) [492 494])
+                ("curratts" variable nil (reparse-symbol function_parameters) [496 504])
+                ("cov" variable nil (reparse-symbol function_parameters) [506 509])
+                ("err" variable nil (reparse-symbol function_parameters) [511 514]))              ) nil [470 920])
+            ("Perm" function (:arguments 
+              ( ("len" variable nil (reparse-symbol function_parameters) [930 933])
+                ("ng" variable nil (reparse-symbol function_parameters) [935 937]))              ) nil [921 1091])
+            ("FindLimits" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [1107 1108]))              ) nil [1092 1334])
+            ("Covering" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1348 1351])
+                ("outclass" variable nil (reparse-symbol function_parameters) [1353 1361])
+                ("edges" variable nil (reparse-symbol function_parameters) [1363 1368])
+                ("m" variable nil (reparse-symbol function_parameters) [1370 1371]))              ) nil [1335 1659])
+            ("VerifyRect" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [1675 1683])
+                ("edges" variable nil (reparse-symbol function_parameters) [1685 1690])
+                ("m" variable nil (reparse-symbol function_parameters) [1692 1693]))              ) nil [1660 2058])
+            ("FindFrom" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [2072 2080])
+                ("limits" variable nil (reparse-symbol function_parameters) [2082 2088])
+                ("m" variable nil (reparse-symbol function_parameters) [2090 2091]))              ) nil [2059 3189])
+            ("PurgePatterns" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [3208 3216])
+                ("edges" variable nil (reparse-symbol function_parameters) [3218 3223])
+                ("m" variable nil (reparse-symbol function_parameters) [3225 3226]))              ) nil [3190 3562])
+            ("m0, m1" code nil nil [3563 3584])
+            ("SaveSet" code nil nil [3605 3620])
+            ("m" variable nil nil [3621 3625])
+            ("morig" variable nil nil [3626 3634])
+            ("m" code nil nil [3635 3647])
+            ("m" code nil nil [3648 3660])
+            ("m0orig" variable nil nil [3661 3679])
+            ("m1orig" variable nil nil [3680 3698])
+            ("morig" code nil nil [3699 3719])
+            ("morig" code nil nil [3720 3740])
+            ("ncol" variable nil nil [3741 3760])
+            ("nrow" variable nil nil [3761 3782])
+            ("mtot" variable nil nil [3784 3827])
+            ("limits" variable nil nil [3828 3853])
+            ("ncondmin" variable nil nil [3854 3914])
+            ("ncondmax" variable nil nil [3929 3989])
+            ("mincov" variable nil nil [3990 4039])
+            ("if" code nil nil [4040 4124])
+            ("rules0" variable nil nil [4124 4135])
+            ("rules1" variable nil nil [4136 4147])
+            ("rules" variable nil nil [4148 4158])
+            ("rules" code nil nil [4159 4179])
+            ("rules" code nil nil [4180 4200])
+            ("metriclist0" variable nil nil [4201 4217])
+            ("metriclist1" variable nil nil [4218 4234])
+            ("start" variable nil nil [4235 4254])
+            ("for" code nil nil [4255 6133])
+            ("k" variable nil nil [6134 6139])
+            ("print" code nil nil [6140 6166])
+            ("for" code nil nil [6167 6473])
+            ("k" variable nil nil [6473 6478])
+            ("print" code nil nil [6479 6505])
+            ("for" code nil nil [6506 6812])
+            ("end" variable nil nil [6812 6829])
+            ("print" code nil nil [6830 6884]))          
+    :file "test_pattern3.py"
+    :pointmax 6885
+    :fsize 6884
+    :lastmodtime '(21063 44596)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "load.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("csv" include nil nil [1 11])
+            ("numpy" include nil nil [12 30])
+            ("LoadSet" function nil nil [32 588]))          
+    :file "load.py"
+    :pointmax 621
+    :fsize 587
+    :lastmodtime '(21051 6937)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test_pattern4.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("prepare_set" include nil nil [1 26])
+            ("load" include nil nil [27 45])
+            ("numpy" include nil nil [46 64])
+            ("matplotlib.pyplot" include nil nil [65 96])
+            ("itertools" include nil nil [97 119])
+            ("time" include nil nil [120 131])
+            ("FRACT_STEP" variable nil nil [133 147])
+            ("CountElMached" function (:arguments 
+              ( ("dimmax" variable nil (reparse-symbol function_parameters) [167 173])
+                ("rules" variable nil (reparse-symbol function_parameters) [175 180]))              ) nil [149 251])
+            ("CountRulesByDim" function (:arguments 
+              ( ("dimmax" variable nil (reparse-symbol function_parameters) [432 438])
+                ("rules" variable nil (reparse-symbol function_parameters) [440 445]))              ) nil [412 633])
+            ("DrawFigure" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [649 650]))              ) nil [634 808])
+            ("PrintRule" function (:arguments 
+              ( ("limits" variable nil (reparse-symbol function_parameters) [823 829])
+                ("ed" variable nil (reparse-symbol function_parameters) [831 833])
+                ("curratts" variable nil (reparse-symbol function_parameters) [835 843])
+                ("cov" variable nil (reparse-symbol function_parameters) [845 848])
+                ("err" variable nil (reparse-symbol function_parameters) [850 853]))              ) nil [809 1259])
+            ("Perm" function (:arguments 
+              ( ("len" variable nil (reparse-symbol function_parameters) [1269 1272])
+                ("ng" variable nil (reparse-symbol function_parameters) [1274 1276]))              ) nil [1260 1430])
+            ("FindLimits" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [1447 1448]))              ) nil [1431 1674])
+            ("Covering" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1688 1691])
+                ("outclass" variable nil (reparse-symbol function_parameters) [1693 1701])
+                ("edges" variable nil (reparse-symbol function_parameters) [1703 1708])
+                ("m" variable nil (reparse-symbol function_parameters) [1710 1711]))              ) nil [1675 1999])
+            ("VerifyRect" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [2015 2023])
+                ("edges" variable nil (reparse-symbol function_parameters) [2025 2030])
+                ("m" variable nil (reparse-symbol function_parameters) [2032 2033]))              ) nil [2000 2373])
+            ("CountRect" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [2389 2397])
+                ("edges" variable nil (reparse-symbol function_parameters) [2399 2404])
+                ("m" variable nil (reparse-symbol function_parameters) [2406 2407]))              ) nil [2375 2948])
+            ("FindFrom" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [2962 2970])
+                ("limits" variable nil (reparse-symbol function_parameters) [2972 2978])
+                ("m" variable nil (reparse-symbol function_parameters) [2980 2981]))              ) nil [2949 4079])
+            ("PurgePatterns" function (:arguments 
+              ( ("outclass" variable nil (reparse-symbol function_parameters) [4098 4106])
+                ("edges" variable nil (reparse-symbol function_parameters) [4108 4113])
+                ("m" variable nil (reparse-symbol function_parameters) [4115 4116]))              ) nil [4080 4452])
+            ("m0, m1" code nil nil [4476 4494])
+            ("SaveSet" code nil nil [4495 4510])
+            ("m" variable nil nil [4511 4515])
+            ("morig" variable nil nil [4516 4524])
+            ("m" code nil nil [4525 4537])
+            ("m" code nil nil [4538 4550])
+            ("m0orig" variable nil nil [4551 4569])
+            ("m1orig" variable nil nil [4570 4588])
+            ("morig" code nil nil [4589 4609])
+            ("morig" code nil nil [4610 4630])
+            ("ncol" variable nil nil [4631 4650])
+            ("nrow" variable nil nil [4651 4672])
+            ("DrawFigure" code nil nil [4673 4686])
+            ("mtot" variable nil nil [4687 4730])
+            ("limits" variable nil nil [4731 4756])
+            ("ncondmin" variable nil nil [4819 4831])
+            ("ncondmax" variable nil nil [4832 4892])
+            ("mincov" variable nil nil [4893 4942])
+            ("if" code nil nil [4943 5027])
+            ("rules0" variable nil nil [5027 5038])
+            ("rules1" variable nil nil [5039 5050])
+            ("rules" variable nil nil [5051 5061])
+            ("rules" code nil nil [5062 5082])
+            ("rules" code nil nil [5083 5103])
+            ("metriclist0" variable nil nil [5104 5120])
+            ("metriclist1" variable nil nil [5121 5137])
+            ("start" variable nil nil [5138 5157])
+            ("for" code nil nil [5158 7351])
+            ("k" variable nil nil [7352 7357])
+            ("print" code nil nil [7358 7384])
+            ("for" code nil nil [7385 7691])
+            ("k" variable nil nil [7691 7696])
+            ("print" code nil nil [7697 7723])
+            ("for" code nil nil [7724 8030])
+            ("end" variable nil nil [8030 8047])
+            ("print" code nil nil [8048 8102]))          
+    :file "test_pattern4.py"
+    :pointmax 7934
+    :fsize 8102
+    :lastmodtime '(21052 48412)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!rtest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

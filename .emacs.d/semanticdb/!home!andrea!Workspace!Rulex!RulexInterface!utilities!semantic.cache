@@ -1,0 +1,245 @@
+;; Object utilities/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utilities/"
+  :tables (list 
+   (semanticdb-table "RulexUtilities.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("os" include nil nil [1 79])
+            ("time" include nil nil [80 110])
+            ("threading" include nil nil [111 138])
+            ("bisect" include nil nil [139 169])
+            ("psutil" include nil nil [170 183])
+            ("string" include nil nil [184 197])
+            ("operator" include nil nil [198 241])
+            ("NOMINAL" variable nil nil [243 254])
+            ("DISCRETE" variable nil nil [255 267])
+            ("CONTINUOUS" variable nil nil [268 282])
+            ("ENCODING" variable nil nil [284 303])
+            ("AbsolutePath" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [322 327]))              ) nil [305 444])
+            ("RelativePath" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [462 467]))              ) nil [445 515])
+            ("BuildIntervalStrings" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [541 544])
+                ("type" variable nil (reparse-symbol function_parameters) [546 550])
+                ("bounded" variable nil (reparse-symbol function_parameters) [557 564])
+                ("fmt" variable nil (reparse-symbol function_parameters) [571 574]))              ) nil [516 1501])
+            ("CapitalizeFirstLetter" function (:arguments 
+              ( ("words" variable nil (reparse-symbol function_parameters) [1528 1533]))              ) nil [1502 2035])
+            ("ChangeColumnType" function (:arguments 
+              ( ("array" variable nil (reparse-symbol function_parameters) [2057 2062])
+                ("j" variable nil (reparse-symbol function_parameters) [2064 2065])
+                ("miss_str" variable nil (reparse-symbol function_parameters) [2067 2075])
+                ("type" variable nil (reparse-symbol function_parameters) [2077 2081])
+                ("decimal_sep" variable nil (reparse-symbol function_parameters) [2091 2102])
+                ("thousand_sep" variable nil (reparse-symbol function_parameters) [2131 2143]))              ) nil [2036 2569])
+            ("CheckUnicode" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2587 2588]))              ) nil [2570 2682])
+            ("ConvertToRaw" function (:arguments 
+              ( ("text" variable nil (reparse-symbol function_parameters) [2700 2704]))              ) nil [2683 3197])
+            ("CopyDir" function (:arguments 
+              ( ("src_dir" variable nil (reparse-symbol function_parameters) [3210 3217])
+                ("dst_dir" variable nil (reparse-symbol function_parameters) [3219 3226]))              ) nil [3198 3399])
+            ("DecideSeparator" function (:arguments 
+              ( ("string" variable nil (reparse-symbol function_parameters) [3420 3426]))              ) nil [3400 3537])
+            ("DecideType" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [3553 3556])
+                ("decimal_sep" variable nil (reparse-symbol function_parameters) [3558 3569])
+                ("thousand_sep" variable nil (reparse-symbol function_parameters) [3576 3588])
+                ("miss_str" variable nil (reparse-symbol function_parameters) [3595 3603]))              ) nil [3538 3897])
+            ("TryType" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [3914 3917])
+                ("type" variable nil (reparse-symbol function_parameters) [3919 3923])
+                ("decimal_sep" variable nil (reparse-symbol function_parameters) [3925 3936])
+                ("thousand_sep" variable nil (reparse-symbol function_parameters) [3943 3955])
+                ("miss_str" variable nil (reparse-symbol function_parameters) [3962 3970])
+                ("deep_f" variable nil (reparse-symbol function_parameters) [3990 3996]))              ) nil [3902 4588])
+            ("DirExists" function (:arguments 
+              ( ("dn" variable nil (reparse-symbol function_parameters) [4603 4605]))              ) nil [4589 4665])
+            ("EncodeUnicodeList" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [4688 4689])
+                ("enc" variable nil (reparse-symbol function_parameters) [4691 4694]))              ) nil [4666 5097])
+            ("ToByteArray" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [5114 5115]))              ) nil [5098 5296])
+            ("ToUnicode" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [5311 5312]))              ) nil [5297 5598])
+            ("FindInSubdirectory" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [5622 5630])
+                ("subdirectory" variable nil (reparse-symbol function_parameters) [5632 5644])
+                ("onlyfile" variable nil (reparse-symbol function_parameters) [5651 5659]))              ) nil [5599 5968])
+            ("FileExists" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [5988 5990]))              ) nil [5973 6028])
+            ("FileSize" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [6042 6044]))              ) nil [6029 6079])
+            ("FilterNone" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [6095 6098]))              ) nil [6080 6147])
+            ("GetColours" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [6163 6164])
+                ("normalize" variable nil (reparse-symbol function_parameters) [6166 6175]))              ) nil [6148 6929])
+            ("GetOperator" function (:arguments 
+              ( ("op" variable nil (reparse-symbol function_parameters) [6946 6948]))              ) nil [6930 7232])
+            ("IsAscii" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7245 7248]))              ) nil [7233 7361])
+            ("IsBool" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7373 7376]))              ) nil [7362 7413])
+            ("IsDict" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7425 7428]))              ) nil [7414 7465])
+            ("IsDecimal" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7480 7483]))              ) nil [7466 7550])
+            ("IsInt" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7561 7564]))              ) nil [7551 7627])
+            ("IsLong" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7639 7642]))              ) nil [7628 7679])
+            ("IsFloat" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7692 7695]))              ) nil [7680 7733])
+            ("IsBaseStr" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7748 7751]))              ) nil [7734 7794])
+            ("IsStr" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7805 7808]))              ) nil [7795 7844])
+            ("IsUnicode" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7859 7862]))              ) nil [7845 7902])
+            ("IsList" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7914 7917]))              ) nil [7903 7954])
+            ("IsTuple" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [7967 7970]))              ) nil [7955 8008])
+            ("GetFileTextAsLines" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [8032 8034])
+                ("nline" variable nil (reparse-symbol function_parameters) [8036 8041]))              ) nil [8009 8411])
+            ("GetFileExtension" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [8433 8435]))              ) nil [8412 8492])
+            ("GetSortedDictKeys" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [8515 8516]))              ) nil [8493 8563])
+            ("ListDirectoryNames" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [8587 8591])
+                ("flag" variable nil (reparse-symbol function_parameters) [8593 8597]))              ) nil [8564 8919])
+            ("PercString" function (:arguments 
+              ( ("perc" variable nil (reparse-symbol function_parameters) [8935 8939]))              ) nil [8920 9016])
+            ("Prod" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [9026 9029]))              ) nil [9017 9139])
+            ("RandomString" function (:arguments 
+              ( ("length" variable nil (reparse-symbol function_parameters) [9157 9163])
+                ("letter_or_digit" variable nil (reparse-symbol function_parameters) [9165 9180]))              ) nil [9140 9523])
+            ("SafeCopyFile" function (:arguments 
+              ( ("src_path" variable nil (reparse-symbol function_parameters) [9541 9549])
+                ("dst_path" variable nil (reparse-symbol function_parameters) [9551 9559])
+                ("overwrite_f" variable nil (reparse-symbol function_parameters) [9561 9572]))              ) nil [9524 9760])
+            ("SafeCreateDir" function (:arguments 
+              ( ("dir_path" variable nil (reparse-symbol function_parameters) [9779 9787]))              ) nil [9761 9971])
+            ("SafeDeleteFile" function (:arguments 
+              ( ("file_path" variable nil (reparse-symbol function_parameters) [9991 10000]))              ) nil [9972 10072])
+            ("SafeDictInsert" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [10092 10093])
+                ("key" variable nil (reparse-symbol function_parameters) [10095 10098])
+                ("value" variable nil (reparse-symbol function_parameters) [10100 10105]))              ) nil [10073 10172])
+            ("Sec2Hour" function (:arguments 
+              ( ("sec" variable nil (reparse-symbol function_parameters) [10186 10189]))              ) nil [10173 10345])
+            ("Swap" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [10355 10358])
+                ("ia" variable nil (reparse-symbol function_parameters) [10360 10362])
+                ("ib" variable nil (reparse-symbol function_parameters) [10364 10366]))              ) nil [10346 10424])
+            ("Type" function (:arguments 
+              ( ("item" variable nil (reparse-symbol function_parameters) [10434 10438]))              ) nil [10425 10473])
+            ("ToInt" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [10484 10487])
+                ("thousand_sep" variable nil (reparse-symbol function_parameters) [10489 10501])
+                ("weak_check_f" variable nil (reparse-symbol function_parameters) [10508 10520]))              ) nil [10474 10925])
+            ("ToFloat" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [10938 10941])
+                ("decimal_sep" variable nil (reparse-symbol function_parameters) [10943 10954])
+                ("thousand_sep" variable nil (reparse-symbol function_parameters) [10961 10973]))              ) nil [10926 11257])
+            ("VecIntersection" function (:arguments 
+              ( ("vec1" variable nil (reparse-symbol function_parameters) [11278 11282])
+                ("vec2" variable nil (reparse-symbol function_parameters) [11284 11288]))              ) nil [11258 11754])
+            ("VecComplement" function (:arguments 
+              ( ("vec1" variable nil (reparse-symbol function_parameters) [11773 11777])
+                ("vec2" variable nil (reparse-symbol function_parameters) [11779 11783]))              ) nil [11755 12272])
+            ("VecUnion" function (:arguments 
+              ( ("vec1" variable nil (reparse-symbol function_parameters) [12286 12290])
+                ("vec2" variable nil (reparse-symbol function_parameters) [12292 12296]))              ) nil [12273 12868])
+            ("VecUnique" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [12883 12886]))              ) nil [12869 12916])
+            ("Contains" function (:arguments 
+              ( ("lst" variable nil (reparse-symbol function_parameters) [13009 13012])
+                ("item" variable nil (reparse-symbol function_parameters) [13014 13018]))              ) nil [12996 13190])
+            ("SafeRemove" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [13206 13209])
+                ("value" variable nil (reparse-symbol function_parameters) [13211 13216]))              ) nil [13191 13293])
+            ("InitLogFile" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [13388 13390]))              ) nil [13372 13522])
+            ("IncrementalSum" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [13620 13623]))              ) nil [13601 13788])
+            ("Min" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [13797 13800]))              ) nil [13789 13867])
+            ("Max" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [13876 13879]))              ) nil [13868 13946])
+            ("Average" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [13959 13962]))              ) nil [13947 14052])
+            ("StdDev" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [14064 14067]))              ) nil [14053 14148])
+            ("MeanSquaredError" function (:arguments 
+              ( ("vec1" variable nil (reparse-symbol function_parameters) [14170 14174])
+                ("vec2" variable nil (reparse-symbol function_parameters) [14176 14180]))              ) nil [14149 14312])
+            ("WrapText" function (:arguments 
+              ( ("text" variable nil (reparse-symbol function_parameters) [14405 14409])
+                ("width" variable nil (reparse-symbol function_parameters) [14411 14416]))              ) nil [14392 15188])
+            ("Process" type
+               (:members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15307 15311])
+                        ("name" variable nil (reparse-symbol function_parameters) [15313 15317])
+                        ("pid" variable nil (reparse-symbol function_parameters) [15319 15322])
+                        ("cpu_usage" variable nil (reparse-symbol function_parameters) [15324 15333])
+                        ("mem_usage" variable nil (reparse-symbol function_parameters) [15335 15344])
+                        ("threads" variable nil (reparse-symbol function_parameters) [15346 15353]))                      ) (reparse-symbol indented_block_body) [15294 15505])
+                    ("__repr__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15523 15527]))                      ) (reparse-symbol indented_block_body) [15510 15639]))                  
+                :type "class")
+                nil [15274 15639])
+            ("SystemMonitor" function (:arguments 
+              ( ("str_out" variable nil (reparse-symbol function_parameters) [15658 15665])
+                ("cpu_prc" variable nil (reparse-symbol function_parameters) [15673 15680])
+                ("measure_time" variable nil (reparse-symbol function_parameters) [15687 15699])
+                ("n_max" variable nil (reparse-symbol function_parameters) [15703 15708]))              ) nil [15640 21861])
+            ("if" code nil nil [21862 21927]))          
+    :file "RulexUtilities.py"
+    :pointmax 21928
+    :fsize 21927
+    :lastmodtime '(20505 11498)
+    :unmatched-syntax '((RETURN 8947 . 8953) (IF 8991 . 8993) (ELSE 9004 . 9008) (RETURN 6209 . 6215) (IF 6228 . 6230) (ELSE 6245 . 6249) (NAME 5672 . 5676) (IF 5691 . 5693) (ELSE 5715 . 5719) (NAME 4848 . 4851) (IF 4863 . 4865) (ELSE 4878 . 4882) (NAME 1022 . 1025) (IF 1049 . 1051) (ELSE 1077 . 1081) (NAME 715 . 718) (IF 726 . 728) (ELSE 743 . 747) (NAME 656 . 659) (IF 667 . 669) (ELSE 687 . 691))
+    )
+   (semanticdb-table "singleton.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [25 75])
+            ("multiprocessing" include nil nil [76 111])
+            ("SingleInstance" type
+               (:members (("" "" If you want to prevent your script from running in parallel just instantiate SingleInstance nil class\. If is there another instance already running it will exist the application with the message "Another instance is already running, quitting." \, returning -1 error code\. >>> import tendo \.\.\. me = SingleInstance nil This option is very useful if you have scripts executed by crontab at small amounts of time\. Remember that this works by creating a lock file with a filename based on the full path to the script file\. "" "" code nil (reparse-symbol indented_block_body) [136 664]) ("__init__" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [679 683]) ("flavor_id" variable nil (reparse-symbol function_parameters) [685 694]))) (reparse-symbol indented_block_body) [666 1897]) ("__del__" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [1911 1915]))) (reparse-symbol indented_block_body) [1899 2267]))
+                :type "class")
+                nil [113 2267])
+            ("f" function nil nil [2268 2420])
+            ("testSingleton" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("test_1" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2473 2477]))                      ) (reparse-symbol indented_block_body) [2462 2560])
+                    ("test_2" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2572 2576]))                      ) (reparse-symbol indented_block_body) [2561 2713])
+                    ("test_3" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2725 2729]))                      ) (reparse-symbol indented_block_body) [2714 2936]))                  
+                :type "class")
+                nil [2421 2936])
+            ("logger" variable nil nil [3051 3096])
+            ("logger" code nil nil [3097 3139])
+            ("if" code nil nil [3141 3217]))          
+    :file "singleton.py"
+    :pointmax 3218
+    :fsize 3217
+    :lastmodtime '(20487 53873)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!utilities!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,18 @@
+ls
+locate native
+cd /home/andrea/Desktop/hadoop-2.2.0-src/hadoop-common-project/hadoop-common/src/main/native
+ls
+cd src
+ls
+cd ..
+ls
+mvn
+ls
+ls
+locate example | grep hadoop
+cd /home/andrea/Desktop/hadoop-2.2.0-src/hadoop-tools/hadoop-pipes/src/main/native/examples/impl/
+ls
+cd ..
+ls
+cd ..
+ls

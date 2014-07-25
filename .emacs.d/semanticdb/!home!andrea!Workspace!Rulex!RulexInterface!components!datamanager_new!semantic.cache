@@ -1,0 +1,71 @@
+;; Object datamanager_new/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "datamanager_new/"
+  :tables (list 
+   (semanticdb-table "RulexCompDatamanager.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 140])
+            ("datamanager" include nil nil [141 179])
+            ("RulexDataPlotPanel" include nil nil [180 229])
+            ("RulexDataUndo" include nil nil [230 276])
+            ("gui.models.RulexAttributeList" include nil nil [277 336])
+            ("components.common.RulexDataTable" include nil nil [337 417])
+            ("RulexValueTable" include nil nil [418 483])
+            ("components.RulexComponentBase" include nil nil [484 527])
+            ("RulexCompDatamanager" type
+               (:superclasses ("RulexComponentBase" "Ui_Datamanager")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [610 614])
+                        ("item" variable nil (reparse-symbol function_parameters) [616 620])
+                        ("parent" variable nil (reparse-symbol function_parameters) [622 628])
+                        ("debug_f" variable nil (reparse-symbol function_parameters) [635 642]))                      ) (reparse-symbol indented_block_body) [597 3450])
+                    ("AttContextMenu" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3474 3478])
+                        ("point" variable nil (reparse-symbol function_parameters) [3480 3485]))                      ) (reparse-symbol indented_block_body) [3455 4813])
+                    ("HandleMenu" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4833 4837]))                      ) (reparse-symbol indented_block_body) [4818 7135])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7160 7164])
+                        ("full_update_f" variable nil (reparse-symbol function_parameters) [7166 7179]))                      ) (reparse-symbol indented_block_body) [7140 8061])
+                    ("RefreshComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8087 8091]))                      ) (reparse-symbol indented_block_body) [8066 11019])
+                    ("OnAttributeCheck" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11045 11049])
+                        ("index_t" variable nil (reparse-symbol function_parameters) [11051 11058])
+                        ("index_b" variable nil (reparse-symbol function_parameters) [11065 11072]))                      ) (reparse-symbol indented_block_body) [11024 11211])
+                    ("OnClearFilter" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11234 11238])
+                        ("index" variable nil (reparse-symbol function_parameters) [11240 11245]))                      ) (reparse-symbol indented_block_body) [11216 11751])
+                    ("OnChangeDataView" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11777 11781])
+                        ("index" variable nil (reparse-symbol function_parameters) [11783 11788]))                      ) (reparse-symbol indented_block_body) [11756 11956])
+                    ("OnEditAttribute" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11981 11985]))                      ) (reparse-symbol indented_block_body) [11961 16355])
+                    ("OnSelectAttribute" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16382 16386])
+                        ("selected" variable nil (reparse-symbol function_parameters) [16388 16396])
+                        ("deselected" variable nil (reparse-symbol function_parameters) [16398 16408]))                      ) (reparse-symbol indented_block_body) [16360 16781])
+                    ("OnShowDataFilter" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16807 16811]))                      ) (reparse-symbol indented_block_body) [16786 18155])
+                    ("Export" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18171 18175]))                      ) (reparse-symbol indented_block_body) [18160 19210])
+                    ("Save" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19224 19228]))                      ) (reparse-symbol indented_block_body) [19215 19606])
+                    ("ShowAttribute" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19629 19633]))                      ) (reparse-symbol indented_block_body) [19611 25853]))                  
+                :type "class")
+                nil [529 25853])
+            ("if" code nil nil [25854 26316]))          
+    :file "RulexCompDatamanager.py"
+    :pointmax 26317
+    :fsize 26903
+    :lastmodtime '(20679 17605)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!components!datamanager_new!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,36 @@
+;; Object dectree/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dectree/"
+  :tables (list 
+   (semanticdb-table "RulexCompDectree.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("components.RulexComponentBase" include nil nil [146 189])
+            ("dectree" include nil nil [190 220])
+            ("RulexCompDectree" type
+               (:superclasses ("RulexComponentBase" "Ui_Dectree")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [296 300])
+                        ("item" variable nil (reparse-symbol function_parameters) [302 306])
+                        ("parent" variable nil (reparse-symbol function_parameters) [308 314])
+                        ("debug_f" variable nil (reparse-symbol function_parameters) [321 328]))                      ) (reparse-symbol indented_block_body) [283 1013])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1038 1042]))                      ) (reparse-symbol indented_block_body) [1018 1322])
+                    ("UpdateMonitor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1353 1357]))                      ) (reparse-symbol indented_block_body) [1335 1390]))                  
+                :type "class")
+                nil [222 1390])
+            ("if" code nil nil [1391 2053]))          
+    :file "RulexCompDectree.py"
+    :pointmax 2053
+    :fsize 2105
+    :lastmodtime '(20551 10574)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!components!dectree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

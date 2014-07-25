@@ -1,0 +1,77 @@
+;; Object valgrind-python-1.0.1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "valgrind-python-1.0.1/"
+  :tables (list 
+   (semanticdb-table "pywrap.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("Python.h" include (:system-flag t) nil [1 20])
+            ("frameobject.h" include (:system-flag t) nil [21 45])
+            ("valgrind.h" include (:system-flag t) nil [46 67])
+            ("memcheck.h" include (:system-flag t) nil [68 89])
+            ("I_WRAP_SONAME_FNNAME_ZU" function
+               (:arguments 
+                  ( ("" variable (:type ("NONE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [547 552])
+                    ("" variable (:type ("main" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [552 557]))                  
+                :type "int")
+                nil [519 582])
+            ("I_WRAP_SONAME_FNNAME_ZU" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type ("NONE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [823 828])
+                    ("" variable (:type ("PyEval_EvalFrameEx" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [828 847]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [788 885]))          
+    :file "pywrap.c"
+    :pointmax 1783
+    :fsize 1539
+    :lastmodtime '(20614 46143)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("VALGRIND_INIT_SUP_STACK")
+          )
+
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("PYINC" variable (:default-value ("$(shell python2.7-config --cflags)")) nil [1 42])
+            ("PYLIB" variable (:default-value ("$(shell python2.7-config --ldflags)")) nil [42 84])
+            ("CFLAGS" variable (:default-value ("-fPIC" "-g" "-Wall")) nil [85 109])
+            ("CPPFLAGS" variable (:default-value ("$(PYINC)" "-I/home/andrea/valgrind-3.7.0/include" "-I/home/andrea/valgrind-3.7.0/memcheck/")) nil [109 207])
+            ("libpywrap.so" function (:arguments ("pywrap.o")) nil [208 345])
+            ("main" function (:arguments ("main.c")) nil [346 394])
+            ("pywrap.o" function (:arguments ("pywrap.c")) nil [395 453])
+            ("clean" function nil nil [454 495])
+            ("seepre" function nil nil [496 541])
+            ("all" function (:arguments ("libpywrap.so" "main")) nil [542 565]))          
+    :file "Makefile"
+    :pointmax 535
+    :fsize 565
+    :lastmodtime '(20614 44761)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "prova.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("ctypes" include nil nil [1 21])
+            ("crasher" type
+               (:superclasses ("Union")
+                :members 
+                  ( ("_fields_" variable nil (reparse-symbol indented_block_body) [48 85]))                  
+                :type "class")
+                nil [22 86])
+            ("badptr" variable nil nil [86 102])
+            ("badptr" variable nil nil [103 113])
+            ("badptr" code nil nil [114 125]))          
+    :file "prova.py"
+    :pointmax 134
+    :fsize 133
+    :lastmodtime '(20614 45519)
+    :unmatched-syntax '(($EOI 134 . 134) ($EOI 133 . 133))
+    )
+   )
+  :file "!home!andrea!Workspace!valgrind-python-1.0.1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

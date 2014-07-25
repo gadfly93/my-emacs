@@ -1,0 +1,35 @@
+;; Object trainlm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trainlm/"
+  :tables (list 
+   (semanticdb-table "RulexCompTrainlm.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("components.RulexComponentBase" include nil nil [146 189])
+            ("trainlm" include nil nil [190 220])
+            ("RulexCompTrainlm" type
+               (:superclasses ("RulexComponentBase" "Ui_Trainlm")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [296 300])
+                        ("item" variable nil (reparse-symbol function_parameters) [302 306])
+                        ("parent" variable nil (reparse-symbol function_parameters) [308 314]))                      ) (reparse-symbol indented_block_body) [283 704])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [733 737]))                      ) (reparse-symbol indented_block_body) [713 1018])
+                    ("UpdateMonitor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1053 1057]))                      ) (reparse-symbol indented_block_body) [1035 1089]))                  
+                :type "class")
+                nil [222 1089])
+            ("if" code nil nil [1090 1237]))          
+    :file "RulexCompTrainlm.py"
+    :pointmax 1237
+    :fsize 1274
+    :lastmodtime '(20234 44859)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex_tag!RulexInterface!components!trainlm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

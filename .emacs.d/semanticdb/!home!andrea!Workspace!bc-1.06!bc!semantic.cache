@@ -1,0 +1,79 @@
+;; Object bc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bc/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("bin_PROGRAMS" variable (:default-value ("bc")) nil [59 77])
+            ("bc_SOURCES" variable (:default-value ("main.c" "bc.y" "scan.l" "execute.c" "load.c" "storage.c" "util.c" "global.c")) nil [78 153])
+            ("EXTRA_DIST" variable (:default-value ("bc.h" "bcdefs.h" "const.h" "fix-libmath_h" "global.h" "libmath.b" "proto.h" "sbc.y")) nil [154 251])
+            ("noinst_HEADERS" variable (:default-value ("libmath.h")) nil [251 278])
+            ("DISTCLEANFILES" variable (:default-value ("sbc" "sbc.c" "sbc.h")) nil [279 312])
+            ("MAINTAINERCLEANFILES" variable (:default-value ("Makefile.in" "libmath.h" "bc.c" "bc.h" "scan.c")) nil [313 375])
+            ("INCLUDES" variable (:default-value ("-I$(srcdir)" "-I$(srcdir)/../h")) nil [376 416])
+            ("LIBBC" variable (:default-value ("../lib/libbc.a")) nil [416 439])
+            ("LIBL" variable (:default-value ("@LEXLIB@")) nil [439 455])
+            ("LDADD" variable (:default-value ("$(LIBBC)" "$(LIBL)" "@READLINELIB@")) nil [455 494])
+            ("YFLAGS" variable (:default-value ("-d")) nil [495 507])
+            ("CFLAGS" variable (:default-value ("@CFLAGS@" "-Wall" "-funsigned-char")) nil [508 548])
+            ("$(PROGRAMS)" function (:arguments ("$(LIBBC)")) nil [549 571])
+            ("scan.o" function (:arguments ("bc.h")) nil [572 585])
+            ("global.o" function (:arguments ("libmath.h")) nil [585 605])
+            ("libmath.h" function (:arguments ("libmath.b")) nil [606 754])
+            ("fbcOBJ" variable (:default-value ("main.o" "bc.o" "scan.o" "execute.o" "global.o" "load.o" "storage.o" "util.o")) nil [755 826])
+            ("fbc" function (:arguments ("$(fbcOBJ)")) nil [826 900])
+            ("sbcOBJ" variable (:default-value ("main.o" "sbc.o" "scan.o" "execute.o" "global.o" "load.o" "storage.o" "util.o")) nil [901 973])
+            ("sbc.o" function (:arguments ("sbc.c")) nil [973 986])
+            ("sbc" function (:arguments ("$(sbcOBJ)")) nil [986 1060]))          
+    :file "Makefile.am"
+    :pointmax 1060
+    :fsize 1059
+    :lastmodtime '(14777 6204)
+    :unmatched-syntax '((shell-command 1002 . 1059) (bol 1001 . 1001))
+    )
+   (semanticdb-table "libmath.b"
+    :major-mode 'c-mode
+    :tags 
+        '( ("e" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1365 1367]))                  
+                :type ("define" type (:type "class") nil nil))
+                nil [1356 2180])
+            ("l" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2328 2330]))                  
+                :type ("define" type (:type "class") nil nil))
+                nil [2319 2914])
+            ("s" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3011 3013]))                  
+                :type ("define" type (:type "class") nil nil))
+                nil [3002 3433])
+            ("c" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3480 3482]))                  
+                :type ("define" type (:type "class") nil nil))
+                nil [3471 3581])
+            ("a" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3776 3778]))                  
+                :type ("define" type (:type "class") nil nil))
+                nil [3767 5415])
+            ("j" function
+               (:arguments 
+                  ( ("" variable (:type ("n" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5646 5648])
+                    ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5648 5650]))                  
+                :type ("define" type (:type "class") nil nil))
+                nil [5637 6300]))          
+    :file "libmath.b"
+    :pointmax 6301
+    :fsize 6300
+    :lastmodtime '(14783 50770)
+    :unmatched-syntax '((number 1221 . 1223) (punctuation 1219 . 1220) (symbol 1213 . 1218))
+    )
+   )
+  :file "!home!andrea!Workspace!bc-1.06!bc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

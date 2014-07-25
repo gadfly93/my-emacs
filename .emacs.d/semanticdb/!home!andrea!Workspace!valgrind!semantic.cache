@@ -1,0 +1,42 @@
+;; Object valgrind/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "valgrind/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("foreign" "1.7" "dist-bzip2")) nil [2 44])
+            ("$(top_srcdir)/Makefile.all.am" include nil nil [45 84])
+            ("TOOLS" variable (:default-value ("memcheck" "cachegrind" "callgrind" "massif" "lackey" "none" "helgrind" "drd")) nil [85 184])
+            ("EXP_TOOLS" variable (:default-value ("exp-sgcheck" "exp-bbv" "exp-dhat")) nil [185 235])
+            ("DIST_SUBDIRS" variable (:default-value ("$(SUBDIRS)")) nil [486 513])
+            ("SUPP_FILES" variable (:default-value ("glibc-2.2.supp" "glibc-2.3.supp" "glibc-2.4.supp" "glibc-2.5.supp" "glibc-2.6.supp" "glibc-2.7.supp" "glibc-2.X.supp.in" "xfree-3.supp" "xfree-4.supp" "glibc-2.34567-NPTL-helgrind.supp" "glibc-2.2-LinuxThreads-helgrind.supp" "glibc-2.X-drd.supp" "exp-sgcheck.supp" "darwin9.supp" "darwin9-drd.supp" "darwin10.supp" "darwin10-drd.supp" "darwin11.supp" "bionic.supp")) nil [514 888])
+            ("DEFAULT_SUPP_FILES" variable (:default-value ("@DEFAULT_SUPP@")) nil [888 924])
+            ("dist_noinst_DATA" variable (:default-value ("$(SUPP_FILES)")) nil [1066 1099])
+            ("vglibdir" variable (:default-value ("$(pkglibdir)")) nil [1100 1124])
+            ("vglib_DATA" variable (:default-value ("default.supp")) nil [1124 1150])
+            ("pkgconfigdir" variable (:default-value ("$(libdir)/pkgconfig")) nil [1151 1186])
+            ("pkgconfig_DATA" variable (:default-value ("valgrind.pc")) nil [1186 1215])
+            ("BUILT_SOURCES" variable (:default-value ("default.supp" "valgrind.pc")) nil [1216 1258])
+            ("CLEANFILES" variable (:default-value ("default.supp")) nil [1258 1288])
+            ("default.supp" function (:arguments ("$(DEFAULT_SUPP_FILES)")) nil [1289 1513])
+            ("regtest" function (:arguments ("check")) nil [1658 1970])
+            ("nonexp-regtest" function (:arguments ("check")) nil [1970 2026])
+            ("exp-regtest" function (:arguments ("check")) nil [2026 2099])
+            ("perf" function (:arguments ("check")) nil [2327 2365])
+            ("EXTRA_DIST" variable (:default-value ("COPYING.DOCS" "README_DEVELOPERS" "README_PACKAGERS" "README_MISSING_SYSCALL_OR_IOCTL" "README.s390" "README.android" "valgrind.pc.in" "valgrind.spec.in" "valgrind.spec")) nil [2646 2839])
+            ("dist_noinst_SCRIPTS" variable (:default-value ("vg-in-place")) nil [2840 2877])
+            ("all-local" function (:arguments ("default.supp")) nil [2878 2997])
+            ("clean-local" function nil nil [2998 3033])
+            ("pkginclude_HEADERS" variable (:default-value ("config.h")) nil [3103 3133]))          
+    :file "Makefile.am"
+    :pointmax 3133
+    :fsize 3132
+    :lastmodtime '(20341 25746)
+    :unmatched-syntax '((symbol 481 . 485) (symbol 474 . 477) (symbol 462 . 470) (symbol 443 . 458) (symbol 435 . 439) (symbol 426 . 431) (semantic-list 411 . 422) (punctuation 410 . 411) (semantic-list 399 . 406) (punctuation 398 . 399) (symbol 393 . 394) (symbol 380 . 389) (symbol 373 . 376) (INCLUDE 362 . 369) (punctuation 357 . 358) (symbol 349 . 356) (bol 349 . 349))
+    )
+   )
+  :file "!home!andrea!Workspace!valgrind!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

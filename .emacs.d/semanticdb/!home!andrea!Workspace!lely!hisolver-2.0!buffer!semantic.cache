@@ -1,0 +1,127 @@
+;; Object buffer/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "buffer/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("noinst_LTLIBRARIES" variable (:default-value ("libbuffer.la")) nil [144 176])
+            ("AM_CFLAGS" variable (:default-value ("-Wall" "-Werror" "-pedantic" "-std=c99" "-D_BSD_SOURCE" "-D_XOPEN_SOURCE=600")) nil [268 345])
+            ("dist_include_HEADERS" variable (:default-value ("buffer.h" "buffer_types.h")) nil [403 448])
+            ("libbuffer_la_SOURCES" variable (:default-value ("buffer.c")) nil [448 478])
+            ("libbuffer_la_LDFLAGS" variable (:default-value ("@lt_enable_auto_import@" "-no-undefined" "-avoid-version")) nil [478 554])
+            ("bin_PROGRAMS" variable (:default-value ("testbuffer")) nil [555 581])
+            ("testbuffer_SOURCES" variable (:default-value ("testbuffer.c")) nil [581 615])
+            ("testbuffer_LDADD" variable (:default-value ("$(top_srcdir)/buffer/libbuffer.la")) nil [615 668])
+            ("testbuffer_LDFLAGS" variable (:default-value ("-static" "-lm" "@osdep_libraries@")) nil [668 719]))          
+    :file "Makefile.am"
+    :pointmax 719
+    :fsize 718
+    :lastmodtime '(21234 5437 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "buffer.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("buffer_types.h" include nil nil [1 26])
+            ("buffer.h" include nil nil [27 46])
+            ("stdio.h" include (:system-flag t) nil [47 65])
+            ("stdlib.h" include (:system-flag t) nil [66 85])
+            ("string.h" include (:system-flag t) nil [86 105])
+            ("buffer_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("iElements" variable (:type "int") (reparse-symbol arg-sub-list) [131 145])
+                    ("iSize" variable (:type "int") (reparse-symbol arg-sub-list) [146 156]))                  
+                :type ("t_buffer" type (:type "class") nil nil))
+                nil [107 720])
+            ("buffer_add" function
+               (:arguments 
+                  ( ("ptbuffBuffer" variable
+                       (:pointer 1
+                        :type ("t_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [796 819])
+                    ("pvData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [820 833])
+                    ("iElements" variable (:type "int") (reparse-symbol arg-sub-list) [834 848]))                  
+                :type ("t_buffer_error" type (:type "class") nil nil))
+                nil [769 3255])
+            ("buffer_clear" function
+               (:arguments 
+                  ( ("ptbuffBuffer" variable
+                       (:pointer 1
+                        :type ("t_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3352 3375]))                  
+                :type ("t_buffer_error" type (:type "class") nil nil))
+                nil [3323 3577])
+            ("buffer_ptr" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptbuffBuffer" variable
+                       (:pointer 1
+                        :type ("t_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3652 3675])
+                    ("iFrom" variable (:type "int") (reparse-symbol arg-sub-list) [3676 3686]))                  
+                :type "void")
+                nil [3633 4213])
+            ("buffer_get" function
+               (:arguments 
+                  ( ("ptbuffBuffer" variable
+                       (:pointer 1
+                        :type ("t_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4242 4265])
+                    ("pvData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4266 4279])
+                    ("iFrom" variable (:type "int") (reparse-symbol arg-sub-list) [4280 4290])
+                    ("iElements" variable (:type "int") (reparse-symbol arg-sub-list) [4291 4305]))                  
+                :type ("t_buffer_error" type (:type "class") nil nil))
+                nil [4215 5491])
+            ("buffer_elements" function
+               (:arguments 
+                  ( ("ptbuffBuffer" variable
+                       (:pointer 1
+                        :type ("t_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5583 5606]))                  
+                :type "int")
+                nil [5562 5789])
+            ("buffer_limit" function
+               (:arguments 
+                  ( ("ptbuffBuffer" variable
+                       (:pointer 1
+                        :type ("t_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5854 5877]))                  
+                :type "int")
+                nil [5836 5964])
+            ("buffer_destroy" function
+               (:arguments 
+                  ( ("ptbuffBuffer" variable
+                       (:pointer 1
+                        :type ("t_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6042 6065]))                  
+                :type ("t_buffer_error" type (:type "class") nil nil))
+                nil [6011 6241]))          
+    :file "buffer.c"
+    :pointmax 6298
+    :fsize 6297
+    :lastmodtime '(21347 44347 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "buffer_types.h"
+    :file "buffer_types.h"
+    :fsize 252
+    :lastmodtime '(21234 5437 0 0)
+    )
+   (semanticdb-table "buffer.h"
+    :file "buffer.h"
+    :fsize 412
+    :lastmodtime '(21347 44347 0 0)
+    )
+   )
+  :file "!home!andrea!Workspace!lely!hisolver-2.0!buffer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

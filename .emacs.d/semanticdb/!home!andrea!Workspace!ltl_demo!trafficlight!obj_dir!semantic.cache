@@ -1,0 +1,136 @@
+;; Object obj_dir/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "obj_dir/"
+  :tables (list 
+   (semanticdb-table "Vsynthesis.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Vsynthesis.h" include nil nil [144 167])
+            ("Vsynthesis__Syms.h" include nil nil [187 216])
+            ("VL_ST_SIG8" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("Vsynthesis::__Vtable1_v__DOT__state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [273 312]))                  
+                :type "int")
+                nil [262 318])
+            ("VL_CTOR_IMP" function
+               (:arguments 
+                  ( ("" variable (:type ("Vsynthesis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [356 367]))                  
+                :type "int")
+                nil [344 1814])
+            ("__Vconfigure" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1846 1872])
+                    ("first" variable (:type "bool") (reparse-symbol arg-sub-list) [1873 1884]))                  
+                :type "void")
+                nil [1816 1961])
+            ("Vsynthesis" function
+               (:destructor-flag t
+                :parent "Vsynthesis"
+                :type "void")
+                nil [1963 2030])
+            ("eval" function
+               (:parent "Vsynthesis"
+                :type "void")
+                nil [2057 2750])
+            ("_eval_initial_loop" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2788 2825]))                  
+                :type "void")
+                nil [2752 3198])
+            ("_initial__TOP" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3275 3312]))                  
+                :type "void")
+                nil [3244 3523])
+            ("_sequent__TOP__1" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3559 3596]))                  
+                :type "void")
+                nil [3525 4457])
+            ("_settle__TOP__2" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4492 4529]))                  
+                :type "void")
+                nil [4459 4837])
+            ("_eval" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4862 4899]))                  
+                :type "void")
+                nil [4839 5219])
+            ("_eval_initial" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5252 5289]))                  
+                :type "void")
+                nil [5221 5472])
+            ("final" function
+               (:parent "Vsynthesis"
+                :type "void")
+                nil [5474 5702])
+            ("_eval_settle" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5734 5771]))                  
+                :type "void")
+                nil [5704 5955])
+            ("_change_request" function
+               (:parent "Vsynthesis"
+                :arguments 
+                  ( ("vlSymsp" variable
+                       (:pointer 1
+                        :type ("Vsynthesis__Syms" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5991 6028]))                  
+                :type ("IData" type (:type "class") nil nil))
+                nil [5957 6265]))          
+    :file "Vsynthesis.cpp"
+    :pointmax 6266
+    :fsize 6265
+    :lastmodtime '(21455 41379 344252 407000)
+    :unmatched-syntax '((number 315 . 316) (number 313 . 314) (semantic-list 308 . 312))
+    )
+   (semanticdb-table "Vsynthesis.h"
+    :file "Vsynthesis.h"
+    :fsize 2952
+    :lastmodtime '(21455 41379 344252 407000)
+    )
+   (semanticdb-table "Vsynthesis__Syms.h"
+    :file "Vsynthesis__Syms.h"
+    :fsize 984
+    :lastmodtime '(21455 41379 344252 407000)
+    )
+   )
+  :file "!home!andrea!Workspace!ltl_demo!trafficlight!obj_dir!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

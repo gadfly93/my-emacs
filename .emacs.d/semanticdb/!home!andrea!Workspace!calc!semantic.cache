@@ -1,0 +1,1998 @@
+;; Object calc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "calc/"
+  :tables (list 
+   (semanticdb-table "calc3.y"
+    :major-mode 'c-mode
+    :tags 
+        '( ("" type
+               (:members 
+                  ( ("iValue" variable (:type "int") (reparse-symbol classsubparts) [345 356])
+                    ("sIndex" variable (:type "char") (reparse-symbol classsubparts) [397 409])
+                    ("nPtr" variable
+                       (:pointer 1
+                        :type ("nodeType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [454 469]))                  
+                :type "union")
+                nil [333 503])
+            ("function" variable (:type "int") nil [733 779])
+            ("stmt" variable (:type ("stmt_list" type (:type "class") nil nil)) nil [1508 1569])
+            ("SIZEOF_NODETYPE" variable (:constant-flag t) nil [2423 2438])
+            ("con" function
+               (:pointer 1
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [2484 2494]))                  
+                :type ("nodeType" type (:type "class") nil nil))
+                nil [2470 2781])
+            ("id" function
+               (:pointer 1
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2796 2802]))                  
+                :type ("nodeType" type (:type "class") nil nil))
+                nil [2783 3078])
+            ("opr" function
+               (:pointer 1
+                :arguments 
+                  ( ("oper" variable (:type "int") (reparse-symbol arg-sub-list) [3094 3103])
+                    ("nops" variable (:type "int") (reparse-symbol arg-sub-list) [3104 3113])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3114 3118]))                  
+                :type ("nodeType" type (:type "class") nil nil))
+                nil [3080 3611])
+            ("freeNode" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("nodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3627 3639]))                  
+                :type "void")
+                nil [3613 3803])
+            ("yyerror" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3818 3826]))                  
+                :type "void")
+                nil [3805 3862])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3873 3878]))                  
+                :type "int")
+                nil [3864 3911]))          
+    :file "calc3.y"
+    :pointmax 3912
+    :fsize 3911
+    :lastmodtime '(20210 1773)
+    :unmatched-syntax '((punctuation 2412 . 2413) (punctuation 2411 . 2412) (punctuation 2408 . 2409) (semantic-list 2387 . 2399) (string 2374 . 2377) (symbol 2369 . 2373) (string 2365 . 2368) (punctuation 2363 . 2364) (semantic-list 2326 . 2354) (symbol 2312 . 2316) (symbol 2309 . 2311) (symbol 2304 . 2308) (punctuation 2302 . 2303) (semantic-list 2265 . 2293) (symbol 2251 . 2255) (symbol 2248 . 2250) (symbol 2243 . 2247) (punctuation 2241 . 2242) (semantic-list 2204 . 2232) (symbol 2190 . 2194) (symbol 2187 . 2189) (symbol 2182 . 2186) (punctuation 2180 . 2181) (semantic-list 2143 . 2171) (symbol 2129 . 2133) (symbol 2126 . 2128) (symbol 2121 . 2125) (punctuation 2119 . 2120) (semantic-list 2081 . 2110) (symbol 2068 . 2072) (string 2064 . 2067) (symbol 2059 . 2063) (punctuation 2057 . 2058) (semantic-list 2019 . 2048) (symbol 2006 . 2010) (string 2002 . 2005) (symbol 1997 . 2001) (punctuation 1995 . 1996) (semantic-list 1957 . 1986) (symbol 1944 . 1948) (string 1940 . 1943) (symbol 1935 . 1939) (punctuation 1933 . 1934) (semantic-list 1895 . 1924) (symbol 1882 . 1886) (string 1878 . 1881) (symbol 1873 . 1877) (punctuation 1871 . 1872) (semantic-list 1833 . 1862) (symbol 1820 . 1824) (string 1816 . 1819) (symbol 1811 . 1815) (punctuation 1809 . 1810) (semantic-list 1771 . 1800) (symbol 1758 . 1762) (string 1754 . 1757) (symbol 1749 . 1753) (punctuation 1747 . 1748) (semantic-list 1659 . 1675) (symbol 1637 . 1645) (punctuation 1635 . 1636) (semantic-list 1609 . 1626) (symbol 1587 . 1594) (punctuation 1575 . 1576) (symbol 1571 . 1575) (punctuation 1506 . 1507) (semantic-list 1485 . 1497) (symbol 1463 . 1467) (punctuation 1451 . 1452) (symbol 1442 . 1451) (punctuation 1439 . 1440) (semantic-list 1418 . 1430) (string 1401 . 1404) (symbol 1391 . 1400) (string 1387 . 1390) (punctuation 1385 . 1386) (semantic-list 1344 . 1376) (symbol 1339 . 1343) (symbol 1334 . 1338) (symbol 1329 . 1333) (string 1325 . 1328) (symbol 1320 . 1324) (string 1316 . 1319) (symbol 1313 . 1315) (punctuation 1311 . 1312) (semantic-list 1274 . 1302) (symbol 1270 . 1273) (symbol 1265 . 1269) (punctuation 1264 . 1265) (symbol 1259 . 1263) (string 1255 . 1258) (symbol 1250 . 1254) (string 1246 . 1249) (symbol 1243 . 1245) (punctuation 1241 . 1242) (semantic-list 1201 . 1232) (symbol 1189 . 1193) (string 1185 . 1188) (symbol 1180 . 1184) (string 1176 . 1179) (symbol 1170 . 1175) (punctuation 1168 . 1169) (semantic-list 1126 . 1159) (string 1113 . 1116) (symbol 1108 . 1112) (string 1104 . 1107) (symbol 1095 . 1103) (punctuation 1093 . 1094) (semantic-list 1057 . 1084) (string 1037 . 1040) (symbol 1032 . 1036) (symbol 1026 . 1031) (punctuation 1024 . 1025) (semantic-list 1003 . 1015) (string 977 . 980) (symbol 972 . 976) (punctuation 970 . 971) (semantic-list 928 . 961) (string 897 . 900) (punctuation 885 . 886) (symbol 881 . 885) (punctuation 878 . 879) (punctuation 857 . 858) (semantic-list 823 . 848) (symbol 810 . 814) (symbol 801 . 809) (punctuation 789 . 790) (symbol 781 . 789) (punctuation 723 . 724) (symbol 716 . 723) (punctuation 713 . 714) (punctuation 712 . 713) (symbol 701 . 710) (symbol 696 . 700) (symbol 691 . 695) (punctuation 689 . 690) (symbol 685 . 689) (punctuation 684 . 685) (symbol 679 . 683) (punctuation 678 . 679) (symbol 670 . 676) (symbol 661 . 669) (punctuation 660 . 661) (string 656 . 659) (string 652 . 655) (symbol 647 . 651) (punctuation 646 . 647) (string 642 . 645) (string 638 . 641) (symbol 633 . 637) (punctuation 632 . 633) (string 628 . 631) (string 624 . 627) (symbol 621 . 623) (symbol 618 . 620) (symbol 615 . 617) (symbol 612 . 614) (symbol 607 . 611) (punctuation 606 . 607) (symbol 600 . 604) (symbol 591 . 599) (punctuation 590 . 591) (symbol 586 . 589) (symbol 577 . 585) (punctuation 576 . 577) (symbol 570 . 575) (symbol 567 . 569) (symbol 561 . 566) (symbol 555 . 560) (punctuation 554 . 555) (symbol 545 . 553) (punctuation 543 . 544) (symbol 537 . 543) (punctuation 536 . 537) (symbol 530 . 535) (punctuation 529 . 530) (symbol 521 . 528) (punctuation 519 . 520) (symbol 513 . 519) (punctuation 512 . 513) (symbol 506 . 511) (punctuation 505 . 506) (punctuation 332 . 333) (semantic-list 2 . 330) (punctuation 1 . 2))
+    :lexical-table 
+        '(("SIZEOF_NODETYPE" . ((semantic-list "((char *)&p->con - (char *)p)" 2439 . 2468)))
+          )
+
+    )
+   (semanticdb-table "calc3b.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("calc3.h" include nil nil [20 38])
+            ("y.tab.h" include nil nil [39 57])
+            ("lbl" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [59 74])
+            ("ex" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("nodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83 95]))                  
+                :type "int")
+                nil [76 2271]))          
+    :file "calc3b.c"
+    :pointmax 2272
+    :fsize 2271
+    :lastmodtime '(16511 21324)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "rparser.tab.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("YYBISON" variable (:constant-flag t) nil [2111 2118])
+            ("YYBISON_VERSION" variable (:constant-flag t) nil [2152 2167])
+            ("YYSKELETON_NAME" variable (:constant-flag t) nil [2207 2222])
+            ("YYPURE" variable (:constant-flag t) nil [2262 2268])
+            ("YYPUSH" variable (:constant-flag t) nil [2301 2307])
+            ("YYPULL" variable (:constant-flag t) nil [2340 2346])
+            ("YYLSP_NEEDED" variable (:constant-flag t) nil [2382 2394])
+            ("stdio.h" include (:system-flag t) nil [2497 2519])
+            ("yylex" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2534 2539]))                  
+                :type "int")
+                nil [2524 2540])
+            ("yyerror" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2558 2565]))                  
+                :type "void")
+                nil [2545 2566])
+            ("YYDEBUG" variable (:constant-flag t) nil [2670 2677])
+            ("YYERROR_VERBOSE" variable (:constant-flag t) nil [2817 2832])
+            ("YYTOKEN_TABLE" variable (:constant-flag t) nil [2907 2920])
+            ("YYTOKENTYPE" variable (:constant-flag t) nil [2976 2987])
+            ("yytokentype" type
+               (:members 
+                  ( ("VARIABLE" variable
+                       (:constant-flag t
+                        :default-value (3129 3132)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3118 3132]))                  
+                :type "enum")
+                nil [3094 3138])
+            ("YYSTYPE" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [3204 3224])
+            ("YYSTYPE_IS_TRIVIAL" variable (:constant-flag t) nil [3234 3252])
+            ("yystype" variable (:constant-flag t) nil [3264 3271])
+            ("YYSTYPE_IS_DECLARED" variable (:constant-flag t) nil [3326 3345])
+            ("yytype_uint8" type
+               (:typedef ("unsigned char")
+                :superclasses "unsigned char"
+                :type "typedef")
+                nil [3558 3593])
+            ("yytype_int8" type
+               (:typedef ("signed char")
+                :superclasses "signed char"
+                :type "typedef")
+                nil [3754 3786])
+            ("yytype_uint16" type
+               (:typedef ("unsigned short int")
+                :superclasses "unsigned short int"
+                :type "typedef")
+                nil [3896 3937])
+            ("yytype_int16" type
+               (:typedef ("short int")
+                :superclasses "short int"
+                :type "typedef")
+                nil [4007 4038])
+            ("YYSIZE_T" variable (:constant-flag t) nil [4151 4159])
+            ("stddef.h" include (:system-flag t) nil [4290 4311])
+            ("YYSIZE_T" variable (:constant-flag t) nil [4357 4365])
+            ("YYSIZE_MAXIMUM" variable (:constant-flag t) nil [4436 4450])
+            ("libintl.h" include (:system-flag t) nil [4515 4538])
+            ("YY_" variable (:constant-flag t) nil [4585 4588])
+            ("YYUSE" variable (:constant-flag t) nil [4806 4811])
+            ("YYID" variable (:constant-flag t) nil [4973 4977])
+            ("YYSTACK_ALLOC" variable (:constant-flag t) nil [6599 6612])
+            ("YYSTACK_FREE" variable (:constant-flag t) nil [6632 6644])
+            ("YYSTACK_ALLOC_MAXIMUM" variable (:constant-flag t) nil [6695 6716])
+            ("stdlib.h" include (:system-flag t) nil [6889 6911])
+            ("_STDLIB_H" variable (:constant-flag t) nil [6980 6989])
+            ("YYMALLOC" variable (:constant-flag t) nil [7041 7049])
+            ("malloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7215 7224]))                  
+                :type "void")
+                nil [7201 7225])
+            ("YYFREE" variable (:constant-flag t) nil [7308 7314])
+            ("free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7473 7480]))                  
+                :type "void")
+                nil [7462 7481])
+            ("yyalloc" type
+               (:members 
+                  ( ("yyss_alloc" variable (:type ("yytype_int16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7798 7822])
+                    ("yyvs_alloc" variable (:type ("YYSTYPE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7825 7844]))                  
+                :type "union")
+                nil [7780 7847])
+            ("YYSTACK_GAP_MAXIMUM" variable (:constant-flag t) nil [7933 7952])
+            ("YYSTACK_BYTES" variable (:constant-flag t) nil [8081 8094])
+            ("YYCOPY" variable (:constant-flag t) nil [8343 8349])
+            ("YYSTACK_RELOCATE" variable (:constant-flag t) nil [8939 8955])
+            ("YYFINAL" variable (:constant-flag t) nil [9358 9365])
+            ("YYLAST" variable (:constant-flag t) nil [9417 9423])
+            ("YYNTOKENS" variable (:constant-flag t) nil [9478 9487])
+            ("YYNNTS" variable (:constant-flag t) nil [9540 9546])
+            ("YYNRULES" variable (:constant-flag t) nil [9594 9602])
+            ("YYNSTATES" variable (:constant-flag t) nil [9651 9660])
+            ("YYUNDEFTOK" variable (:constant-flag t) nil [9746 9756])
+            ("YYMAXUTOK" variable (:constant-flag t) nil [9768 9777])
+            ("YYTRANSLATE" variable (:constant-flag t) nil [9793 9804])
+            ("yytranslate" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [9961 11897])
+            ("yyprhs" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [11995 12073])
+            ("yyrhs" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [12132 12267])
+            ("yyrline" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [12339 12418])
+            ("yytname" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [12611 12748])
+            ("yyr1" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [13041 13117])
+            ("yyr2" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [13196 13272])
+            ("yydefact" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [13446 13547])
+            ("yydefgoto" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [13578 13637])
+            ("YYPACT_NINF" variable (:constant-flag t) nil [13732 13743])
+            ("yypact" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [13747 13845])
+            ("yypgoto" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [13874 13931])
+            ("YYTABLE_NINF" variable (:constant-flag t) nil [14173 14185])
+            ("yytable" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [14189 14282])
+            ("yycheck" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [14284 14376])
+            ("yystos" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [14475 14574])
+            ("yyerrok" variable (:constant-flag t) nil [14584 14591])
+            ("yyclearin" variable (:constant-flag t) nil [14619 14628])
+            ("YYEMPTY" variable (:constant-flag t) nil [14656 14663])
+            ("YYEOF" variable (:constant-flag t) nil [14678 14683])
+            ("YYACCEPT" variable (:constant-flag t) nil [14696 14704])
+            ("YYABORT" variable (:constant-flag t) nil [14730 14737])
+            ("YYERROR" variable (:constant-flag t) nil [14763 14770])
+            ("YYFAIL" variable (:constant-flag t) nil [15001 15007])
+            ("YYRECOVERING" variable (:constant-flag t) nil [15032 15044])
+            ("YYBACKUP" variable (:constant-flag t) nil [15073 15081])
+            ("YYTERROR" variable (:constant-flag t) nil [15501 15509])
+            ("YYERRCODE" variable (:constant-flag t) nil [15520 15529])
+            ("YYRHSLOC" variable (:constant-flag t) nil [15726 15734])
+            ("YYLLOC_DEFAULT" variable (:constant-flag t) nil [15786 15800])
+            ("YY_LOCATION_PRINT" variable (:constant-flag t) nil [16700 16717])
+            ("YYLEX" variable (:constant-flag t) nil [17065 17070])
+            ("stdio.h" include (:system-flag t) nil [17158 17178])
+            ("YYFPRINTF" variable (:constant-flag t) nil [17224 17233])
+            ("YYDPRINTF" variable (:constant-flag t) nil [17260 17269])
+            ("YY_SYMBOL_PRINT" variable (:constant-flag t) nil [17367 17382])
+            ("yy_symbol_value_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyoutput" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17923 17938])
+                    ("yytype" variable (:type "int") (reparse-symbol arg-sub-list) [17939 17950])
+                    ("yyvaluep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17951 17982]))                  
+                :type "void")
+                nil [17888 18346])
+            ("yy_symbol_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyoutput" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18585 18600])
+                    ("yytype" variable (:type "int") (reparse-symbol arg-sub-list) [18601 18612])
+                    ("yyvaluep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18613 18644]))                  
+                :type "void")
+                nil [18556 19021])
+            ("yy_stack_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yybottom" variable
+                       (:pointer 1
+                        :type ("yytype_int16" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19430 19453])
+                    ("yytop" variable
+                       (:pointer 1
+                        :type ("yytype_int16" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19454 19474]))                  
+                :type "void")
+                nil [19402 19773])
+            ("YY_STACK_PRINT" variable (:constant-flag t) nil [19784 19798])
+            ("yy_reduce_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyvsp" variable
+                       (:pointer 1
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20202 20217])
+                    ("yyrule" variable (:type "int") (reparse-symbol arg-sub-list) [20218 20229]))                  
+                :type "void")
+                nil [20173 20787])
+            ("YY_REDUCE_PRINT" variable (:constant-flag t) nil [20798 20813])
+            ("yydebug" variable (:type "int") nil [21018 21030])
+            ("YYINITDEPTH" variable (:constant-flag t) nil [21312 21323])
+            ("YYMAXDEPTH" variable (:constant-flag t) nil [21668 21678])
+            ("yystrlen" variable (:constant-flag t) nil [21791 21799])
+            ("yystpcpy" variable (:constant-flag t) nil [22270 22278])
+            ("yytnamerr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyres" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23247 23259])
+                    ("yystr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23260 23278]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [23220 23836])
+            ("yysyntax_error" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyresult" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24311 24326])
+                    ("yystate" variable (:type "int") (reparse-symbol arg-sub-list) [24327 24339])
+                    ("yychar" variable (:type "int") (reparse-symbol arg-sub-list) [24340 24351]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [24279 27154])
+            ("yydestruct" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yymsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27476 27494])
+                    ("yytype" variable (:type "int") (reparse-symbol arg-sub-list) [27495 27506])
+                    ("yyvaluep" variable
+                       (:pointer 1
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27507 27525]))                  
+                :type "void")
+                nil [27452 27825])
+            ("yyparse" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [28092 28097]))                  
+                :type "int")
+                nil [28079 28098])
+            ("yychar" variable (:type "int") nil [28188 28199])
+            ("yylval" variable (:type ("YYSTYPE" type (:type "class") nil nil)) nil [28252 28267])
+            ("yynerrs" variable (:type "int") nil [28308 28320])
+            ("yyparse" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [28771 28776]))                  
+                :type "int")
+                nil [28758 40192]))          
+    :file "rparser.tab.c"
+    :pointmax 40196
+    :fsize 40195
+    :lastmodtime '(20170 28343)
+    :unmatched-syntax '((string 3445 . 3460) (number 3441 . 3444) (symbol 3436 . 3440) (punctuation 3435 . 3436) (string 2604 . 2619) (number 2601 . 2603) (symbol 2596 . 2600) (punctuation 2595 . 2596) (string 2484 . 2495) (number 2482 . 2483) (symbol 2477 . 2481) (punctuation 2476 . 2477))
+    :lexical-table 
+        '(("YYSKELETON_NAME" . ((string "\"yacc.c\"" 2223 . 2231)))
+          ("YYFREE" . ((symbol "free" 7315 . 7319)))
+          ("YYTOKENTYPE")
+          ("YYNSTATES" . ((number "8" 9662 . 9663)))
+          ("yyclearin" . ((semantic-list "(yychar = YYEMPTY)" 14629 . 14647)))
+          ("YYINITDEPTH" . ((number "200" 21324 . 21327)))
+          ("yystrlen" . ((symbol "strlen" 21800 . 21806)))
+          ("YYTRANSLATE" (spp-arg-list ("YYX") 9804 . 9809) . ((semantic-list "((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)" 9819 . 9886)))
+          ("YYABORT" . ((symbol "goto" 14739 . 14743) (symbol "yyabortlab" 14744 . 14754)))
+          ("YYRECOVERING" (spp-arg-list nil 15044 . 15046) . ((semantic-list "(!!yyerrstatus)" 15048 . 15063)))
+          ("YY_" (spp-arg-list ("msgid") 4588 . 4595) . ((symbol "dgettext" 4596 . 4604) (semantic-list "(\"bison-runtime\", msgid)" 4605 . 4629)))
+          ("YYSTACK_ALLOC" . ((symbol "YYMALLOC" 6613 . 6621)))
+          ("YYFINAL" . ((number "3" 9367 . 9368)))
+          ("YYEMPTY" . ((semantic-list "(-2)" 14665 . 14669)))
+          ("YYRHSLOC" (spp-arg-list ("Rhs" "K") 15734 . 15742) . ((semantic-list "((Rhs)[K])" 15743 . 15753)))
+          ("YY_REDUCE_PRINT" (spp-arg-list ("Rule") 20813 . 20819) . 
+              ((DO "do" 20823 . 20825) (semantic-list "{					\\
+  if (yydebug)				\\
+    yy_reduce_print (yyvsp, Rule); \\
+}" 20826 . 20892) (WHILE "while" 20893 . 20898) (semantic-list "(YYID (0))" 20899 . 20909)))
+          ("YYBISON" . ((number "1" 2119 . 2120)))
+          ("YYSIZE_T" . ((symbol "size_t" 4366 . 4372)))
+          ("YYSTACK_FREE" . ((symbol "YYFREE" 6645 . 6651)))
+          ("YYSTACK_ALLOC_MAXIMUM" . ((symbol "YYSIZE_MAXIMUM" 6717 . 6731)))
+          ("YYSTACK_GAP_MAXIMUM" . ((semantic-list "(sizeof (union yyalloc) - 1)" 7953 . 7981)))
+          ("YYPACT_NINF" . ((punctuation "-" 13744 . 13745) (number "4" 13745 . 13746)))
+          ("YYFAIL" . ((symbol "goto" 15009 . 15013) (symbol "yyerrlab" 15014 . 15022)))
+          ("YYLLOC_DEFAULT" (spp-arg-list ("Current" "Rhs" "N") 15800 . 15817) . 
+              ((DO "do" 15827 . 15829) (IF "if" 15846 . 15848) (semantic-list "(YYID (N))" 15849 . 15859) (semantic-list "{								\\
+	  (Current).first_line   = YYRHSLOC (Rhs, 1).first_line;	\\
+	  (Current).first_column = YYRHSLOC (Rhs, 1).first_column;	\\
+	  (Current).last_line    = YYRHSLOC (Rhs, N).last_line;		\\
+	  (Current).last_column  = YYRHSLOC (Rhs, N).last_column;	\\
+	}" 15914 . 16170) (ELSE "else" 16186 . 16190) (semantic-list "{								\\
+	  (Current).first_line   = (Current).last_line   =		\\
+	    YYRHSLOC (Rhs, 0).last_line;				\\
+	  (Current).first_column = (Current).last_column =		\\
+	    YYRHSLOC (Rhs, 0).last_column;				\\
+	}" 16201 . 16404) (WHILE "while" 16418 . 16423) (semantic-list "(YYID (0))" 16424 . 16434)))
+          ("YYDEBUG" . ((number "0" 2678 . 2679)))
+          ("yystype" . ((symbol "YYSTYPE" 3272 . 3279)))
+          ("YYCOPY" (spp-arg-list ("To" "From" "Count") 8349 . 8366) . ((symbol "__builtin_memcpy" 8375 . 8391) (semantic-list "(To, From, (Count) * sizeof (*(From)))" 8392 . 8430)))
+          ("YYLAST" . ((number "6" 9426 . 9427)))
+          ("YYNRULES" . ((number "4" 9604 . 9605)))
+          ("YYERROR" . ((symbol "goto" 14772 . 14776) (symbol "yyerrorlab" 14777 . 14787)))
+          ("YYPUSH" . ((number "0" 2308 . 2309)))
+          ("YYPULL" . ((number "1" 2347 . 2348)))
+          ("YYBACKUP" (spp-arg-list ("Token" "Value") 15081 . 15095) . 
+              ((DO "do" 15102 . 15104) (IF "if" 15116 . 15118) (semantic-list "(yychar == YYEMPTY && yylen == 1)" 15119 . 15152) (semantic-list "{								\\
+      yychar = (Token);						\\
+      yylval = (Value);						\\
+      yytoken = YYTRANSLATE (yychar);				\\
+      YYPOPSTACK (1);						\\
+      goto yybackup;						\\
+    }" 15162 . 15340) (ELSE "else" 15352 . 15356) (semantic-list "{								\\
+      yyerror (YY_(\"syntax error: cannot back up\")); \\
+      YYERROR;							\\
+    }" 15370 . 15464) (WHILE "while" 15474 . 15479) (semantic-list "(YYID (0))" 15480 . 15490)))
+          ("YYERRCODE" . ((number "256" 15530 . 15533)))
+          ("YYLEX" . ((symbol "yylex" 17071 . 17076) (semantic-list "()" 17077 . 17079)))
+          ("YYFPRINTF" . ((symbol "fprintf" 17234 . 17241)))
+          ("YYID" (spp-arg-list ("n") 4977 . 4980) . ((semantic-list "(n)" 4981 . 4984)))
+          ("_STDLIB_H" . ((number "1" 6990 . 6991)))
+          ("YYTERROR" . ((number "1" 15510 . 15511)))
+          ("YY_SYMBOL_PRINT" (spp-arg-list ("Title" "Type" "Value" "Location") 17382 . 17412) . 
+              ((DO "do" 17419 . 17421) (semantic-list "{									  \\
+  if (yydebug)								  \\
+    {									  \\
+      YYFPRINTF (stderr, \"%s \", Title);					  \\
+      yy_symbol_print (stderr,						  \\
+		  Type, Value); \\
+      YYFPRINTF (stderr, \"\\n\");						  \\
+    }									  \\
+}" 17422 . 17648) (WHILE "while" 17649 . 17654) (semantic-list "(YYID (0))" 17655 . 17665)))
+          ("YY_STACK_PRINT" (spp-arg-list ("Bottom" "Top") 19798 . 19811) . 
+              ((DO "do" 19817 . 19819) (semantic-list "{								\\
+  if (yydebug)							\\
+    yy_stack_print ((Bottom), (Top));				\\
+}" 19820 . 19898) (WHILE "while" 19899 . 19904) (semantic-list "(YYID (0))" 19905 . 19915)))
+          ("YYPURE" . ((number "0" 2269 . 2270)))
+          ("YYSTYPE_IS_TRIVIAL" . ((number "1" 3253 . 3254)))
+          ("YYMAXUTOK" . ((number "258" 9780 . 9783)))
+          ("YYDPRINTF" (spp-arg-list ("Args") 17269 . 17275) . 
+              ((DO "do" 17280 . 17282) (semantic-list "{						\\
+  if (yydebug)					\\
+    YYFPRINTF Args;				\\
+}" 17283 . 17339) (WHILE "while" 17340 . 17345) (semantic-list "(YYID (0))" 17346 . 17356)))
+          ("YYMAXDEPTH" . ((number "10000" 21679 . 21684)))
+          ("yystpcpy" . ((symbol "stpcpy" 22279 . 22285)))
+          ("YYSTYPE_IS_DECLARED" . ((number "1" 3346 . 3347)))
+          ("YYSTACK_RELOCATE" (spp-arg-list ("Stack_alloc" "Stack") 8955 . 8975) . 
+              ((DO "do" 8985 . 8987) (semantic-list "{									\\
+	YYSIZE_T yynewbytes;						\\
+	YYCOPY (&yyptr->Stack_alloc, Stack, yysize);			\\
+	Stack = &yyptr->Stack_alloc;					\\
+	yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \\
+	yyptr += yynewbytes / sizeof (*yyptr);				\\
+      }" 9004 . 9252) (WHILE "while" 9267 . 9272) (semantic-list "(YYID (0))" 9273 . 9283)))
+          ("YYNNTS" . ((number "2" 9548 . 9549)))
+          ("YYUNDEFTOK" . ((number "2" 9758 . 9759)))
+          ("YYACCEPT" . ((symbol "goto" 14705 . 14709) (symbol "yyacceptlab" 14710 . 14721)))
+          ("YYBISON_VERSION" . ((string "\"2.4.1\"" 2168 . 2175)))
+          ("YYTOKEN_TABLE" . ((number "0" 2921 . 2922)))
+          ("YYSTACK_BYTES" (spp-arg-list ("N") 8094 . 8097) . ((semantic-list "((N) * (sizeof (yytype_int16) + sizeof (YYSTYPE)) \\
+      + YYSTACK_GAP_MAXIMUM)" 8105 . 8185)))
+          ("YYEOF" . ((number "0" 14685 . 14686)))
+          ("YY_LOCATION_PRINT" (spp-arg-list ("File" "Loc") 16717 . 16728) . ((symbol "fprintf" 16738 . 16745) (semantic-list "(File, \"%d.%d-%d.%d\",			\\
+	      (Loc).first_line, (Loc).first_column,	\\
+	      (Loc).last_line,  (Loc).last_column)" 16746 . 16862)))
+          ("YYLSP_NEEDED" . ((number "0" 2395 . 2396)))
+          ("YYSIZE_MAXIMUM" . ((semantic-list "((YYSIZE_T) -1)" 4451 . 4466)))
+          ("YYNTOKENS" . ((number "8" 9489 . 9490)))
+          ("YYTABLE_NINF" . ((punctuation "-" 14186 . 14187) (number "1" 14187 . 14188)))
+          ("YYERROR_VERBOSE" . ((number "0" 2833 . 2834)))
+          ("YYUSE" (spp-arg-list ("e") 4811 . 4814) . ((semantic-list "((void) (e))" 4815 . 4827)))
+          ("YYMALLOC" . ((symbol "malloc" 7050 . 7056)))
+          ("yyerrok" . ((semantic-list "(yyerrstatus = 0)" 14593 . 14610)))
+          )
+
+    )
+   (semanticdb-table "y.tab.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("YYBISON" variable (:constant-flag t) nil [2111 2118])
+            ("YYBISON_VERSION" variable (:constant-flag t) nil [2152 2167])
+            ("YYSKELETON_NAME" variable (:constant-flag t) nil [2207 2222])
+            ("YYPURE" variable (:constant-flag t) nil [2262 2268])
+            ("YYPUSH" variable (:constant-flag t) nil [2301 2307])
+            ("YYPULL" variable (:constant-flag t) nil [2340 2346])
+            ("YYLSP_NEEDED" variable (:constant-flag t) nil [2382 2394])
+            ("stdio.h" include (:system-flag t) nil [2495 2517])
+            ("yylex" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2532 2537]))                  
+                :type "int")
+                nil [2522 2538])
+            ("yyerror" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2556 2563]))                  
+                :type "void")
+                nil [2543 2564])
+            ("YYDEBUG" variable (:constant-flag t) nil [2662 2669])
+            ("YYERROR_VERBOSE" variable (:constant-flag t) nil [2809 2824])
+            ("YYTOKEN_TABLE" variable (:constant-flag t) nil [2899 2912])
+            ("YYTOKENTYPE" variable (:constant-flag t) nil [2968 2979])
+            ("yytokentype" type (:type "enum") nil [3086 3129])
+            ("INTEGER" variable (:constant-flag t) nil [3160 3167])
+            ("YYSTYPE" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [3231 3251])
+            ("YYSTYPE_IS_TRIVIAL" variable (:constant-flag t) nil [3261 3279])
+            ("yystype" variable (:constant-flag t) nil [3291 3298])
+            ("YYSTYPE_IS_DECLARED" variable (:constant-flag t) nil [3353 3372])
+            ("yytype_uint8" type
+               (:typedef ("unsigned char")
+                :superclasses "unsigned char"
+                :type "typedef")
+                nil [3579 3614])
+            ("yytype_int8" type
+               (:typedef ("signed char")
+                :superclasses "signed char"
+                :type "typedef")
+                nil [3775 3807])
+            ("yytype_uint16" type
+               (:typedef ("unsigned short int")
+                :superclasses "unsigned short int"
+                :type "typedef")
+                nil [3917 3958])
+            ("yytype_int16" type
+               (:typedef ("short int")
+                :superclasses "short int"
+                :type "typedef")
+                nil [4028 4059])
+            ("YYSIZE_T" variable (:constant-flag t) nil [4172 4180])
+            ("stddef.h" include (:system-flag t) nil [4311 4332])
+            ("YYSIZE_T" variable (:constant-flag t) nil [4378 4386])
+            ("YYSIZE_MAXIMUM" variable (:constant-flag t) nil [4457 4471])
+            ("libintl.h" include (:system-flag t) nil [4536 4559])
+            ("YY_" variable (:constant-flag t) nil [4606 4609])
+            ("YYUSE" variable (:constant-flag t) nil [4827 4832])
+            ("YYID" variable (:constant-flag t) nil [4994 4998])
+            ("YYSTACK_ALLOC" variable (:constant-flag t) nil [6620 6633])
+            ("YYSTACK_FREE" variable (:constant-flag t) nil [6653 6665])
+            ("YYSTACK_ALLOC_MAXIMUM" variable (:constant-flag t) nil [6716 6737])
+            ("stdlib.h" include (:system-flag t) nil [6910 6932])
+            ("_STDLIB_H" variable (:constant-flag t) nil [7001 7010])
+            ("YYMALLOC" variable (:constant-flag t) nil [7062 7070])
+            ("malloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7236 7245]))                  
+                :type "void")
+                nil [7222 7246])
+            ("YYFREE" variable (:constant-flag t) nil [7329 7335])
+            ("free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7494 7501]))                  
+                :type "void")
+                nil [7483 7502])
+            ("yyalloc" type
+               (:members 
+                  ( ("yyss_alloc" variable (:type ("yytype_int16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7819 7843])
+                    ("yyvs_alloc" variable (:type ("YYSTYPE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7846 7865]))                  
+                :type "union")
+                nil [7801 7868])
+            ("YYSTACK_GAP_MAXIMUM" variable (:constant-flag t) nil [7954 7973])
+            ("YYSTACK_BYTES" variable (:constant-flag t) nil [8102 8115])
+            ("YYCOPY" variable (:constant-flag t) nil [8364 8370])
+            ("YYSTACK_RELOCATE" variable (:constant-flag t) nil [8960 8976])
+            ("YYFINAL" variable (:constant-flag t) nil [9379 9386])
+            ("YYLAST" variable (:constant-flag t) nil [9438 9444])
+            ("YYNTOKENS" variable (:constant-flag t) nil [9500 9509])
+            ("YYNNTS" variable (:constant-flag t) nil [9562 9568])
+            ("YYNRULES" variable (:constant-flag t) nil [9616 9624])
+            ("YYNSTATES" variable (:constant-flag t) nil [9673 9682])
+            ("YYUNDEFTOK" variable (:constant-flag t) nil [9769 9779])
+            ("YYMAXUTOK" variable (:constant-flag t) nil [9791 9800])
+            ("YYTRANSLATE" variable (:constant-flag t) nil [9816 9827])
+            ("yytranslate" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [9984 11920])
+            ("yyprhs" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [12018 12110])
+            ("yyrhs" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [12169 12339])
+            ("yyrline" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [12411 12504])
+            ("yytname" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [12697 12839])
+            ("yyr1" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [13125 13215])
+            ("yyr2" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [13294 13384])
+            ("yydefact" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [13558 13673])
+            ("yydefgoto" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [13704 13770])
+            ("YYPACT_NINF" variable (:constant-flag t) nil [13865 13876])
+            ("yypact" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [13880 13992])
+            ("yypgoto" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [14021 14085])
+            ("YYTABLE_NINF" variable (:constant-flag t) nil [14327 14339])
+            ("yytable" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [14343 14467])
+            ("yycheck" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_int8" type (:type "class") nil nil))
+                nil [14469 14592])
+            ("yystos" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("yytype_uint8" type (:type "class") nil nil))
+                nil [14691 14804])
+            ("yyerrok" variable (:constant-flag t) nil [14814 14821])
+            ("yyclearin" variable (:constant-flag t) nil [14849 14858])
+            ("YYEMPTY" variable (:constant-flag t) nil [14886 14893])
+            ("YYEOF" variable (:constant-flag t) nil [14908 14913])
+            ("YYACCEPT" variable (:constant-flag t) nil [14926 14934])
+            ("YYABORT" variable (:constant-flag t) nil [14960 14967])
+            ("YYERROR" variable (:constant-flag t) nil [14993 15000])
+            ("YYFAIL" variable (:constant-flag t) nil [15231 15237])
+            ("YYRECOVERING" variable (:constant-flag t) nil [15262 15274])
+            ("YYBACKUP" variable (:constant-flag t) nil [15303 15311])
+            ("YYTERROR" variable (:constant-flag t) nil [15731 15739])
+            ("YYERRCODE" variable (:constant-flag t) nil [15750 15759])
+            ("YYRHSLOC" variable (:constant-flag t) nil [15956 15964])
+            ("YYLLOC_DEFAULT" variable (:constant-flag t) nil [16016 16030])
+            ("YY_LOCATION_PRINT" variable (:constant-flag t) nil [16930 16947])
+            ("YYLEX" variable (:constant-flag t) nil [17295 17300])
+            ("stdio.h" include (:system-flag t) nil [17388 17408])
+            ("YYFPRINTF" variable (:constant-flag t) nil [17454 17463])
+            ("YYDPRINTF" variable (:constant-flag t) nil [17490 17499])
+            ("YY_SYMBOL_PRINT" variable (:constant-flag t) nil [17597 17612])
+            ("yy_symbol_value_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyoutput" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18153 18168])
+                    ("yytype" variable (:type "int") (reparse-symbol arg-sub-list) [18169 18180])
+                    ("yyvaluep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18181 18212]))                  
+                :type "void")
+                nil [18118 18576])
+            ("yy_symbol_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyoutput" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18815 18830])
+                    ("yytype" variable (:type "int") (reparse-symbol arg-sub-list) [18831 18842])
+                    ("yyvaluep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18843 18874]))                  
+                :type "void")
+                nil [18786 19251])
+            ("yy_stack_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yybottom" variable
+                       (:pointer 1
+                        :type ("yytype_int16" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19660 19683])
+                    ("yytop" variable
+                       (:pointer 1
+                        :type ("yytype_int16" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19684 19704]))                  
+                :type "void")
+                nil [19632 20003])
+            ("YY_STACK_PRINT" variable (:constant-flag t) nil [20014 20028])
+            ("yy_reduce_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyvsp" variable
+                       (:pointer 1
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20432 20447])
+                    ("yyrule" variable (:type "int") (reparse-symbol arg-sub-list) [20448 20459]))                  
+                :type "void")
+                nil [20403 21017])
+            ("YY_REDUCE_PRINT" variable (:constant-flag t) nil [21028 21043])
+            ("yydebug" variable (:type "int") nil [21248 21260])
+            ("YYINITDEPTH" variable (:constant-flag t) nil [21542 21553])
+            ("YYMAXDEPTH" variable (:constant-flag t) nil [21898 21908])
+            ("yystrlen" variable (:constant-flag t) nil [22021 22029])
+            ("yystpcpy" variable (:constant-flag t) nil [22500 22508])
+            ("yytnamerr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyres" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23477 23489])
+                    ("yystr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23490 23508]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [23450 24066])
+            ("yysyntax_error" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yyresult" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24541 24556])
+                    ("yystate" variable (:type "int") (reparse-symbol arg-sub-list) [24557 24569])
+                    ("yychar" variable (:type "int") (reparse-symbol arg-sub-list) [24570 24581]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [24509 27384])
+            ("yydestruct" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yymsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27706 27724])
+                    ("yytype" variable (:type "int") (reparse-symbol arg-sub-list) [27725 27736])
+                    ("yyvaluep" variable
+                       (:pointer 1
+                        :type ("YYSTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27737 27755]))                  
+                :type "void")
+                nil [27682 28055])
+            ("yyparse" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [28322 28327]))                  
+                :type "int")
+                nil [28309 28328])
+            ("yychar" variable (:type "int") nil [28418 28429])
+            ("yylval" variable (:type ("YYSTYPE" type (:type "class") nil nil)) nil [28482 28497])
+            ("yynerrs" variable (:type "int") nil [28538 28550])
+            ("yyparse" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [29001 29006]))                  
+                :type "int")
+                nil [28988 40564])
+            ("yyerror" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40629 40637]))                  
+                :type "void")
+                nil [40616 40673])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [40684 40689]))                  
+                :type "int")
+                nil [40675 40723]))          
+    :file "y.tab.c"
+    :pointmax 40725
+    :fsize 40723
+    :lastmodtime '(20210 10948)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("YYSKELETON_NAME" . ((string "\"yacc.c\"" 2223 . 2231)))
+          ("YYFREE" . ((symbol "free" 7336 . 7340)))
+          ("YYTOKENTYPE")
+          ("YYNSTATES" . ((number "10" 9684 . 9686)))
+          ("yyclearin" . ((semantic-list "(yychar = YYEMPTY)" 14859 . 14877)))
+          ("YYINITDEPTH" . ((number "200" 21554 . 21557)))
+          ("yystrlen" . ((symbol "strlen" 22030 . 22036)))
+          ("YYTRANSLATE" (spp-arg-list ("YYX") 9827 . 9832) . ((semantic-list "((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)" 9842 . 9909)))
+          ("YYABORT" . ((symbol "goto" 14969 . 14973) (symbol "yyabortlab" 14974 . 14984)))
+          ("YYRECOVERING" (spp-arg-list nil 15274 . 15276) . ((semantic-list "(!!yyerrstatus)" 15278 . 15293)))
+          ("YY_" (spp-arg-list ("msgid") 4609 . 4616) . ((symbol "dgettext" 4617 . 4625) (semantic-list "(\"bison-runtime\", msgid)" 4626 . 4650)))
+          ("YYSTACK_ALLOC" . ((symbol "YYMALLOC" 6634 . 6642)))
+          ("YYFINAL" . ((number "2" 9388 . 9389)))
+          ("YYEMPTY" . ((semantic-list "(-2)" 14895 . 14899)))
+          ("YYRHSLOC" (spp-arg-list ("Rhs" "K") 15964 . 15972) . ((semantic-list "((Rhs)[K])" 15973 . 15983)))
+          ("YY_REDUCE_PRINT" (spp-arg-list ("Rule") 21043 . 21049) . 
+              ((DO "do" 21053 . 21055) (semantic-list "{					\\
+  if (yydebug)				\\
+    yy_reduce_print (yyvsp, Rule); \\
+}" 21056 . 21122) (WHILE "while" 21123 . 21128) (semantic-list "(YYID (0))" 21129 . 21139)))
+          ("YYBISON" . ((number "1" 2119 . 2120)))
+          ("YYSIZE_T" . ((symbol "size_t" 4387 . 4393)))
+          ("YYSTACK_FREE" . ((symbol "YYFREE" 6666 . 6672)))
+          ("YYSTACK_ALLOC_MAXIMUM" . ((symbol "YYSIZE_MAXIMUM" 6738 . 6752)))
+          ("YYSTACK_GAP_MAXIMUM" . ((semantic-list "(sizeof (union yyalloc) - 1)" 7974 . 8002)))
+          ("YYPACT_NINF" . ((punctuation "-" 13877 . 13878) (number "5" 13878 . 13879)))
+          ("YYFAIL" . ((symbol "goto" 15239 . 15243) (symbol "yyerrlab" 15244 . 15252)))
+          ("YYLLOC_DEFAULT" (spp-arg-list ("Current" "Rhs" "N") 16030 . 16047) . 
+              ((DO "do" 16057 . 16059) (IF "if" 16076 . 16078) (semantic-list "(YYID (N))" 16079 . 16089) (semantic-list "{								\\
+	  (Current).first_line   = YYRHSLOC (Rhs, 1).first_line;	\\
+	  (Current).first_column = YYRHSLOC (Rhs, 1).first_column;	\\
+	  (Current).last_line    = YYRHSLOC (Rhs, N).last_line;		\\
+	  (Current).last_column  = YYRHSLOC (Rhs, N).last_column;	\\
+	}" 16144 . 16400) (ELSE "else" 16416 . 16420) (semantic-list "{								\\
+	  (Current).first_line   = (Current).last_line   =		\\
+	    YYRHSLOC (Rhs, 0).last_line;				\\
+	  (Current).first_column = (Current).last_column =		\\
+	    YYRHSLOC (Rhs, 0).last_column;				\\
+	}" 16431 . 16634) (WHILE "while" 16648 . 16653) (semantic-list "(YYID (0))" 16654 . 16664)))
+          ("YYDEBUG" . ((number "0" 2670 . 2671)))
+          ("yystype" . ((symbol "YYSTYPE" 3299 . 3306)))
+          ("YYCOPY" (spp-arg-list ("To" "From" "Count") 8370 . 8387) . ((symbol "__builtin_memcpy" 8396 . 8412) (semantic-list "(To, From, (Count) * sizeof (*(From)))" 8413 . 8451)))
+          ("YYLAST" . ((number "10" 9447 . 9449)))
+          ("YYNRULES" . ((number "6" 9626 . 9627)))
+          ("YYERROR" . ((symbol "goto" 15002 . 15006) (symbol "yyerrorlab" 15007 . 15017)))
+          ("YYPUSH" . ((number "0" 2308 . 2309)))
+          ("YYPULL" . ((number "1" 2347 . 2348)))
+          ("YYBACKUP" (spp-arg-list ("Token" "Value") 15311 . 15325) . 
+              ((DO "do" 15332 . 15334) (IF "if" 15346 . 15348) (semantic-list "(yychar == YYEMPTY && yylen == 1)" 15349 . 15382) (semantic-list "{								\\
+      yychar = (Token);						\\
+      yylval = (Value);						\\
+      yytoken = YYTRANSLATE (yychar);				\\
+      YYPOPSTACK (1);						\\
+      goto yybackup;						\\
+    }" 15392 . 15570) (ELSE "else" 15582 . 15586) (semantic-list "{								\\
+      yyerror (YY_(\"syntax error: cannot back up\")); \\
+      YYERROR;							\\
+    }" 15600 . 15694) (WHILE "while" 15704 . 15709) (semantic-list "(YYID (0))" 15710 . 15720)))
+          ("YYERRCODE" . ((number "256" 15760 . 15763)))
+          ("YYLEX" . ((symbol "yylex" 17301 . 17306) (semantic-list "()" 17307 . 17309)))
+          ("YYFPRINTF" . ((symbol "fprintf" 17464 . 17471)))
+          ("YYID" (spp-arg-list ("n") 4998 . 5001) . ((semantic-list "(n)" 5002 . 5005)))
+          ("_STDLIB_H" . ((number "1" 7011 . 7012)))
+          ("YYTERROR" . ((number "1" 15740 . 15741)))
+          ("YY_SYMBOL_PRINT" (spp-arg-list ("Title" "Type" "Value" "Location") 17612 . 17642) . 
+              ((DO "do" 17649 . 17651) (semantic-list "{									  \\
+  if (yydebug)								  \\
+    {									  \\
+      YYFPRINTF (stderr, \"%s \", Title);					  \\
+      yy_symbol_print (stderr,						  \\
+		  Type, Value); \\
+      YYFPRINTF (stderr, \"\\n\");						  \\
+    }									  \\
+}" 17652 . 17878) (WHILE "while" 17879 . 17884) (semantic-list "(YYID (0))" 17885 . 17895)))
+          ("YY_STACK_PRINT" (spp-arg-list ("Bottom" "Top") 20028 . 20041) . 
+              ((DO "do" 20047 . 20049) (semantic-list "{								\\
+  if (yydebug)							\\
+    yy_stack_print ((Bottom), (Top));				\\
+}" 20050 . 20128) (WHILE "while" 20129 . 20134) (semantic-list "(YYID (0))" 20135 . 20145)))
+          ("YYPURE" . ((number "0" 2269 . 2270)))
+          ("YYSTYPE_IS_TRIVIAL" . ((number "1" 3280 . 3281)))
+          ("YYMAXUTOK" . ((number "258" 9803 . 9806)))
+          ("YYDPRINTF" (spp-arg-list ("Args") 17499 . 17505) . 
+              ((DO "do" 17510 . 17512) (semantic-list "{						\\
+  if (yydebug)					\\
+    YYFPRINTF Args;				\\
+}" 17513 . 17569) (WHILE "while" 17570 . 17575) (semantic-list "(YYID (0))" 17576 . 17586)))
+          ("YYMAXDEPTH" . ((number "10000" 21909 . 21914)))
+          ("yystpcpy" . ((symbol "stpcpy" 22509 . 22515)))
+          ("INTEGER" . ((number "258" 3168 . 3171)))
+          ("YYSTYPE_IS_DECLARED" . ((number "1" 3373 . 3374)))
+          ("YYSTACK_RELOCATE" (spp-arg-list ("Stack_alloc" "Stack") 8976 . 8996) . 
+              ((DO "do" 9006 . 9008) (semantic-list "{									\\
+	YYSIZE_T yynewbytes;						\\
+	YYCOPY (&yyptr->Stack_alloc, Stack, yysize);			\\
+	Stack = &yyptr->Stack_alloc;					\\
+	yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \\
+	yyptr += yynewbytes / sizeof (*yyptr);				\\
+      }" 9025 . 9273) (WHILE "while" 9288 . 9293) (semantic-list "(YYID (0))" 9294 . 9304)))
+          ("YYNNTS" . ((number "3" 9570 . 9571)))
+          ("YYUNDEFTOK" . ((number "2" 9781 . 9782)))
+          ("YYACCEPT" . ((symbol "goto" 14935 . 14939) (symbol "yyacceptlab" 14940 . 14951)))
+          ("YYBISON_VERSION" . ((string "\"2.4.1\"" 2168 . 2175)))
+          ("YYTOKEN_TABLE" . ((number "0" 2913 . 2914)))
+          ("YYSTACK_BYTES" (spp-arg-list ("N") 8115 . 8118) . ((semantic-list "((N) * (sizeof (yytype_int16) + sizeof (YYSTYPE)) \\
+      + YYSTACK_GAP_MAXIMUM)" 8126 . 8206)))
+          ("YYEOF" . ((number "0" 14915 . 14916)))
+          ("YY_LOCATION_PRINT" (spp-arg-list ("File" "Loc") 16947 . 16958) . ((symbol "fprintf" 16968 . 16975) (semantic-list "(File, \"%d.%d-%d.%d\",			\\
+	      (Loc).first_line, (Loc).first_column,	\\
+	      (Loc).last_line,  (Loc).last_column)" 16976 . 17092)))
+          ("YYLSP_NEEDED" . ((number "0" 2395 . 2396)))
+          ("YYSIZE_MAXIMUM" . ((semantic-list "((YYSIZE_T) -1)" 4472 . 4487)))
+          ("YYNTOKENS" . ((number "7" 9511 . 9512)))
+          ("YYTABLE_NINF" . ((punctuation "-" 14340 . 14341) (number "1" 14341 . 14342)))
+          ("YYERROR_VERBOSE" . ((number "0" 2825 . 2826)))
+          ("YYUSE" (spp-arg-list ("e") 4832 . 4835) . ((semantic-list "((void) (e))" 4836 . 4848)))
+          ("YYMALLOC" . ((symbol "malloc" 7071 . 7077)))
+          ("yyerrok" . ((semantic-list "(yyerrstatus = 0)" 14823 . 14840)))
+          )
+
+    )
+   (semanticdb-table "lex.yy.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("YY_INT_ALIGNED" variable (:constant-flag t) nil [31 45])
+            ("FLEX_SCANNER" variable (:constant-flag t) nil [108 120])
+            ("YY_FLEX_MAJOR_VERSION" variable (:constant-flag t) nil [129 150])
+            ("YY_FLEX_MINOR_VERSION" variable (:constant-flag t) nil [161 182])
+            ("YY_FLEX_SUBMINOR_VERSION" variable (:constant-flag t) nil [193 217])
+            ("FLEX_BETA" variable (:constant-flag t) nil [262 271])
+            ("stdio.h" include (:system-flag t) nil [387 405])
+            ("string.h" include (:system-flag t) nil [406 425])
+            ("errno.h" include (:system-flag t) nil [426 444])
+            ("stdlib.h" include (:system-flag t) nil [445 464])
+            ("FLEXINT_H" variable (:constant-flag t) nil [560 569])
+            ("__STDC_LIMIT_MACROS" variable (:constant-flag t) nil [871 890])
+            ("inttypes.h" include (:system-flag t) nil [901 922])
+            ("flex_int8_t" type
+               (:typedef ("int8_t" type (:type "class") nil nil)
+                :superclasses "int8_t"
+                :type "typedef")
+                nil [923 950])
+            ("flex_uint8_t" type
+               (:typedef ("uint8_t" type (:type "class") nil nil)
+                :superclasses "uint8_t"
+                :type "typedef")
+                nil [951 980])
+            ("flex_int16_t" type
+               (:typedef ("int16_t" type (:type "class") nil nil)
+                :superclasses "int16_t"
+                :type "typedef")
+                nil [981 1010])
+            ("flex_uint16_t" type
+               (:typedef ("uint16_t" type (:type "class") nil nil)
+                :superclasses "uint16_t"
+                :type "typedef")
+                nil [1011 1042])
+            ("flex_int32_t" type
+               (:typedef ("int32_t" type (:type "class") nil nil)
+                :superclasses "int32_t"
+                :type "typedef")
+                nil [1043 1072])
+            ("flex_uint32_t" type
+               (:typedef ("uint32_t" type (:type "class") nil nil)
+                :superclasses "uint32_t"
+                :type "typedef")
+                nil [1073 1104])
+            ("YY_USE_CONST" variable (:constant-flag t) nil [2071 2083])
+            ("yyconst" variable (:constant-flag t) nil [2294 2301])
+            ("YY_NULL" variable (:constant-flag t) nil [2379 2386])
+            ("YY_SC_TO_UI" variable (:constant-flag t) nil [2626 2637])
+            ("BEGIN" variable (:constant-flag t) nil [2857 2862])
+            ("YY_START" variable (:constant-flag t) nil [3056 3064])
+            ("YYSTATE" variable (:constant-flag t) nil [3096 3103])
+            ("YY_STATE_EOF" variable (:constant-flag t) nil [3179 3191])
+            ("YY_NEW_FILE" variable (:constant-flag t) nil [3299 3310])
+            ("YY_END_OF_BUFFER_CHAR" variable (:constant-flag t) nil [3338 3359])
+            ("YY_BUF_SIZE" variable (:constant-flag t) nil [3636 3647])
+            ("YY_STATE_BUF_SIZE" variable (:constant-flag t) nil [3786 3803])
+            ("YY_TYPEDEF_YY_BUFFER_STATE" variable (:constant-flag t) nil [3894 3920])
+            ("YY_BUFFER_STATE" type
+               (:typedef ("yy_buffer_state" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "yy_buffer_state"
+                :type "typedef")
+                nil [3921 3969])
+            ("yyleng" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [3978 3996])
+            ("yyout" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [3998 4024])
+            ("yyin" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [3998 4024])
+            ("EOB_ACT_CONTINUE_SCAN" variable (:constant-flag t) nil [4034 4055])
+            ("EOB_ACT_END_OF_FILE" variable (:constant-flag t) nil [4066 4085])
+            ("EOB_ACT_LAST_MATCH" variable (:constant-flag t) nil [4096 4114])
+            ("YY_LESS_LINENO" variable (:constant-flag t) nil [4130 4144])
+            ("yyless" variable (:constant-flag t) nil [4241 4247])
+            ("unput" variable (:constant-flag t) nil [4596 4601])
+            ("YY_TYPEDEF_YY_SIZE_T" variable (:constant-flag t) nil [4671 4691])
+            ("yy_size_t" type
+               (:typedef ("size_t" type (:type "class") nil nil)
+                :superclasses "size_t"
+                :type "typedef")
+                nil [4692 4717])
+            ("YY_STRUCT_YY_BUFFER_STATE" variable (:constant-flag t) nil [4768 4793])
+            ("yy_buffer_state" type
+               (:members 
+                  ( ("yy_input_file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4821 4841])
+                    ("yy_ch_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4844 4860])
+                    ("yy_buf_pos" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4882 4899])
+                    ("yy_buf_size" variable (:type ("yy_size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5025 5047])
+                    ("yy_n_chars" variable (:type "int") (reparse-symbol classsubparts) [5135 5150])
+                    ("yy_is_our_buffer" variable (:type "int") (reparse-symbol classsubparts) [5297 5318])
+                    ("yy_is_interactive" variable (:type "int") (reparse-symbol classsubparts) [5535 5557])
+                    ("yy_at_bol" variable (:type "int") (reparse-symbol classsubparts) [5702 5716])
+                    ("yy_bs_lineno" variable (:type "int") (reparse-symbol classsubparts) [5722 5739])
+                    ("yy_bs_column" variable (:type "int") (reparse-symbol classsubparts) [5768 5785])
+                    ("yy_fill_buffer" variable (:type "int") (reparse-symbol classsubparts) [5900 5919])
+                    ("yy_buffer_status" variable (:type "int") (reparse-symbol classsubparts) [5922 5943])
+                    ("YY_BUFFER_NEW" variable (:constant-flag t) (reparse-symbol classsubparts) [5953 5966])
+                    ("YY_BUFFER_NORMAL" variable (:constant-flag t) (reparse-symbol classsubparts) [5977 5993])
+                    ("YY_BUFFER_EOF_PENDING" variable (:constant-flag t) (reparse-symbol classsubparts) [6475 6496]))                  
+                :type "struct")
+                nil [4794 6503])
+            ("yy_buffer_stack_top" variable
+               (:typemodifiers ("static")
+                :type ("size_t" type (:type "class") nil nil))
+                nil [6575 6613])
+            ("yy_buffer_stack_max" variable
+               (:typemodifiers ("static")
+                :type ("size_t" type (:type "class") nil nil))
+                nil [6645 6683])
+            ("yy_buffer_stack" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [6711 6756])
+            ("YY_CURRENT_BUFFER" variable (:constant-flag t) nil [6987 7004])
+            ("YY_CURRENT_BUFFER_LVALUE" variable (:constant-flag t) nil [7283 7307])
+            ("yy_hold_char" variable
+               (:typemodifiers ("static")
+                :type "char")
+                nil [7417 7442])
+            ("yy_n_chars" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [7443 7465])
+            ("yyleng" variable (:type "int") nil [7514 7525])
+            ("yy_c_buf_p" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [7572 7609])
+            ("yy_init" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [7610 7633])
+            ("yy_start" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [7671 7695])
+            ("yy_did_buffer_switch_on_eof" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [7850 7889])
+            ("yyrestart" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("input_file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7907 7926]))                  
+                :type "void")
+                nil [7891 7927])
+            ("yy_switch_to_buffer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("new_buffer" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7954 7983]))                  
+                :type "void")
+                nil [7928 7984])
+            ("yy_create_buffer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8019 8030])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [8030 8041]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [7985 8042])
+            ("yy_delete_buffer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("b" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8066 8086]))                  
+                :type "void")
+                nil [8043 8087])
+            ("yy_flush_buffer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("b" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8110 8130]))                  
+                :type "void")
+                nil [8088 8131])
+            ("yypush_buffer_state" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("new_buffer" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8158 8187]))                  
+                :type "void")
+                nil [8132 8188])
+            ("yypop_buffer_state" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8214 8220]))                  
+                :type "void")
+                nil [8189 8221])
+            ("yyensure_buffer_stack" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8258 8264]))                  
+                :type "void")
+                nil [8223 8265])
+            ("yy_load_buffer_state" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8300 8306]))                  
+                :type "void")
+                nil [8266 8307])
+            ("yy_init_buffer" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("b" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8336 8354])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8354 8367]))                  
+                :type "void")
+                nil [8308 8368])
+            ("YY_FLUSH_BUFFER" variable (:constant-flag t) nil [8378 8393])
+            ("yy_scan_buffer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8463 8474])
+                    ("size" variable (:type ("yy_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8474 8491]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [8431 8492])
+            ("yy_scan_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("yy_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8525 8548]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [8493 8549])
+            ("yy_scan_bytes" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("bytes" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8581 8601])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [8601 8611]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [8550 8612])
+            ("yyalloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type ("yy_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8629 8641]))                  
+                :type "void")
+                nil [8614 8642])
+            ("yyrealloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8660 8667])
+                    ("" variable (:type ("yy_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8667 8679]))                  
+                :type "void")
+                nil [8643 8680])
+            ("yyfree" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8694 8703]))                  
+                :type "void")
+                nil [8681 8704])
+            ("yy_new_buffer" variable (:constant-flag t) nil [8714 8727])
+            ("yy_set_interactive" variable (:constant-flag t) nil [8754 8772])
+            ("yy_set_bol" variable (:constant-flag t) nil [9030 9040])
+            ("YY_AT_BOL" variable (:constant-flag t) nil [9273 9282])
+            ("YY_CHAR" type
+               (:typedef ("unsigned char")
+                :superclasses "unsigned char"
+                :type "typedef")
+                nil [9348 9378])
+            ("yyout" variable
+               (:pointer 1
+                :type ("FILE" type (:type "class") nil nil))
+                nil [9380 9425])
+            ("yyin" variable
+               (:pointer 1
+                :type ("FILE" type (:type "class") nil nil))
+                nil [9380 9425])
+            ("yy_state_type" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [9427 9453])
+            ("yylineno" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [9455 9475])
+            ("yylineno" variable (:type "int") nil [9477 9494])
+            ("yytext" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type "char")
+                nil [9496 9516])
+            ("yytext_ptr" variable (:constant-flag t) nil [9525 9535])
+            ("yy_get_previous_state" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9588 9594]))                  
+                :type ("yy_state_type" type (:type "class") nil nil))
+                nil [9544 9595])
+            ("yy_try_NUL_trans" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("current_state" variable (:type ("yy_state_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9635 9665]))                  
+                :type ("yy_state_type" type (:type "class") nil nil))
+                nil [9596 9666])
+            ("yy_get_next_buffer" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9698 9704]))                  
+                :type "int")
+                nil [9667 9705])
+            ("yy_fatal_error" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("msg" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9734 9755]))                  
+                :type "void")
+                nil [9706 9756])
+            ("YY_DO_BEFORE_ACTION" variable (:constant-flag t) nil [9878 9897])
+            ("YY_NUM_RULES" variable (:constant-flag t) nil [10041 10053])
+            ("YY_END_OF_BUFFER" variable (:constant-flag t) nil [10064 10080])
+            ("yy_trans_info" type
+               (:members 
+                  ( ("yy_verify" variable (:type ("flex_int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10189 10212])
+                    ("yy_nxt" variable (:type ("flex_int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10214 10234]))                  
+                :type "struct")
+                nil [10164 10238])
+            ("yy_accept" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("flex_int16_t" type (:type "class") nil nil))
+                nil [10239 10365])
+            ("yy_ec" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("flex_int32_t" type (:type "class") nil nil))
+                nil [10367 12087])
+            ("yy_meta" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("flex_int32_t" type (:type "class") nil nil))
+                nil [12089 12182])
+            ("yy_base" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("flex_int16_t" type (:type "class") nil nil))
+                nil [12184 12319])
+            ("yy_def" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("flex_int16_t" type (:type "class") nil nil))
+                nil [12321 12455])
+            ("yy_nxt" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("flex_int16_t" type (:type "class") nil nil))
+                nil [12457 12603])
+            ("yy_chk" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("flex_int16_t" type (:type "class") nil nil))
+                nil [12605 12751])
+            ("yy_last_accepting_state" variable
+               (:typemodifiers ("static")
+                :type ("yy_state_type" type (:type "class") nil nil))
+                nil [12753 12798])
+            ("yy_last_accepting_cpos" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [12799 12835])
+            ("yy_flex_debug" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [12837 12862])
+            ("yy_flex_debug" variable (:type "int") nil [12863 12885])
+            ("REJECT" variable (:constant-flag t) nil [12997 13003])
+            ("yymore" variable (:constant-flag t) nil [13041 13047])
+            ("YY_MORE_ADJ" variable (:constant-flag t) nil [13087 13098])
+            ("YY_RESTORE_YY_MORE_OFFSET" variable (:constant-flag t) nil [13109 13134])
+            ("yytext" variable
+               (:pointer 1
+                :type "char")
+                nil [13135 13148])
+            ("y.tab.h" include nil nil [13205 13227])
+            ("stdlib.h" include (:system-flag t) nil [13228 13251])
+            ("yyerror" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13269 13276]))                  
+                :type "void")
+                nil [13256 13277])
+            ("INITIAL" variable (:constant-flag t) nil [13308 13315])
+            ("unistd.h" include (:system-flag t) nil [13552 13571])
+            ("YY_EXTRA_TYPE" variable (:constant-flag t) nil [13610 13623])
+            ("yy_init_globals" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13667 13673]))                  
+                :type "int")
+                nil [13639 13674])
+            ("yylex_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13800 13806]))                  
+                :type "int")
+                nil [13781 13807])
+            ("yyget_debug" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13826 13832]))                  
+                :type "int")
+                nil [13809 13833])
+            ("yyset_debug" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("debug_flag" variable (:type "int") (reparse-symbol arg-sub-list) [13853 13870]))                  
+                :type "void")
+                nil [13835 13871])
+            ("yyget_extra" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13900 13906]))                  
+                :type "void")
+                nil [13873 13907])
+            ("yyset_extra" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("user_defined" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13927 13956]))                  
+                :type "void")
+                nil [13909 13957])
+            ("yyget_in" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13975 13981]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [13959 13982])
+            ("yyset_in" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("in_str" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14000 14016]))                  
+                :type "void")
+                nil [13984 14017])
+            ("yyget_out" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14036 14042]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [14019 14043])
+            ("yyset_out" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("out_str" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14062 14079]))                  
+                :type "void")
+                nil [14045 14080])
+            ("yyget_leng" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14098 14104]))                  
+                :type "int")
+                nil [14082 14105])
+            ("yyget_text" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14125 14131]))                  
+                :type "char")
+                nil [14107 14132])
+            ("yyget_lineno" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14152 14158]))                  
+                :type "int")
+                nil [14134 14159])
+            ("yyset_lineno" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("line_number" variable (:type "int") (reparse-symbol arg-sub-list) [14180 14198]))                  
+                :type "void")
+                nil [14161 14199])
+            ("yywrap" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14357 14363]))                  
+                :type "int")
+                nil [14345 14364])
+            ("yyunput" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [14438 14444])
+                    ("buf_ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14444 14460]))                  
+                :type "void")
+                nil [14417 14461])
+            ("yyinput" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14687 14693]))                  
+                :type "int")
+                nil [14667 14694])
+            ("YY_READ_BUF_SIZE" variable (:constant-flag t) nil [14926 14942])
+            ("ECHO" variable (:constant-flag t) nil [15166 15170])
+            ("YY_INPUT" variable (:constant-flag t) nil [15376 15384])
+            ("yyterminate" variable (:constant-flag t) nil [16290 16301])
+            ("YY_START_STACK_INCR" variable (:constant-flag t) nil [16425 16444])
+            ("YY_FATAL_ERROR" variable (:constant-flag t) nil [16515 16529])
+            ("YY_DECL_IS_OURS" variable (:constant-flag t) nil [16748 16763])
+            ("yylex" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16785 16790]))                  
+                :type "int")
+                nil [16767 16791])
+            ("YY_DECL" variable (:constant-flag t) nil [16801 16808])
+            ("YY_USER_ACTION" variable (:constant-flag t) nil [16977 16991])
+            ("YY_BREAK" variable (:constant-flag t) nil [17070 17078])
+            ("YY_RULE_SETUP" variable (:constant-flag t) nil [17102 17115])
+            ("yy_get_next_buffer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [23510 23515]))                  
+                :type "int")
+                nil [23479 26984])
+            ("yy_get_previous_state" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [27116 27121]))                  
+                :type ("yy_state_type" type (:type "class") nil nil))
+                nil [27072 27829])
+            ("yy_try_NUL_trans" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("yy_current_state" variable (:type ("yy_state_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28013 28045]))                  
+                :type ("yy_state_type" type (:type "class") nil nil))
+                nil [27973 28637])
+            ("yyunput" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [28664 28670])
+                    ("yy_bp" variable
+                       (:pointer 1
+                        :typemodifiers ("register")
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28671 28694]))                  
+                :type "void")
+                nil [28643 29658])
+            ("yyinput" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [29723 29728]))                  
+                :type "int")
+                nil [29703 31252])
+            ("yyrestart" function
+               (:arguments 
+                  ( ("input_file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31481 31500]))                  
+                :type "void")
+                nil [31464 31728])
+            ("yy_switch_to_buffer" function
+               (:arguments 
+                  ( ("new_buffer" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31852 31881]))                  
+                :type "void")
+                nil [31825 32662])
+            ("yy_load_buffer_state" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [32699 32704]))                  
+                :type "void")
+                nil [32664 32917])
+            ("yy_create_buffer" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33176 33188])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [33189 33200]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [33141 33741])
+            ("yy_delete_buffer" function
+               (:arguments 
+                  ( ("b" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33855 33875]))                  
+                :type "void")
+                nil [33832 34114])
+            ("yy_init_buffer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("b" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34386 34405])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34406 34419]))                  
+                :type "void")
+                nil [34357 34922])
+            ("yy_flush_buffer" function
+               (:arguments 
+                  ( ("b" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35112 35132]))                  
+                :type "void")
+                nil [35090 35582])
+            ("yypush_buffer_state" function
+               (:arguments 
+                  ( ("new_buffer" variable (:type ("YY_BUFFER_STATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35798 35826]))                  
+                :type "void")
+                nil [35772 36426])
+            ("yypop_buffer_state" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36562 36567]))                  
+                :type "void")
+                nil [36537 36837])
+            ("yyensure_buffer_stack" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36967 36972]))                  
+                :type "void")
+                nil [36932 38302])
+            ("yy_scan_buffer" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [38581 38593])
+                    ("size" variable (:type ("yy_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38594 38611]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [38548 39289])
+            ("yy_scan_string" function
+               (:arguments 
+                  ( ("yystr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [39653 39675]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [39621 39729])
+            ("yy_scan_bytes" function
+               (:arguments 
+                  ( ("yybytes" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40070 40093])
+                    ("_yybytes_len" variable (:type "int") (reparse-symbol arg-sub-list) [40094 40113]))                  
+                :type ("YY_BUFFER_STATE" type (:type "class") nil nil))
+                nil [40038 40735])
+            ("YY_EXIT_FAILURE" variable (:constant-flag t) nil [40769 40784])
+            ("yy_fatal_error" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40823 40842]))                  
+                :type "void")
+                nil [40795 40916])
+            ("yyless" variable (:constant-flag t) nil [40996 41002])
+            ("yyget_lineno" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [41466 41471]))                  
+                :type "int")
+                nil [41447 41505])
+            ("yyget_in" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [41558 41563]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [41541 41588])
+            ("yyget_out" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [41643 41648]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [41625 41674])
+            ("yyget_leng" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [41742 41747]))                  
+                :type "int")
+                nil [41725 41774])
+            ("yyget_text" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [41831 41836]))                  
+                :type "char")
+                nil [41812 41863])
+            ("yyset_lineno" function
+               (:arguments 
+                  ( ("line_number" variable (:type "int") (reparse-symbol arg-sub-list) [41947 41965]))                  
+                :type "void")
+                nil [41928 42002])
+            ("yyset_in" function
+               (:arguments 
+                  ( ("in_str" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42168 42184]))                  
+                :type "void")
+                nil [42153 42212])
+            ("yyset_out" function
+               (:arguments 
+                  ( ("out_str" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42230 42247]))                  
+                :type "void")
+                nil [42214 42277])
+            ("yyget_debug" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [42297 42302]))                  
+                :type "int")
+                nil [42279 42336])
+            ("yyset_debug" function
+               (:arguments 
+                  ( ("bdebug" variable (:type "int") (reparse-symbol arg-sub-list) [42356 42369]))                  
+                :type "void")
+                nil [42338 42406])
+            ("yy_init_globals" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [42436 42441]))                  
+                :type "int")
+                nil [42408 43018])
+            ("yylex_destroy" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [43110 43115]))                  
+                :type "int")
+                nil [43090 43585])
+            ("yyalloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("yy_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43937 43954]))                  
+                :type "void")
+                nil [43922 43991])
+            ("yyrealloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44011 44022])
+                    ("size" variable (:type ("yy_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44023 44040]))                  
+                :type "void")
+                nil [43993 44447])
+            ("yyfree" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44462 44474]))                  
+                :type "void")
+                nil [44449 44541])
+            ("YYTABLES_NAME" variable (:constant-flag t) nil [44551 44564])
+            ("yywrap" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [44610 44615]))                  
+                :type "int")
+                nil [44599 44633]))          
+    :file "lex.yy.c"
+    :pointmax 44635
+    :fsize 44634
+    :lastmodtime '(20210 10948)
+    :unmatched-syntax '((string 44586 . 44595) (number 44583 . 44585) (symbol 44578 . 44582) (punctuation 44577 . 44578) (semantic-list 17202 . 23229) (semantic-list "(void)" 17194 . 17201) (symbol "yylex" 17194 . 17201) (INT "int" 17194 . 17201) (string 13288 . 13298) (number 13284 . 13287) (symbol 13279 . 13283) (punctuation 13278 . 13279) (string 13195 . 13204) (number 13193 . 13194) (symbol 13188 . 13192) (punctuation 13187 . 13188) (string 13157 . 13166) (number 13155 . 13156) (symbol 13150 . 13154) (punctuation 13149 . 13150) (string 10 . 20) (number 8 . 9) (symbol 3 . 7) (punctuation 2 . 3))
+    :lexical-table 
+        '(("EOB_ACT_CONTINUE_SCAN" . ((number "0" 4056 . 4057)))
+          ("YY_NUM_RULES" . ((number "5" 10054 . 10055)))
+          ("YY_USER_ACTION")
+          ("YY_BUFFER_NORMAL" . ((number "1" 5994 . 5995)))
+          ("FLEX_SCANNER")
+          ("yyconst" . ((CONST "const" 2302 . 2307)))
+          ("BEGIN" . 
+              ((semantic-list "(yy_start)" 2863 . 2873) (punctuation "=" 2874 . 2875) (number "1" 2876 . 2877) (punctuation "+" 2878 . 2879) (number "2" 2880 . 2881) (punctuation "*" 2882 . 2883)))
+          ("YY_BUF_SIZE" . ((number "16384" 3648 . 3653)))
+          ("YY_TYPEDEF_YY_BUFFER_STATE")
+          ("YY_INPUT" (spp-arg-list ("buf" "result" "max_size") 15384 . 15405) . 
+              ((IF "if" 15409 . 15411) (semantic-list "( YY_CURRENT_BUFFER_LVALUE->yy_is_interactive )" 15412 . 15459) (semantic-list "{ \\
+		int c = '*'; \\
+		size_t n; \\
+		for ( n = 0; n < max_size && \\
+			     (c = getc( yyin )) != EOF && c != '\\n'; ++n ) \\
+			buf[n] = (char) c; \\
+		if ( c == '\\n' ) \\
+			buf[n++] = (char) c; \\
+		if ( c == EOF && ferror( yyin ) ) \\
+			YY_FATAL_ERROR( \"input in flex scanner failed\" ); \\
+		result = n; \\
+		}" 15464 . 15771) (ELSE "else" 15775 . 15779) (semantic-list "{ \\
+		errno=0; \\
+		while ( (result = fread(buf, 1, max_size, yyin))==0 && ferror(yyin)) \\
+			{ \\
+			if( errno != EINTR) \\
+				{ \\
+				YY_FATAL_ERROR( \"input in flex scanner failed\" ); \\
+				break; \\
+				} \\
+			errno=0; \\
+			clearerr(yyin); \\
+			} \\
+		}" 15784 . 16036)))
+          ("YY_RULE_SETUP" . ((symbol "YY_USER_ACTION" 17119 . 17133)))
+          ("YY_BUFFER_EOF_PENDING" . ((number "2" 6497 . 6498)))
+          ("YY_STATE_BUF_SIZE" . ((semantic-list "((YY_BUF_SIZE + 2) * sizeof(yy_state_type))" 3806 . 3849)))
+          ("EOB_ACT_LAST_MATCH" . ((number "2" 4115 . 4116)))
+          ("YY_EXTRA_TYPE" . ((VOID "void" 13624 . 13628) (punctuation "*" 13629 . 13630)))
+          ("YY_READ_BUF_SIZE" . ((number "8192" 14943 . 14947)))
+          ("YY_DECL" . 
+              ((INT "int" 16809 . 16812) (symbol "yylex" 16813 . 16818) (semantic-list "(void)" 16819 . 16825)))
+          ("__STDC_LIMIT_MACROS" . ((number "1" 891 . 892)))
+          ("YY_AT_BOL" (spp-arg-list nil 9282 . 9284) . ((semantic-list "(YY_CURRENT_BUFFER_LVALUE->yy_at_bol)" 9285 . 9322)))
+          ("YY_MORE_ADJ" . ((number "0" 13099 . 13100)))
+          ("YY_FATAL_ERROR" (spp-arg-list ("msg") 16529 . 16534) . ((symbol "yy_fatal_error" 16535 . 16549) (semantic-list "( msg )" 16549 . 16556)))
+          ("YY_NULL" . ((number "0" 2387 . 2388)))
+          ("EOB_ACT_END_OF_FILE" . ((number "1" 4086 . 4087)))
+          ("YY_FLUSH_BUFFER" . ((symbol "yy_flush_buffer" 8394 . 8409) (semantic-list "(YY_CURRENT_BUFFER )" 8409 . 8429)))
+          ("yytext_ptr" . ((symbol "yytext" 9536 . 9542)))
+          ("yymore" (spp-arg-list nil 13047 . 13049) . ((symbol "yymore_used_but_not_detected" 13050 . 13078)))
+          ("YY_EXIT_FAILURE" . ((number "2" 40785 . 40786)))
+          ("YY_INT_ALIGNED" . ((SHORT "short" 46 . 51) (INT "int" 52 . 55)))
+          ("YY_FLEX_SUBMINOR_VERSION" . ((number "35" 218 . 220)))
+          ("YY_USE_CONST")
+          ("YY_START" . ((semantic-list "(((yy_start) - 1) / 2)" 3065 . 3087)))
+          ("YY_STRUCT_YY_BUFFER_STATE")
+          ("yy_set_interactive" (spp-arg-list ("is_interactive") 8772 . 8788) . ((semantic-list "{ \\
+	if ( ! YY_CURRENT_BUFFER ){ \\
+        yyensure_buffer_stack (); \\
+		YY_CURRENT_BUFFER_LVALUE =    \\
+            yy_create_buffer(yyin,YY_BUF_SIZE ); \\
+	} \\
+	YY_CURRENT_BUFFER_LVALUE->yy_is_interactive = is_interactive; \\
+	}" 8792 . 9020)))
+          ("yy_set_bol" (spp-arg-list ("at_bol") 9040 . 9048) . ((semantic-list "{ \\
+	if ( ! YY_CURRENT_BUFFER ){\\
+        yyensure_buffer_stack (); \\
+		YY_CURRENT_BUFFER_LVALUE =    \\
+            yy_create_buffer(yyin,YY_BUF_SIZE ); \\
+	} \\
+	YY_CURRENT_BUFFER_LVALUE->yy_at_bol = at_bol; \\
+	}" 9052 . 9263)))
+          ("YY_DO_BEFORE_ACTION" . 
+              ((semantic-list "(yytext_ptr)" 9901 . 9913) (punctuation "=" 9914 . 9915) (symbol "yy_bp" 9916 . 9921) (punctuation ";" 9921 . 9922) (symbol "yyleng" 9926 . 9932) (punctuation "=" 9933 . 9934) (semantic-list "(size_t)" 9935 . 9943) (semantic-list "(yy_cp - yy_bp)" 9944 . 9959) (punctuation ";" 9959 . 9960) (semantic-list "(yy_hold_char)" 9964 . 9978) (punctuation "=" 9979 . 9980) (punctuation "*" 9981 . 9982) (symbol "yy_cp" 9982 . 9987) (punctuation ";" 9987 . 9988) (punctuation "*" 9992 . 9993) (symbol "yy_cp" 9993 . 9998) (punctuation "=" 9999 . 10000) (string "'\\0'" 10001 . 10005) (punctuation ";" 10005 . 10006) (semantic-list "(yy_c_buf_p)" 10010 . 10022) (punctuation "=" 10023 . 10024) (symbol "yy_cp" 10025 . 10030) (punctuation ";" 10030 . 10031)))
+          ("YY_START_STACK_INCR" . ((number "25" 16445 . 16447)))
+          ("yyless" (spp-arg-list ("n") 41002 . 41005) . 
+              ((DO "do" 41009 . 41011) (semantic-list "{ \\
+		/* Undo effects of setting up yytext. */ \\
+        int yyless_macro_arg = (n); \\
+        YY_LESS_LINENO(yyless_macro_arg);\\
+		yytext[yyleng] = (yy_hold_char); \\
+		(yy_c_buf_p) = yytext + yyless_macro_arg; \\
+		(yy_hold_char) = *(yy_c_buf_p); \\
+		*(yy_c_buf_p) = '\\0'; \\
+		yyleng = yyless_macro_arg; \\
+		}" 41016 . 41325) (WHILE "while" 41329 . 41334) (semantic-list "( 0 )" 41335 . 41340)))
+          ("YY_FLEX_MAJOR_VERSION" . ((number "2" 151 . 152)))
+          ("YY_SC_TO_UI" (spp-arg-list ("c") 2637 . 2640) . ((semantic-list "((unsigned int) (unsigned char) c)" 2641 . 2675)))
+          ("unput" (spp-arg-list ("c") 4601 . 4604) . ((symbol "yyunput" 4605 . 4612) (semantic-list "( c, (yytext_ptr)  )" 4612 . 4632)))
+          ("YY_END_OF_BUFFER" . ((number "6" 10081 . 10082)))
+          ("INITIAL" . ((number "0" 13316 . 13317)))
+          ("FLEX_BETA")
+          ("YYSTATE" . ((symbol "YY_START" 3104 . 3112)))
+          ("REJECT" . ((symbol "reject_used_but_not_detected" 13004 . 13032)))
+          ("YY_RESTORE_YY_MORE_OFFSET")
+          ("YY_FLEX_MINOR_VERSION" . ((number "5" 183 . 184)))
+          ("FLEXINT_H")
+          ("YY_STATE_EOF" (spp-arg-list ("state") 3191 . 3198) . ((semantic-list "(YY_END_OF_BUFFER + state + 1)" 3199 . 3229)))
+          ("YY_LESS_LINENO" (spp-arg-list ("n") 4144 . 4147))
+          ("YY_CURRENT_BUFFER" . ((semantic-list "( (yy_buffer_stack) \\
+                          ? (yy_buffer_stack)[(yy_buffer_stack_top)] \\
+                          : NULL)" 7005 . 7131)))
+          ("yyterminate" (spp-arg-list nil 16301 . 16303) . ((RETURN "return" 16304 . 16310) (symbol "YY_NULL" 16311 . 16318)))
+          ("YY_DECL_IS_OURS" . ((number "1" 16764 . 16765)))
+          ("YY_BUFFER_NEW" . ((number "0" 5967 . 5968)))
+          ("YY_NEW_FILE" . ((symbol "yyrestart" 3311 . 3320) (semantic-list "(yyin  )" 3320 . 3328)))
+          ("YY_END_OF_BUFFER_CHAR" . ((number "0" 3360 . 3361)))
+          ("yy_new_buffer" . ((symbol "yy_create_buffer" 8728 . 8744)))
+          ("ECHO" . 
+              ((DO "do" 15171 . 15173) (semantic-list "{ if (fwrite( yytext, yyleng, 1, yyout )) {} }" 15174 . 15220) (WHILE "while" 15221 . 15226) (semantic-list "(0)" 15227 . 15230)))
+          ("YYTABLES_NAME" . ((string "\"yytables\"" 44565 . 44575)))
+          ("YY_TYPEDEF_YY_SIZE_T")
+          ("YY_CURRENT_BUFFER_LVALUE" . ((semantic-list "(yy_buffer_stack)" 7308 . 7325) (semantic-list "[(yy_buffer_stack_top)]" 7325 . 7348)))
+          ("YY_BREAK" . ((BREAK "break" 17079 . 17084) (punctuation ";" 17084 . 17085)))
+          )
+
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("all" function nil nil [1 32]))          
+    :file "Makefile"
+    :pointmax 32
+    :fsize 656
+    :lastmodtime '(20210 10915)
+    :unmatched-syntax '((shell-command 20 . 32) (bol 19 . 19) (shell-command 20 . 33) (bol 19 . 19) (shell-command 7 . 18) (bol 6 . 6) (symbol 23 . 31) (symbol 19 . 22) (bol 19 . 19) (shell-command 7 . 18) (bol 6 . 6) (shell-command 7 . 7) (bol 6 . 6) (shell-command 617 . 656) (bol 616 . 616))
+    )
+   )
+  :file "!home!andrea!Workspace!calc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

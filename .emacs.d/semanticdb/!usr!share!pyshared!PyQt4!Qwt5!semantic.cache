@@ -1,0 +1,260 @@
+;; Object Qwt5/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Qwt5/"
+  :tables (list 
+   (semanticdb-table "qplt.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""
+Provides a command line interpreter friendly layer over `QwtPlot`.
+An example of its use is:
+
+>>> import numpy as np
+>>> from PyQt4.Qt import *
+>>> from PyQt4.Qwt5 import *
+>>> from PyQt4.Qwt5.qplt import *
+>>> application = QApplication([])
+>>> x = np.arange(-2*np.pi, 2*np.pi, 0.01)
+>>> p = Plot(
+...  Curve(x, np.cos(x), Pen(Magenta, 2), 'cos(x)'),
+...  Curve(x, np.exp(x), Pen(Red), 'exp(x)', Y2),
+...  Axis(Y2, Log),
+...  'PyQwt using Qwt-%s -- http://qwt.sf.net' % QWT_VERSION_STR)
+>>> QPixmap.grabWidget(p).save('cli-plot-1.png', 'PNG')
+True
+>>> x = x[0:-1:10]
+>>> p.plot(
+...  Curve(x, np.cos(x-np.pi/4), Symbol(Circle, Yellow), 'circle'),
+...  Curve(x, np.cos(x+np.pi/4), Pen(Blue), Symbol(Square, Cyan), 'square'))
+>>> QPixmap.grabWidget(p).save('cli-plot-2.png', 'PNG')
+True
+"""" code nil nil [1260 2053])
+            ("sys" include nil nil [2056 2066])
+            ("time" include nil nil [2067 2078])
+            ("PyQt4.Qt" include nil nil [2080 2102])
+            ("PyQt4.Qwt5" include nil nil [2103 2127])
+            ("grace" include nil nil [2128 2158])
+            ("Black" variable nil nil [2186 2208])
+            ("Blue" variable nil nil [2209 2230])
+            ("Cyan" variable nil nil [2231 2252])
+            ("DarkBlue" variable nil nil [2253 2278])
+            ("DarkCyan" variable nil nil [2279 2304])
+            ("DarkGray" variable nil nil [2305 2330])
+            ("DarkGreen" variable nil nil [2331 2357])
+            ("DarkMagenta" variable nil nil [2358 2386])
+            ("DarkRed" variable nil nil [2387 2411])
+            ("DarkYellow" variable nil nil [2412 2439])
+            ("Gray" variable nil nil [2440 2461])
+            ("Green" variable nil nil [2462 2484])
+            ("LightGray" variable nil nil [2485 2511])
+            ("Magenta" variable nil nil [2512 2536])
+            ("Red" variable nil nil [2537 2557])
+            ("White" variable nil nil [2558 2580])
+            ("Yellow" variable nil nil [2581 2604])
+            ("NoLine" variable nil nil [2628 2653])
+            ("SolidLine" variable nil nil [2654 2683])
+            ("DashLine" variable nil nil [2684 2712])
+            ("DotLine" variable nil nil [2713 2740])
+            ("DashDotLine" variable nil nil [2741 2772])
+            ("DashDotDotLine" variable nil nil [2773 2807])
+            ("Y1" variable nil nil [2832 2859])
+            ("Y2" variable nil nil [2860 2888])
+            ("X1" variable nil nil [2889 2918])
+            ("X2" variable nil nil [2919 2945])
+            ("Lin" variable nil nil [2972 2998])
+            ("Log" variable nil nil [2999 3024])
+            ("NoAttribute" variable nil nil [3061 3106])
+            ("IncludeReference" variable nil nil [3107 3157])
+            ("Symmetric" variable nil nil [3158 3201])
+            ("Floating" variable nil nil [3202 3244])
+            ("Inverted" variable nil nil [3245 3287])
+            ("NoSymbol" variable nil nil [3315 3344])
+            ("Circle" variable nil nil [3345 3373])
+            ("Square" variable nil nil [3374 3399])
+            ("Diamond" variable nil nil [3400 3428])
+            ("Font" variable nil nil [3438 3461])
+            ("Tracker" type
+               (:superclasses ("QObject")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3504 3508])
+                        ("parent" variable nil (reparse-symbol function_parameters) [3510 3516]))                      ) (reparse-symbol indented_block_body) [3491 3636])
+                    ("eventFilter" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3675 3679])
+                        ("_" variable nil (reparse-symbol function_parameters) [3681 3682])
+                        ("event" variable nil (reparse-symbol function_parameters) [3684 3689]))                      ) (reparse-symbol indented_block_body) [3659 3821]))                  
+                :type "class")
+                nil [3463 3821])
+            ("Plot" type
+               (:superclasses ("QwtPlot")
+                :members 
+                  ( (""""A command line interpreter friendly layer over `QwtPlot`.
+        
+    The interpretation of the `*rest` parameters is type dependent:
+
+    - `Axis`: enables the axis.
+    - `Curve`: adds a curve.
+    - `str` or `QString`: sets the title.
+    - `int`: sets a set of mouse events to the zoomer actions.
+    - (`int`, `int`): sets the size.
+    - `QWidget`: sets the parent widget    
+    """" code nil (reparse-symbol indented_block_body) [3886 4279])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4302 4306])
+                        ("rest" variable nil (reparse-symbol function_parameters) [4308 4313]))                      ) (reparse-symbol indented_block_body) [4289 6850])
+                    ("plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6882 6886])
+                        ("rest" variable nil (reparse-symbol function_parameters) [6888 6893]))                      ) (reparse-symbol indented_block_body) [6873 7368])
+                    ("plotAxis" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7400 7404])
+                        ("axis" variable nil (reparse-symbol function_parameters) [7406 7410]))                      ) (reparse-symbol indented_block_body) [7387 7766])
+                    ("plotCurve" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7803 7807])
+                        ("curve" variable nil (reparse-symbol function_parameters) [7809 7814]))                      ) (reparse-symbol indented_block_body) [7789 8172])
+                    ("clearZoomStack" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8219 8223]))                      ) (reparse-symbol indented_block_body) [8200 8519])
+                    ("setZoomerMouseEventSet" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8575 8579])
+                        ("index" variable nil (reparse-symbol function_parameters) [8581 8586]))                      ) (reparse-symbol indented_block_body) [8548 9796])
+                    ("getZoomerMouseEventSet" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9860 9864]))                      ) (reparse-symbol indented_block_body) [9833 9903])
+                    ("formatCoordinates" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9962 9966])
+                        ("x" variable nil (reparse-symbol function_parameters) [9968 9969])
+                        ("y" variable nil (reparse-symbol function_parameters) [9971 9972]))                      ) (reparse-symbol indented_block_body) [9940 10448])
+                    ("toggleVisibility" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10501 10505])
+                        ("plotItem" variable nil (reparse-symbol function_parameters) [10507 10515]))                      ) (reparse-symbol indented_block_body) [10480 10654])
+                    ("gracePlot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10694 10698])
+                        ("saveall" variable nil (reparse-symbol function_parameters) [10700 10707])
+                        ("pause" variable nil (reparse-symbol function_parameters) [10712 10717]))                      ) (reparse-symbol indented_block_body) [10680 15290]))                  
+                :type "class")
+                nil [3861 15290])
+            ("Curve" type
+               (:members 
+                  ( (""""A command line friendly layer over `QwtPlotCurve`.
+
+    Parameters:
+    
+    - `x`: sequence of numbers
+    - `y`: sequence of numbers
+
+    The interpretation of the `*rest` parameters is type dependent:
+    
+    - `Axis`: attaches an axis to the curve.
+    - `Pen`: sets the pen to connect the data points.
+    - `Symbol`: sets the symbol to draw the data points.
+    - `str`, `QString`, or `QwtText`: sets the curve title.
+    """" code nil (reparse-symbol indented_block_body) [15362 15797])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15815 15819])
+                        ("x" variable nil (reparse-symbol function_parameters) [15821 15822])
+                        ("y" variable nil (reparse-symbol function_parameters) [15824 15825])
+                        ("rest" variable nil (reparse-symbol function_parameters) [15827 15832]))                      ) (reparse-symbol indented_block_body) [15802 16619]))                  
+                :type "class")
+                nil [15345 16619])
+            ("Axis" type
+               (:members 
+                  ( (""""A command line interpreter friendly class.
+
+    The interpretation of the `*rest` parameters is type dependent:
+    
+    - `QwtPlot.Axis`: sets the orientation of the axis.
+    - `QwtScaleEngine`: sets the axis type (Lin or Log).
+    - `int` : sets the attributes of the axis.
+    - `string` or `QString`: sets the title of the axis.
+    """" code nil (reparse-symbol indented_block_body) [16655 16999])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17017 17021])
+                        ("rest" variable nil (reparse-symbol function_parameters) [17023 17028]))                      ) (reparse-symbol indented_block_body) [17004 17716]))                  
+                :type "class")
+                nil [16639 17716])
+            ("Symbol" type
+               (:superclasses ("QwtSymbol")
+                :members 
+                  ( (""""A command line friendly layer over `QwtSymbol`.
+
+    The interpretation of the `*rest` parameters is type dependent:
+    
+    - `QColor` or `Qt.GlobalColor`: sets the symbol fill color.
+    - `QwtSymbol.Style`: sets symbol style.
+    - `int`: sets the symbol size.
+    """" code nil (reparse-symbol indented_block_body) [17779 18054])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18072 18076])
+                        ("rest" variable nil (reparse-symbol function_parameters) [18078 18083]))                      ) (reparse-symbol indented_block_body) [18059 18580]))                  
+                :type "class")
+                nil [17750 18580])
+            ("Pen" type
+               (:superclasses ("QPen")
+                :members 
+                  ( (""""A command line friendly layer over `QPen`.
+    
+    The interpretation of the `*rest` parameters is type dependent:
+    
+    - `Qt.PenStyle`: sets the pen style.
+    - `QColor` or `Qt.GlobalColor`: sets the pen color.
+    - `int`: sets the pen width.
+    """" code nil (reparse-symbol indented_block_body) [18637 18898])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18916 18920])
+                        ("rest" variable nil (reparse-symbol function_parameters) [18922 18927]))                      ) (reparse-symbol indented_block_body) [18903 19313]))                  
+                :type "class")
+                nil [18616 19313])
+            ("print_xpm" variable nil nil [19346 20888])
+            ("grace_xpm" variable nil nil [20890 23260])
+            ("IPlot" type
+               (:superclasses ("QMainWindow")
+                :members 
+                  ( (""""A QMainWindow widget with a Plot widget as central widget. It provides:
+
+    #. a toolbar for printing and piping into Grace.
+    #. a legend with control to toggle curves between hidden and shown.
+    #. mouse tracking to display the coordinates in the status bar.
+    #. an infinite stack of zoom regions.
+
+    The interpretation of the `rest` parameters is type dependent:
+        
+    - `Axis`: enables the axis.
+    - `Curve`: adds a curve.
+    - `str` or `QString`: sets the title.
+    - `int`: sets a set of mouse events to the zoomer actions.
+    - (`int`, `int`): sets the size.
+    """" code nil (reparse-symbol indented_block_body) [23293 23891])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23910 23914])
+                        ("rest" variable nil (reparse-symbol function_parameters) [23916 23921]))                      ) (reparse-symbol indented_block_body) [23897 28083])
+                    ("plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28115 28119])
+                        ("rest" variable nil (reparse-symbol function_parameters) [28121 28126]))                      ) (reparse-symbol indented_block_body) [28106 28161])
+                    ("printPlot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28198 28202]))                      ) (reparse-symbol indented_block_body) [28184 28418])
+                    ("showCoordinates" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28462 28466])
+                        ("position" variable nil (reparse-symbol function_parameters) [28468 28476]))                      ) (reparse-symbol indented_block_body) [28442 28601])
+                    ("__getattr__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28655 28659])
+                        ("attr" variable nil (reparse-symbol function_parameters) [28661 28665]))                      ) (reparse-symbol indented_block_body) [28639 28951]))                  
+                :type "class")
+                nil [23263 28951])
+            ("testPlot" function nil nil [29015 29705])
+            ("testIPlot" function nil nil [29721 30418])
+            ("standard_map" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [30452 30453])
+                ("y" variable nil (reparse-symbol function_parameters) [30455 30456])
+                ("kappa" variable nil (reparse-symbol function_parameters) [30458 30463])
+                ("n" variable nil (reparse-symbol function_parameters) [30465 30466]))              ) nil [30435 30934])
+            ("testStandardMap" function nil nil [30954 31342])
+            ("if" code nil nil [31365 31497]))          
+    :file "qplt.py"
+    :pointmax 31551
+    :fsize 31550
+    :lastmodtime '(20345 64056)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!share!pyshared!PyQt4!Qwt5!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

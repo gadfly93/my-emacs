@@ -1,0 +1,122 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "RulexClientServerTest.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("unittest" include nil nil [142 157])
+            ("collections" include nil nil [158 193])
+            ("math" include nil nil [194 212])
+            ("random" include nil nil [213 233])
+            ("time" include nil nil [234 256])
+            ("server.RulexServer" include nil nil [257 289])
+            ("client.RulexClient" include nil nil [290 323])
+            ("database.RulexSession" include nil nil [324 359])
+            ("PyQt4.QtCore" include nil nil [360 401])
+            ("ALL" code nil nil [403 411])
+            ("TASK" variable nil nil [412 420])
+            ("SESSION" code nil nil [421 437])
+            ("RL" code nil nil [438 449])
+            ("app" variable nil nil [451 483])
+            ("data_dir" variable nil nil [485 520])
+            ("rs" variable nil nil [521 540])
+            ("rs" code nil nil [541 559])
+            ("InitTest" function (:arguments 
+              ( ("debug" variable nil (reparse-symbol function_parameters) [574 579]))              ) nil [561 1131])
+            ("CleanUp" function (:arguments 
+              ( ("server" variable nil (reparse-symbol function_parameters) [1144 1150]))              ) nil [1132 1235])
+            ("RulexClientServerTest" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1303 1307])
+                        ("testname" variable nil (reparse-symbol function_parameters) [1309 1317])
+                        ("test_mode" variable nil (reparse-symbol function_parameters) [1319 1328]))                      ) (reparse-symbol indented_block_body) [1290 1479])
+                    ("setUp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1494 1498]))                      ) (reparse-symbol indented_block_body) [1484 1526])
+                    ("_InitTest" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1545 1549]))                      ) (reparse-symbol indented_block_body) [1531 1622])
+                    ("_GetTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1640 1644])
+                        ("category" variable nil (reparse-symbol function_parameters) [1646 1654])
+                        ("index" variable nil (reparse-symbol function_parameters) [1661 1666]))                      ) (reparse-symbol indented_block_body) [1627 1837])
+                    ("_CreateTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1858 1862])
+                        ("category" variable nil (reparse-symbol function_parameters) [1864 1872])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [1874 1883])
+                        ("random_f" variable nil (reparse-symbol function_parameters) [1890 1898]))                      ) (reparse-symbol indented_block_body) [1842 3282])
+                    ("_CreateTrainBranch" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3310 3314])
+                        ("random_f" variable nil (reparse-symbol function_parameters) [3316 3324]))                      ) (reparse-symbol indented_block_body) [3287 3846])
+                    ("_CreateClusteringBranch" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3879 3883])
+                        ("which_clustering" variable nil (reparse-symbol function_parameters) [3885 3901])
+                        ("random_f" variable nil (reparse-symbol function_parameters) [3903 3911]))                      ) (reparse-symbol indented_block_body) [3851 4647])
+                    ("_CreateMediaBranch" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4675 4679])
+                        ("random_f" variable nil (reparse-symbol function_parameters) [4681 4689])
+                        ("rule_f" variable nil (reparse-symbol function_parameters) [4697 4703]))                      ) (reparse-symbol indented_block_body) [4652 5092])
+                    ("_Compute" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5110 5114]))                      ) (reparse-symbol indented_block_body) [5097 5255])
+                    ("_Forecast" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5274 5278])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [5280 5289]))                      ) (reparse-symbol indented_block_body) [5260 5422])
+                    ("_TestSession" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5444 5448]))                      ) (reparse-symbol indented_block_body) [5427 6286])
+                    ("RlTest" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6302 6306]))                      ) (reparse-symbol indented_block_body) [6291 9421])
+                    ("_CreateAttIdList" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9544 9548]))                      ) (reparse-symbol indented_block_body) [9523 9841])
+                    ("_TestSelectData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9866 9870]))                      ) (reparse-symbol indented_block_body) [9846 11678])
+                    ("_TestSortData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11701 11705]))                      ) (reparse-symbol indented_block_body) [11683 12030])
+                    ("test_anneal" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12145 12149]))                      ) (reparse-symbol indented_block_body) [12129 12903])
+                    ("test_labor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12923 12927]))                      ) (reparse-symbol indented_block_body) [12908 13599])
+                    ("test_quest" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13816 13820]))                      ) (reparse-symbol indented_block_body) [13801 14615])
+                    ("test_action" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14741 14745]))                      ) (reparse-symbol indented_block_body) [14725 15827])
+                    ("test_promo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15847 15851]))                      ) (reparse-symbol indented_block_body) [15832 16604])
+                    ("test_lennox" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16735 16739]))                      ) (reparse-symbol indented_block_body) [16719 17846])
+                    ("test_media" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17969 17973]))                      ) (reparse-symbol indented_block_body) [17954 18727]))                  
+                :type "class")
+                nil [1236 18727])
+            ("suite" function (:arguments 
+              ( ("test_mode" variable nil (reparse-symbol function_parameters) [18738 18747]))              ) nil [18728 19079])
+            ("if" code nil nil [19080 19336]))          
+    :file "RulexClientServerTest.py"
+    :pointmax 19282
+    :fsize 19820
+    :lastmodtime '(20294 2491)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "RulexTestPlatforms.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("unittest" include nil nil [142 173])
+            ("utilities.RulexUtilities" include nil nil [174 212])
+            ("client.RulexClient" include nil nil [213 246])
+            ("RulexClientServerTest" include nil nil [247 283])
+            ("t" variable nil nil [285 341])
+            ("config_files" variable nil nil [342 457])
+            ("for" code nil nil [459 741]))          
+    :file "RulexTestPlatforms.py"
+    :pointmax 765
+    :fsize 787
+    :lastmodtime '(20293 3819)
+    :unmatched-syntax '((PRINT 742 . 747) ($EOI 765 . 765))
+    )
+    )
+  :file "!home!andrea!Workspace!Rulex_branch!RulexInterface!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

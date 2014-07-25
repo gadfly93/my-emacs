@@ -1,0 +1,35 @@
+;; Object dichotomiclm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dichotomiclm/"
+  :tables (list 
+   (semanticdb-table "RulexCompDichotomiclm.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("components.RulexComponentBase" include nil nil [142 185])
+            ("dichotomiclm" include nil nil [186 226])
+            ("RulexCompDichotomiclm" type
+               (:superclasses ("RulexComponentBase" "Ui_Dichotomiclm")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [312 316])
+                        ("item" variable nil (reparse-symbol function_parameters) [318 322])
+                        ("parent" variable nil (reparse-symbol function_parameters) [324 330]))                      ) (reparse-symbol indented_block_body) [299 768])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [793 797]))                      ) (reparse-symbol indented_block_body) [773 1117])
+                    ("UpdateMonitor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1140 1144]))                      ) (reparse-symbol indented_block_body) [1122 1206]))                  
+                :type "class")
+                nil [228 1206])
+            ("if" code nil nil [1207 1359]))          
+    :file "RulexCompDichotomiclm.py"
+    :pointmax 1359
+    :fsize 1399
+    :lastmodtime '(20526 13430)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!components!dichotomiclm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

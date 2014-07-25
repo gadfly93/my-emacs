@@ -1,0 +1,2074 @@
+;; Object memcheck/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "memcheck/"
+  :tables (list 
+   (semanticdb-table "memcheck.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__MEMCHECK_H" variable (:constant-flag t) nil [2620 2632])
+            ("valgrind.h" include nil nil [2859 2880])
+            ("Vg_MemCheckClientRequest" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("VG_USERREQ__MAKE_MEM_NOACCESS" variable
+                             (:constant-flag t
+                              :default-value (3187 3216)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3155 3216])
+                          ("VG_USERREQ__MAKE_MEM_UNDEFINED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3224 3255])
+                          ("VG_USERREQ__MAKE_MEM_DEFINED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3262 3291])
+                          ("VG_USERREQ__DISCARD" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3298 3318])
+                          ("VG_USERREQ__CHECK_MEM_IS_ADDRESSABLE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3325 3362])
+                          ("VG_USERREQ__CHECK_MEM_IS_DEFINED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3369 3402])
+                          ("VG_USERREQ__DO_LEAK_CHECK" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3409 3435])
+                          ("VG_USERREQ__COUNT_LEAKS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3442 3466])
+                          ("VG_USERREQ__GET_VBITS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3474 3496])
+                          ("VG_USERREQ__SET_VBITS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3503 3525])
+                          ("VG_USERREQ__CREATE_BLOCK" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3533 3558])
+                          ("VG_USERREQ__MAKE_MEM_DEFINED_IF_ADDRESSABLE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3566 3610])
+                          ("VG_USERREQ__COUNT_LEAK_BLOCKS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3694 3724])
+                          ("_VG_USERREQ__MEMCHECK_RECORD_OVERLAP_ERROR" variable
+                             (:constant-flag t
+                              :default-value (3855 3890)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3800 3890])
+                          ("VG_USERREQ__INIT_SUP_STACK" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3899 3926])
+                          ("VG_USERREQ__GET_WHOLE_SUP_STACK" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3933 3965])
+                          ("VG_USERREQ__PUSH_SUP_STACK" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3972 3999])
+                          ("VG_USERREQ__POP_SUP_STACK" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [4006 4036]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [3130 4062])
+            ("VALGRIND_MAKE_MEM_NOACCESS" variable (:constant-flag t) nil [4203 4229])
+            ("VALGRIND_MAKE_MEM_UNDEFINED" variable (:constant-flag t) nil [4567 4594])
+            ("VALGRIND_MAKE_MEM_DEFINED" variable (:constant-flag t) nil [4923 4948])
+            ("VALGRIND_MAKE_MEM_DEFINED_IF_ADDRESSABLE" variable (:constant-flag t) nil [5386 5426])
+            ("VALGRIND_CREATE_BLOCK" variable (:constant-flag t) nil [5913 5934])
+            ("VALGRIND_DISCARD" variable (:constant-flag t) nil [6321 6337])
+            ("VALGRIND_CHECK_MEM_IS_ADDRESSABLE" variable (:constant-flag t) nil [6878 6911])
+            ("VALGRIND_CHECK_MEM_IS_DEFINED" variable (:constant-flag t) nil [7420 7449])
+            ("VALGRIND_CHECK_VALUE_IS_DEFINED" variable (:constant-flag t) nil [7968 7999])
+            ("VALGRIND_DO_LEAK_CHECK" variable (:constant-flag t) nil [8303 8325])
+            ("VALGRIND_DO_ADDED_LEAK_CHECK" variable (:constant-flag t) nil [8664 8692])
+            ("VALGRIND_DO_CHANGED_LEAK_CHECK" variable (:constant-flag t) nil [8993 9023])
+            ("VALGRIND_DO_QUICK_LEAK_CHECK" variable (:constant-flag t) nil [9257 9285])
+            ("VALGRIND_COUNT_LEAKS" variable (:constant-flag t) nil [9576 9596])
+            ("VALGRIND_GET_VBITS" variable (:constant-flag t) nil [12797 12815])
+            ("VALGRIND_SET_VBITS" variable (:constant-flag t) nil [13621 13639])
+            ("sup_stack" variable
+               (:dereference 2
+                :typemodifiers ("extern")
+                :type "char")
+                nil [13999 14031])
+            ("VALGRIND_INIT_SUP_STACK" variable (:constant-flag t) nil [14082 14105])
+            ("VALGRIND_GET_WHOLE_SUP_STACK" variable (:constant-flag t) nil [14512 14540])
+            ("VALGRIND_PUSH_SUP_STACK" variable (:constant-flag t) nil [15219 15242])
+            ("VALGRIND_POP_SUP_STACK" variable (:constant-flag t) nil [15655 15677]))          
+    :file "memcheck.h"
+    :pointmax 16018
+    :fsize 16017
+    :lastmodtime '(20614 49263)
+    :unmatched-syntax '((semantic-list 11519 . 12345) (punctuation 11457 . 11458) (punctuation 11456 . 11457) (punctuation 11454 . 11455) (symbol 11447 . 11454) (symbol 11438 . 11440) (symbol 11429 . 11437) (symbol 11422 . 11428) (symbol 11418 . 11421) (symbol 11413 . 11417) (symbol 11411 . 11412) (string 11360 . 11411) (symbol 11349 . 11360) (string 11310 . 11349) (symbol 11303 . 11310) (string 11299 . 11303) (symbol 11293 . 11299) (string 9953 . 11293) (symbol 9948 . 9953) (symbol 9924 . 9947) (symbol 9910 . 9917) (symbol 9906 . 9909) (punctuation 9904 . 9905) (string 9891 . 9904) (symbol 9880 . 9890) (symbol 9875 . 9879) (symbol 9872 . 9874) (punctuation 9869 . 9870) (symbol 9866 . 9869) (symbol 9856 . 9859) (punctuation 9854 . 9855) (string 9845 . 9854) (punctuation 9843 . 9844) (string 9835 . 9843) (symbol 9830 . 9834) (symbol 9825 . 9829) (symbol 9818 . 9824) (symbol 9815 . 9817) (symbol 9809 . 9814) (symbol 9803 . 9808) (punctuation 9801 . 9802) (symbol 9792 . 9801) (symbol 9781 . 9785) (symbol 9777 . 9780) (symbol 9769 . 9776) (symbol 9765 . 9768) (symbol 9762 . 9764) (symbol 9756 . 9761) (symbol 9749 . 9755) (symbol 9744 . 9748) (punctuation 9742 . 9743) (symbol 9733 . 9742) (LONG 9728 . 9732) (UNSIGNED 9719 . 9727))
+    :lexical-table 
+        '(("VALGRIND_CHECK_MEM_IS_DEFINED" (spp-arg-list ("_qzz_addr" "_qzz_len") 7449 . 7469) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 7483 . 7514) (semantic-list "(0,                           \\
+                            VG_USERREQ__CHECK_MEM_IS_DEFINED,    \\
+                            (_qzz_addr), (_qzz_len), 0, 0, 0)" 7514 . 7674)))
+          ("VALGRIND_MAKE_MEM_DEFINED_IF_ADDRESSABLE" (spp-arg-list ("_qzz_addr" "_qzz_len") 5426 . 5446) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 5457 . 5488) (semantic-list "(0 /* default return */,              \\
+                            VG_USERREQ__MAKE_MEM_DEFINED_IF_ADDRESSABLE, \\
+                            (_qzz_addr), (_qzz_len), 0, 0, 0)" 5488 . 5664)))
+          ("VALGRIND_DO_CHANGED_LEAK_CHECK" . ((symbol "VALGRIND_DO_CLIENT_REQUEST_STMT" 9055 . 9086) (semantic-list "(VG_USERREQ__DO_LEAK_CHECK,  \\
+                                    0, 2, 0, 0, 0)" 9086 . 9167)))
+          ("VALGRIND_MAKE_MEM_DEFINED" (spp-arg-list ("_qzz_addr" "_qzz_len") 4948 . 4968) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 4986 . 5017) (semantic-list "(0 /* default return */,      \\
+                            VG_USERREQ__MAKE_MEM_DEFINED,        \\
+                            (_qzz_addr), (_qzz_len), 0, 0, 0)" 5017 . 5177)))
+          ("VALGRIND_DO_ADDED_LEAK_CHECK" . ((symbol "VALGRIND_DO_CLIENT_REQUEST_STMT" 8726 . 8757) (semantic-list "(VG_USERREQ__DO_LEAK_CHECK,  \\
+                                    0, 1, 0, 0, 0)" 8757 . 8838)))
+          ("VALGRIND_GET_WHOLE_SUP_STACK" (spp-arg-list ("size" "all") 14540 . 14551) . ((semantic-list "{                                                             \\
+    unsigned int _qzz_res;                                       \\
+    int _qzz_size;                                              \\
+    const char *_qzz_all ;                             \\
+    VALGRIND_DO_CLIENT_REQUEST(_qzz_res, 0,                      \\
+                            VG_USERREQ__GET_WHOLE_SUP_STACK,     \\
+                            &_qzz_size, &_qzz_all, 0, 0, 0 );    \\
+    size = _qzz_size;                                          \\
+    all = _qzz_all;                                              \\
+   }" 14573 . 15164)))
+          ("VALGRIND_CREATE_BLOCK" (spp-arg-list ("_qzz_addr" "_qzz_len" "_qzz_desc") 5934 . 5965) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 5975 . 6006) (semantic-list "(0 /* default return */,        \\
+                            VG_USERREQ__CREATE_BLOCK,              \\
+                            (_qzz_addr), (_qzz_len), (_qzz_desc),  \\
+                            0, 0)" 6006 . 6211)))
+          ("VALGRIND_CHECK_MEM_IS_ADDRESSABLE" (spp-arg-list ("_qzz_addr" "_qzz_len") 6911 . 6931) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 6943 . 6974) (semantic-list "(0,                             \\
+                            VG_USERREQ__CHECK_MEM_IS_ADDRESSABLE,  \\
+                            (_qzz_addr), (_qzz_len), 0, 0, 0)" 6974 . 7138)))
+          ("VALGRIND_SET_VBITS" (spp-arg-list ("zza" "zzvbits" "zznbytes") 13639 . 13661) . 
+              ((semantic-list "(unsigned)" 13683 . 13693) (symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 13693 . 13724) (semantic-list "(0,                \\
+                                    VG_USERREQ__SET_VBITS,      \\
+                                    (const char*)(zza),         \\
+                                    (const char*)(zzvbits),     \\
+                                    (zznbytes), 0, 0 )" 13724 . 13997)))
+          ("VALGRIND_DISCARD" (spp-arg-list ("_qzz_blkindex") 6337 . 6352) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 6384 . 6415) (semantic-list "(0 /* default return */,      \\
+                            VG_USERREQ__DISCARD,                 \\
+                            0, (_qzz_blkindex), 0, 0, 0)" 6415 . 6570)))
+          ("VALGRIND_COUNT_LEAKS" (spp-arg-list ("leaked" "dubious" "reachable" "suppressed") 9596 . 9636))
+          ("VALGRIND_GET_VBITS" (spp-arg-list ("zza" "zzvbits" "zznbytes") 12815 . 12837) . 
+              ((semantic-list "(unsigned)" 12859 . 12869) (symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 12869 . 12900) (semantic-list "(0,                \\
+                                    VG_USERREQ__GET_VBITS,      \\
+                                    (const char*)(zza),         \\
+                                    (char*)(zzvbits),           \\
+                                    (zznbytes), 0, 0)" 12900 . 13172)))
+          ("VALGRIND_POP_SUP_STACK" . ((semantic-list "(__extension__({unsigned int _qzz_res;                        \\
+    VALGRIND_DO_CLIENT_REQUEST(_qzz_res, 0,                      \\
+                            VG_USERREQ__POP_SUP_STACK,               \\
+                            0, 0, 0, 0, 0 );    \\
+    _qzz_res;                                                    \\
+   }))" 15683 . 16008)))
+          ("VALGRIND_DO_QUICK_LEAK_CHECK" . ((symbol "VALGRIND_DO_CLIENT_REQUEST_STMT" 9320 . 9351) (semantic-list "(VG_USERREQ__DO_LEAK_CHECK,   \\
+                                    1, 0, 0, 0, 0)" 9351 . 9433)))
+          ("VALGRIND_INIT_SUP_STACK" . ((semantic-list "(__extension__({unsigned int _qzz_res;                        \\
+    VALGRIND_DO_CLIENT_REQUEST(_qzz_res, 0,                      \\
+                            VG_USERREQ__INIT_SUP_STACK,               \\
+                            0, 0, 0, 0, 0 );    \\
+    _qzz_res;                                                    \\
+   }))" 14111 . 14437)))
+          ("VALGRIND_PUSH_SUP_STACK" (spp-arg-list ("data") 15242 . 15248) . ((semantic-list "(__extension__({unsigned int _qzz_res;                        \\
+    VALGRIND_DO_CLIENT_REQUEST(_qzz_res, 0,                      \\
+                            VG_USERREQ__PUSH_SUP_STACK,               \\
+                            data, 0, 0, 0, 0 );    \\
+    _qzz_res;                                                    \\
+   }))" 15270 . 15599)))
+          ("__MEMCHECK_H")
+          ("VALGRIND_DO_LEAK_CHECK" . ((symbol "VALGRIND_DO_CLIENT_REQUEST_STMT" 8366 . 8397) (semantic-list "(VG_USERREQ__DO_LEAK_CHECK,   \\
+                                    0, 0, 0, 0, 0)" 8397 . 8479)))
+          ("VALGRIND_MAKE_MEM_NOACCESS" (spp-arg-list ("_qzz_addr" "_qzz_len") 4229 . 4249) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 4266 . 4297) (semantic-list "(0 /* default return */,      \\
+                            VG_USERREQ__MAKE_MEM_NOACCESS,       \\
+                            (_qzz_addr), (_qzz_len), 0, 0, 0)" 4297 . 4457)))
+          ("VALGRIND_MAKE_MEM_UNDEFINED" (spp-arg-list ("_qzz_addr" "_qzz_len") 4594 . 4614) . ((symbol "VALGRIND_DO_CLIENT_REQUEST_EXPR" 4630 . 4661) (semantic-list "(0 /* default return */,      \\
+                            VG_USERREQ__MAKE_MEM_UNDEFINED,      \\
+                            (_qzz_addr), (_qzz_len), 0, 0, 0)" 4661 . 4821)))
+          ("VALGRIND_CHECK_VALUE_IS_DEFINED" (spp-arg-list ("__lvalue") 7999 . 8009) . ((symbol "VALGRIND_CHECK_MEM_IS_DEFINED" 8030 . 8059) (semantic-list "(                                \\
+      (volatile unsigned char *)&(__lvalue),                     \\
+                      (unsigned long)(sizeof (__lvalue)))" 8059 . 8218)))
+          )
+
+    )
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("$(top_srcdir)/Makefile.tool.am" include nil nil [1 40])
+            ("SUBDIRS" variable (:default-value ("perf")) nil [41 57])
+            ("EXTRA_DIST" variable (:default-value ("docs/mc-manual.xml" "docs/mc-tech-docs.xml")) nil [58 112])
+            ("pkginclude_HEADERS" variable (:default-value ("memcheck.h")) nil [280 315])
+            ("noinst_HEADERS" variable (:default-value ("mc_include.h")) nil [316 349])
+            ("noinst_PROGRAMS" variable (:default-value ("memcheck-@VGCONF_ARCH_PRI@-@VGCONF_OS@")) nil [529 587])
+            ("noinst_PROGRAMS" variable (:default-value ("memcheck-@VGCONF_ARCH_SEC@-@VGCONF_OS@")) nil [615 673])
+            ("MEMCHECK_SOURCES_COMMON" variable (:default-value ("mc_leakcheck.c" "mc_malloc_wrappers.c" "mc_main.c" "mc_translate.c" "mc_machine.c" "mc_errors.c")) nil [680 810])
+            ("mc_main.o" function (:arguments ("CFLAGS" "+=" "-fomit-frame-pointer")) nil [2509 2551])
+            ("noinst_PROGRAMS" variable (:default-value ("vgpreload_memcheck-@VGCONF_ARCH_PRI@-@VGCONF_OS@.so")) nil [2744 2815])
+            ("noinst_PROGRAMS" variable (:default-value ("vgpreload_memcheck-@VGCONF_ARCH_SEC@-@VGCONF_OS@.so")) nil [2843 2914])
+            ("noinst_DSYMS" variable (:default-value ("$(noinst_PROGRAMS)")) nil [2944 2978])
+            ("VGPRELOAD_MEMCHECK_SOURCES_COMMON" variable (:default-value ("mc_replace_strmem.c")) nil [2985 3041])
+            ("mc_replace_strmem.o" function (:arguments ("CFLAGS" "+=" "-fno-omit-frame-pointer")) nil [4360 4415]))          
+    :file "Makefile.am"
+    :pointmax 4416
+    :fsize 4415
+    :lastmodtime '(20136 31374)
+    :unmatched-syntax '((semantic-list 4299 . 4352) (punctuation 4298 . 4299) (semantic-list 4250 . 4294) (punctuation 4249 . 4250) (punctuation 4244 . 4245) (symbol 4227 . 4238) (punctuation 4226 . 4227) (symbol 4217 . 4226) (punctuation 4216 . 4217) (symbol 4215 . 4216) (punctuation 4214 . 4215) (symbol 4199 . 4214) (punctuation 4198 . 4199) (symbol 4179 . 4198) (bol 4179 . 4179) (semantic-list 4133 . 4178) (punctuation 4132 . 4133) (punctuation 4127 . 4128) (symbol 4110 . 4126) (punctuation 4109 . 4110) (symbol 4100 . 4109) (punctuation 4099 . 4100) (symbol 4098 . 4099) (punctuation 4097 . 4098) (symbol 4082 . 4097) (punctuation 4081 . 4082) (symbol 4062 . 4081) (bol 4062 . 4062) (symbol 4058 . 4061) (semantic-list 4042 . 4057) (punctuation 4041 . 4042) (semantic-list 4002 . 4040) (punctuation 4001 . 4002) (punctuation 3996 . 3997) (symbol 3979 . 3989) (punctuation 3978 . 3979) (symbol 3969 . 3978) (punctuation 3968 . 3969) (symbol 3967 . 3968) (punctuation 3966 . 3967) (symbol 3951 . 3966) (punctuation 3950 . 3951) (symbol 3931 . 3950) (bol 3931 . 3931) (semantic-list 3890 . 3930) (punctuation 3889 . 3890) (punctuation 3884 . 3885) (symbol 3867 . 3879) (punctuation 3866 . 3867) (symbol 3857 . 3866) (punctuation 3856 . 3857) (symbol 3855 . 3856) (punctuation 3854 . 3855) (symbol 3839 . 3854) (punctuation 3838 . 3839) (symbol 3819 . 3838) (bol 3819 . 3819) (semantic-list 3783 . 3818) (punctuation 3782 . 3783) (punctuation 3777 . 3778) (symbol 3760 . 3771) (punctuation 3759 . 3760) (symbol 3750 . 3759) (punctuation 3749 . 3750) (symbol 3748 . 3749) (punctuation 3747 . 3748) (symbol 3732 . 3747) (punctuation 3731 . 3732) (symbol 3712 . 3731) (bol 3712 . 3712) (semantic-list 3629 . 3682) (punctuation 3628 . 3629) (semantic-list 3580 . 3624) (punctuation 3579 . 3580) (punctuation 3574 . 3575) (symbol 3557 . 3568) (punctuation 3556 . 3557) (symbol 3547 . 3556) (punctuation 3546 . 3547) (symbol 3545 . 3546) (punctuation 3544 . 3545) (symbol 3529 . 3544) (punctuation 3528 . 3529) (symbol 3509 . 3528) (bol 3509 . 3509) (semantic-list 3463 . 3508) (punctuation 3462 . 3463) (punctuation 3457 . 3458) (symbol 3440 . 3456) (punctuation 3439 . 3440) (symbol 3430 . 3439) (punctuation 3429 . 3430) (symbol 3428 . 3429) (punctuation 3427 . 3428) (symbol 3412 . 3427) (punctuation 3411 . 3412) (symbol 3392 . 3411) (bol 3392 . 3392) (symbol 3388 . 3391) (semantic-list 3372 . 3387) (punctuation 3371 . 3372) (semantic-list 3332 . 3370) (punctuation 3331 . 3332) (punctuation 3326 . 3327) (symbol 3309 . 3319) (punctuation 3308 . 3309) (symbol 3299 . 3308) (punctuation 3298 . 3299) (symbol 3297 . 3298) (punctuation 3296 . 3297) (symbol 3281 . 3296) (punctuation 3280 . 3281) (symbol 3261 . 3280) (bol 3261 . 3261) (semantic-list 3220 . 3260) (punctuation 3219 . 3220) (punctuation 3214 . 3215) (symbol 3197 . 3209) (punctuation 3196 . 3197) (symbol 3187 . 3196) (punctuation 3186 . 3187) (symbol 3185 . 3186) (punctuation 3184 . 3185) (symbol 3169 . 3184) (punctuation 3168 . 3169) (symbol 3149 . 3168) (bol 3149 . 3149) (semantic-list 3113 . 3148) (punctuation 3112 . 3113) (punctuation 3107 . 3108) (symbol 3090 . 3101) (punctuation 3089 . 3090) (symbol 3080 . 3089) (punctuation 3079 . 3080) (symbol 3078 . 3079) (punctuation 3077 . 3078) (symbol 3062 . 3077) (punctuation 3061 . 3062) (symbol 3042 . 3061) (bol 3042 . 3042) (semantic-list 2453 . 2501) (punctuation 2452 . 2453) (semantic-list 2401 . 2448) (punctuation 2400 . 2401) (semantic-list 2390 . 2396) (punctuation 2389 . 2390) (punctuation 2384 . 2385) (symbol 2363 . 2384) (punctuation 2362 . 2363) (punctuation 2357 . 2358) (symbol 2348 . 2357) (punctuation 2347 . 2348) (symbol 2322 . 2347) (semantic-list 2308 . 2322) (punctuation 2307 . 2308) (punctuation 2302 . 2303) (symbol 2296 . 2301) (punctuation 2295 . 2296) (symbol 2286 . 2295) (punctuation 2285 . 2286) (symbol 2284 . 2285) (punctuation 2283 . 2284) (symbol 2268 . 2283) (punctuation 2267 . 2268) (symbol 2258 . 2267) (bol 2258 . 2258) (semantic-list 2216 . 2257) (punctuation 2215 . 2216) (punctuation 2210 . 2211) (symbol 2196 . 2204) (punctuation 2195 . 2196) (symbol 2186 . 2195) (punctuation 2185 . 2186) (symbol 2184 . 2185) (punctuation 2183 . 2184) (symbol 2168 . 2183) (punctuation 2167 . 2168) (symbol 2158 . 2167) (bol 2158 . 2158) (semantic-list 2118 . 2157) (punctuation 2117 . 2118) (punctuation 2112 . 2113) (symbol 2098 . 2104) (punctuation 2097 . 2098) (symbol 2088 . 2097) (punctuation 2087 . 2088) (symbol 2086 . 2087) (punctuation 2085 . 2086) (symbol 2070 . 2085) (punctuation 2069 . 2070) (symbol 2060 . 2069) (bol 2060 . 2060) (semantic-list 2013 . 2059) (punctuation 2012 . 2013) (punctuation 2007 . 2008) (symbol 1993 . 2006) (punctuation 1992 . 1993) (symbol 1983 . 1992) (punctuation 1982 . 1983) (symbol 1981 . 1982) (punctuation 1980 . 1981) (symbol 1965 . 1980) (punctuation 1964 . 1965) (symbol 1955 . 1964) (bol 1955 . 1955) (symbol 1951 . 1954) (semantic-list 1912 . 1950) (punctuation 1911 . 1912) (punctuation 1906 . 1907) (symbol 1892 . 1899) (punctuation 1891 . 1892) (symbol 1882 . 1891) (punctuation 1881 . 1882) (symbol 1880 . 1881) (punctuation 1879 . 1880) (symbol 1864 . 1879) (punctuation 1863 . 1864) (symbol 1854 . 1863) (bol 1854 . 1854) (semantic-list 1813 . 1853) (punctuation 1812 . 1813) (punctuation 1807 . 1808) (symbol 1793 . 1802) (punctuation 1792 . 1793) (symbol 1783 . 1792) (punctuation 1782 . 1783) (symbol 1781 . 1782) (punctuation 1780 . 1781) (symbol 1765 . 1780) (punctuation 1764 . 1765) (symbol 1755 . 1764) (bol 1755 . 1755) (semantic-list 1729 . 1754) (punctuation 1728 . 1729) (punctuation 1723 . 1724) (symbol 1709 . 1717) (punctuation 1708 . 1709) (symbol 1699 . 1708) (punctuation 1698 . 1699) (symbol 1697 . 1698) (punctuation 1696 . 1697) (symbol 1681 . 1696) (punctuation 1680 . 1681) (symbol 1671 . 1680) (bol 1671 . 1671) (semantic-list 1593 . 1641) (punctuation 1592 . 1593) (semantic-list 1541 . 1588) (punctuation 1540 . 1541) (semantic-list 1530 . 1536) (punctuation 1529 . 1530) (punctuation 1524 . 1525) (symbol 1503 . 1524) (punctuation 1502 . 1503) (punctuation 1497 . 1498) (symbol 1488 . 1497) (punctuation 1487 . 1488) (symbol 1462 . 1487) (semantic-list 1448 . 1462) (punctuation 1447 . 1448) (punctuation 1442 . 1443) (symbol 1436 . 1441) (punctuation 1435 . 1436) (symbol 1426 . 1435) (punctuation 1425 . 1426) (symbol 1424 . 1425) (punctuation 1423 . 1424) (symbol 1408 . 1423) (punctuation 1407 . 1408) (symbol 1398 . 1407) (bol 1398 . 1398) (semantic-list 1356 . 1397) (punctuation 1355 . 1356) (punctuation 1350 . 1351) (symbol 1336 . 1344) (punctuation 1335 . 1336) (symbol 1326 . 1335) (punctuation 1325 . 1326) (symbol 1324 . 1325) (punctuation 1323 . 1324) (symbol 1308 . 1323) (punctuation 1307 . 1308) (symbol 1298 . 1307) (bol 1298 . 1298) (semantic-list 1258 . 1297) (punctuation 1257 . 1258) (punctuation 1252 . 1253) (symbol 1238 . 1244) (punctuation 1237 . 1238) (symbol 1228 . 1237) (punctuation 1227 . 1228) (symbol 1226 . 1227) (punctuation 1225 . 1226) (symbol 1210 . 1225) (punctuation 1209 . 1210) (symbol 1200 . 1209) (bol 1200 . 1200) (semantic-list 1153 . 1199) (punctuation 1152 . 1153) (punctuation 1147 . 1148) (symbol 1133 . 1146) (punctuation 1132 . 1133) (symbol 1123 . 1132) (punctuation 1122 . 1123) (symbol 1121 . 1122) (punctuation 1120 . 1121) (symbol 1105 . 1120) (punctuation 1104 . 1105) (symbol 1095 . 1104) (bol 1095 . 1095) (symbol 1091 . 1094) (semantic-list 1052 . 1090) (punctuation 1051 . 1052) (punctuation 1046 . 1047) (symbol 1032 . 1039) (punctuation 1031 . 1032) (symbol 1022 . 1031) (punctuation 1021 . 1022) (symbol 1020 . 1021) (punctuation 1019 . 1020) (symbol 1004 . 1019) (punctuation 1003 . 1004) (symbol 994 . 1003) (bol 994 . 994) (semantic-list 953 . 993) (punctuation 952 . 953) (punctuation 947 . 948) (symbol 933 . 942) (punctuation 932 . 933) (symbol 923 . 932) (punctuation 922 . 923) (symbol 921 . 922) (punctuation 920 . 921) (symbol 905 . 920) (punctuation 904 . 905) (symbol 895 . 904) (bol 895 . 895) (semantic-list 869 . 894) (punctuation 868 . 869) (punctuation 863 . 864) (symbol 849 . 857) (punctuation 848 . 849) (symbol 839 . 848) (punctuation 838 . 839) (symbol 837 . 838) (punctuation 836 . 837) (symbol 821 . 836) (punctuation 820 . 821) (symbol 811 . 820) (bol 811 . 811))
+    )
+   (semanticdb-table "mc_main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("pub_tool_basics.h" include nil nil [1316 1344])
+            ("pub_tool_aspacemgr.h" include nil nil [1345 1376])
+            ("pub_tool_gdbserver.h" include nil nil [1377 1408])
+            ("pub_tool_hashtable.h" include nil nil [1409 1440])
+            ("pub_tool_libcbase.h" include nil nil [1465 1495])
+            ("pub_tool_libcassert.h" include nil nil [1496 1528])
+            ("pub_tool_libcprint.h" include nil nil [1529 1560])
+            ("pub_tool_machine.h" include nil nil [1561 1590])
+            ("pub_tool_mallocfree.h" include nil nil [1591 1623])
+            ("pub_tool_options.h" include nil nil [1624 1653])
+            ("pub_tool_oset.h" include nil nil [1654 1680])
+            ("pub_tool_replacemalloc.h" include nil nil [1681 1716])
+            ("pub_tool_tooliface.h" include nil nil [1717 1748])
+            ("pub_tool_threadstate.h" include nil nil [1749 1782])
+            ("mc_include.h" include nil nil [1784 1807])
+            ("memcheck.h" include nil nil [1808 1829])
+            ("VG_DEBUG_MEMORY" variable (:constant-flag t) nil [2292 2307])
+            ("DEBUG" variable (:constant-flag t) nil [2319 2324])
+            ("ocache_sarp_Set_Origins" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2406 2411])
+                    ("" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2412 2418])
+                    ("" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2419 2425]))                  
+                :type "void")
+                nil [2368 2426])
+            ("ocache_sarp_Clear_Origins" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2478 2483])
+                    ("" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2484 2491]))                  
+                :type "void")
+                nil [2438 2492])
+            ("PERF_FAST_LOADV" variable (:constant-flag t) nil [2790 2805])
+            ("PERF_FAST_STOREV" variable (:constant-flag t) nil [2819 2835])
+            ("PERF_FAST_SARP" variable (:constant-flag t) nil [2849 2863])
+            ("PERF_FAST_STACK" variable (:constant-flag t) nil [2879 2894])
+            ("PERF_FAST_STACK2" variable (:constant-flag t) nil [2908 2924])
+            ("OC_ENABLE_ASSERTIONS" variable (:constant-flag t) nil [3021 3041])
+            ("N_PRIMARY_BITS" variable (:constant-flag t) nil [7346 7360])
+            ("N_PRIMARY_MAP" variable (:constant-flag t) nil [7645 7658])
+            ("MAX_PRIMARY_ADDRESS" variable (:constant-flag t) nil [7727 7746])
+            ("VA_BITS2_NOACCESS" variable (:constant-flag t) nil [10128 10145])
+            ("VA_BITS2_UNDEFINED" variable (:constant-flag t) nil [10174 10192])
+            ("VA_BITS2_DEFINED" variable (:constant-flag t) nil [10220 10236])
+            ("VA_BITS2_PARTDEFINED" variable (:constant-flag t) nil [10266 10286])
+            ("VA_BITS4_NOACCESS" variable (:constant-flag t) nil [10351 10368])
+            ("VA_BITS4_UNDEFINED" variable (:constant-flag t) nil [10400 10418])
+            ("VA_BITS4_DEFINED" variable (:constant-flag t) nil [10449 10465])
+            ("VA_BITS8_NOACCESS" variable (:constant-flag t) nil [10537 10554])
+            ("VA_BITS8_UNDEFINED" variable (:constant-flag t) nil [10592 10610])
+            ("VA_BITS8_DEFINED" variable (:constant-flag t) nil [10647 10663])
+            ("VA_BITS16_NOACCESS" variable (:constant-flag t) nil [10741 10759])
+            ("VA_BITS16_UNDEFINED" variable (:constant-flag t) nil [10800 10819])
+            ("VA_BITS16_DEFINED" variable (:constant-flag t) nil [10859 10876])
+            ("SM_CHUNKS" variable (:constant-flag t) nil [10920 10929])
+            ("SM_OFF" variable (:constant-flag t) nil [10956 10962])
+            ("SM_OFF_16" variable (:constant-flag t) nil [11010 11019])
+            ("INLINE" variable (:constant-flag t) nil [11168 11174])
+            ("start_of_this_sm" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11255 11263]))                  
+                :type ("Addr" type (:type "class") nil nil))
+                nil [11217 11295])
+            ("is_start_of_sm" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11332 11340]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [11296 11382])
+            ("SecMap" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("vabits8" variable
+                             (:dereference 1
+                              :type ("UChar" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [11411 11436]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [11384 11452])
+            ("SM_DIST_NOACCESS" variable (:constant-flag t) nil [11641 11657])
+            ("SM_DIST_UNDEFINED" variable (:constant-flag t) nil [11670 11687])
+            ("SM_DIST_DEFINED" variable (:constant-flag t) nil [11699 11714])
+            ("sm_distinguished" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [11721 11755])
+            ("is_distinguished_sm" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sm" variable
+                       (:pointer 1
+                        :type ("SecMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11798 11810]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [11757 11882])
+            ("update_SM_counts" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("oldSM" variable
+                       (:pointer 1
+                        :type ("SecMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11936 11950])
+                    ("newSM" variable
+                       (:pointer 1
+                        :type ("SecMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11951 11965]))                  
+                :type "void")
+                nil [11907 11966])
+            ("copy_for_writing" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dist_sm" variable
+                       (:pointer 1
+                        :type ("SecMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12120 12137]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [12086 12597])
+            ("sup_stack" variable
+               (:dereference 2
+                :type "char")
+                nil [12599 12624])
+            ("sup_stack_index" variable (:type "int") nil [12625 12649])
+            ("n_issued_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12697 12732])
+            ("n_deissued_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12733 12768])
+            ("n_noaccess_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12769 12816])
+            ("n_undefined_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12850 12885])
+            ("n_defined_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12886 12921])
+            ("n_non_DSM_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12922 12957])
+            ("max_noaccess_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12958 12993])
+            ("max_undefined_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [12994 13029])
+            ("max_defined_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [13030 13065])
+            ("max_non_DSM_SMs" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [13066 13101])
+            ("n_auxmap_L1_searches" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [13169 13208])
+            ("n_auxmap_L1_cmps" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [13209 13248])
+            ("n_auxmap_L2_searches" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [13376 13415])
+            ("n_auxmap_L2_nodes" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [13416 13455])
+            ("n_sanity_cheap" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [13457 13493])
+            ("n_sanity_expensive" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [13494 13530])
+            ("n_secVBit_nodes" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [13532 13567])
+            ("max_secVBit_nodes" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [13568 13603])
+            ("update_SM_counts" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("oldSM" variable
+                       (:pointer 1
+                        :type ("SecMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13634 13648])
+                    ("newSM" variable
+                       (:pointer 1
+                        :type ("SecMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13649 13663]))                  
+                :type "void")
+                nil [13605 14775])
+            ("primary_map" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [15018 15060])
+            ("AuxMapEnt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("base" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15435 15448])
+                          ("sm" variable
+                             (:pointer 1
+                              :type ("SecMap" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [15455 15466]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [15408 15485])
+            ("N_AUXMAP_L1" variable (:constant-flag t) nil [15545 15556])
+            ("AUXMAP_L1_INSERT_IX" variable (:constant-flag t) nil [15669 15688])
+            ("auxmap_L1" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("" type
+                     (:members 
+                        ( ("base" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15719 15735])
+                          ("ent" variable
+                             (:pointer 1
+                              :type ("AuxMapEnt" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [15746 15761]))                        
+                      :type "struct")
+                      nil nil))
+                nil [15693 15844])
+            ("auxmap_L2" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("OSet" type (:type "class") nil nil))
+                nil [15846 15876])
+            ("init_auxmap_L1_L2" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15910 15916]))                  
+                :type "void")
+                nil [15878 16329])
+            ("check_auxmap_L1_L2_sanity" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("n_secmaps_found" variable
+                       (:pointer 1
+                        :type ("Word" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16578 16601]))                  
+                :type ("HChar" type (:type "class") nil nil))
+                nil [16536 19576])
+            ("insert_into_auxmap_L1_at" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rank" variable (:type ("Word" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19617 19627])
+                    ("ent" variable
+                       (:pointer 1
+                        :type ("AuxMapEnt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19628 19644]))                  
+                :type "void")
+                nil [19578 19872])
+            ("maybe_find_in_auxmap" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19922 19930]))                  
+                :type ("AuxMapEnt" type (:type "class") nil nil))
+                nil [19874 21396])
+            ("find_or_alloc_in_auxmap" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21442 21450]))                  
+                :type ("AuxMapEnt" type (:type "class") nil nil))
+                nil [21398 22015])
+            ("get_secmap_low_ptr" function
+               (:pointer 2
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22247 22255]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [22203 22394])
+            ("get_secmap_high_ptr" function
+               (:pointer 2
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22441 22449]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [22396 22519])
+            ("get_secmap_ptr" function
+               (:pointer 2
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22554 22562]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [22521 22676])
+            ("get_secmap_for_reading_low" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22729 22737]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [22678 22775])
+            ("get_secmap_for_reading_high" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22829 22837]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [22777 22876])
+            ("get_secmap_for_writing_low" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22927 22934]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [22878 23066])
+            ("get_secmap_for_writing_high" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23120 23128]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [23068 23261])
+            ("get_secmap_for_reading" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23537 23545]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [23490 23675])
+            ("get_secmap_for_writing" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24077 24085]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [24037 24215])
+            ("maybe_get_secmap_for" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24409 24417]))                  
+                :type ("SecMap" type (:type "class") nil nil))
+                nil [24371 24597])
+            ("insert_vabits2_into_vabits8" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24709 24716])
+                    ("vabits2" variable (:type ("UChar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24717 24731])
+                    ("vabits8" variable
+                       (:pointer 1
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24732 24748]))                  
+                :type "void")
+                nil [24660 24953])
+            ("insert_vabits4_into_vabits8" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25004 25011])
+                    ("vabits4" variable (:type ("UChar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25012 25026])
+                    ("vabits8" variable
+                       (:pointer 1
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25027 25043]))                  
+                :type "void")
+                nil [24955 25318])
+            ("extract_vabits2_from_vabits8" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25371 25378])
+                    ("vabits8" variable (:type ("UChar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25379 25394]))                  
+                :type ("UChar" type (:type "class") nil nil))
+                nil [25320 25598])
+            ("extract_vabits4_from_vabits8" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25651 25658])
+                    ("vabits8" variable (:type ("UChar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25659 25674]))                  
+                :type ("UChar" type (:type "class") nil nil))
+                nil [25600 25947])
+            ("set_vabits2" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26359 26366])
+                    ("vabits2" variable (:type ("UChar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26367 26382]))                  
+                :type "void")
+                nil [26326 26538])
+            ("get_vabits2" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26574 26582]))                  
+                :type ("UChar" type (:type "class") nil nil))
+                nil [26540 26763])
+            ("get_vabits8_for_aligned_word32" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27051 27059]))                  
+                :type ("UChar" type (:type "class") nil nil))
+                nil [26998 27207])
+            ("set_vabits8_for_aligned_word32" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27261 27268])
+                    ("vabits8" variable (:type ("UChar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27269 27284]))                  
+                :type "void")
+                nil [27209 27404])
+            ("get_sec_vbits8" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27459 27466]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [27431 27467])
+            ("set_sec_vbits8" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27496 27503])
+                    ("vbits8" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27504 27517]))                  
+                :type "void")
+                nil [27468 27518])
+            ("set_vbits8" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27607 27614])
+                    ("vbits8" variable (:type ("UChar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27615 27629]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [27575 28499])
+            ("get_vbits8" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28643 28650])
+                    ("vbits8" variable
+                       (:pointer 1
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28651 28666]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [28611 29188])
+            ("secVBitTable" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("OSet" type (:type "class") nil nil))
+                nil [30996 31022])
+            ("sec_vbits_new_nodes" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [31033 31070])
+            ("sec_vbits_updates" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [31071 31108])
+            ("BYTES_PER_SEC_VBIT_NODE" variable (:constant-flag t) nil [31626 31649])
+            ("MAX_SURVIVOR_PROPORTION" variable (:constant-flag t) nil [31737 31760])
+            ("TABLE_GROWTH_FACTOR" variable (:constant-flag t) nil [31843 31862])
+            ("MAX_STALE_AGE" variable (:constant-flag t) nil [31990 32003])
+            ("secVBitLimit" variable
+               (:typemodifiers ("static")
+                :type ("Int" type (:type "class") nil nil))
+                nil [32135 32167])
+            ("GCs_done" variable
+               (:typemodifiers ("static")
+                :type ("UInt" type (:type "class") nil nil))
+                nil [32333 32358])
+            ("SecVBitNode" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [32387 32395])
+                          ("vbits8" variable
+                             (:dereference 1
+                              :type ("UChar" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [32402 32440])
+                          ("last_touched" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol classsubparts) [32447 32466]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [32360 32488])
+            ("createSecVBitTable" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [32522 32527]))                  
+                :type ("OSet" type (:type "class") nil nil))
+                nil [32490 32769])
+            ("gcSecVBitTable" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [32798 32803]))                  
+                :type "void")
+                nil [32771 34889])
+            ("get_sec_vbits8" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34919 34926]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [34891 35471])
+            ("set_sec_vbits8" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35500 35507])
+                    ("vbits8" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35508 35521]))                  
+                :type "void")
+                nil [35473 36938])
+            ("byte_offset_w" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("wordszB" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37168 37182])
+                    ("bigendian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37183 37198])
+                    ("byteno" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37236 37250]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [37132 37305])
+            ("M_IGNORE_RANGES" variable (:constant-flag t) nil [37378 37393])
+            ("IgnoreRanges" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("used" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol classsubparts) [37423 37433])
+                          ("start" variable
+                             (:dereference 1
+                              :type ("Addr" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [37440 37468])
+                          ("end" variable
+                             (:dereference 1
+                              :type ("Addr" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [37475 37501]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [37397 37523])
+            ("ignoreRanges" variable
+               (:typemodifiers ("static")
+                :type ("IgnoreRanges" type (:type "class") nil nil))
+                nil [37525 37558])
+            ("MC_" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("" variable (:type ("in_ignored_range" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37576 37593]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [37560 37604])
+            ("parse_range" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ppc" variable
+                       (:pointer 2
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37911 37923])
+                    ("result1" variable
+                       (:pointer 1
+                        :type ("Addr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37924 37938])
+                    ("result2" variable
+                       (:pointer 1
+                        :type ("Addr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37939 37954]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [37885 38177])
+            ("parse_ignore_ranges" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("str0" variable
+                       (:pointer 1
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38295 38308]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [38261 38859])
+            ("mc_LOADVn_slow" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38980 38987])
+                    ("nBits" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38988 39000])
+                    ("bigendian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39001 39017]))                  
+                :type ("ULong" type (:type "class") nil nil))
+                nil [38924 42336])
+            ("mc_STOREVn_slow" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42395 42402])
+                    ("nBits" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42403 42415])
+                    ("vbytes" variable (:type ("ULong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42416 42429])
+                    ("bigendian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42430 42446]))                  
+                :type "void")
+                nil [42339 45680])
+            ("set_address_range_perms" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45917 45924])
+                    ("lenT" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45925 45936])
+                    ("vabits16" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45937 45952])
+                    ("dsm_num" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45991 46006]))                  
+                :type "void")
+                nil [45879 54200])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("make_mem_noaccess" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54272 54290]))                  
+                :type "void")
+                nil [54263 54312])
+            ("make_mem_undefined" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54615 54622])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54623 54634]))                  
+                :type "void")
+                nil [54582 54809])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("make_mem_undefined_w_otag" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54820 54846]))                  
+                :type "void")
+                nil [54811 54879])
+            ("make_mem_undefined_w_tid_and_okind" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55206 55213])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55214 55224])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55267 55280])
+                    ("okind" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55281 55293]))                  
+                :type "void")
+                nil [55157 55715])
+            ("make_mem_undefined_w_tid" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55756 55763])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55764 55774])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55775 55789]))                  
+                :type "void")
+                nil [55717 55866])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("make_mem_defined" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55878 55895]))                  
+                :type "void")
+                nil [55869 55917])
+            ("make_mem_defined_if_addressable" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56488 56495])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56496 56507]))                  
+                :type "void")
+                nil [56442 56921])
+            ("make_mem_defined_if_noaccess" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57016 57023])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57024 57035]))                  
+                :type "void")
+                nil [56973 57446])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("copy_address_range_state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57554 57579]))                  
+                :type "void")
+                nil [57545 57613])
+            ("stats_ocacheL1_find" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [75890 75937])
+            ("stats_ocacheL1_found_at_1" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [75938 75985])
+            ("stats_ocacheL1_found_at_N" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [75986 76033])
+            ("stats_ocacheL1_misses" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [76034 76081])
+            ("stats_ocacheL1_lossage" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [76082 76129])
+            ("stats_ocacheL1_movefwds" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [76130 76177])
+            ("stats__ocacheL2_refs" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [76179 76226])
+            ("stats__ocacheL2_misses" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [76227 76274])
+            ("stats__ocacheL2_n_nodes_max" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [76275 76322])
+            ("OC_BITS_PER_LINE" variable (:constant-flag t) nil [76398 76414])
+            ("OC_W32S_PER_LINE" variable (:constant-flag t) nil [76425 76441])
+            ("oc_line_offset" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [76510 76518]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [76473 76567])
+            ("is_valid_oc_tag" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("tag" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [76605 76615]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [76568 76673])
+            ("OC_LINES_PER_SET" variable (:constant-flag t) nil [76683 76699])
+            ("OC_N_SET_BITS" variable (:constant-flag t) nil [76711 76724])
+            ("OC_N_SETS" variable (:constant-flag t) nil [76739 76748])
+            ("OC_MOVE_FORWARDS_EVERY_BITS" variable (:constant-flag t) nil [76942 76969])
+            ("OCacheLine" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("tag" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [77000 77010])
+                          ("w32" variable
+                             (:dereference 1
+                              :type ("UInt" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [77017 77045])
+                          ("descr" variable
+                             (:dereference 1
+                              :type ("UChar" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [77052 77082]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [76974 77102])
+            ("classify_OCacheLine" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("line" variable
+                       (:pointer 1
+                        :type ("OCacheLine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77331 77349]))                  
+                :type ("UChar" type (:type "class") nil nil))
+                nil [77296 77720])
+            ("OCacheSet" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("line" variable
+                             (:dereference 1
+                              :type ("OCacheLine" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [77748 77782]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [77722 77801])
+            ("OCache" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("set" variable
+                             (:dereference 1
+                              :type ("OCacheSet" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [77829 77854]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [77803 77870])
+            ("ocacheL1" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("OCache" type (:type "class") nil nil))
+                nil [77872 77903])
+            ("ocacheL1_event_ctr" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [77904 77942])
+            ("init_ocacheL2" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [77972 77978]))                  
+                :type "void")
+                nil [77944 77979])
+            ("init_OCache" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [78017 78023]))                  
+                :type "void")
+                nil [77991 78545])
+            ("moveLineForwards" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("OCacheSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78578 78593])
+                    ("lineno" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78594 78608]))                  
+                :type "void")
+                nil [78547 78818])
+            ("zeroise_OCacheLine" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("line" variable
+                       (:pointer 1
+                        :type ("OCacheLine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78853 78870])
+                    ("tag" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78871 78881]))                  
+                :type "void")
+                nil [78820 79063])
+            ("ocacheL2" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("OSet" type (:type "class") nil nil))
+                nil [79155 79184])
+            ("ocacheL2_malloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("cc" variable
+                       (:pointer 1
+                        :type ("HChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79217 79227])
+                    ("szB" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79228 79239]))                  
+                :type "void")
+                nil [79186 79275])
+            ("ocacheL2_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [79304 79313]))                  
+                :type "void")
+                nil [79276 79336])
+            ("stats__ocacheL2_n_nodes" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [79377 79418])
+            ("init_ocacheL2" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [79448 79454]))                  
+                :type "void")
+                nil [79420 79856])
+            ("ocacheL2_find_tag" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tag" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79967 79977]))                  
+                :type ("OCacheLine" type (:type "class") nil nil))
+                nil [79928 80130])
+            ("ocacheL2_del_tag" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tag" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [80275 80285]))                  
+                :type "void")
+                nil [80244 80566])
+            ("ocacheL2_add_line" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("line" variable
+                       (:pointer 1
+                        :type ("OCacheLine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80684 80702]))                  
+                :type "void")
+                nil [80652 81095])
+            ("find_OCacheLine_SLOW" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81234 81242]))                  
+                :type ("OCacheLine" type (:type "class") nil nil))
+                nil [81192 83964])
+            ("find_OCacheLine" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84010 84018]))                  
+                :type ("OCacheLine" type (:type "class") nil nil))
+                nil [83966 84485])
+            ("set_aligned_word64_Origin_to_undef" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84543 84550])
+                    ("otag" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84551 84562]))                  
+                :type "void")
+                nil [84487 85126])
+            ("make_aligned_word32_undefined" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85549 85557]))                  
+                :type "void")
+                nil [85498 86052])
+            ("make_aligned_word32_undefined_w_otag" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86112 86119])
+                    ("otag" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86120 86131]))                  
+                :type "void")
+                nil [86054 86617])
+            ("make_aligned_word32_noaccess" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86669 86677]))                  
+                :type "void")
+                nil [86619 87676])
+            ("make_aligned_word64_undefined" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [87837 87845]))                  
+                :type "void")
+                nil [87786 88339])
+            ("make_aligned_word64_undefined_w_otag" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88399 88406])
+                    ("otag" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88407 88418]))                  
+                :type "void")
+                nil [88341 88973])
+            ("make_aligned_word64_noaccess" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [89025 89033]))                  
+                :type "void")
+                nil [88975 90062])
+            ("MAYBE_USED" variable (:constant-flag t) nil [90294 90304])
+            ("mc_new_mem_stack_4_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90485 90497])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90498 90507]))                  
+                :type "int")
+                nil [90460 90831])
+            ("mc_new_mem_stack_4" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90889 90901]))                  
+                :type "int")
+                nil [90870 91157])
+            ("mc_die_mem_stack_4" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91215 91227]))                  
+                :type "int")
+                nil [91196 91490])
+            ("mc_new_mem_stack_8_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91613 91625])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91626 91635]))                  
+                :type "int")
+                nil [91588 92200])
+            ("mc_new_mem_stack_8" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92258 92270]))                  
+                :type "int")
+                nil [92239 92739])
+            ("mc_die_mem_stack_8" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92797 92809]))                  
+                :type "int")
+                nil [92778 93285])
+            ("mc_new_mem_stack_12_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93410 93422])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93423 93432]))                  
+                :type "int")
+                nil [93384 94268])
+            ("mc_new_mem_stack_12" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94327 94339]))                  
+                :type "int")
+                nil [94307 95064])
+            ("mc_die_mem_stack_12" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [95123 95135]))                  
+                :type "int")
+                nil [95103 95982])
+            ("mc_new_mem_stack_16_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [96107 96119])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [96120 96129]))                  
+                :type "int")
+                nil [96081 97056])
+            ("mc_new_mem_stack_16" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97115 97127]))                  
+                :type "int")
+                nil [97095 97929])
+            ("mc_die_mem_stack_16" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97988 98000]))                  
+                :type "int")
+                nil [97968 98770])
+            ("mc_new_mem_stack_32_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98895 98907])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98908 98917]))                  
+                :type "int")
+                nil [98869 100136])
+            ("mc_new_mem_stack_32" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [100195 100207]))                  
+                :type "int")
+                nil [100175 101246])
+            ("mc_die_mem_stack_32" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101305 101317]))                  
+                :type "int")
+                nil [101285 102367])
+            ("mc_new_mem_stack_112_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102494 102506])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102507 102516]))                  
+                :type "int")
+                nil [102467 103992])
+            ("mc_new_mem_stack_112" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104052 104064]))                  
+                :type "int")
+                nil [104031 105299])
+            ("mc_die_mem_stack_112" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105359 105371]))                  
+                :type "int")
+                nil [105338 106603])
+            ("mc_new_mem_stack_128_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [106730 106742])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [106743 106752]))                  
+                :type "int")
+                nil [106703 108406])
+            ("mc_new_mem_stack_128" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [108466 108478]))                  
+                :type "int")
+                nil [108445 109865])
+            ("mc_die_mem_stack_128" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [109925 109937]))                  
+                :type "int")
+                nil [109904 111317])
+            ("mc_new_mem_stack_144_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111444 111456])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111457 111466]))                  
+                :type "int")
+                nil [111417 113311])
+            ("mc_new_mem_stack_144" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [113371 113383]))                  
+                :type "int")
+                nil [113350 114922])
+            ("mc_die_mem_stack_144" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114982 114994]))                  
+                :type "int")
+                nil [114961 116522])
+            ("mc_new_mem_stack_160_w_ECU" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116649 116661])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116662 116671]))                  
+                :type "int")
+                nil [116622 118694])
+            ("mc_new_mem_stack_160" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [118754 118766]))                  
+                :type "int")
+                nil [118733 120457])
+            ("mc_die_mem_stack_160" function
+               (:arguments 
+                  ( ("new_SP" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [120517 120529]))                  
+                :type "int")
+                nil [120496 122205])
+            ("mc_new_mem_stack_w_ECU" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122303 122310])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122311 122321])
+                    ("ecu" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122322 122332]))                  
+                :type "void")
+                nil [122266 122493])
+            ("mc_new_mem_stack" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122526 122533])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122534 122545]))                  
+                :type "void")
+                nil [122495 122644])
+            ("mc_die_mem_stack" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122677 122684])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [122685 122696]))                  
+                :type "void")
+                nil [122646 122799])
+            ("stats__nia_cache_queries" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [124315 124357])
+            ("stats__nia_cache_misses" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [124358 124400])
+            ("WCacheEnt" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("nia0" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol classsubparts) [124422 124433])
+                          ("ecu0" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol classsubparts) [124434 124445])
+                          ("nia1" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol classsubparts) [124484 124495])
+                          ("ecu1" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol classsubparts) [124496 124507]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [124402 124547])
+            ("N_NIA_TO_ECU_CACHE" variable (:constant-flag t) nil [124557 124575])
+            ("nia_to_ecu_cache" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("WCacheEnt" type (:type "class") nil nil))
+                nil [124581 124635])
+            ("init_nia_to_ecu_cache" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [124673 124679]))                  
+                :type "void")
+                nil [124637 125354])
+            ("convert_nia_to_ecu" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("nia" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [125396 125406]))                  
+                :type ("UInt" type (:type "class") nil nil))
+                nil [125356 126437])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_MAKE_STACK_UNINIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [126674 126700]))                  
+                :type "void")
+                nil [126665 126735])
+            ("MC_ReadResult" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("MC_Ok" variable
+                             (:constant-flag t
+                              :default-value (137097 137098)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [137089 137098])
+                          ("MC_AddrErr" variable
+                             (:constant-flag t
+                              :default-value (137120 137121)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [137107 137121])
+                          ("MC_ValueErr" variable
+                             (:constant-flag t
+                              :default-value (137144 137145)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [137130 137145]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [137064 137169])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("check_mem_is_noaccess" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [137548 137570]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [137539 137608])
+            ("is_mem_addressable" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [137989 137996])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [137997 138007])
+                    ("bad_addr" variable
+                       (:pointer 1
+                        :type ("Addr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [138049 138065]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [137956 138405])
+            ("is_mem_defined" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [138445 138452])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [138453 138463])
+                    ("bad_addr" variable
+                       (:pointer 1
+                        :type ("Addr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [138509 138524])
+                    ("otag" variable
+                       (:pointer 1
+                        :type ("UInt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [138570 138582]))                  
+                :type ("MC_ReadResult" type (:type "class") nil nil))
+                nil [138407 139467])
+            ("is_mem_defined_comprehensive" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [140090 140097])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [140098 140108])
+                    ("errorV" variable
+                       (:pointer 1
+                        :type ("Bool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [140131 140144])
+                    ("bad_addrV" variable
+                       (:pointer 1
+                        :type ("Addr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [140204 140220])
+                    ("otagV" variable
+                       (:pointer 1
+                        :type ("UInt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [140262 140274])
+                    ("errorA" variable
+                       (:pointer 1
+                        :type ("Bool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [140328 140341])
+                    ("bad_addrA" variable
+                       (:pointer 1
+                        :type ("Addr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [140405 140454]))                  
+                :type "void")
+                nil [140032 141503])
+            ("mc_is_defined_asciiz" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [141698 141705])
+                    ("bad_addr" variable
+                       (:pointer 1
+                        :type ("Addr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [141706 141721])
+                    ("otag" variable
+                       (:pointer 1
+                        :type ("UInt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [141722 141734]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [141663 142693])
+            ("check_mem_is_addressable" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("part" variable (:type ("CorePart" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [142931 142945])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [142946 142959])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("Char" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [142960 142968])
+                    ("base" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143001 143011])
+                    ("size" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143012 143024]))                  
+                :type "void")
+                nil [142892 143506])
+            ("check_mem_is_defined" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("part" variable (:type ("CorePart" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143543 143557])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143558 143571])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("Char" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [143572 143580])
+                    ("base" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143609 143619])
+                    ("size" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143620 143632]))                  
+                :type "void")
+                nil [143508 145556])
+            ("check_mem_is_defined_asciiz" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("part" variable (:type ("CorePart" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [145600 145614])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [145615 145628])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("Char" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [145664 145672])
+                    ("str" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [145673 145683]))                  
+                :type "void")
+                nil [145558 146080])
+            ("mc_new_mem_mmap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148405 148412])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148413 148423])
+                    ("rr" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148424 148432])
+                    ("ww" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148433 148441])
+                    ("xx" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148442 148450])
+                    ("di_handle" variable (:type ("ULong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148474 148491]))                  
+                :type "void")
+                nil [148375 148707])
+            ("mc_new_mem_mprotect" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148743 148750])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148751 148761])
+                    ("rr" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148762 148770])
+                    ("ww" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148771 148779])
+                    ("xx" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148780 148789]))                  
+                :type "void")
+                nil [148709 149021])
+            ("mc_new_mem_startup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149056 149063])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149064 149074])
+                    ("rr" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149100 149108])
+                    ("ww" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149109 149117])
+                    ("xx" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149118 149126])
+                    ("di_handle" variable (:type ("ULong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149127 149144]))                  
+                :type "void")
+                nil [149024 150193])
+            ("mc_post_mem_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("part" variable (:type ("CorePart" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150225 150239])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150240 150253])
+                    ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150254 150261])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150262 150272]))                  
+                :type "void")
+                nil [150195 150310])
+            ("mb_get_origin_for_guest_offset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150706 150719])
+                    ("offset" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150765 150776])
+                    ("size" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150777 150789]))                  
+                :type ("UInt" type (:type "class") nil nil))
+                nil [150661 151262])
+            ("mc_post_reg_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("part" variable (:type ("CorePart" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [151543 151557])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [151558 151571])
+                    ("offset" variable (:type ("PtrdiffT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [151605 151621])
+                    ("size" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [151622 151633]))                  
+                :type "void")
+                nil [151511 151891])
+            ("mc_post_reg_write_clientcall" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [151937 151950])
+                    ("offset" variable (:type ("PtrdiffT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [151988 152004])
+                    ("size" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152005 152016])
+                    ("f" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152017 152024]))                  
+                :type "void")
+                nil [151893 152081])
+            ("mc_pre_reg_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("part" variable (:type ("CorePart" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152266 152280])
+                    ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152281 152294])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("Char" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [152295 152303])
+                    ("offset" variable (:type ("PtrdiffT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152335 152351])
+                    ("size" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152352 152363]))                  
+                :type "void")
+                nil [152236 152894])
+            ("MASK" variable (:constant-flag t) nil [153824 153828])
+            ("UNALIGNED_OR_HIGH" variable (:constant-flag t) nil [153966 153983])
+            ("mc_LOADV64" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [156014 156021])
+                    ("isBigEndian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [156022 156040]))                  
+                :type ("ULong" type (:type "class") nil nil))
+                nil [155981 157078])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_LOADV64be" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [157104 157122]))                  
+                :type ("ULong" type (:type "class") nil nil))
+                nil [157094 157133])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_LOADV64le" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [157193 157211]))                  
+                :type ("ULong" type (:type "class") nil nil))
+                nil [157183 157222])
+            ("mc_STOREV64" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [157294 157301])
+                    ("vbits64" variable (:type ("ULong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [157302 157316])
+                    ("isBigEndian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [157317 157335]))                  
+                :type "void")
+                nil [157261 158932])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_STOREV64be" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [158957 158976]))                  
+                :type "void")
+                nil [158948 159002])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_STOREV64le" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [159064 159083]))                  
+                :type "void")
+                nil [159055 159109])
+            ("mc_LOADV32" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [159250 159257])
+                    ("isBigEndian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [159258 159276]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [159217 160551])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_LOADV32be" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [160577 160595]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [160567 160606])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_LOADV32le" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [160666 160684]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [160656 160695])
+            ("mc_STOREV32" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [160767 160774])
+                    ("vbits32" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [160775 160789])
+                    ("isBigEndian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [160790 160808]))                  
+                :type "void")
+                nil [160734 162722])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_STOREV32be" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [162747 162766]))                  
+                :type "void")
+                nil [162738 162792])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_STOREV32le" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [162854 162873]))                  
+                :type "void")
+                nil [162845 162899])
+            ("mc_LOADV16" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [163040 163047])
+                    ("isBigEndian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [163048 163066]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [163007 164455])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_LOADV16be" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [164481 164499]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [164471 164510])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_LOADV16le" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [164570 164588]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [164560 164599])
+            ("mc_STOREV16" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [164671 164678])
+                    ("vbits16" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [164679 164693])
+                    ("isBigEndian" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [164694 164712]))                  
+                :type "void")
+                nil [164638 166312])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_STOREV16be" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [166337 166356]))                  
+                :type "void")
+                nil [166328 166382])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_STOREV16le" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [166444 166463]))                  
+                :type "void")
+                nil [166435 166489])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_LOADV8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [166672 166687]))                  
+                :type ("UWord" type (:type "class") nil nil))
+                nil [166662 166698])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_STOREV8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [168127 168143]))                  
+                :type "void")
+                nil [168118 168168])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check0_fail_w_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [170218 170248]))                  
+                :type "void")
+                nil [170209 170265])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check1_fail_w_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [170362 170392]))                  
+                :type "void")
+                nil [170353 170409])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check4_fail_w_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [170510 170540]))                  
+                :type "void")
+                nil [170501 170557])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check8_fail_w_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [170658 170688]))                  
+                :type "void")
+                nil [170649 170705])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_checkN_fail_w_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [170807 170837]))                  
+                :type "void")
+                nil [170798 170864])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check0_fail_no_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [171024 171055]))                  
+                :type "void")
+                nil [171015 171064])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check1_fail_no_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [171160 171191]))                  
+                :type "void")
+                nil [171151 171200])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check4_fail_no_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [171300 171331]))                  
+                :type "void")
+                nil [171291 171340])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_check8_fail_no_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [171440 171471]))                  
+                :type "void")
+                nil [171431 171480])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_value_checkN_fail_no_o" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [171581 171612]))                  
+                :type "void")
+                nil [171572 171625])
+            ("mc_get_or_set_vbits_for_client" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [172480 172487])
+                    ("vbits" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [172492 172503])
+                    ("szB" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [172508 172518])
+                    ("setting" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [172523 172536])
+                    ("is_client_request" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [172588 172715]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [172432 173610])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("is_within_valid_secondary" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [173963 173989]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [173954 174000])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("is_valid_aligned_word" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [174359 174381]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [174350 174392])
+            ("init_shadow_memory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [174878 174884]))                  
+                :type "void")
+                nil [174845 175911])
+            ("mc_cheap_sanity_check" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [176146 176152]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [176110 176400])
+            ("mc_expensive_sanity_check" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [176442 176448]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [176402 178961])
+            ("False" variable (:type "int") nil [179207 179213])
+            ("1000LL" variable
+               (:pointer 1
+                :type "int")
+                nil [179269 179277])
+            ("1000LL" variable
+               (:pointer 1
+                :type "int")
+                nil [179333 179341])
+            ("LC_Summary" variable (:type "int") nil [179390 179401])
+            ("Vg_HighRes" variable (:type "int") nil [179450 179461])
+            ("False" variable (:type "int") nil [179510 179516])
+            ("True" variable (:type "int") nil [179565 179570])
+            ("False" variable (:type "int") nil [179619 179625])
+            ("mc_process_cmd_line_options" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type ("Char" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [179822 179832]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [179782 183859])
+            ("mc_print_usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [183888 183893]))                  
+                :type "void")
+                nil [183861 185013])
+            ("mc_print_debug_usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [185048 185053]))                  
+                :type "void")
+                nil [185015 185096])
+            ("cgb_size" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [185884 185915])
+            ("cgb_used" variable
+               (:typemodifiers ("static")
+                :type ("UWord" type (:type "class") nil nil))
+                nil [185916 185947])
+            ("cgbs" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("CGenBlock" type (:type "class") nil nil))
+                nil [185948 185982])
+            ("cgb_used_MAX" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [186016 186046])
+            ("cgb_allocs" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [186067 186097])
+            ("cgb_discards" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [186124 186154])
+            ("cgb_search" variable
+               (:typemodifiers ("static")
+                :type ("ULong" type (:type "class") nil nil))
+                nil [186183 186213])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("get_ClientBlock_array" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [186297 186319]))                  
+                :type "void")
+                nil [186288 186404])
+            ("alloc_client_block" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [186487 186493]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [186455 187283])
+            ("show_client_block_stats" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [187324 187330]))                  
+                :type "void")
+                nil [187286 187507])
+            ("print_monitor_help" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [187541 187547]))                  
+                :type "void")
+                nil [187508 188436])
+            ("handle_gdb_monitor_command" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [188535 188548])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("Char" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [188549 188559]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [188495 195304])
+            ("mc_handle_client_request" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tid" variable (:type ("ThreadId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [195541 195554])
+                    ("arg" variable
+                       (:pointer 1
+                        :type ("UWord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [195555 195566])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("UWord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [195567 195579]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [195502 205482])
+            ("init_prof_mem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [206583 206589]))                  
+                :type "void")
+                nil [206555 206593])
+            ("done_prof_mem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [206622 206628]))                  
+                :type "void")
+                nil [206594 206632])
+            ("merge_origins" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("or1" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [207022 207031])
+                    ("or2" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [207032 207042]))                  
+                :type ("UInt" type (:type "class") nil nil))
+                nil [206987 207079])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_load1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [207105 207121]))                  
+                :type "int")
+                nil [207101 207131])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_load2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [207629 207645]))                  
+                :type "int")
+                nil [207625 207655])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_load4" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [208387 208403]))                  
+                :type "int")
+                nil [208383 208413])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_load8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [209084 209100]))                  
+                :type "int")
+                nil [209080 209110])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_load16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [210051 210068]))                  
+                :type "int")
+                nil [210047 210078])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_store1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [210427 210444]))                  
+                :type "int")
+                nil [210423 210465])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_store2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [210891 210908]))                  
+                :type "int")
+                nil [210887 210929])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_store4" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [211541 211558]))                  
+                :type "int")
+                nil [211537 211579])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_store8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [212121 212138]))                  
+                :type "int")
+                nil [212117 212159])
+            ("MC_" function
+               (:arguments 
+                  ( ("" variable (:type ("helperc_b_store16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [212836 212854]))                  
+                :type "int")
+                nil [212832 212875])
+            ("ocache_sarp_Set_Origins" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [213174 213181])
+                    ("len" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [213182 213192])
+                    ("otag" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [213193 213204]))                  
+                :type "void")
+                nil [213136 213766])
+            ("ocache_sarp_Clear_Origins" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [213834 213841])
+                    ("len" variable (:type ("UWord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [213842 213853]))                  
+                :type "void")
+                nil [213794 214400])
+            ("mc_post_clo_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [214630 214636]))                  
+                :type "void")
+                nil [214599 217191])
+            ("print_SM_info" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [217219 217230])
+                    ("n_SMs" variable (:type "int") (reparse-symbol arg-sub-list) [217231 217241]))                  
+                :type "void")
+                nil [217193 217436])
+            ("mc_fini" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exitcode" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [217460 217474]))                  
+                :type "void")
+                nil [217438 222678])
+            ("mc_mark_unaddressable_for_watchpoint" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("kind" variable (:type ("PointKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [222852 222867])
+                    ("insert" variable (:type ("Bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [222868 222880])
+                    ("addr" variable (:type ("Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [222931 222941])
+                    ("len" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [222942 222952]))                  
+                :type ("Bool" type (:type "class") nil nil))
+                nil [222802 223357])
+            ("mc_pre_clo_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [223387 223392]))                  
+                :type "void")
+                nil [223359 232279]))          
+    :file "mc_main.c"
+    :pointmax 232546
+    :fsize 232545
+    :lastmodtime '(20614 49263)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("VA_BITS2_UNDEFINED" . ((number "0x1" 10196 . 10199)))
+          ("VA_BITS4_DEFINED" . ((number "0xa" 10471 . 10474)))
+          ("OC_W32S_PER_LINE" . ((semantic-list "(1 << (OC_BITS_PER_LINE - 2))" 76442 . 76471)))
+          ("PERF_FAST_STACK2" . ((number "1" 2927 . 2928)))
+          ("MAX_PRIMARY_ADDRESS" . ((semantic-list "(Addr)" 7747 . 7753) (semantic-list "((((Addr)65536) * N_PRIMARY_MAP)-1)" 7753 . 7788)))
+          ("VA_BITS4_UNDEFINED" . ((number "0x5" 10422 . 10425)))
+          ("OC_LINES_PER_SET" . ((number "2" 76700 . 76701)))
+          ("N_NIA_TO_ECU_CACHE" . ((number "511" 124576 . 124579)))
+          ("PERF_FAST_SARP" . ((number "1" 2868 . 2869)))
+          ("AUXMAP_L1_INSERT_IX" . ((number "12" 15689 . 15691)))
+          ("N_PRIMARY_BITS" . ((number "16" 7362 . 7364)))
+          ("VA_BITS2_PARTDEFINED" . ((number "0x3" 10288 . 10291)))
+          ("VA_BITS8_UNDEFINED" . ((number "0x55" 10614 . 10618)))
+          ("BYTES_PER_SEC_VBIT_NODE" . ((number "16" 31654 . 31656)))
+          ("PERF_FAST_LOADV" . ((number "1" 2809 . 2810)))
+          ("PERF_FAST_STACK" . ((number "1" 2898 . 2899)))
+          ("VA_BITS8_DEFINED" . ((number "0xaa" 10669 . 10673)))
+          ("MAX_SURVIVOR_PROPORTION" . ((number "0.5" 31762 . 31765)))
+          ("OC_BITS_PER_LINE" . ((number "5" 76415 . 76416)))
+          ("UNALIGNED_OR_HIGH" (spp-arg-list ("_a" "_szInBits") 153980 . 153994) . ((semantic-list "((_a) & MASK((_szInBits>>3)))" 154000 . 154029)))
+          ("PERF_FAST_STOREV" . ((number "1" 2838 . 2839)))
+          ("N_PRIMARY_MAP" . ((semantic-list "( ((UWord)1) << N_PRIMARY_BITS)" 7660 . 7691)))
+          ("VA_BITS8_NOACCESS" . ((number "0x00" 10559 . 10563)))
+          ("OC_N_SET_BITS" . ((number "20" 76728 . 76730)))
+          ("DEBUG" (spp-arg-list ("fmt" "args...") 2324 . 2338))
+          ("OC_ENABLE_ASSERTIONS" . ((number "0" 3042 . 3043)))
+          ("TABLE_GROWTH_FACTOR" . ((number "2" 31868 . 31869)))
+          ("MAYBE_USED")
+          ("MASK" (spp-arg-list ("_szInBytes") 153825 . 153837) . ((semantic-list "( ~((0x10000UL-(_szInBytes)) | ((N_PRIMARY_MAP-1) << 16)) )" 153843 . 153902)))
+          ("VA_BITS16_NOACCESS" . ((number "0x0000" 10763 . 10769)))
+          ("VG_DEBUG_MEMORY" . ((number "0" 2308 . 2309)))
+          ("VA_BITS2_NOACCESS" . ((number "0x0" 10150 . 10153)))
+          ("SM_DIST_NOACCESS" . ((number "0" 11660 . 11661)))
+          ("SM_DIST_UNDEFINED" . ((number "1" 11689 . 11690)))
+          ("SM_DIST_DEFINED" . ((number "2" 11718 . 11719)))
+          ("N_AUXMAP_L1" . ((number "24" 15557 . 15559)))
+          ("OC_N_SETS" . ((semantic-list "(1 << OC_N_SET_BITS)" 76756 . 76776)))
+          ("SM_OFF_16" (spp-arg-list ("aaa") 11019 . 11024) . ((semantic-list "(((aaa) & 0xffff) >> 3)" 11032 . 11055)))
+          ("OC_MOVE_FORWARDS_EVERY_BITS" . ((number "7" 76970 . 76971)))
+          ("VA_BITS16_DEFINED" . ((number "0xaaaa" 10881 . 10887)))
+          ("SM_CHUNKS" . ((number "16384" 10942 . 10947)))
+          ("M_IGNORE_RANGES" . ((number "4" 37394 . 37395)))
+          ("VA_BITS2_DEFINED" . ((number "0x2" 10242 . 10245)))
+          ("VA_BITS16_UNDEFINED" . ((number "0x5555" 10822 . 10828)))
+          ("INLINE" . 
+              ((INLINE "inline" 11178 . 11184) (symbol "__attribute__" 11185 . 11198) (semantic-list "((always_inline))" 11198 . 11215)))
+          ("MAX_STALE_AGE" . ((number "2" 32015 . 32016)))
+          ("VA_BITS4_NOACCESS" . ((number "0x0" 10373 . 10376)))
+          ("SM_OFF" (spp-arg-list ("aaa") 10962 . 10967) . ((semantic-list "(((aaa) & 0xffff) >> 2)" 10978 . 11001)))
+          )
+
+    )
+   )
+  :file "!home!andrea!valgrind-3.7.0!memcheck!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

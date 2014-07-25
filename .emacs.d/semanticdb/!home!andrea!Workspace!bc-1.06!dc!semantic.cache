@@ -1,0 +1,25 @@
+;; Object dc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dc/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("bin_PROGRAMS" variable (:default-value ("dc")) nil [59 77])
+            ("dc_SOURCES" variable (:default-value ("dc.c" "misc.c" "eval.c" "stack.c" "array.c" "numeric.c" "string.c")) nil [78 145])
+            ("noinst_HEADERS" variable (:default-value ("dc.h" "dc-proto.h" "dc-regdef.h")) nil [145 190])
+            ("INCLUDES" variable (:default-value ("-I$(srcdir)/.." "-I$(srcdir)/../h")) nil [191 234])
+            ("LDADD" variable (:default-value ("../lib/libbc.a")) nil [234 257])
+            ("MAINTAINERCLEANFILES" variable (:default-value ("Makefile.in")) nil [258 293])
+            ("CFLAGS" variable (:default-value ("@CFLAGS@" "-Wall" "-funsigned-char")) nil [294 334]))          
+    :file "Makefile.am"
+    :pointmax 357
+    :fsize 356
+    :lastmodtime '(14777 6238)
+    :unmatched-syntax '((semantic-list 349 . 356) (punctuation 348 . 349) (punctuation 346 . 347) (semantic-list 336 . 346) (punctuation 335 . 336) (bol 335 . 335))
+    )
+   )
+  :file "!home!andrea!Workspace!bc-1.06!dc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

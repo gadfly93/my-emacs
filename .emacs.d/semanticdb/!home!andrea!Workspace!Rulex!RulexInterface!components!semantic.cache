@@ -1,0 +1,108 @@
+;; Object components/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "components/"
+  :tables (list 
+   (semanticdb-table "RulexComponentBase.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("PyQt4.QtCore" include nil nil [142 168])
+            ("PyQt4.QtGui" include nil nil [169 194])
+            ("time" include nil nil [195 217])
+            ("client.RulexClient" include nil nil [218 251])
+            ("gui.RulexFilters" include nil nil [252 282])
+            ("gui.RulexCustomWidgets" include nil nil [283 319])
+            ("globals.RulexGuiMacro" include nil nil [320 359])
+            ("database.RulexSession" include nil nil [360 395])
+            ("language.RulexLanguage" include nil nil [396 444])
+            ("components.common.RulexCustomPlots" include nil nil [445 518])
+            ("RulexComponentBase" type
+               (:superclasses ("RulexWidget")
+                :members 
+                  ( ("changed" variable nil (reparse-symbol indented_block_body) [564 586])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [605 609])
+                        ("item" variable nil (reparse-symbol function_parameters) [611 615])
+                        ("parent" variable nil (reparse-symbol function_parameters) [617 623])
+                        ("debug_f" variable nil (reparse-symbol function_parameters) [630 637])
+                        ("title" variable nil (reparse-symbol function_parameters) [662 667]))                      ) (reparse-symbol indented_block_body) [592 1269])
+                    ("_RefreshSession" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1294 1298]))                      ) (reparse-symbol indented_block_body) [1274 1537])
+                    ("_Resize" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1554 1558]))                      ) (reparse-symbol indented_block_body) [1542 1592])
+                    ("_PrepareClusterPlots" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1622 1626]))                      ) (reparse-symbol indented_block_body) [1597 2052])
+                    ("_PrepareRulePlots" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2079 2083]))                      ) (reparse-symbol indented_block_body) [2057 2724])
+                    ("CanUndo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2741 2745]))                      ) (reparse-symbol indented_block_body) [2729 2822])
+                    ("CanRedo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2839 2843]))                      ) (reparse-symbol indented_block_body) [2827 2920])
+                    ("CleanUp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2937 2941]))                      ) (reparse-symbol indented_block_body) [2925 2958])
+                    ("CloseComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2982 2986])
+                        ("container" variable nil (reparse-symbol function_parameters) [2988 2997]))                      ) (reparse-symbol indented_block_body) [2963 3127])
+                    ("GetItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3144 3148]))                      ) (reparse-symbol indented_block_body) [3132 3177])
+                    ("InitUpdate" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3197 3201])
+                        ("check_computed_f" variable nil (reparse-symbol function_parameters) [3203 3219]))                      ) (reparse-symbol indented_block_body) [3182 3676])
+                    ("IsVisible" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3695 3699]))                      ) (reparse-symbol indented_block_body) [3681 3734])
+                    ("IsComputed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3754 3758]))                      ) (reparse-symbol indented_block_body) [3739 4107])
+                    ("IsDirty" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4124 4128]))                      ) (reparse-symbol indented_block_body) [4112 4161])
+                    ("Save" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4175 4179]))                      ) (reparse-symbol indented_block_body) [4166 4209])
+                    ("SetIsVisible" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4231 4235])
+                        ("value" variable nil (reparse-symbol function_parameters) [4237 4242]))                      ) (reparse-symbol indented_block_body) [4214 4278])
+                    ("SetOptions" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4298 4302])
+                        ("event" variable nil (reparse-symbol function_parameters) [4304 4309])
+                        ("opt_dict" variable nil (reparse-symbol function_parameters) [4316 4324]))                      ) (reparse-symbol indented_block_body) [4283 5429])
+                    ("SetupComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5453 5457]))                      ) (reparse-symbol indented_block_body) [5434 5800])
+                    ("LoadOptions" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5821 5825]))                      ) (reparse-symbol indented_block_body) [5805 6908])
+                    ("ShowComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6931 6935])
+                        ("container" variable nil (reparse-symbol function_parameters) [6937 6946]))                      ) (reparse-symbol indented_block_body) [6913 7448])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7473 7477]))                      ) (reparse-symbol indented_block_body) [7453 7494])
+                    ("UpdateMonitor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7517 7521]))                      ) (reparse-symbol indented_block_body) [7499 7538])
+                    ("UpdateParent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7560 7564]))                      ) (reparse-symbol indented_block_body) [7543 7752])
+                    ("UpdateTableNames" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7778 7782]))                      ) (reparse-symbol indented_block_body) [7757 8143])
+                    ("Undo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8157 8161]))                      ) (reparse-symbol indented_block_body) [8148 8246])
+                    ("Redo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8260 8264]))                      ) (reparse-symbol indented_block_body) [8251 8328])
+                    ("MonitorClusters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8353 8357]))                      ) (reparse-symbol indented_block_body) [8333 8651])
+                    ("MonitorRules" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8673 8677]))                      ) (reparse-symbol indented_block_body) [8656 8998])
+                    ("PlotClusters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9020 9024])
+                        ("data" variable nil (reparse-symbol function_parameters) [9026 9030]))                      ) (reparse-symbol indented_block_body) [9003 9731])
+                    ("PlotRules" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9750 9754])
+                        ("data" variable nil (reparse-symbol function_parameters) [9756 9760]))                      ) (reparse-symbol indented_block_body) [9736 10942]))                  
+                :type "class")
+                nil [520 10942])
+            ("if" code nil nil [10944 11082]))          
+    :file "RulexComponentBase.py"
+    :pointmax 11082
+    :fsize 11081
+    :lastmodtime '(20551 20464)
+    :unmatched-syntax '((NAME 7971 . 7983) (IF 8011 . 8013) (ELSE 8029 . 8033) (NAME 4341 . 4349) (IF 4355 . 4357) (ELSE 4375 . 4379) (NAME 3347 . 3351) (IF 3376 . 3378) (ELSE 3401 . 3405))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!components!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

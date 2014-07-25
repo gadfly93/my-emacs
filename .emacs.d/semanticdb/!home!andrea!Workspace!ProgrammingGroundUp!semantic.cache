@@ -1,0 +1,38 @@
+;; Object ProgrammingGroundUp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ProgrammingGroundUp/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CHAPTERS" variable (:default-value ("CountingCh.xml" "FilesCh.xml" "FirstProgsCh.xml" "FunctionsCh.xml" "IntroductionCh.xml" "LinkingCh.xml" "MemoryCh.xml" "MemoryIntCh.xml" "OptimizationCh.xml" "OtherLangCh.xml" "RobustCh.xml" "WhereNextCh.xml")) nil [1 198])
+            ("APPENDICES" variable (:default-value ("ASCIIAp.xml" "GUIAp.xml" "SyscallAp.xml")) nil [198 247])
+            ("PROGS" variable (:default-value ("alloc.s" "exit.s" "factorial.s" "Hello-World.c" "helloworld-lib.s" "helloworld-nolib.s" "maximum.s" "printf-example.s" "toupper2.s" "toupper3.s" "toupper.s")) nil [247 391])
+            ("GRAPHICS" variable (:default-value ("assembling-a-program.dia" "memorypages.svg" "memory.svg")) nil [391 454])
+            ("INDEX" variable (:default-value ("index.xml")) nil [454 472])
+            ("BOOKNOINDEX" variable (:default-value ("ProgrammingGroundUp.xml" "programming.dsl" "$(CHAPTERS)" "$(PROGS)" "$(GRAPHICS)" "$(APPENDICES)")) nil [472 573])
+            ("FULLBOOK" variable (:default-value ("$(BOOKNOINDEX)")) nil [573 599])
+            ("JADE" variable (:default-value ("openjade")) nil [599 615])
+            ("all" function (:arguments ("ProgrammingGroundUp.pdf")) nil [616 645])
+            ("ProgrammingGroundUp.ps" function (:arguments ("ProgrammingGroundUp.tex")) nil [646 883])
+            ("ProgrammingGroundUp.pdf" function (:arguments ("ProgrammingGroundUp.tex")) nil [884 1077])
+            ("draft" function (:arguments ("ProgrammingGroundUp.tex")) nil [1078 1223])
+            ("ProgrammingGroundUp.tex" function (:arguments ("$(FULLBOOK)")) nil [1224 1339])
+            ("index.xml" function (:arguments ("HTML.index")) nil [1340 1420])
+            ("HTML.index" function (:arguments ("$(BOOKNOINDEX)")) nil [1421 1647])
+            ("index" function (:arguments ("index.xml")) nil [1648 1665])
+            ("semiclean" function nil nil [1666 1862])
+            ("clean" function (:arguments ("semiclean")) nil [1863 1915])
+            ("download" function nil nil [1916 2001])
+            ("upload" function nil nil [2002 2093]))          
+    :file "Makefile"
+    :pointmax 2094
+    :fsize 2093
+    :lastmodtime '(16412 37455)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!ProgrammingGroundUp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

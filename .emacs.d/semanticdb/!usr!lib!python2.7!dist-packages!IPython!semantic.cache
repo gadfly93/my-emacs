@@ -1,0 +1,186 @@
+;; Object IPython/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "IPython/"
+  :tables (list 
+   (semanticdb-table "Prompts.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""
+Classes for handling input/output prompts.
+"""" code nil nil [25 75])
+            ("__builtin__" include nil nil [599 617])
+            ("os" include nil nil [618 627])
+            ("socket" include nil nil [628 641])
+            ("sys" include nil nil [642 652])
+            ("time" include nil nil [653 664])
+            ("IPython" include nil nil [682 711])
+            ("IPython" include nil nil [712 739])
+            ("IPython.external.Itpl" include nil nil [740 780])
+            ("IPython.ipapi" include nil nil [781 814])
+            ("IPython.ipstruct" include nil nil [815 850])
+            ("IPython.macro" include nil nil [851 882])
+            ("IPython.genutils" include nil nil [884 914])
+            ("PromptColors" variable nil nil [1023 1066])
+            ("InputColors" variable nil nil [1067 1106])
+            ("Colors" variable nil nil [1127 1156])
+            ("PromptColors" code nil nil [1178 1666])
+            ("__PColLinux" variable nil nil [1746 2078])
+            ("PromptColors" code nil nil [2122 2158])
+            ("__PColLightBG" variable nil nil [2208 2252])
+            ("__PColLightBG" code nil nil [2254 2393])
+            ("PromptColors" code nil nil [2394 2432])
+            ("del" code nil nil [2434 2456])
+            ("multiple_replace" function (:arguments 
+              ( ("dict" variable nil (reparse-symbol function_parameters) [2558 2562])
+                ("text" variable nil (reparse-symbol function_parameters) [2564 2568]))              ) nil [2537 3103])
+            ("HOME" variable nil nil [3955 4009])
+            ("USER" variable nil nil [4181 4220])
+            ("HOSTNAME" variable nil nil [4221 4258])
+            ("HOSTNAME_SHORT" variable nil nil [4259 4298])
+            ("ROOT_SYMBOL" variable nil nil [4299 4353])
+            ("prompt_specials_color" variable nil nil [4355 6409])
+            ("prompt_specials_nocolor" variable nil nil [6567 6621])
+            ("prompt_specials_nocolor" variable nil nil [6622 6682])
+            ("prompt_specials_nocolor" variable nil nil [6683 6744])
+            ("input_colors" variable nil nil [7065 7105])
+            ("for" code nil nil [7106 7309])
+            ("prompt_specials" variable nil nil [7425 7466])
+            ("str_safe" function (:arguments 
+              ( ("arg" variable nil (reparse-symbol function_parameters) [7560 7563]))              ) nil [7547 8132])
+            ("BasePrompt" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Interactive prompt similar to Mathematica's."""" code nil (reparse-symbol indented_block_body) [8163 8213])
+                    ("_get_p_template" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8239 8243]))                      ) (reparse-symbol indented_block_body) [8219 8278])
+                    ("_set_p_template" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8303 8307])
+                        ("val" variable nil (reparse-symbol function_parameters) [8308 8311]))                      ) (reparse-symbol indented_block_body) [8283 8370])
+                    ("p_template" variable nil (reparse-symbol indented_block_body) [8375 8498])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8517 8521])
+                        ("cache" variable nil (reparse-symbol function_parameters) [8522 8527])
+                        ("sep" variable nil (reparse-symbol function_parameters) [8528 8531])
+                        ("prompt" variable nil (reparse-symbol function_parameters) [8532 8538])
+                        ("pad_left" variable nil (reparse-symbol function_parameters) [8539 8547]))                      ) (reparse-symbol indented_block_body) [8504 9380])
+                    ("set_p_str" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9399 9403]))                      ) (reparse-symbol indented_block_body) [9385 10370])
+                    ("write" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10385 10389])
+                        ("msg" variable nil (reparse-symbol function_parameters) [10390 10393]))                      ) (reparse-symbol indented_block_body) [10375 10451])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10468 10472]))                      ) (reparse-symbol indented_block_body) [10456 11172])
+                    ("cwd_filt" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11319 11323])
+                        ("depth" variable nil (reparse-symbol function_parameters) [11324 11329]))                      ) (reparse-symbol indented_block_body) [11306 11681])
+                    ("cwd_filt2" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11700 11704])
+                        ("depth" variable nil (reparse-symbol function_parameters) [11705 11710]))                      ) (reparse-symbol indented_block_body) [11686 12306])
+                    ("__nonzero__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12327 12331]))                      ) (reparse-symbol indented_block_body) [12311 12471]))                  
+                :type "class")
+                nil [8133 12471])
+            ("Prompt1" type
+               (:superclasses ("BasePrompt")
+                :members 
+                  ( (""""Input interactive prompt similar to Mathematica's."""" code nil (reparse-symbol indented_block_body) [12503 12559])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12578 12582])
+                        ("cache" variable nil (reparse-symbol function_parameters) [12583 12588])
+                        ("sep" variable nil (reparse-symbol function_parameters) [12589 12592])
+                        ("prompt" variable nil (reparse-symbol function_parameters) [12598 12604])
+                        ("pad_left" variable nil (reparse-symbol function_parameters) [12618 12626]))                      ) (reparse-symbol indented_block_body) [12565 12694])
+                    ("set_colors" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12714 12718]))                      ) (reparse-symbol indented_block_body) [12699 13187])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13212 13216]))                      ) (reparse-symbol indented_block_body) [13200 13370])
+                    ("auto_rewrite" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13392 13396]))                      ) (reparse-symbol indented_block_body) [13375 13839]))                  
+                :type "class")
+                nil [12472 13839])
+            ("PromptOut" type
+               (:superclasses ("BasePrompt")
+                :members 
+                  ( (""""Output interactive prompt similar to Mathematica's."""" code nil (reparse-symbol indented_block_body) [13873 13930])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13949 13953])
+                        ("cache" variable nil (reparse-symbol function_parameters) [13954 13959])
+                        ("sep" variable nil (reparse-symbol function_parameters) [13960 13963])
+                        ("prompt" variable nil (reparse-symbol function_parameters) [13967 13973])
+                        ("pad_left" variable nil (reparse-symbol function_parameters) [13987 13995]))                      ) (reparse-symbol indented_block_body) [13936 14133])
+                    ("set_colors" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14153 14157]))                      ) (reparse-symbol indented_block_body) [14138 14369]))                  
+                :type "class")
+                nil [13840 14369])
+            ("Prompt2" type
+               (:superclasses ("BasePrompt")
+                :members 
+                  ( (""""Interactive continuation prompt."""" code nil (reparse-symbol indented_block_body) [14401 14439])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14462 14466])
+                        ("cache" variable nil (reparse-symbol function_parameters) [14467 14472])
+                        ("prompt" variable nil (reparse-symbol function_parameters) [14473 14479])
+                        ("pad_left" variable nil (reparse-symbol function_parameters) [14493 14501]))                      ) (reparse-symbol indented_block_body) [14449 14627])
+                    ("set_p_str" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14646 14650]))                      ) (reparse-symbol indented_block_body) [14632 15222])
+                    ("set_colors" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15242 15246]))                      ) (reparse-symbol indented_block_body) [15227 15630]))                  
+                :type "class")
+                nil [14370 15630])
+            ("CachedOutput" type
+               (:members 
+                  ( (""""Class for printing output from calculations while keeping a cache of
+    reults. It dynamically creates global variables prefixed with _ which
+    contain these results.
+
+    Meant to be used as a sys.displayhook replacement, providing numbered
+    prompts and cache services.
+
+    Initialize with initial and final values for cache counter (this defines
+    the maximum size of the cache."""" code nil (reparse-symbol indented_block_body) [15735 16130])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16149 16153])
+                        ("shell" variable nil (reparse-symbol function_parameters) [16154 16159])
+                        ("cache_size" variable nil (reparse-symbol function_parameters) [16160 16170])
+                        ("Pprint" variable nil (reparse-symbol function_parameters) [16171 16177])
+                        ("colors" variable nil (reparse-symbol function_parameters) [16196 16202])
+                        ("input_sep" variable nil (reparse-symbol function_parameters) [16213 16222])
+                        ("output_sep" variable nil (reparse-symbol function_parameters) [16246 16256])
+                        ("output_sep2" variable nil (reparse-symbol function_parameters) [16262 16273])
+                        ("ps1" variable nil (reparse-symbol function_parameters) [16295 16298])
+                        ("ps2" variable nil (reparse-symbol function_parameters) [16307 16310])
+                        ("ps_out" variable nil (reparse-symbol function_parameters) [16318 16324])
+                        ("pad_left" variable nil (reparse-symbol function_parameters) [16332 16340]))                      ) (reparse-symbol indented_block_body) [16136 18688])
+                    ("_set_prompt_str" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18713 18717])
+                        ("p_str" variable nil (reparse-symbol function_parameters) [18718 18723])
+                        ("cache_def" variable nil (reparse-symbol function_parameters) [18724 18733])
+                        ("no_cache_def" variable nil (reparse-symbol function_parameters) [18734 18746]))                      ) (reparse-symbol indented_block_body) [18693 18936])
+                    ("set_colors" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18972 18976])
+                        ("colors" variable nil (reparse-symbol function_parameters) [18977 18983]))                      ) (reparse-symbol indented_block_body) [18957 19595])
+                    ("__call__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19613 19617])
+                        ("arg" variable nil (reparse-symbol function_parameters) [19618 19621]))                      ) (reparse-symbol indented_block_body) [19600 21482])
+                    ("_display" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21500 21504])
+                        ("arg" variable nil (reparse-symbol function_parameters) [21505 21508]))                      ) (reparse-symbol indented_block_body) [21487 21877])
+                    ("display" variable nil (reparse-symbol indented_block_body) [21923 21941])
+                    ("update" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21958 21962])
+                        ("arg" variable nil (reparse-symbol function_parameters) [21963 21966]))                      ) (reparse-symbol indented_block_body) [21947 23103])
+                    ("flush" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23118 23122]))                      ) (reparse-symbol indented_block_body) [23108 23719]))                  
+                :type "class")
+                nil [15711 23719]))          
+    :file "Prompts.py"
+    :pointmax 23720
+    :fsize 45
+    :lastmodtime '(19901 32086)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!lib!python2.7!dist-packages!IPython!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

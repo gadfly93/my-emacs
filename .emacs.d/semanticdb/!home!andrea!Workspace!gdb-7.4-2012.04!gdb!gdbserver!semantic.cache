@@ -1,0 +1,1854 @@
+;; Object gdbserver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gdbserver/"
+  :tables (list 
+   (semanticdb-table "linux-low.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("server.h" include nil nil [813 832])
+            ("linux-low.h" include nil nil [833 855])
+            ("linux-osdata.h" include nil nil [856 881])
+            ("sys/wait.h" include (:system-flag t) nil [883 904])
+            ("stdio.h" include (:system-flag t) nil [905 923])
+            ("sys/param.h" include (:system-flag t) nil [924 946])
+            ("sys/ptrace.h" include (:system-flag t) nil [947 970])
+            ("linux-ptrace.h" include nil nil [971 996])
+            ("linux-procfs.h" include nil nil [997 1022])
+            ("signal.h" include (:system-flag t) nil [1023 1042])
+            ("sys/ioctl.h" include (:system-flag t) nil [1043 1065])
+            ("fcntl.h" include (:system-flag t) nil [1066 1084])
+            ("string.h" include (:system-flag t) nil [1085 1104])
+            ("stdlib.h" include (:system-flag t) nil [1105 1124])
+            ("unistd.h" include (:system-flag t) nil [1125 1144])
+            ("errno.h" include (:system-flag t) nil [1145 1163])
+            ("sys/syscall.h" include (:system-flag t) nil [1164 1188])
+            ("sched.h" include (:system-flag t) nil [1189 1207])
+            ("ctype.h" include (:system-flag t) nil [1208 1226])
+            ("pwd.h" include (:system-flag t) nil [1227 1243])
+            ("sys/types.h" include (:system-flag t) nil [1244 1266])
+            ("dirent.h" include (:system-flag t) nil [1267 1286])
+            ("sys/stat.h" include (:system-flag t) nil [1287 1308])
+            ("sys/vfs.h" include (:system-flag t) nil [1309 1329])
+            ("sys/uio.h" include (:system-flag t) nil [1330 1350])
+            ("elf.h" include (:system-flag t) nil [1627 1643])
+            ("SPUFS_MAGIC" variable (:constant-flag t) nil [1680 1691])
+            ("O_LARGEFILE" variable (:constant-flag t) nil [1881 1892])
+            ("W_STOPCODE" variable (:constant-flag t) nil [1930 1940])
+            ("__SIGRTMIN" variable (:constant-flag t) nil [2079 2089])
+            ("Elf32_auxv_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("a_type" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2295 2311])
+                          ("a_un" variable (:type ("" type
+                               (:members 
+                                  ( ("a_val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2350 2365]))                                  
+                                :type "union")
+                                nil nil)) (reparse-symbol classsubparts) [2332 2576]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2276 2592])
+            ("Elf64_auxv_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("a_type" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2680 2696])
+                          ("a_un" variable (:type ("" type
+                               (:members 
+                                  ( ("a_val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2735 2750]))                                  
+                                :type "union")
+                                nil nil)) (reparse-symbol classsubparts) [2717 2961]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2661 2977])
+            ("all_lwps" variable (:type ("inferior_list" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [3316 3346])
+            ("stopped_pids" variable (:type ("inferior_list" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [3510 3544])
+            ("stopping_threads" variable (:type "int") nil [3606 3627])
+            ("using_threads" variable (:type "int") nil [3669 3691])
+            ("stabilizing_threads" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3779 3810])
+            ("new_inferior" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [4277 4301])
+            ("linux_resume_one_lwp" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4337 4358])
+                    ("step" variable (:type "int") (reparse-symbol arg-sub-list) [4365 4374])
+                    ("signal" variable (:type "int") (reparse-symbol arg-sub-list) [4375 4386])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("siginfo_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4387 4403]))                  
+                :type "void")
+                nil [4303 4404])
+            ("linux_resume" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("resume_info" variable
+                       (:pointer 1
+                        :type ("thread_resume" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4431 4465])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4466 4475]))                  
+                :type "void")
+                nil [4405 4476])
+            ("stop_all_lwps" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("suspend" variable (:type "int") (reparse-symbol arg-sub-list) [4504 4516])
+                    ("except" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4517 4541]))                  
+                :type "void")
+                nil [4477 4542])
+            ("unstop_all_lwps" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("unsuspend" variable (:type "int") (reparse-symbol arg-sub-list) [4572 4586])
+                    ("except" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4587 4611]))                  
+                :type "void")
+                nil [4543 4612])
+            ("linux_wait_for_event" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4646 4658])
+                    ("wstat" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4659 4670])
+                    ("options" variable (:type "int") (reparse-symbol arg-sub-list) [4671 4683]))                  
+                :type "int")
+                nil [4613 4684])
+            ("add_lwp" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4707 4719]))                  
+                :type "void")
+                nil [4685 4720])
+            ("linux_stopped_by_watchpoint" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4761 4766]))                  
+                :type "int")
+                nil [4721 4767])
+            ("mark_lwp_dead" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4795 4816])
+                    ("wstat" variable (:type "int") (reparse-symbol arg-sub-list) [4817 4827]))                  
+                :type "void")
+                nil [4768 4828])
+            ("proceed_all_lwps" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4859 4864]))                  
+                :type "void")
+                nil [4829 4865])
+            ("finish_step_over" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4895 4916]))                  
+                :type "int")
+                nil [4866 4917])
+            ("get_stop_pc" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4948 4969]))                  
+                :type ("CORE_ADDR" type (:type "class") nil nil))
+                nil [4918 4970])
+            ("kill_lwp" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lwpid" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4992 5012])
+                    ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [5013 5023]))                  
+                :type "int")
+                nil [4971 5024])
+            ("linux_enable_event_reporting" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [5067 5075]))                  
+                :type "void")
+                nil [5025 5076])
+            ("can_hardware_single_step" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5237 5242]))                  
+                :type "int")
+                nil [5200 5306])
+            ("supports_breakpoints" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5448 5453]))                  
+                :type "int")
+                nil [5415 5499])
+            ("supports_fast_tracepoints" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5690 5695]))                  
+                :type "int")
+                nil [5652 5765])
+            ("pending_signals" type
+               (:members 
+                  ( ("signal" variable (:type "int") (reparse-symbol classsubparts) [5794 5805])
+                    ("info" variable (:type ("siginfo_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5808 5823])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("pending_signals" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5826 5855]))                  
+                :type "struct")
+                nil [5767 5858])
+            ("linux_event_pipe" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "int")
+                nil [6038 6082])
+            ("target_is_async_p" variable (:constant-flag t) nil [6138 6155])
+            ("send_sigstop" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6213 6234]))                  
+                :type "void")
+                nil [6187 6235])
+            ("wait_for_sigstop" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6266 6300]))                  
+                :type "void")
+                nil [6236 6301])
+            ("linux_child_pid_to_exec_file" function
+               (:pointer 1
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [6521 6529]))                  
+                :type "char")
+                nil [6484 6853])
+            ("elf_64_header_p" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("header" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Elf64_Ehdr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6939 6964]))                  
+                :type "int")
+                nil [6911 7216])
+            ("elf_64_file_p" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7395 7412]))                  
+                :type "int")
+                nil [7376 7667])
+            ("delete_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7693 7714]))                  
+                :type "void")
+                nil [7669 7843])
+            ("linux_add_process" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [7972 7980])
+                    ("attached" variable (:type "int") (reparse-symbol arg-sub-list) [7981 7994]))                  
+                :type ("process_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7924 8366])
+            ("my_waitpid" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [8513 8521])
+                    ("status" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8522 8534])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [8535 8545]))                  
+                :type "int")
+                nil [8490 10076])
+            ("handle_extended_wait" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("event_child" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10278 10307])
+                    ("wstat" variable (:type "int") (reparse-symbol arg-sub-list) [10308 10318]))                  
+                :type "void")
+                nil [10244 12590])
+            ("get_pc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12700 12721]))                  
+                :type ("CORE_ADDR" type (:type "class") nil nil))
+                nil [12675 13165])
+            ("get_stop_pc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14243 14264]))                  
+                :type ("CORE_ADDR" type (:type "class") nil nil))
+                nil [14213 14665])
+            ("add_lwp" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14690 14702]))                  
+                :type "void")
+                nil [14667 15002])
+            ("linux_create_inferior" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("program" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15141 15155])
+                    ("allargs" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15156 15171]))                  
+                :type "int")
+                nil [15107 16758])
+            ("linux_attach_lwp_1" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwpid" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [16831 16851])
+                    ("initial" variable (:type "int") (reparse-symbol arg-sub-list) [16852 16864]))                  
+                :type "void")
+                nil [16799 19691])
+            ("linux_attach_lwp" function
+               (:arguments 
+                  ( ("lwpid" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [19716 19736]))                  
+                :type "void")
+                nil [19693 19773])
+            ("linux_attach" function
+               (:arguments 
+                  ( ("pid" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [19877 19895]))                  
+                :type "int")
+                nil [19859 21629])
+            ("counter" type
+               (:members 
+                  ( ("pid" variable (:type "int") (reparse-symbol classsubparts) [21650 21658])
+                    ("count" variable (:type "int") (reparse-symbol classsubparts) [21661 21671]))                  
+                :type "struct")
+                nil [21631 21674])
+            ("second_thread_of_pid_p" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21711 21745])
+                    ("args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21746 21757]))                  
+                :type "int")
+                nil [21676 21912])
+            ("last_thread_of_process_p" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("thread" variable
+                       (:pointer 1
+                        :type ("thread_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21951 21978]))                  
+                :type "int")
+                nil [21914 22203])
+            ("linux_kill_one_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22267 22301])
+                    ("args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22302 22313]))                  
+                :type "int")
+                nil [22236 23187])
+            ("linux_kill" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [23212 23220]))                  
+                :type "int")
+                nil [23189 24445])
+            ("linux_detach_one_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24480 24514])
+                    ("args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24515 24526]))                  
+                :type "int")
+                nil [24447 25450])
+            ("linux_detach" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [25477 25485]))                  
+                :type "int")
+                nil [25452 26272])
+            ("delete_lwp_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26377 26411])
+                    ("proc" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [26412 26423]))                  
+                :type "int")
+                nil [26345 26594])
+            ("linux_mourn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("process" variable
+                       (:pointer 1
+                        :type ("process_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26621 26650]))                  
+                :type "void")
+                nil [26596 26972])
+            ("linux_join" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [26998 27006]))                  
+                :type "void")
+                nil [26974 27184])
+            ("linux_thread_alive" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27275 27287]))                  
+                :type "int")
+                nil [27244 27594])
+            ("status_pending_p_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27697 27731])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27732 27742]))                  
+                :type "int")
+                nil [27659 28380])
+            ("same_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28403 28437])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28438 28449]))                  
+                :type "int")
+                nil [28382 28667])
+            ("find_lwp_pid" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28701 28713]))                  
+                :type ("lwp_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [28669 28789])
+            ("linux_wait_for_lwp" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28836 28848])
+                    ("wstatp" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [28849 28861])
+                    ("options" variable (:type "int") (reparse-symbol arg-sub-list) [28862 28874]))                  
+                :type ("lwp_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [28791 32863])
+            ("handle_tracepoints" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33071 33092]))                  
+                :type "int")
+                nil [33040 34298])
+            ("linux_fast_tracepoint_collecting" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34441 34462])
+                    ("status" variable
+                       (:pointer 1
+                        :type ("fast_tpoint_collect_status" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34469 34511]))                  
+                :type "int")
+                nil [34396 35044])
+            ("maybe_move_out_of_jump_pad" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35312 35333])
+                    ("wstat" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [35334 35345]))                  
+                :type "int")
+                nil [35273 38731])
+            ("enqueue_one_deferred_signal" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38868 38889])
+                    ("wstat" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [38890 38901]))                  
+                :type "void")
+                nil [38827 40185])
+            ("dequeue_one_deferred_signal" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40323 40344])
+                    ("wstat" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [40345 40356]))                  
+                :type "int")
+                nil [40283 41207])
+            ("cancel_breakpoint" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [41495 41516]))                  
+                :type "int")
+                nil [41465 42503])
+            ("step_over_bkpt" variable (:type ("ptid_t" type (:type "class") nil nil)) nil [42598 42620])
+            ("linux_wait_for_event_1" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42963 42975])
+                    ("wstat" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [42976 42987])
+                    ("options" variable (:type "int") (reparse-symbol arg-sub-list) [42988 43000]))                  
+                :type "int")
+                nil [42928 47264])
+            ("linux_wait_for_event" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47299 47311])
+                    ("wstat" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [47312 47323])
+                    ("options" variable (:type "int") (reparse-symbol arg-sub-list) [47324 47336]))                  
+                :type "int")
+                nil [47266 48184])
+            ("count_events_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48267 48301])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [48302 48313]))                  
+                :type "int")
+                nil [48233 48883])
+            ("select_singlestep_lwp_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49000 49034])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [49035 49046]))                  
+                :type "int")
+                nil [48957 49326])
+            ("select_event_lwp_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49457 49491])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [49492 49503]))                  
+                :type "int")
+                nil [49419 50071])
+            ("cancel_breakpoints_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50113 50147])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50148 50159]))                  
+                :type "int")
+                nil [50073 51381])
+            ("linux_cancel_breakpoints" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [51421 51426]))                  
+                :type "void")
+                nil [51383 51494])
+            ("select_event_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("orig_lp" variable
+                       (:pointer 2
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51588 51614]))                  
+                :type "void")
+                nil [51558 52820])
+            ("unsuspend_one_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52899 52933])
+                    ("except" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [52934 52947]))                  
+                :type "int")
+                nil [52869 53133])
+            ("unsuspend_all_lwps" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("except" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53247 53271]))                  
+                :type "void")
+                nil [53215 53331])
+            ("move_out_of_jump_pad_callback" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53376 53410]))                  
+                :type "void")
+                nil [53333 53411])
+            ("stuck_in_jump_pad_callback" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53451 53485])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53497 53508]))                  
+                :type "int")
+                nil [53412 53509])
+            ("lwp_running" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53534 53568])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53569 53580]))                  
+                :type "int")
+                nil [53510 53581])
+            ("linux_wait_1" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53610 53622])
+                    ("ourstatus" variable
+                       (:pointer 1
+                        :type ("target_waitstatus" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53630 53666])
+                    ("target_options" variable (:type "int") (reparse-symbol arg-sub-list) [53674 53693]))                  
+                :type ("ptid_t" type (:type "class") nil nil))
+                nil [53582 53694])
+            ("linux_stabilize_threads" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [55254 55259]))                  
+                :type "void")
+                nil [55217 56980])
+            ("linux_wait_1" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57052 57064])
+                    ("ourstatus" variable
+                       (:pointer 1
+                        :type ("target_waitstatus" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [57072 57108])
+                    ("target_options" variable (:type "int") (reparse-symbol arg-sub-list) [57109 57128]))                  
+                :type ("ptid_t" type (:type "class") nil nil))
+                nil [57024 71636])
+            ("async_file_flush" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [71717 71722]))                  
+                :type "void")
+                nil [71687 71855])
+            ("async_file_mark" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [71948 71953]))                  
+                :type "void")
+                nil [71919 72198])
+            ("linux_wait" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72226 72238])
+                    ("ourstatus" variable
+                       (:pointer 1
+                        :type ("target_waitstatus" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [72244 72280])
+                    ("target_options" variable (:type "int") (reparse-symbol arg-sub-list) [72281 72300]))                  
+                :type ("ptid_t" type (:type "class") nil nil))
+                nil [72200 72863])
+            ("kill_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwpid" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [72919 72939])
+                    ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [72940 72950]))                  
+                :type "int")
+                nil [72898 73364])
+            ("linux_stop_lwp" function
+               (:arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [73387 73408]))                  
+                :type "void")
+                nil [73366 73434])
+            ("send_sigstop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [73462 73483]))                  
+                :type "void")
+                nil [73436 73890])
+            ("send_sigstop_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [73926 73960])
+                    ("except" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [73961 73974]))                  
+                :type "int")
+                nil [73892 74160])
+            ("suspend_and_send_sigstop_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [74290 74324])
+                    ("except" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [74332 74345]))                  
+                :type "int")
+                nil [74244 74531])
+            ("mark_lwp_dead" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [74560 74581])
+                    ("wstat" variable (:type "int") (reparse-symbol arg-sub-list) [74582 74592]))                  
+                :type "void")
+                nil [74533 74884])
+            ("wait_for_sigstop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [74916 74950]))                  
+                :type "void")
+                nil [74886 77243])
+            ("stuck_in_jump_pad_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [77525 77559])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [77560 77571]))                  
+                :type "int")
+                nil [77486 78060])
+            ("move_out_of_jump_pad_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [78105 78139]))                  
+                :type "void")
+                nil [78062 79081])
+            ("lwp_running" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [79107 79141])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [79142 79153]))                  
+                :type "int")
+                nil [79083 79287])
+            ("stop_all_lwps" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("suspend" variable (:type "int") (reparse-symbol arg-sub-list) [79475 79487])
+                    ("except" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [79488 79512]))                  
+                :type "void")
+                nil [79448 79774])
+            ("linux_resume_one_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [79945 79966])
+                    ("step" variable (:type "int") (reparse-symbol arg-sub-list) [79975 79984])
+                    ("signal" variable (:type "int") (reparse-symbol arg-sub-list) [79985 79996])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("siginfo_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79997 80013]))                  
+                :type "void")
+                nil [79911 86284])
+            ("thread_resume_array" type
+               (:members 
+                  ( ("resume" variable
+                       (:pointer 1
+                        :type ("thread_resume" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [86317 86346])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [86349 86358]))                  
+                :type "struct")
+                nil [86286 86361])
+            ("linux_set_resume_request" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [86720 86754])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [86755 86765]))                  
+                :type "int")
+                nil [86683 88303])
+            ("resume_status_pending_p" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [88408 88442])
+                    ("flag_p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [88443 88456]))                  
+                :type "int")
+                nil [88372 88754])
+            ("need_step_over_p" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [89015 89049])
+                    ("dummy" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [89050 89062]))                  
+                :type "int")
+                nil [88986 92201])
+            ("start_step_over" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [93259 93280]))                  
+                :type "int")
+                nil [93231 94457])
+            ("finish_step_over" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lwp" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [94685 94706]))                  
+                :type "int")
+                nil [94656 95529])
+            ("linux_resume_one_thread" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [96180 96214])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [96215 96225]))                  
+                :type "int")
+                nil [96144 99699])
+            ("linux_resume" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("resume_info" variable
+                       (:pointer 1
+                        :type ("thread_resume" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [99727 99761])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99762 99771]))                  
+                :type "void")
+                nil [99701 101633])
+            ("proceed_one_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [102126 102160])
+                    ("except" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [102161 102174]))                  
+                :type "int")
+                nil [102098 104151])
+            ("unsuspend_and_proceed_one_lwp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("inferior_list_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [104195 104229])
+                    ("except" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [104230 104243]))                  
+                :type "int")
+                nil [104153 104435])
+            ("proceed_all_lwps" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [104678 104683]))                  
+                :type "void")
+                nil [104648 105511])
+            ("unstop_all_lwps" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("unsuspend" variable (:type "int") (reparse-symbol arg-sub-list) [105730 105744])
+                    ("except" variable
+                       (:pointer 1
+                        :type ("lwp_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [105745 105769]))                  
+                :type "void")
+                nil [105701 106117])
+            ("linux_fetch_registers" function
+               (:arguments 
+                  ( ("regcache" variable
+                       (:pointer 1
+                        :type ("regcache" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [113431 113457])
+                    ("regno" variable (:type "int") (reparse-symbol arg-sub-list) [113458 113468]))                  
+                :type "void")
+                nil [113403 113656])
+            ("linux_store_registers" function
+               (:arguments 
+                  ( ("regcache" variable
+                       (:pointer 1
+                        :type ("regcache" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [113686 113712])
+                    ("regno" variable (:type "int") (reparse-symbol arg-sub-list) [113713 113723]))                  
+                :type "void")
+                nil [113658 113911])
+            ("linux_read_memory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("memaddr" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114052 114070])
+                    ("myaddr" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [114071 114093])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [114094 114102]))                  
+                :type "int")
+                nil [114022 116076])
+            ("linux_write_memory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("memaddr" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116281 116299])
+                    ("myaddr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [116300 116328])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [116329 116337]))                  
+                :type "int")
+                nil [116250 118570])
+            ("linux_supports_tracefork_flag" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [118631 118672])
+            ("linux_enable_event_reporting" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [118716 118724]))                  
+                :type "void")
+                nil [118674 118857])
+            ("linux_tracefork_grandchild" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [118974 118984]))                  
+                :type "int")
+                nil [118935 119001])
+            ("STACK_SIZE" variable (:constant-flag t) nil [119011 119021])
+            ("linux_tracefork_child" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [119062 119072]))                  
+                :type "int")
+                nil [119028 119588])
+            ("linux_test_for_tracefork" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [119787 119792]))                  
+                :type "void")
+                nil [119749 122728])
+            ("linux_look_up_symbols" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [122766 122771]))                  
+                :type "void")
+                nil [122731 123140])
+            ("linux_request_interrupt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [123179 123184]))                  
+                :type "void")
+                nil [123142 123528])
+            ("linux_read_auxv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("offset" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [123675 123692])
+                    ("myaddr" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [123693 123715])
+                    ("len" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [123716 123733]))                  
+                :type "int")
+                nil [123647 124138])
+            ("linux_insert_point" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("type" variable (:type "char") (reparse-symbol arg-sub-list) [124331 124341])
+                    ("addr" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [124342 124357])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [124358 124366]))                  
+                :type "int")
+                nil [124300 124531])
+            ("linux_remove_point" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("type" variable (:type "char") (reparse-symbol arg-sub-list) [124564 124574])
+                    ("addr" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [124575 124590])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [124591 124599]))                  
+                :type "int")
+                nil [124533 124764])
+            ("linux_stopped_by_watchpoint" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [124806 124811]))                  
+                :type "int")
+                nil [124766 124913])
+            ("linux_stopped_data_address" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [124960 124965]))                  
+                :type ("CORE_ADDR" type (:type "class") nil nil))
+                nil [124915 125066])
+            ("linux_read_offsets" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("text_p" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [125673 125691])
+                    ("data_p" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [125692 125710]))                  
+                :type "int")
+                nil [125642 126744])
+            ("linux_qxfer_osdata" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("annex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [126784 126802])
+                    ("readbuf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [126809 126832])
+                    ("" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [126833 126852])
+                    ("writebuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [126848 126863])
+                    ("offset" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [126870 126887])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [126888 126896]))                  
+                :type "int")
+                nil [126753 126965])
+            ("siginfo_fixup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("siginfo" variable
+                       (:pointer 1
+                        :type ("siginfo" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [127111 127135])
+                    ("inf_siginfo" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [127136 127154])
+                    ("direction" variable (:type "int") (reparse-symbol arg-sub-list) [127155 127169]))                  
+                :type "void")
+                nil [127084 127594])
+            ("linux_xfer_siginfo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("annex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [127627 127645])
+                    ("readbuf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [127646 127669])
+                    ("" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [127676 127695])
+                    ("writebuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [127691 127706])
+                    ("offset" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [127707 127724])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [127725 127733]))                  
+                :type "int")
+                nil [127596 128920])
+            ("sigchld_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [129121 129131]))                  
+                :type "void")
+                nil [129092 129510])
+            ("linux_supports_non_stop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [129548 129553]))                  
+                :type "int")
+                nil [129512 129569])
+            ("linux_async" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("enable" variable (:type "int") (reparse-symbol arg-sub-list) [129595 129606]))                  
+                :type "int")
+                nil [129571 130576])
+            ("linux_start_non_stop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("nonstop" variable (:type "int") (reparse-symbol arg-sub-list) [130611 130623]))                  
+                :type "int")
+                nil [130578 130725])
+            ("linux_supports_multi_process" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [130768 130773]))                  
+                :type "int")
+                nil [130727 130789])
+            ("linux_supports_disable_randomization" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [130840 130845]))                  
+                :type "int")
+                nil [130791 130910])
+            ("spu_enumerate_spu_ids" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type "long") (reparse-symbol arg-sub-list) [130990 130999])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [131000 131019])
+                    ("offset" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [131020 131037])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [131038 131046]))                  
+                :type "int")
+                nil [130956 131901])
+            ("linux_qxfer_spu" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("annex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [132050 132068])
+                    ("readbuf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [132069 132092])
+                    ("" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [132096 132115])
+                    ("writebuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [132111 132126])
+                    ("offset" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [132130 132147])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [132148 132156]))                  
+                :type "int")
+                nil [132022 132842])
+            ("target_loadseg" type
+               (:members 
+                  ( ("addr" variable (:type ("Elf32_Addr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [132974 132990])
+                    ("p_vaddr" variable (:type ("Elf32_Addr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [133038 133057])
+                    ("p_memsz" variable (:type ("Elf32_Word" type (:type "class") nil nil)) (reparse-symbol classsubparts) [133101 133120]))                  
+                :type "struct")
+                nil [132894 133123])
+            ("target_loadmap" type
+               (:members 
+                  ( ("version" variable (:type ("Elf32_Word" type (:type "class") nil nil)) (reparse-symbol classsubparts) [133223 133242])
+                    ("dsbt_table" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [133311 133332])
+                    ("dsbt_index" variable (:type "unsigned int") (reparse-symbol classsubparts) [133335 133366])
+                    ("dsbt_size" variable (:type "unsigned int") (reparse-symbol classsubparts) [133335 133366])
+                    ("nsegs" variable (:type ("Elf32_Word" type (:type "class") nil nil)) (reparse-symbol classsubparts) [133410 133427])
+                    ("segs" variable
+                       (:dereference 1
+                        :type ("target_loadseg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [133462 133500]))                  
+                :type "struct")
+                nil [133149 133503])
+            ("LINUX_LOADMAP" variable (:constant-flag t) nil [133514 133527])
+            ("LINUX_LOADMAP_EXEC" variable (:constant-flag t) nil [133550 133568])
+            ("LINUX_LOADMAP_INTERP" variable (:constant-flag t) nil [133599 133619])
+            ("linux_read_loadmap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("annex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [134065 134083])
+                    ("offset" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [134084 134101])
+                    ("myaddr" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [134108 134130])
+                    ("len" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [134131 134148]))                  
+                :type "int")
+                nil [134034 134907])
+            ("linux_process_qsupported" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("query" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [135045 135063]))                  
+                :type "void")
+                nil [135007 135163])
+            ("linux_supports_tracepoints" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [135204 135209]))                  
+                :type "int")
+                nil [135165 135332])
+            ("linux_read_pc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("regcache" variable
+                       (:pointer 1
+                        :type ("regcache" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [135366 135392]))                  
+                :type ("CORE_ADDR" type (:type "class") nil nil))
+                nil [135334 135494])
+            ("linux_write_pc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("regcache" variable
+                       (:pointer 1
+                        :type ("regcache" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [135524 135550])
+                    ("pc" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [135551 135564]))                  
+                :type "void")
+                nil [135496 135658])
+            ("linux_thread_stopped" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("thread" variable
+                       (:pointer 1
+                        :type ("thread_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [135693 135720]))                  
+                :type "int")
+                nil [135660 135767])
+            ("linux_pause_all" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("freeze" variable (:type "int") (reparse-symbol arg-sub-list) [135868 135879]))                  
+                :type "void")
+                nil [135839 135915])
+            ("linux_unpause_all" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("unfreeze" variable (:type "int") (reparse-symbol arg-sub-list) [136033 136046]))                  
+                :type "void")
+                nil [136002 136086])
+            ("linux_prepare_to_access_memory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [136131 136136]))                  
+                :type "int")
+                nil [136088 136286])
+            ("linux_done_accessing_memory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [136329 136334]))                  
+                :type "void")
+                nil [136288 136474])
+            ("linux_install_fast_tracepoint_jump_pad" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tpoint" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [136527 136544])
+                    ("tpaddr" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [136545 136562])
+                    ("collector" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [136568 136588])
+                    ("lockaddr" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [136594 136613])
+                    ("orig_size" variable (:type ("ULONGEST" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [136619 136638])
+                    ("jump_entry" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [136644 136666])
+                    ("trampoline" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [136672 136694])
+                    ("trampoline_size" variable
+                       (:pointer 1
+                        :type ("ULONGEST" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [136700 136726])
+                    ("jjump_pad_insn" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [136732 136762])
+                    ("jjump_pad_insn_size" variable
+                       (:pointer 1
+                        :type ("ULONGEST" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [136768 136798])
+                    ("adjusted_insn_addr" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [136804 136834])
+                    ("adjusted_insn_addr_end" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [136840 136874])
+                    ("err" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [136880 136890]))                  
+                :type "int")
+                nil [136476 137155])
+            ("linux_emit_ops" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [137198 137203]))                  
+                :type ("emit_ops" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [137157 137312])
+            ("linux_get_min_fast_tracepoint_insn_len" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [137365 137370]))                  
+                :type "int")
+                nil [137314 137438])
+            ("get_phdr_phnum_from_proc_auxv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [137556 137570])
+                    ("is_elf64" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [137571 137590])
+                    ("phdr_memaddr" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [137601 137625])
+                    ("num_phdr" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [137626 137640]))                  
+                :type "int")
+                nil [137514 138863])
+            ("get_dynamic" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [138975 138989])
+                    ("is_elf64" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [138990 139009]))                  
+                :type ("CORE_ADDR" type (:type "class") nil nil))
+                nil [138945 140450])
+            ("get_r_debug" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [140636 140650])
+                    ("is_elf64" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [140651 140670]))                  
+                :type ("CORE_ADDR" type (:type "class") nil nil))
+                nil [140606 141437])
+            ("read_one_ptr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("memaddr" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [141519 141537])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type ("CORE_ADDR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [141538 141553])
+                    ("ptr_size" variable (:type "int") (reparse-symbol arg-sub-list) [141554 141567]))                  
+                :type "int")
+                nil [141494 141654])
+            ("link_map_offsets" type
+               (:members 
+                  ( ("r_version_offset" variable (:type "int") (reparse-symbol classsubparts) [141737 141758])
+                    ("r_map_offset" variable (:type "int") (reparse-symbol classsubparts) [141809 141826])
+                    ("l_addr_offset" variable (:type "int") (reparse-symbol classsubparts) [141886 141904])
+                    ("l_name_offset" variable (:type "int") (reparse-symbol classsubparts) [141964 141982])
+                    ("l_ld_offset" variable (:type "int") (reparse-symbol classsubparts) [142040 142056])
+                    ("l_next_offset" variable (:type "int") (reparse-symbol classsubparts) [142116 142134])
+                    ("l_prev_offset" variable (:type "int") (reparse-symbol classsubparts) [142194 142212]))                  
+                :type "struct")
+                nil [141656 142217])
+            ("linux_qxfer_libraries_svr4" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("annex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [142304 142322])
+                    ("readbuf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [142323 142346])
+                    ("" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [142354 142373])
+                    ("writebuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [142369 142384])
+                    ("offset" variable (:type ("CORE_ADDR" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [142392 142409])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [142410 142418]))                  
+                :type "int")
+                nil [142265 146943])
+            ("linux_target_ops" variable
+               (:typemodifiers ("static")
+                :type ("target_ops" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [146945 148355])
+            ("linux_init_signals" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [148357 148635])
+            ("initialize_low" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [148658 148663]))                  
+                :type "void")
+                nil [148637 149279]))          
+    :file "linux-low.c"
+    :pointmax 149280
+    :fsize 149279
+    :lastmodtime '(20359 9866)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("LINUX_LOADMAP_INTERP" . ((symbol "PTRACE_GETDSBT_INTERP" 133620 . 133641)))
+          ("STACK_SIZE" . ((number "4096" 119022 . 119026)))
+          ("SPUFS_MAGIC" . ((number "0x23c9b64e" 1692 . 1702)))
+          ("O_LARGEFILE" . ((number "0" 1893 . 1894)))
+          ("W_STOPCODE" (spp-arg-list ("sig") 1940 . 1945) . ((semantic-list "((sig) << 8 | 0x7f)" 1946 . 1965)))
+          ("LINUX_LOADMAP" . ((symbol "PT_GETDSBT" 133529 . 133539)))
+          ("LINUX_LOADMAP_EXEC" . ((symbol "PTRACE_GETDSBT_EXEC" 133569 . 133588)))
+          ("__SIGRTMIN" . ((number "32" 2090 . 2092)))
+          ("target_is_async_p" (spp-arg-list nil 6155 . 6157) . ((semantic-list "(linux_event_pipe[0] != -1)" 6158 . 6185)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!gdb-7.4-2012.04!gdb!gdbserver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

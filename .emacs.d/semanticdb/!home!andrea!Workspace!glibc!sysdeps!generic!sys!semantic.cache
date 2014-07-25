@@ -1,0 +1,54 @@
+;; Object sys/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sys/"
+  :tables (list 
+   (semanticdb-table "ucontext.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_SYS_UCONTEXT_H" variable (:constant-flag t) nil [1100 1115])
+            ("features.h" include (:system-flag t) nil [1119 1140])
+            ("signal.h" include (:system-flag t) nil [1141 1160])
+            ("bits/sigcontext.h" include (:system-flag t) nil [1261 1289])
+            ("mcontext_t" type
+               (:typedef ("sigcontext" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "sigcontext"
+                :type "typedef")
+                nil [1291 1328])
+            ("ucontext_t" type
+               (:typedef ("ucontext" type (:type "struct") nil nil)
+                :superclasses "ucontext"
+                :type "typedef")
+                nil [1356 1538])
+            ("ucontext" type
+               (:members 
+                  ( ("uc_flags" variable (:type "unsigned long int") (reparse-symbol classsubparts) [1388 1415])
+                    ("uc_link" variable
+                       (:pointer 1
+                        :type ("ucontext" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1420 1445])
+                    ("uc_stack" variable (:type ("stack_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1450 1467])
+                    ("uc_mcontext" variable (:type ("mcontext_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1472 1495])
+                    ("uc_sigmask" variable (:type ("__sigset_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1500 1522]))                  
+                :type "struct")
+                nil [1356 1538]))          
+    :file "ucontext.h"
+    :pointmax 1568
+    :fsize 1567
+    :lastmodtime '(20257 41979)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SYS_UCONTEXT_H" . ((number "1" 1116 . 1117)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!glibc!sysdeps!generic!sys!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

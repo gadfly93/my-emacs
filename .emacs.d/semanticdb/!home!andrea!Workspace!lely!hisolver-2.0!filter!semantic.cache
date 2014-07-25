@@ -1,0 +1,25 @@
+;; Object filter/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "filter/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("noinst_LTLIBRARIES" variable (:default-value ("libfilter.la")) nil [144 176])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/poly" "-I$(top_srcdir)/matrix")) nil [176 234])
+            ("AM_CFLAGS" variable (:default-value ("-Wall" "-Werror" "-pedantic" "-std=c99" "-D_BSD_SOURCE" "-D_XOPEN_SOURCE=600" "-DWITH_DOUBLE")) nil [326 417])
+            ("dist_include_HEADERS" variable (:default-value ("filter.h")) nil [475 505])
+            ("libfilter_la_SOURCES" variable (:default-value ("filter.c")) nil [505 536])
+            ("libfilter_la_LIBADD" variable (:default-value ("$(top_srcdir)/matrix/libmatrix.la")) nil [536 592])
+            ("libfilter_la_LDFLAGS" variable (:default-value ("@lt_enable_auto_import@" "-no-undefined" "-avoid-version")) nil [592 669]))          
+    :file "Makefile.am"
+    :pointmax 670
+    :fsize 669
+    :lastmodtime '(21347 44346 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!lely!hisolver-2.0!filter!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

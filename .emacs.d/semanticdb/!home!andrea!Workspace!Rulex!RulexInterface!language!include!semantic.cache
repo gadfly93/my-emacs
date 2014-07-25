@@ -1,0 +1,100 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "console.rl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("brk" function (:type ("def" type (:type "class") nil nil)) nil [1 132]))          
+    :file "console.rl"
+    :pointmax 133
+    :fsize 132
+    :lastmodtime '(20543 35144)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test.rl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("DoubleColumn" function
+               (:arguments 
+                  ( ("" variable (:type ("n_start" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18 26])
+                    ("" variable (:type ("n_finish" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27 36]))                  
+                :type ("def" type (:type "class") nil nil))
+                nil [1 294])
+            ("LinearComb" function
+               (:arguments 
+                  ( ("" variable (:type ("n_start" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [310 318])
+                    ("" variable (:type ("n_finish" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [319 328]))                  
+                :type ("def" type (:type "class") nil nil))
+                nil [295 605])
+            ("print" function
+               (:prototype-flag t
+                :type "int")
+                nil [606 656])
+            ("n_col" variable (:type "int") nil [657 679])
+            ("n_row" variable (:type "int") nil [680 702])
+            ("tmp" variable (:type "int") nil [703 717])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("n_col" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [724 730]))                  
+                :type "int")
+                nil [718 731])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("n_row" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [738 744]))                  
+                :type "int")
+                nil [732 745])
+            ("DoubleColumn" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("n_col" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [761 767]))                  
+                :type "int")
+                nil [746 768])
+            ("LinearComb" function
+               (:prototype-flag t
+                :type "int")
+                nil [769 786]))          
+    :file "test.rl"
+    :pointmax 787
+    :fsize 786
+    :lastmodtime '(20551 30060)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "math.rl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("pow" function
+               (:arguments 
+                  ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9 11])
+                    ("" variable (:type ("y" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12 14]))                  
+                :type ("def" type (:type "class") nil nil))
+                nil [1 73]))          
+    :file "math.rl"
+    :pointmax 74
+    :fsize 73
+    :lastmodtime '(20327 26221)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "prova.rl"
+    :major-mode 'c-mode
+    :tags 
+        '( ("on" variable (:type ("graph" type (:type "class") nil nil)) nil [2 11])
+            ("stream" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("a" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25 27]))                  
+                :type "int")
+                nil [18 30]))          
+    :file "prova.rl"
+    :pointmax 32
+    :fsize 31
+    :lastmodtime '(20505 4686)
+    :unmatched-syntax '((number 27 . 28) (punctuation 26 . 27) (number 14 . 17) (punctuation 13 . 14) (symbol 12 . 13) (punctuation 1 . 2) (number 27 . 28) (punctuation 26 . 27) (number 14 . 17) (punctuation 13 . 14) (symbol 12 . 13) (number 25 . 27) (punctuation 24 . 25) (number 21 . 24) (punctuation 20 . 21) (number 19 . 20) (punctuation 1 . 2) (number 25 . 27) (punctuation 24 . 25) (number 21 . 24) (punctuation 20 . 21) (number 19 . 20) (number 21 . 24) (punctuation 20 . 21) (number 19 . 20) (punctuation 1 . 2) (number 21 . 24) (punctuation 20 . 21) (number 19 . 20) (number 21 . 22) (punctuation 20 . 21) (number 19 . 20) (punctuation 1 . 2) (number 21 . 22) (punctuation 20 . 21) (number 19 . 20) (number 20 . 21) (punctuation 19 . 20) (number 18 . 19) (symbol 2 . 7) (punctuation 1 . 2) (number 20 . 21) (punctuation 19 . 20) (number 18 . 19) (symbol 2 . 7) (punctuation 1 . 2))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!language!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

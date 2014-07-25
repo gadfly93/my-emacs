@@ -1,0 +1,24 @@
+;; Object doc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "doc/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("html-local" function (:arguments ("Doxyfile")) nil [18 51])
+            ("install-data-local" function (:arguments ("install-html-local")) nil [52 91])
+            ("install-html-local" function (:arguments ("html-local")) nil [92 265])
+            ("clean-local" function nil nil [266 325])
+            ("uninstall-local" function nil nil [326 431])
+            ("EXTRA_DIST" variable (:default-value ("license.md" "license/atlas.md" "license/lapack.md" "license/lapacke.md" "license/openblas.md")) nil [439 552]))          
+    :file "Makefile.am"
+    :pointmax 553
+    :fsize 552
+    :lastmodtime '(21351 15210 204944 321000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!LCI!liblci-math!trunk!doc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

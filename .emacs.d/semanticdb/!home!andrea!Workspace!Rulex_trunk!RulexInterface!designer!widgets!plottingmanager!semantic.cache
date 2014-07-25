@@ -1,0 +1,82 @@
+;; Object plottingmanager/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plottingmanager/"
+  :tables (list 
+   (semanticdb-table "Utilities.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("matplotlib" include nil nil [1 30])
+            ("numpy" include nil nil [31 49])
+            ("math" include nil nil [50 68])
+            ("itertools" include nil nil [69 98])
+            ("ENCODING" variable nil nil [100 119])
+            ("HexToRgb255" function (:arguments 
+              ( ("hex_color" variable nil (reparse-symbol function_parameters) [138 147]))              ) nil [122 254])
+            ("Rgb255ToHex" function (:arguments 
+              ( ("rgb255_color" variable nil (reparse-symbol function_parameters) [271 283]))              ) nil [255 689])
+            ("Rgb255ToMtp" function (:arguments 
+              ( ("rgb255_color" variable nil (reparse-symbol function_parameters) [706 718]))              ) nil [690 971])
+            ("Rgb255ToGrey" function (:arguments 
+              ( ("color" variable nil (reparse-symbol function_parameters) [989 994]))              ) nil [972 1326])
+            ("FoundDecimals" function (:arguments 
+              ( ("nticks" variable nil (reparse-symbol function_parameters) [1345 1351])
+                ("t_lim" variable nil (reparse-symbol function_parameters) [1353 1358]))              ) nil [1327 1787])
+            ("Distance" function (:arguments 
+              ( ("p0" variable nil (reparse-symbol function_parameters) [1802 1804])
+                ("p1" variable nil (reparse-symbol function_parameters) [1806 1808]))              ) nil [1789 1868])
+            ("ToByteArray" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [1885 1886]))              ) nil [1869 2064])
+            ("ToUnicode" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2079 2080]))              ) nil [2065 2465])
+            ("ResizeAxisLimit" function (:arguments 
+              ( ("minimum" variable nil (reparse-symbol function_parameters) [2487 2494])
+                ("maximum" variable nil (reparse-symbol function_parameters) [2496 2503])
+                ("percent" variable nil (reparse-symbol function_parameters) [2505 2512])
+                ("value" variable nil (reparse-symbol function_parameters) [2519 2524]))              ) nil [2467 3051])
+            ("VecDistinct" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [3072 3075]))              ) nil [3056 3193])
+            ("DraggableRectangle" type
+               (:members 
+                  ( ("lock" variable nil (reparse-symbol indented_block_body) [3230 3241])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3261 3265])
+                        ("rect" variable nil (reparse-symbol function_parameters) [3267 3271])
+                        ("ax" variable nil (reparse-symbol function_parameters) [3273 3275])
+                        ("fig" variable nil (reparse-symbol function_parameters) [3277 3280])
+                        ("plot" variable nil (reparse-symbol function_parameters) [3282 3286])
+                        ("border_tol" variable nil (reparse-symbol function_parameters) [3288 3298])
+                        ("fixed_aspect_ratio" variable nil (reparse-symbol function_parameters) [3322 3340])
+                        ("allow_resize" variable nil (reparse-symbol function_parameters) [3347 3359]))                      ) (reparse-symbol indented_block_body) [3248 3849])
+                    ("GetCoords" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3885 3889]))                      ) (reparse-symbol indented_block_body) [3871 3919])
+                    ("SetCoords" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3942 3946])
+                        ("xy" variable nil (reparse-symbol function_parameters) [3948 3950]))                      ) (reparse-symbol indented_block_body) [3928 3978])
+                    ("connect" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4010 4014]))                      ) (reparse-symbol indented_block_body) [3998 4332])
+                    ("on_press" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4350 4354])
+                        ("event" variable nil (reparse-symbol function_parameters) [4356 4361]))                      ) (reparse-symbol indented_block_body) [4337 5035])
+                    ("on_motion" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5054 5058])
+                        ("event" variable nil (reparse-symbol function_parameters) [5060 5065]))                      ) (reparse-symbol indented_block_body) [5040 5701])
+                    ("on_release" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5730 5734])
+                        ("event" variable nil (reparse-symbol function_parameters) [5736 5741]))                      ) (reparse-symbol indented_block_body) [5715 5977])
+                    ("disconnect" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5997 6001]))                      ) (reparse-symbol indented_block_body) [5982 6220])
+                    ("update_rect" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6241 6245]))                      ) (reparse-symbol indented_block_body) [6225 6527]))                  
+                :type "class")
+                nil [3200 6527]))          
+    :file "Utilities.py"
+    :pointmax 7748
+    :fsize 7977
+    :lastmodtime '(20912 19906)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex_trunk!RulexInterface!designer!widgets!plottingmanager!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

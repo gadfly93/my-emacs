@@ -1,0 +1,91 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "util.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("LCI_LIB_UTIL_H" variable (:constant-flag t) nil [209 223])
+            ("stddef.h" include (:system-flag t) nil [225 244])
+            ("ssize_t" type
+               (:typedef ("ptrdiff_t" type (:type "class") nil nil)
+                :superclasses "ptrdiff_t"
+                :type "typedef")
+                nil [334 360])
+            ("LCI_API" variable (:constant-flag t) nil [506 513])
+            ("LCI_IMPORT" variable (:constant-flag t) nil [630 640])
+            ("LCI_EXPORT" variable (:constant-flag t) nil [751 761])
+            ("LCI_EXTERN" variable (:constant-flag t) nil [785 795])
+            ("LCI_UTIL_EXPORT" variable (:constant-flag t) nil [948 963])
+            ("LCI_UTIL_EXTERN" variable (:constant-flag t) nil [983 998])
+            ("LCI_WORDSIZE" variable (:constant-flag t) nil [1195 1207])
+            ("__has_builtin" variable (:constant-flag t) nil [1279 1292])
+            ("__has_feature" variable (:constant-flag t) nil [1336 1349])
+            ("__has_extension" variable (:constant-flag t) nil [1394 1409])
+            ("FORMAT_PRINTF" variable (:constant-flag t) nil [1504 1517])
+            ("FORMAT_PRINTF" variable (:constant-flag t) nil [1598 1611])
+            ("QUOTE" variable (:constant-flag t) nil [1746 1751])
+            ("STRINGIFY" variable (:constant-flag t) nil [1801 1810])
+            ("unused" variable (:constant-flag t) nil [2059 2065])
+            ("likely" variable (:constant-flag t) nil [2769 2775])
+            ("unlikely" variable (:constant-flag t) nil [3115 3123])
+            ("ALIGN" variable (:constant-flag t) nil [4067 4072])
+            ("MIN" variable (:constant-flag t) nil [4163 4166])
+            ("MAX" variable (:constant-flag t) nil [4248 4251])
+            ("errnum_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [4354 4375])
+            ("func_t" variable
+               (:functionpointer-flag t
+                :type "int")
+                nil [4469 4493])
+            ("dtor_t" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [4558 4589])
+            ("default_dtor" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4828 4838]))                  
+                :type "void")
+                nil [4786 4839]))          
+    :file "util.h"
+    :pointmax 4878
+    :fsize 4877
+    :lastmodtime '(21351 15210 821244 577000)
+    :unmatched-syntax '((close-paren 4860 . 4861) (TYPEDEF 4550 . 4557) (TYPEDEF 4461 . 4468) (open-paren 4414 . 4415) (close-paren 1185 . 1186) (semantic-list 1172 . 1185) (symbol 1165 . 1172) (punctuation 1163 . 1164) (punctuation 1162 . 1163) (semantic-list 1148 . 1157) (symbol 1141 . 1148) (punctuation 1139 . 1140) (punctuation 1138 . 1139) (semantic-list 1127 . 1137) (symbol 1120 . 1127) (punctuation 1118 . 1119) (punctuation 1117 . 1118) (semantic-list 1104 . 1112) (symbol 1097 . 1104) (punctuation 1095 . 1096) (punctuation 1094 . 1095) (semantic-list 1083 . 1093) (symbol 1076 . 1083) (punctuation 1074 . 1075) (punctuation 1073 . 1074))
+    :lexical-table 
+        '(("LCI_LIB_UTIL_H")
+          ("unused" (spp-arg-list ("x") 2065 . 2068) . ((semantic-list "((void)(0 ? ((void)(x), 0) : 0))" 2069 . 2101)))
+          ("LCI_WORDSIZE" . ((number "64" 1208 . 1210)))
+          ("MAX" (spp-arg-list ("a" "b") 4251 . 4257) . ((semantic-list "((a) > (b) ? (a) : (b))" 4258 . 4281)))
+          ("LCI_UTIL_EXTERN" . ((symbol "LCI_IMPORT" 999 . 1009)))
+          ("__has_builtin" (spp-arg-list ("x") 1292 . 1295) . ((number "0" 1296 . 1297)))
+          ("__has_extension" . ((symbol "__has_feature" 1410 . 1423)))
+          ("MIN" (spp-arg-list ("a" "b") 4166 . 4172) . ((semantic-list "((a) < (b) ? (a) : (b))" 4173 . 4196)))
+          ("LCI_UTIL_EXPORT" . ((symbol "LCI_IMPORT" 964 . 974)))
+          ("__has_feature" (spp-arg-list ("x") 1349 . 1352) . ((number "0" 1353 . 1354)))
+          ("FORMAT_PRINTF" (spp-arg-list ("i" "j") 1611 . 1617) . ((symbol "__attribute__" 1618 . 1631) (semantic-list "((format(printf, i, j)))" 1631 . 1655)))
+          ("likely" (spp-arg-list ("x") 2775 . 2778) . ((semantic-list "(x)" 2779 . 2782)))
+          ("LCI_API")
+          ("LCI_EXTERN" . ((EXTERN "extern" 796 . 802) (symbol "LCI_EXPORT" 803 . 813)))
+          ("QUOTE" (spp-arg-list ("x") 1751 . 1754) . ((punctuation "#" 1755 . 1756) (symbol "x" 1756 . 1757)))
+          ("LCI_EXPORT")
+          ("STRINGIFY" (spp-arg-list ("x") 1810 . 1813) . ((symbol "QUOTE" 1814 . 1819) (semantic-list "(x)" 1819 . 1822)))
+          ("ALIGN" (spp-arg-list ("x" "a") 4072 . 4078) . ((semantic-list "(((x) + ((a) - 1)) & ~((a) - 1))" 4079 . 4111)))
+          ("unlikely" (spp-arg-list ("x") 3123 . 3126) . ((semantic-list "(x)" 3127 . 3130)))
+          ("LCI_IMPORT" . ((EXTERN "extern" 641 . 647)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!LCI!liblci-util!trunk!include!lci!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

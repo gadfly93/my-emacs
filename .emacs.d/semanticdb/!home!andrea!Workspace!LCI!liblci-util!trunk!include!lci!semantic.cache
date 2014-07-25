@@ -1,0 +1,750 @@
+;; Object lci/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lci/"
+  :tables (list 
+   (semanticdb-table "alloc.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("LCI_ALLOC_H" variable (:constant-flag t) nil [244 255])
+            ("lci/lib/util.h" include (:system-flag t) nil [257 282])
+            ("alloc_t" type
+               (:typedef ("Alloc" type
+                     (:prototype t
+                      :type "class")
+                      nil nil)
+                :superclasses "Alloc"
+                :type "typedef")
+                nil [340 368])
+            ("alloc_vtab" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("size_t" function
+                       (:arguments 
+                          ( ("max_size" variable
+                               (:pointer 1
+                                :type ("LCI_API" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [995 1013]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [987 1030]))                  )
+                (reparse-symbol extern-c-contents) [510 1034])
+            ("default_alloc" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("alloc_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [1092 1114])
+            ("malloc_alloc_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1219 1224]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1191 1225])
+            ("gc_alloc_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1331 1336]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1307 1337])
+            ("arena_alloc_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1691 1703]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1664 1704])
+            ("pool_alloc_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2073 2086])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2087 2099]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2047 2100])
+            ("tree_alloc_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dtor" variable (:type ("dtor_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2555 2567]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2529 2568])
+            ("alloc_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("alloc" variable
+                       (:pointer 1
+                        :type ("alloc_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2646 2661]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2624 2662])
+            ("Alloc" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [2727 2735])
+                    ("Alloc" function
+                       (:constructor-flag t
+                        :type ("Alloc" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2737 2747])
+                    ("Alloc" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Alloc" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2755 2768]))                          
+                        :type ("Alloc" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2749 2769])
+                    ("Alloc" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2771 2782])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Alloc" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2807 2820]))                          
+                        :type ("Alloc" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2784 2821])
+                    ("public" label nil (reparse-symbol classsubparts) [2823 2830])
+                    ("alloc" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2844 2856]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2832 2894])
+                    ("free" function
+                       (:arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2906 2916]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2896 2945])
+                    ("clear" function (:type "void") (reparse-symbol classsubparts) [2947 2984])
+                    ("max_size" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2986 3044])
+                    ("private" label nil (reparse-symbol classsubparts) [3046 3054])
+                    ("m_vtab" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("alloc_vtab" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3056 3081]))                  
+                :type "class")
+                nil [2713 3084]))          
+    :file "alloc.h"
+    :pointmax 4058
+    :fsize 4057
+    :lastmodtime '(21351 15210 793230 929000)
+    :unmatched-syntax '((VOID 2619 . 2623) (symbol 2603 . 2618) (punctuation 2527 . 2528) (symbol 2519 . 2526) (symbol 2503 . 2518) (punctuation 2045 . 2046) (symbol 2037 . 2044) (symbol 2021 . 2036) (punctuation 1662 . 1663) (symbol 1654 . 1661) (symbol 1638 . 1653) (punctuation 1305 . 1306) (symbol 1297 . 1304) (symbol 1281 . 1296) (punctuation 1189 . 1190) (symbol 1181 . 1188) (symbol 1165 . 1180) (symbol 1076 . 1091) (punctuation 1030 . 1031) (punctuation 920 . 921) (semantic-list 909 . 920) (semantic-list 893 . 909) (VOID 888 . 892) (punctuation 827 . 828) (semantic-list 808 . 827) (semantic-list 793 . 808) (VOID 788 . 792) (punctuation 729 . 730) (semantic-list 710 . 729) (semantic-list 694 . 710) (punctuation 693 . 694) (VOID 688 . 692) (punctuation 627 . 628) (semantic-list 616 . 627) (semantic-list 598 . 616) (VOID 593 . 597))
+    :lexical-table 
+        '(("LCI_ALLOC_H")
+          )
+
+    )
+   (semanticdb-table "diag.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("LCI_DIAG_H" variable (:constant-flag t) nil [244 254])
+            ("lci/lib/util.h" include (:system-flag t) nil [256 281])
+            ("stdarg.h" include (:system-flag t) nil [283 302])
+            ("floc" type
+               (:members 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [377 398])
+                    ("line" variable (:type "int") (reparse-symbol classsubparts) [440 449])
+                    ("column" variable (:type "int") (reparse-symbol classsubparts) [493 504]))                  
+                :type "struct")
+                nil [335 507])
+            ("diag_severity" type
+               (:members 
+                  ( ("DIAG_NONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [602 612])
+                    ("DIAG_NOTE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [627 637])
+                    ("DIAG_WARNING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [655 668])
+                    ("DIAG_ERROR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [685 696])
+                    ("DIAG_FATAL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [760 772]))                  
+                :type "enum")
+                nil [551 773])
+            ("floc_strinc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("at" variable
+                       (:pointer 1
+                        :type ("floc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1432 1448])
+                    ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1449 1463]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1412 1464])
+            ("floc_strninc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("at" variable
+                       (:pointer 1
+                        :type ("floc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1686 1702])
+                    ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1703 1717])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1720 1729]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1665 1730])
+            ("errnum" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2006 2011]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1991 2012])
+            ("errstr_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("errnum" variable (:type ("errnum_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2187 2203]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2165 2204])
+            ("errstr_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2306 2316]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2283 2317])
+            ("print_backtrace" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2589 2598]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2565 2599])
+            ("set_diag_handler" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("handler" variable (:type ("diag_handler_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2928 2951])
+                    ("handle" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2954 2967]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2903 2968])
+            ("set_diag_at_handler" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("handler" variable (:type ("diag_at_handler_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3309 3335])
+                    ("handle" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3336 3349]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3278 3350])
+            ("FORMAT_PRINTF" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4416 4436])
+            ("FORMAT_PRINTF" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4728 4748])
+            ("FORMAT_PRINTF" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6050 6070])
+            ("FORMAT_PRINTF" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6438 6458])
+            ("FORMAT_PRINTF" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7005 7025])
+            ("FORMAT_PRINTF" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7462 7482])
+            ("FORMAT_PRINTF" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7808 7828]))          
+    :file "diag.h"
+    :pointmax 7867
+    :fsize 7866
+    :lastmodtime '(21351 15210 805236 778000)
+    :unmatched-syntax '((number 7825 . 7826) (number 7822 . 7823) (semantic-list 7711 . 7807) (symbol 7695 . 7711) (symbol 7687 . 7694) (VOID 7682 . 7686) (symbol 7666 . 7681) (number 7479 . 7480) (number 7476 . 7477) (semantic-list 7340 . 7459) (symbol 7317 . 7340) (symbol 7309 . 7316) (VOID 7304 . 7308) (symbol 7288 . 7303) (number 7022 . 7023) (number 7019 . 7020) (semantic-list 6908 . 7004) (symbol 6888 . 6908) (symbol 6880 . 6887) (VOID 6875 . 6879) (symbol 6859 . 6874) (number 6455 . 6456) (number 6452 . 6453) (semantic-list 6332 . 6437) (symbol 6324 . 6332) (symbol 6316 . 6323) (VOID 6311 . 6315) (symbol 6295 . 6310) (number 6067 . 6068) (number 6064 . 6065) (semantic-list 5951 . 6049) (symbol 5944 . 5951) (symbol 5936 . 5943) (VOID 5931 . 5935) (symbol 5915 . 5930) (number 4745 . 4746) (number 4742 . 4743) (semantic-list 4647 . 4727) (symbol 4642 . 4647) (symbol 4634 . 4641) (VOID 4629 . 4633) (symbol 4613 . 4628) (number 4433 . 4434) (number 4430 . 4431) (semantic-list 4342 . 4415) (symbol 4338 . 4342) (symbol 4330 . 4337) (VOID 4325 . 4329) (symbol 4309 . 4324) (symbol 3260 . 3277) (symbol 3244 . 3259) (symbol 2888 . 2902) (symbol 2872 . 2887) (VOID 2560 . 2564) (symbol 2544 . 2559) (VOID 2278 . 2282) (symbol 2262 . 2277) (punctuation 2163 . 2164) (CHAR 2158 . 2162) (symbol 2142 . 2157) (symbol 1982 . 1990) (symbol 1966 . 1981) (VOID 1660 . 1664) (symbol 1644 . 1659) (VOID 1407 . 1411) (symbol 1391 . 1406) (punctuation 1157 . 1158) (semantic-list 1073 . 1157) (semantic-list 1045 . 1073) (VOID 1040 . 1044) (TYPEDEF 1032 . 1039) (punctuation 971 . 972) (semantic-list 908 . 971) (semantic-list 883 . 908) (VOID 878 . 882) (TYPEDEF 870 . 877))
+    :lexical-table 
+        '(("LCI_DIAG_H")
+          )
+
+    )
+   (semanticdb-table "ref.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("LCI_REF_H" variable (:constant-flag t) nil [266 275])
+            ("lci/lib/util.h" include (:system-flag t) nil [277 302])
+            ("lci/alloc.h" include (:system-flag t) nil [303 325])
+            ("lci/atom.h" include (:system-flag t) nil [326 347])
+            ("ref_t" type
+               (:prototype t
+                :type "class")
+                nil [631 643])
+            ("ref" type
+               (:members 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [946 956])
+                    ("dtor" variable (:type ("dtor_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1061 1073])
+                    ("strong" variable (:type ("atom_int_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1113 1131])
+                    ("weak" variable (:type ("atom_int_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1194 1210])
+                    ("alloc" variable
+                       (:pointer 1
+                        :type ("alloc_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1282 1297]))                  
+                :type "struct")
+                nil [825 1300])
+            ("ref_t" type
+               (:members 
+                  ( ("ref" variable
+                       (:pointer 1
+                        :type ("ref" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1338 1354])
+                    ("public" label nil (reparse-symbol classsubparts) [1355 1362])
+                    ("ref_t" function
+                       (:constructor-flag t
+                        :type ("ref_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1364 1385])
+                    ("valid" function (:type "bool") (reparse-symbol classsubparts) [1388 1434])
+                    ("" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1531 1569])
+                    ("" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1571 1621])
+                    ("->" function
+                       (:operator-flag t
+                        :pointer 2
+                        :type "void")
+                        (reparse-symbol classsubparts) [1623 1664])
+                    ("->" function
+                       (:operator-flag t
+                        :pointer 2
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1666 1725])
+                    ("acquire" function
+                       (:prototype-flag t
+                        :type ("ref_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1728 1745])
+                    ("acquire_weak" function
+                       (:prototype-flag t
+                        :type ("ref_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1747 1769])
+                    ("release" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1771 1786])
+                    ("release_weak" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1788 1808]))                  
+                :type "class")
+                nil [1323 1811])
+            ("ref_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3069 3079])
+                    ("dtor" variable (:type ("dtor_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3080 3092])
+                    ("alloc" variable
+                       (:pointer 1
+                        :type ("alloc_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3095 3110]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3050 3111])
+            ("ref_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ref" variable
+                       (:pointer 1
+                        :type ("ref" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3577 3593])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3594 3604])
+                    ("dtor" variable (:type ("dtor_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3605 3617])
+                    ("alloc" variable
+                       (:pointer 1
+                        :type ("alloc_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3620 3635]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3560 3636])
+            ("ref_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3904 3914]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3884 3915])
+            ("ref_acquire" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4182 4192]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4162 4193])
+            ("ref_acquire_weak" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4468 4478]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4443 4479])
+            ("ref_release" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4940 4950]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4920 4951])
+            ("ref_release_weak" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5318 5328]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5293 5329])
+            ("ref_acquire" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5371 5381]))                  )
+                (reparse-symbol extern-c-contents) [5351 5469])
+            ("ref_acquire_weak" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5516 5526]))                  )
+                (reparse-symbol extern-c-contents) [5491 5612])
+            ("ref_release" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5653 5663]))                  )
+                (reparse-symbol extern-c-contents) [5633 5907])
+            ("ref_release_weak" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ptr" variable (:type ("ref_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5953 5963]))                  )
+                (reparse-symbol extern-c-contents) [5928 6118])
+            ("acquire" function
+               (:parent "ref_t"
+                :typemodifiers ("inline")
+                :type ("ref_t" type (:type "class") nil nil))
+                nil [6169 6239])
+            ("acquire_weak" function
+               (:parent "ref_t"
+                :typemodifiers ("inline")
+                :type ("ref_t" type (:type "class") nil nil))
+                nil [6241 6321])
+            ("release" function
+               (:parent "ref_t"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [6323 6376])
+            ("release_weak" function
+               (:parent "ref_t"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [6378 6441]))          
+    :file "ref.h"
+    :pointmax 6474
+    :fsize 6473
+    :lastmodtime '(21351 15210 821244 577000)
+    :unmatched-syntax '((VOID 5923 . 5927) (INLINE 5916 . 5922) (STATIC 5909 . 5915) (VOID 5628 . 5632) (INLINE 5621 . 5627) (STATIC 5614 . 5620) (symbol 5485 . 5490) (INLINE 5478 . 5484) (STATIC 5471 . 5477) (symbol 5345 . 5350) (INLINE 5338 . 5344) (STATIC 5331 . 5337) (VOID 5288 . 5292) (INLINE 5281 . 5287) (STATIC 5274 . 5280) (VOID 4915 . 4919) (INLINE 4908 . 4914) (STATIC 4901 . 4907) (symbol 4437 . 4442) (INLINE 4430 . 4436) (STATIC 4423 . 4429) (symbol 4156 . 4161) (INLINE 4149 . 4155) (STATIC 4142 . 4148) (VOID 3879 . 3883) (symbol 3863 . 3878) (VOID 3555 . 3559) (symbol 3539 . 3554) (symbol 3044 . 3049) (symbol 3028 . 3043) (semantic-list 1514 . 1529) (CONST 1508 . 1513) (semantic-list 1505 . 1507) (punctuation 1504 . 1505) (symbol 1500 . 1503) (STRUCT 1493 . 1499) (CONST 1487 . 1492) (OPERATOR 1478 . 1486) (semantic-list 1461 . 1476) (semantic-list 1458 . 1460) (punctuation 1457 . 1458) (symbol 1453 . 1456) (STRUCT 1446 . 1452) (OPERATOR 1437 . 1445))
+    :lexical-table 
+        '(("LCI_REF_H")
+          )
+
+    )
+   (semanticdb-table "atom.h"
+    :file "atom.h"
+    :fsize 43184
+    :lastmodtime '(21351 15210 805236 778000)
+    )
+   (semanticdb-table "time.h"
+    :file "time.h"
+    :fsize 6944
+    :lastmodtime '(21351 15210 797232 878000)
+    )
+   (semanticdb-table "rand.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("LCI_RAND_H" variable (:constant-flag t) nil [456 466])
+            ("lci/lib/util.h" include (:system-flag t) nil [468 493])
+            ("stdint.h" include (:system-flag t) nil [495 514])
+            ("rand_t" type
+               (:typedef ("rand" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "rand"
+                :type "typedef")
+                nil [560 587])
+            ("rand_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1340 1353])
+                    ("seed" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1354 1368]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1320 1369])
+            ("rand_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("rand" variable
+                       (:pointer 1
+                        :type ("rand_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1611 1624]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1590 1625])
+            ("rand_get8" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("rand" variable
+                       (:pointer 1
+                        :type ("rand_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1988 2001]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1970 2002])
+            ("rand_get16" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("rand" variable
+                       (:pointer 1
+                        :type ("rand_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2382 2395]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2363 2396])
+            ("rand_get32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("rand" variable
+                       (:pointer 1
+                        :type ("rand_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2771 2784]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2752 2785])
+            ("rand_get64" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("rand" variable
+                       (:pointer 1
+                        :type ("rand_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3160 3173]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3141 3174]))          
+    :file "rand.h"
+    :pointmax 3213
+    :fsize 3212
+    :lastmodtime '(21351 15210 841254 325000)
+    :unmatched-syntax '((symbol 3132 . 3140) (symbol 3116 . 3131) (symbol 2743 . 2751) (symbol 2727 . 2742) (symbol 2354 . 2362) (symbol 2338 . 2353) (symbol 1962 . 1969) (symbol 1946 . 1961) (VOID 1585 . 1589) (symbol 1569 . 1584) (punctuation 1318 . 1319) (symbol 1311 . 1317) (symbol 1295 . 1310))
+    :lexical-table 
+        '(("LCI_RAND_H")
+          )
+
+    )
+   (semanticdb-table "tree.h"
+    :file "tree.h"
+    :fsize 5293
+    :lastmodtime '(21351 15210 801234 828000)
+    )
+   (semanticdb-table "tap.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("LCI_TAP_H" variable (:constant-flag t) nil [253 262])
+            ("lci/lib/util.h" include (:system-flag t) nil [264 289])
+            ("tap_plan" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [491 497]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [474 498])
+            ("tap_test" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("test" variable (:type "int") (reparse-symbol arg-sub-list) [949 958])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [959 978])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [979 983]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [932 984])
+            ("tap_pass" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1382 1401])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1402 1406]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1365 1407])
+            ("tap_fail" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1805 1824])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1825 1829]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1788 1830])
+            ("tap_todo" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("test" variable (:type "int") (reparse-symbol arg-sub-list) [2315 2324])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2325 2344])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2345 2349]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2298 2350])
+            ("tap_skip" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2757 2763])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2764 2783])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2784 2788]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2740 2789])
+            ("tap_diag" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3093 3112])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3113 3117]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3076 3118])
+            ("tap_bailout" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3449 3468])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3469 3473]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3429 3474])
+            ("tap_assert" variable (:constant-flag t) nil [3583 3593])
+            ("tap_check" variable (:constant-flag t) nil [3808 3817]))          
+    :file "tap.h"
+    :pointmax 3915
+    :fsize 3914
+    :lastmodtime '(21351 15210 841254 325000)
+    :unmatched-syntax '((VOID 3424 . 3428) (symbol 3408 . 3423) (VOID 3071 . 3075) (symbol 3055 . 3070) (VOID 2735 . 2739) (symbol 2719 . 2734) (VOID 2293 . 2297) (symbol 2277 . 2292) (VOID 1783 . 1787) (symbol 1767 . 1782) (VOID 1360 . 1364) (symbol 1344 . 1359) (VOID 927 . 931) (symbol 911 . 926) (VOID 469 . 473) (symbol 453 . 468))
+    :lexical-table 
+        '(("LCI_TAP_H")
+          ("tap_assert" (spp-arg-list ("expression") 3593 . 3605) . ((semantic-list "((expression) \\
+		? (void)0 \\
+		: tap_bailout(\"Assertion '%s' failed at %s:%d.\", #expression, \\
+				__FILE__, __LINE__))" 3609 . 3729)))
+          ("tap_check" (spp-arg-list ("expression") 3817 . 3829) . ((symbol "tap_test" 3833 . 3841) (semantic-list "(!!(expression), \"%s:%d: '%s'\", __FILE__, __LINE__, #expression)" 3841 . 3905)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!LCI!liblci-util!trunk!include!lci!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

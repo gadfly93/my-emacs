@@ -1,0 +1,60 @@
+;; Object optimizelm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "optimizelm/"
+  :tables (list 
+   (semanticdb-table "optimizelm.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("PyQt4" include nil nil [232 263])
+            ("try" code nil nil [265 361])
+            ("Ui_Optimizelm" type
+               (:superclasses ("object")
+                :members 
+                  ( ("setupUi" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [407 411])
+                        ("Optimizelm" variable nil (reparse-symbol function_parameters) [413 423]))                      ) (reparse-symbol indented_block_body) [395 9579])
+                    ("retranslateUi" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9602 9606])
+                        ("Optimizelm" variable nil (reparse-symbol function_parameters) [9608 9618]))                      ) (reparse-symbol indented_block_body) [9584 11820]))                  
+                :type "class")
+                nil [362 11820])
+            ("designer.widgets.CustomDoubleSpinBox" include nil nil [11821 11889])
+            ("designer.widgets.CustomSpinBox" include nil nil [11890 11946])
+            ("designer.widgets.matplotlibwidget" include nil nil [11947 12009]))          
+    :file "optimizelm.py"
+    :pointmax 12010
+    :fsize 12862
+    :lastmodtime '(20386 19423)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "RulexCompOptimizelm.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 141])
+            ("components.RulexComponentBase" include nil nil [146 189])
+            ("optimizelm" include nil nil [190 226])
+            ("RulexCompOptimizelm" type
+               (:superclasses ("RulexComponentBase" "Ui_Optimizelm")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [308 312])
+                        ("item" variable nil (reparse-symbol function_parameters) [314 318])
+                        ("parent" variable nil (reparse-symbol function_parameters) [320 326]))                      ) (reparse-symbol indented_block_body) [295 835])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [868 872]))                      ) (reparse-symbol indented_block_body) [848 1141])
+                    ("UpdateMonitor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1172 1176]))                      ) (reparse-symbol indented_block_body) [1154 1218]))                  
+                :type "class")
+                nil [228 1218])
+            ("if" code nil nil [1219 1377]))          
+    :file "RulexCompOptimizelm.py"
+    :pointmax 1385
+    :fsize 1424
+    :lastmodtime '(20391 39050)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!components!optimizelm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

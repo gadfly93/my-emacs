@@ -1,0 +1,26 @@
+;; Object debian/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "debian/"
+  :tables (list 
+   (semanticdb-table "rules"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CROSS" variable nil nil [21 30])
+            ("check_asm" variable (:default-value ("$(shell echo 'void foo(void) { __asm__ volatile(\"$(1)\"); }' | $(CROSS)gcc -x c -c - -o /dev/null 2>/dev/null && echo 1 || echo 0)")) nil [433 575])
+            ("override_dh_auto_configure" function nil nil [798 979])
+            ("override_dh_auto_test" function nil nil [980 1027])
+            ("override_dh_clean" function nil nil [1028 1076])
+            ("target" variable (:default-value ("$(CURDIR)/debian/valgrind")) nil [1077 1110])
+            ("override_dh_install" function nil nil [1110 1722])
+            ("%" function nil nil [1723 1762]))          
+    :file "rules"
+    :pointmax 1762
+    :fsize 1761
+    :lastmodtime '(20323 57256)
+    :unmatched-syntax '((shell-command 1727 . 1761) (bol 1726 . 1726) (symbol 777 . 784) (punctuation 776 . 777) (symbol 770 . 776) (punctuation 768 . 769) (punctuation 767 . 768) (symbol 760 . 766) (bol 756 . 756) (semantic-list 707 . 734) (punctuation 706 . 707) (punctuation 704 . 705) (punctuation 703 . 704) (symbol 696 . 702) (bol 692 . 692) (symbol 688 . 691) (punctuation 686 . 687) (punctuation 685 . 686) (symbol 678 . 684) (bol 674 . 674) (bol 608 . 608) (semantic-list 234 . 253) (punctuation 233 . 234) (punctuation 230 . 231) (punctuation 229 . 230) (symbol 223 . 228) (bol 219 . 219) (semantic-list 121 . 167) (punctuation 120 . 121) (punctuation 118 . 119) (punctuation 117 . 118) (symbol 98 . 116) (bol 98 . 98) (semantic-list 52 . 97) (punctuation 51 . 52) (punctuation 49 . 50) (punctuation 48 . 49) (symbol 30 . 47) (bol 30 . 30))
+    )
+   )
+  :file "!home!andrea!valgrind-3.7.0!debian!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

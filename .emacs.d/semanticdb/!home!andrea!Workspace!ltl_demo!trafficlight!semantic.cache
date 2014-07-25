@@ -1,0 +1,22 @@
+;; Object trafficlight/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trafficlight/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("fnm" function (:arguments ("clean")) nil [1 132])
+            ("cpp" function nil nil [134 139])
+            ("graph" function nil nil [269 276])
+            ("clean" function nil nil [398 482]))          
+    :file "Makefile"
+    :pointmax 485
+    :fsize 481
+    :lastmodtime '(21455 44745 810287 45000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!ltl_demo!trafficlight!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

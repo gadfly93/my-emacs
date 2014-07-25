@@ -1,0 +1,645 @@
+;; Object OpenCL_Parallel_Reduction_Example/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "OpenCL_Parallel_Reduction_Example/"
+  :tables (list 
+   (semanticdb-table "reduce.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [3390 3408])
+            ("stdbool.h" include (:system-flag t) nil [3409 3429])
+            ("sys/stat.h" include (:system-flag t) nil [3430 3451])
+            ("sys/types.h" include (:system-flag t) nil [3452 3474])
+            ("stdio.h" include (:system-flag t) nil [3475 3493])
+            ("stdlib.h" include (:system-flag t) nil [3494 3513])
+            ("mach_time.h" include nil nil [3514 3536])
+            ("string.h" include (:system-flag t) nil [3537 3556])
+            ("math.h" include (:system-flag t) nil [3557 3574])
+            ("CL/cl.h" include (:system-flag t) nil [3576 3594])
+            ("MIN_ERROR" variable (:constant-flag t) nil [3706 3715])
+            ("MAX_GROUPS" variable (:constant-flag t) nil [3737 3747])
+            ("MAX_WORK_ITEMS" variable (:constant-flag t) nil [3766 3780])
+            ("SEPARATOR" variable (:constant-flag t) nil [3795 3804])
+            ("iterations" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3889 3918])
+            ("count" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3919 3955])
+            ("channels" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3956 3982])
+            ("integer" variable
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [3983 4012])
+            ("current_time" function (:type ("uint64_t" type (:type "class") nil nil)) nil [4116 4176])
+            ("subtract_time_in_seconds" function
+               (:arguments 
+                  ( ("endtime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4211 4228])
+                    ("starttime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4229 4249]))                  
+                :type "double")
+                nil [4178 4596])
+            ("load_program_source" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4632 4653]))                  
+                :type "char")
+                nil [4598 4976])
+            ("reduce_validate_float" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5107 5119])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [5120 5129])
+                    ("result" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5130 5145]))                  
+                :type "void")
+                nil [5080 5378])
+            ("reduce_validate_float2" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5408 5420])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [5421 5430])
+                    ("result" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5431 5445]))                  
+                :type "void")
+                nil [5380 5860])
+            ("reduce_validate_float4" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5890 5902])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [5903 5912])
+                    ("result" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5913 5927]))                  
+                :type "void")
+                nil [5862 6623])
+            ("reduce_validate_int" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6650 6660])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [6661 6670])
+                    ("result" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6671 6684]))                  
+                :type "void")
+                nil [6625 6907])
+            ("reduce_validate_int2" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6935 6945])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [6946 6955])
+                    ("result" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6956 6968]))                  
+                :type "void")
+                nil [6909 7377])
+            ("reduce_validate_int4" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7405 7415])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [7416 7425])
+                    ("result" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7426 7438]))                  
+                :type "void")
+                nil [7379 8128])
+            ("create_reduction_pass_counts" function
+               (:arguments 
+                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [8271 8281])
+                    ("max_group_size" variable (:type "int") (reparse-symbol arg-sub-list) [8286 8305])
+                    ("max_groups" variable (:type "int") (reparse-symbol arg-sub-list) [8310 8325])
+                    ("max_work_items" variable (:type "int") (reparse-symbol arg-sub-list) [8330 8349])
+                    ("pass_count" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8354 8370])
+                    ("group_counts" variable
+                       (:pointer 2
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8375 8397])
+                    ("work_item_counts" variable
+                       (:pointer 2
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8402 8428])
+                    ("operation_counts" variable
+                       (:pointer 2
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8433 8456])
+                    ("entry_counts" variable
+                       (:pointer 2
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8461 8480]))                  
+                :type "void")
+                nil [8232 10119])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [10209 10218])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10219 10231]))                  
+                :type "int")
+                nil [10200 25634]))          
+    :file "reduce.c"
+    :pointmax 25625
+    :fsize 25634
+    :lastmodtime '(21083 62676)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SEPARATOR" . ((semantic-list "(\"----------------------------------------------------------------------\\n\")" 3801 . 3877)))
+          ("MAX_GROUPS" . ((semantic-list "(64)" 3743 . 3747)))
+          ("MIN_ERROR" . ((semantic-list "(1e-7)" 3712 . 3718)))
+          ("MAX_WORK_ITEMS" . ((semantic-list "(64)" 3772 . 3776)))
+          )
+
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("all" function nil nil [1 88]))          
+    :file "Makefile"
+    :pointmax 88
+    :fsize 87
+    :lastmodtime '(21083 62435)
+    :unmatched-syntax '((shell-command 7 . 87) (bol 6 . 6))
+    )
+   (semanticdb-table "mach_time.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_MACH_MACH_TIME_H_" variable (:constant-flag t) nil [1372 1390])
+            ("mach_types.h" include nil nil [1392 1415])
+            ("sys/cdefs.h" include (:system-flag t) nil [1417 1439])
+            ("mach_timebase_info" type
+               (:members 
+                  ( ("numer" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1470 1485])
+                    ("denom" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1487 1502]))                  
+                :type "struct")
+                nil [1441 1505])
+            ("mach_timebase_info_t" type
+               (:typedef ("mach_timebase_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "mach_timebase_info"
+                :type "typedef")
+                nil [1507 1563])
+            ("mach_timebase_info_data_t" type
+               (:typedef ("mach_timebase_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "mach_timebase_info"
+                :type "typedef")
+                nil [1564 1624])
+            ("mach_timebase_info" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("info" variable (:type ("mach_timebase_info_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1697 1723]))                  
+                :type ("kern_return_t" type (:type "class") nil nil))
+                nil [1656 1724])
+            ("mach_wait_until" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("deadline" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1764 1783]))                  
+                :type ("kern_return_t" type (:type "class") nil nil))
+                nil [1726 1784])
+            ("mach_absolute_time" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1837 1842]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [1807 1843]))          
+    :file "mach_time.h"
+    :pointmax 1888
+    :fsize 1888
+    :lastmodtime '(21083 62765)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MACH_MACH_TIME_H_")
+          )
+
+    )
+   (semanticdb-table "mach_types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_MACH_MACH_TYPES_H_" variable (:constant-flag t) nil [2619 2638])
+            ("stdint.h" include (:system-flag t) nil [2640 2659])
+            ("sys/cdefs.h" include (:system-flag t) nil [2661 2683])
+            ("mach/host_info.h" include (:system-flag t) nil [2685 2712])
+            ("mach/host_notify.h" include (:system-flag t) nil [2713 2742])
+            ("mach/host_special_ports.h" include (:system-flag t) nil [2743 2779])
+            ("mach/machine.h" include (:system-flag t) nil [2780 2805])
+            ("mach/machine/vm_types.h" include (:system-flag t) nil [2806 2840])
+            ("mach/memory_object_types.h" include (:system-flag t) nil [2841 2878])
+            ("mach/message.h" include (:system-flag t) nil [2879 2904])
+            ("mach/exception_types.h" include (:system-flag t) nil [2905 2938])
+            ("mach/port.h" include (:system-flag t) nil [2939 2961])
+            ("mach/processor_info.h" include (:system-flag t) nil [2962 2994])
+            ("mach/task_info.h" include (:system-flag t) nil [2995 3022])
+            ("mach/task_policy.h" include (:system-flag t) nil [3023 3052])
+            ("mach/task_special_ports.h" include (:system-flag t) nil [3053 3089])
+            ("mach/thread_info.h" include (:system-flag t) nil [3090 3119])
+            ("mach/thread_policy.h" include (:system-flag t) nil [3120 3151])
+            ("mach/thread_special_ports.h" include (:system-flag t) nil [3152 3190])
+            ("mach/thread_status.h" include (:system-flag t) nil [3191 3222])
+            ("mach/time_value.h" include (:system-flag t) nil [3223 3251])
+            ("mach/clock_types.h" include (:system-flag t) nil [3252 3281])
+            ("mach/vm_attributes.h" include (:system-flag t) nil [3282 3313])
+            ("mach/vm_inherit.h" include (:system-flag t) nil [3314 3342])
+            ("mach/vm_purgable.h" include (:system-flag t) nil [3343 3372])
+            ("mach/vm_behavior.h" include (:system-flag t) nil [3373 3402])
+            ("mach/vm_prot.h" include (:system-flag t) nil [3403 3428])
+            ("mach/vm_statistics.h" include (:system-flag t) nil [3429 3460])
+            ("mach/vm_sync.h" include (:system-flag t) nil [3461 3486])
+            ("mach/vm_types.h" include (:system-flag t) nil [3487 3513])
+            ("mach/vm_region.h" include (:system-flag t) nil [3514 3541])
+            ("mach/kmod.h" include (:system-flag t) nil [3542 3564])
+            ("task_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4702 4730])
+            ("task_name_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4731 4764])
+            ("thread_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4765 4795])
+            ("thread_act_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4796 4830])
+            ("ipc_space_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4831 4864])
+            ("host_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4865 4893])
+            ("host_priv_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4894 4927])
+            ("host_security_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4928 4965])
+            ("processor_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [4966 4999])
+            ("processor_set_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5000 5037])
+            ("processor_set_control_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5038 5083])
+            ("semaphore_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5084 5117])
+            ("lock_set_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5118 5150])
+            ("ledger_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5151 5181])
+            ("alarm_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5182 5211])
+            ("clock_serv_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5212 5246])
+            ("clock_ctrl_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5247 5281])
+            ("processor_set_name_t" type
+               (:typedef ("processor_set_t" type (:type "class") nil nil)
+                :superclasses "processor_set_t"
+                :type "typedef")
+                nil [5462 5508])
+            ("clock_reply_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5561 5596])
+            ("bootstrap_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5597 5630])
+            ("mem_entry_name_port_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5631 5674])
+            ("exception_handler_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5675 5716])
+            ("exception_handler_array_t" type
+               (:typedef ("exception_handler_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "exception_handler_t"
+                :type "typedef")
+                nil [5717 5772])
+            ("vm_task_entry_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5773 5810])
+            ("io_master_t" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5811 5844])
+            ("UNDServerRef" type
+               (:typedef ("mach_port_t" type (:type "class") nil nil)
+                :superclasses "mach_port_t"
+                :type "typedef")
+                nil [5845 5879])
+            ("task_array_t" type
+               (:typedef ("task_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "task_t"
+                :type "typedef")
+                nil [6140 6171])
+            ("thread_array_t" type
+               (:typedef ("thread_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "thread_t"
+                :type "typedef")
+                nil [6172 6206])
+            ("processor_set_array_t" type
+               (:typedef ("processor_set_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "processor_set_t"
+                :type "typedef")
+                nil [6207 6255])
+            ("processor_set_name_array_t" type
+               (:typedef ("processor_set_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "processor_set_t"
+                :type "typedef")
+                nil [6256 6309])
+            ("processor_array_t" type
+               (:typedef ("processor_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "processor_t"
+                :type "typedef")
+                nil [6310 6350])
+            ("thread_act_array_t" type
+               (:typedef ("thread_act_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "thread_act_t"
+                :type "typedef")
+                nil [6351 6393])
+            ("ledger_array_t" type
+               (:typedef ("ledger_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "ledger_t"
+                :type "typedef")
+                nil [6394 6428])
+            ("task_port_t" type
+               (:typedef ("task_t" type (:type "class") nil nil)
+                :superclasses "task_t"
+                :type "typedef")
+                nil [6658 6687])
+            ("task_port_array_t" type
+               (:typedef ("task_array_t" type (:type "class") nil nil)
+                :superclasses "task_array_t"
+                :type "typedef")
+                nil [6688 6728])
+            ("thread_port_t" type
+               (:typedef ("thread_t" type (:type "class") nil nil)
+                :superclasses "thread_t"
+                :type "typedef")
+                nil [6729 6761])
+            ("thread_port_array_t" type
+               (:typedef ("thread_array_t" type (:type "class") nil nil)
+                :superclasses "thread_array_t"
+                :type "typedef")
+                nil [6762 6806])
+            ("ipc_space_port_t" type
+               (:typedef ("ipc_space_t" type (:type "class") nil nil)
+                :superclasses "ipc_space_t"
+                :type "typedef")
+                nil [6807 6845])
+            ("host_name_t" type
+               (:typedef ("host_t" type (:type "class") nil nil)
+                :superclasses "host_t"
+                :type "typedef")
+                nil [6846 6875])
+            ("host_name_port_t" type
+               (:typedef ("host_t" type (:type "class") nil nil)
+                :superclasses "host_t"
+                :type "typedef")
+                nil [6876 6910])
+            ("processor_set_port_t" type
+               (:typedef ("processor_set_t" type (:type "class") nil nil)
+                :superclasses "processor_set_t"
+                :type "typedef")
+                nil [6911 6957])
+            ("processor_set_name_port_t" type
+               (:typedef ("processor_set_t" type (:type "class") nil nil)
+                :superclasses "processor_set_t"
+                :type "typedef")
+                nil [6958 7009])
+            ("processor_set_name_port_array_t" type
+               (:typedef ("processor_set_array_t" type (:type "class") nil nil)
+                :superclasses "processor_set_array_t"
+                :type "typedef")
+                nil [7010 7072])
+            ("processor_set_control_port_t" type
+               (:typedef ("processor_set_t" type (:type "class") nil nil)
+                :superclasses "processor_set_t"
+                :type "typedef")
+                nil [7073 7127])
+            ("processor_port_t" type
+               (:typedef ("processor_t" type (:type "class") nil nil)
+                :superclasses "processor_t"
+                :type "typedef")
+                nil [7128 7166])
+            ("processor_port_array_t" type
+               (:typedef ("processor_array_t" type (:type "class") nil nil)
+                :superclasses "processor_array_t"
+                :type "typedef")
+                nil [7167 7216])
+            ("thread_act_port_t" type
+               (:typedef ("thread_act_t" type (:type "class") nil nil)
+                :superclasses "thread_act_t"
+                :type "typedef")
+                nil [7217 7257])
+            ("thread_act_port_array_t" type
+               (:typedef ("thread_act_array_t" type (:type "class") nil nil)
+                :superclasses "thread_act_array_t"
+                :type "typedef")
+                nil [7258 7309])
+            ("semaphore_port_t" type
+               (:typedef ("semaphore_t" type (:type "class") nil nil)
+                :superclasses "semaphore_t"
+                :type "typedef")
+                nil [7310 7348])
+            ("lock_set_port_t" type
+               (:typedef ("lock_set_t" type (:type "class") nil nil)
+                :superclasses "lock_set_t"
+                :type "typedef")
+                nil [7349 7385])
+            ("ledger_port_t" type
+               (:typedef ("ledger_t" type (:type "class") nil nil)
+                :superclasses "ledger_t"
+                :type "typedef")
+                nil [7386 7418])
+            ("ledger_port_array_t" type
+               (:typedef ("ledger_array_t" type (:type "class") nil nil)
+                :superclasses "ledger_array_t"
+                :type "typedef")
+                nil [7419 7463])
+            ("alarm_port_t" type
+               (:typedef ("alarm_t" type (:type "class") nil nil)
+                :superclasses "alarm_t"
+                :type "typedef")
+                nil [7464 7495])
+            ("clock_serv_port_t" type
+               (:typedef ("clock_serv_t" type (:type "class") nil nil)
+                :superclasses "clock_serv_t"
+                :type "typedef")
+                nil [7496 7536])
+            ("clock_ctrl_port_t" type
+               (:typedef ("clock_ctrl_t" type (:type "class") nil nil)
+                :superclasses "clock_ctrl_t"
+                :type "typedef")
+                nil [7537 7577])
+            ("exception_port_t" type
+               (:typedef ("exception_handler_t" type (:type "class") nil nil)
+                :superclasses "exception_handler_t"
+                :type "typedef")
+                nil [7578 7623])
+            ("exception_port_arrary_t" type
+               (:typedef ("exception_handler_array_t" type (:type "class") nil nil)
+                :superclasses "exception_handler_array_t"
+                :type "typedef")
+                nil [7624 7682])
+            ("TASK_NULL" variable (:constant-flag t) nil [7693 7702])
+            ("TASK_NAME_NULL" variable (:constant-flag t) nil [7725 7739])
+            ("THREAD_NULL" variable (:constant-flag t) nil [7767 7778])
+            ("THR_ACT_NULL" variable (:constant-flag t) nil [7803 7815])
+            ("IPC_SPACE_NULL" variable (:constant-flag t) nil [7845 7859])
+            ("HOST_NULL" variable (:constant-flag t) nil [7887 7896])
+            ("HOST_PRIV_NULL" variable (:constant-flag t) nil [7919 7933])
+            ("HOST_SECURITY_NULL" variable (:constant-flag t) nil [7960 7978])
+            ("PROCESSOR_SET_NULL" variable (:constant-flag t) nil [8008 8026])
+            ("PROCESSOR_NULL" variable (:constant-flag t) nil [8057 8071])
+            ("SEMAPHORE_NULL" variable (:constant-flag t) nil [8099 8113])
+            ("LOCK_SET_NULL" variable (:constant-flag t) nil [8141 8154])
+            ("LEDGER_NULL" variable (:constant-flag t) nil [8181 8192])
+            ("ALARM_NULL" variable (:constant-flag t) nil [8218 8228])
+            ("CLOCK_NULL" variable (:constant-flag t) nil [8252 8262])
+            ("UND_SERVER_NULL" variable (:constant-flag t) nil [8286 8301])
+            ("ledger_item_t" type
+               (:typedef ("natural_t" type (:type "class") nil nil)
+                :superclasses "natural_t"
+                :type "typedef")
+                nil [8323 8357])
+            ("LEDGER_ITEM_INFINITY" variable (:constant-flag t) nil [8366 8386])
+            ("emulation_vector_t" type
+               (:typedef ("mach_vm_offset_t" type (:type "class") nil nil)
+                :pointer 1
+                :superclasses "mach_vm_offset_t"
+                :type "typedef")
+                nil [8411 8456])
+            ("user_subsystem_t" type
+               (:typedef ("char")
+                :pointer 1
+                :superclasses "char"
+                :type "typedef")
+                nil [8457 8490])
+            ("mach/std_types.h" include (:system-flag t) nil [8608 8635]))          
+    :file "mach_types.h"
+    :pointmax 8670
+    :fsize 8669
+    :lastmodtime '(17744 63628)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MACH_MACH_TYPES_H_")
+          ("IPC_SPACE_NULL" . ((semantic-list "((ipc_space_t) 0)" 7861 . 7878)))
+          ("UND_SERVER_NULL" . ((semantic-list "((UNDServerRef) 0)" 8303 . 8321)))
+          ("SEMAPHORE_NULL" . ((semantic-list "((semaphore_t) 0)" 8115 . 8132)))
+          ("CLOCK_NULL" . ((semantic-list "((clock_t) 0)" 8264 . 8277)))
+          ("TASK_NAME_NULL" . ((semantic-list "((task_name_t) 0)" 7741 . 7758)))
+          ("THR_ACT_NULL" . ((semantic-list "((thread_act_t) 0)" 7818 . 7836)))
+          ("PROCESSOR_SET_NULL" . ((semantic-list "((processor_set_t) 0)" 8027 . 8048)))
+          ("LOCK_SET_NULL" . ((semantic-list "((lock_set_t) 0)" 8156 . 8172)))
+          ("HOST_SECURITY_NULL" . ((semantic-list "((host_security_t)0)" 7979 . 7999)))
+          ("ALARM_NULL" . ((semantic-list "((alarm_t) 0)" 8230 . 8243)))
+          ("HOST_PRIV_NULL" . ((semantic-list "((host_priv_t)0)" 7935 . 7951)))
+          ("LEDGER_ITEM_INFINITY" . ((semantic-list "((ledger_item_t) (~0))" 8387 . 8409)))
+          ("LEDGER_NULL" . ((semantic-list "((ledger_t) 0)" 8195 . 8209)))
+          ("TASK_NULL" . ((semantic-list "((task_t) 0)" 7704 . 7716)))
+          ("HOST_NULL" . ((semantic-list "((host_t) 0)" 7898 . 7910)))
+          ("THREAD_NULL" . ((semantic-list "((thread_t) 0)" 7780 . 7794)))
+          ("PROCESSOR_NULL" . ((semantic-list "((processor_t) 0)" 8073 . 8090)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!opencl!reduction!OpenCL_Parallel_Reduction_Example!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

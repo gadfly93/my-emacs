@@ -1,0 +1,1692 @@
+;; Object guiqwt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "guiqwt/"
+  :tables (list 
+   (semanticdb-table "baseplot.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""
+guiqwt.baseplot
+---------------
+
+The `baseplot` module provides the `guiqwt` plotting widget base class: 
+:py:class:`guiqwt.baseplot.BasePlot`. This is an enhanced version of 
+`PyQwt`'s QwtPlot plotting widget which supports the following features:
+    * add to plot, del from plot, hide/show and save/restore `plot items` easily
+    * item selection and multiple selection
+    * active item
+    * plot parameters editing
+
+.. warning::
+    :py:class:`guiqwt.baseplot.BasePlot` is rather an internal class 
+    than a ready-to-use plotting widget. The end user should prefer using 
+    :py:class:`guiqwt.plot.CurvePlot` or :py:class:`guiqwt.plot.ImagePlot`.
+
+.. seealso::
+    
+    Module :py:mod:`guiqwt.curve`
+        Module providing curve-related plot items and plotting widgets
+        
+    Module :py:mod:`guiqwt.image`
+        Module providing image-related plot items and plotting widgets
+        
+    Module :py:mod:`guiqwt.plot`
+        Module providing ready-to-use curve and image plotting widgets and 
+        dialog boxes
+
+Reference
+~~~~~~~~~
+
+.. autoclass:: BasePlot
+   :members:
+   :inherited-members:
+"""" code nil nil [186 1309])
+            ("sys" include nil nil [1311 1321])
+            ("numpy" include nil nil [1322 1340])
+            ("" code nil nil [1371 1455])
+            ("guidata.qt.QtCore" include nil nil [1456 1495])
+            ("guidata.configtools" include nil nil [1497 1537])
+            ("" code nil nil [1587 1696])
+            ("guiqwt.config" include nil nil [1697 1730])
+            ("guiqwt.events" include nil nil [1731 1776])
+            ("guiqwt.interfaces" include nil nil [1777 1850])
+            ("guiqwt.styles" include nil nil [1851 1917])
+            ("" code nil nil [1945 2114])
+            ("PARAMETERS_TITLE_ICON" variable nil nil [2116 2369])
+            ("BasePlot" type
+               (:superclasses ("QwtPlot")
+                :members 
+                  ( (""""
+    An enhanced QwtPlot class that provides
+    methods for handling plotitems and axes better
+    
+    It distinguishes activatable items from basic QwtPlotItems.
+    
+    Activatable items must support IBasePlotItem interface and should
+    be added to the plot using add_item methods.
+    
+    Signals:
+    SIG_ITEMS_CHANGED, SIG_ACTIVE_ITEM_CHANGED
+    """" code nil (reparse-symbol indented_block_body) [2405 2769])
+                    ("Y_LEFT, Y_RIGHT, X_BOTTOM, X_TOP" code nil (reparse-symbol indented_block_body) [2774 2911])
+                    ("AXIS_IDS" variable nil (reparse-symbol indented_block_body) [3012 3057])
+                    ("AXIS_NAMES" variable nil (reparse-symbol indented_block_body) [3062 3161])
+                    ("AXIS_TYPES" variable nil (reparse-symbol indented_block_body) [3166 3257])
+                    ("AXIS_CONF_OPTIONS" variable nil (reparse-symbol indented_block_body) [3262 3314])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3333 3337])
+                        ("parent" variable nil (reparse-symbol function_parameters) [3339 3345])
+                        ("section" variable nil (reparse-symbol function_parameters) [3352 3359]))                      ) (reparse-symbol indented_block_body) [3320 4449])
+                    ("showEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4557 4561])
+                        ("event" variable nil (reparse-symbol function_parameters) [4563 4568]))                      ) (reparse-symbol indented_block_body) [4543 4714])
+                    ("_move_selected_items_together" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4834 4838])
+                        ("item" variable nil (reparse-symbol function_parameters) [4840 4844])
+                        ("x0" variable nil (reparse-symbol function_parameters) [4846 4848])
+                        ("y0" variable nil (reparse-symbol function_parameters) [4850 4852])
+                        ("x1" variable nil (reparse-symbol function_parameters) [4854 4856])
+                        ("y1" variable nil (reparse-symbol function_parameters) [4858 4860]))                      ) (reparse-symbol indented_block_body) [4800 5073])
+                    ("set_manager" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5094 5098])
+                        ("manager" variable nil (reparse-symbol function_parameters) [5100 5107])
+                        ("plot_id" variable nil (reparse-symbol function_parameters) [5109 5116]))                      ) (reparse-symbol indented_block_body) [5078 5259])
+                    ("sizeHint" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5277 5281]))                      ) (reparse-symbol indented_block_body) [5264 5344])
+                    ("get_title" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5371 5375]))                      ) (reparse-symbol indented_block_body) [5357 5451])
+                    ("set_title" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5470 5474])
+                        ("title" variable nil (reparse-symbol function_parameters) [5476 5481]))                      ) (reparse-symbol indented_block_body) [5456 5658])
+                    ("get_axis_id" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5679 5683])
+                        ("axis_name" variable nil (reparse-symbol function_parameters) [5685 5694]))                      ) (reparse-symbol indented_block_body) [5663 5924])
+                    ("read_axes_styles" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5950 5954])
+                        ("section" variable nil (reparse-symbol function_parameters) [5956 5963])
+                        ("options" variable nil (reparse-symbol function_parameters) [5965 5972]))                      ) (reparse-symbol indented_block_body) [5929 6371])
+                    ("get_axis_title" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6403 6407])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [6409 6416]))                      ) (reparse-symbol indented_block_body) [6384 6539])
+                    ("set_axis_title" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6571 6575])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [6577 6584])
+                        ("text" variable nil (reparse-symbol function_parameters) [6586 6590]))                      ) (reparse-symbol indented_block_body) [6552 6753])
+                    ("get_axis_unit" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6784 6788])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [6790 6797]))                      ) (reparse-symbol indented_block_body) [6766 6918])
+                    ("set_axis_unit" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6949 6953])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [6955 6962])
+                        ("text" variable nil (reparse-symbol function_parameters) [6964 6968]))                      ) (reparse-symbol indented_block_body) [6931 7129])
+                    ("get_axis_font" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7152 7156])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [7158 7165]))                      ) (reparse-symbol indented_block_body) [7134 7305])
+                    ("set_axis_font" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7332 7336])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [7338 7345])
+                        ("font" variable nil (reparse-symbol function_parameters) [7347 7351]))                      ) (reparse-symbol indented_block_body) [7314 7594])
+                    ("get_axis_color" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7626 7630])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [7632 7639]))                      ) (reparse-symbol indented_block_body) [7607 7788])
+                    ("set_axis_color" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7816 7820])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [7822 7829])
+                        ("color" variable nil (reparse-symbol function_parameters) [7831 7836]))                      ) (reparse-symbol indented_block_body) [7797 8160])
+                    ("update_axis_style" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8187 8191])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [8193 8200]))                      ) (reparse-symbol indented_block_body) [8165 8945])
+                    ("update_all_axes_styles" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8977 8981]))                      ) (reparse-symbol indented_block_body) [8950 9103])
+                    ("get_axis_limits" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9128 9132])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [9134 9141]))                      ) (reparse-symbol indented_block_body) [9108 9344])
+                    ("set_axis_limits" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9369 9373])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [9375 9382])
+                        ("vmin" variable nil (reparse-symbol function_parameters) [9384 9388])
+                        ("vmax" variable nil (reparse-symbol function_parameters) [9390 9394])
+                        ("stepsize" variable nil (reparse-symbol function_parameters) [9396 9404]))                      ) (reparse-symbol indented_block_body) [9349 9639])
+                    ("set_axis_ticks" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9663 9667])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [9669 9676])
+                        ("nmajor" variable nil (reparse-symbol function_parameters) [9678 9684])
+                        ("nminor" variable nil (reparse-symbol function_parameters) [9691 9697]))                      ) (reparse-symbol indented_block_body) [9644 9999])
+                    ("get_axis_scale" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10023 10027])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [10029 10036]))                      ) (reparse-symbol indented_block_body) [10004 10395])
+                    ("set_axis_scale" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10419 10423])
+                        ("axis_id" variable nil (reparse-symbol function_parameters) [10425 10432])
+                        ("scale" variable nil (reparse-symbol function_parameters) [10434 10439]))                      ) (reparse-symbol indented_block_body) [10400 10681])
+                    ("get_scales" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10701 10705]))                      ) (reparse-symbol indented_block_body) [10686 10853])
+                    ("set_scales" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10873 10877])
+                        ("xscale" variable nil (reparse-symbol function_parameters) [10879 10885])
+                        ("yscale" variable nil (reparse-symbol function_parameters) [10887 10893]))                      ) (reparse-symbol indented_block_body) [10858 11123])
+                    ("enable_used_axes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11149 11153]))                      ) (reparse-symbol indented_block_body) [11128 11381])
+                    ("disable_unused_axes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11410 11414]))                      ) (reparse-symbol indented_block_body) [11386 11727])
+                    ("get_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11746 11750])
+                        ("z_sorted" variable nil (reparse-symbol function_parameters) [11752 11760])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [11768 11777]))                      ) (reparse-symbol indented_block_body) [11732 12213])
+                    ("get_public_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12251 12255])
+                        ("z_sorted" variable nil (reparse-symbol function_parameters) [12257 12265])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [12273 12282]))                      ) (reparse-symbol indented_block_body) [12230 12570])
+                    ("get_private_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12609 12613])
+                        ("z_sorted" variable nil (reparse-symbol function_parameters) [12615 12623])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [12631 12640]))                      ) (reparse-symbol indented_block_body) [12587 12925])
+                    ("copy_to_clipboard" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12968 12972]))                      ) (reparse-symbol indented_block_body) [12946 13122])
+                    ("save_widget" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13155 13159])
+                        ("fname" variable nil (reparse-symbol function_parameters) [13161 13166]))                      ) (reparse-symbol indented_block_body) [13139 13784])
+                    ("get_selected_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13820 13824])
+                        ("z_sorted" variable nil (reparse-symbol function_parameters) [13826 13834])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [13842 13851]))                      ) (reparse-symbol indented_block_body) [13797 14033])
+                    ("get_max_z" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14064 14068]))                      ) (reparse-symbol indented_block_body) [14050 14311])
+                    ("add_item" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14337 14341])
+                        ("item" variable nil (reparse-symbol function_parameters) [14343 14347])
+                        ("z" variable nil (reparse-symbol function_parameters) [14349 14350]))                      ) (reparse-symbol indented_block_body) [14324 15011])
+                    ("add_item_with_z_offset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15051 15055])
+                        ("item" variable nil (reparse-symbol function_parameters) [15057 15061])
+                        ("zoffset" variable nil (reparse-symbol function_parameters) [15063 15070]))                      ) (reparse-symbol indented_block_body) [15024 15472])
+                    ("del_item" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15498 15502])
+                        ("item" variable nil (reparse-symbol function_parameters) [15504 15508]))                      ) (reparse-symbol indented_block_body) [15485 15738])
+                    ("del_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15757 15761])
+                        ("items" variable nil (reparse-symbol function_parameters) [15763 15768]))                      ) (reparse-symbol indented_block_body) [15743 16297])
+                    ("set_item_visible" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16323 16327])
+                        ("item" variable nil (reparse-symbol function_parameters) [16329 16333])
+                        ("state" variable nil (reparse-symbol function_parameters) [16335 16340])
+                        ("notify" variable nil (reparse-symbol function_parameters) [16342 16348])
+                        ("replot" variable nil (reparse-symbol function_parameters) [16355 16361]))                      ) (reparse-symbol indented_block_body) [16302 16706])
+                    ("__set_items_visible" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16735 16739])
+                        ("state" variable nil (reparse-symbol function_parameters) [16741 16746])
+                        ("items" variable nil (reparse-symbol function_parameters) [16748 16753])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [16760 16769]))                      ) (reparse-symbol indented_block_body) [16711 17098])
+                    ("show_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17126 17130])
+                        ("items" variable nil (reparse-symbol function_parameters) [17132 17137])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [17144 17153]))                      ) (reparse-symbol indented_block_body) [17111 17290])
+                    ("hide_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17318 17322])
+                        ("items" variable nil (reparse-symbol function_parameters) [17324 17329])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [17336 17345]))                      ) (reparse-symbol indented_block_body) [17303 17483])
+                    ("save_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17503 17507])
+                        ("iofile" variable nil (reparse-symbol function_parameters) [17509 17515])
+                        ("selected" variable nil (reparse-symbol function_parameters) [17517 17525]))                      ) (reparse-symbol indented_block_body) [17488 18081])
+                    ("restore_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18104 18108])
+                        ("iofile" variable nil (reparse-symbol function_parameters) [18110 18116]))                      ) (reparse-symbol indented_block_body) [18086 18463])
+                    ("__clean_item_references" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18496 18500])
+                        ("item" variable nil (reparse-symbol function_parameters) [18502 18506]))                      ) (reparse-symbol indented_block_body) [18468 18783])
+                    ("set_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18802 18806])
+                        ("args" variable nil (reparse-symbol function_parameters) [18808 18813]))                      ) (reparse-symbol indented_block_body) [18788 18991])
+                    ("del_all_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19014 19018]))                      ) (reparse-symbol indented_block_body) [18996 19105])
+                    ("__swap_items_z" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19137 19141])
+                        ("item1" variable nil (reparse-symbol function_parameters) [19143 19148])
+                        ("item2" variable nil (reparse-symbol function_parameters) [19150 19155]))                      ) (reparse-symbol indented_block_body) [19118 19337])
+                    ("move_up" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19362 19366])
+                        ("item_list" variable nil (reparse-symbol function_parameters) [19368 19377]))                      ) (reparse-symbol indented_block_body) [19350 20084])
+                    ("move_down" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20107 20111])
+                        ("item_list" variable nil (reparse-symbol function_parameters) [20113 20122]))                      ) (reparse-symbol indented_block_body) [20093 20849])
+                    ("set_items_readonly" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20877 20881])
+                        ("state" variable nil (reparse-symbol function_parameters) [20883 20888]))                      ) (reparse-symbol indented_block_body) [20854 21131])
+                    ("select_item" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21152 21156])
+                        ("item" variable nil (reparse-symbol function_parameters) [21158 21162]))                      ) (reparse-symbol indented_block_body) [21136 21345])
+                    ("unselect_item" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21368 21372])
+                        ("item" variable nil (reparse-symbol function_parameters) [21374 21378]))                      ) (reparse-symbol indented_block_body) [21350 21485])
+                    ("get_last_active_item" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21515 21519])
+                        ("item_type" variable nil (reparse-symbol function_parameters) [21521 21530]))                      ) (reparse-symbol indented_block_body) [21490 21704])
+                    ("select_all" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21724 21728]))                      ) (reparse-symbol indented_block_body) [21709 22101])
+                    ("unselect_all" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22123 22127]))                      ) (reparse-symbol indented_block_body) [22106 22357])
+                    ("select_some_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22384 22388])
+                        ("items" variable nil (reparse-symbol function_parameters) [22390 22395]))                      ) (reparse-symbol indented_block_body) [22362 23084])
+                    ("set_active_item" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23117 23121])
+                        ("item" variable nil (reparse-symbol function_parameters) [23123 23127]))                      ) (reparse-symbol indented_block_body) [23097 23493])
+                    ("get_active_axes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23518 23522]))                      ) (reparse-symbol indented_block_body) [23498 23765])
+                    ("get_active_item" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23790 23794])
+                        ("force" variable nil (reparse-symbol function_parameters) [23796 23801]))                      ) (reparse-symbol indented_block_body) [23770 24146])
+                    ("get_nearest_object" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [24174 24178])
+                        ("pos" variable nil (reparse-symbol function_parameters) [24180 24183])
+                        ("close_dist" variable nil (reparse-symbol function_parameters) [24185 24195]))                      ) (reparse-symbol indented_block_body) [24151 25144])
+                    ("get_nearest_object_in_z" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [25177 25181])
+                        ("pos" variable nil (reparse-symbol function_parameters) [25183 25186]))                      ) (reparse-symbol indented_block_body) [25149 25785])
+                    ("get_context_menu" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [25819 25823]))                      ) (reparse-symbol indented_block_body) [25798 25918])
+                    ("get_plot_parameters_status" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [25954 25958])
+                        ("key" variable nil (reparse-symbol function_parameters) [25960 25963]))                      ) (reparse-symbol indented_block_body) [25923 26084])
+                    ("get_selected_item_parameters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [26122 26126])
+                        ("itemparams" variable nil (reparse-symbol function_parameters) [26128 26138]))                      ) (reparse-symbol indented_block_body) [26089 26476])
+                    ("get_axesparam_class" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [26509 26513])
+                        ("item" variable nil (reparse-symbol function_parameters) [26515 26519]))                      ) (reparse-symbol indented_block_body) [26485 26618])
+                    ("get_plot_parameters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [26651 26655])
+                        ("key" variable nil (reparse-symbol function_parameters) [26657 26660])
+                        ("itemparams" variable nil (reparse-symbol function_parameters) [26662 26672]))                      ) (reparse-symbol indented_block_body) [26627 27598])
+                    ("set_item_parameters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27639 27643])
+                        ("itemparams" variable nil (reparse-symbol function_parameters) [27645 27655]))                      ) (reparse-symbol indented_block_body) [27615 28142])
+                    ("edit_plot_parameters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28172 28176])
+                        ("key" variable nil (reparse-symbol function_parameters) [28178 28181]))                      ) (reparse-symbol indented_block_body) [28147 28506])
+                    ("do_autoscale" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28536 28540])
+                        ("replot" variable nil (reparse-symbol function_parameters) [28542 28548]))                      ) (reparse-symbol indented_block_body) [28519 28721])
+                    ("disable_autoscale" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28748 28752]))                      ) (reparse-symbol indented_block_body) [28726 29004])
+                    ("invalidate" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29024 29028]))                      ) (reparse-symbol indented_block_body) [29009 29279]))                  
+                :type "class")
+                nil [2376 29279]))          
+    :file "baseplot.py"
+    :pointmax 29442
+    :fsize 30230
+    :lastmodtime '(20175 45580)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "plot.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""
+guiqwt.plot
+-----------
+
+The `plot` module provides the following features:
+    * :py:class:`guiqwt.plot.PlotManager`: the `plot manager` is an object to 
+      link `plots`, `panels` and `tools` together for designing highly 
+      versatile graphical user interfaces
+    * :py:class:`guiqwt.plot.CurveWidget`: a ready-to-use widget for curve 
+      displaying with an integrated and preconfigured `plot manager` providing 
+      the `item list panel` and curve-related `tools`
+    * :py:class:`guiqwt.plot.CurveDialog`: a ready-to-use dialog box for 
+      curve displaying with an integrated and preconfigured `plot manager` 
+      providing the `item list panel` and curve-related `tools`
+    * :py:class:`guiqwt.plot.ImageWidget`: a ready-to-use widget for curve 
+      and image displaying with an integrated and preconfigured `plot manager` 
+      providing the `item list panel`, the `contrast adjustment` panel, the 
+      `cross section panels` (along X and Y axes) and image-related `tools` 
+      (e.g. colormap selection tool)
+    * :py:class:`guiqwt.plot.ImageDialog`: a ready-to-use dialog box for 
+      curve and image displaying with an integrated and preconfigured 
+      `plot manager` providing the `item list panel`, the `contrast adjustment` 
+      panel, the `cross section panels` (along X and Y axes) and image-related 
+      `tools` (e.g. colormap selection tool)
+
+.. seealso::
+    
+    Module :py:mod:`guiqwt.curve`
+        Module providing curve-related plot items and plotting widgets
+        
+    Module :py:mod:`guiqwt.image`
+        Module providing image-related plot items and plotting widgets
+        
+    Module :py:mod:`guiqwt.tools`
+        Module providing the `plot tools`
+        
+    Module :py:mod:`guiqwt.panels`
+        Module providing the `plot panels` IDs
+        
+    Module :py:mod:`guiqwt.signals`
+        Module providing all the end-user Qt SIGNAL objects defined in `guiqwt`
+        
+    Module :py:mod:`guiqwt.baseplot`
+        Module providing the `guiqwt` plotting widget base class
+
+
+Class diagrams
+~~~~~~~~~~~~~~
+
+Curve-related widgets with integrated plot manager:
+
+.. image:: images/curve_widgets.png
+
+Image-related widgets with integrated plot manager:
+
+.. image:: images/image_widgets.png
+
+Building your own plot manager:
+
+.. image:: images/my_plot_manager.png
+
+
+Examples
+~~~~~~~~
+
+Simple example *without* the `plot manager`:
+
+.. literalinclude:: ../guiqwt/tests/filtertest1.py
+   :start-after: SHOW
+   :end-before: Workaround for Sphinx v0.6 bug: empty 'end-before' directive
+
+Simple example *with* the `plot manager`:
+even if this simple example does not justify the use of the `plot manager` 
+(this is an unnecessary complication here), it shows how to use it. In more 
+complex applications, using the `plot manager` allows to design highly versatile
+graphical user interfaces.
+
+.. literalinclude:: ../guiqwt/tests/filtertest2.py
+   :start-after: SHOW
+   :end-before: Workaround for Sphinx v0.6 bug: empty 'end-before' directive
+
+Reference
+~~~~~~~~~
+
+.. autoclass:: PlotManager
+   :members:
+   :inherited-members:
+.. autoclass:: CurveWidget
+   :members:
+.. autoclass:: CurveDialog
+   :members:
+.. autoclass:: ImageWidget
+   :members:
+.. autoclass:: ImageDialog
+   :members:
+"""" code nil nil [161 3410])
+            ("weakref" include nil nil [3412 3426])
+            ("" code nil nil [3457 3704])
+            ("guidata.qt.QtCore" include nil nil [3705 3751])
+            ("guidata.configtools" include nil nil [3753 3793])
+            ("guidata.utils" include nil nil [3794 3843])
+            ("guidata.qthelpers" include nil nil [3844 3887])
+            ("guiqwt.config" include nil nil [3905 3932])
+            ("guiqwt.baseplot" include nil nil [3933 3969])
+            ("guiqwt.curve" include nil nil [3970 4018])
+            ("guiqwt.image" include nil nil [4019 4053])
+            ("" code nil nil [4079 4732])
+            ("guiqwt.interfaces" include nil nil [4733 4775])
+            ("" code nil nil [4803 4922])
+            ("DefaultPlotID" type
+               (:superclasses ("object")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [4958 4962]))                  
+                :type "class")
+                nil [4925 4963])
+            ("PlotManager" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""
+    Construct a PlotManager object, a 'controller' that organizes relations 
+    between plots (i.e. :py:class:`guiqwt.curve.CurvePlot` or 
+    :py:class:`guiqwt.image.ImagePlot` objects), panels, 
+    tools (see :py:mod:`guiqwt.tools`) and toolbars
+    """" code nil (reparse-symbol indented_block_body) [4995 5256])
+                    ("__implements__" variable nil (reparse-symbol indented_block_body) [5261 5293])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5312 5316])
+                        ("main" variable nil (reparse-symbol function_parameters) [5318 5322]))                      ) (reparse-symbol indented_block_body) [5299 5903])
+                    ("add_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5921 5925])
+                        ("plot" variable nil (reparse-symbol function_parameters) [5927 5931])
+                        ("plot_id" variable nil (reparse-symbol function_parameters) [5933 5940]))                      ) (reparse-symbol indented_block_body) [5908 7185])
+                    ("set_default_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7219 7223])
+                        ("plot" variable nil (reparse-symbol function_parameters) [7225 7229]))                      ) (reparse-symbol indented_block_body) [7198 7396])
+                    ("get_default_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7430 7434]))                      ) (reparse-symbol indented_block_body) [7409 7604])
+                    ("add_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7623 7627])
+                        ("panel" variable nil (reparse-symbol function_parameters) [7629 7634]))                      ) (reparse-symbol indented_block_body) [7609 8048])
+                    ("configure_panels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8082 8086]))                      ) (reparse-symbol indented_block_body) [8061 8519])
+                    ("add_toolbar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8540 8544])
+                        ("toolbar" variable nil (reparse-symbol function_parameters) [8546 8553])
+                        ("toolbar_id" variable nil (reparse-symbol function_parameters) [8555 8565]))                      ) (reparse-symbol indented_block_body) [8524 8926])
+                    ("set_default_toolbar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8967 8971])
+                        ("toolbar" variable nil (reparse-symbol function_parameters) [8973 8980]))                      ) (reparse-symbol indented_block_body) [8943 9074])
+                    ("get_default_toolbar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9111 9115]))                      ) (reparse-symbol indented_block_body) [9087 9209])
+                    ("add_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9227 9231])
+                        ("ToolKlass" variable nil (reparse-symbol function_parameters) [9233 9242])
+                        ("args" variable nil (reparse-symbol function_parameters) [9244 9249])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [9251 9259]))                      ) (reparse-symbol indented_block_body) [9214 10149])
+                    ("get_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10175 10179])
+                        ("ToolKlass" variable nil (reparse-symbol function_parameters) [10181 10190]))                      ) (reparse-symbol indented_block_body) [10162 10347])
+                    ("add_separator_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10383 10387])
+                        ("toolbar_id" variable nil (reparse-symbol function_parameters) [10389 10399]))                      ) (reparse-symbol indented_block_body) [10360 10844])
+                    ("set_default_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10878 10882])
+                        ("tool" variable nil (reparse-symbol function_parameters) [10884 10888]))                      ) (reparse-symbol indented_block_body) [10857 10973])
+                    ("get_default_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10999 11003]))                      ) (reparse-symbol indented_block_body) [10978 11088])
+                    ("activate_default_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11119 11123]))                      ) (reparse-symbol indented_block_body) [11093 11223])
+                    ("get_active_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11248 11252]))                      ) (reparse-symbol indented_block_body) [11228 11338])
+                    ("set_active_tool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11363 11367])
+                        ("tool" variable nil (reparse-symbol function_parameters) [11369 11373]))                      ) (reparse-symbol indented_block_body) [11343 11539])
+                    ("get_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11557 11561])
+                        ("plot_id" variable nil (reparse-symbol function_parameters) [11563 11570]))                      ) (reparse-symbol indented_block_body) [11544 11863])
+                    ("get_plots" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11882 11886]))                      ) (reparse-symbol indented_block_body) [11868 11984])
+                    ("get_active_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12009 12013]))                      ) (reparse-symbol indented_block_body) [11989 12356])
+                    ("get_tool_group" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12380 12384])
+                        ("groupname" variable nil (reparse-symbol function_parameters) [12386 12395]))                      ) (reparse-symbol indented_block_body) [12361 12639])
+                    ("get_main" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12657 12661]))                      ) (reparse-symbol indented_block_body) [12644 12973])
+                    ("set_main" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12991 12995])
+                        ("main" variable nil (reparse-symbol function_parameters) [12997 13001]))                      ) (reparse-symbol indented_block_body) [12978 13029])
+                    ("get_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13048 13052])
+                        ("panel_id" variable nil (reparse-symbol function_parameters) [13054 13062]))                      ) (reparse-symbol indented_block_body) [13034 13222])
+                    ("get_itemlist_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13258 13262]))                      ) (reparse-symbol indented_block_body) [13235 13518])
+                    ("get_contrast_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13554 13558]))                      ) (reparse-symbol indented_block_body) [13531 13843])
+                    ("set_contrast_range" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13879 13883])
+                        ("zmin" variable nil (reparse-symbol function_parameters) [13885 13889])
+                        ("zmax" variable nil (reparse-symbol function_parameters) [13891 13895]))                      ) (reparse-symbol indented_block_body) [13856 14382])
+                    ("get_xcs_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14413 14417]))                      ) (reparse-symbol indented_block_body) [14395 14699])
+                    ("get_ycs_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14730 14734]))                      ) (reparse-symbol indented_block_body) [14712 15016])
+                    ("update_cross_sections" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15055 15059]))                      ) (reparse-symbol indented_block_body) [15029 15612])
+                    ("get_toolbar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15633 15637])
+                        ("toolbar_id" variable nil (reparse-symbol function_parameters) [15639 15649]))                      ) (reparse-symbol indented_block_body) [15617 15842])
+                    ("get_context_menu" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15868 15872])
+                        ("plot" variable nil (reparse-symbol function_parameters) [15874 15878]))                      ) (reparse-symbol indented_block_body) [15847 16199])
+                    ("update_tools_status" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16236 16240])
+                        ("plot" variable nil (reparse-symbol function_parameters) [16242 16246]))                      ) (reparse-symbol indented_block_body) [16212 16445])
+                    ("create_action" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16468 16472])
+                        ("title" variable nil (reparse-symbol function_parameters) [16474 16479])
+                        ("triggered" variable nil (reparse-symbol function_parameters) [16481 16490])
+                        ("toggled" variable nil (reparse-symbol function_parameters) [16497 16504])
+                        ("shortcut" variable nil (reparse-symbol function_parameters) [16533 16541])
+                        ("icon" variable nil (reparse-symbol function_parameters) [16548 16552])
+                        ("tip" variable nil (reparse-symbol function_parameters) [16559 16562]))                      ) (reparse-symbol indented_block_body) [16450 16752])
+                    ("register_standard_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16881 16885]))                      ) (reparse-symbol indented_block_body) [16853 17703])
+                    ("register_curve_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17733 17737]))                      ) (reparse-symbol indented_block_body) [17708 18208])
+                    ("register_image_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18238 18242]))                      ) (reparse-symbol indented_block_body) [18213 19102])
+                    ("register_other_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19140 19144]))                      ) (reparse-symbol indented_block_body) [19115 19635])
+                    ("register_all_curve_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19677 19681]))                      ) (reparse-symbol indented_block_body) [19648 20439])
+                    ("register_all_image_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20481 20485]))                      ) (reparse-symbol indented_block_body) [20452 21243])
+                    ("synchronize_axis" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21277 21281])
+                        ("axis" variable nil (reparse-symbol function_parameters) [21283 21287])
+                        ("plots" variable nil (reparse-symbol function_parameters) [21289 21294]))                      ) (reparse-symbol indented_block_body) [21256 21622])
+                    ("plot_axis_changed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21649 21653])
+                        ("plot" variable nil (reparse-symbol function_parameters) [21655 21659]))                      ) (reparse-symbol indented_block_body) [21627 22119]))                  
+                :type "class")
+                nil [4964 22119])
+            ("assert_interfaces_valid" code nil nil [22128 22164])
+            ("configure_plot_splitter" function (:arguments 
+              ( ("qsplit" variable nil (reparse-symbol function_parameters) [22417 22423])
+                ("decreasing_size" variable nil (reparse-symbol function_parameters) [22425 22440]))              ) nil [22389 22768])
+            ("SubplotWidget" type
+               (:superclasses ("QSplitter")
+                :members 
+                  ( (""""Construct a Widget that helps managing several plots
+    together handled by the same manager
+
+    Since the plots must be added to the manager before the panels
+    the add_itemlist method can be called after having declared
+    all the subplots
+    """" code nil (reparse-symbol indented_block_body) [22805 23062])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23080 23084])
+                        ("manager" variable nil (reparse-symbol function_parameters) [23086 23093])
+                        ("parent" variable nil (reparse-symbol function_parameters) [23095 23101]))                      ) (reparse-symbol indented_block_body) [23067 23456])
+                    ("add_itemlist" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23478 23482])
+                        ("show_itemlist" variable nil (reparse-symbol function_parameters) [23484 23497]))                      ) (reparse-symbol indented_block_body) [23461 23719])
+                    ("add_subplot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23740 23744])
+                        ("plot" variable nil (reparse-symbol function_parameters) [23746 23750])
+                        ("i" variable nil (reparse-symbol function_parameters) [23752 23753])
+                        ("j" variable nil (reparse-symbol function_parameters) [23757 23758])
+                        ("plot_id" variable nil (reparse-symbol function_parameters) [23762 23769]))                      ) (reparse-symbol indented_block_body) [23724 24005]))                  
+                :type "class")
+                nil [22769 24005])
+            ("BaseCurveWidget" type
+               (:superclasses ("QSplitter")
+                :members 
+                  ( (""""
+    Construct a BaseCurveWidget object, which includes:
+        * A plot (:py:class:`guiqwt.curve.CurvePlot`)
+        * An `item list` panel (:py:class:`guiqwt.curve.PlotItemList`)
+        
+    This object does nothing in itself because plot and panels are not 
+    connected to each other.
+    See children class :py:class:`guiqwt.plot.CurveWidget`
+    """" code nil (reparse-symbol indented_block_body) [24044 24405])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [24423 24427])
+                        ("parent" variable nil (reparse-symbol function_parameters) [24429 24435])
+                        ("title" variable nil (reparse-symbol function_parameters) [24442 24447])
+                        ("xlabel" variable nil (reparse-symbol function_parameters) [24471 24477])
+                        ("ylabel" variable nil (reparse-symbol function_parameters) [24484 24490])
+                        ("xunit" variable nil (reparse-symbol function_parameters) [24497 24502])
+                        ("yunit" variable nil (reparse-symbol function_parameters) [24509 24514])
+                        ("section" variable nil (reparse-symbol function_parameters) [24538 24545])
+                        ("show_itemlist" variable nil (reparse-symbol function_parameters) [24554 24567])
+                        ("gridparam" variable nil (reparse-symbol function_parameters) [24575 24584]))                      ) (reparse-symbol indented_block_body) [24410 25150]))                  
+                :type "class")
+                nil [24006 25150])
+            ("CurveWidget" type
+               (:superclasses ("BaseCurveWidget" "PlotManager")
+                :members 
+                  ( (""""
+    Construct a CurveWidget object: plotting widget with integrated 
+    plot manager
+        * parent: parent widget
+        * title: plot title
+        * xlabel: (bottom axis title, top axis title) or bottom axis title only
+        * ylabel: (left axis title, right axis title) or left axis title only
+        * xunit: (bottom axis unit, top axis unit) or bottom axis unit only
+        * yunit: (left axis unit, right axis unit) or left axis unit only
+        * panels (optional): additionnal panels (list, tuple)
+    """" code nil (reparse-symbol indented_block_body) [25204 25731])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [25749 25753])
+                        ("parent" variable nil (reparse-symbol function_parameters) [25755 25761])
+                        ("title" variable nil (reparse-symbol function_parameters) [25768 25773])
+                        ("xlabel" variable nil (reparse-symbol function_parameters) [25797 25803])
+                        ("ylabel" variable nil (reparse-symbol function_parameters) [25810 25816])
+                        ("xunit" variable nil (reparse-symbol function_parameters) [25823 25828])
+                        ("yunit" variable nil (reparse-symbol function_parameters) [25835 25840])
+                        ("section" variable nil (reparse-symbol function_parameters) [25864 25871])
+                        ("show_itemlist" variable nil (reparse-symbol function_parameters) [25880 25893])
+                        ("gridparam" variable nil (reparse-symbol function_parameters) [25901 25910])
+                        ("panels" variable nil (reparse-symbol function_parameters) [25934 25940]))                      ) (reparse-symbol indented_block_body) [25736 26396]))                  
+                :type "class")
+                nil [25151 26396])
+            ("CurveWidgetMixin" type
+               (:superclasses ("PlotManager")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [26451 26455])
+                        ("wintitle" variable nil (reparse-symbol function_parameters) [26457 26465])
+                        ("icon" variable nil (reparse-symbol function_parameters) [26481 26485])
+                        ("toolbar" variable nil (reparse-symbol function_parameters) [26517 26524])
+                        ("options" variable nil (reparse-symbol function_parameters) [26532 26539])
+                        ("panels" variable nil (reparse-symbol function_parameters) [26546 26552]))                      ) (reparse-symbol indented_block_body) [26438 27259])
+                    ("setup_widget_layout" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27296 27300]))                      ) (reparse-symbol indented_block_body) [27272 27337])
+                    ("setup_widget_properties" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27378 27382])
+                        ("wintitle" variable nil (reparse-symbol function_parameters) [27384 27392])
+                        ("icon" variable nil (reparse-symbol function_parameters) [27394 27398]))                      ) (reparse-symbol indented_block_body) [27350 27615])
+                    ("register_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27639 27643]))                      ) (reparse-symbol indented_block_body) [27620 28065])
+                    ("create_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28086 28090])
+                        ("options" variable nil (reparse-symbol function_parameters) [28092 28099]))                      ) (reparse-symbol indented_block_body) [28070 28753]))                  
+                :type "class")
+                nil [26397 28753])
+            ("CurveDialog" type
+               (:superclasses ("QDialog" "CurveWidgetMixin")
+                :members 
+                  ( (""""
+    Construct a CurveDialog object: plotting dialog box with integrated 
+    plot manager
+        * wintitle: window title
+        * icon: window icon
+        * edit: editable state
+        * toolbar: show/hide toolbar
+        * options: options sent to the :py:class:`guiqwt.curve.CurvePlot` object
+          (dictionary)
+        * parent: parent widget
+        * panels (optional): additionnal panels (list, tuple)
+    """" code nil (reparse-symbol indented_block_body) [28804 29232])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29250 29254])
+                        ("wintitle" variable nil (reparse-symbol function_parameters) [29256 29264])
+                        ("icon" variable nil (reparse-symbol function_parameters) [29280 29284])
+                        ("edit" variable nil (reparse-symbol function_parameters) [29299 29303])
+                        ("toolbar" variable nil (reparse-symbol function_parameters) [29328 29335])
+                        ("options" variable nil (reparse-symbol function_parameters) [29343 29350])
+                        ("parent" variable nil (reparse-symbol function_parameters) [29357 29363])
+                        ("panels" variable nil (reparse-symbol function_parameters) [29370 29376]))                      ) (reparse-symbol indented_block_body) [29237 29706])
+                    ("setup_widget_layout" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29743 29747]))                      ) (reparse-symbol indented_block_body) [29719 30062])
+                    ("install_button_layout" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [30101 30105]))                      ) (reparse-symbol indented_block_body) [30075 30627]))                  
+                :type "class")
+                nil [28754 30627])
+            ("CurveWindow" type
+               (:superclasses ("QMainWindow" "CurveWidgetMixin")
+                :members 
+                  ( (""""
+    Construct a CurveWindow object: plotting window with integrated plot manager
+        * wintitle: window title
+        * icon: window icon
+        * toolbar: show/hide toolbar
+        * options: options sent to the :py:class:`guiqwt.curve.CurvePlot` object
+          (dictionary)
+        * parent: parent widget
+        * panels (optional): additionnal panels (list, tuple)
+    """" code nil (reparse-symbol indented_block_body) [30690 31078])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31096 31100])
+                        ("wintitle" variable nil (reparse-symbol function_parameters) [31102 31110])
+                        ("icon" variable nil (reparse-symbol function_parameters) [31126 31130])
+                        ("toolbar" variable nil (reparse-symbol function_parameters) [31162 31169])
+                        ("options" variable nil (reparse-symbol function_parameters) [31177 31184])
+                        ("parent" variable nil (reparse-symbol function_parameters) [31191 31197])
+                        ("panels" variable nil (reparse-symbol function_parameters) [31204 31210]))                      ) (reparse-symbol indented_block_body) [31083 31447])
+                    ("setup_widget_layout" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31484 31488]))                      ) (reparse-symbol indented_block_body) [31460 31637])
+                    ("closeEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31665 31669])
+                        ("event" variable nil (reparse-symbol function_parameters) [31671 31676]))                      ) (reparse-symbol indented_block_body) [31650 32021]))                  
+                :type "class")
+                nil [30636 32021])
+            ("BaseImageWidget" type
+               (:superclasses ("QSplitter")
+                :members 
+                  ( (""""
+    Construct a BaseImageWidget object, which includes:
+        * A plot (:py:class:`guiqwt.curve.CurvePlot`)
+        * An `item list` panel (:py:class:`guiqwt.curve.PlotItemList`)
+        * A `contrast adjustment` panel 
+          (:py:class:`guiqwt.histogram.ContrastAdjustment`)
+        * An `X-axis cross section` panel
+          (:py:class:`guiqwt.histogram.XCrossSection`)
+        * An `Y-axis cross section` panel
+          (:py:class:`guiqwt.histogram.YCrossSection`)
+        
+    This object does nothing in itself because plot and panels are not 
+    connected to each other.
+    See children class :py:class:`guiqwt.plot.ImageWidget`
+    """" code nil (reparse-symbol indented_block_body) [32301 32957])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32975 32979])
+                        ("parent" variable nil (reparse-symbol function_parameters) [32981 32987])
+                        ("title" variable nil (reparse-symbol function_parameters) [32994 32999])
+                        ("xlabel" variable nil (reparse-symbol function_parameters) [33021 33027])
+                        ("ylabel" variable nil (reparse-symbol function_parameters) [33038 33044])
+                        ("zlabel" variable nil (reparse-symbol function_parameters) [33055 33061])
+                        ("xunit" variable nil (reparse-symbol function_parameters) [33085 33090])
+                        ("yunit" variable nil (reparse-symbol function_parameters) [33101 33106])
+                        ("zunit" variable nil (reparse-symbol function_parameters) [33117 33122])
+                        ("yreverse" variable nil (reparse-symbol function_parameters) [33129 33137])
+                        ("colormap" variable nil (reparse-symbol function_parameters) [33161 33169])
+                        ("aspect_ratio" variable nil (reparse-symbol function_parameters) [33177 33189])
+                        ("lock_aspect_ratio" variable nil (reparse-symbol function_parameters) [33195 33212])
+                        ("show_contrast" variable nil (reparse-symbol function_parameters) [33236 33249])
+                        ("show_itemlist" variable nil (reparse-symbol function_parameters) [33257 33270])
+                        ("show_xsection" variable nil (reparse-symbol function_parameters) [33278 33291])
+                        ("show_ysection" variable nil (reparse-symbol function_parameters) [33316 33329])
+                        ("xsection_pos" variable nil (reparse-symbol function_parameters) [33337 33349])
+                        ("ysection_pos" variable nil (reparse-symbol function_parameters) [33357 33369])
+                        ("gridparam" variable nil (reparse-symbol function_parameters) [33396 33405]))                      ) (reparse-symbol indented_block_body) [32962 36106])
+                    ("adjust_ycsw_height" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [36142 36146])
+                        ("height" variable nil (reparse-symbol function_parameters) [36148 36154]))                      ) (reparse-symbol indented_block_body) [36119 36356])
+                    ("xcsw_is_visible" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [36389 36393])
+                        ("state" variable nil (reparse-symbol function_parameters) [36395 36400]))                      ) (reparse-symbol indented_block_body) [36369 36553]))                  
+                :type "class")
+                nil [32263 36553])
+            ("ImageWidget" type
+               (:superclasses ("BaseImageWidget" "PlotManager")
+                :members 
+                  ( (""""
+    Construct a ImageWidget object: plotting widget with integrated 
+    plot manager
+        * parent: parent widget
+        * title: plot title (string)
+        * xlabel, ylabel, zlabel: resp. bottom, left and right axis titles 
+          (strings)
+        * xunit, yunit, zunit: resp. bottom, left and right axis units (strings)
+        * yreverse: reversing Y-axis (bool)
+        * aspect_ratio: height to width ratio (float)
+        * lock_aspect_ratio: locking aspect ratio (bool)
+        * show_contrast: showing contrast adjustment tool (bool)
+        * show_xsection: showing x-axis cross section plot (bool)
+        * show_ysection: showing y-axis cross section plot (bool)
+        * xsection_pos: x-axis cross section plot position 
+          (string: "top", "bottom")
+        * ysection_pos: y-axis cross section plot position 
+          (string: "left", "right")
+        * panels (optional): additionnal panels (list, tuple)
+    """" code nil (reparse-symbol indented_block_body) [36607 37556])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37574 37578])
+                        ("parent" variable nil (reparse-symbol function_parameters) [37580 37586])
+                        ("title" variable nil (reparse-symbol function_parameters) [37593 37598])
+                        ("xlabel" variable nil (reparse-symbol function_parameters) [37620 37626])
+                        ("ylabel" variable nil (reparse-symbol function_parameters) [37637 37643])
+                        ("zlabel" variable nil (reparse-symbol function_parameters) [37654 37660])
+                        ("xunit" variable nil (reparse-symbol function_parameters) [37684 37689])
+                        ("yunit" variable nil (reparse-symbol function_parameters) [37700 37705])
+                        ("zunit" variable nil (reparse-symbol function_parameters) [37716 37721])
+                        ("yreverse" variable nil (reparse-symbol function_parameters) [37728 37736])
+                        ("colormap" variable nil (reparse-symbol function_parameters) [37760 37768])
+                        ("aspect_ratio" variable nil (reparse-symbol function_parameters) [37776 37788])
+                        ("lock_aspect_ratio" variable nil (reparse-symbol function_parameters) [37794 37811])
+                        ("show_contrast" variable nil (reparse-symbol function_parameters) [37835 37848])
+                        ("show_itemlist" variable nil (reparse-symbol function_parameters) [37856 37869])
+                        ("show_xsection" variable nil (reparse-symbol function_parameters) [37877 37890])
+                        ("show_ysection" variable nil (reparse-symbol function_parameters) [37915 37928])
+                        ("xsection_pos" variable nil (reparse-symbol function_parameters) [37936 37948])
+                        ("ysection_pos" variable nil (reparse-symbol function_parameters) [37956 37968])
+                        ("gridparam" variable nil (reparse-symbol function_parameters) [37995 38004])
+                        ("panels" variable nil (reparse-symbol function_parameters) [38011 38017]))                      ) (reparse-symbol indented_block_body) [37561 38713]))                  
+                :type "class")
+                nil [36554 38713])
+            ("ImageWidgetMixin" type
+               (:superclasses ("CurveWidgetMixin")
+                :members 
+                  ( ("register_tools" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38779 38783]))                      ) (reparse-symbol indented_block_body) [38760 39205])
+                    ("create_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [39226 39230])
+                        ("options" variable nil (reparse-symbol function_parameters) [39232 39239])
+                        ("row" variable nil (reparse-symbol function_parameters) [39241 39244])
+                        ("column" variable nil (reparse-symbol function_parameters) [39248 39254])
+                        ("rowspan" variable nil (reparse-symbol function_parameters) [39258 39265])
+                        ("columnspan" variable nil (reparse-symbol function_parameters) [39269 39279]))                      ) (reparse-symbol indented_block_body) [39210 40201]))                  
+                :type "class")
+                nil [38714 40201])
+            ("ImageDialog" type
+               (:superclasses ("CurveDialog" "ImageWidgetMixin")
+                :members 
+                  ( (""""
+    Construct a ImageDialog object: plotting dialog box with integrated 
+    plot manager
+        * wintitle: window title
+        * icon: window icon
+        * edit: editable state
+        * toolbar: show/hide toolbar
+        * options: options sent to the :py:class:`guiqwt.image.ImagePlot` object
+          (dictionary)
+        * parent: parent widget
+        * panels (optional): additionnal panels (list, tuple)
+    """" code nil (reparse-symbol indented_block_body) [40256 40684])
+                    ("pass" code nil (reparse-symbol indented_block_body) [40689 40693]))                  
+                :type "class")
+                nil [40202 40694])
+            ("ImageWindow" type
+               (:superclasses ("CurveWindow" "ImageWidgetMixin")
+                :members 
+                  ( (""""
+    Construct a ImageWindow object: plotting window with integrated plot manager
+        * wintitle: window title
+        * icon: window icon
+        * toolbar: show/hide toolbar
+        * options: options sent to the :py:class:`guiqwt.image.ImagePlot` object
+          (dictionary)
+        * parent: parent widget
+        * panels (optional): additionnal panels (list, tuple)
+    """" code nil (reparse-symbol indented_block_body) [40749 41137])
+                    ("pass" code nil (reparse-symbol indented_block_body) [41142 41146]))                  
+                :type "class")
+                nil [40695 41147]))          
+    :file "plot.py"
+    :pointmax 41147
+    :fsize 42234
+    :lastmodtime '(20175 45580)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "resizedialog.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("__future__" include nil nil [161 192])
+            ("" code nil nil [223 340])
+            ("guidata.qt.QtCore" include nil nil [341 387])
+            ("guiqwt.config" include nil nil [390 417])
+            ("is_edit_valid" function (:arguments 
+              ( ("edit" variable nil (reparse-symbol function_parameters) [438 442]))              ) nil [420 649])
+            ("ResizeDialog" type
+               (:superclasses ("QDialog")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [697 701])
+                        ("parent" variable nil (reparse-symbol function_parameters) [703 709])
+                        ("new_size" variable nil (reparse-symbol function_parameters) [711 719])
+                        ("old_size" variable nil (reparse-symbol function_parameters) [721 729])
+                        ("text" variable nil (reparse-symbol function_parameters) [731 735]))                      ) (reparse-symbol indented_block_body) [684 2557])
+                    ("update_widgets" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2581 2585]))                      ) (reparse-symbol indented_block_body) [2562 2868])
+                    ("width_changed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2899 2903])
+                        ("text" variable nil (reparse-symbol function_parameters) [2905 2909]))                      ) (reparse-symbol indented_block_body) [2881 3208])
+                    ("height_changed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3232 3236])
+                        ("text" variable nil (reparse-symbol function_parameters) [3238 3242]))                      ) (reparse-symbol indented_block_body) [3213 3541])
+                    ("get_zoom" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3567 3571]))                      ) (reparse-symbol indented_block_body) [3554 3717]))                  
+                :type "class")
+                nil [651 3717])
+            ("if" code nil nil [3723 3964]))          
+    :file "resizedialog.py"
+    :pointmax 3964
+    :fsize 4084
+    :lastmodtime '(20175 45580)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "histogram.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""
+guiqwt.histogram
+----------------
+
+The `histogram` module provides histogram related objects:
+    * :py:class:`guiqwt.histogram.HistogramItem`: an histogram plot item
+    * :py:class:`guiqwt.histogram.ContrastAdjustment`: the `contrast
+      adjustment panel`
+    * :py:class:`guiqwt.histogram.LevelsHistogram`: a curve plotting widget
+      used by the `contrast adjustment panel` to compute, manipulate and
+      display the image levels histogram
+
+``HistogramItem`` objects are plot items (derived from QwtPlotItem) that may
+be displayed on a 2D plotting widget like :py:class:`guiqwt.curve.CurvePlot`
+or :py:class:`guiqwt.image.ImagePlot`.
+
+Example
+~~~~~~~
+
+Simple histogram plotting example:
+
+.. literalinclude:: ../guiqwt/tests/histogram.py
+
+Reference
+~~~~~~~~~
+
+.. autoclass:: HistogramItem
+   :members:
+   :inherited-members:
+.. autoclass:: ContrastAdjustment
+   :members:
+   :inherited-members:
+.. autoclass:: LevelsHistogram
+   :members:
+   :inherited-members:
+"""" code nil nil [186 1164])
+            ("numpy" include nil nil [1165 1183])
+            ("guidata.qt.QtCore" include nil nil [1184 1216])
+            ("guidata.qt.QtGui" include nil nil [1217 1280])
+            ("guidata.dataset.datatypes" include nil nil [1282 1327])
+            ("guidata.dataset.dataitems" include nil nil [1328 1375])
+            ("guidata.utils" include nil nil [1376 1441])
+            ("guidata.configtools" include nil nil [1442 1500])
+            ("guidata.qthelpers" include nil nil [1501 1557])
+            ("guiqwt.transitional" include nil nil [1575 1619])
+            ("guiqwt.config" include nil nil [1620 1653])
+            ("" code nil nil [1684 1774])
+            ("guiqwt.panels" include nil nil [1775 1825])
+            ("guiqwt.curve" include nil nil [1826 1871])
+            ("guiqwt.image" include nil nil [1872 1906])
+            ("guiqwt.styles" include nil nil [1907 1959])
+            ("guiqwt.shapes" include nil nil [1960 2001])
+            ("" code nil nil [2027 2118])
+            ("" code nil nil [2146 2263])
+            ("guiqwt.plot" include nil nil [2264 2299])
+            ("HistDataSource" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""
+    An objects that provides an Histogram data source interface
+    to a simple numpy array of data
+    """" code nil (reparse-symbol indented_block_body) [2336 2447])
+                    ("__implements__" variable nil (reparse-symbol indented_block_body) [2452 2487])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2505 2509])
+                        ("data" variable nil (reparse-symbol function_parameters) [2511 2515]))                      ) (reparse-symbol indented_block_body) [2492 2543])
+                    ("get_histogram" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2566 2570])
+                        ("nbins" variable nil (reparse-symbol function_parameters) [2572 2577]))                      ) (reparse-symbol indented_block_body) [2548 2686]))                  
+                :type "class")
+                nil [2302 2686])
+            ("assert_interfaces_valid" code nil nil [2687 2726])
+            ("hist_range_threshold" function (:arguments 
+              ( ("hist" variable nil (reparse-symbol function_parameters) [2754 2758])
+                ("bin_edges" variable nil (reparse-symbol function_parameters) [2760 2769])
+                ("percent" variable nil (reparse-symbol function_parameters) [2771 2778]))              ) nil [2729 3042])
+            ("lut_range_threshold" function (:arguments 
+              ( ("item" variable nil (reparse-symbol function_parameters) [3067 3071])
+                ("bins" variable nil (reparse-symbol function_parameters) [3073 3077])
+                ("percent" variable nil (reparse-symbol function_parameters) [3079 3086]))              ) nil [3043 3194])
+            ("HistogramItem" type
+               (:superclasses ("CurveItem")
+                :members 
+                  ( (""""A Qwt item representing histogram data"""" code nil (reparse-symbol indented_block_body) [3232 3276])
+                    ("__implements__" variable nil (reparse-symbol indented_block_body) [3281 3314])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3333 3337])
+                        ("curveparam" variable nil (reparse-symbol function_parameters) [3339 3349])
+                        ("histparam" variable nil (reparse-symbol function_parameters) [3356 3365]))                      ) (reparse-symbol indented_block_body) [3320 4032])
+                    ("set_hist_source" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4057 4061])
+                        ("src" variable nil (reparse-symbol function_parameters) [4063 4066]))                      ) (reparse-symbol indented_block_body) [4037 4292])
+                    ("set_hist_data" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4315 4319])
+                        ("data" variable nil (reparse-symbol function_parameters) [4321 4325]))                      ) (reparse-symbol indented_block_body) [4297 4412])
+                    ("set_logscale" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4434 4438])
+                        ("state" variable nil (reparse-symbol function_parameters) [4440 4445]))                      ) (reparse-symbol indented_block_body) [4417 4605])
+                    ("get_logscale" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4627 4631]))                      ) (reparse-symbol indented_block_body) [4610 4709])
+                    ("set_bins" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4727 4731])
+                        ("n_bins" variable nil (reparse-symbol function_parameters) [4733 4739]))                      ) (reparse-symbol indented_block_body) [4714 4801])
+                    ("get_bins" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4819 4823]))                      ) (reparse-symbol indented_block_body) [4806 4851])
+                    ("compute_histogram" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4878 4882]))                      ) (reparse-symbol indented_block_body) [4856 4937])
+                    ("update_histogram" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4963 4967]))                      ) (reparse-symbol indented_block_body) [4942 5594])
+                    ("update_params" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5617 5621]))                      ) (reparse-symbol indented_block_body) [5599 5703])
+                    ("get_item_parameters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5732 5736])
+                        ("itemparams" variable nil (reparse-symbol function_parameters) [5738 5748]))                      ) (reparse-symbol indented_block_body) [5708 5870])
+                    ("set_item_parameters" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5899 5903])
+                        ("itemparams" variable nil (reparse-symbol function_parameters) [5905 5915]))                      ) (reparse-symbol indented_block_body) [5875 6130]))                  
+                :type "class")
+                nil [3196 6130])
+            ("assert_interfaces_valid" code nil nil [6131 6169])
+            ("LevelsHistogram" type
+               (:superclasses ("CurvePlot")
+                :members 
+                  ( (""""Image levels histogram widget"""" code nil (reparse-symbol indented_block_body) [6210 6245])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6263 6267])
+                        ("parent" variable nil (reparse-symbol function_parameters) [6269 6275]))                      ) (reparse-symbol indented_block_body) [6250 7431])
+                    ("connect_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7453 7457])
+                        ("plot" variable nil (reparse-symbol function_parameters) [7459 7463]))                      ) (reparse-symbol indented_block_body) [7436 7909])
+                    ("tracked_items_gen" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7936 7940]))                      ) (reparse-symbol indented_block_body) [7914 8084])
+                    ("__del_known_items" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8111 8115])
+                        ("known_items" variable nil (reparse-symbol function_parameters) [8117 8128])
+                        ("items" variable nil (reparse-symbol function_parameters) [8130 8135]))                      ) (reparse-symbol indented_block_body) [8089 8358])
+                    ("selection_changed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8385 8389])
+                        ("plot" variable nil (reparse-symbol function_parameters) [8391 8395]))                      ) (reparse-symbol indented_block_body) [8363 10559])
+                    ("active_item_changed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10588 10592])
+                        ("plot" variable nil (reparse-symbol function_parameters) [10594 10598]))                      ) (reparse-symbol indented_block_body) [10564 11296])
+                    ("set_range_style" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11321 11325])
+                        ("multiple_ranges" variable nil (reparse-symbol function_parameters) [11327 11342]))                      ) (reparse-symbol indented_block_body) [11301 11589])
+                    ("set_range" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11608 11612])
+                        ("_min" variable nil (reparse-symbol function_parameters) [11614 11618])
+                        ("_max" variable nil (reparse-symbol function_parameters) [11620 11624]))                      ) (reparse-symbol indented_block_body) [11594 11861])
+                    ("range_changed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11884 11888])
+                        ("_rangesel" variable nil (reparse-symbol function_parameters) [11890 11899])
+                        ("_min" variable nil (reparse-symbol function_parameters) [11901 11905])
+                        ("_max" variable nil (reparse-symbol function_parameters) [11907 11911]))                      ) (reparse-symbol indented_block_body) [11866 12047])
+                    ("set_full_range" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12071 12075]))                      ) (reparse-symbol indented_block_body) [12052 12472])
+                    ("apply_min_func" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12496 12500])
+                        ("item" variable nil (reparse-symbol function_parameters) [12502 12506])
+                        ("curve" variable nil (reparse-symbol function_parameters) [12508 12513])
+                        ("min" variable nil (reparse-symbol function_parameters) [12515 12518]))                      ) (reparse-symbol indented_block_body) [12477 12588])
+                    ("apply_max_func" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12612 12616])
+                        ("item" variable nil (reparse-symbol function_parameters) [12618 12622])
+                        ("curve" variable nil (reparse-symbol function_parameters) [12624 12629])
+                        ("max" variable nil (reparse-symbol function_parameters) [12631 12634]))                      ) (reparse-symbol indented_block_body) [12593 12704])
+                    ("reduce_range_func" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12731 12735])
+                        ("item" variable nil (reparse-symbol function_parameters) [12737 12741])
+                        ("curve" variable nil (reparse-symbol function_parameters) [12743 12748])
+                        ("percent" variable nil (reparse-symbol function_parameters) [12750 12757]))                      ) (reparse-symbol indented_block_body) [12709 12822])
+                    ("apply_range_function" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12852 12856])
+                        ("func" variable nil (reparse-symbol function_parameters) [12858 12862])
+                        ("args" variable nil (reparse-symbol function_parameters) [12864 12869])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [12871 12879]))                      ) (reparse-symbol indented_block_body) [12827 13174])
+                    ("eliminate_outliers" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13202 13206])
+                        ("percent" variable nil (reparse-symbol function_parameters) [13208 13215]))                      ) (reparse-symbol indented_block_body) [13179 13448])
+                    ("set_min" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13465 13469])
+                        ("_min" variable nil (reparse-symbol function_parameters) [13471 13475]))                      ) (reparse-symbol indented_block_body) [13453 13539])
+                    ("set_max" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13556 13560])
+                        ("_max" variable nil (reparse-symbol function_parameters) [13562 13566]))                      ) (reparse-symbol indented_block_body) [13544 13630]))                  
+                :type "class")
+                nil [6172 13630])
+            ("EliminateOutliersParam" type
+               (:superclasses ("DataSet")
+                :members 
+                  ( ("percent" variable nil (reparse-symbol indented_block_body) [13675 13785]))                  
+                :type "class")
+                nil [13632 13786])
+            ("ContrastAdjustment" type
+               (:superclasses ("PanelWidget")
+                :members 
+                  ( (""""Contrast adjustment tool"""" code nil (reparse-symbol indented_block_body) [13831 13861])
+                    ("__implements__" variable nil (reparse-symbol indented_block_body) [13866 13892])
+                    ("PANEL_ID" variable nil (reparse-symbol indented_block_body) [13897 13919])
+                    ("PANEL_TITLE" variable nil (reparse-symbol indented_block_body) [13924 13967])
+                    ("PANEL_ICON" variable nil (reparse-symbol indented_block_body) [13972 13999])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14018 14022])
+                        ("parent" variable nil (reparse-symbol function_parameters) [14024 14030]))                      ) (reparse-symbol indented_block_body) [14005 15741])
+                    ("register_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15765 15769])
+                        ("manager" variable nil (reparse-symbol function_parameters) [15771 15778]))                      ) (reparse-symbol indented_block_body) [15746 16151])
+                    ("configure_panel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16176 16180]))                      ) (reparse-symbol indented_block_body) [16156 17069])
+                    ("get_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17087 17091]))                      ) (reparse-symbol indented_block_body) [17074 17140])
+                    ("closeEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17160 17164])
+                        ("event" variable nil (reparse-symbol function_parameters) [17166 17171]))                      ) (reparse-symbol indented_block_body) [17145 17217])
+                    ("setup_actions" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17240 17244]))                      ) (reparse-symbol indented_block_body) [17222 18110])
+                    ("eliminate_outliers" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18138 18142]))                      ) (reparse-symbol indented_block_body) [18115 18327])
+                    ("apply_min_selection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18356 18360])
+                        ("tool" variable nil (reparse-symbol function_parameters) [18362 18366]))                      ) (reparse-symbol indented_block_body) [18332 18563])
+                    ("apply_max_selection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18592 18596])
+                        ("tool" variable nil (reparse-symbol function_parameters) [18598 18602]))                      ) (reparse-symbol indented_block_body) [18568 18799])
+                    ("set_range" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18818 18822])
+                        ("_min" variable nil (reparse-symbol function_parameters) [18824 18828])
+                        ("_max" variable nil (reparse-symbol function_parameters) [18830 18834]))                      ) (reparse-symbol indented_block_body) [18804 19067]))                  
+                :type "class")
+                nil [13788 19067])
+            ("assert_interfaces_valid" code nil nil [19068 19111]))          
+    :file "histogram.py"
+    :pointmax 19154
+    :fsize 19631
+    :lastmodtime '(20476 19381)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "builder.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""
+guiqwt.builder
+--------------
+
+The `builder` module provides a builder singleton class 
+used to simplify the creation of plot items.
+
+Example
+~~~~~~~
+
+Before creating any widget, a `QApplication` must be instantiated 
+(that is a `Qt` internal requirement):
+          
+>>> import guidata
+>>> app = guidata.qapplication()
+
+that is mostly equivalent to the following (the only difference is that 
+the `guidata` helper function also installs the `Qt` translation 
+corresponding to the system locale):
+          
+>>> from PyQt4.QtGui import QApplication
+>>> app = QApplication([])
+
+now that a `QApplication` object exists, we may create the plotting widget:
+
+>>> from guiqwt.plot import ImageWidget
+>>> widget = ImageWidget()
+
+create curves, images, histograms, etc. and attach them to the plot:
+
+>>> from guiqwt.builder import make
+>>> curve = make.mcure(x, y, 'r+')
+>>> image = make.image(data)
+>>> hist = make.histogram(data, 100)
+>>> for item in (curve, image, hist):
+...     widget.plot.add_item()
+
+and then show the widget to screen:
+
+>>> widget.show()
+>>> app.exec_()
+
+Reference
+~~~~~~~~~
+
+.. autoclass:: PlotItemBuilder
+   :members:
+"""" code nil nil [186 1329])
+            ("numpy" include nil nil [1331 1388])
+            ("guiqwt.config" include nil nil [1406 1451])
+            ("guiqwt.baseplot" include nil nil [1452 1488])
+            ("guiqwt.curve" include nil nil [1489 1552])
+            ("guiqwt.histogram" include nil nil [1553 1616])
+            ("" code nil nil [1642 1767])
+            ("" code nil nil [1794 1890])
+            ("" code nil nil [1922 2010])
+            ("" code nil nil [2037 2525])
+            ("" code nil nil [2551 2705])
+            ("os.path" include nil nil [2706 2727])
+            ("ANCHOR_OFFSETS" variable nil nil [2768 3086])
+            ("CURVE_COUNT" variable nil nil [3088 3103])
+            ("HISTOGRAM_COUNT" variable nil nil [3104 3123])
+            ("IMAGE_COUNT" variable nil nil [3124 3139])
+            ("LABEL_COUNT" variable nil nil [3140 3155])
+            ("HISTOGRAM2D_COUNT" variable nil nil [3156 3177])
+            ("PlotItemBuilder" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""
+    This is just a bare class used to regroup
+    a set of factory functions in a single object
+    """" code nil (reparse-symbol indented_block_body) [3214 3321])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3339 3343]))                      ) (reparse-symbol indented_block_body) [3326 3385])
+                    ("gridparam" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3412 3416])
+                        ("background" variable nil (reparse-symbol function_parameters) [3418 3428])
+                        ("major_enabled" variable nil (reparse-symbol function_parameters) [3453 3466])
+                        ("minor_enabled" variable nil (reparse-symbol function_parameters) [3473 3486])
+                        ("major_style" variable nil (reparse-symbol function_parameters) [3511 3522])
+                        ("minor_style" variable nil (reparse-symbol function_parameters) [3529 3540]))                      ) (reparse-symbol indented_block_body) [3398 4928])
+                    ("grid" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4946 4950])
+                        ("background" variable nil (reparse-symbol function_parameters) [4952 4962])
+                        ("major_enabled" variable nil (reparse-symbol function_parameters) [4969 4982])
+                        ("minor_enabled" variable nil (reparse-symbol function_parameters) [4989 5002])
+                        ("major_style" variable nil (reparse-symbol function_parameters) [5022 5033])
+                        ("minor_style" variable nil (reparse-symbol function_parameters) [5040 5051]))                      ) (reparse-symbol indented_block_body) [4937 5686])
+                    ("__set_curve_axes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5716 5720])
+                        ("curve" variable nil (reparse-symbol function_parameters) [5722 5727])
+                        ("xaxis" variable nil (reparse-symbol function_parameters) [5729 5734])
+                        ("yaxis" variable nil (reparse-symbol function_parameters) [5736 5741]))                      ) (reparse-symbol indented_block_body) [5695 6020])
+                    ("__set_baseparam" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6045 6049])
+                        ("param" variable nil (reparse-symbol function_parameters) [6051 6056])
+                        ("color" variable nil (reparse-symbol function_parameters) [6058 6063])
+                        ("linestyle" variable nil (reparse-symbol function_parameters) [6065 6074])
+                        ("linewidth" variable nil (reparse-symbol function_parameters) [6076 6085])
+                        ("marker" variable nil (reparse-symbol function_parameters) [6111 6117])
+                        ("markersize" variable nil (reparse-symbol function_parameters) [6119 6129])
+                        ("markerfacecolor" variable nil (reparse-symbol function_parameters) [6131 6146])
+                        ("markeredgecolor" variable nil (reparse-symbol function_parameters) [6148 6163]))                      ) (reparse-symbol indented_block_body) [6025 7298])
+                    ("__set_param" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7319 7323])
+                        ("param" variable nil (reparse-symbol function_parameters) [7325 7330])
+                        ("title" variable nil (reparse-symbol function_parameters) [7332 7337])
+                        ("color" variable nil (reparse-symbol function_parameters) [7339 7344])
+                        ("linestyle" variable nil (reparse-symbol function_parameters) [7346 7355])
+                        ("linewidth" variable nil (reparse-symbol function_parameters) [7357 7366])
+                        ("marker" variable nil (reparse-symbol function_parameters) [7388 7394])
+                        ("markersize" variable nil (reparse-symbol function_parameters) [7396 7406])
+                        ("markerfacecolor" variable nil (reparse-symbol function_parameters) [7408 7423])
+                        ("markeredgecolor" variable nil (reparse-symbol function_parameters) [7425 7440])
+                        ("shade" variable nil (reparse-symbol function_parameters) [7462 7467])
+                        ("fitted" variable nil (reparse-symbol function_parameters) [7469 7475])
+                        ("curvestyle" variable nil (reparse-symbol function_parameters) [7477 7487])
+                        ("curvetype" variable nil (reparse-symbol function_parameters) [7489 7498])
+                        ("baseline" variable nil (reparse-symbol function_parameters) [7500 7508]))                      ) (reparse-symbol indented_block_body) [7303 8130])
+                    ("__get_arg_triple_plot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8173 8177])
+                        ("args" variable nil (reparse-symbol function_parameters) [8179 8183]))                      ) (reparse-symbol indented_block_body) [8147 9440])
+                    ("__get_arg_triple_errorbar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9483 9487])
+                        ("args" variable nil (reparse-symbol function_parameters) [9489 9493]))                      ) (reparse-symbol indented_block_body) [9453 10534])
+                    ("mcurve" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10554 10558])
+                        ("args" variable nil (reparse-symbol function_parameters) [10560 10565])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [10567 10575]))                      ) (reparse-symbol indented_block_body) [10543 11681])
+                    ("pcurve" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11713 11717])
+                        ("x" variable nil (reparse-symbol function_parameters) [11719 11720])
+                        ("y" variable nil (reparse-symbol function_parameters) [11722 11723])
+                        ("param" variable nil (reparse-symbol function_parameters) [11725 11730])
+                        ("xaxis" variable nil (reparse-symbol function_parameters) [11732 11737])
+                        ("yaxis" variable nil (reparse-symbol function_parameters) [11748 11753]))                      ) (reparse-symbol indented_block_body) [11702 12136])
+                    ("curve" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12151 12155])
+                        ("x" variable nil (reparse-symbol function_parameters) [12157 12158])
+                        ("y" variable nil (reparse-symbol function_parameters) [12160 12161])
+                        ("title" variable nil (reparse-symbol function_parameters) [12163 12168])
+                        ("color" variable nil (reparse-symbol function_parameters) [12188 12193])
+                        ("linestyle" variable nil (reparse-symbol function_parameters) [12200 12209])
+                        ("linewidth" variable nil (reparse-symbol function_parameters) [12216 12225])
+                        ("marker" variable nil (reparse-symbol function_parameters) [12246 12252])
+                        ("markersize" variable nil (reparse-symbol function_parameters) [12259 12269])
+                        ("markerfacecolor" variable nil (reparse-symbol function_parameters) [12276 12291])
+                        ("markeredgecolor" variable nil (reparse-symbol function_parameters) [12312 12327])
+                        ("shade" variable nil (reparse-symbol function_parameters) [12334 12339])
+                        ("fitted" variable nil (reparse-symbol function_parameters) [12346 12352])
+                        ("curvestyle" variable nil (reparse-symbol function_parameters) [12373 12383])
+                        ("curvetype" variable nil (reparse-symbol function_parameters) [12390 12399])
+                        ("baseline" variable nil (reparse-symbol function_parameters) [12406 12414])
+                        ("xaxis" variable nil (reparse-symbol function_parameters) [12435 12440])
+                        ("yaxis" variable nil (reparse-symbol function_parameters) [12451 12456]))                      ) (reparse-symbol indented_block_body) [12141 14944])
+                    ("merror" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14960 14964])
+                        ("args" variable nil (reparse-symbol function_parameters) [14966 14971])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [14973 14981]))                      ) (reparse-symbol indented_block_body) [14949 15848])
+                    ("perror" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15864 15868])
+                        ("x" variable nil (reparse-symbol function_parameters) [15870 15871])
+                        ("y" variable nil (reparse-symbol function_parameters) [15873 15874])
+                        ("dx" variable nil (reparse-symbol function_parameters) [15876 15878])
+                        ("dy" variable nil (reparse-symbol function_parameters) [15880 15882])
+                        ("curveparam" variable nil (reparse-symbol function_parameters) [15884 15894])
+                        ("errorbarparam" variable nil (reparse-symbol function_parameters) [15896 15909])
+                        ("xaxis" variable nil (reparse-symbol function_parameters) [15926 15931])
+                        ("yaxis" variable nil (reparse-symbol function_parameters) [15942 15947]))                      ) (reparse-symbol indented_block_body) [15853 16763])
+                    ("error" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16786 16790])
+                        ("x" variable nil (reparse-symbol function_parameters) [16792 16793])
+                        ("y" variable nil (reparse-symbol function_parameters) [16795 16796])
+                        ("dx" variable nil (reparse-symbol function_parameters) [16798 16800])
+                        ("dy" variable nil (reparse-symbol function_parameters) [16802 16804])
+                        ("title" variable nil (reparse-symbol function_parameters) [16806 16811])
+                        ("color" variable nil (reparse-symbol function_parameters) [16831 16836])
+                        ("linestyle" variable nil (reparse-symbol function_parameters) [16843 16852])
+                        ("linewidth" variable nil (reparse-symbol function_parameters) [16859 16868])
+                        ("errorbarwidth" variable nil (reparse-symbol function_parameters) [16889 16902])
+                        ("errorbarcap" variable nil (reparse-symbol function_parameters) [16909 16920])
+                        ("errorbarmode" variable nil (reparse-symbol function_parameters) [16927 16939])
+                        ("errorbaralpha" variable nil (reparse-symbol function_parameters) [16960 16973])
+                        ("marker" variable nil (reparse-symbol function_parameters) [16980 16986])
+                        ("markersize" variable nil (reparse-symbol function_parameters) [17007 17017])
+                        ("markerfacecolor" variable nil (reparse-symbol function_parameters) [17024 17039])
+                        ("markeredgecolor" variable nil (reparse-symbol function_parameters) [17046 17061])
+                        ("shade" variable nil (reparse-symbol function_parameters) [17082 17087])
+                        ("fitted" variable nil (reparse-symbol function_parameters) [17094 17100])
+                        ("curvestyle" variable nil (reparse-symbol function_parameters) [17107 17117])
+                        ("curvetype" variable nil (reparse-symbol function_parameters) [17124 17133])
+                        ("baseline" variable nil (reparse-symbol function_parameters) [17154 17162])
+                        ("xaxis" variable nil (reparse-symbol function_parameters) [17169 17174])
+                        ("yaxis" variable nil (reparse-symbol function_parameters) [17185 17190]))                      ) (reparse-symbol indented_block_body) [16776 20403])
+                    ("histogram" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20426 20430])
+                        ("data" variable nil (reparse-symbol function_parameters) [20432 20436])
+                        ("bins" variable nil (reparse-symbol function_parameters) [20438 20442])
+                        ("logscale" variable nil (reparse-symbol function_parameters) [20449 20457])
+                        ("title" variable nil (reparse-symbol function_parameters) [20482 20487])
+                        ("color" variable nil (reparse-symbol function_parameters) [20493 20498])
+                        ("xaxis" variable nil (reparse-symbol function_parameters) [20505 20510])
+                        ("yaxis" variable nil (reparse-symbol function_parameters) [20521 20526]))                      ) (reparse-symbol indented_block_body) [20412 21475])
+                    ("phistogram" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21503 21507])
+                        ("data" variable nil (reparse-symbol function_parameters) [21509 21513])
+                        ("curveparam" variable nil (reparse-symbol function_parameters) [21515 21525])
+                        ("histparam" variable nil (reparse-symbol function_parameters) [21527 21536])
+                        ("xaxis" variable nil (reparse-symbol function_parameters) [21557 21562])
+                        ("yaxis" variable nil (reparse-symbol function_parameters) [21573 21578]))                      ) (reparse-symbol indented_block_body) [21488 22060])
+                    ("__set_image_param" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22087 22091])
+                        ("param" variable nil (reparse-symbol function_parameters) [22093 22098])
+                        ("title" variable nil (reparse-symbol function_parameters) [22100 22105])
+                        ("alpha_mask" variable nil (reparse-symbol function_parameters) [22107 22117])
+                        ("alpha" variable nil (reparse-symbol function_parameters) [22119 22124])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [22126 22139])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [22167 22175]))                      ) (reparse-symbol indented_block_body) [22065 22837])
+                    ("_get_image_data" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22862 22866])
+                        ("data" variable nil (reparse-symbol function_parameters) [22868 22872])
+                        ("filename" variable nil (reparse-symbol function_parameters) [22874 22882])
+                        ("title" variable nil (reparse-symbol function_parameters) [22884 22889])
+                        ("to_grayscale" variable nil (reparse-symbol function_parameters) [22891 22903]))                      ) (reparse-symbol indented_block_body) [22842 23230])
+                    ("staticmethod" code nil (reparse-symbol indented_block_body) [23236 23248])
+                    ("compute_bounds" function (:arguments 
+                      ( ("data" variable nil (reparse-symbol function_parameters) [23272 23276])
+                        ("pixel_size" variable nil (reparse-symbol function_parameters) [23278 23288]))                      ) (reparse-symbol indented_block_body) [23253 23615])
+                    ("image" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23638 23642])
+                        ("data" variable nil (reparse-symbol function_parameters) [23644 23648])
+                        ("filename" variable nil (reparse-symbol function_parameters) [23655 23663])
+                        ("title" variable nil (reparse-symbol function_parameters) [23670 23675])
+                        ("alpha_mask" variable nil (reparse-symbol function_parameters) [23682 23692])
+                        ("alpha" variable nil (reparse-symbol function_parameters) [23713 23718])
+                        ("background_color" variable nil (reparse-symbol function_parameters) [23725 23741])
+                        ("colormap" variable nil (reparse-symbol function_parameters) [23748 23756])
+                        ("xdata" variable nil (reparse-symbol function_parameters) [23777 23782])
+                        ("ydata" variable nil (reparse-symbol function_parameters) [23797 23802])
+                        ("pixel_size" variable nil (reparse-symbol function_parameters) [23817 23827])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [23848 23861])
+                        ("eliminate_outliers" variable nil (reparse-symbol function_parameters) [23872 23890])
+                        ("xformat" variable nil (reparse-symbol function_parameters) [23911 23918])
+                        ("yformat" variable nil (reparse-symbol function_parameters) [23927 23934])
+                        ("zformat" variable nil (reparse-symbol function_parameters) [23943 23950]))                      ) (reparse-symbol indented_block_body) [23628 25578])
+                    ("maskedimage" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [25599 25603])
+                        ("data" variable nil (reparse-symbol function_parameters) [25605 25609])
+                        ("mask" variable nil (reparse-symbol function_parameters) [25616 25620])
+                        ("filename" variable nil (reparse-symbol function_parameters) [25627 25635])
+                        ("title" variable nil (reparse-symbol function_parameters) [25642 25647])
+                        ("alpha_mask" variable nil (reparse-symbol function_parameters) [25674 25684])
+                        ("alpha" variable nil (reparse-symbol function_parameters) [25692 25697])
+                        ("xdata" variable nil (reparse-symbol function_parameters) [25723 25728])
+                        ("ydata" variable nil (reparse-symbol function_parameters) [25743 25748])
+                        ("pixel_size" variable nil (reparse-symbol function_parameters) [25763 25773])
+                        ("background_color" variable nil (reparse-symbol function_parameters) [25800 25816])
+                        ("colormap" variable nil (reparse-symbol function_parameters) [25823 25831])
+                        ("show_mask" variable nil (reparse-symbol function_parameters) [25858 25867])
+                        ("fill_value" variable nil (reparse-symbol function_parameters) [25875 25885])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [25892 25905])
+                        ("eliminate_outliers" variable nil (reparse-symbol function_parameters) [25936 25954])
+                        ("xformat" variable nil (reparse-symbol function_parameters) [25981 25988])
+                        ("yformat" variable nil (reparse-symbol function_parameters) [25997 26004])
+                        ("zformat" variable nil (reparse-symbol function_parameters) [26013 26020]))                      ) (reparse-symbol indented_block_body) [25583 27500])
+                    ("rgbimage" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27518 27522])
+                        ("data" variable nil (reparse-symbol function_parameters) [27524 27528])
+                        ("filename" variable nil (reparse-symbol function_parameters) [27535 27543])
+                        ("title" variable nil (reparse-symbol function_parameters) [27550 27555])
+                        ("alpha_mask" variable nil (reparse-symbol function_parameters) [27579 27589])
+                        ("alpha" variable nil (reparse-symbol function_parameters) [27597 27602])
+                        ("xdata" variable nil (reparse-symbol function_parameters) [27625 27630])
+                        ("ydata" variable nil (reparse-symbol function_parameters) [27645 27650])
+                        ("pixel_size" variable nil (reparse-symbol function_parameters) [27665 27675])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [27699 27712]))                      ) (reparse-symbol indented_block_body) [27505 28702])
+                    ("quadgrid" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28728 28732])
+                        ("X" variable nil (reparse-symbol function_parameters) [28734 28735])
+                        ("Y" variable nil (reparse-symbol function_parameters) [28737 28738])
+                        ("Z" variable nil (reparse-symbol function_parameters) [28740 28741])
+                        ("filename" variable nil (reparse-symbol function_parameters) [28743 28751])
+                        ("title" variable nil (reparse-symbol function_parameters) [28758 28763])
+                        ("alpha_mask" variable nil (reparse-symbol function_parameters) [28770 28780])
+                        ("alpha" variable nil (reparse-symbol function_parameters) [28804 28809])
+                        ("background_color" variable nil (reparse-symbol function_parameters) [28816 28832])
+                        ("colormap" variable nil (reparse-symbol function_parameters) [28839 28847])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [28871 28884]))                      ) (reparse-symbol indented_block_body) [28715 29289])
+                    ("pcolor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29305 29309])
+                        ("args" variable nil (reparse-symbol function_parameters) [29311 29316])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [29318 29326]))                      ) (reparse-symbol indented_block_body) [29294 29921])
+                    ("trimage" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29938 29942])
+                        ("data" variable nil (reparse-symbol function_parameters) [29944 29948])
+                        ("filename" variable nil (reparse-symbol function_parameters) [29955 29963])
+                        ("title" variable nil (reparse-symbol function_parameters) [29970 29975])
+                        ("alpha_mask" variable nil (reparse-symbol function_parameters) [29982 29992])
+                        ("alpha" variable nil (reparse-symbol function_parameters) [30015 30020])
+                        ("background_color" variable nil (reparse-symbol function_parameters) [30027 30043])
+                        ("colormap" variable nil (reparse-symbol function_parameters) [30050 30058])
+                        ("x0" variable nil (reparse-symbol function_parameters) [30081 30083])
+                        ("y0" variable nil (reparse-symbol function_parameters) [30089 30091])
+                        ("angle" variable nil (reparse-symbol function_parameters) [30097 30102])
+                        ("dx" variable nil (reparse-symbol function_parameters) [30108 30110])
+                        ("dy" variable nil (reparse-symbol function_parameters) [30116 30118])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [30140 30153])
+                        ("eliminate_outliers" variable nil (reparse-symbol function_parameters) [30164 30182])
+                        ("xformat" variable nil (reparse-symbol function_parameters) [30205 30212])
+                        ("yformat" variable nil (reparse-symbol function_parameters) [30221 30228])
+                        ("zformat" variable nil (reparse-symbol function_parameters) [30237 30244]))                      ) (reparse-symbol indented_block_body) [29926 31631])
+                    ("xyimage" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31648 31652])
+                        ("x" variable nil (reparse-symbol function_parameters) [31654 31655])
+                        ("y" variable nil (reparse-symbol function_parameters) [31657 31658])
+                        ("data" variable nil (reparse-symbol function_parameters) [31660 31664])
+                        ("title" variable nil (reparse-symbol function_parameters) [31666 31671])
+                        ("alpha_mask" variable nil (reparse-symbol function_parameters) [31678 31688])
+                        ("alpha" variable nil (reparse-symbol function_parameters) [31695 31700])
+                        ("background_color" variable nil (reparse-symbol function_parameters) [31723 31739])
+                        ("colormap" variable nil (reparse-symbol function_parameters) [31746 31754])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [31777 31790])
+                        ("eliminate_outliers" variable nil (reparse-symbol function_parameters) [31801 31819])
+                        ("xformat" variable nil (reparse-symbol function_parameters) [31842 31849])
+                        ("yformat" variable nil (reparse-symbol function_parameters) [31858 31865])
+                        ("zformat" variable nil (reparse-symbol function_parameters) [31874 31881]))                      ) (reparse-symbol indented_block_body) [31636 32875])
+                    ("imagefilter" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32900 32904])
+                        ("xmin" variable nil (reparse-symbol function_parameters) [32906 32910])
+                        ("xmax" variable nil (reparse-symbol function_parameters) [32912 32916])
+                        ("ymin" variable nil (reparse-symbol function_parameters) [32918 32922])
+                        ("ymax" variable nil (reparse-symbol function_parameters) [32924 32928])
+                        ("imageitem" variable nil (reparse-symbol function_parameters) [32950 32959])
+                        ("filter" variable nil (reparse-symbol function_parameters) [32961 32967])
+                        ("title" variable nil (reparse-symbol function_parameters) [32969 32974]))                      ) (reparse-symbol indented_block_body) [32884 33635])
+                    ("histogram2D" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [33660 33664])
+                        ("X" variable nil (reparse-symbol function_parameters) [33666 33667])
+                        ("Y" variable nil (reparse-symbol function_parameters) [33669 33670])
+                        ("NX" variable nil (reparse-symbol function_parameters) [33672 33674])
+                        ("NY" variable nil (reparse-symbol function_parameters) [33681 33683])
+                        ("logscale" variable nil (reparse-symbol function_parameters) [33690 33698])
+                        ("title" variable nil (reparse-symbol function_parameters) [33725 33730])
+                        ("transparent" variable nil (reparse-symbol function_parameters) [33737 33748])
+                        ("Z" variable nil (reparse-symbol function_parameters) [33755 33756])
+                        ("computation" variable nil (reparse-symbol function_parameters) [33783 33794])
+                        ("interpolation" variable nil (reparse-symbol function_parameters) [33798 33811]))                      ) (reparse-symbol indented_block_body) [33644 34977])
+                    ("label" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [34992 34996])
+                        ("text" variable nil (reparse-symbol function_parameters) [34998 35002])
+                        ("g" variable nil (reparse-symbol function_parameters) [35004 35005])
+                        ("c" variable nil (reparse-symbol function_parameters) [35007 35008])
+                        ("anchor" variable nil (reparse-symbol function_parameters) [35010 35016])
+                        ("title" variable nil (reparse-symbol function_parameters) [35018 35023]))                      ) (reparse-symbol indented_block_body) [34982 36272])
+                    ("legend" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [36288 36292])
+                        ("anchor" variable nil (reparse-symbol function_parameters) [36294 36300])
+                        ("c" variable nil (reparse-symbol function_parameters) [36307 36308])
+                        ("restrict_items" variable nil (reparse-symbol function_parameters) [36315 36329]))                      ) (reparse-symbol indented_block_body) [36277 37293])
+                    ("range" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37308 37312])
+                        ("xmin" variable nil (reparse-symbol function_parameters) [37314 37318])
+                        ("xmax" variable nil (reparse-symbol function_parameters) [37320 37324]))                      ) (reparse-symbol indented_block_body) [37298 37370])
+                    ("vcursor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37395 37399])
+                        ("x" variable nil (reparse-symbol function_parameters) [37401 37402])
+                        ("label" variable nil (reparse-symbol function_parameters) [37404 37409])
+                        ("constraint_cb" variable nil (reparse-symbol function_parameters) [37416 37429])
+                        ("movable" variable nil (reparse-symbol function_parameters) [37452 37459])
+                        ("readonly" variable nil (reparse-symbol function_parameters) [37466 37474]))                      ) (reparse-symbol indented_block_body) [37383 37987])
+                    ("hcursor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38004 38008])
+                        ("y" variable nil (reparse-symbol function_parameters) [38010 38011])
+                        ("label" variable nil (reparse-symbol function_parameters) [38013 38018])
+                        ("constraint_cb" variable nil (reparse-symbol function_parameters) [38025 38038])
+                        ("movable" variable nil (reparse-symbol function_parameters) [38061 38068])
+                        ("readonly" variable nil (reparse-symbol function_parameters) [38075 38083]))                      ) (reparse-symbol indented_block_body) [37992 38602])
+                    ("xcursor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38619 38623])
+                        ("x" variable nil (reparse-symbol function_parameters) [38625 38626])
+                        ("y" variable nil (reparse-symbol function_parameters) [38628 38629])
+                        ("label" variable nil (reparse-symbol function_parameters) [38631 38636])
+                        ("constraint_cb" variable nil (reparse-symbol function_parameters) [38643 38656])
+                        ("movable" variable nil (reparse-symbol function_parameters) [38679 38686])
+                        ("readonly" variable nil (reparse-symbol function_parameters) [38693 38701]))                      ) (reparse-symbol indented_block_body) [38607 39215])
+                    ("marker" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [39239 39243])
+                        ("position" variable nil (reparse-symbol function_parameters) [39245 39253])
+                        ("label_cb" variable nil (reparse-symbol function_parameters) [39260 39268])
+                        ("constraint_cb" variable nil (reparse-symbol function_parameters) [39275 39288])
+                        ("movable" variable nil (reparse-symbol function_parameters) [39310 39317])
+                        ("readonly" variable nil (reparse-symbol function_parameters) [39324 39332])
+                        ("markerstyle" variable nil (reparse-symbol function_parameters) [39355 39366])
+                        ("markerspacing" variable nil (reparse-symbol function_parameters) [39373 39386])
+                        ("color" variable nil (reparse-symbol function_parameters) [39408 39413])
+                        ("linestyle" variable nil (reparse-symbol function_parameters) [39420 39429])
+                        ("linewidth" variable nil (reparse-symbol function_parameters) [39436 39445])
+                        ("marker" variable nil (reparse-symbol function_parameters) [39467 39473])
+                        ("markersize" variable nil (reparse-symbol function_parameters) [39480 39490])
+                        ("markerfacecolor" variable nil (reparse-symbol function_parameters) [39497 39512])
+                        ("markeredgecolor" variable nil (reparse-symbol function_parameters) [39534 39549]))                      ) (reparse-symbol indented_block_body) [39228 42219])
+                    ("__shape" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [42244 42248])
+                        ("shapeclass" variable nil (reparse-symbol function_parameters) [42250 42260])
+                        ("x0" variable nil (reparse-symbol function_parameters) [42262 42264])
+                        ("y0" variable nil (reparse-symbol function_parameters) [42266 42268])
+                        ("x1" variable nil (reparse-symbol function_parameters) [42270 42272])
+                        ("y1" variable nil (reparse-symbol function_parameters) [42274 42276])
+                        ("title" variable nil (reparse-symbol function_parameters) [42278 42283]))                      ) (reparse-symbol indented_block_body) [42232 42465])
+                    ("rectangle" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [42484 42488])
+                        ("x0" variable nil (reparse-symbol function_parameters) [42490 42492])
+                        ("y0" variable nil (reparse-symbol function_parameters) [42494 42496])
+                        ("x1" variable nil (reparse-symbol function_parameters) [42498 42500])
+                        ("y1" variable nil (reparse-symbol function_parameters) [42502 42504])
+                        ("title" variable nil (reparse-symbol function_parameters) [42506 42511]))                      ) (reparse-symbol indented_block_body) [42470 42807])
+                    ("ellipse" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [42824 42828])
+                        ("x0" variable nil (reparse-symbol function_parameters) [42830 42832])
+                        ("y0" variable nil (reparse-symbol function_parameters) [42834 42836])
+                        ("x1" variable nil (reparse-symbol function_parameters) [42838 42840])
+                        ("y1" variable nil (reparse-symbol function_parameters) [42842 42844])
+                        ("ratio" variable nil (reparse-symbol function_parameters) [42846 42851])
+                        ("title" variable nil (reparse-symbol function_parameters) [42853 42858]))                      ) (reparse-symbol indented_block_body) [42812 43333])
+                    ("circle" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [43357 43361])
+                        ("x0" variable nil (reparse-symbol function_parameters) [43363 43365])
+                        ("y0" variable nil (reparse-symbol function_parameters) [43367 43369])
+                        ("x1" variable nil (reparse-symbol function_parameters) [43371 43373])
+                        ("y1" variable nil (reparse-symbol function_parameters) [43375 43377])
+                        ("title" variable nil (reparse-symbol function_parameters) [43379 43384]))                      ) (reparse-symbol indented_block_body) [43346 43675])
+                    ("segment" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [43692 43696])
+                        ("x0" variable nil (reparse-symbol function_parameters) [43698 43700])
+                        ("y0" variable nil (reparse-symbol function_parameters) [43702 43704])
+                        ("x1" variable nil (reparse-symbol function_parameters) [43706 43708])
+                        ("y1" variable nil (reparse-symbol function_parameters) [43710 43712])
+                        ("title" variable nil (reparse-symbol function_parameters) [43714 43719]))                      ) (reparse-symbol indented_block_body) [43680 44007])
+                    ("__get_annotationparam" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [44046 44050])
+                        ("title" variable nil (reparse-symbol function_parameters) [44052 44057])
+                        ("subtitle" variable nil (reparse-symbol function_parameters) [44059 44067]))                      ) (reparse-symbol indented_block_body) [44020 44296])
+                    ("__annotated_shape" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [44331 44335])
+                        ("shapeclass" variable nil (reparse-symbol function_parameters) [44337 44347])
+                        ("x0" variable nil (reparse-symbol function_parameters) [44349 44351])
+                        ("y0" variable nil (reparse-symbol function_parameters) [44353 44355])
+                        ("x1" variable nil (reparse-symbol function_parameters) [44357 44359])
+                        ("y1" variable nil (reparse-symbol function_parameters) [44361 44363])
+                        ("title" variable nil (reparse-symbol function_parameters) [44365 44370])
+                        ("subtitle" variable nil (reparse-symbol function_parameters) [44372 44380]))                      ) (reparse-symbol indented_block_body) [44309 44560])
+                    ("annotated_rectangle" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [44597 44601])
+                        ("x0" variable nil (reparse-symbol function_parameters) [44603 44605])
+                        ("y0" variable nil (reparse-symbol function_parameters) [44607 44609])
+                        ("x1" variable nil (reparse-symbol function_parameters) [44611 44613])
+                        ("y1" variable nil (reparse-symbol function_parameters) [44615 44617])
+                        ("title" variable nil (reparse-symbol function_parameters) [44619 44624])
+                        ("subtitle" variable nil (reparse-symbol function_parameters) [44631 44639]))                      ) (reparse-symbol indented_block_body) [44573 45007])
+                    ("annotated_ellipse" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [45042 45046])
+                        ("x0" variable nil (reparse-symbol function_parameters) [45048 45050])
+                        ("y0" variable nil (reparse-symbol function_parameters) [45052 45054])
+                        ("x1" variable nil (reparse-symbol function_parameters) [45056 45058])
+                        ("y1" variable nil (reparse-symbol function_parameters) [45060 45062])
+                        ("ratio" variable nil (reparse-symbol function_parameters) [45064 45069])
+                        ("title" variable nil (reparse-symbol function_parameters) [45097 45102])
+                        ("subtitle" variable nil (reparse-symbol function_parameters) [45109 45117]))                      ) (reparse-symbol indented_block_body) [45020 45610])
+                    ("annotated_circle" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [45674 45678])
+                        ("x0" variable nil (reparse-symbol function_parameters) [45680 45682])
+                        ("y0" variable nil (reparse-symbol function_parameters) [45684 45686])
+                        ("x1" variable nil (reparse-symbol function_parameters) [45688 45690])
+                        ("y1" variable nil (reparse-symbol function_parameters) [45692 45694])
+                        ("ratio" variable nil (reparse-symbol function_parameters) [45696 45701])
+                        ("title" variable nil (reparse-symbol function_parameters) [45728 45733])
+                        ("subtitle" variable nil (reparse-symbol function_parameters) [45740 45748]))                      ) (reparse-symbol indented_block_body) [45653 46061])
+                    ("annotated_segment" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [46096 46100])
+                        ("x0" variable nil (reparse-symbol function_parameters) [46102 46104])
+                        ("y0" variable nil (reparse-symbol function_parameters) [46106 46108])
+                        ("x1" variable nil (reparse-symbol function_parameters) [46110 46112])
+                        ("y1" variable nil (reparse-symbol function_parameters) [46114 46116])
+                        ("title" variable nil (reparse-symbol function_parameters) [46118 46123])
+                        ("subtitle" variable nil (reparse-symbol function_parameters) [46130 46138]))                      ) (reparse-symbol indented_block_body) [46074 46497])
+                    ("info_label" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [46517 46521])
+                        ("anchor" variable nil (reparse-symbol function_parameters) [46523 46529])
+                        ("comps" variable nil (reparse-symbol function_parameters) [46531 46536])
+                        ("title" variable nil (reparse-symbol function_parameters) [46538 46543]))                      ) (reparse-symbol indented_block_body) [46502 47193])
+                    ("computation" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [47214 47218])
+                        ("range" variable nil (reparse-symbol function_parameters) [47220 47225])
+                        ("anchor" variable nil (reparse-symbol function_parameters) [47227 47233])
+                        ("label" variable nil (reparse-symbol function_parameters) [47235 47240])
+                        ("curve" variable nil (reparse-symbol function_parameters) [47242 47247])
+                        ("function" variable nil (reparse-symbol function_parameters) [47249 47257])
+                        ("title" variable nil (reparse-symbol function_parameters) [47259 47264]))                      ) (reparse-symbol indented_block_body) [47198 47650])
+                    ("computations" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [47672 47676])
+                        ("range" variable nil (reparse-symbol function_parameters) [47678 47683])
+                        ("anchor" variable nil (reparse-symbol function_parameters) [47685 47691])
+                        ("specs" variable nil (reparse-symbol function_parameters) [47693 47698])
+                        ("title" variable nil (reparse-symbol function_parameters) [47700 47705]))                      ) (reparse-symbol indented_block_body) [47655 48369])
+                    ("computation2d" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [48392 48396])
+                        ("rect" variable nil (reparse-symbol function_parameters) [48398 48402])
+                        ("anchor" variable nil (reparse-symbol function_parameters) [48404 48410])
+                        ("label" variable nil (reparse-symbol function_parameters) [48412 48417])
+                        ("image" variable nil (reparse-symbol function_parameters) [48419 48424])
+                        ("function" variable nil (reparse-symbol function_parameters) [48426 48434])
+                        ("title" variable nil (reparse-symbol function_parameters) [48436 48441]))                      ) (reparse-symbol indented_block_body) [48374 48769])
+                    ("computations2d" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [48793 48797])
+                        ("rect" variable nil (reparse-symbol function_parameters) [48799 48803])
+                        ("anchor" variable nil (reparse-symbol function_parameters) [48805 48811])
+                        ("specs" variable nil (reparse-symbol function_parameters) [48813 48818])
+                        ("title" variable nil (reparse-symbol function_parameters) [48820 48825]))                      ) (reparse-symbol indented_block_body) [48774 49497]))                  
+                :type "class")
+                nil [3179 49497])
+            ("make" variable nil nil [49498 49522]))          
+    :file "builder.py"
+    :pointmax 49523
+    :fsize 50696
+    :lastmodtime '(20175 45580)
+    :unmatched-syntax '((punctuation 23235 . 23236))
+    )
+   )
+  :file "!usr!share!pyshared!guiqwt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

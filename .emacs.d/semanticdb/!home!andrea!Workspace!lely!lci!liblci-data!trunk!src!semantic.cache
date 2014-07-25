@@ -1,0 +1,1198 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "array.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "array.c"
+    :pointmax 18227
+    :fsize 18226
+    :lastmodtime '(21351 15209 932811 740000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/include")) nil [1 39])
+            ("lib_LTLIBRARIES" variable (:default-value ("liblci-data.la")) nil [40 73])
+            ("liblci_data_la_LDFLAGS" variable (:default-value ("-version-number" "0:1:0" "-no-undefined")) nil [74 135])
+            ("liblci_data_la_SOURCES" variable (:default-value ("lci-data.h" "array.c" "char.c" "check.c" "complex.c" "ffi.c" "float.c" "fresh.c" "function.c" "int.c" "matrix.c" "member.c" "member.h" "object.c" "parse.c" "primitive.c" "print.c" "shared.c" "stream.c" "string.c" "table.c" "type.c" "type.h" "value.c" "variant.c" "variant.h" "vector.c" "wire.h")) nil [136 485])
+            ("liblci_data_la_CFLAGS" variable (:default-value ("${lci_util_CFLAGS}" "${ffi_CFLAGS}")) nil [486 543])
+            ("liblci_data_la_LIBADD" variable (:default-value ("${lci_util_LIBS}" "${ffi_LIBS}")) nil [544 597]))          
+    :file "Makefile.am"
+    :pointmax 598
+    :fsize 597
+    :lastmodtime '(21351 15209 952821 489000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "lci-data.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "lci-data.h"
+    :pointmax 383
+    :fsize 382
+    :lastmodtime '(21351 15209 940815 640000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "member.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("LCI_DATA_MEMBER_H" variable (:constant-flag t) nil [215 232])
+            ("lci/lib/data.h" include (:system-flag t) nil [234 259])
+            ("lci/type.h" include (:system-flag t) nil [260 281])
+            ("member_address" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [495 514])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [515 524])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [527 539]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [472 540])
+            ("member_const_address" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [720 739])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [742 751])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [752 770]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [691 771])
+            ("member_fini" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1098 1117])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1118 1127])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1130 1142]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1077 1143])
+            ("member_clone" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1616 1635])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1636 1645])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1648 1666])
+                    ("clone" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1667 1679]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1595 1680])
+            ("member_equal" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2152 2171])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2172 2181])
+                    ("v1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2184 2199])
+                    ("v2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2200 2215]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2131 2216])
+            ("member_hash" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2609 2628])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2629 2638])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2641 2659]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2589 2660])
+            ("member_bytes" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3169 3188])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3189 3198])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3201 3219]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3148 3220])
+            ("member_read" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3843 3862])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3863 3872])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3875 3887])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3888 3906])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3907 3923]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3823 3924])
+            ("member_write" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4512 4531])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4532 4541])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4544 4562])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4563 4575])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4576 4586]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4491 4587])
+            ("member_address" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4633 4652])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4653 4662])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4663 4675]))                  )
+                (reparse-symbol extern-c-contents) [4610 4736])
+            ("member_const_address" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("LCI_API" type (:type "class") nil nil)
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4794 4813])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4814 4823])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4824 4842]))                  )
+                (reparse-symbol extern-c-contents) [4765 4909]))          
+    :file "member.h"
+    :pointmax 4948
+    :fsize 4947
+    :lastmodtime '(21351 15209 928809 790000)
+    :unmatched-syntax '((punctuation 4763 . 4764) (VOID 4758 . 4762) (CONST 4752 . 4757) (INLINE 4745 . 4751) (STATIC 4738 . 4744) (punctuation 4608 . 4609) (VOID 4603 . 4607) (INLINE 4596 . 4602) (STATIC 4589 . 4595) (symbol 4484 . 4490) (symbol 4468 . 4483) (symbol 3816 . 3822) (symbol 3800 . 3815) (symbol 3141 . 3147) (symbol 3125 . 3140) (symbol 2582 . 2588) (symbol 2566 . 2581) (INT 2127 . 2130) (symbol 2111 . 2126) (punctuation 1594 . 1595) (VOID 1589 . 1593) (symbol 1573 . 1588) (VOID 1072 . 1076) (symbol 1056 . 1071) (punctuation 689 . 690) (VOID 684 . 688) (CONST 678 . 683) (INLINE 671 . 677) (STATIC 664 . 670) (punctuation 470 . 471) (VOID 465 . 469) (INLINE 458 . 464) (STATIC 451 . 457))
+    :lexical-table 
+        '(("LCI_DATA_MEMBER_H")
+          )
+
+    )
+   (semanticdb-table "type.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("lci-data.h" include nil nil [212 233])
+            ("type.h" include nil nil [234 251])
+            ("wire.h" include nil nil [252 269])
+            ("stdlib.h" include (:system-flag t) nil [271 290])
+            ("string.h" include (:system-flag t) nil [291 310])
+            ("type_ctor" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [348 365])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [366 377]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [330 378])
+            ("type_dtor" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [409 426]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [391 427])
+            ("type_clone_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [470 493]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [446 494])
+            ("type_equal_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("o1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [530 549])
+                    ("o2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [550 569]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [506 570])
+            ("type_hash_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [608 631]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [585 632])
+            ("type_bytes_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [671 694]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [647 695])
+            ("type_read_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [733 750])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [751 769])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [772 788]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [710 789])
+            ("type_write_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [828 851])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [852 864])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [867 877]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [804 878])
+            ("type_chars_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [917 940])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [941 952]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [893 953])
+            ("type_parse_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [992 1009])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1010 1028])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1031 1047])
+                    ("at" variable
+                       (:pointer 1
+                        :type ("floc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1048 1064]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [968 1065])
+            ("type_print_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1104 1127])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1128 1140])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1143 1153])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [1154 1165]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [1080 1166])
+            ("type_static_data" variable (:type ("type_static" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [1184 1220])
+            ("type_vtab" variable
+               (:constant-flag t
+                :type ("object_vtab" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1238 1673])
+            ("type_create_tyvar" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1726 1750]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [1700 1954])
+            ("type_create_object" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2008 2032])
+                    ("vtab" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_vtab" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2033 2064])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2067 2081]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [1981 2145])
+            ("type_create_function" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2201 2225])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2226 2241])
+                    ("argument" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2242 2259])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2262 2266]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [2172 2407])
+            ("type_vcreate_function" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2464 2488])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2489 2504])
+                    ("argument" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2505 2522])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2525 2536]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [2434 2919])
+            ("type_create_tuple" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2972 2996])
+                    ("member_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2997 3021])
+                    ("member_type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3024 3044])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3045 3049]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [2946 3198])
+            ("type_vcreate_tuple" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3252 3276])
+                    ("member_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3277 3301])
+                    ("member_type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3304 3324])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3325 3336]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [3225 3740])
+            ("type_create_tycon" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3793 3817]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [3767 4021])
+            ("type_create_primitive" function
+               (:arguments 
+                  ( ("type_type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4078 4102])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4103 4115])
+                    ("align" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4116 4129]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [4048 4290])
+            ("type_set_instance" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4338 4351])
+                    ("instance" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4352 4369]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [4312 4548])
+            ("type_set_vtab" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4592 4605])
+                    ("vtab" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_vtab" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4606 4637]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [4570 5532])
+            ("type_set_value_type" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5582 5595])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5596 5610]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [5554 5842])
+            ("type_add_argument" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5894 5907])
+                    ("argument" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5908 5925]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [5868 7006])
+            ("type_remove_argument" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7057 7070])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7071 7080]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [7028 7935])
+            ("type_set_result_type" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7986 7999])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8000 8015]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [7957 8376])
+            ("type_add_member" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8426 8439])
+                    ("member_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8440 8464])
+                    ("member_type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8465 8485]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [8402 9884])
+            ("type_remove_member" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9933 9946])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9947 9956]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [9906 10672])
+            ("type_find_member" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10723 10742])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10743 10760]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [10698 11125])
+            ("type_add_variant" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11176 11189])
+                    ("variant_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11190 11215])
+                    ("variant_type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11216 11237]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [11151 12615])
+            ("type_remove_variant" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12665 12678])
+                    ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12679 12688]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [12637 13417])
+            ("type_find_variant" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13469 13488])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13489 13506]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [13443 13873])
+            ("type_set_name" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13917 13930])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13931 13948]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [13895 14227])
+            ("type_set_object_type" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14278 14291])
+                    ("object" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14292 14307]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [14249 14525])
+            ("type_set_alloc" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14571 14584])
+                    ("alloc" variable
+                       (:pointer 1
+                        :type ("alloc_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14585 14600]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [14548 14690])
+            ("type_set_shared_alloc" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14743 14756])
+                    ("alloc" variable
+                       (:pointer 1
+                        :type ("alloc_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14757 14772]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [14713 14869])
+            ("type_set_size" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14913 14926])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14927 14939]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [14891 15095])
+            ("type_set_align" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15140 15153])
+                    ("align" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15154 15167]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [15117 15453])
+            ("type_needs_init" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15499 15518]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [15475 16013])
+            ("type_update" function
+               (:arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16056 16069]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [16036 18359])
+            ("type_ctor" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18397 18414])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18415 18426]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [18379 19254])
+            ("type_dtor" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19286 19303]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [19268 20245])
+            ("type_clone_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20289 20312]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [20265 20534])
+            ("type_equal_impl" function
+               (:arguments 
+                  ( ("o1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20571 20590])
+                    ("o2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20591 20610]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [20547 21847])
+            ("type_hash_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21886 21909]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [21863 22803])
+            ("type_bytes_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22843 22866]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [22819 22899])
+            ("type_read_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22938 22955])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22956 22974])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22975 22991]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [22915 23054])
+            ("type_write_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23094 23117])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23118 23130])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23131 23141]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [23070 23204])
+            ("type_chars_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23244 23267])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [23268 23279]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [23220 23329])
+            ("type_parse_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23369 23386])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23387 23405])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23406 23422])
+                    ("at" variable
+                       (:pointer 1
+                        :type ("floc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23425 23441]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [23345 23517])
+            ("type_print_impl" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23557 23580])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23581 23593])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23594 23604])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [23605 23616]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [23533 23696]))          
+    :file "type.c"
+    :pointmax 23698
+    :fsize 23697
+    :lastmodtime '(21361 65317 417539 498000)
+    :unmatched-syntax '((symbol 23526 . 23532) (STATIC 23519 . 23525) (symbol 23338 . 23344) (STATIC 23331 . 23337) (symbol 23213 . 23219) (STATIC 23206 . 23212) (symbol 23063 . 23069) (STATIC 23056 . 23062) (symbol 22908 . 22914) (STATIC 22901 . 22907) (symbol 22812 . 22818) (STATIC 22805 . 22811) (symbol 21856 . 21862) (STATIC 21849 . 21855) (INT 20543 . 20546) (STATIC 20536 . 20542) (punctuation 20263 . 20264) (symbol 20254 . 20262) (STATIC 20247 . 20253) (VOID 19263 . 19267) (STATIC 19256 . 19262) (punctuation 18377 . 18378) (symbol 18368 . 18376) (STATIC 18361 . 18367) (VOID 16031 . 16035) (symbol 16015 . 16030) (INT 15471 . 15474) (symbol 15455 . 15470) (INT 15113 . 15116) (symbol 15097 . 15112) (INT 14887 . 14890) (symbol 14871 . 14886) (VOID 14708 . 14712) (symbol 14692 . 14707) (VOID 14543 . 14547) (symbol 14527 . 14542) (INT 14245 . 14248) (symbol 14229 . 14244) (INT 13891 . 13894) (symbol 13875 . 13890) (symbol 13435 . 13442) (symbol 13419 . 13434) (INT 12633 . 12636) (symbol 12617 . 12632) (symbol 11143 . 11150) (symbol 11127 . 11142) (symbol 10690 . 10697) (symbol 10674 . 10689) (INT 9902 . 9905) (symbol 9886 . 9901) (symbol 8394 . 8401) (symbol 8378 . 8393) (INT 7953 . 7956) (symbol 7937 . 7952) (INT 7024 . 7027) (symbol 7008 . 7023) (symbol 5860 . 5867) (symbol 5844 . 5859) (INT 5550 . 5553) (symbol 5534 . 5549) (INT 4566 . 4569) (symbol 4550 . 4565) (INT 4308 . 4311) (symbol 4292 . 4307) (punctuation 4046 . 4047) (symbol 4039 . 4045) (symbol 4023 . 4038) (punctuation 3765 . 3766) (symbol 3758 . 3764) (symbol 3742 . 3757) (punctuation 3223 . 3224) (symbol 3216 . 3222) (symbol 3200 . 3215) (punctuation 2944 . 2945) (symbol 2937 . 2943) (symbol 2921 . 2936) (punctuation 2432 . 2433) (symbol 2425 . 2431) (symbol 2409 . 2424) (punctuation 2170 . 2171) (symbol 2163 . 2169) (symbol 2147 . 2162) (punctuation 1979 . 1980) (symbol 1972 . 1978) (symbol 1956 . 1971) (punctuation 1698 . 1699) (symbol 1691 . 1697) (symbol 1675 . 1690) (symbol 1222 . 1237) (symbol 1168 . 1183) (symbol 1073 . 1079) (STATIC 1066 . 1072) (symbol 961 . 967) (STATIC 954 . 960) (symbol 886 . 892) (STATIC 879 . 885) (symbol 797 . 803) (STATIC 790 . 796) (symbol 703 . 709) (STATIC 696 . 702) (symbol 640 . 646) (STATIC 633 . 639) (symbol 578 . 584) (STATIC 571 . 577) (INT 502 . 505) (STATIC 495 . 501) (punctuation 444 . 445) (symbol 435 . 443) (STATIC 428 . 434) (VOID 386 . 390) (STATIC 379 . 385) (punctuation 328 . 329) (symbol 319 . 327) (STATIC 312 . 318))
+    )
+   (semanticdb-table "type.h"
+    :file "type.h"
+    :fsize 3220
+    :lastmodtime '(21351 15209 944817 589000)
+    )
+   (semanticdb-table "wire.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "wire.h"
+    :pointmax 2852
+    :fsize 2851
+    :lastmodtime '(21351 15209 928809 790000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "float.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("lci-data.h" include nil nil [231 252])
+            ("lci/diag.h" include (:system-flag t) nil [253 274])
+            ("lci/endian.h" include (:system-flag t) nil [275 298])
+            ("lci/float.h" include (:system-flag t) nil [299 321])
+            ("lci/int.h" include (:system-flag t) nil [322 342])
+            ("lci/parse.h" include (:system-flag t) nil [343 365])
+            ("errno.h" include (:system-flag t) nil [367 385])
+            ("float.h" include (:system-flag t) nil [386 404])
+            ("math.h" include (:system-flag t) nil [405 422])
+            ("stdio.h" include (:system-flag t) nil [423 441])
+            ("stdlib.h" include (:system-flag t) nil [442 461])
+            ("string.h" include (:system-flag t) nil [462 481])
+            ("float32_equal" function
+               (:arguments 
+                  ( ("v1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [525 540])
+                    ("v2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [541 556]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [503 645])
+            ("float32_hash" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [691 709]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [670 741])
+            ("float32_bytes" function
+               (:arguments 
+                  ( ("value" variable (:type ("float32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [788 804]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [766 831])
+            ("float32_read" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("float32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [877 894])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [895 913])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [914 930]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [856 1172])
+            ("float32_write" function
+               (:arguments 
+                  ( ("value" variable (:type ("float32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1219 1235])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1236 1248])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1249 1259]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [1197 1481])
+            ("float32_chars" function
+               (:arguments 
+                  ( ("value" variable (:type ("float32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1528 1544])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [1545 1556]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [1506 1633])
+            ("float32_parse" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("float32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1680 1697])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1698 1716])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1717 1733])
+                    ("at" variable
+                       (:pointer 1
+                        :type ("floc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1736 1752]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [1658 2406])
+            ("float32_print" function
+               (:arguments 
+                  ( ("value" variable (:type ("float32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2453 2469])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2470 2482])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2483 2493])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [2494 2505]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [2431 2722])
+            ("float64_equal" function
+               (:arguments 
+                  ( ("v1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2766 2781])
+                    ("v2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2782 2797]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [2744 2886])
+            ("float64_hash" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2932 2950]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [2911 2982])
+            ("float64_bytes" function
+               (:arguments 
+                  ( ("value" variable (:type ("float64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3029 3045]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [3007 3072])
+            ("float64_read" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("float64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3118 3135])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3136 3154])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3155 3171]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [3097 3413])
+            ("float64_write" function
+               (:arguments 
+                  ( ("value" variable (:type ("float64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3460 3476])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3477 3489])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3490 3500]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [3438 3722])
+            ("float64_chars" function
+               (:arguments 
+                  ( ("value" variable (:type ("float64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3769 3785])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [3786 3797]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [3747 3874])
+            ("float64_parse" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("float64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3921 3938])
+                    ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3939 3957])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3958 3974])
+                    ("at" variable
+                       (:pointer 1
+                        :type ("floc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3977 3993]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [3899 4645])
+            ("float64_print" function
+               (:arguments 
+                  ( ("value" variable (:type ("float64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4692 4708])
+                    ("begin" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4709 4721])
+                    ("end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4722 4732])
+                    ("indent" variable (:type "int") (reparse-symbol arg-sub-list) [4733 4744]))                  
+                :type ("LCI_API" type (:type "class") nil nil))
+                nil [4670 4961]))          
+    :file "float.c"
+    :pointmax 4963
+    :fsize 4962
+    :lastmodtime '(21351 15209 908800 42000)
+    :unmatched-syntax '((symbol 4663 . 4669) (symbol 4647 . 4662) (symbol 3892 . 3898) (symbol 3876 . 3891) (symbol 3740 . 3746) (symbol 3724 . 3739) (symbol 3431 . 3437) (symbol 3415 . 3430) (symbol 3090 . 3096) (symbol 3074 . 3089) (symbol 3000 . 3006) (symbol 2984 . 2999) (symbol 2904 . 2910) (symbol 2888 . 2903) (INT 2740 . 2743) (symbol 2724 . 2739) (symbol 2424 . 2430) (symbol 2408 . 2423) (symbol 1651 . 1657) (symbol 1635 . 1650) (symbol 1499 . 1505) (symbol 1483 . 1498) (symbol 1190 . 1196) (symbol 1174 . 1189) (symbol 849 . 855) (symbol 833 . 848) (symbol 759 . 765) (symbol 743 . 758) (symbol 663 . 669) (symbol 647 . 662) (INT 499 . 502) (symbol 483 . 498))
+    )
+   )
+  :file "!home!andrea!Workspace!lely!lci!liblci-data!trunk!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

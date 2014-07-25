@@ -1,0 +1,19 @@
+;; Object asm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "asm/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("exit" function nil nil [1 62]))          
+    :file "Makefile"
+    :pointmax 47
+    :fsize 61
+    :lastmodtime '(20607 9326)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!asm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

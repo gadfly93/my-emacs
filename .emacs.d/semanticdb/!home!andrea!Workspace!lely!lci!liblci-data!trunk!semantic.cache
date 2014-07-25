@@ -1,0 +1,21 @@
+;; Object trunk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trunk/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("pkgconfigdir" variable (:default-value ("$(libdir)/pkgconfig")) nil [39 74])
+            ("pkgconfig_DATA" variable (:default-value ("liblci-data.pc")) nil [74 106])
+            ("EXTRA_DIST" variable (:default-value ("README.md")) nil [107 130]))          
+    :file "Makefile.am"
+    :pointmax 131
+    :fsize 130
+    :lastmodtime '(21361 65317 445539 146000)
+    :unmatched-syntax '((symbol 32 . 37) (symbol 27 . 31) (symbol 23 . 26) (INCLUDE 15 . 22) (symbol 11 . 14) (punctuation 9 . 10) (symbol 1 . 8) (bol 1 . 1))
+    )
+   )
+  :file "!home!andrea!Workspace!lely!lci!liblci-data!trunk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

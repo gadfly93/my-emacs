@@ -1,0 +1,43 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables (list 
+   (semanticdb-table "test_acc.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("android" include nil nil [1 15])
+            ("time" include nil nil [16 27])
+            ("droid" variable nil nil [28 53])
+            ("dt" variable nil nil [54 62])
+            ("endTime" variable nil nil [87 101])
+            ("timeSensed" variable nil nil [121 133])
+            ("droid" code nil nil [134 163])
+            ("while" code nil nil [164 279])
+            ("droid" code nil nil [279 298]))          
+    :file "test_acc.py"
+    :pointmax 299
+    :fsize 298
+    :lastmodtime '(20428 29896)
+    :unmatched-syntax '(($EOI 299 . 299))
+    )
+   (semanticdb-table "test_acc2.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("android" include nil nil [1 15])
+            ("time" include nil nil [16 27])
+            ("pprint" include nil nil [28 41])
+            ("droid" variable nil nil [43 68])
+            ("res" variable nil nil [70 95])
+            ("print" code nil nil [96 105])
+            ("pprint" code nil nil [106 131]))          
+    :file "test_acc2.py"
+    :pointmax 132
+    :fsize 120
+    :lastmodtime '(20428 30606)
+    :unmatched-syntax '((NAME 55 . 58) ($EOI 121 . 121))
+    )
+   )
+  :file "!media!40A9-07B2!sl4a!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

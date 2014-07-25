@@ -1,0 +1,24 @@
+;; Object upgrade-test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "upgrade-test/"
+  :tables (list 
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("urllib" include nil nil [1 14])
+            ("VERSION" variable nil nil [15 30])
+            ("f" variable nil nil [93 152])
+            ("s" variable nil nil [213 225])
+            ("f" code nil nil [226 235])
+            ("if" code nil nil [236 323]))          
+    :file "test.py"
+    :pointmax 324
+    :fsize 321
+    :lastmodtime '(20551 10507)
+    :unmatched-syntax '(($EOI 324 . 324) ($EOI 323 . 323) ($EOI 322 . 322) (IF 234 . 236) ($EOI 293 . 293))
+    )
+   )
+  :file "!home!andrea!Workspace!upgrade-test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

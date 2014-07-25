@@ -1,0 +1,1108 @@
+;; Object server/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "server/"
+  :tables (list 
+   (semanticdb-table "RulexCore.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("os" include nil nil [1 26])
+            ("threading" include nil nil [27 60])
+            ("Queue" include nil nil [61 84])
+            ("time" include nil nil [85 114])
+            ("math" include nil nil [115 136])
+            ("utilities.RulexUtilities" include nil nil [137 175])
+            ("globals.RulexGuiMacro" include nil nil [176 224])
+            ("database.RulexDBApi" include nil nil [225 267])
+            ("RulexDefinitions" include nil nil [268 298])
+            ("RulexCore" type
+               (:superclasses ("RulexDBApi")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [346 350])
+                        ("fast_load_f" variable nil (reparse-symbol function_parameters) [352 363])
+                        ("ispace" variable nil (reparse-symbol function_parameters) [365 371]))                      ) (reparse-symbol indented_block_body) [333 1022])
+                    ("_GetOperator" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1140 1144])
+                        ("operator" variable nil (reparse-symbol function_parameters) [1146 1154]))                      ) (reparse-symbol indented_block_body) [1123 1549])
+                    ("CleanUp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1566 1570]))                      ) (reparse-symbol indented_block_body) [1554 1608])
+                    ("DateToString" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1630 1634])
+                        ("absdate" variable nil (reparse-symbol function_parameters) [1636 1643]))                      ) (reparse-symbol indented_block_body) [1613 1912])
+                    ("IsMissing" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1931 1935])
+                        ("value" variable nil (reparse-symbol function_parameters) [1937 1942]))                      ) (reparse-symbol indented_block_body) [1917 1982])
+                    ("MissValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2001 2005]))                      ) (reparse-symbol indented_block_body) [1987 2070])
+                    ("StringToDate" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2092 2096])
+                        ("strdate" variable nil (reparse-symbol function_parameters) [2098 2105]))                      ) (reparse-symbol indented_block_body) [2075 2269])
+                    ("SyncGetStatistics" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2296 2300])
+                        ("add_hist_f" variable nil (reparse-symbol function_parameters) [2302 2312])
+                        ("nbin" variable nil (reparse-symbol function_parameters) [2320 2324]))                      ) (reparse-symbol indented_block_body) [2274 4842])
+                    ("PyCreateSpace" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4865 4869])
+                        ("ispace" variable nil (reparse-symbol function_parameters) [4871 4877]))                      ) (reparse-symbol indented_block_body) [4847 4971])
+                    ("CopyData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5092 5096])
+                        ("indata" variable nil (reparse-symbol function_parameters) [5098 5104])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [5106 5111])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [5113 5119])
+                        ("natt" variable nil (reparse-symbol function_parameters) [5121 5125]))                      ) (reparse-symbol indented_block_body) [5079 5386])
+                    ("CopySetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5407 5411])
+                        ("ignored" variable nil (reparse-symbol function_parameters) [5413 5420])
+                        ("testpatt" variable nil (reparse-symbol function_parameters) [5422 5430])
+                        ("replicas" variable nil (reparse-symbol function_parameters) [5432 5440])
+                        ("indshuf" variable nil (reparse-symbol function_parameters) [5442 5449])
+                        ("nsti" variable nil (reparse-symbol function_parameters) [5451 5455]))                      ) (reparse-symbol indented_block_body) [5391 6125])
+                    ("CopyNames" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6144 6148])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [6150 6156])
+                        ("natt" variable nil (reparse-symbol function_parameters) [6158 6162]))                      ) (reparse-symbol indented_block_body) [6130 6386])
+                    ("CopyBoxes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6405 6409])
+                        ("boxes" variable nil (reparse-symbol function_parameters) [6411 6416])
+                        ("nbox" variable nil (reparse-symbol function_parameters) [6418 6422])
+                        ("lenbox" variable nil (reparse-symbol function_parameters) [6424 6430]))                      ) (reparse-symbol indented_block_body) [6391 6709])
+                    ("CopyModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6729 6733])
+                        ("models" variable nil (reparse-symbol function_parameters) [6735 6741])
+                        ("nmodel" variable nil (reparse-symbol function_parameters) [6743 6749]))                      ) (reparse-symbol indented_block_body) [6714 6985])
+                    ("CopyRules" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7004 7008])
+                        ("rules" variable nil (reparse-symbol function_parameters) [7010 7015])
+                        ("nrule" variable nil (reparse-symbol function_parameters) [7017 7022])
+                        ("ruleatt" variable nil (reparse-symbol function_parameters) [7024 7031])
+                        ("nratt" variable nil (reparse-symbol function_parameters) [7033 7038]))                      ) (reparse-symbol indented_block_body) [6990 7288])
+                    ("FreeData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7409 7413])
+                        ("indata" variable nil (reparse-symbol function_parameters) [7415 7421])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [7423 7428]))                      ) (reparse-symbol indented_block_body) [7396 7643])
+                    ("FreeSetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7664 7668])
+                        ("ignored" variable nil (reparse-symbol function_parameters) [7670 7677])
+                        ("testpatt" variable nil (reparse-symbol function_parameters) [7679 7687])
+                        ("replicas" variable nil (reparse-symbol function_parameters) [7689 7697])
+                        ("indshuf" variable nil (reparse-symbol function_parameters) [7699 7706]))                      ) (reparse-symbol indented_block_body) [7648 8003])
+                    ("FreeNames" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8022 8026])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [8028 8034])
+                        ("natt" variable nil (reparse-symbol function_parameters) [8036 8040]))                      ) (reparse-symbol indented_block_body) [8008 8118])
+                    ("FreeBoxes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8137 8141])
+                        ("boxes" variable nil (reparse-symbol function_parameters) [8143 8148])
+                        ("nbox" variable nil (reparse-symbol function_parameters) [8150 8154]))                      ) (reparse-symbol indented_block_body) [8123 8231])
+                    ("FreeModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8251 8255])
+                        ("models" variable nil (reparse-symbol function_parameters) [8257 8263])
+                        ("nmodel" variable nil (reparse-symbol function_parameters) [8265 8271]))                      ) (reparse-symbol indented_block_body) [8236 8390])
+                    ("FreeRules" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8409 8413])
+                        ("rules" variable nil (reparse-symbol function_parameters) [8415 8420])
+                        ("nrule" variable nil (reparse-symbol function_parameters) [8422 8427]))                      ) (reparse-symbol indented_block_body) [8395 8505])
+                    ("FreeAttValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8527 8531])
+                        ("vec" variable nil (reparse-symbol function_parameters) [8533 8536])
+                        ("dim" variable nil (reparse-symbol function_parameters) [8538 8541])
+                        ("kw" variable nil (reparse-symbol function_parameters) [8545 8549]))                      ) (reparse-symbol indented_block_body) [8510 9151])
+                    ("FreeBool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9169 9173])
+                        ("vec" variable nil (reparse-symbol function_parameters) [9175 9178])
+                        ("dim" variable nil (reparse-symbol function_parameters) [9181 9184])
+                        ("kw" variable nil (reparse-symbol function_parameters) [9188 9192]))                      ) (reparse-symbol indented_block_body) [9156 9474])
+                    ("FreeChar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9492 9496])
+                        ("vec" variable nil (reparse-symbol function_parameters) [9498 9501])
+                        ("dim" variable nil (reparse-symbol function_parameters) [9503 9506])
+                        ("kw" variable nil (reparse-symbol function_parameters) [9510 9514]))                      ) (reparse-symbol indented_block_body) [9479 9726])
+                    ("FreeFloat" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9745 9749])
+                        ("vec" variable nil (reparse-symbol function_parameters) [9751 9754])
+                        ("dim" variable nil (reparse-symbol function_parameters) [9756 9759])
+                        ("kw" variable nil (reparse-symbol function_parameters) [9763 9767]))                      ) (reparse-symbol indented_block_body) [9731 10208])
+                    ("FreeInt" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10225 10229])
+                        ("vec" variable nil (reparse-symbol function_parameters) [10231 10234])
+                        ("dim" variable nil (reparse-symbol function_parameters) [10236 10239])
+                        ("kw" variable nil (reparse-symbol function_parameters) [10243 10247]))                      ) (reparse-symbol indented_block_body) [10213 10678])
+                    ("_initLoad" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10800 10804])
+                        ("table" variable nil (reparse-symbol function_parameters) [10806 10811]))                      ) (reparse-symbol indented_block_body) [10786 10945])
+                    ("CoreGetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10966 10970])
+                        ("which_info" variable nil (reparse-symbol function_parameters) [10972 10983])
+                        ("kw" variable nil (reparse-symbol function_parameters) [10985 10989]))                      ) (reparse-symbol indented_block_body) [10950 12979])
+                    ("LoadBlob" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12997 13001])
+                        ("table" variable nil (reparse-symbol function_parameters) [13003 13008])
+                        ("which_blob" variable nil (reparse-symbol function_parameters) [13010 13020])
+                        ("args" variable nil (reparse-symbol function_parameters) [13022 13027]))                      ) (reparse-symbol indented_block_body) [12984 16144])
+                    ("CoreLoadAttributes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16172 16176])
+                        ("nam_tab" variable nil (reparse-symbol function_parameters) [16178 16185])
+                        ("val_tab" variable nil (reparse-symbol function_parameters) [16187 16194])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [16196 16202])
+                        ("natt" variable nil (reparse-symbol function_parameters) [16209 16213])
+                        ("relval" variable nil (reparse-symbol function_parameters) [16247 16253])
+                        ("subrel" variable nil (reparse-symbol function_parameters) [16260 16266])
+                        ("nrel" variable nil (reparse-symbol function_parameters) [16273 16277])
+                        ("is_forecast" variable nil (reparse-symbol function_parameters) [16311 16322]))                      ) (reparse-symbol indented_block_body) [16149 21105])
+                    ("CoreLoadData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21127 21131])
+                        ("set_tab" variable nil (reparse-symbol function_parameters) [21133 21140])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [21142 21148])
+                        ("natt" variable nil (reparse-symbol function_parameters) [21150 21154])
+                        ("indata" variable nil (reparse-symbol function_parameters) [21156 21162])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [21169 21174])
+                        ("is_forecast" variable nil (reparse-symbol function_parameters) [21202 21213]))                      ) (reparse-symbol indented_block_body) [21110 24517])
+                    ("CoreLoadBoxes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [24540 24544])
+                        ("box_tab" variable nil (reparse-symbol function_parameters) [24546 24553])
+                        ("bcf_tab" variable nil (reparse-symbol function_parameters) [24555 24562])
+                        ("boxes" variable nil (reparse-symbol function_parameters) [24564 24569])
+                        ("nbox" variable nil (reparse-symbol function_parameters) [24576 24580])
+                        ("lenbox" variable nil (reparse-symbol function_parameters) [24609 24615]))                      ) (reparse-symbol indented_block_body) [24522 27555])
+                    ("CoreLoadModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27579 27583])
+                        ("mod_tab" variable nil (reparse-symbol function_parameters) [27585 27592])
+                        ("mwg_tab" variable nil (reparse-symbol function_parameters) [27594 27601])
+                        ("mio_tab" variable nil (reparse-symbol function_parameters) [27603 27610])
+                        ("modatt" variable nil (reparse-symbol function_parameters) [27612 27618])
+                        ("nmatt" variable nil (reparse-symbol function_parameters) [27620 27625])
+                        ("models" variable nil (reparse-symbol function_parameters) [27650 27656])
+                        ("nmodel" variable nil (reparse-symbol function_parameters) [27663 27669]))                      ) (reparse-symbol indented_block_body) [27560 31630])
+                    ("CoreLoadRelevance" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31657 31661])
+                        ("arl_tab" variable nil (reparse-symbol function_parameters) [31663 31670])
+                        ("vrl_tab" variable nil (reparse-symbol function_parameters) [31672 31679])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [31681 31687])
+                        ("natt" variable nil (reparse-symbol function_parameters) [31689 31693])
+                        ("relval" variable nil (reparse-symbol function_parameters) [31695 31701])
+                        ("subrel" variable nil (reparse-symbol function_parameters) [31734 31740])
+                        ("nrel" variable nil (reparse-symbol function_parameters) [31747 31751]))                      ) (reparse-symbol indented_block_body) [31635 32772])
+                    ("CoreLoadRules" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32795 32799])
+                        ("rul_tab" variable nil (reparse-symbol function_parameters) [32801 32808])
+                        ("cnd_tab" variable nil (reparse-symbol function_parameters) [32810 32817])
+                        ("cnv_tab" variable nil (reparse-symbol function_parameters) [32819 32826])
+                        ("ruleatt" variable nil (reparse-symbol function_parameters) [32828 32835])
+                        ("nratt" variable nil (reparse-symbol function_parameters) [32837 32842])
+                        ("rules" variable nil (reparse-symbol function_parameters) [32866 32871])
+                        ("nrule" variable nil (reparse-symbol function_parameters) [32878 32883]))                      ) (reparse-symbol indented_block_body) [32777 38363])
+                    ("CoreLoadSetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38388 38392])
+                        ("sti_tab" variable nil (reparse-symbol function_parameters) [38394 38401])
+                        ("ignored" variable nil (reparse-symbol function_parameters) [38403 38410])
+                        ("testpatt" variable nil (reparse-symbol function_parameters) [38417 38425])
+                        ("replicas" variable nil (reparse-symbol function_parameters) [38456 38464])
+                        ("indshuf" variable nil (reparse-symbol function_parameters) [38471 38478])
+                        ("nsti" variable nil (reparse-symbol function_parameters) [38485 38489])
+                        ("nset" variable nil (reparse-symbol function_parameters) [38496 38500])
+                        ("nvdn" variable nil (reparse-symbol function_parameters) [38531 38535])
+                        ("ntst" variable nil (reparse-symbol function_parameters) [38542 38546]))                      ) (reparse-symbol indented_block_body) [38368 41702])
+                    ("CoreParser" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [41722 41726])
+                        ("code" variable nil (reparse-symbol function_parameters) [41728 41732])
+                        ("rlstate" variable nil (reparse-symbol function_parameters) [41734 41741])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [41743 41752]))                      ) (reparse-symbol indented_block_body) [41707 42026])
+                    ("_PrepareFunction" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [42158 42162])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [42164 42169])
+                        ("row_id" variable nil (reparse-symbol function_parameters) [42171 42177]))                      ) (reparse-symbol indented_block_body) [42137 42473])
+                    ("_CopyValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [42493 42497])
+                        ("target" variable nil (reparse-symbol function_parameters) [42499 42505])
+                        ("value" variable nil (reparse-symbol function_parameters) [42507 42512])
+                        ("att" variable nil (reparse-symbol function_parameters) [42514 42517]))                      ) (reparse-symbol indented_block_body) [42478 42750])
+                    ("FindDataValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [42773 42777])
+                        ("indata" variable nil (reparse-symbol function_parameters) [42779 42785])
+                        ("type" variable nil (reparse-symbol function_parameters) [42787 42791])
+                        ("ipatt" variable nil (reparse-symbol function_parameters) [42793 42798])
+                        ("jatt" variable nil (reparse-symbol function_parameters) [42800 42804])
+                        ("as_string_f" variable nil (reparse-symbol function_parameters) [42806 42817]))                      ) (reparse-symbol indented_block_body) [42755 43611])
+                    ("SetDataValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [43633 43637])
+                        ("indata" variable nil (reparse-symbol function_parameters) [43639 43645])
+                        ("type" variable nil (reparse-symbol function_parameters) [43647 43651])
+                        ("ipatt" variable nil (reparse-symbol function_parameters) [43653 43658])
+                        ("jatt" variable nil (reparse-symbol function_parameters) [43660 43664])
+                        ("value" variable nil (reparse-symbol function_parameters) [43666 43671])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [43673 43679]))                      ) (reparse-symbol indented_block_body) [43616 44090])
+                    ("CoreConfusionMatrix" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [44119 44123])
+                        ("indata" variable nil (reparse-symbol function_parameters) [44125 44131])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [44133 44138])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [44140 44146])
+                        ("natt" variable nil (reparse-symbol function_parameters) [44148 44152])
+                        ("auxdata" variable nil (reparse-symbol function_parameters) [44154 44161])
+                        ("auxatt" variable nil (reparse-symbol function_parameters) [44163 44169])
+                        ("naux" variable nil (reparse-symbol function_parameters) [44195 44199])
+                        ("ignored" variable nil (reparse-symbol function_parameters) [44201 44208])
+                        ("testpatt" variable nil (reparse-symbol function_parameters) [44210 44218])
+                        ("jout" variable nil (reparse-symbol function_parameters) [44220 44224])
+                        ("jprev" variable nil (reparse-symbol function_parameters) [44226 44231])
+                        ("testval" variable nil (reparse-symbol function_parameters) [44233 44240]))                      ) (reparse-symbol indented_block_body) [44095 45234])
+                    ("CoreHistogram" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [45257 45261])
+                        ("indata" variable nil (reparse-symbol function_parameters) [45263 45269])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [45271 45276])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [45278 45284])
+                        ("natt" variable nil (reparse-symbol function_parameters) [45286 45290])
+                        ("auxdata" variable nil (reparse-symbol function_parameters) [45292 45299])
+                        ("auxatt" variable nil (reparse-symbol function_parameters) [45301 45307])
+                        ("naux" variable nil (reparse-symbol function_parameters) [45309 45313])
+                        ("row_id" variable nil (reparse-symbol function_parameters) [45337 45343])
+                        ("index" variable nil (reparse-symbol function_parameters) [45345 45350])
+                        ("nbin" variable nil (reparse-symbol function_parameters) [45352 45356])
+                        ("scatter" variable nil (reparse-symbol function_parameters) [45361 45368])
+                        ("has_target" variable nil (reparse-symbol function_parameters) [45376 45386])
+                        ("tnbin" variable nil (reparse-symbol function_parameters) [45416 45421])
+                        ("vtype" variable nil (reparse-symbol function_parameters) [45426 45431]))                      ) (reparse-symbol indented_block_body) [45239 50890])
+                    ("CoreHistogramNew" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [50916 50920])
+                        ("indata" variable nil (reparse-symbol function_parameters) [50922 50928])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [50930 50935])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [50937 50943])
+                        ("natt" variable nil (reparse-symbol function_parameters) [50945 50949])
+                        ("auxdata" variable nil (reparse-symbol function_parameters) [50951 50958])
+                        ("auxatt" variable nil (reparse-symbol function_parameters) [50960 50966])
+                        ("naux" variable nil (reparse-symbol function_parameters) [50993 50997])
+                        ("row_id" variable nil (reparse-symbol function_parameters) [50999 51005])
+                        ("index" variable nil (reparse-symbol function_parameters) [51007 51012])
+                        ("nbin" variable nil (reparse-symbol function_parameters) [51014 51018])
+                        ("scatter" variable nil (reparse-symbol function_parameters) [51023 51030])
+                        ("hastarget" variable nil (reparse-symbol function_parameters) [51063 51072])
+                        ("hasweight" variable nil (reparse-symbol function_parameters) [51080 51089])
+                        ("tnbin" variable nil (reparse-symbol function_parameters) [51097 51102])
+                        ("woper" variable nil (reparse-symbol function_parameters) [51132 51137])
+                        ("plotxy" variable nil (reparse-symbol function_parameters) [51145 51151]))                      ) (reparse-symbol indented_block_body) [50895 58973])
+                    ("CoreBoxPlot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [58994 58998])
+                        ("indata" variable nil (reparse-symbol function_parameters) [59000 59006])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [59008 59013])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [59015 59021])
+                        ("natt" variable nil (reparse-symbol function_parameters) [59023 59027])
+                        ("auxdata" variable nil (reparse-symbol function_parameters) [59029 59036])
+                        ("auxatt" variable nil (reparse-symbol function_parameters) [59038 59044])
+                        ("naux" variable nil (reparse-symbol function_parameters) [59046 59050])
+                        ("jx" variable nil (reparse-symbol function_parameters) [59072 59074])
+                        ("jt" variable nil (reparse-symbol function_parameters) [59076 59078])
+                        ("jw" variable nil (reparse-symbol function_parameters) [59080 59082])
+                        ("nbin" variable nil (reparse-symbol function_parameters) [59084 59088])
+                        ("row_id" variable nil (reparse-symbol function_parameters) [59090 59096])
+                        ("woper" variable nil (reparse-symbol function_parameters) [59098 59103]))                      ) (reparse-symbol indented_block_body) [58978 61402])
+                    ("CoreRocCurve" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [61424 61428])
+                        ("indata" variable nil (reparse-symbol function_parameters) [61430 61436])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [61438 61443])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [61445 61451])
+                        ("natt" variable nil (reparse-symbol function_parameters) [61453 61457])
+                        ("jatt" variable nil (reparse-symbol function_parameters) [61459 61463])
+                        ("jout" variable nil (reparse-symbol function_parameters) [61465 61469])
+                        ("outval" variable nil (reparse-symbol function_parameters) [61471 61477])
+                        ("auxdata" variable nil (reparse-symbol function_parameters) [61500 61507])
+                        ("auxatt" variable nil (reparse-symbol function_parameters) [61514 61520])
+                        ("naux" variable nil (reparse-symbol function_parameters) [61527 61531])
+                        ("row_id" variable nil (reparse-symbol function_parameters) [61538 61544]))                      ) (reparse-symbol indented_block_body) [61407 62756])
+                    ("CoreSelectData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [62780 62784])
+                        ("indata" variable nil (reparse-symbol function_parameters) [62786 62792])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [62794 62799])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [62801 62807])
+                        ("natt" variable nil (reparse-symbol function_parameters) [62809 62813])
+                        ("auxdata" variable nil (reparse-symbol function_parameters) [62815 62822])
+                        ("auxatt" variable nil (reparse-symbol function_parameters) [62852 62858])
+                        ("bounds" variable nil (reparse-symbol function_parameters) [62865 62871])
+                        ("andor" variable nil (reparse-symbol function_parameters) [62878 62883])
+                        ("sortby" variable nil (reparse-symbol function_parameters) [62890 62896])
+                        ("row_id" variable nil (reparse-symbol function_parameters) [62926 62932])
+                        ("hold" variable nil (reparse-symbol function_parameters) [62939 62943]))                      ) (reparse-symbol indented_block_body) [62761 66482])
+                    ("CoreChangeAttType" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [66617 66621])
+                        ("indata" variable nil (reparse-symbol function_parameters) [66623 66629])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [66631 66636])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [66638 66644])
+                        ("natt" variable nil (reparse-symbol function_parameters) [66646 66650])
+                        ("jatt" variable nil (reparse-symbol function_parameters) [66652 66656])
+                        ("newtype" variable nil (reparse-symbol function_parameters) [66658 66665])
+                        ("ignored" variable nil (reparse-symbol function_parameters) [66693 66700])
+                        ("testpatt" variable nil (reparse-symbol function_parameters) [66707 66715]))                      ) (reparse-symbol indented_block_body) [66595 66959])
+                    ("CheckRole" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [66978 66982])
+                        ("att" variable nil (reparse-symbol function_parameters) [66984 66987])
+                        ("which_role" variable nil (reparse-symbol function_parameters) [66989 66999])
+                        ("is_label" variable nil (reparse-symbol function_parameters) [67001 67009])
+                        ("notflag" variable nil (reparse-symbol function_parameters) [67016 67023]))                      ) (reparse-symbol indented_block_body) [66964 67384])
+                    ("CoreFindAttValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [67410 67414])
+                        ("att" variable nil (reparse-symbol function_parameters) [67416 67419])
+                        ("kval" variable nil (reparse-symbol function_parameters) [67421 67425])
+                        ("as_string_f" variable nil (reparse-symbol function_parameters) [67427 67438]))                      ) (reparse-symbol indented_block_body) [67389 68532])
+                    ("FindWeightValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [68557 68561])
+                        ("att" variable nil (reparse-symbol function_parameters) [68563 68566])
+                        ("kval" variable nil (reparse-symbol function_parameters) [68568 68572])
+                        ("as_string_f" variable nil (reparse-symbol function_parameters) [68574 68585]))                      ) (reparse-symbol indented_block_body) [68537 68694])
+                    ("GetAttByRole" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [68716 68720])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [68722 68728])
+                        ("natt" variable nil (reparse-symbol function_parameters) [68730 68734])
+                        ("jrole" variable nil (reparse-symbol function_parameters) [68736 68741])
+                        ("role" variable nil (reparse-symbol function_parameters) [68743 68747])
+                        ("descend" variable nil (reparse-symbol function_parameters) [68749 68756]))                      ) (reparse-symbol indented_block_body) [68699 69053])
+                    ("GetAttIndexByRole" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [69080 69084])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [69086 69092])
+                        ("natt" variable nil (reparse-symbol function_parameters) [69094 69098])
+                        ("jrole" variable nil (reparse-symbol function_parameters) [69100 69105])
+                        ("role" variable nil (reparse-symbol function_parameters) [69107 69111])
+                        ("descend" variable nil (reparse-symbol function_parameters) [69113 69120]))                      ) (reparse-symbol indented_block_body) [69058 69409])
+                    ("GetNattByRole" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [69432 69436])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [69438 69444])
+                        ("natt" variable nil (reparse-symbol function_parameters) [69446 69450])
+                        ("role" variable nil (reparse-symbol function_parameters) [69452 69456]))                      ) (reparse-symbol indented_block_body) [69414 69536])
+                    ("GetAttValues" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [69558 69562])
+                        ("att" variable nil (reparse-symbol function_parameters) [69564 69567])
+                        ("as_string_f" variable nil (reparse-symbol function_parameters) [69569 69580]))                      ) (reparse-symbol indented_block_body) [69541 69789])
+                    ("GetAttStat" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [69809 69813])
+                        ("att" variable nil (reparse-symbol function_parameters) [69815 69818])
+                        ("which_stat" variable nil (reparse-symbol function_parameters) [69820 69830]))                      ) (reparse-symbol indented_block_body) [69794 70865])
+                    ("CoreSetAttValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [70890 70894])
+                        ("att" variable nil (reparse-symbol function_parameters) [70896 70899])
+                        ("kval" variable nil (reparse-symbol function_parameters) [70901 70905])
+                        ("value" variable nil (reparse-symbol function_parameters) [70907 70912]))                      ) (reparse-symbol indented_block_body) [70870 71446])
+                    ("SetAttStat" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [71466 71470])
+                        ("att" variable nil (reparse-symbol function_parameters) [71472 71475])
+                        ("which_stat" variable nil (reparse-symbol function_parameters) [71477 71487])
+                        ("value" variable nil (reparse-symbol function_parameters) [71489 71494]))                      ) (reparse-symbol indented_block_body) [71451 72655])
+                    ("CoreSetWeightValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [72683 72687])
+                        ("att" variable nil (reparse-symbol function_parameters) [72689 72692])
+                        ("kval" variable nil (reparse-symbol function_parameters) [72694 72698])
+                        ("value" variable nil (reparse-symbol function_parameters) [72700 72705]))                      ) (reparse-symbol indented_block_body) [72660 72768])
+                    ("CoreSelectAttributes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [72798 72802])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [72804 72810])
+                        ("natt" variable nil (reparse-symbol function_parameters) [72812 72816])
+                        ("bounds" variable nil (reparse-symbol function_parameters) [72818 72824])
+                        ("indsel" variable nil (reparse-symbol function_parameters) [72826 72832])
+                        ("nsel" variable nil (reparse-symbol function_parameters) [72868 72872]))                      ) (reparse-symbol indented_block_body) [72773 74577])
+                    ("CoreSortAttributes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [74605 74609])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [74611 74617])
+                        ("natt" variable nil (reparse-symbol function_parameters) [74619 74623])
+                        ("sortby" variable nil (reparse-symbol function_parameters) [74625 74631])
+                        ("relval" variable nil (reparse-symbol function_parameters) [74633 74639])
+                        ("nrel" variable nil (reparse-symbol function_parameters) [74646 74650])
+                        ("att_id" variable nil (reparse-symbol function_parameters) [74684 74690]))                      ) (reparse-symbol indented_block_body) [74582 75808])
+                    ("FindConditionValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [75942 75946])
+                        ("rules" variable nil (reparse-symbol function_parameters) [75948 75953])
+                        ("irul" variable nil (reparse-symbol function_parameters) [75955 75959])
+                        ("jcond" variable nil (reparse-symbol function_parameters) [75961 75966])
+                        ("kval" variable nil (reparse-symbol function_parameters) [75968 75972])
+                        ("att_type" variable nil (reparse-symbol function_parameters) [75974 75982])
+                        ("as_string_f" variable nil (reparse-symbol function_parameters) [76011 76022]))                      ) (reparse-symbol indented_block_body) [75919 76888])
+                    ("SetConditionValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [76915 76919])
+                        ("rules" variable nil (reparse-symbol function_parameters) [76921 76926])
+                        ("att_type" variable nil (reparse-symbol function_parameters) [76928 76936])
+                        ("irul" variable nil (reparse-symbol function_parameters) [76938 76942])
+                        ("jcond" variable nil (reparse-symbol function_parameters) [76944 76949])
+                        ("kval" variable nil (reparse-symbol function_parameters) [76951 76955])
+                        ("value" variable nil (reparse-symbol function_parameters) [76957 76962])
+                        ("ruleatt" variable nil (reparse-symbol function_parameters) [76990 76997]))                      ) (reparse-symbol indented_block_body) [76893 77408])
+                    ("CoreSelectRules" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [77433 77437])
+                        ("rules" variable nil (reparse-symbol function_parameters) [77439 77444])
+                        ("nrule" variable nil (reparse-symbol function_parameters) [77446 77451])
+                        ("ruleatt" variable nil (reparse-symbol function_parameters) [77453 77460])
+                        ("nratt" variable nil (reparse-symbol function_parameters) [77462 77467])
+                        ("bounds" variable nil (reparse-symbol function_parameters) [77469 77475])
+                        ("rul_id" variable nil (reparse-symbol function_parameters) [77477 77483])
+                        ("cnd_id" variable nil (reparse-symbol function_parameters) [77514 77520])
+                        ("andor" variable nil (reparse-symbol function_parameters) [77527 77532])
+                        ("hold" variable nil (reparse-symbol function_parameters) [77539 77543]))                      ) (reparse-symbol indented_block_body) [77413 81243])
+                    ("CoreSortConditions" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [81271 81275])
+                        ("rules" variable nil (reparse-symbol function_parameters) [81277 81282])
+                        ("nrule" variable nil (reparse-symbol function_parameters) [81284 81289])
+                        ("ruleatt" variable nil (reparse-symbol function_parameters) [81291 81298])
+                        ("sortby" variable nil (reparse-symbol function_parameters) [81300 81306])
+                        ("cnd_id" variable nil (reparse-symbol function_parameters) [81308 81314]))                      ) (reparse-symbol indented_block_body) [81248 82212])
+                    ("CoreSortRules" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [82235 82239])
+                        ("rules" variable nil (reparse-symbol function_parameters) [82241 82246])
+                        ("nrule" variable nil (reparse-symbol function_parameters) [82248 82253])
+                        ("ruleatt" variable nil (reparse-symbol function_parameters) [82255 82262])
+                        ("sortby" variable nil (reparse-symbol function_parameters) [82264 82270])
+                        ("rul_id" variable nil (reparse-symbol function_parameters) [82272 82278]))                      ) (reparse-symbol indented_block_body) [82217 83214])
+                    ("WriteModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [83340 83344])
+                        ("fn" variable nil (reparse-symbol function_parameters) [83346 83348])
+                        ("models" variable nil (reparse-symbol function_parameters) [83350 83356])
+                        ("nmodel" variable nil (reparse-symbol function_parameters) [83358 83364]))                      ) (reparse-symbol indented_block_body) [83324 84436])
+                    ("ReleaseLibrary" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [84566 84570]))                      ) (reparse-symbol indented_block_body) [84547 84643])
+                    ("Role" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [84764 84768])
+                        ("role_str" variable nil (reparse-symbol function_parameters) [84770 84778]))                      ) (reparse-symbol indented_block_body) [84755 84837])
+                    ("DistStr" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [84854 84858])
+                        ("dist_id" variable nil (reparse-symbol function_parameters) [84860 84867]))                      ) (reparse-symbol indented_block_body) [84842 84972])
+                    ("NormStr" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [84989 84993])
+                        ("norm_id" variable nil (reparse-symbol function_parameters) [84995 85002]))                      ) (reparse-symbol indented_block_body) [84977 85107])
+                    ("RoleStr" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [85124 85128])
+                        ("role_id" variable nil (reparse-symbol function_parameters) [85130 85137]))                      ) (reparse-symbol indented_block_body) [85112 85242])
+                    ("TypeStr" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [85259 85263])
+                        ("type_id" variable nil (reparse-symbol function_parameters) [85265 85272]))                      ) (reparse-symbol indented_block_body) [85247 85376])
+                    ("PyGetStore" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [85396 85400]))                      ) (reparse-symbol indented_block_body) [85381 85516])
+                    ("PyGetNeeded" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [85537 85541]))                      ) (reparse-symbol indented_block_body) [85521 85844])
+                    ("PyGetErrorString" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [85870 85874])
+                        ("errorcode" variable nil (reparse-symbol function_parameters) [85876 85885]))                      ) (reparse-symbol indented_block_body) [85849 86344])
+                    ("PyGetOption" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [86365 86369])
+                        ("opt_name" variable nil (reparse-symbol function_parameters) [86371 86379])
+                        ("opt_type" variable nil (reparse-symbol function_parameters) [86381 86389]))                      ) (reparse-symbol indented_block_body) [86349 86696])
+                    ("PyGetGlobal" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [86717 86721])
+                        ("which_global" variable nil (reparse-symbol function_parameters) [86723 86735])
+                        ("glob_type" variable nil (reparse-symbol function_parameters) [86737 86746]))                      ) (reparse-symbol indented_block_body) [86701 87342])
+                    ("PySetGlobal" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [87363 87367])
+                        ("which_global" variable nil (reparse-symbol function_parameters) [87369 87381])
+                        ("value" variable nil (reparse-symbol function_parameters) [87383 87388])
+                        ("glob_type" variable nil (reparse-symbol function_parameters) [87390 87399]))                      ) (reparse-symbol indented_block_body) [87347 87819])
+                    ("PyGetOptvecDefault" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [87847 87851])
+                        ("opt_name" variable nil (reparse-symbol function_parameters) [87853 87861]))                      ) (reparse-symbol indented_block_body) [87824 88285])
+                    ("PyReallocAttRec" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [88310 88314])
+                        ("vec" variable nil (reparse-symbol function_parameters) [88316 88319])
+                        ("size" variable nil (reparse-symbol function_parameters) [88321 88325])
+                        ("offset" variable nil (reparse-symbol function_parameters) [88327 88333]))                      ) (reparse-symbol indented_block_body) [88290 88473])
+                    ("PyReallocAttValue" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [88500 88504])
+                        ("vec" variable nil (reparse-symbol function_parameters) [88506 88509])
+                        ("nrow" variable nil (reparse-symbol function_parameters) [88511 88515])
+                        ("ncol" variable nil (reparse-symbol function_parameters) [88517 88521])
+                        ("offset" variable nil (reparse-symbol function_parameters) [88525 88531]))                      ) (reparse-symbol indented_block_body) [88478 88880])
+                    ("PyReallocBool" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [88903 88907])
+                        ("vec" variable nil (reparse-symbol function_parameters) [88909 88912])
+                        ("nrow" variable nil (reparse-symbol function_parameters) [88914 88918])
+                        ("ncol" variable nil (reparse-symbol function_parameters) [88920 88924])
+                        ("offset" variable nil (reparse-symbol function_parameters) [88928 88934]))                      ) (reparse-symbol indented_block_body) [88885 89236])
+                    ("PyReallocInt" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [89258 89262])
+                        ("vec" variable nil (reparse-symbol function_parameters) [89264 89267])
+                        ("nrow" variable nil (reparse-symbol function_parameters) [89269 89273])
+                        ("ncol" variable nil (reparse-symbol function_parameters) [89275 89279])
+                        ("offset" variable nil (reparse-symbol function_parameters) [89283 89289]))                      ) (reparse-symbol indented_block_body) [89241 89601])
+                    ("PyReallocRuleRec" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [89627 89631])
+                        ("vec" variable nil (reparse-symbol function_parameters) [89633 89636])
+                        ("size" variable nil (reparse-symbol function_parameters) [89638 89642])
+                        ("offset" variable nil (reparse-symbol function_parameters) [89644 89650]))                      ) (reparse-symbol indented_block_body) [89606 89792])
+                    ("PyReallocCondRec" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [89818 89822])
+                        ("vec" variable nil (reparse-symbol function_parameters) [89824 89827])
+                        ("size" variable nil (reparse-symbol function_parameters) [89829 89833])
+                        ("offset" variable nil (reparse-symbol function_parameters) [89835 89841]))                      ) (reparse-symbol indented_block_body) [89797 89983])
+                    ("PyReallocFloat" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [90007 90011])
+                        ("vec" variable nil (reparse-symbol function_parameters) [90013 90016])
+                        ("nrow" variable nil (reparse-symbol function_parameters) [90018 90022])
+                        ("ncol" variable nil (reparse-symbol function_parameters) [90024 90028])
+                        ("offset" variable nil (reparse-symbol function_parameters) [90032 90038]))                      ) (reparse-symbol indented_block_body) [89988 90344])
+                    ("PyAllocOptimpar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [90369 90373])
+                        ("outbitmax" variable nil (reparse-symbol function_parameters) [90375 90384]))                      ) (reparse-symbol indented_block_body) [90349 90456])
+                    ("PySetFlag" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [90475 90479])
+                        ("which_flag" variable nil (reparse-symbol function_parameters) [90481 90491])
+                        ("value" variable nil (reparse-symbol function_parameters) [90493 90498]))                      ) (reparse-symbol indented_block_body) [90461 90597])
+                    ("PySetOption" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [90618 90622])
+                        ("opt_name" variable nil (reparse-symbol function_parameters) [90624 90632])
+                        ("opt_value" variable nil (reparse-symbol function_parameters) [90634 90643])
+                        ("opt_type" variable nil (reparse-symbol function_parameters) [90645 90653]))                      ) (reparse-symbol indented_block_body) [90602 91582])
+                    ("PySetProgressBounds" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [91611 91615])
+                        ("progmin" variable nil (reparse-symbol function_parameters) [91617 91624])
+                        ("progmax" variable nil (reparse-symbol function_parameters) [91626 91633]))                      ) (reparse-symbol indented_block_body) [91587 91732])
+                    ("CompareIndata" function (:arguments 
+                      ( ("indata" variable nil (reparse-symbol function_parameters) [91832 91838])
+                        ("indata2" variable nil (reparse-symbol function_parameters) [91840 91847])
+                        ("ndata" variable nil (reparse-symbol function_parameters) [91849 91854])
+                        ("inpatt" variable nil (reparse-symbol function_parameters) [91856 91862])
+                        ("natt" variable nil (reparse-symbol function_parameters) [91864 91868]))                      ) (reparse-symbol indented_block_body) [91814 92590]))                  
+                :type "class")
+                nil [300 92590]))          
+    :file "RulexCore.py"
+    :pointmax 92634
+    :fsize 92977
+    :lastmodtime '(20819 784)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "RulexTask.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("globals.RulexDBMacro" include nil nil [1 35])
+            ("RulexCore" include nil nil [36 59])
+            ("collections" include nil nil [60 95])
+            ("RulexFlowControl" include nil nil [96 134])
+            ("ENDLOOP_CODE" code nil nil [136 157])
+            ("RulexTask" type
+               (:superclasses ("RulexCore")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [204 208])
+                        ("fast_load_f" variable nil (reparse-symbol function_parameters) [210 221])
+                        ("use_blob_f" variable nil (reparse-symbol function_parameters) [223 233]))                      ) (reparse-symbol indented_block_body) [191 454])
+                    ("_GetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [472 476])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [478 493])
+                        ("which_info" variable nil (reparse-symbol function_parameters) [495 505]))                      ) (reparse-symbol indented_block_body) [459 1253])
+                    ("_SetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1271 1275])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [1277 1292])
+                        ("which_info" variable nil (reparse-symbol function_parameters) [1294 1304])
+                        ("value" variable nil (reparse-symbol function_parameters) [1306 1311]))                      ) (reparse-symbol indented_block_body) [1258 1510])
+                    ("_AppendForecastModel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1540 1544])
+                        ("frc" variable nil (reparse-symbol function_parameters) [1546 1549])
+                        ("model_type" variable nil (reparse-symbol function_parameters) [1551 1561])
+                        ("generated_by" variable nil (reparse-symbol function_parameters) [1563 1575]))                      ) (reparse-symbol indented_block_body) [1515 1793])
+                    ("_SplittedStore" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1817 1821])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [1823 1832])
+                        ("store_list" variable nil (reparse-symbol function_parameters) [1834 1845]))                      ) (reparse-symbol indented_block_body) [1798 2403])
+                    ("AppendComputationData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2434 2438])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [2440 2449])
+                        ("G" variable nil (reparse-symbol function_parameters) [2451 2452]))                      ) (reparse-symbol indented_block_body) [2408 3688])
+                    ("CleanComputationData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3718 3722]))                      ) (reparse-symbol indented_block_body) [3693 3952])
+                    ("CleanTaskData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3975 3979])
+                        ("task_list" variable nil (reparse-symbol function_parameters) [3981 3991]))                      ) (reparse-symbol indented_block_body) [3957 5408])
+                    ("CheckOutput" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5429 5433])
+                        ("G" variable nil (reparse-symbol function_parameters) [5435 5436]))                      ) (reparse-symbol indented_block_body) [5413 5653])
+                    ("InitStoringTable" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5679 5683])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [5685 5694])
+                        ("ref" variable nil (reparse-symbol function_parameters) [5696 5699])
+                        ("tab_fields" variable nil (reparse-symbol function_parameters) [5701 5711])
+                        ("drop_old_f" variable nil (reparse-symbol function_parameters) [5743 5753]))                      ) (reparse-symbol indented_block_body) [5658 5973])
+                    ("InitJob" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5990 5994])
+                        ("G" variable nil (reparse-symbol function_parameters) [5996 5997])
+                        ("ref" variable nil (reparse-symbol function_parameters) [5999 6003]))                      ) (reparse-symbol indented_block_body) [5978 6238])
+                    ("InitTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6256 6260])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [6262 6271])
+                        ("info" variable nil (reparse-symbol function_parameters) [6273 6277])
+                        ("is_forecast" variable nil (reparse-symbol function_parameters) [6279 6290]))                      ) (reparse-symbol indented_block_body) [6243 7878])
+                    ("EndJob" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7894 7898])
+                        ("G" variable nil (reparse-symbol function_parameters) [7900 7901]))                      ) (reparse-symbol indented_block_body) [7883 7996])
+                    ("EndTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8013 8017])
+                        ("res" variable nil (reparse-symbol function_parameters) [8019 8022])
+                        ("G" variable nil (reparse-symbol function_parameters) [8024 8025]))                      ) (reparse-symbol indented_block_body) [8001 9201])
+                    ("ExtractTableInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9227 9231])
+                        ("set_table" variable nil (reparse-symbol function_parameters) [9233 9242])
+                        ("table_names" variable nil (reparse-symbol function_parameters) [9244 9255])
+                        ("roles" variable nil (reparse-symbol function_parameters) [9257 9262])
+                        ("use_labels" variable nil (reparse-symbol function_parameters) [9294 9304])
+                        ("ignored" variable nil (reparse-symbol function_parameters) [9311 9318])
+                        ("ntable" variable nil (reparse-symbol function_parameters) [9325 9331])
+                        ("drop_old_f" variable nil (reparse-symbol function_parameters) [9360 9370]))                      ) (reparse-symbol indented_block_body) [9206 16169])
+                    ("GetStatistics" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16192 16196])
+                        ("G" variable nil (reparse-symbol function_parameters) [16198 16199]))                      ) (reparse-symbol indented_block_body) [16174 16814])
+                    ("ProgressMonitor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16839 16843])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [16845 16854])
+                        ("flag" variable nil (reparse-symbol function_parameters) [16856 16860]))                      ) (reparse-symbol indented_block_body) [16819 17470])
+                    ("StartThread" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17491 17495])
+                        ("func" variable nil (reparse-symbol function_parameters) [17497 17501])
+                        ("args" variable nil (reparse-symbol function_parameters) [17503 17507])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [17514 17520])
+                        ("flag" variable nil (reparse-symbol function_parameters) [17527 17531]))                      ) (reparse-symbol indented_block_body) [17475 18164])
+                    ("WaitForThread" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18187 18191])
+                        ("thread" variable nil (reparse-symbol function_parameters) [18193 18199])
+                        ("flag" variable nil (reparse-symbol function_parameters) [18201 18205]))                      ) (reparse-symbol indented_block_body) [18169 18321])
+                    ("FreeTaskData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18343 18347])
+                        ("G" variable nil (reparse-symbol function_parameters) [18349 18350]))                      ) (reparse-symbol indented_block_body) [18326 18725])
+                    ("ForecastWrapper" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18857 18861])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [18863 18872]))                      ) (reparse-symbol indented_block_body) [18837 18949])
+                    ("ComputeWrapper" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19079 19083])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [19085 19094])
+                        ("info" variable nil (reparse-symbol function_parameters) [19096 19100]))                      ) (reparse-symbol indented_block_body) [19060 20175])
+                    ("ExecuteTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20196 20200])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [20202 20211])
+                        ("info" variable nil (reparse-symbol function_parameters) [20213 20217])
+                        ("is_forecast" variable nil (reparse-symbol function_parameters) [20219 20230]))                      ) (reparse-symbol indented_block_body) [20180 21491])
+                    ("ExecuteCategoryJobs" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21520 21524])
+                        ("G" variable nil (reparse-symbol function_parameters) [21526 21527]))                      ) (reparse-symbol indented_block_body) [21496 22688])
+                    ("HandleOptions" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22711 22715])
+                        ("G" variable nil (reparse-symbol function_parameters) [22717 22718])
+                        ("sub_cat_label" variable nil (reparse-symbol function_parameters) [22720 22733])
+                        ("task_options" variable nil (reparse-symbol function_parameters) [22740 22752]))                      ) (reparse-symbol indented_block_body) [22693 24488])
+                    ("GetTaskData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [24618 24622])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [24624 24633])
+                        ("G" variable nil (reparse-symbol function_parameters) [24635 24636])
+                        ("nr" variable nil (reparse-symbol function_parameters) [24638 24640])
+                        ("ar" variable nil (reparse-symbol function_parameters) [24642 24644]))                      ) (reparse-symbol indented_block_body) [24602 30550])
+                    ("SetTaskData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [30571 30575])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [30577 30586])
+                        ("ref" variable nil (reparse-symbol function_parameters) [30588 30591])
+                        ("data" variable nil (reparse-symbol function_parameters) [30593 30598]))                      ) (reparse-symbol indented_block_body) [30555 30933])
+                    ("LoadTaskOptions" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [30958 30962])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [30964 30973]))                      ) (reparse-symbol indented_block_body) [30938 31166])
+                    ("LoadingService" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31190 31194])
+                        ("G" variable nil (reparse-symbol function_parameters) [31196 31197])
+                        ("flag" variable nil (reparse-symbol function_parameters) [31199 31203]))                      ) (reparse-symbol indented_block_body) [31171 32801])
+                    ("LoadAttributes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32825 32829])
+                        ("G" variable nil (reparse-symbol function_parameters) [32831 32832])
+                        ("ref" variable nil (reparse-symbol function_parameters) [32834 32837])
+                        ("from_parent_f" variable nil (reparse-symbol function_parameters) [32845 32858]))                      ) (reparse-symbol indented_block_body) [32806 33546])
+                    ("LoadData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [33564 33568])
+                        ("G" variable nil (reparse-symbol function_parameters) [33570 33571])
+                        ("ref" variable nil (reparse-symbol function_parameters) [33573 33576])
+                        ("from_parent_f" variable nil (reparse-symbol function_parameters) [33584 33597]))                      ) (reparse-symbol indented_block_body) [33551 34629])
+                    ("LoadBoxes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [34648 34652])
+                        ("G" variable nil (reparse-symbol function_parameters) [34654 34655])
+                        ("from_parent_f" variable nil (reparse-symbol function_parameters) [34657 34670]))                      ) (reparse-symbol indented_block_body) [34634 35068])
+                    ("LoadModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [35088 35092])
+                        ("G" variable nil (reparse-symbol function_parameters) [35094 35095])
+                        ("from_parent_f" variable nil (reparse-symbol function_parameters) [35097 35110]))                      ) (reparse-symbol indented_block_body) [35073 35669])
+                    ("LoadRuleset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [35690 35694])
+                        ("G" variable nil (reparse-symbol function_parameters) [35696 35697])
+                        ("from_parent_f" variable nil (reparse-symbol function_parameters) [35699 35712]))                      ) (reparse-symbol indented_block_body) [35674 36262])
+                    ("LoadSetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [36283 36287])
+                        ("G" variable nil (reparse-symbol function_parameters) [36289 36290])
+                        ("from_parent_f" variable nil (reparse-symbol function_parameters) [36292 36305]))                      ) (reparse-symbol indented_block_body) [36267 37234])
+                    ("LoadCode" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37252 37256])
+                        ("G" variable nil (reparse-symbol function_parameters) [37258 37259]))                      ) (reparse-symbol indented_block_body) [37239 37600])
+                    ("LoadParserStatus" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37626 37630])
+                        ("G" variable nil (reparse-symbol function_parameters) [37632 37633]))                      ) (reparse-symbol indented_block_body) [37605 38045])
+                    ("LoadGlobalVariables" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38074 38078])
+                        ("G" variable nil (reparse-symbol function_parameters) [38080 38081]))                      ) (reparse-symbol indented_block_body) [38050 38388])
+                    ("LoadForecastModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38416 38420])
+                        ("G" variable nil (reparse-symbol function_parameters) [38422 38423]))                      ) (reparse-symbol indented_block_body) [38393 39059])
+                    ("StoreTaskData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [39082 39086])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [39088 39097])
+                        ("G" variable nil (reparse-symbol function_parameters) [39099 39100])
+                        ("res" variable nil (reparse-symbol function_parameters) [39102 39105])
+                        ("is_forecast" variable nil (reparse-symbol function_parameters) [39107 39118]))                      ) (reparse-symbol indented_block_body) [39064 42236])
+                    ("StoreBlob" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [42255 42259])
+                        ("which_blob" variable nil (reparse-symbol function_parameters) [42261 42271])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [42273 42288])
+                        ("ref" variable nil (reparse-symbol function_parameters) [42290 42293])
+                        ("itr" variable nil (reparse-symbol function_parameters) [42295 42298])
+                        ("args" variable nil (reparse-symbol function_parameters) [42300 42305]))                      ) (reparse-symbol indented_block_body) [42241 45572])
+                    ("StoreAttributes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [45597 45601])
+                        ("G" variable nil (reparse-symbol function_parameters) [45603 45604])
+                        ("ref" variable nil (reparse-symbol function_parameters) [45606 45609])
+                        ("drop_old_f" variable nil (reparse-symbol function_parameters) [45617 45627]))                      ) (reparse-symbol indented_block_body) [45577 50436])
+                    ("StoreData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [50455 50459])
+                        ("G" variable nil (reparse-symbol function_parameters) [50461 50462])
+                        ("ref" variable nil (reparse-symbol function_parameters) [50464 50467]))                      ) (reparse-symbol indented_block_body) [50441 52327])
+                    ("StoreBoxes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [52347 52351])
+                        ("G" variable nil (reparse-symbol function_parameters) [52353 52354]))                      ) (reparse-symbol indented_block_body) [52332 53651])
+                    ("StoreModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [53672 53676])
+                        ("G" variable nil (reparse-symbol function_parameters) [53678 53679]))                      ) (reparse-symbol indented_block_body) [53656 55947])
+                    ("StoreRuleset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [55969 55973])
+                        ("G" variable nil (reparse-symbol function_parameters) [55975 55976]))                      ) (reparse-symbol indented_block_body) [55952 59799])
+                    ("StoreSetInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [59821 59825])
+                        ("G" variable nil (reparse-symbol function_parameters) [59827 59828]))                      ) (reparse-symbol indented_block_body) [59804 60699])
+                    ("StoreFloats" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [60720 60724])
+                        ("G" variable nil (reparse-symbol function_parameters) [60726 60727])
+                        ("floats" variable nil (reparse-symbol function_parameters) [60729 60735]))                      ) (reparse-symbol indented_block_body) [60704 61254])
+                    ("StoreParserStatus" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [61281 61285])
+                        ("G" variable nil (reparse-symbol function_parameters) [61287 61288]))                      ) (reparse-symbol indented_block_body) [61259 61611])
+                    ("StoreGlobalVariables" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [61641 61645])
+                        ("G" variable nil (reparse-symbol function_parameters) [61647 61648]))                      ) (reparse-symbol indented_block_body) [61616 61878])
+                    ("StoreForecastModels" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [61907 61911])
+                        ("G" variable nil (reparse-symbol function_parameters) [61913 61914]))                      ) (reparse-symbol indented_block_body) [61883 62114])
+                    ("Parser" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [62233 62237])
+                        ("G" variable nil (reparse-symbol function_parameters) [62239 62240]))                      ) (reparse-symbol indented_block_body) [62222 62767])
+                    ("ApplyModel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [62787 62791])
+                        ("G" variable nil (reparse-symbol function_parameters) [62793 62794]))                      ) (reparse-symbol indented_block_body) [62772 64761])
+                    ("ApplyPwaRegression" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [64789 64793])
+                        ("G" variable nil (reparse-symbol function_parameters) [64795 64796])
+                        ("idpres" variable nil (reparse-symbol function_parameters) [64798 64804])
+                        ("append" variable nil (reparse-symbol function_parameters) [64812 64818]))                      ) (reparse-symbol indented_block_body) [64766 64950])
+                    ("ApplyPwaRegressionRule" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [64982 64986])
+                        ("G" variable nil (reparse-symbol function_parameters) [64988 64989]))                      ) (reparse-symbol indented_block_body) [64955 65613])
+                    ("ApplyRuleCluster" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [65639 65643])
+                        ("G" variable nil (reparse-symbol function_parameters) [65645 65646]))                      ) (reparse-symbol indented_block_body) [65618 66046])
+                    ("CaCurve" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [66063 66067])
+                        ("G" variable nil (reparse-symbol function_parameters) [66069 66070]))                      ) (reparse-symbol indented_block_body) [66051 68292])
+                    ("DataManager" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [68313 68317])
+                        ("G" variable nil (reparse-symbol function_parameters) [68319 68320]))                      ) (reparse-symbol indented_block_body) [68297 68711])
+                    ("DecisionTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [68733 68737])
+                        ("G" variable nil (reparse-symbol function_parameters) [68739 68740]))                      ) (reparse-symbol indented_block_body) [68716 70817])
+                    ("DichotomicSnn" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [70840 70844])
+                        ("G" variable nil (reparse-symbol function_parameters) [70846 70847]))                      ) (reparse-symbol indented_block_body) [70822 70934])
+                    ("EvaluateCode" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [70956 70960])
+                        ("G" variable nil (reparse-symbol function_parameters) [70962 70963]))                      ) (reparse-symbol indented_block_body) [70939 71233])
+                    ("Endloop" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [71250 71254])
+                        ("G" variable nil (reparse-symbol function_parameters) [71256 71257]))                      ) (reparse-symbol indented_block_body) [71238 71328])
+                    ("Fitting" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [71345 71349])
+                        ("G" variable nil (reparse-symbol function_parameters) [71351 71352]))                      ) (reparse-symbol indented_block_body) [71333 72457])
+                    ("KNearestNeighbor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [72483 72487])
+                        ("G" variable nil (reparse-symbol function_parameters) [72489 72490]))                      ) (reparse-symbol indented_block_body) [72462 73801])
+                    ("KNearestNeighborRegr" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [73831 73835])
+                        ("G" variable nil (reparse-symbol function_parameters) [73837 73838]))                      ) (reparse-symbol indented_block_body) [73806 73933])
+                    ("Logistic" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [73951 73955])
+                        ("G" variable nil (reparse-symbol function_parameters) [73957 73958]))                      ) (reparse-symbol indented_block_body) [73938 75063])
+                    ("Loop" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [75077 75081])
+                        ("G" variable nil (reparse-symbol function_parameters) [75083 75084]))                      ) (reparse-symbol indented_block_body) [75068 76432])
+                    ("StandardClusteringK" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [76461 76465])
+                        ("G" variable nil (reparse-symbol function_parameters) [76467 76468]))                      ) (reparse-symbol indented_block_body) [76437 77592])
+                    ("LabelClusteringK" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [77618 77622])
+                        ("G" variable nil (reparse-symbol function_parameters) [77624 77625]))                      ) (reparse-symbol indented_block_body) [77597 79531])
+                    ("NeuralNetworks" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [79555 79559])
+                        ("G" variable nil (reparse-symbol function_parameters) [79561 79562]))                      ) (reparse-symbol indented_block_body) [79536 80638])
+                    ("NeuralNetworksRegr" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [80666 80670])
+                        ("G" variable nil (reparse-symbol function_parameters) [80672 80673]))                      ) (reparse-symbol indented_block_body) [80643 80766])
+                    ("ProjectionClusteringK" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [80797 80801])
+                        ("G" variable nil (reparse-symbol function_parameters) [80803 80804]))                      ) (reparse-symbol indented_block_body) [80771 82194])
+                    ("TrainSnn" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [82212 82216])
+                        ("G" variable nil (reparse-symbol function_parameters) [82218 82219]))                      ) (reparse-symbol indented_block_body) [82199 83937])
+                    ("OptimizeSnn" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [83958 83962])
+                        ("G" variable nil (reparse-symbol function_parameters) [83964 83965]))                      ) (reparse-symbol indented_block_body) [83942 85483])
+                    ("PwaRegression" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [85506 85510])
+                        ("G" variable nil (reparse-symbol function_parameters) [85512 85513]))                      ) (reparse-symbol indented_block_body) [85488 86671])
+                    ("PwaRegressionRule" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [86698 86702])
+                        ("G" variable nil (reparse-symbol function_parameters) [86704 86705]))                      ) (reparse-symbol indented_block_body) [86676 88583])
+                    ("ClusterForecast" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [88715 88719])
+                        ("G" variable nil (reparse-symbol function_parameters) [88721 88722])
+                        ("idpres" variable nil (reparse-symbol function_parameters) [88724 88730])
+                        ("forecast" variable nil (reparse-symbol function_parameters) [88738 88746])
+                        ("append" variable nil (reparse-symbol function_parameters) [88754 88760]))                      ) (reparse-symbol indented_block_body) [88695 89511])
+                    ("ModelForecast" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [89534 89538])
+                        ("G" variable nil (reparse-symbol function_parameters) [89540 89541]))                      ) (reparse-symbol indented_block_body) [89516 90075])
+                    ("KnnForecast" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [90096 90100])
+                        ("G" variable nil (reparse-symbol function_parameters) [90102 90103]))                      ) (reparse-symbol indented_block_body) [90080 90585])
+                    ("ProjectionClusterForecast" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [90620 90624])
+                        ("G" variable nil (reparse-symbol function_parameters) [90626 90627]))                      ) (reparse-symbol indented_block_body) [90590 91223])
+                    ("PwaForecast" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [91244 91248])
+                        ("G" variable nil (reparse-symbol function_parameters) [91250 91251])
+                        ("idpres" variable nil (reparse-symbol function_parameters) [91253 91259])
+                        ("append" variable nil (reparse-symbol function_parameters) [91267 91273]))                      ) (reparse-symbol indented_block_body) [91228 91862])
+                    ("RuleForecast" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [91884 91888])
+                        ("G" variable nil (reparse-symbol function_parameters) [91890 91891])
+                        ("forecast" variable nil (reparse-symbol function_parameters) [91893 91901]))                      ) (reparse-symbol indented_block_body) [91867 92353])
+                    ("PySetNeeded" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [92479 92483])
+                        ("G" variable nil (reparse-symbol function_parameters) [92485 92486])
+                        ("ref_vec" variable nil (reparse-symbol function_parameters) [92488 92496]))                      ) (reparse-symbol indented_block_body) [92463 92806])
+                    ("FeedParser" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [92826 92830])
+                        ("ref" variable nil (reparse-symbol function_parameters) [92832 92835])
+                        ("G" variable nil (reparse-symbol function_parameters) [92837 92838]))                      ) (reparse-symbol indented_block_body) [92811 93619])
+                    ("PySetLoaded" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [93640 93644])
+                        ("G" variable nil (reparse-symbol function_parameters) [93646 93647])
+                        ("ref" variable nil (reparse-symbol function_parameters) [93649 93652]))                      ) (reparse-symbol indented_block_body) [93624 93732])
+                    ("UpdateData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [93752 93756])
+                        ("G" variable nil (reparse-symbol function_parameters) [93758 93759])
+                        ("ref_vec" variable nil (reparse-symbol function_parameters) [93761 93769]))                      ) (reparse-symbol indented_block_body) [93737 94672])
+                    ("_FindSubtree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [94804 94808])
+                        ("tsk_id" variable nil (reparse-symbol function_parameters) [94810 94816])
+                        ("subtree" variable nil (reparse-symbol function_parameters) [94818 94825]))                      ) (reparse-symbol indented_block_body) [94787 95059])
+                    ("_AnalyzeSubtree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [95084 95088])
+                        ("subtree" variable nil (reparse-symbol function_parameters) [95090 95097])
+                        ("ref" variable nil (reparse-symbol function_parameters) [95099 95102]))                      ) (reparse-symbol indented_block_body) [95064 95318])
+                    ("TSBuildTaskTableName" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [95348 95352])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [95354 95369])
+                        ("ref" variable nil (reparse-symbol function_parameters) [95371 95374]))                      ) (reparse-symbol indented_block_body) [95323 95506])
+                    ("TSChangeTasksStatus" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [95535 95539])
+                        ("new_status" variable nil (reparse-symbol function_parameters) [95541 95551])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [95553 95569])
+                        ("kw" variable nil (reparse-symbol function_parameters) [95571 95575]))                      ) (reparse-symbol indented_block_body) [95511 96030])
+                    ("TSCreateStaticRef" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [96057 96061])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [96063 96078])
+                        ("ref" variable nil (reparse-symbol function_parameters) [96080 96084]))                      ) (reparse-symbol indented_block_body) [96035 96874])
+                    ("TSGetCategoryField" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [96902 96906])
+                        ("cat_name" variable nil (reparse-symbol function_parameters) [96908 96916])
+                        ("field" variable nil (reparse-symbol function_parameters) [96918 96923]))                      ) (reparse-symbol indented_block_body) [96879 97253])
+                    ("TSGetCategoryOption" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [97282 97286])
+                        ("cat_name" variable nil (reparse-symbol function_parameters) [97288 97296]))                      ) (reparse-symbol indented_block_body) [97258 97630])
+                    ("TSGetRefTableName" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [98000 98004])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [98006 98021])
+                        ("prc_id" variable nil (reparse-symbol function_parameters) [98023 98029])
+                        ("ref_vec" variable nil (reparse-symbol function_parameters) [98031 98039]))                      ) (reparse-symbol indented_block_body) [97978 98508])
+                    ("TSGetSubCategories" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [98536 98540])
+                        ("cat_name" variable nil (reparse-symbol function_parameters) [98542 98550]))                      ) (reparse-symbol indented_block_body) [98513 99014])
+                    ("TSGetSourceTable" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [99040 99044])
+                        ("ref" variable nil (reparse-symbol function_parameters) [99046 99049]))                      ) (reparse-symbol indented_block_body) [99019 99311])
+                    ("TSGetTaskDynamicRef" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [99340 99344])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [99346 99361])
+                        ("prc_id" variable nil (reparse-symbol function_parameters) [99363 99369]))                      ) (reparse-symbol indented_block_body) [99316 99794])
+                    ("TSGetTaskStaticRef" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [99822 99826])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [99828 99843])
+                        ("prc_id" variable nil (reparse-symbol function_parameters) [99845 99851]))                      ) (reparse-symbol indented_block_body) [99799 100318])
+                    ("TSGetTaskByStatus" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [100345 100349])
+                        ("status" variable nil (reparse-symbol function_parameters) [100351 100358]))                      ) (reparse-symbol indented_block_body) [100323 100626])
+                    ("TSGetTaskId" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [100647 100651])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [100653 100668])
+                        ("parent_f" variable nil (reparse-symbol function_parameters) [100670 100678])
+                        ("prc_id" variable nil (reparse-symbol function_parameters) [100686 100692]))                      ) (reparse-symbol indented_block_body) [100631 101878])
+                    ("TSGetTaskIsBuffer" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [101905 101909])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [101911 101920]))                      ) (reparse-symbol indented_block_body) [101883 102038])
+                    ("TSGetTaskCategory" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [102065 102069])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [102071 102086])
+                        ("prc_id" variable nil (reparse-symbol function_parameters) [102088 102094]))                      ) (reparse-symbol indented_block_body) [102043 102598])
+                    ("TSGetTaskField" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [102622 102626])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [102628 102643])
+                        ("field" variable nil (reparse-symbol function_parameters) [102645 102651]))                      ) (reparse-symbol indented_block_body) [102603 102950])
+                    ("TSGetTaskChildren" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [102977 102981])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [102983 102998])
+                        ("as_id" variable nil (reparse-symbol function_parameters) [103000 103005])
+                        ("recursive_f" variable nil (reparse-symbol function_parameters) [103039 103050]))                      ) (reparse-symbol indented_block_body) [102955 104302])
+                    ("TSGetTaskParentLabel" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [104332 104336])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [104338 104353]))                      ) (reparse-symbol indented_block_body) [104307 104694])
+                    ("TSSetTaskError" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [104718 104722])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [104724 104733])
+                        ("errorcode" variable nil (reparse-symbol function_parameters) [104735 104744]))                      ) (reparse-symbol indented_block_body) [104699 104926])
+                    ("TSSetTaskFields" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [104951 104955])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [104957 104972])
+                        ("value_dict" variable nil (reparse-symbol function_parameters) [104974 104986]))                      ) (reparse-symbol indented_block_body) [104931 105169])
+                    ("TSDeleteStaticRef" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [105312 105316])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [105318 105333])
+                        ("ref" variable nil (reparse-symbol function_parameters) [105335 105339]))                      ) (reparse-symbol indented_block_body) [105290 105847])
+                    ("TSDeleteDynamicRef" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [105875 105879])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [105881 105896]))                      ) (reparse-symbol indented_block_body) [105852 106626])
+                    ("TSGetLoopSubtree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [106652 106656])
+                        ("tsk_label_or_id" variable nil (reparse-symbol function_parameters) [106658 106673])
+                        ("nesting" variable nil (reparse-symbol function_parameters) [106675 106682]))                      ) (reparse-symbol indented_block_body) [106631 107164])
+                    ("TSCopyTaskReferences" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [107194 107198])
+                        ("src_label_or_id" variable nil (reparse-symbol function_parameters) [107200 107215])
+                        ("dst_label_or_id" variable nil (reparse-symbol function_parameters) [107217 107232]))                      ) (reparse-symbol indented_block_body) [107169 108073]))                  
+                :type "class")
+                nil [159 108073]))          
+    :file "RulexTask.py"
+    :pointmax 108075
+    :fsize 110563
+    :lastmodtime '(20819 784)
+    :unmatched-syntax '((NAME 75135 . 75143) (IF 75168 . 75170) (ELSE 75199 . 75203) (NAME 68461 . 68465) (IF 68477 . 68479) (ELSE 68489 . 68493) (NAME 66773 . 66784) (IF 66801 . 66803) (ELSE 66816 . 66820) (NAME 62945 . 62951) (IF 62961 . 62963) (ELSE 62989 . 62993) (NAME 47797 . 47801) (IF 47818 . 47820) (ELSE 47880 . 47884) (NAME 47718 . 47722) (IF 47750 . 47752) (ELSE 47775 . 47779) (NAME 47604 . 47611) (IF 47630 . 47632) (ELSE 47656 . 47660) (NAME 44827 . 44830) (IF 44837 . 44839) (ELSE 44852 . 44856) (NAME 39574 . 39584) (IF 39592 . 39594) (ELSE 39617 . 39621) (NAME 33832 . 33839) (IF 33907 . 33909) (ELSE 33926 . 33930) (NAME 23961 . 23966) (IF 23981 . 23983) (ELSE 24004 . 24008) (NAME 23357 . 23359) (IF 23371 . 23373) (ELSE 23395 . 23399) (RETURN 19412 . 19418) (IF 19423 . 19425) (ELSE 19446 . 19450) (NAME 14308 . 14310) (IF 14315 . 14317) (ELSE 14339 . 14343) (NAME 11546 . 11548) (IF 11553 . 11555) (ELSE 11577 . 11581) (NAME 9808 . 9810) (IF 9826 . 9828) (ELSE 9843 . 9847) (NAME 5831 . 5841) (IF 5855 . 5857) (ELSE 5877 . 5881) (RETURN 5620 . 5626) (IF 5632 . 5634) (ELSE 5646 . 5650) (NAME 2015 . 2021) (IF 2089 . 2091) (ELSE 2107 . 2111) (NAME 1901 . 1905) (IF 1935 . 1937) (ELSE 1959 . 1963) (NAME 685 . 691) (IF 714 . 716) (ELSE 730 . 734))
+    )
+   (semanticdb-table "RulexDefinitions.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("ctypes" include nil nil [1 21])
+            ("STRING" variable nil nil [23 40])
+            ("c_string" variable nil nil [42 73])
+            ("UNKNOWN" variable nil nil [75 86])
+            ("NOMINAL" variable nil nil [87 98])
+            ("DISCRETE" variable nil nil [99 111])
+            ("CONTINUOUS" variable nil nil [112 126])
+            ("RDATE" variable nil nil [127 136])
+            ("AttType" variable nil nil [138 153])
+            ("RoleType" variable nil nil [161 177])
+            ("NormType" variable nil nil [185 201])
+            ("DistType" variable nil nil [209 225])
+            ("String" variable nil nil [234 249])
+            ("Boolean" variable nil nil [250 266])
+            ("Boolvect" variable nil nil [267 284])
+            ("Weightvec" variable nil nil [285 314])
+            ("Bitmask" variable nil nil [315 331])
+            ("Bitstring" variable nil nil [332 359])
+            ("_att_val" type
+               (:superclasses ("Union")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [389 393]))                  
+                :type "class")
+                nil [362 394])
+            ("_att_val" variable nil nil [394 499])
+            ("AttValue" variable nil nil [500 519])
+            ("_att_record" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [555 559]))                  
+                :type "class")
+                nil [521 560])
+            ("_att_record" variable nil nil [560 1264])
+            ("AttRec" variable nil nil [1265 1285])
+            ("_cond_record" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1322 1326]))                  
+                :type "class")
+                nil [1287 1327])
+            ("_cond_record" variable nil nil [1327 1573])
+            ("CondRec" variable nil nil [1574 1596])
+            ("_rul_stat" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1630 1634]))                  
+                :type "class")
+                nil [1598 1635])
+            ("_rul_stat" variable nil nil [1635 1796])
+            ("RulStat" variable nil nil [1797 1816])
+            ("_rul_record" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1852 1856]))                  
+                :type "class")
+                nil [1818 1857])
+            ("_rul_record" variable nil nil [1857 2322])
+            ("RuleRec" variable nil nil [2323 2344])
+            ("_model_record" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2382 2386]))                  
+                :type "class")
+                nil [2346 2387])
+            ("_model_record" variable nil nil [2387 2786])
+            ("ModelRec" variable nil nil [2787 2811])
+            ("_box_record" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2847 2851]))                  
+                :type "class")
+                nil [2813 2852])
+            ("_box_record" variable nil nil [2852 3088])
+            ("BoxRec" variable nil nil [3089 3109])
+            ("_result_record" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [3148 3152]))                  
+                :type "class")
+                nil [3111 3153])
+            ("_result_record" variable nil nil [3153 3250])
+            ("ResRec" variable nil nil [3251 3274])
+            ("_rlstate_record" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [3314 3318]))                  
+                :type "class")
+                nil [3276 3319])
+            ("_rlstate_record" variable nil nil [3319 3451])
+            ("RlState" variable nil nil [3452 3477])
+            ("TRUE" variable nil nil [3479 3487])
+            ("FALSE" variable nil nil [3488 3497]))          
+    :file "RulexDefinitions.py"
+    :pointmax 3499
+    :fsize 3342
+    :lastmodtime '(20798 2696)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex-loop!RulexInterface!server!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

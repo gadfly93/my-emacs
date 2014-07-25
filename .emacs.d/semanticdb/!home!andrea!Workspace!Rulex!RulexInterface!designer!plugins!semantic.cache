@@ -1,0 +1,57 @@
+;; Object plugins/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plugins/"
+  :tables (list 
+   (semanticdb-table "matplotlibplugin.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("PyQt4.QtGui" include nil nil [108 137])
+            ("PyQt4.QtDesigner" include nil nil [138 196])
+            ("os" include nil nil [198 207])
+            ("matplotlib" include nil nil [208 239])
+            ("matplotlibwidget" include nil nil [240 285])
+            ("rcParams" variable nil nil [287 312])
+            ("MatplotlibPlugin" type
+               (:superclasses ("QPyDesignerCustomWidgetPlugin")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [386 390])
+                        ("parent" variable nil (reparse-symbol function_parameters) [392 398]))                      ) (reparse-symbol indented_block_body) [373 494])
+                    ("initialize" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [514 518])
+                        ("formEditor" variable nil (reparse-symbol function_parameters) [520 530]))                      ) (reparse-symbol indented_block_body) [499 616])
+                    ("isInitialized" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [639 643]))                      ) (reparse-symbol indented_block_body) [621 679])
+                    ("createWidget" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [701 705])
+                        ("parent" variable nil (reparse-symbol function_parameters) [707 713]))                      ) (reparse-symbol indented_block_body) [684 756])
+                    ("name" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [770 774]))                      ) (reparse-symbol indented_block_body) [761 811])
+                    ("group" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [826 830]))                      ) (reparse-symbol indented_block_body) [816 861])
+                    ("icon" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [875 879]))                      ) (reparse-symbol indented_block_body) [866 989])
+                    ("toolTip" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1006 1010]))                      ) (reparse-symbol indented_block_body) [994 1031])
+                    ("whatsThis" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1050 1054]))                      ) (reparse-symbol indented_block_body) [1036 1075])
+                    ("isContainer" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1096 1100]))                      ) (reparse-symbol indented_block_body) [1080 1124])
+                    ("domXml" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1140 1144]))                      ) (reparse-symbol indented_block_body) [1129 1248])
+                    ("includeFile" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1269 1273]))                      ) (reparse-symbol indented_block_body) [1253 1327]))                  
+                :type "class")
+                nil [314 1327])
+            ("if" code nil nil [1329 1521]))          
+    :file "matplotlibplugin.py"
+    :pointmax 1521
+    :fsize 1587
+    :lastmodtime '(20234 44860)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!designer!plugins!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

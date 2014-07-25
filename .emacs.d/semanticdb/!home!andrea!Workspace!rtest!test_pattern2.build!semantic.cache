@@ -1,0 +1,203 @@
+;; Object test_pattern2.build/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test_pattern2.build/"
+  :tables (list 
+   (semanticdb-table "module.prepare_set.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("nuitka/prelude.hpp" include nil nil [707 736])
+            ("__modules.hpp" include nil nil [738 762])
+            ("__constants.hpp" include nil nil [763 789])
+            ("__helpers.hpp" include nil nil [790 814])
+            ("_module_prepare_set" variable
+               (:pointer 1
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [1073 1103])
+            ("_moduledict_prepare_set" variable
+               (:pointer 1
+                :type ("PyDictObject" type (:type "class") nil nil))
+                nil [1104 1142])
+            ("_mvar_prepare_set_MAXVAL" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("_module_prepare_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1244 1264])
+                    ("" variable (:type ("_python_str_plain_MAXVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1266 1292]))                  
+                :type ("PyObjectGlobalVariable_prepare_set" type (:type "class") nil nil))
+                nil [1175 1293])
+            ("_mvar_prepare_set_MINVAL" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("_module_prepare_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1363 1383])
+                    ("" variable (:type ("_python_str_plain_MINVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1385 1411]))                  
+                :type ("PyObjectGlobalVariable_prepare_set" type (:type "class") nil nil))
+                nil [1294 1412])
+            ("_mvar_prepare_set_np" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("_module_prepare_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1478 1498])
+                    ("" variable (:type ("_python_str_plain_np" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1500 1522]))                  
+                :type ("PyObjectGlobalVariable_prepare_set" type (:type "class") nil nil))
+                nil [1413 1523])
+            ("_mvar_prepare_set_plt" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("_module_prepare_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1590 1610])
+                    ("" variable (:type ("_python_str_plain_plt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1612 1635]))                  
+                :type ("PyObjectGlobalVariable_prepare_set" type (:type "class") nil nil))
+                nil [1524 1636])
+            ("_mvar_prepare_set_randint" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("_module_prepare_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1707 1727])
+                    ("" variable (:type ("_python_str_plain_randint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1729 1756]))                  
+                :type ("PyObjectGlobalVariable_prepare_set" type (:type "class") nil nil))
+                nil [1637 1757])
+            ("MAKE_FUNCTION_function_1_PrepareSet_of_module_prepare_set" variable (:constant-flag t) nil [1804 1861])
+            ("_MAKE_FUNCTION_function_1_PrepareSet_of_module_prepare_set" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [1930 2010])
+            ("MAKE_FUNCTION_function_2_SaveSet_of_module_prepare_set" variable (:constant-flag t) nil [2019 2073])
+            ("_MAKE_FUNCTION_function_2_SaveSet_of_module_prepare_set" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [2139 2216])
+            ("impl_function_1_PrepareSet_of_module_prepare_set" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type ("Nuitka_FunctionObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2322 2351]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [2255 17603])
+            ("_fparse_function_1_PrepareSet_of_module_prepare_set" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type ("Nuitka_FunctionObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17674 17702])
+                    ("args" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17703 17718])
+                    ("kw" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17719 17733]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [17604 18999])
+            ("_MAKE_FUNCTION_function_1_PrepareSet_of_module_prepare_set" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [19001 19534])
+            ("impl_function_2_SaveSet_of_module_prepare_set" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type ("Nuitka_FunctionObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19599 19627])
+                    ("_python_par_m0" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19628 19653])
+                    ("_python_par_m1" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19654 19680]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [19535 26892])
+            ("_fparse_function_2_SaveSet_of_module_prepare_set" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type ("Nuitka_FunctionObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26960 26988])
+                    ("args" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26989 27004])
+                    ("kw" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27005 27019]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [26893 34510])
+            ("_MAKE_FUNCTION_function_2_SaveSet_of_module_prepare_set" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [34512 35036])
+            ("_moduledef" variable
+               (:typemodifiers ("static")
+                :type ("PyModuleDef" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [35065 35446])
+            ("_MODULE_UNFREEZER" variable (:constant-flag t) nil [35463 35480])
+            ("registerMetaPathBasedUnfreezer" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("_frozen_modules" variable
+                       (:pointer 1
+                        :type ("_inittab" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35625 35659]))                  
+                :type "void")
+                nil [35581 35660])
+            ("_frozen_modules" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("_inittab" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [35752 35819])
+            ("loader_frozen_modules" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [35872 35911])
+            ("MOD_INIT_DECL" function
+               (:arguments 
+                  ( ("" variable (:type ("prepare_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36133 36146]))                  
+                :type "int")
+                nil [36118 42374]))          
+    :file "module.prepare_set.cpp"
+    :pointmax 42375
+    :fsize 42374
+    :lastmodtime '(21048 60667)
+    :unmatched-syntax '((punctuation 1728 . 1729) (punctuation 1706 . 1707) (punctuation 1611 . 1612) (punctuation 1589 . 1590) (punctuation 1499 . 1500) (punctuation 1477 . 1478) (punctuation 1384 . 1385) (punctuation 1362 . 1363) (punctuation 1265 . 1266) (punctuation 1243 . 1244))
+    :lexical-table 
+        '(("_MODULE_UNFREEZER" . ((number "0" 35481 . 35482)))
+          ("MAKE_FUNCTION_function_1_PrepareSet_of_module_prepare_set" (spp-arg-list nil 1861 . 1865) . ((symbol "_MAKE_FUNCTION_function_1_PrepareSet_of_module_prepare_set" 1866 . 1924) (semantic-list "(  )" 1924 . 1928)))
+          ("MAKE_FUNCTION_function_2_SaveSet_of_module_prepare_set" (spp-arg-list nil 2073 . 2077) . ((symbol "_MAKE_FUNCTION_function_2_SaveSet_of_module_prepare_set" 2078 . 2133) (semantic-list "(  )" 2133 . 2137)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!rtest!test_pattern2.build!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

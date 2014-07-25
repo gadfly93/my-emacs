@@ -1,0 +1,2480 @@
+;; Object parser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "parser/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/matrix" "-I$(top_srcdir)/filter" "-I$(top_srcdir)/buffer")) nil [144 227])
+            ("AM_YFLAGS" variable (:default-value ("-d" "-t" "-v")) nil [551 570])
+            ("AM_LFLAGS" variable (:default-value ("-i")) nil [570 583])
+            ("syntaxsh_YFLAGS" variable (:default-value ("-p" "syntaxsh_")) nil [583 612])
+            ("lexsh_LFLAGS" variable (:default-value ("-Psyntaxsh_")) nil [612 637])
+            ("dist_include_HEADERS" variable (:default-value ("parser_types.h" "parser.h" "hisolver.h" "syntax_export.h" "syntax_parser.h" "solver.h" "solver_types.h" "syntaxhis.h" "syntaxsh.h" "syntaxhis_parser.h" "cluster.h" "cluster_types.h")) nil [738 918])
+            ("EXTRA_DIST" variable (:default-value ("syntaxsh.y" "lexsh.l" "syntaxhis.y" "lexhis.l")) nil [918 969])
+            ("lib_LTLIBRARIES" variable (:default-value ("libparser.la")) nil [969 1014])
+            ("syntaxsh.c" function (:arguments ("syntaxsh.y")) nil [1015 1166])
+            ("syntaxsh.h" function (:arguments ("syntaxsh.y")) nil [1015 1166])
+            ("lexsh.c" function (:arguments ("lexsh.l" "syntaxsh.h")) nil [1167 1255])
+            ("syntaxhis.c" function (:arguments ("syntaxhis.y")) nil [1256 1415])
+            ("syntaxhis.h" function (:arguments ("syntaxhis.y")) nil [1256 1415])
+            ("lexhis.c" function (:arguments ("lexhis.l" "syntaxhis.h")) nil [1416 1511])
+            ("clean-local" function (:arguments ("clean-local-check")) nil [1512 1543])
+            (".PHONY" function (:arguments ("clean-local-check")) nil [1543 1570])
+            ("clean-local-check" function nil nil [1571 1703])
+            ("libparser_la_SOURCES" variable (:default-value ("syntaxsh.c" "lexsh.c" "parser.c" "solver.c" "cluster.c")) nil [1723 1792])
+            ("libparser_la_LIBADD" variable (:default-value ("$(top_srcdir)/filter/libfilter.la" "$(top_srcdir)/buffer/libbuffer.la")) nil [1792 1882])
+            ("libparser_la_LDFLAGS" variable (:default-value ("@osdep_libraries@" "@cluster_libraries@" "@lapack_libraries@" "-llci-util")) nil [1882 1973])
+            ("lib_hisolver_la_SOURCES" variable (:default-value ("syntaxhis.c" "lexhis.c" "syntaxsh.c" "lexsh.c" "hisolver.c")) nil [1973 2049])
+            ("lib_hisolver_la_LIBADD" variable (:default-value ("libparser.la")) nil [2049 2087])
+            ("lib_hisolver_la_LDFLAGS" variable (:default-value ("@osdep_libraries@" "@cluster_libraries@" "@lapack_libraries@" "-llci-util")) nil [2087 2181])
+            ("libparser_la_SOURCES" variable (:default-value ("parser.c" "solver.c")) nil [2186 2226])
+            ("libparser_la_LIBADD" variable (:default-value ("$(top_srcdir)/filter/libfilter.la" "$(top_srcdir)/buffer/libbuffer.la")) nil [2226 2316])
+            ("libparser_la_LDFLAGS" variable (:default-value ("@lt_enable_auto_import@" "-no-undefined" "-avoid-version" "@osdep_libraries@" "@lapack_libraries@" "-llci-util")) nil [2316 2440])
+            ("lib_hisolver_la_SOURCES" variable (:default-value ("syntaxhis.c" "lexhis.c" "syntaxsh.c" "lexsh.c" "hisolver.c")) nil [2440 2516])
+            ("lib_hisolver_la_LIBADD" variable (:default-value ("libparser.la")) nil [2516 2554])
+            ("lib_hisolver_la_LDFLAGS" variable (:default-value ("@lt_enable_auto_import@@add_stdcall_alias@" "-no-undefined" "-avoid-version" "@osdep_libraries@" "@lapack_libraries@" "-llci-util")) nil [2554 2701]))          
+    :file "Makefile.am"
+    :pointmax 2707
+    :fsize 2706
+    :lastmodtime '(21347 44347 0 0)
+    :unmatched-syntax '((shell-command 651 . 695) (bol 650 . 650) (shell-command 462 . 543) (bol 461 . 461) (shell-command 371 . 455) (bol 370 . 370))
+    )
+   (semanticdb-table "syntaxhis.y"
+    :major-mode 'c-mode
+    :tags 
+        '( ("optimize" variable (:type ("report" type (:type "class") nil nil)) nil [10238 10254])
+            ("EOL" variable (:type ("END" type (:type "class") nil nil)) nil [10972 11057])
+            ("expr" variable (:type "int") nil [11106 11381])
+            ("NAME" variable (:type "int") nil [11421 11668])
+            ("expr" variable (:type "int") nil [11789 11853])
+            ("GT" variable (:type ("NUMBER" type (:type "class") nil nil)) nil [12082 12215])
+            ("GT" variable (:type ("vector" type (:type "class") nil nil)) nil [12442 12574])
+            ("EOL" variable (:type ("expr" type (:type "class") nil nil)) nil [14754 15099])
+            ("COMPLEX_T" variable (:type "int") nil [15462 15508])
+            ("expr" variable (:type "int") nil [15564 15621])
+            ("expr" variable (:type "int") nil [15678 15735])
+            ("expr" variable (:type "int") nil [15866 16016])
+            ("STRUNITS" variable (:type "int") nil [16077 16111])
+            ("REPORT" variable (:type "int") nil [16160 16191])
+            ("OPTIMIZE" variable (:type "int") nil [16242 16275])
+            ("EOL" variable (:type ("NAME" type (:type "class") nil nil)) nil [17924 18105])
+            ("EOL" variable (:type "int") nil [31418 31433])
+            ("newVar" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32359 32388])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [32389 32402])
+                    ("strName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32402 32416])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32417 32433])
+                    ("tpdType" variable (:type ("t_parser_datatype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32434 32460])
+                    ("tptpDim" variable (:type ("t_parser_type_properties" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32461 32494])
+                    ("ptpovValue" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32495 32531])
+                    ("ptpovLow" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32532 32566])
+                    ("ptpovUp" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32567 32600])
+                    ("iReport" variable (:type "int") (reparse-symbol arg-sub-list) [32600 32612])
+                    ("pcStrunits" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32613 32630])
+                    ("toOpt" variable (:type ("t_optimize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32631 32648])
+                    ("tneNamed" variable (:type ("t_named_entities" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32649 32675]))                  
+                :type ("named_entities" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [32329 48437])
+            ("newConst" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49315 49344])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [49345 49358])
+                    ("strName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [49358 49372])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49373 49389])
+                    ("tpdType" variable (:type ("t_parser_datatype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49390 49416])
+                    ("tptpDim" variable (:type ("t_parser_type_properties" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49417 49450])
+                    ("psovValue" variable
+                       (:pointer 1
+                        :type ("opt_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49451 49479])
+                    ("psovStart" variable
+                       (:pointer 1
+                        :type ("opt_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49480 49508])
+                    ("psovEnd" variable
+                       (:pointer 1
+                        :type ("opt_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49509 49535])
+                    ("psovStep" variable
+                       (:pointer 1
+                        :type ("opt_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49536 49563])
+                    ("tcType" variable (:type ("t_const" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49564 49579])
+                    ("pcStrunits" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [49580 49597]))                  
+                :type ("named_entities" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [49283 61615])
+            ("newExpr" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62275 62304])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [62305 62318])
+                    ("strName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [62318 62332])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62333 62349])
+                    ("psnNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62350 62371])
+                    ("pylLoc2" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62372 62389]))                  
+                :type ("named_entities" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [62244 63281])
+            ("newEq" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [63975 64004])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [64005 64018])
+                    ("strName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [64018 64032])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64033 64049])
+                    ("psnLNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [64050 64072])
+                    ("pylLoc2" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64073 64090])
+                    ("psnRNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [64091 64113])
+                    ("pylLoc3" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64114 64131]))                  
+                :type ("named_entities" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [63946 65064])
+            ("newNodeOperation" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65778 65807])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [65808 65821])
+                    ("cOperation" variable (:type "int") (reparse-symbol arg-sub-list) [65821 65836])
+                    ("psnLNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65837 65859])
+                    ("psnRNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65860 65882])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65883 65899]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [65748 66642])
+            ("newNodeNumber" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [67242 67271])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [67272 67285])
+                    ("ptpovValue" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67285 67321])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67322 67338]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [67215 68141])
+            ("newNodeScalar" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [68741 68770])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [68771 68784])
+                    ("dValue" variable (:type "double") (reparse-symbol arg-sub-list) [68784 68798])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68799 68815]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [68714 69081])
+            ("newNodeVector" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [69682 69711])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [69712 69725])
+                    ("plfvV" variable
+                       (:pointer 1
+                        :type ("lfvec_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69725 69740])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69741 69757]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [69655 70072])
+            ("newNodeMatrix" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [70673 70702])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [70703 70716])
+                    ("plfmM" variable
+                       (:pointer 1
+                        :type ("lfmat_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70716 70731])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70732 70748]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [70646 71063])
+            ("newNodeNamed" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [71680 71709])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [71710 71723])
+                    ("strName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [71723 71737])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71738 71754]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [71654 72506])
+            ("newNodeFunc" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [73145 73174])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [73175 73188])
+                    ("tfFunction" variable (:type ("t_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [73188 73204])
+                    ("psnNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [73205 73226])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73227 73243]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [73120 73974])
+            ("startBlock" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [74545 74574])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [74575 74588])
+                    ("iType" variable (:type "int") (reparse-symbol arg-sub-list) [74588 74598])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74599 74615]))                  
+                :type "int")
+                nil [74529 75492])
+            ("solveBlock" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [76008 76037])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [76038 76051])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76052 76068]))                  
+                :type "int")
+                nil [75992 76789])
+            ("changeOutput" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [77470 77499])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [77500 77513])
+                    ("toOutput" variable (:type ("t_output" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [77513 77531])
+                    ("tsType" variable (:type ("t_stream" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [77531 77547])
+                    ("strFileName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [77547 77565])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77566 77582]))                  
+                :type "void")
+                nil [77451 78287])
+            ("newNodeIf" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [78956 78985])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [78986 78999])
+                    ("psnCond" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [78999 79020])
+                    ("psnTrue" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [79021 79042])
+                    ("psnFalse" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [79043 79065])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79066 79082]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [78933 79835])
+            ("newNodeDiff" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [80513 80542])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [80543 80556])
+                    ("strFn" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [80556 80568])
+                    ("strVar" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [80569 80582])
+                    ("iOrder" variable (:type "int") (reparse-symbol arg-sub-list) [80583 80594]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [80488 81953])
+            ("eval" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [82558 82587])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [82588 82601])
+                    ("pcStrname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [82601 82617]))                  
+                :type "int")
+                nil [82549 83551])
+            ("newNodeValidate" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84232 84261])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [84262 84275])
+                    ("pcStrname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [84276 84292])
+                    ("psnCond" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84293 84314])
+                    ("psnNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84315 84336])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84337 84353]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [84203 87790])
+            ("defineBuffer" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [88411 88440])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [88441 88454])
+                    ("iSize" variable (:type "int") (reparse-symbol arg-sub-list) [88455 88465]))                  
+                :type "int")
+                nil [88394 88970])
+            ("addArgument" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [89612 89641])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [89642 89655])
+                    ("pcStrname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [89655 89671])
+                    ("ptpovValue" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89672 89708]))                  
+                :type ("eval_args" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [89582 90938])
+            ("autoeval" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [91537 91566])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [91567 91580])
+                    ("psnNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [91580 91601]))                  
+                :type ("t_parser_optional_value" type (:type "class") nil nil))
+                nil [91502 92835])
+            ("setTolerance" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [93422 93451])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [93452 93465])
+                    ("ptpovTol" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93465 93499]))                  
+                :type "void")
+                nil [93404 93644])
+            ("setFitTolerance" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [94236 94265])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [94266 94279])
+                    ("ptpovTol" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94279 94313]))                  
+                :type "void")
+                nil [94215 94462])
+            ("setFilterThreshold" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [95060 95089])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [95090 95103])
+                    ("ptpovTol" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95103 95137]))                  
+                :type "void")
+                nil [95036 95289])
+            ("setFilterMinfrac" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [95883 95912])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [95913 95926])
+                    ("ptpovTol" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95926 95960]))                  
+                :type "void")
+                nil [95861 96114])
+            ("setMaxtime" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [96692 96721])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [96722 96735])
+                    ("ptpovMmsec" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [96735 96771]))                  
+                :type "void")
+                nil [96676 96927])
+            ("setMaxiter" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [97599 97628])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [97629 97642])
+                    ("ptpovMaxiter" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97642 97680]))                  
+                :type "void")
+                nil [97583 97844])
+            ("setMaxguess" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [98479 98508])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [98509 98522])
+                    ("ptpovMaxguess" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98522 98561]))                  
+                :type "void")
+                nil [98461 98730])
+            ("setFilterKeep" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [99314 99343])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [99344 99357])
+                    ("twSwitch" variable (:type ("t_switch" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99357 99375]))                  
+                :type "void")
+                nil [99295 99436])
+            ("setFitMaxiter" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [100114 100143])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [100144 100157])
+                    ("ptpovMaxiter" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100157 100195]))                  
+                :type "void")
+                nil [100095 100363])
+            ("setFitMaxguess" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [101004 101033])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [101034 101047])
+                    ("ptpovMaxguess" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101047 101086]))                  
+                :type "void")
+                nil [100983 101259])
+            ("setConsiter" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [101909 101938])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [101939 101952])
+                    ("ptpovConsiter" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101952 101991]))                  
+                :type "void")
+                nil [101892 102160])
+            ("setShoot" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [102760 102789])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [102790 102803])
+                    ("twSwitch" variable (:type ("t_switch" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102803 102821]))                  
+                :type "void")
+                nil [102746 102864])
+            ("setSsrAbsolute" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [103476 103505])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [103506 103519])
+                    ("twSwitch" variable (:type ("t_switch" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103519 103537]))                  
+                :type "void")
+                nil [103456 103591])
+            ("setMethod" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [104147 104176])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [104177 104190])
+                    ("tmMethod" variable (:type ("t_method" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104190 104208]))                  
+                :type "void")
+                nil [104132 104252])
+            ("syntaxhis_model" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [104759 104788])
+                    ("strModel" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [104789 104804]))                  
+                :type "int")
+                nil [104738 105303])
+            ("addEquation" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [105971 106000])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [106001 106014])
+                    ("psnRNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [106014 106036])
+                    ("psnLNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [106037 106059])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [106060 106076]))                  
+                :type ("node_exec_array" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [105935 107134])
+            ("fit" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [107653 107682])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [107683 107696])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107697 107713]))                  
+                :type "void")
+                nil [107644 108180])
+            ("loadData" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [108759 108788])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [108789 108802])
+                    ("pcStrname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [108802 108818])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108819 108835]))                  
+                :type "void")
+                nil [108744 109199])
+            ("saveData" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [109778 109807])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [109808 109821])
+                    ("pcStrname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [109821 109837])
+                    ("pcStrent" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [109838 109853])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [109854 109870]))                  
+                :type "void")
+                nil [109763 110240])
+            ("newNodeFilter" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [110977 111006])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [111007 111020])
+                    ("strVar" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [111020 111033])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [111034 111050])
+                    ("strRef" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [111051 111064])
+                    ("pylLoc2" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [111065 111082])
+                    ("iOrder" variable (:type "int") (reparse-symbol arg-sub-list) [111083 111094])
+                    ("iSpan" variable (:type "int") (reparse-symbol arg-sub-list) [111095 111105]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [110950 112338])
+            ("newNodeStat" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [113042 113071])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [113072 113085])
+                    ("strVar" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [113085 113098])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113099 113115])
+                    ("strRef" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [113116 113129])
+                    ("pylLoc2" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113130 113147])
+                    ("ptpovOrder" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113148 113184])
+                    ("ptpovFrom" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113185 113220])
+                    ("ptpovTo" variable
+                       (:pointer 1
+                        :type ("t_parser_optional_value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113221 113254])
+                    ("iFunc" variable (:type "int") (reparse-symbol arg-sub-list) [113255 113265]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [113017 114795])
+            ("newNodeFit" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [115526 115555])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [115556 115569])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [115570 115586]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [115502 116168])
+            ("newNodeSort" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [116760 116789])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [116790 116803])
+                    ("pcStrname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [116804 116820])
+                    ("pylLoc" variable
+                       (:pointer 1
+                        :type ("YYLTYPE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [116821 116837]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [116735 118269])
+            ("addElement" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [118974 119003])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [119004 119017])
+                    ("pvData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [119018 119031])
+                    ("tsaAction" variable (:type ("t_syntaxhis_action" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [119032 119061])
+                    ("tsdtType" variable (:type ("t_syntaxhis_datatype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [119062 119092]))                  
+                :type "void")
+                nil [118957 120056])
+            ("createMatrix" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [120614 120643])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [120644 120657]))                  
+                :type ("lfmat_t" type (:type "class") nil nil))
+                nil [120592 121238])
+            ("createVector" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [121796 121825])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [121826 121839]))                  
+                :type ("lfvec_t" type (:type "class") nil nil))
+                nil [121774 122264]))          
+    :file "syntaxhis.y"
+    :pointmax 122293
+    :fsize 122292
+    :lastmodtime '(21351 38391 0 0)
+    :unmatched-syntax '((punctuation 31436 . 31437) (punctuation 31435 . 31436) (punctuation 31416 . 31417) (semantic-list 31342 . 31414) (symbol 31336 . 31339) (symbol 31330 . 31335) (symbol 31325 . 31329) (punctuation 31323 . 31324) (semantic-list 31247 . 31321) (symbol 31239 . 31243) (punctuation 31237 . 31238) (semantic-list 31098 . 31235) (symbol 31092 . 31095) (symbol 31087 . 31091) (punctuation 31086 . 31087) (symbol 31081 . 31085) (string 31077 . 31080) (punctuation 31075 . 31076) (semantic-list 30936 . 31073) (symbol 30930 . 30933) (symbol 30925 . 30929) (punctuation 30924 . 30925) (symbol 30919 . 30923) (string 30915 . 30918) (punctuation 30913 . 30914) (semantic-list 30795 . 30911) (string 30788 . 30791) (symbol 30783 . 30787) (string 30779 . 30782) (symbol 30774 . 30778) (string 30770 . 30773) (symbol 30765 . 30769) (string 30761 . 30764) (symbol 30758 . 30760) (punctuation 30756 . 30757) (semantic-list 30707 . 30754) (string 30701 . 30704) (symbol 30694 . 30700) (string 30690 . 30693) (symbol 30686 . 30689) (punctuation 30684 . 30685) (semantic-list 30559 . 30682) (string 30552 . 30555) (symbol 30547 . 30551) (string 30543 . 30546) (symbol 30538 . 30542) (string 30534 . 30537) (symbol 30529 . 30533) (string 30525 . 30528) (symbol 30516 . 30524) (punctuation 30514 . 30515) (semantic-list 30387 . 30512) (string 30380 . 30383) (symbol 30375 . 30379) (string 30371 . 30374) (symbol 30366 . 30370) (string 30362 . 30365) (symbol 30357 . 30361) (punctuation 30355 . 30356) (semantic-list 30258 . 30353) (string 30252 . 30255) (symbol 30243 . 30251) (symbol 30238 . 30242) (string 30234 . 30237) (symbol 30229 . 30233) (punctuation 30227 . 30228) (semantic-list 29878 . 30225) (string 29872 . 29875) (symbol 29867 . 29871) (string 29863 . 29866) (symbol 29858 . 29862) (string 29854 . 29857) (symbol 29849 . 29853) (string 29845 . 29848) (symbol 29840 . 29844) (string 29836 . 29839) (symbol 29831 . 29835) (string 29827 . 29830) (symbol 29820 . 29826) (punctuation 29818 . 29819) (semantic-list 29466 . 29816) (string 29460 . 29463) (symbol 29455 . 29459) (string 29451 . 29454) (symbol 29446 . 29450) (string 29442 . 29445) (symbol 29437 . 29441) (string 29433 . 29436) (symbol 29428 . 29432) (string 29424 . 29427) (symbol 29419 . 29423) (string 29415 . 29418) (symbol 29405 . 29414) (punctuation 29403 . 29404) (semantic-list 29083 . 29401) (string 29077 . 29080) (symbol 29072 . 29076) (string 29068 . 29071) (symbol 29063 . 29067) (string 29059 . 29062) (symbol 29054 . 29058) (string 29050 . 29053) (symbol 29045 . 29049) (string 29041 . 29044) (symbol 29036 . 29040) (punctuation 29034 . 29035) (semantic-list 28714 . 29032) (string 28708 . 28711) (symbol 28703 . 28707) (string 28699 . 28702) (symbol 28694 . 28698) (string 28690 . 28693) (symbol 28685 . 28689) (string 28681 . 28684) (symbol 28676 . 28680) (string 28672 . 28675) (symbol 28667 . 28671) (punctuation 28665 . 28666) (semantic-list 28340 . 28663) (string 28334 . 28337) (symbol 28329 . 28333) (string 28325 . 28328) (symbol 28320 . 28324) (string 28316 . 28319) (symbol 28311 . 28315) (string 28307 . 28310) (symbol 28302 . 28306) (string 28298 . 28301) (symbol 28289 . 28297) (punctuation 28287 . 28288) (semantic-list 27966 . 28285) (string 27960 . 27963) (symbol 27955 . 27959) (string 27951 . 27954) (symbol 27946 . 27950) (string 27942 . 27945) (symbol 27937 . 27941) (string 27933 . 27936) (symbol 27928 . 27932) (string 27924 . 27927) (symbol 27919 . 27923) (punctuation 27917 . 27918) (semantic-list 27591 . 27915) (string 27585 . 27588) (symbol 27580 . 27584) (string 27576 . 27579) (symbol 27571 . 27575) (string 27567 . 27570) (symbol 27562 . 27566) (string 27558 . 27561) (symbol 27553 . 27557) (string 27549 . 27552) (symbol 27539 . 27548) (punctuation 27537 . 27538) (semantic-list 27215 . 27535) (string 27209 . 27212) (symbol 27204 . 27208) (string 27200 . 27203) (symbol 27195 . 27199) (string 27191 . 27194) (symbol 27186 . 27190) (string 27182 . 27185) (symbol 27177 . 27181) (string 27173 . 27176) (symbol 27167 . 27172) (punctuation 27165 . 27166) (semantic-list 26840 . 27163) (string 26834 . 26837) (symbol 26829 . 26833) (string 26825 . 26828) (symbol 26820 . 26824) (string 26816 . 26819) (symbol 26811 . 26815) (string 26807 . 26810) (symbol 26802 . 26806) (string 26798 . 26801) (symbol 26789 . 26797) (punctuation 26787 . 26788) (semantic-list 26463 . 26785) (string 26457 . 26460) (symbol 26452 . 26456) (string 26448 . 26451) (symbol 26443 . 26447) (string 26439 . 26442) (symbol 26434 . 26438) (string 26430 . 26433) (symbol 26425 . 26429) (string 26421 . 26424) (symbol 26413 . 26420) (punctuation 26411 . 26412) (semantic-list 26089 . 26409) (string 26083 . 26086) (symbol 26078 . 26082) (string 26074 . 26077) (symbol 26069 . 26073) (string 26065 . 26068) (symbol 26060 . 26064) (string 26056 . 26059) (symbol 26051 . 26055) (string 26047 . 26050) (symbol 26042 . 26046) (punctuation 26040 . 26041) (semantic-list 25719 . 26038) (string 25713 . 25716) (symbol 25708 . 25712) (string 25704 . 25707) (symbol 25699 . 25703) (string 25695 . 25698) (symbol 25690 . 25694) (string 25686 . 25689) (symbol 25681 . 25685) (string 25677 . 25680) (symbol 25673 . 25676) (punctuation 25671 . 25672) (semantic-list 25372 . 25669) (string 25366 . 25369) (symbol 25361 . 25365) (string 25357 . 25360) (symbol 25352 . 25356) (string 25348 . 25351) (symbol 25343 . 25347) (string 25339 . 25342) (symbol 25332 . 25338) (punctuation 25330 . 25331) (semantic-list 25028 . 25328) (string 25022 . 25025) (symbol 25017 . 25021) (string 25013 . 25016) (symbol 25008 . 25012) (string 25004 . 25007) (symbol 24999 . 25003) (string 24995 . 24998) (symbol 24985 . 24994) (punctuation 24983 . 24984) (semantic-list 24713 . 24981) (string 24707 . 24710) (symbol 24702 . 24706) (string 24698 . 24701) (symbol 24693 . 24697) (string 24689 . 24692) (symbol 24684 . 24688) (punctuation 24682 . 24683) (semantic-list 24412 . 24680) (string 24406 . 24409) (symbol 24401 . 24405) (string 24397 . 24400) (symbol 24392 . 24396) (string 24388 . 24391) (symbol 24383 . 24387) (punctuation 24381 . 24382) (semantic-list 24106 . 24379) (string 24100 . 24103) (symbol 24095 . 24099) (string 24091 . 24094) (symbol 24086 . 24090) (string 24082 . 24085) (symbol 24073 . 24081) (punctuation 24071 . 24072) (semantic-list 23800 . 24069) (string 23794 . 23797) (symbol 23789 . 23793) (string 23785 . 23788) (symbol 23780 . 23784) (string 23776 . 23779) (symbol 23771 . 23775) (punctuation 23769 . 23770) (semantic-list 23493 . 23767) (string 23487 . 23490) (symbol 23482 . 23486) (string 23478 . 23481) (symbol 23473 . 23477) (string 23469 . 23472) (symbol 23459 . 23468) (punctuation 23457 . 23458) (semantic-list 23185 . 23455) (string 23179 . 23182) (symbol 23174 . 23178) (string 23170 . 23173) (symbol 23165 . 23169) (string 23161 . 23164) (symbol 23155 . 23160) (punctuation 23153 . 23154) (semantic-list 22878 . 23151) (string 22872 . 22875) (symbol 22867 . 22871) (string 22863 . 22866) (symbol 22858 . 22862) (string 22854 . 22857) (symbol 22845 . 22853) (punctuation 22843 . 22844) (semantic-list 22569 . 22841) (string 22563 . 22566) (symbol 22558 . 22562) (string 22554 . 22557) (symbol 22549 . 22553) (string 22545 . 22548) (symbol 22537 . 22544) (punctuation 22535 . 22536) (semantic-list 22263 . 22533) (string 22257 . 22260) (symbol 22252 . 22256) (string 22248 . 22251) (symbol 22243 . 22247) (string 22239 . 22242) (symbol 22234 . 22238) (punctuation 22232 . 22233) (semantic-list 21961 . 22230) (string 21955 . 21958) (symbol 21950 . 21954) (string 21946 . 21949) (symbol 21941 . 21945) (string 21937 . 21940) (symbol 21933 . 21936) (punctuation 21931 . 21932) (semantic-list 21670 . 21929) (string 21664 . 21667) (symbol 21657 . 21663) (string 21653 . 21656) (symbol 21646 . 21652) (string 21642 . 21645) (symbol 21637 . 21641) (string 21633 . 21636) (symbol 21628 . 21632) (string 21624 . 21627) (symbol 21617 . 21623) (punctuation 21615 . 21616) (semantic-list 21537 . 21613) (string 21531 . 21534) (symbol 21526 . 21530) (string 21522 . 21525) (punctuation 21519 . 21520) (semantic-list 21401 . 21517) (string 21394 . 21397) (symbol 21389 . 21393) (string 21385 . 21388) (symbol 21380 . 21384) (punctuation 21378 . 21379) (semantic-list 21262 . 21376) (symbol 21253 . 21259) (punctuation 21251 . 21252) (semantic-list 21135 . 21249) (symbol 21126 . 21132) (punctuation 21124 . 21125) (semantic-list 21008 . 21122) (symbol 20999 . 21005) (punctuation 20997 . 20998) (semantic-list 20869 . 20995) (symbol 20862 . 20866) (punctuation 20859 . 20860) (semantic-list 20713 . 20857) (symbol 20706 . 20710) (symbol 20701 . 20705) (symbol 20696 . 20700) (punctuation 20694 . 20695) (semantic-list 20555 . 20692) (symbol 20548 . 20552) (string 20544 . 20547) (symbol 20539 . 20543) (punctuation 20537 . 20538) (semantic-list 20400 . 20535) (symbol 20392 . 20396) (string 20388 . 20391) (symbol 20383 . 20387) (punctuation 20381 . 20382) (semantic-list 20239 . 20379) (symbol 20231 . 20235) (string 20227 . 20230) (symbol 20222 . 20226) (punctuation 20220 . 20221) (semantic-list 20083 . 20218) (symbol 20075 . 20079) (string 20071 . 20074) (symbol 20066 . 20070) (punctuation 20064 . 20065) (semantic-list 19925 . 20062) (symbol 19917 . 19921) (string 19913 . 19916) (symbol 19908 . 19912) (punctuation 19906 . 19907) (semantic-list 19768 . 19904) (symbol 19760 . 19764) (string 19756 . 19759) (symbol 19751 . 19755) (punctuation 19749 . 19750) (symbol 19745 . 19749) (punctuation 19741 . 19742) (semantic-list 19665 . 19739) (string 19659 . 19662) (symbol 19654 . 19658) (string 19650 . 19653) (punctuation 19648 . 19649) (semantic-list 19509 . 19646) (symbol 19502 . 19506) (symbol 19498 . 19501) (punctuation 19496 . 19497) (semantic-list 19358 . 19494) (symbol 19351 . 19355) (symbol 19346 . 19350) (symbol 19341 . 19345) (punctuation 19339 . 19340) (semantic-list 19203 . 19337) (symbol 19196 . 19200) (symbol 19193 . 19195) (symbol 19188 . 19192) (punctuation 19186 . 19187) (semantic-list 19050 . 19184) (symbol 19043 . 19047) (symbol 19040 . 19042) (symbol 19035 . 19039) (punctuation 19033 . 19034) (semantic-list 18897 . 19031) (symbol 18890 . 18894) (symbol 18887 . 18889) (symbol 18882 . 18886) (punctuation 18880 . 18881) (semantic-list 18744 . 18878) (symbol 18737 . 18741) (symbol 18734 . 18736) (symbol 18729 . 18733) (punctuation 18727 . 18728) (semantic-list 18591 . 18725) (symbol 18584 . 18588) (symbol 18581 . 18583) (symbol 18576 . 18580) (punctuation 18574 . 18575) (semantic-list 18438 . 18572) (symbol 18431 . 18435) (symbol 18428 . 18430) (symbol 18423 . 18427) (punctuation 18421 . 18422) (semantic-list 18285 . 18419) (symbol 18278 . 18282) (symbol 18275 . 18277) (symbol 18270 . 18274) (punctuation 18268 . 18269) (semantic-list 18130 . 18265) (symbol 18123 . 18127) (symbol 18119 . 18122) (symbol 18114 . 18118) (punctuation 18112 . 18113) (symbol 18107 . 18111) (symbol 17915 . 17923) (symbol 17910 . 17914) (symbol 17905 . 17909) (punctuation 17903 . 17904) (semantic-list 17797 . 17901) (symbol 17791 . 17794) (symbol 17782 . 17790) (symbol 17777 . 17781) (symbol 17772 . 17776) (punctuation 17770 . 17771) (semantic-list 17722 . 17768) (symbol 17715 . 17718) (symbol 17708 . 17714) (symbol 17704 . 17707) (symbol 17693 . 17703) (punctuation 17691 . 17692) (semantic-list 17615 . 17689) (symbol 17608 . 17611) (symbol 17603 . 17607) (symbol 17594 . 17602) (symbol 17590 . 17593) (punctuation 17588 . 17589) (semantic-list 17513 . 17586) (symbol 17506 . 17509) (symbol 17501 . 17505) (symbol 17493 . 17500) (symbol 17489 . 17492) (punctuation 17487 . 17488) (semantic-list 17410 . 17485) (symbol 17403 . 17406) (symbol 17398 . 17402) (symbol 17388 . 17397) (symbol 17384 . 17387) (punctuation 17382 . 17383) (semantic-list 17335 . 17380) (symbol 17328 . 17331) (symbol 17321 . 17327) (symbol 17312 . 17320) (symbol 17307 . 17311) (symbol 17300 . 17306) (punctuation 17298 . 17299) (semantic-list 17220 . 17296) (symbol 17213 . 17216) (symbol 17208 . 17212) (symbol 17199 . 17207) (symbol 17192 . 17198) (punctuation 17190 . 17191) (semantic-list 17110 . 17188) (symbol 17103 . 17106) (symbol 17098 . 17102) (symbol 17088 . 17097) (symbol 17081 . 17087) (punctuation 17079 . 17080) (semantic-list 17036 . 17077) (symbol 17029 . 17032) (symbol 17017 . 17028) (symbol 17010 . 17016) (punctuation 17008 . 17009) (semantic-list 16966 . 17006) (symbol 16959 . 16962) (symbol 16952 . 16958) (symbol 16946 . 16951) (punctuation 16944 . 16945) (semantic-list 16871 . 16942) (symbol 16864 . 16867) (symbol 16859 . 16863) (symbol 16850 . 16858) (punctuation 16848 . 16849) (semantic-list 16775 . 16846) (symbol 16768 . 16771) (symbol 16763 . 16767) (symbol 16754 . 16762) (punctuation 16752 . 16753) (semantic-list 16680 . 16750) (symbol 16673 . 16676) (symbol 16668 . 16672) (symbol 16660 . 16667) (punctuation 16658 . 16659) (semantic-list 16586 . 16656) (symbol 16579 . 16582) (symbol 16574 . 16578) (symbol 16566 . 16573) (punctuation 16564 . 16565) (semantic-list 16490 . 16562) (symbol 16483 . 16486) (symbol 16478 . 16482) (symbol 16468 . 16477) (punctuation 16466 . 16467) (semantic-list 16399 . 16464) (symbol 16393 . 16396) (symbol 16384 . 16392) (symbol 16376 . 16383) (punctuation 16374 . 16375) (semantic-list 16314 . 16372) (symbol 16308 . 16311) (symbol 16297 . 16307) (symbol 16289 . 16296) (punctuation 16287 . 16288) (symbol 16279 . 16286) (punctuation 16240 . 16241) (semantic-list 16221 . 16237) (punctuation 16203 . 16204) (symbol 16195 . 16203) (punctuation 16158 . 16159) (semantic-list 16139 . 16155) (punctuation 16121 . 16122) (symbol 16115 . 16121) (string 16073 . 16076) (symbol 16067 . 16072) (punctuation 16065 . 16066) (semantic-list 16043 . 16062) (punctuation 16025 . 16026) (symbol 16020 . 16025) (string 15862 . 15865) (symbol 15857 . 15861) (symbol 15852 . 15856) (string 15848 . 15851) (symbol 15844 . 15847) (symbol 15839 . 15843) (string 15835 . 15838) (symbol 15829 . 15834) (punctuation 15827 . 15828) (semantic-list 15764 . 15824) (punctuation 15746 . 15747) (symbol 15737 . 15746) (string 15674 . 15677) (symbol 15670 . 15673) (punctuation 15668 . 15669) (semantic-list 15646 . 15665) (punctuation 15628 . 15629) (symbol 15623 . 15628) (string 15560 . 15563) (symbol 15557 . 15559) (punctuation 15555 . 15556) (semantic-list 15533 . 15552) (punctuation 15515 . 15516) (symbol 15510 . 15515) (punctuation 15459 . 15460) (semantic-list 15429 . 15456) (symbol 15418 . 15425) (punctuation 15415 . 15416) (semantic-list 15387 . 15412) (symbol 15374 . 15383) (punctuation 15371 . 15372) (semantic-list 15341 . 15368) (punctuation 15324 . 15325) (symbol 15316 . 15324) (punctuation 15313 . 15314) (semantic-list 15267 . 15310) (string 15260 . 15263) (symbol 15253 . 15259) (string 15249 . 15252) (symbol 15242 . 15248) (string 15238 . 15241) (punctuation 15236 . 15237) (semantic-list 15191 . 15233) (string 15184 . 15187) (symbol 15177 . 15183) (string 15173 . 15176) (punctuation 15171 . 15172) (semantic-list 15127 . 15168) (punctuation 15110 . 15111) (symbol 15101 . 15110) (string 14750 . 14753) (symbol 14745 . 14749) (punctuation 14743 . 14744) (semantic-list 14488 . 14741) (symbol 14482 . 14485) (symbol 14477 . 14481) (string 14473 . 14476) (symbol 14468 . 14472) (string 14464 . 14467) (symbol 14459 . 14463) (punctuation 14457 . 14458) (semantic-list 14394 . 14455) (symbol 14388 . 14391) (symbol 14383 . 14387) (punctuation 14381 . 14382) (semantic-list 14202 . 14379) (symbol 14196 . 14199) (symbol 14191 . 14195) (string 14187 . 14190) (symbol 14182 . 14186) (punctuation 14180 . 14181) (semantic-list 13986 . 14178) (symbol 13980 . 13983) (symbol 13974 . 13979) (symbol 13964 . 13973) (symbol 13954 . 13963) (symbol 13949 . 13953) (symbol 13940 . 13948) (symbol 13931 . 13939) (punctuation 13929 . 13930) (semantic-list 13732 . 13927) (symbol 13726 . 13729) (symbol 13720 . 13725) (symbol 13715 . 13719) (string 13711 . 13714) (symbol 13701 . 13710) (symbol 13696 . 13700) (symbol 13687 . 13695) (symbol 13678 . 13686) (punctuation 13676 . 13677) (semantic-list 13490 . 13674) (symbol 13484 . 13487) (symbol 13477 . 13483) (symbol 13471 . 13476) (symbol 13465 . 13470) (symbol 13459 . 13464) (symbol 13449 . 13458) (symbol 13444 . 13448) (symbol 13435 . 13443) (symbol 13425 . 13434) (punctuation 13423 . 13424) (semantic-list 13210 . 13421) (symbol 13204 . 13207) (symbol 13197 . 13203) (symbol 13191 . 13196) (symbol 13185 . 13190) (symbol 13179 . 13184) (symbol 13174 . 13178) (string 13170 . 13173) (symbol 13160 . 13169) (symbol 13155 . 13159) (symbol 13146 . 13154) (symbol 13136 . 13145) (punctuation 13134 . 13135) (semantic-list 12948 . 13132) (symbol 12942 . 12945) (symbol 12933 . 12941) (symbol 12926 . 12932) (symbol 12920 . 12925) (symbol 12914 . 12919) (symbol 12908 . 12913) (symbol 12898 . 12907) (symbol 12893 . 12897) (symbol 12884 . 12892) (symbol 12880 . 12883) (punctuation 12878 . 12879) (semantic-list 12664 . 12876) (symbol 12658 . 12661) (symbol 12649 . 12657) (symbol 12642 . 12648) (symbol 12636 . 12641) (symbol 12630 . 12635) (symbol 12624 . 12629) (symbol 12619 . 12623) (string 12615 . 12618) (symbol 12605 . 12614) (symbol 12600 . 12604) (symbol 12591 . 12599) (symbol 12587 . 12590) (punctuation 12585 . 12586) (symbol 12576 . 12584) (symbol 12435 . 12441) (punctuation 12432 . 12433) (symbol 12426 . 12432) (punctuation 12424 . 12425) (semantic-list 12343 . 12422) (string 12338 . 12341) (symbol 12331 . 12337) (symbol 12324 . 12330) (punctuation 12322 . 12323) (semantic-list 12241 . 12320) (string 12236 . 12239) (symbol 12229 . 12235) (symbol 12226 . 12228) (punctuation 12223 . 12224) (symbol 12217 . 12223) (symbol 12075 . 12081) (punctuation 12072 . 12073) (symbol 12066 . 12072) (punctuation 12064 . 12065) (semantic-list 11982 . 12062) (string 11977 . 11980) (symbol 11970 . 11976) (symbol 11963 . 11969) (punctuation 11961 . 11962) (semantic-list 11879 . 11959) (string 11874 . 11877) (symbol 11867 . 11873) (symbol 11864 . 11866) (punctuation 11861 . 11862) (symbol 11855 . 11861) (string 11785 . 11788) (symbol 11780 . 11784) (string 11776 . 11779) (symbol 11769 . 11775) (punctuation 11767 . 11768) (semantic-list 11711 . 11765) (symbol 11704 . 11708) (string 11700 . 11703) (symbol 11695 . 11699) (punctuation 11693 . 11694) (punctuation 11677 . 11678) (symbol 11671 . 11677) (string 11417 . 11420) (symbol 11408 . 11416) (punctuation 11406 . 11407) (punctuation 11391 . 11392) (symbol 11383 . 11391) (string 11102 . 11105) (symbol 11097 . 11101) (string 11093 . 11096) (symbol 11084 . 11092) (punctuation 11082 . 11083) (punctuation 11067 . 11068) (symbol 11059 . 11067) (symbol 10967 . 10971) (punctuation 10935 . 10936) (semantic-list 10861 . 10933) (symbol 10855 . 10858) (symbol 10849 . 10854) (symbol 10844 . 10848) (punctuation 10842 . 10843) (semantic-list 10791 . 10840) (symbol 10785 . 10788) (string 10781 . 10784) (symbol 10772 . 10780) (symbol 10765 . 10771) (string 10761 . 10764) (symbol 10754 . 10760) (symbol 10749 . 10753) (punctuation 10747 . 10748) (semantic-list 10649 . 10745) (symbol 10643 . 10646) (string 10639 . 10642) (symbol 10630 . 10638) (symbol 10625 . 10629) (string 10621 . 10624) (symbol 10616 . 10620) (symbol 10611 . 10615) (punctuation 10609 . 10610) (semantic-list 10553 . 10607) (symbol 10547 . 10550) (symbol 10537 . 10546) (symbol 10532 . 10536) (punctuation 10530 . 10531) (semantic-list 10477 . 10528) (symbol 10471 . 10474) (symbol 10464 . 10470) (symbol 10459 . 10463) (punctuation 10457 . 10458) (semantic-list 10440 . 10455) (symbol 10430 . 10437) (symbol 10425 . 10429) (punctuation 10423 . 10424) (semantic-list 10406 . 10421) (symbol 10395 . 10403) (symbol 10390 . 10394) (punctuation 10388 . 10389) (punctuation 10373 . 10374) (symbol 10369 . 10373) (punctuation 10366 . 10367) (punctuation 10365 . 10366) (symbol 10359 . 10363) (symbol 10353 . 10358) (punctuation 10352 . 10353) (symbol 10342 . 10350) (semantic-list 10330 . 10341) (symbol 10319 . 10329) (punctuation 10318 . 10319) (symbol 10309 . 10317) (semantic-list 10297 . 10308) (symbol 10286 . 10296) (punctuation 10285 . 10286) (symbol 10280 . 10284) (semantic-list 10268 . 10279) (symbol 10257 . 10267) (punctuation 10256 . 10257) (punctuation 10236 . 10237) (symbol 10230 . 10236) (punctuation 10229 . 10230) (symbol 10224 . 10228) (punctuation 10223 . 10224) (symbol 10213 . 10222) (punctuation 10211 . 10212) (symbol 10205 . 10211) (punctuation 10204 . 10205) (symbol 10199 . 10203) (punctuation 10198 . 10199) (symbol 10192 . 10197) (symbol 10186 . 10191) (punctuation 10184 . 10185) (symbol 10176 . 10184) (punctuation 10175 . 10176) (symbol 10170 . 10174) (punctuation 10169 . 10170) (symbol 10163 . 10168) (punctuation 10161 . 10162) (symbol 10153 . 10161) (punctuation 10152 . 10153) (symbol 10147 . 10151) (punctuation 10146 . 10147) (symbol 10139 . 10145) (punctuation 10137 . 10138) (symbol 10127 . 10137) (punctuation 10126 . 10127) (symbol 10121 . 10125) (punctuation 10120 . 10121) (symbol 10113 . 10119) (punctuation 10111 . 10112) (symbol 10101 . 10111) (punctuation 10100 . 10101) (symbol 10095 . 10099) (punctuation 10094 . 10095) (symbol 10087 . 10093) (symbol 10080 . 10086) (punctuation 10078 . 10079) (symbol 10072 . 10078) (punctuation 10071 . 10072) (symbol 10066 . 10070) (punctuation 10065 . 10066) (symbol 10056 . 10064) (punctuation 10054 . 10055) (symbol 10047 . 10054) (punctuation 10046 . 10047) (symbol 10041 . 10045) (punctuation 10040 . 10041) (symbol 10030 . 10039) (punctuation 10028 . 10029) (symbol 10021 . 10028) (punctuation 10020 . 10021) (symbol 10015 . 10019) (punctuation 10014 . 10015) (symbol 10007 . 10013) (punctuation 10005 . 10006) (symbol 9998 . 10005) (punctuation 9997 . 9998) (symbol 9992 . 9996) (punctuation 9991 . 9992) (symbol 9982 . 9990) (punctuation 9980 . 9981) (symbol 9973 . 9980) (punctuation 9972 . 9973) (symbol 9967 . 9971) (punctuation 9966 . 9967) (symbol 9957 . 9965) (punctuation 9955 . 9956) (symbol 9948 . 9955) (punctuation 9947 . 9948) (symbol 9942 . 9946) (punctuation 9941 . 9942) (symbol 9936 . 9940) (symbol 9931 . 9935) (punctuation 9929 . 9930) (symbol 9922 . 9929) (punctuation 9921 . 9922) (symbol 9916 . 9920) (punctuation 9915 . 9916) (symbol 9907 . 9914) (symbol 9898 . 9906) (symbol 9893 . 9897) (punctuation 9891 . 9892) (symbol 9882 . 9891) (punctuation 9881 . 9882) (symbol 9876 . 9880) (punctuation 9875 . 9876) (symbol 9870 . 9873) (symbol 9866 . 9869) (symbol 9862 . 9865) (symbol 9853 . 9861) (punctuation 9852 . 9853) (symbol 9847 . 9851) (string 9843 . 9846) (symbol 9837 . 9842) (punctuation 9836 . 9837) (string 9832 . 9835) (string 9828 . 9831) (string 9824 . 9827) (symbol 9819 . 9823) (punctuation 9818 . 9819) (string 9814 . 9817) (string 9810 . 9813) (symbol 9805 . 9809) (punctuation 9804 . 9805) (symbol 9801 . 9803) (symbol 9798 . 9800) (symbol 9795 . 9797) (symbol 9792 . 9794) (symbol 9789 . 9791) (symbol 9786 . 9788) (symbol 9781 . 9785) (punctuation 9780 . 9781) (symbol 9775 . 9779) (symbol 9772 . 9774) (symbol 9768 . 9771) (symbol 9763 . 9767) (punctuation 9762 . 9763) (symbol 9751 . 9758) (symbol 9745 . 9750) (punctuation 9744 . 9745) (symbol 9734 . 9743) (symbol 9728 . 9733) (punctuation 9727 . 9728) (symbol 9717 . 9726) (symbol 9711 . 9716) (punctuation 9710 . 9711) (symbol 9701 . 9709) (symbol 9695 . 9700) (punctuation 9694 . 9695) (symbol 9689 . 9693) (symbol 9683 . 9688) (punctuation 9682 . 9683) (symbol 9675 . 9681) (symbol 9669 . 9674) (punctuation 9668 . 9669) (symbol 9657 . 9667) (symbol 9651 . 9656) (punctuation 9650 . 9651) (symbol 9646 . 9649) (symbol 9640 . 9645) (punctuation 9639 . 9640) (symbol 9630 . 9638) (symbol 9624 . 9629) (punctuation 9623 . 9624) (symbol 9618 . 9622) (symbol 9612 . 9617) (punctuation 9611 . 9612) (symbol 9602 . 9610) (symbol 9596 . 9601) (punctuation 9595 . 9596) (symbol 9585 . 9594) (symbol 9579 . 9584) (punctuation 9578 . 9579) (symbol 9573 . 9577) (symbol 9567 . 9572) (punctuation 9566 . 9567) (symbol 9561 . 9565) (symbol 9555 . 9560) (punctuation 9554 . 9555) (symbol 9547 . 9553) (symbol 9541 . 9546) (punctuation 9540 . 9541) (symbol 9531 . 9539) (symbol 9525 . 9530) (punctuation 9524 . 9525) (symbol 9519 . 9523) (symbol 9513 . 9518) (punctuation 9512 . 9513) (symbol 9502 . 9511) (symbol 9496 . 9501) (punctuation 9495 . 9496) (symbol 9489 . 9494) (symbol 9483 . 9488) (punctuation 9482 . 9483) (symbol 9473 . 9481) (symbol 9467 . 9472) (punctuation 9466 . 9467) (symbol 9458 . 9465) (symbol 9452 . 9457) (punctuation 9451 . 9452) (symbol 9446 . 9450) (symbol 9440 . 9445) (punctuation 9439 . 9440) (symbol 9429 . 9438) (symbol 9423 . 9428) (punctuation 9422 . 9423) (symbol 9418 . 9421) (symbol 9412 . 9417) (punctuation 9411 . 9412) (symbol 9406 . 9410) (symbol 9400 . 9405) (punctuation 9399 . 9400) (symbol 9392 . 9398) (symbol 9386 . 9391) (punctuation 9385 . 9386) (symbol 9381 . 9384) (symbol 9375 . 9380) (punctuation 9374 . 9375) (symbol 9369 . 9373) (symbol 9363 . 9368) (punctuation 9362 . 9363) (symbol 9357 . 9361) (symbol 9351 . 9356) (punctuation 9350 . 9351) (symbol 9345 . 9349) (symbol 9339 . 9344) (punctuation 9338 . 9339) (symbol 9329 . 9337) (punctuation 9327 . 9328) (symbol 9322 . 9327) (punctuation 9321 . 9322) (symbol 9315 . 9320) (punctuation 9314 . 9315) (symbol 9302 . 9313) (punctuation 9300 . 9301) (symbol 9292 . 9300) (punctuation 9291 . 9292) (symbol 9285 . 9290) (punctuation 9284 . 9285) (symbol 9277 . 9283) (symbol 9271 . 9276) (punctuation 9270 . 9271) (symbol 9263 . 9269) (punctuation 9261 . 9262) (symbol 9253 . 9261) (punctuation 9252 . 9253) (symbol 9246 . 9251) (punctuation 9245 . 9246) (symbol 9239 . 9244) (symbol 9233 . 9238) (punctuation 9232 . 9233) (symbol 9223 . 9231) (symbol 9217 . 9222) (punctuation 9216 . 9217) (symbol 9206 . 9215) (symbol 9200 . 9205) (punctuation 9199 . 9200) (symbol 9190 . 9198) (symbol 9184 . 9189) (punctuation 9183 . 9184) (symbol 9175 . 9182) (symbol 9169 . 9174) (punctuation 9168 . 9169) (symbol 9160 . 9167) (symbol 9154 . 9159) (punctuation 9153 . 9154) (symbol 9145 . 9152) (symbol 9139 . 9144) (punctuation 9138 . 9139) (symbol 9134 . 9137) (symbol 9128 . 9133) (punctuation 9127 . 9128) (symbol 9117 . 9126) (symbol 9111 . 9116) (punctuation 9110 . 9111) (symbol 9103 . 9109) (symbol 9097 . 9102) (punctuation 9096 . 9097) (symbol 9088 . 9095) (punctuation 9086 . 9087) (symbol 9081 . 9086) (punctuation 9080 . 9081) (symbol 9074 . 9079) (punctuation 9073 . 9074) (symbol 9062 . 9072) (punctuation 9060 . 9061) (symbol 9052 . 9060) (punctuation 9051 . 9052) (symbol 9045 . 9050) (punctuation 9044 . 9045) (symbol 9036 . 9043) (symbol 9030 . 9035) (punctuation 9029 . 9030) (symbol 9020 . 9028) (punctuation 9018 . 9019) (symbol 9011 . 9018) (punctuation 9010 . 9011) (symbol 9004 . 9009) (punctuation 9003 . 9004) (symbol 8994 . 9002) (punctuation 8992 . 8993) (symbol 8984 . 8992) (punctuation 8983 . 8984) (symbol 8977 . 8982) (punctuation 8976 . 8977) (symbol 8971 . 8975) (punctuation 8969 . 8970) (symbol 8962 . 8969) (punctuation 8961 . 8962) (symbol 8955 . 8960) (punctuation 8954 . 8955) (symbol 8948 . 8953) (symbol 8942 . 8947) (punctuation 8941 . 8942) (symbol 8936 . 8940) (symbol 8930 . 8935) (punctuation 8929 . 8930) (symbol 8922 . 8928) (symbol 8916 . 8921) (punctuation 8915 . 8916) (symbol 8909 . 8914) (symbol 8903 . 8908) (punctuation 8902 . 8903) (symbol 8897 . 8901) (symbol 8891 . 8896) (punctuation 8890 . 8891) (symbol 8884 . 8889) (symbol 8878 . 8883) (punctuation 8877 . 8878) (symbol 8873 . 8876) (symbol 8867 . 8872) (punctuation 8866 . 8867) (symbol 8863 . 8865) (symbol 8857 . 8862) (punctuation 8856 . 8857) (symbol 8846 . 8855) (symbol 8840 . 8845) (punctuation 8839 . 8840) (symbol 8835 . 8838) (symbol 8829 . 8834) (punctuation 8828 . 8829) (symbol 8819 . 8827) (symbol 8813 . 8818) (punctuation 8812 . 8813) (symbol 8808 . 8811) (symbol 8802 . 8807) (punctuation 8801 . 8802) (symbol 8797 . 8800) (symbol 8791 . 8796) (punctuation 8790 . 8791) (symbol 8785 . 8789) (symbol 8779 . 8784) (punctuation 8778 . 8779) (symbol 8770 . 8777) (punctuation 8768 . 8769) (symbol 8762 . 8768) (punctuation 8761 . 8762) (symbol 8755 . 8760) (punctuation 8754 . 8755) (symbol 8749 . 8753) (punctuation 8747 . 8748) (symbol 8740 . 8747) (punctuation 8739 . 8740) (symbol 8733 . 8738) (punctuation 8732 . 8733) (symbol 8728 . 8731) (symbol 8722 . 8727) (punctuation 8721 . 8722) (symbol 8718 . 8720) (symbol 8712 . 8717) (punctuation 8711 . 8712) (symbol 8706 . 8710) (punctuation 8704 . 8705) (symbol 8698 . 8704) (punctuation 8697 . 8698) (symbol 8691 . 8696) (punctuation 8690 . 8691) (symbol 8683 . 8689) (punctuation 8681 . 8682) (symbol 8675 . 8681) (punctuation 8674 . 8675) (symbol 8668 . 8673) (punctuation 8667 . 8668) (symbol 8664 . 8666) (symbol 8658 . 8663) (punctuation 8657 . 8658) (symbol 8654 . 8656) (symbol 8648 . 8653) (punctuation 8647 . 8648) (symbol 8644 . 8646) (symbol 8638 . 8643) (punctuation 8637 . 8638) (symbol 8632 . 8636) (symbol 8626 . 8631) (punctuation 8625 . 8626) (symbol 8622 . 8624) (symbol 8616 . 8621) (punctuation 8615 . 8616) (symbol 8612 . 8614) (symbol 8606 . 8611) (punctuation 8605 . 8606) (symbol 8601 . 8604) (symbol 8595 . 8600) (punctuation 8594 . 8595) (symbol 8591 . 8593) (symbol 8585 . 8590) (punctuation 8584 . 8585) (symbol 8581 . 8583) (symbol 8575 . 8580) (punctuation 8574 . 8575) (symbol 8570 . 8573) (symbol 8564 . 8569) (punctuation 8563 . 8564) (semantic-list 7772 . 8560) (UNION 7766 . 7771) (punctuation 7765 . 7766) (semantic-list 2544 . 7763) (punctuation 2543 . 2544) (semantic-list 2525 . 2541) (symbol 2519 . 2524) (punctuation 2518 . 2519) (symbol 2515 . 2518) (punctuation 2514 . 2515) (semantic-list 2497 . 2513) (symbol 2491 . 2496) (punctuation 2490 . 2491) (symbol 2485 . 2490) (punctuation 2484 . 2485) (semantic-list 2451 . 2483) (symbol 2445 . 2450) (punctuation 2444 . 2445) (symbol 2439 . 2444) (punctuation 2438 . 2439) (symbol 2431 . 2436) (punctuation 2430 . 2431) (symbol 2420 . 2429) (punctuation 2419 . 2420) (symbol 2412 . 2418) (punctuation 2411 . 2412) (symbol 2407 . 2411) (punctuation 2406 . 2407) (symbol 2398 . 2405) (punctuation 2397 . 2398) (symbol 2392 . 2397) (punctuation 2391 . 2392) (semantic-list 778 . 2389) (symbol 769 . 777) (symbol 764 . 768) (punctuation 763 . 764) (semantic-list 2 . 761) (punctuation 1 . 2))
+    :lexical-table 
+        '(("YYDEBUG" . ((number "1" 539 . 540)))
+          ("__MY_TYPE__")
+          ("YYLTYPE_IS_DECLARED" . ((number "1" 963 . 964)))
+          ("YYLLOC_DEFAULT" (spp-arg-list ("Current" "Rhs" "N") 1044 . 1061) . 
+              ((DO "do" 1095 . 1097) (IF "if" 1166 . 1168) (semantic-list "(N)" 1169 . 1172) (semantic-list "{                                                              \\
+			(Current).first_line   = YYRHSLOC (Rhs, 1).first_line;       \\
+			(Current).first_column = YYRHSLOC (Rhs, 1).first_column;     \\
+			(Current).last_line    = YYRHSLOC (Rhs, N).last_line;        \\
+			(Current).last_column  = YYRHSLOC (Rhs, N).last_column;      \\
+			(Current).position     = YYRHSLOC (Rhs, 1).position;         \\
+			(Current).length       = YYRHSLOC (Rhs, 1).length;         \\
+		}" 1235 . 1697) (ELSE "else" 1763 . 1767) (semantic-list "{ /* empty RHS */                                              \\
+			(Current).first_line   = (Current).last_line   =             \\
+			YYRHSLOC (Rhs, 0).last_line;                               \\
+			(Current).first_column = (Current).last_column =             \\
+			YYRHSLOC (Rhs, 0).last_column;                             \\
+			(Current).position  = YYRHSLOC (Rhs, 0).position; /* new */ \\
+			(Current).length  = YYRHSLOC (Rhs, 0).length; /* new */ \\
+		}" 1832 . 2286) (WHILE "while" 2351 . 2356) (semantic-list "(0)" 2357 . 2360)))
+          )
+
+    )
+   (semanticdb-table "syntaxsh.y"
+    :major-mode 'c-mode
+    :tags 
+        '( ("EOL" variable (:type ("expr" type (:type "class") nil nil)) nil [3636 3672])
+            ("EOL" variable (:type "int") nil [6383 6456])
+            ("expr" variable (:type "int") nil [6616 6695])
+            ("syntaxsh_new_node_operation" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7436 7465])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7466 7479])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7480 7503])
+                    ("cOperation" variable (:type "int") (reparse-symbol arg-sub-list) [7503 7518])
+                    ("psnLNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7519 7541])
+                    ("psnRNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7542 7564]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7388 8409])
+            ("syntaxsh_new_node_number" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9032 9061])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9062 9075])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9076 9099])
+                    ("dValue" variable (:type "double") (reparse-symbol arg-sub-list) [9099 9113]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [8987 9883])
+            ("syntaxsh_new_node_named" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10523 10552])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10553 10566])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10567 10590])
+                    ("strName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10590 10604]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [10479 11302])
+            ("syntaxsh_new_node_func" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11964 11993])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11994 12007])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12008 12031])
+                    ("tfFunction" variable (:type ("t_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12031 12047])
+                    ("psnNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12048 12069]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [11921 12773])
+            ("syntaxsh_new_node_if" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13465 13494])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13495 13508])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13509 13532])
+                    ("psnCond" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13532 13553])
+                    ("psnTrue" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13554 13575])
+                    ("psnFalse" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13576 13598]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [13424 14320])
+            ("syntaxsh_new_node_diff" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15021 15050])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15051 15064])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15065 15088])
+                    ("strFn" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15088 15100])
+                    ("strVar" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15101 15114])
+                    ("iOrder" variable (:type "int") (reparse-symbol arg-sub-list) [15115 15126]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [14978 17069])
+            ("syntaxsh_new_node_filter" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17835 17864])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17865 17878])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17879 17902])
+                    ("strVar" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17902 17915])
+                    ("strRef" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17916 17929])
+                    ("iOrder" variable (:type "int") (reparse-symbol arg-sub-list) [17930 17941])
+                    ("iSpan" variable (:type "int") (reparse-symbol arg-sub-list) [17942 17952]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [17790 19294])
+            ("syntaxsh_add_equation" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19972 20001])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20002 20015])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20016 20039])
+                    ("psnRNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20039 20061])
+                    ("psnLNode" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20062 20084]))                  
+                :type ("node_exec_array" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [19926 21210])
+            ("syntaxsh_new_node_fit" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21963 21992])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21993 22006])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22007 22030]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [21928 22653])
+            ("syntax_parse" function
+               (:pointer 1
+                :arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23227 23256])
+                    ("strExpr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23256 23270]))                  
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [23201 23746])
+            ("syntaxsh_error" function
+               (:arguments 
+                  ( ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23767 23796])
+                    ("ysScan" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23797 23810])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23811 23834])
+                    ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23835 23843]))                  
+                :type "void")
+                nil [23747 23866]))          
+    :file "syntaxsh.y"
+    :pointmax 23867
+    :fsize 23866
+    :lastmodtime '(21347 44347 0 0)
+    :unmatched-syntax '((punctuation 6698 . 6699) (punctuation 6697 . 6698) (string 6612 . 6615) (symbol 6607 . 6611) (string 6603 . 6606) (symbol 6596 . 6602) (punctuation 6594 . 6595) (semantic-list 6498 . 6592) (symbol 6491 . 6495) (string 6487 . 6490) (symbol 6482 . 6486) (punctuation 6480 . 6481) (punctuation 6464 . 6465) (symbol 6458 . 6464) (string 6379 . 6382) (symbol 6372 . 6378) (string 6368 . 6371) (symbol 6364 . 6367) (punctuation 6362 . 6363) (semantic-list 6243 . 6360) (string 6237 . 6240) (symbol 6230 . 6236) (string 6226 . 6229) (symbol 6219 . 6225) (string 6215 . 6218) (symbol 6210 . 6214) (string 6206 . 6209) (symbol 6201 . 6205) (string 6197 . 6200) (symbol 6190 . 6196) (punctuation 6188 . 6189) (semantic-list 6093 . 6186) (symbol 6087 . 6090) (symbol 6082 . 6086) (punctuation 6081 . 6082) (symbol 6076 . 6080) (string 6072 . 6075) (punctuation 6070 . 6071) (semantic-list 5975 . 6068) (symbol 5969 . 5972) (symbol 5964 . 5968) (punctuation 5963 . 5964) (symbol 5958 . 5962) (string 5954 . 5957) (punctuation 5952 . 5953) (semantic-list 5877 . 5950) (string 5870 . 5873) (symbol 5865 . 5869) (string 5861 . 5864) (symbol 5856 . 5860) (string 5852 . 5855) (symbol 5847 . 5851) (string 5843 . 5846) (symbol 5840 . 5842) (punctuation 5838 . 5839) (semantic-list 5735 . 5836) (string 5729 . 5732) (symbol 5721 . 5728) (string 5717 . 5720) (symbol 5712 . 5716) (string 5708 . 5711) (symbol 5703 . 5707) (string 5699 . 5702) (symbol 5694 . 5698) (punctuation 5692 . 5693) (semantic-list 5673 . 5690) (string 5667 . 5670) (symbol 5662 . 5666) (string 5658 . 5661) (punctuation 5655 . 5656) (semantic-list 5581 . 5653) (string 5574 . 5577) (symbol 5569 . 5573) (string 5565 . 5568) (symbol 5560 . 5564) (punctuation 5558 . 5559) (semantic-list 5485 . 5556) (symbol 5476 . 5482) (punctuation 5474 . 5475) (semantic-list 5389 . 5472) (symbol 5382 . 5386) (punctuation 5379 . 5380) (semantic-list 5284 . 5377) (symbol 5277 . 5281) (string 5273 . 5276) (symbol 5268 . 5272) (punctuation 5266 . 5267) (semantic-list 5173 . 5264) (symbol 5165 . 5169) (string 5161 . 5164) (symbol 5156 . 5160) (punctuation 5154 . 5155) (semantic-list 5061 . 5152) (symbol 5053 . 5057) (string 5049 . 5052) (symbol 5044 . 5048) (punctuation 5042 . 5043) (semantic-list 4947 . 5040) (symbol 4939 . 4943) (string 4935 . 4938) (symbol 4930 . 4934) (punctuation 4928 . 4929) (semantic-list 4834 . 4926) (symbol 4826 . 4830) (string 4822 . 4825) (symbol 4817 . 4821) (punctuation 4815 . 4816) (symbol 4811 . 4815) (punctuation 4807 . 4808) (semantic-list 4790 . 4805) (string 4784 . 4787) (symbol 4779 . 4783) (string 4775 . 4778) (punctuation 4773 . 4774) (semantic-list 4678 . 4771) (symbol 4671 . 4675) (symbol 4667 . 4670) (punctuation 4665 . 4666) (semantic-list 4569 . 4663) (symbol 4562 . 4566) (symbol 4557 . 4561) (punctuation 4555 . 4556) (semantic-list 4463 . 4553) (symbol 4456 . 4460) (symbol 4453 . 4455) (symbol 4448 . 4452) (punctuation 4446 . 4447) (semantic-list 4354 . 4444) (symbol 4347 . 4351) (symbol 4344 . 4346) (symbol 4339 . 4343) (punctuation 4337 . 4338) (semantic-list 4245 . 4335) (symbol 4238 . 4242) (symbol 4235 . 4237) (symbol 4230 . 4234) (punctuation 4228 . 4229) (semantic-list 4136 . 4226) (symbol 4129 . 4133) (symbol 4126 . 4128) (symbol 4121 . 4125) (punctuation 4119 . 4120) (semantic-list 4027 . 4117) (symbol 4020 . 4024) (symbol 4017 . 4019) (symbol 4012 . 4016) (punctuation 4010 . 4011) (semantic-list 3918 . 4008) (symbol 3911 . 3915) (symbol 3908 . 3910) (symbol 3903 . 3907) (punctuation 3901 . 3902) (semantic-list 3809 . 3899) (symbol 3802 . 3806) (symbol 3799 . 3801) (symbol 3794 . 3798) (punctuation 3792 . 3793) (semantic-list 3698 . 3789) (symbol 3691 . 3695) (symbol 3687 . 3690) (symbol 3682 . 3686) (punctuation 3680 . 3681) (symbol 3675 . 3679) (punctuation 3634 . 3635) (semantic-list 3608 . 3632) (symbol 3602 . 3605) (punctuation 3600 . 3601) (symbol 3593 . 3600) (punctuation 3590 . 3591) (punctuation 3589 . 3590) (symbol 3580 . 3587) (symbol 3574 . 3579) (punctuation 3573 . 3574) (symbol 3565 . 3571) (punctuation 3563 . 3564) (symbol 3556 . 3563) (punctuation 3555 . 3556) (symbol 3550 . 3554) (punctuation 3549 . 3550) (symbol 3544 . 3548) (symbol 3539 . 3543) (punctuation 3537 . 3538) (symbol 3530 . 3537) (punctuation 3529 . 3530) (symbol 3524 . 3528) (punctuation 3523 . 3524) (symbol 3518 . 3521) (symbol 3514 . 3517) (symbol 3509 . 3513) (symbol 3505 . 3508) (symbol 3496 . 3504) (punctuation 3495 . 3496) (string 3491 . 3494) (symbol 3485 . 3490) (punctuation 3484 . 3485) (string 3480 . 3483) (string 3476 . 3479) (symbol 3471 . 3475) (punctuation 3470 . 3471) (string 3466 . 3469) (string 3462 . 3465) (symbol 3457 . 3461) (punctuation 3456 . 3457) (symbol 3453 . 3455) (symbol 3450 . 3452) (symbol 3447 . 3449) (symbol 3444 . 3446) (symbol 3441 . 3443) (symbol 3438 . 3440) (symbol 3433 . 3437) (punctuation 3432 . 3433) (symbol 3429 . 3431) (symbol 3425 . 3428) (symbol 3420 . 3424) (punctuation 3419 . 3420) (symbol 3412 . 3415) (symbol 3406 . 3411) (punctuation 3405 . 3406) (symbol 3398 . 3404) (symbol 3392 . 3397) (punctuation 3391 . 3392) (symbol 3387 . 3390) (symbol 3381 . 3386) (punctuation 3380 . 3381) (symbol 3376 . 3379) (symbol 3370 . 3375) (punctuation 3369 . 3370) (symbol 3364 . 3368) (symbol 3358 . 3363) (punctuation 3357 . 3358) (symbol 3349 . 3356) (punctuation 3347 . 3348) (symbol 3341 . 3347) (punctuation 3340 . 3341) (symbol 3334 . 3339) (punctuation 3333 . 3334) (symbol 3328 . 3332) (punctuation 3326 . 3327) (symbol 3319 . 3326) (punctuation 3318 . 3319) (symbol 3312 . 3317) (punctuation 3311 . 3312) (symbol 3307 . 3310) (symbol 3301 . 3306) (punctuation 3300 . 3301) (symbol 3297 . 3299) (symbol 3291 . 3296) (punctuation 3290 . 3291) (symbol 3285 . 3289) (punctuation 3283 . 3284) (symbol 3277 . 3283) (punctuation 3276 . 3277) (symbol 3270 . 3275) (punctuation 3269 . 3270) (symbol 3262 . 3268) (punctuation 3260 . 3261) (symbol 3254 . 3260) (punctuation 3253 . 3254) (symbol 3247 . 3252) (punctuation 3246 . 3247) (symbol 3243 . 3245) (symbol 3237 . 3242) (punctuation 3236 . 3237) (symbol 3233 . 3235) (symbol 3227 . 3232) (punctuation 3226 . 3227) (symbol 3223 . 3225) (symbol 3217 . 3222) (punctuation 3216 . 3217) (symbol 3211 . 3215) (symbol 3205 . 3210) (punctuation 3204 . 3205) (symbol 3201 . 3203) (symbol 3195 . 3200) (punctuation 3194 . 3195) (symbol 3191 . 3193) (symbol 3185 . 3190) (punctuation 3184 . 3185) (symbol 3180 . 3183) (symbol 3174 . 3179) (punctuation 3173 . 3174) (symbol 3170 . 3172) (symbol 3164 . 3169) (punctuation 3163 . 3164) (symbol 3160 . 3162) (symbol 3154 . 3159) (punctuation 3153 . 3154) (symbol 3149 . 3152) (symbol 3143 . 3148) (punctuation 3142 . 3143) (semantic-list 2935 . 3139) (punctuation 2934 . 2935) (semantic-list 2699 . 2933) (UNION 2693 . 2698) (punctuation 2692 . 2693) (semantic-list 899 . 2690) (punctuation 898 . 899) (semantic-list 880 . 896) (symbol 874 . 879) (punctuation 873 . 874) (symbol 870 . 873) (punctuation 869 . 870) (semantic-list 842 . 868) (symbol 836 . 841) (punctuation 835 . 836) (symbol 830 . 835) (punctuation 829 . 830) (semantic-list 812 . 828) (symbol 806 . 811) (punctuation 805 . 806) (symbol 800 . 805) (punctuation 799 . 800) (semantic-list 766 . 798) (symbol 760 . 765) (punctuation 759 . 760) (symbol 754 . 759) (punctuation 753 . 754) (symbol 746 . 752) (punctuation 745 . 746) (symbol 741 . 745) (punctuation 740 . 741) (semantic-list 2 . 738) (punctuation 1 . 2))
+    :lexical-table 
+        '(("YYDEBUG" . ((number "1" 541 . 542)))
+          )
+
+    )
+   (semanticdb-table "parser_types.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "parser_types.h"
+    :pointmax 18461
+    :fsize 18460
+    :lastmodtime '(21347 44347 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cluster.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("cluster.h" include nil nil [514 534])
+            ("errno.h" include (:system-flag t) nil [535 553])
+            ("math.h" include (:system-flag t) nil [554 571])
+            ("matrix.h" include nil nil [572 591])
+            ("mpi.h" include (:system-flag t) nil [592 608])
+            ("stdarg.h" include (:system-flag t) nil [609 628])
+            ("stdlib.h" include (:system-flag t) nil [629 648])
+            ("stdio.h" include (:system-flag t) nil [649 667])
+            ("string.h" include (:system-flag t) nil [668 687])
+            ("parser_types.h" include nil nil [688 713])
+            ("parser.h" include nil nil [714 733])
+            ("solver_types.h" include nil nil [734 759])
+            ("solver.h" include nil nil [760 779])
+            ("syntax.h" include nil nil [780 799])
+            ("syntax_export.h" include nil nil [800 826])
+            ("sys/time.h" include (:system-flag t) nil [827 848])
+            ("cluster_bcast_init" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [972 976])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [977 984])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [985 989])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [990 996]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [927 997])
+            ("cluster_bcast_variables" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1048 1052])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1053 1060])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1061 1065])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1066 1072]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [998 1073])
+            ("cluster_bcast_bounds" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1121 1125])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1126 1133])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1134 1138])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1139 1145]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1074 1146])
+            ("cluster_bcast_equations" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1197 1201])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1202 1209])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1210 1214])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1215 1221]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1147 1222])
+            ("cluster_bcast_buffer" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1270 1274])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1275 1282])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1283 1287])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1288 1294]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1223 1295])
+            ("cluster_bcast_buffer_data" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1348 1352])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1353 1360])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1361 1365])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1366 1372]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1296 1373])
+            ("cluster_bcast_settings" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1423 1427])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1428 1435])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1436 1440])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1441 1447]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1374 1448])
+            ("cluster_bcast_enddefinition" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1503 1507])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1508 1515])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1516 1520])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1521 1527]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1449 1528])
+            ("cluster_bcast_end" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1573 1577])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1578 1585])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1586 1590])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1591 1597]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1529 1598])
+            ("cluster_after_bcast" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1645 1649])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1650 1657])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1658 1662])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1663 1669]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1599 1670])
+            ("cluster_individual_close" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1722 1726])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1727 1734])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1735 1739])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1740 1746]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1671 1747])
+            ("cluster_individual_solve" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1799 1803])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1804 1811])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1812 1816])
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1817 1823]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1748 1824])
+            ("gpsgiInfo" variable
+               (:pointer 1
+                :type ("global_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1894 1929])
+            ("state_info" function
+               (:arguments 
+                  ( ("" variable (:type ("pfFn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1996 2022]))                  
+                :type "int")
+                nil [1983 2048])
+            ("cluster_bcast_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [2925 2935])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2936 2949])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [2950 2959])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2960 2971]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2880 3845])
+            ("cluster_bcast_variables" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [4414 4424])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4425 4438])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [4439 4448])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4449 4460]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4364 6238])
+            ("cluster_bcast_bounds" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [6804 6814])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6815 6828])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [6829 6838])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6839 6850]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6757 8800])
+            ("cluster_bcast_equations" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [9369 9379])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9380 9393])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [9394 9403])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [9404 9415]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9319 10594])
+            ("cluster_bcast_settings" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [11161 11171])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11172 11185])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [11186 11195])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [11196 11207]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [11112 12127])
+            ("cluster_bcast_buffer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [12689 12699])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12700 12713])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [12714 12723])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [12724 12735]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [12642 14553])
+            ("cluster_bcast_buffer_data" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [15125 15135])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15136 15149])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [15150 15159])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [15160 15171]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [15073 16576])
+            ("cluster_send_result" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tseRet" variable (:type ("t_solver_error" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17045 17067])
+                    ("dSrss" variable (:type "double") (reparse-symbol arg-sub-list) [17068 17081])
+                    ("dDiff" variable (:type "double") (reparse-symbol arg-sub-list) [17082 17095])
+                    ("iNum" variable (:type "int") (reparse-symbol arg-sub-list) [17096 17105])
+                    ("pdXo" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [17106 17119])
+                    ("pssiInfo" variable
+                       (:pointer 1
+                        :type ("state_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17120 17148]))                  
+                :type "void")
+                nil [17012 17932])
+            ("cluster_bcast_enddefinition" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [18462 18472])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18473 18486])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [18487 18496])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18497 18508]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [18408 19146])
+            ("cluster_bcast_end" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [19648 19658])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19659 19672])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [19673 19682])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [19683 19694]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [19604 19873])
+            ("cluster_after_bcast" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [20408 20418])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20419 20432])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [20433 20442])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [20443 20454]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [20362 20632])
+            ("cluster_individual_close" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [21174 21184])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21185 21198])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [21199 21208])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [21209 21220]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [21123 21483])
+            ("cluster_individual_solve" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [22009 22019])
+                    ("pcBuffDummy" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22020 22038])
+                    ("iLenDummy" variable (:type "int") (reparse-symbol arg-sub-list) [22039 22053])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [22054 22065]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [21958 26849])
+            ("cluster_brain_init" function
+               (:arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27337 27374])
+                    ("tccCalc" variable (:type ("t_cluster_calculation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27375 27405]))                  
+                :type ("t_cluster_state" type (:type "class") nil nil))
+                nil [27301 28816])
+            ("cluster_brain_variables" function
+               (:pointer 1
+                :arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29298 29335])
+                    ("pelArg" variable
+                       (:pointer 1
+                        :type ("eval_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29336 29361]))                  
+                :type "char")
+                nil [29267 32477])
+            ("cluster_brain_bounds" function
+               (:pointer 1
+                :arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32955 32992])
+                    ("pelArg" variable
+                       (:pointer 1
+                        :type ("eval_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32993 33018])
+                    ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33019 33048]))                  
+                :type "double")
+                nil [32925 35577])
+            ("cluster_brain_buffer" function
+               (:pointer 1
+                :arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36054 36091])
+                    ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36092 36121])
+                    ("pelArg" variable
+                       (:pointer 1
+                        :type ("eval_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36122 36147]))                  
+                :type "char")
+                nil [36025 40156])
+            ("cluster_brain_buffer_data" function
+               (:pointer 1
+                :arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40645 40682])
+                    ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40683 40712])
+                    ("pelArg" variable
+                       (:pointer 1
+                        :type ("eval_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40713 40738]))                  
+                :type "double")
+                nil [40609 44311])
+            ("cluster_brain_equations" function
+               (:pointer 1
+                :arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44880 44917])
+                    ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44917 44946])
+                    ("ppsnNode" variable
+                       (:pointer 2
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44947 44970])
+                    ("iNumeq" variable (:type "int") (reparse-symbol arg-sub-list) [44971 44982]))                  
+                :type "char")
+                nil [44849 48207])
+            ("cluster_brain_settings" function
+               (:arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48703 48740])
+                    ("psgiInfo" variable
+                       (:pointer 1
+                        :type ("global_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48741 48770]))                  
+                :type ("t_cluster_state" type (:type "class") nil nil))
+                nil [48664 54004])
+            ("cluster_brain_enddefinitions" function
+               (:arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54505 54542]))                  
+                :type ("t_cluster_state" type (:type "class") nil nil))
+                nil [54459 55901])
+            ("cluster_brain_send" function
+               (:arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56360 56397]))                  
+                :type ("t_cluster_state" type (:type "class") nil nil))
+                nil [56324 57886])
+            ("cluster_brain_end" function
+               (:arguments 
+                  ( ("pscmsType" variable
+                       (:pointer 1
+                        :type ("cluster_mpi_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [58342 58379]))                  
+                :type ("t_cluster_state" type (:type "class") nil nil))
+                nil [58307 59724])
+            ("cluster_brain_close" function
+               (:arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [60219 60229]))                  
+                :type ("t_cluster_state" type (:type "class") nil nil))
+                nil [60182 60612])
+            ("cluster_brain_solve" function
+               (:arguments 
+                  ( ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [61222 61232])
+                    ("iGuess" variable (:type "int") (reparse-symbol arg-sub-list) [61233 61244])
+                    ("pdXo" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [61245 61258])
+                    ("iNumEq" variable (:type "int") (reparse-symbol arg-sub-list) [61259 61270]))                  
+                :type ("t_cluster_state" type (:type "class") nil nil))
+                nil [61185 62554])
+            ("cluster_brain_get_results" function
+               (:arguments 
+                  ( ("piNode" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [63175 63187])
+                    ("pdXo" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [63188 63201])
+                    ("iNumEq" variable (:type "int") (reparse-symbol arg-sub-list) [63202 63213])
+                    ("pdSrss" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [63214 63229])
+                    ("pdDiff" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [63230 63245]))                  
+                :type ("t_solver_error" type (:type "class") nil nil))
+                nil [63133 64227])
+            ("cluster_execute" function
+               (:arguments 
+                  ( ("tcfFunc" variable (:type ("t_cluster_function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64715 64742])
+                    ("iNode" variable (:type "int") (reparse-symbol arg-sub-list) [64743 64753])
+                    ("pcBuff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [64754 64767])
+                    ("iLen" variable (:type "int") (reparse-symbol arg-sub-list) [64768 64777])
+                    ("piPos" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [64778 64789]))                  
+                :type ("state_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [64680 64845]))          
+    :file "cluster.c"
+    :pointmax 64846
+    :fsize 64845
+    :lastmodtime '(21347 46375 0 0)
+    :unmatched-syntax '((punctuation 2349 . 2350) (semantic-list 2049 . 2349) (punctuation 2048 . 2049) (semantic-list 2000 . 2022) (punctuation 1995 . 1996) (STRUCT 1976 . 1982) (close-paren 2022 . 2023) (semantic-list 2000 . 2022) (symbol 1996 . 2000) (punctuation 1995 . 1996) (open-paren 1994 . 1995) (close-paren 2022 . 2023) (semantic-list 2000 . 2022) (symbol 1996 . 2000) (punctuation 1995 . 1996) (open-paren 1994 . 1995) (STATIC 1969 . 1975) (close-paren 2022 . 2023) (semantic-list 2000 . 2022) (symbol 1996 . 2000) (punctuation 1995 . 1996) (open-paren 1994 . 1995))
+    )
+   (semanticdb-table "cluster.h"
+    :file "cluster.h"
+    :fsize 1844
+    :lastmodtime '(21347 46375 0 0)
+    )
+   (semanticdb-table "parser.h"
+    :file "parser.h"
+    :fsize 7947
+    :lastmodtime '(21347 44347 0 0)
+    )
+   (semanticdb-table "solver_types.h"
+    :file "solver_types.h"
+    :fsize 535
+    :lastmodtime '(21347 46375 0 0)
+    )
+   (semanticdb-table "solver.h"
+    :file "solver.h"
+    :fsize 1556
+    :lastmodtime '(21354 5152 0 0)
+    )
+   (semanticdb-table "syntax_export.h"
+    :file "syntax_export.h"
+    :fsize 774
+    :lastmodtime '(21234 5436 0 0)
+    )
+   )
+  :file "!home!andrea!Workspace!lely!hisolver-2.0!parser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

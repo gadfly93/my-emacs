@@ -1,0 +1,44 @@
+;; Object shlex/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "shlex/"
+  :tables (list 
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("shlex" include nil nil [1 13])
+            ("string" include nil nil [14 27])
+            ("sys" include nil nil [28 38])
+            ("if" code nil nil [40 140])
+            ("filename" variable nil nil [141 163])
+            ("body" variable nil nil [164 198])
+            ("print" code nil nil [199 228])
+            ("print" code nil nil [229 234])
+            ("print" code nil nil [236 251])
+            ("lexer" variable nil nil [252 277])
+            ("out" variable nil nil [279 287])
+            ("for" code nil nil [288 333])
+            ("out2" variable nil nil [506 513])
+            ("for" code nil nil [516 1013])
+            ("print" code nil nil [1014 1024]))          
+    :file "test.py"
+    :pointmax 802
+    :fsize 1024
+    :lastmodtime '(20397 1614)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test2.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("argparse" include nil nil [19 39])
+            ("if" code nil nil [128 392]))          
+    :file "test2.py"
+    :pointmax 318
+    :fsize 391
+    :lastmodtime '(20396 64584)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!shlex!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

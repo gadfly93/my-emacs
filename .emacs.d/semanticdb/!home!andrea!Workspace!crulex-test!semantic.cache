@@ -1,0 +1,109 @@
+;; Object crulex-test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "crulex-test/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("all" function (:arguments ("lib")) nil [1 48])
+            ("lib" function nil nil [49 155])
+            ("clean" function nil nil [155 217]))          
+    :file "Makefile"
+    :pointmax 217
+    :fsize 216
+    :lastmodtime '(20598 57616)
+    :unmatched-syntax '((shell-command 206 . 217) (bol 205 . 205) (shell-command 205 . 216) (bol 204 . 204) (shell-command 187 . 203) (bol 186 . 186) (shell-command 162 . 185) (bol 161 . 161) (symbol 155 . 160) (bol 155 . 155) (shell-command 205 . 212) (bol 204 . 204) (shell-command 187 . 203) (bol 186 . 186) (shell-command 162 . 185) (bol 161 . 161) (symbol 155 . 160) (bol 155 . 155) (shell-command 205 . 211) (bol 204 . 204) (shell-command 187 . 203) (bol 186 . 186) (shell-command 162 . 185) (bol 161 . 161) (symbol 155 . 160) (bol 155 . 155) (shell-command 187 . 189) (bol 186 . 186) (shell-command 162 . 185) (bol 161 . 161) (symbol 155 . 160) (bol 155 . 155) (shell-command 177 . 179) (bol 176 . 176) (shell-command 162 . 175) (bol 161 . 161) (symbol 155 . 160) (bol 155 . 155) (shell-command 177 . 177) (bol 176 . 176) (shell-command 162 . 175) (bol 161 . 161) (symbol 155 . 160) (bol 155 . 155) (shell-command 162 . 168) (bol 161 . 161) (symbol 155 . 160) (bol 155 . 155) (shell-command 114 . 154) (bol 113 . 113))
+    )
+   (semanticdb-table "test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("../Rulex/RulexEngine/Rulex.h" include nil nil [20 59])
+            ("main" function (:type "int") nil [61 1390]))          
+    :file "test.cpp"
+    :pointmax 905
+    :fsize 1390
+    :lastmodtime '(20598 61697)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "size.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdint.h" include (:system-flag t) nil [20 39])
+            ("main" function (:type "int") nil [62 112]))          
+    :file "size.cpp"
+    :pointmax 113
+    :fsize 112
+    :lastmodtime '(20600 4256)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "size.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ct_assert" variable (:constant-flag t) nil [226 235]))          
+    :file "size.h"
+    :pointmax 377
+    :fsize 376
+    :lastmodtime '(20599 58992)
+    :unmatched-syntax '((punctuation 363 . 364) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (CHAR "char" 338 . 363) (EXTERN "extern" 338 . 363) (punctuation 363 . 364) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (CHAR "char" 338 . 363) (EXTERN "extern" 338 . 363) (punctuation 363 . 364) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (CHAR "char" 338 . 363) (EXTERN "extern" 338 . 363) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (CHAR "char" 338 . 363) (EXTERN "extern" 338 . 363) (punctuation 385 . 386) (INT 382 . 385) (symbol 376 . 381) (TYPEDEF 368 . 375) (INT 376 . 379) (TYPEDEF 368 . 375) (punctuation 364 . 365) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 355 . 360)))) 339 . 364) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 355 . 360)))) 339 . 364) (CHAR "char" 339 . 364) (EXTERN "extern" 339 . 364) (punctuation 338 . 339) (punctuation 363 . 364) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 354 . 359)))) 338 . 363) (CHAR "char" 338 . 363) (EXTERN "extern" 338 . 363) (punctuation 361 . 362) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 352 . 357)))) 336 . 361) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 352 . 357)))) 336 . 361) (CHAR "char" 336 . 361) (EXTERN "extern" 336 . 361) (punctuation 333 . 334) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (CHAR "char" 306 . 333) (EXTERN "extern" 306 . 333) (punctuation 333 . 334) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (CHAR "char" 306 . 333) (EXTERN "extern" 306 . 333) (punctuation 333 . 334) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (CHAR "char" 306 . 333) (EXTERN "extern" 306 . 333) (punctuation 352 . 353) (INT 349 . 352) (symbol 343 . 348) (TYPEDEF 335 . 342) (punctuation 333 . 334) (semantic-list #("[sizeof(char[1 - 2*!(e)])]" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (semantic-list #("(*ct_assert(void))" 0 1 (macros (("e" semantic-list "(int)" 322 . 327)))) 306 . 333) (CHAR "char" 306 . 333) (EXTERN "extern" 306 . 333) (punctuation 356 . 357) (INT 353 . 356) (symbol 347 . 352) (TYPEDEF 339 . 346))
+    :lexical-table 
+        '(("ct_assert" (spp-arg-list ("e") 235 . 238) . 
+              ((EXTERN "extern" 239 . 245) (CHAR "char" 246 . 250) (semantic-list "(*ct_assert(void))" 251 . 269) (semantic-list "[sizeof(char[1 - 2*!(e)])]" 270 . 296)))
+          )
+
+    )
+   (semanticdb-table "alloc.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("main" function (:type "int") nil [41 227]))          
+    :file "alloc.c"
+    :pointmax 228
+    :fsize 227
+    :lastmodtime '(20603 57971)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "alloc2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("main" function (:type "int") nil [40 136]))          
+    :file "alloc2.c"
+    :pointmax 138
+    :fsize 137
+    :lastmodtime '(20603 53209)
+    :unmatched-syntax '((close-paren 138 . 139))
+    )
+   (semanticdb-table "asm.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("main" function (:type "int") nil [41 332]))          
+    :file "asm.c"
+    :pointmax 324
+    :fsize 332
+    :lastmodtime '(20605 33753)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "error.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("signal.h" include (:system-flag t) nil [40 59])
+            ("main" function (:type "int") nil [61 217]))          
+    :file "error.c"
+    :pointmax 205
+    :fsize 217
+    :lastmodtime '(20607 49915)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!crulex-test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

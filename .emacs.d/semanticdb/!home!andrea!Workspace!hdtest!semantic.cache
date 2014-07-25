@@ -1,0 +1,85 @@
+;; Object hdtest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hdtest/"
+  :tables (list 
+   (semanticdb-table "wordcount.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Pipes.hh" include nil nil [1 20])
+            ("TemplateFactory.hh" include nil nil [21 50])
+            ("StringUtils.hh" include nil nil [51 76])
+            ("WordCountMap" type
+               (:superclasses 
+                  ( ("HadoopPipes::Mapper" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [127 134])
+                    ("WordCountMap" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::TaskContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [150 184]))                          
+                        :type ("WordCountMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [137 186])
+                    ("map" function
+                       (:arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::MapContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [198 231]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [189 428]))                  
+                :type "class")
+                nil [78 431])
+            ("WordCountReduce" type
+               (:superclasses 
+                  ( ("HadoopPipes::Reducer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [486 493])
+                    ("WordCountReduce" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::TaskContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [512 546]))                          
+                        :type ("WordCountReduce" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [496 548])
+                    ("reduce" function
+                       (:arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::ReduceContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [563 599]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [551 789]))                  
+                :type "class")
+                nil [433 792])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [803 812])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [813 826]))                  
+                :type "int")
+                nil [794 954]))          
+    :file "wordcount.cpp"
+    :pointmax 976
+    :fsize 954
+    :lastmodtime '(21109 7081)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!hdtest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

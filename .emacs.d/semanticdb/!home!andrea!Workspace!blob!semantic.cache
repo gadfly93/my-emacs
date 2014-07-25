@@ -1,0 +1,171 @@
+;; Object blob/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "blob/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("gcc")) nil [378 398])
+            ("CXX" variable (:default-value ("g++")) nil [398 418])
+            ("DEFINES" variable (:default-value ("-DQT_WEBKIT" "-DQT_NO_DEBUG" "-DQT_SQL_LIB" "-DQT_GUI_LIB" "-DQT_CORE_LIB" "-DQT_SHARED")) nil [418 512])
+            ("CFLAGS" variable (:default-value ("-m64" "-pipe" "-O2" "-Wall" "-W" "-D_REENTRANT" "$(DEFINES)")) nil [512 576])
+            ("CXXFLAGS" variable (:default-value ("-m64" "-pipe" "-O2" "-Wall" "-W" "-D_REENTRANT" "$(DEFINES)")) nil [576 640])
+            ("INCPATH" variable (:default-value ("-I/usr/share/qt4/mkspecs/linux-g++-64" "-I." "-I/usr/include/qt4/QtCore" "-I/usr/include/qt4/QtGui" "-I/usr/include/qt4/QtSql" "-I/usr/include/qt4" "-I.")) nil [640 797])
+            ("LINK" variable (:default-value ("g++")) nil [797 817])
+            ("LFLAGS" variable (:default-value ("-m64" "-Wl,-O1")) nil [817 846])
+            ("LIBS" variable (:default-value ("$(SUBLIBS)" "-L/usr/lib/x86_64-linux-gnu" "-lQtSql" "-lQtGui" "-lQtCore" "-lpthread")) nil [846 938])
+            ("AR" variable (:default-value ("ar" "cqs")) nil [938 961])
+            ("RANLIB" variable nil nil [961 978])
+            ("QMAKE" variable (:default-value ("/usr/bin/qmake")) nil [978 1009])
+            ("TAR" variable (:default-value ("tar" "-cf")) nil [1009 1033])
+            ("COMPRESS" variable (:default-value ("gzip" "-9f")) nil [1033 1058])
+            ("COPY" variable (:default-value ("cp" "-f")) nil [1058 1080])
+            ("SED" variable (:default-value ("sed")) nil [1080 1100])
+            ("COPY_FILE" variable (:default-value ("$(COPY)")) nil [1100 1124])
+            ("COPY_DIR" variable (:default-value ("$(COPY)" "-r")) nil [1124 1151])
+            ("STRIP" variable (:default-value ("strip")) nil [1151 1173])
+            ("INSTALL_FILE" variable (:default-value ("install" "-m" "644" "-p")) nil [1173 1207])
+            ("INSTALL_DIR" variable (:default-value ("$(COPY_DIR)")) nil [1207 1235])
+            ("INSTALL_PROGRAM" variable (:default-value ("install" "-m" "755" "-p")) nil [1235 1271])
+            ("DEL_FILE" variable (:default-value ("rm" "-f")) nil [1271 1293])
+            ("SYMLINK" variable (:default-value ("ln" "-f" "-s")) nil [1293 1318])
+            ("DEL_DIR" variable (:default-value ("rmdir")) nil [1318 1340])
+            ("MOVE" variable (:default-value ("mv" "-f")) nil [1340 1362])
+            ("CHK_DIR_EXISTS" variable (:default-value ("test" "-d")) nil [1362 1386])
+            ("MKDIR" variable (:default-value ("mkdir" "-p")) nil [1386 1411])
+            ("OBJECTS_DIR" variable (:default-value ("./")) nil [1438 1457])
+            ("SOURCES" variable (:default-value ("test.cpp")) nil [1473 1499])
+            ("OBJECTS" variable (:default-value ("test.o")) nil [1499 1522])
+            ("DIST" variable (:default-value ("/usr/share/qt4/mkspecs/common/unix.conf" "/usr/share/qt4/mkspecs/common/linux.conf" "/usr/share/qt4/mkspecs/common/gcc-base.conf" "/usr/share/qt4/mkspecs/common/gcc-base-unix.conf" "/usr/share/qt4/mkspecs/common/g++-base.conf" "/usr/share/qt4/mkspecs/common/g++-unix.conf" "/usr/share/qt4/mkspecs/qconfig.pri" "/usr/share/qt4/mkspecs/modules/qt_webkit_version.pri" "/usr/share/qt4/mkspecs/features/qt_functions.prf" "/usr/share/qt4/mkspecs/features/qt_config.prf" "/usr/share/qt4/mkspecs/features/exclusive_builds.prf" "/usr/share/qt4/mkspecs/features/default_pre.prf" "/usr/share/qt4/mkspecs/features/release.prf" "/usr/share/qt4/mkspecs/features/default_post.prf" "/usr/share/qt4/mkspecs/features/unix/gdb_dwarf_index.prf" "/usr/share/qt4/mkspecs/features/warn_on.prf" "/usr/share/qt4/mkspecs/features/qt.prf" "/usr/share/qt4/mkspecs/features/unix/thread.prf" "/usr/share/qt4/mkspecs/features/moc.prf" "/usr/share/qt4/mkspecs/features/resources.prf" "/usr/share/qt4/mkspecs/features/uic.prf" "/usr/share/qt4/mkspecs/features/yacc.prf" "/usr/share/qt4/mkspecs/features/lex.prf" "/usr/share/qt4/mkspecs/features/include_source_dir.prf" "test.pro")) nil [1522 2732])
+            ("QMAKE_TARGET" variable (:default-value ("test")) nil [2732 2753])
+            ("DESTDIR" variable nil nil [2753 2770])
+            ("TARGET" variable (:default-value ("test")) nil [2770 2791])
+            ("first" function (:arguments ("all")) nil [2792 2803])
+            (".SUFFIXES" function (:arguments (".o" ".c" ".cpp" ".cc" ".cxx" ".C")) nil [2827 2861])
+            (".cpp.o" function nil nil [2862 2917])
+            (".cc.o" function nil nil [2918 2972])
+            (".cxx.o" function nil nil [2973 3028])
+            (".C.o" function nil nil [3029 3082])
+            (".c.o" function nil nil [3083 3133])
+            ("all" function (:arguments ("Makefile" "$(TARGET)")) nil [3155 3179])
+            ("$(TARGET)" function (:arguments ("$(OBJECTS)")) nil [3180 3267])
+            ("Makefile" function (:arguments ("test.pro" "/usr/share/qt4/mkspecs/linux-g++-64/qmake.conf" "/usr/share/qt4/mkspecs/common/unix.conf" "/usr/share/qt4/mkspecs/common/linux.conf" "/usr/share/qt4/mkspecs/common/gcc-base.conf" "/usr/share/qt4/mkspecs/common/gcc-base-unix.conf" "/usr/share/qt4/mkspecs/common/g++-base.conf" "/usr/share/qt4/mkspecs/common/g++-unix.conf" "/usr/share/qt4/mkspecs/qconfig.pri" "/usr/share/qt4/mkspecs/modules/qt_webkit_version.pri" "/usr/share/qt4/mkspecs/features/qt_functions.prf" "/usr/share/qt4/mkspecs/features/qt_config.prf" "/usr/share/qt4/mkspecs/features/exclusive_builds.prf" "/usr/share/qt4/mkspecs/features/default_pre.prf" "/usr/share/qt4/mkspecs/features/release.prf" "/usr/share/qt4/mkspecs/features/default_post.prf" "/usr/share/qt4/mkspecs/features/unix/gdb_dwarf_index.prf" "/usr/share/qt4/mkspecs/features/warn_on.prf" "/usr/share/qt4/mkspecs/features/qt.prf" "/usr/share/qt4/mkspecs/features/unix/thread.prf" "/usr/share/qt4/mkspecs/features/moc.prf" "/usr/share/qt4/mkspecs/features/resources.prf" "/usr/share/qt4/mkspecs/features/uic.prf" "/usr/share/qt4/mkspecs/features/yacc.prf" "/usr/share/qt4/mkspecs/features/lex.prf" "/usr/share/qt4/mkspecs/features/include_source_dir.prf" "/usr/lib/x86_64-linux-gnu/libQtSql.prl" "/usr/lib/x86_64-linux-gnu/libQtGui.prl" "/usr/lib/x86_64-linux-gnu/libQtCore.prl")) nil [3268 4677])
+            ("/usr/share/qt4/mkspecs/common/unix.conf" function nil nil [4677 4718])
+            ("/usr/share/qt4/mkspecs/common/linux.conf" function nil nil [4718 4760])
+            ("/usr/share/qt4/mkspecs/common/gcc-base.conf" function nil nil [4760 4805])
+            ("/usr/share/qt4/mkspecs/common/gcc-base-unix.conf" function nil nil [4805 4855])
+            ("/usr/share/qt4/mkspecs/qconfig.pri" function nil nil [4945 4981])
+            ("/usr/share/qt4/mkspecs/modules/qt_webkit_version.pri" function nil nil [4981 5035])
+            ("/usr/share/qt4/mkspecs/features/qt_functions.prf" function nil nil [5035 5085])
+            ("/usr/share/qt4/mkspecs/features/qt_config.prf" function nil nil [5085 5132])
+            ("/usr/share/qt4/mkspecs/features/exclusive_builds.prf" function nil nil [5132 5186])
+            ("/usr/share/qt4/mkspecs/features/default_pre.prf" function nil nil [5186 5235])
+            ("/usr/share/qt4/mkspecs/features/release.prf" function nil nil [5235 5280])
+            ("/usr/share/qt4/mkspecs/features/default_post.prf" function nil nil [5280 5330])
+            ("/usr/share/qt4/mkspecs/features/unix/gdb_dwarf_index.prf" function nil nil [5330 5388])
+            ("/usr/share/qt4/mkspecs/features/warn_on.prf" function nil nil [5388 5433])
+            ("/usr/share/qt4/mkspecs/features/qt.prf" function nil nil [5433 5473])
+            ("/usr/share/qt4/mkspecs/features/unix/thread.prf" function nil nil [5473 5522])
+            ("/usr/share/qt4/mkspecs/features/moc.prf" function nil nil [5522 5563])
+            ("/usr/share/qt4/mkspecs/features/resources.prf" function nil nil [5563 5610])
+            ("/usr/share/qt4/mkspecs/features/uic.prf" function nil nil [5610 5651])
+            ("/usr/share/qt4/mkspecs/features/yacc.prf" function nil nil [5651 5693])
+            ("/usr/share/qt4/mkspecs/features/lex.prf" function nil nil [5693 5734])
+            ("/usr/share/qt4/mkspecs/features/include_source_dir.prf" function nil nil [5734 5790])
+            ("/usr/lib/x86_64-linux-gnu/libQtSql.prl" function nil nil [5790 5830])
+            ("/usr/lib/x86_64-linux-gnu/libQtGui.prl" function nil nil [5830 5870])
+            ("/usr/lib/x86_64-linux-gnu/libQtCore.prl" function nil nil [5870 5911])
+            ("qmake" function (:arguments ("FORCE")) nil [5911 5957])
+            ("dist" function nil nil [5958 6322])
+            ("clean" function (:arguments ("compiler_clean")) nil [6324 6400])
+            ("distclean" function (:arguments ("clean")) nil [6425 6490])
+            ("check" function (:arguments ("first")) nil [6492 6505])
+            ("mocclean" function (:arguments ("compiler_moc_header_clean" "compiler_moc_source_clean")) nil [6506 6568])
+            ("mocables" function (:arguments ("compiler_moc_header_make_all" "compiler_moc_source_make_all")) nil [6569 6637])
+            ("compiler_moc_header_make_all" function nil nil [6638 6668])
+            ("compiler_moc_header_clean" function nil nil [6668 6695])
+            ("compiler_rcc_make_all" function nil nil [6695 6718])
+            ("compiler_rcc_clean" function nil nil [6718 6738])
+            ("compiler_image_collection_make_all" function (:arguments ("qmake_image_collection.cpp")) nil [6738 6801])
+            ("compiler_image_collection_clean" function nil nil [6801 6875])
+            ("compiler_moc_source_make_all" function nil nil [6875 6905])
+            ("compiler_moc_source_clean" function nil nil [6905 6932])
+            ("compiler_uic_make_all" function nil nil [6932 6955])
+            ("compiler_uic_clean" function nil nil [6955 6975])
+            ("compiler_yacc_decl_make_all" function nil nil [6975 7004])
+            ("compiler_yacc_decl_clean" function nil nil [7004 7030])
+            ("compiler_yacc_impl_make_all" function nil nil [7030 7059])
+            ("compiler_yacc_impl_clean" function nil nil [7059 7085])
+            ("compiler_lex_make_all" function nil nil [7085 7108])
+            ("compiler_lex_clean" function nil nil [7108 7128])
+            ("compiler_clean" function nil nil [7128 7145])
+            ("test.o" function (:arguments ("test.cpp")) nil [7163 7234])
+            ("install" function (:arguments ("FORCE")) nil [7252 7269])
+            ("uninstall" function (:arguments ("FORCE")) nil [7270 7289])
+            ("FORCE" function nil nil [7290 7297]))          
+    :file "Makefile"
+    :pointmax 7298
+    :fsize 7297
+    :lastmodtime '(20581 37752)
+    :unmatched-syntax '((punctuation 4943 . 4944) (symbol 4933 . 4943) (punctuation 4932 . 4933) (punctuation 4931 . 4932) (symbol 4900 . 4931) (bol 4900 . 4900) (punctuation 4898 . 4899) (symbol 4888 . 4898) (punctuation 4887 . 4888) (punctuation 4886 . 4887) (symbol 4855 . 4886) (bol 4855 . 4855))
+    )
+   (semanticdb-table "test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("time.h" include (:system-flag t) nil [1 18])
+            ("string.h" include (:system-flag t) nil [19 38])
+            ("QCoreApplication" include (:system-flag t) nil [39 66])
+            ("QtDebug" include (:system-flag t) nil [67 85])
+            ("QtSql" include (:system-flag t) nil [86 102])
+            ("QSqlDatabase" include (:system-flag t) nil [103 126])
+            ("QSqlQuery" include (:system-flag t) nil [127 147])
+            ("QDebug" include (:system-flag t) nil [148 165])
+            ("REC_SIZE" variable (:constant-flag t) nil [175 183])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [208 217])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [218 231]))                  
+                :type "int")
+                nil [199 1914]))          
+    :file "test.cpp"
+    :pointmax 1776
+    :fsize 1915
+    :lastmodtime '(20596 16069)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("REC_SIZE" . 
+              ((number "1024" 184 . 188) (punctuation "*" 188 . 189) (number "1024" 189 . 193) (punctuation "*" 193 . 194) (number "500" 194 . 197)))
+          )
+
+    )
+   (semanticdb-table "mem.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 18])
+            ("main" function (:type "int") nil [21 122]))          
+    :file "mem.cpp"
+    :pointmax 123
+    :fsize 122
+    :lastmodtime '(20596 19476)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mem2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 18])
+            ("main" function (:type "int") nil [21 105]))          
+    :file "mem2.c"
+    :pointmax 112
+    :fsize 105
+    :lastmodtime '(20596 23012)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!blob!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

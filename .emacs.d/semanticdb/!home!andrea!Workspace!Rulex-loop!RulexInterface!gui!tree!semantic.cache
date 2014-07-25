@@ -1,0 +1,177 @@
+;; Object tree/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tree/"
+  :tables (list 
+   (semanticdb-table "RulexDatasetTree.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("RulexTreeBase" include nil nil [1 28])
+            ("gui.wizard_new.RulexDataImportWizard" include nil nil [29 124])
+            ("gui.wizard.RulexDataImportWizard" include nil nil [125 191])
+            ("gui.RulexCustomWidgets" include nil nil [192 228])
+            ("RulexDatasetTree" type
+               (:superclasses ("RulexTreeBase")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [286 290])
+                        ("parent" variable nil (reparse-symbol function_parameters) [292 298]))                      ) (reparse-symbol indented_block_body) [273 1784])
+                    ("keyPressEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1807 1811])
+                        ("event" variable nil (reparse-symbol function_parameters) [1813 1818]))                      ) (reparse-symbol indented_block_body) [1789 3406])
+                    ("menuContextTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3431 3435])
+                        ("point" variable nil (reparse-symbol function_parameters) [3437 3442]))                      ) (reparse-symbol indented_block_body) [3411 4949])
+                    ("AppendDataset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4972 4976])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [4978 4987]))                      ) (reparse-symbol indented_block_body) [4954 5148])
+                    ("AppendProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5171 5175])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [5177 5186])
+                        ("prc_label" variable nil (reparse-symbol function_parameters) [5188 5197]))                      ) (reparse-symbol indented_block_body) [5153 5431])
+                    ("AppendTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5451 5455])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [5457 5466]))                      ) (reparse-symbol indented_block_body) [5436 5588])
+                    ("CreateDatasetFromFile" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5619 5623]))                      ) (reparse-symbol indented_block_body) [5593 5793])
+                    ("CreateDatasetFromTable" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5825 5829]))                      ) (reparse-symbol indented_block_body) [5798 6006])
+                    ("CreateProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6029 6033])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [6035 6044]))                      ) (reparse-symbol indented_block_body) [6011 7160])
+                    ("DeleteItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7180 7184]))                      ) (reparse-symbol indented_block_body) [7165 8210])
+                    ("DeleteDataset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8233 8237])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [8239 8248]))                      ) (reparse-symbol indented_block_body) [8215 8626])
+                    ("DeleteProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8649 8653])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [8655 8664])
+                        ("prc_label" variable nil (reparse-symbol function_parameters) [8671 8680]))                      ) (reparse-symbol indented_block_body) [8631 9168])
+                    ("DeleteTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9188 9192])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [9194 9203]))                      ) (reparse-symbol indented_block_body) [9173 10023])
+                    ("DeselectAll" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10044 10048]))                      ) (reparse-symbol indented_block_body) [10028 10204])
+                    ("FindItemChildren" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10230 10234])
+                        ("parent" variable nil (reparse-symbol function_parameters) [10236 10242])
+                        ("label" variable nil (reparse-symbol function_parameters) [10244 10249]))                      ) (reparse-symbol indented_block_body) [10209 10552])
+                    ("GetSetItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10572 10576])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [10578 10587]))                      ) (reparse-symbol indented_block_body) [10557 10652])
+                    ("GetPrcItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10672 10676])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [10678 10687])
+                        ("prc_label" variable nil (reparse-symbol function_parameters) [10689 10698]))                      ) (reparse-symbol indented_block_body) [10657 10808])
+                    ("GetItemChildren" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10833 10837])
+                        ("item" variable nil (reparse-symbol function_parameters) [10839 10843])
+                        ("recursive_f" variable nil (reparse-symbol function_parameters) [10845 10856]))                      ) (reparse-symbol indented_block_body) [10813 11126])
+                    ("HandleClickedItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11153 11157])
+                        ("item" variable nil (reparse-symbol function_parameters) [11159 11163]))                      ) (reparse-symbol indented_block_body) [11131 11829])
+                    ("LoadDataset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11850 11854]))                      ) (reparse-symbol indented_block_body) [11834 11913])
+                    ("LoadProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11934 11938]))                      ) (reparse-symbol indented_block_body) [11918 12382])
+                    ("OpenTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12400 12404]))                      ) (reparse-symbol indented_block_body) [12387 12555])
+                    ("PopulateTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12577 12581]))                      ) (reparse-symbol indented_block_body) [12560 12670])
+                    ("RenameItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12690 12694]))                      ) (reparse-symbol indented_block_body) [12675 12741])
+                    ("SelectDataset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12764 12768])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [12770 12779]))                      ) (reparse-symbol indented_block_body) [12746 13529])
+                    ("SelectProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13552 13556])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [13558 13567])
+                        ("prc_label" variable nil (reparse-symbol function_parameters) [13569 13578])
+                        ("reset_f" variable nil (reparse-symbol function_parameters) [13580 13587]))                      ) (reparse-symbol indented_block_body) [13534 14339])
+                    ("SelectTask" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14359 14363])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [14365 14374])
+                        ("value" variable nil (reparse-symbol function_parameters) [14376 14381]))                      ) (reparse-symbol indented_block_body) [14344 14611])
+                    ("OnChangeSelection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14638 14642]))                      ) (reparse-symbol indented_block_body) [14616 14946])
+                    ("OnItemClicked" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14969 14973])
+                        ("item" variable nil (reparse-symbol function_parameters) [14975 14979])
+                        ("col" variable nil (reparse-symbol function_parameters) [14981 14984]))                      ) (reparse-symbol indented_block_body) [14951 15204])
+                    ("OnItemDoubleClicked" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15233 15237])
+                        ("item" variable nil (reparse-symbol function_parameters) [15239 15243])
+                        ("col" variable nil (reparse-symbol function_parameters) [15245 15248]))                      ) (reparse-symbol indented_block_body) [15209 15623])
+                    ("OnItemCollapseExpand" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15653 15657])
+                        ("item" variable nil (reparse-symbol function_parameters) [15659 15663]))                      ) (reparse-symbol indented_block_body) [15628 15749]))                  
+                :type "class")
+                nil [230 15749])
+            ("RulexDatasetTreeItem" type
+               (:superclasses ("RulexDirectoryTreeItem")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15819 15823])
+                        ("parent" variable nil (reparse-symbol function_parameters) [15825 15831])
+                        ("label" variable nil (reparse-symbol function_parameters) [15833 15838])
+                        ("tree" variable nil (reparse-symbol function_parameters) [15840 15844]))                      ) (reparse-symbol indented_block_body) [15806 15992])
+                    ("data" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16006 16010])
+                        ("column" variable nil (reparse-symbol function_parameters) [16012 16018])
+                        ("role" variable nil (reparse-symbol function_parameters) [16020 16024]))                      ) (reparse-symbol indented_block_body) [15997 16329])
+                    ("setData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16346 16350])
+                        ("column" variable nil (reparse-symbol function_parameters) [16352 16358])
+                        ("role" variable nil (reparse-symbol function_parameters) [16360 16364])
+                        ("value" variable nil (reparse-symbol function_parameters) [16366 16371]))                      ) (reparse-symbol indented_block_body) [16334 16795]))                  
+                :type "class")
+                nil [15750 16795])
+            ("RulexProcessTreeItem" type
+               (:superclasses ("RulexTreeItemBase")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16860 16864])
+                        ("parent" variable nil (reparse-symbol function_parameters) [16866 16872])
+                        ("label" variable nil (reparse-symbol function_parameters) [16874 16879])
+                        ("tree" variable nil (reparse-symbol function_parameters) [16881 16885]))                      ) (reparse-symbol indented_block_body) [16847 17033])
+                    ("data" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17047 17051])
+                        ("column" variable nil (reparse-symbol function_parameters) [17053 17059])
+                        ("role" variable nil (reparse-symbol function_parameters) [17061 17065]))                      ) (reparse-symbol indented_block_body) [17038 17375])
+                    ("setData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17392 17396])
+                        ("column" variable nil (reparse-symbol function_parameters) [17398 17404])
+                        ("role" variable nil (reparse-symbol function_parameters) [17406 17410])
+                        ("value" variable nil (reparse-symbol function_parameters) [17412 17417]))                      ) (reparse-symbol indented_block_body) [17380 17904]))                  
+                :type "class")
+                nil [16796 17904])
+            ("RulexTaskTreeItem" type
+               (:superclasses ("RulexTreeItemBase")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17966 17970])
+                        ("parent" variable nil (reparse-symbol function_parameters) [17972 17978])
+                        ("label" variable nil (reparse-symbol function_parameters) [17980 17985])
+                        ("tree" variable nil (reparse-symbol function_parameters) [17987 17991]))                      ) (reparse-symbol indented_block_body) [17953 18136])
+                    ("data" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18150 18154])
+                        ("column" variable nil (reparse-symbol function_parameters) [18156 18162])
+                        ("role" variable nil (reparse-symbol function_parameters) [18164 18168]))                      ) (reparse-symbol indented_block_body) [18141 18246])
+                    ("setData" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18263 18267])
+                        ("column" variable nil (reparse-symbol function_parameters) [18269 18275])
+                        ("role" variable nil (reparse-symbol function_parameters) [18277 18281])
+                        ("value" variable nil (reparse-symbol function_parameters) [18283 18288]))                      ) (reparse-symbol indented_block_body) [18251 18899]))                  
+                :type "class")
+                nil [17905 18899]))          
+    :file "RulexDatasetTree.py"
+    :pointmax 18899
+    :fsize 18898
+    :lastmodtime '(20846 35524)
+    :unmatched-syntax '((NAME 8776 . 8785) (IF 8816 . 8818) (ELSE 8833 . 8837) (NAME 8696 . 8705) (IF 8736 . 8738) (ELSE 8753 . 8757) (NAME 8264 . 8273) (IF 8304 . 8306) (ELSE 8321 . 8325) (NAME 6414 . 6423) (IF 6454 . 6456) (ELSE 6471 . 6475) ($EOI 18899 . 18899))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex-loop!RulexInterface!gui!tree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

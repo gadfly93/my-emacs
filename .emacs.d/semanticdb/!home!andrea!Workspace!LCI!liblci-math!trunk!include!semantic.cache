@@ -1,0 +1,19 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("nobase_include_HEADERS" variable (:default-value ("lci/lib/math.h" "lci/blas.h" "lci/lapack.h" "lci/math.h" "lci/moment.h")) nil [1 104]))          
+    :file "Makefile.am"
+    :pointmax 105
+    :fsize 104
+    :lastmodtime '(21351 15210 132909 226000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!LCI!liblci-math!trunk!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

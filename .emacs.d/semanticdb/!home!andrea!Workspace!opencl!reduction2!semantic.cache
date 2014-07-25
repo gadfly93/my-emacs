@@ -1,0 +1,29 @@
+;; Object reduction2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "reduction2/"
+  :tables (list 
+   (semanticdb-table "main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("timing.h" include nil nil [1 20])
+            ("cl-helper.h" include nil nil [21 43])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [54 63])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [64 76]))                  
+                :type "int")
+                nil [45 4172]))          
+    :file "main.c"
+    :pointmax 4173
+    :fsize 4172
+    :lastmodtime '(21083 62863)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!opencl!reduction2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

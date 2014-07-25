@@ -1,0 +1,21 @@
+;; Object mongo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mongo/"
+  :tables (list 
+   (semanticdb-table "test.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("mongo.h" include nil nil [20 38])
+            ("main" function (:type "int") nil [40 520]))          
+    :file "test.c"
+    :pointmax 522
+    :fsize 521
+    :lastmodtime '(20613 4702)
+    :unmatched-syntax '((close-paren 531 . 532) (close-paren 529 . 530) (close-paren 525 . 526))
+    )
+   )
+  :file "!home!andrea!Workspace!mongo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

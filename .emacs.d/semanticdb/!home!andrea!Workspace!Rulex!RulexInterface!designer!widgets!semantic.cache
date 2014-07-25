@@ -1,0 +1,194 @@
+;; Object widgets/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "widgets/"
+  :tables (list 
+   (semanticdb-table "MultiPlot.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("PyQt4.QtCore" include nil nil [383 409])
+            ("PyQt4.QtGui" include nil nil [410 435])
+            ("matplotlib.backends.backend_qt4agg" include nil nil [436 516])
+            ("matplotlib.figure" include nil nil [517 553])
+            ("matplotlib" include nil nil [554 590])
+            ("matplotlib.ticker" include nil nil [591 622])
+            ("numpy" include nil nil [623 641])
+            ("time" include nil nil [642 653])
+            ("thread" include nil nil [654 667])
+            ("rcParams" variable nil nil [668 694])
+            ("monitor_sim" variable nil nil [695 714])
+            ("HISTOGRAM" variable nil nil [716 729])
+            ("SCATTER_PLOT" variable nil nil [730 746])
+            ("PIE_CHART" variable nil nil [747 760])
+            ("BAR_GRAPH" variable nil nil [761 774])
+            ("SIMPLE_CURVE" variable nil nil [775 791])
+            ("MultiPlot" type
+               (:superclasses ("FigureCanvas")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [842 846])
+                        ("parent" variable nil (reparse-symbol function_parameters) [848 854])
+                        ("width" variable nil (reparse-symbol function_parameters) [861 866])
+                        ("height" variable nil (reparse-symbol function_parameters) [870 876])
+                        ("dpi" variable nil (reparse-symbol function_parameters) [880 883]))                      ) (reparse-symbol indented_block_body) [829 1755])
+                    ("_FindAxes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1774 1778])
+                        ("event" variable nil (reparse-symbol function_parameters) [1780 1785]))                      ) (reparse-symbol indented_block_body) [1760 2018])
+                    ("GenerateTooltip" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2043 2047])
+                        ("event" variable nil (reparse-symbol function_parameters) [2049 2054]))                      ) (reparse-symbol indented_block_body) [2023 3589])
+                    ("OnMousePick" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3610 3614])
+                        ("event" variable nil (reparse-symbol function_parameters) [3616 3621]))                      ) (reparse-symbol indented_block_body) [3594 3740])
+                    ("OnMouseMotion" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3763 3767])
+                        ("event" variable nil (reparse-symbol function_parameters) [3769 3774]))                      ) (reparse-symbol indented_block_body) [3745 4080])
+                    ("ClearAxes" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4099 4103])
+                        ("redraw" variable nil (reparse-symbol function_parameters) [4105 4111])
+                        ("colorbar" variable nil (reparse-symbol function_parameters) [4118 4126])
+                        ("legend" variable nil (reparse-symbol function_parameters) [4133 4139]))                      ) (reparse-symbol indented_block_body) [4085 5275])
+                    ("ClearFigure" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5296 5300]))                      ) (reparse-symbol indented_block_body) [5280 5347])
+                    ("ColorBar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5365 5369])
+                        ("n_or_axes" variable nil (reparse-symbol function_parameters) [5371 5380])
+                        ("color_list" variable nil (reparse-symbol function_parameters) [5382 5392])
+                        ("ticks_str" variable nil (reparse-symbol function_parameters) [5394 5403])
+                        ("unit_str" variable nil (reparse-symbol function_parameters) [5405 5413])
+                        ("reverse_f" variable nil (reparse-symbol function_parameters) [5437 5446]))                      ) (reparse-symbol indented_block_body) [5352 7539])
+                    ("GetLim" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7555 7559])
+                        ("which_axis" variable nil (reparse-symbol function_parameters) [7561 7571])
+                        ("index" variable nil (reparse-symbol function_parameters) [7573 7578]))                      ) (reparse-symbol indented_block_body) [7544 7769])
+                    ("GetMatplotlibColors" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7798 7802])
+                        ("n" variable nil (reparse-symbol function_parameters) [7804 7805]))                      ) (reparse-symbol indented_block_body) [7774 8311])
+                    ("GetSubplotSize" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8335 8339])
+                        ("n_or_axes" variable nil (reparse-symbol function_parameters) [8341 8350]))                      ) (reparse-symbol indented_block_body) [8316 8517])
+                    ("Grid" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8532 8536])
+                        ("value" variable nil (reparse-symbol function_parameters) [8538 8543])
+                        ("loc_x_min" variable nil (reparse-symbol function_parameters) [8545 8554])
+                        ("loc_y_min" variable nil (reparse-symbol function_parameters) [8561 8570])
+                        ("loc_x_maj" variable nil (reparse-symbol function_parameters) [8577 8586])
+                        ("loc_y_maj" variable nil (reparse-symbol function_parameters) [8606 8615])
+                        ("index" variable nil (reparse-symbol function_parameters) [8622 8627]))                      ) (reparse-symbol indented_block_body) [8523 9144])
+                    ("SaveMultiPlot" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9167 9171])
+                        ("fn" variable nil (reparse-symbol function_parameters) [9173 9175]))                      ) (reparse-symbol indented_block_body) [9149 9217])
+                    ("SetPlotNumber" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9240 9244])
+                        ("n" variable nil (reparse-symbol function_parameters) [9246 9247]))                      ) (reparse-symbol indented_block_body) [9222 10549])
+                    ("SetSubplotSize" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10573 10577])
+                        ("n_or_axes" variable nil (reparse-symbol function_parameters) [10579 10588])
+                        ("dim" variable nil (reparse-symbol function_parameters) [10590 10593]))                      ) (reparse-symbol indented_block_body) [10554 10705])
+                    ("SetFacecolor" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10727 10731])
+                        ("color" variable nil (reparse-symbol function_parameters) [10733 10738]))                      ) (reparse-symbol indented_block_body) [10710 10780])
+                    ("SetAxisProperty" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10805 10809])
+                        ("which_axis" variable nil (reparse-symbol function_parameters) [10811 10821])
+                        ("prop" variable nil (reparse-symbol function_parameters) [10823 10827])
+                        ("index" variable nil (reparse-symbol function_parameters) [10829 10834]))                      ) (reparse-symbol indented_block_body) [10785 10893])
+                    ("SetLegend" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10912 10916])
+                        ("labels" variable nil (reparse-symbol function_parameters) [10918 10924])
+                        ("reverse_f" variable nil (reparse-symbol function_parameters) [10926 10935])
+                        ("index" variable nil (reparse-symbol function_parameters) [10943 10948]))                      ) (reparse-symbol indented_block_body) [10898 11387])
+                    ("SetLim" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11403 11407])
+                        ("p0" variable nil (reparse-symbol function_parameters) [11409 11411])
+                        ("p1" variable nil (reparse-symbol function_parameters) [11413 11415])
+                        ("which_axis" variable nil (reparse-symbol function_parameters) [11417 11427])
+                        ("index" variable nil (reparse-symbol function_parameters) [11429 11434]))                      ) (reparse-symbol indented_block_body) [11392 11575])
+                    ("SetFigText" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11595 11599])
+                        ("text" variable nil (reparse-symbol function_parameters) [11601 11605])
+                        ("pos" variable nil (reparse-symbol function_parameters) [11607 11610])
+                        ("clear_f" variable nil (reparse-symbol function_parameters) [11612 11619]))                      ) (reparse-symbol indented_block_body) [11580 12252])
+                    ("SetText" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12269 12273])
+                        ("text" variable nil (reparse-symbol function_parameters) [12275 12279])
+                        ("pos" variable nil (reparse-symbol function_parameters) [12281 12284])
+                        ("index" variable nil (reparse-symbol function_parameters) [12286 12291]))                      ) (reparse-symbol indented_block_body) [12257 12989])
+                    ("SetTicks" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13008 13012])
+                        ("loc" variable nil (reparse-symbol function_parameters) [13014 13017])
+                        ("which_axis" variable nil (reparse-symbol function_parameters) [13019 13029])
+                        ("labels" variable nil (reparse-symbol function_parameters) [13031 13037])
+                        ("index" variable nil (reparse-symbol function_parameters) [13044 13049]))                      ) (reparse-symbol indented_block_body) [12995 14189])
+                    ("SetTitle" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14207 14211])
+                        ("title" variable nil (reparse-symbol function_parameters) [14213 14218])
+                        ("index" variable nil (reparse-symbol function_parameters) [14220 14225]))                      ) (reparse-symbol indented_block_body) [14194 14293])
+                    ("PlotCurve" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14394 14398])
+                        ("x_data" variable nil (reparse-symbol function_parameters) [14400 14406])
+                        ("y_data" variable nil (reparse-symbol function_parameters) [14408 14414])
+                        ("color" variable nil (reparse-symbol function_parameters) [14416 14421])
+                        ("linestyle" variable nil (reparse-symbol function_parameters) [14427 14436])
+                        ("hold" variable nil (reparse-symbol function_parameters) [14442 14446])
+                        ("index" variable nil (reparse-symbol function_parameters) [14472 14477]))                      ) (reparse-symbol indented_block_body) [14380 14689])
+                    ("PieChart" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14707 14711])
+                        ("data" variable nil (reparse-symbol function_parameters) [14713 14717])
+                        ("tmiss_f" variable nil (reparse-symbol function_parameters) [14719 14726])
+                        ("labels" variable nil (reparse-symbol function_parameters) [14734 14740])
+                        ("colors" variable nil (reparse-symbol function_parameters) [14747 14753])
+                        ("colorbar" variable nil (reparse-symbol function_parameters) [14777 14785])
+                        ("redraw" variable nil (reparse-symbol function_parameters) [14792 14798])
+                        ("index" variable nil (reparse-symbol function_parameters) [14805 14810]))                      ) (reparse-symbol indented_block_body) [14694 15623])
+                    ("StackedBar" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15644 15648])
+                        ("data" variable nil (reparse-symbol function_parameters) [15650 15654])
+                        ("bins" variable nil (reparse-symbol function_parameters) [15656 15660])
+                        ("width" variable nil (reparse-symbol function_parameters) [15662 15667])
+                        ("reverse_f" variable nil (reparse-symbol function_parameters) [15671 15680])
+                        ("labels" variable nil (reparse-symbol function_parameters) [15688 15694])
+                        ("orientation" variable nil (reparse-symbol function_parameters) [15720 15731])
+                        ("colors" variable nil (reparse-symbol function_parameters) [15737 15743])
+                        ("index" variable nil (reparse-symbol function_parameters) [15750 15755]))                      ) (reparse-symbol indented_block_body) [15629 17280])
+                    ("StackedHist" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17302 17306])
+                        ("data" variable nil (reparse-symbol function_parameters) [17308 17312])
+                        ("bins" variable nil (reparse-symbol function_parameters) [17314 17318])
+                        ("width" variable nil (reparse-symbol function_parameters) [17320 17325])
+                        ("tmiss_f" variable nil (reparse-symbol function_parameters) [17327 17334])
+                        ("reverse_f" variable nil (reparse-symbol function_parameters) [17342 17351])
+                        ("labels" variable nil (reparse-symbol function_parameters) [17379 17385])
+                        ("colors" variable nil (reparse-symbol function_parameters) [17392 17398])
+                        ("colorbar" variable nil (reparse-symbol function_parameters) [17405 17413])
+                        ("redraw" variable nil (reparse-symbol function_parameters) [17421 17427])
+                        ("index" variable nil (reparse-symbol function_parameters) [17434 17439]))                      ) (reparse-symbol indented_block_body) [17286 19047])
+                    ("StackedScatter" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19071 19075])
+                        ("data" variable nil (reparse-symbol function_parameters) [19077 19081])
+                        ("occurrence" variable nil (reparse-symbol function_parameters) [19083 19093])
+                        ("tmiss_f" variable nil (reparse-symbol function_parameters) [19095 19102])
+                        ("marker" variable nil (reparse-symbol function_parameters) [19110 19116])
+                        ("color" variable nil (reparse-symbol function_parameters) [19145 19150])
+                        ("labels" variable nil (reparse-symbol function_parameters) [19156 19162])
+                        ("colors" variable nil (reparse-symbol function_parameters) [19169 19175])
+                        ("colorbar" variable nil (reparse-symbol function_parameters) [19182 19190])
+                        ("index" variable nil (reparse-symbol function_parameters) [19220 19225])
+                        ("redraw" variable nil (reparse-symbol function_parameters) [19229 19235]))                      ) (reparse-symbol indented_block_body) [19052 20326])
+                    ("sizeHint" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20428 20432]))                      ) (reparse-symbol indented_block_body) [20415 20502])
+                    ("minimumSizeHint" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20527 20531]))                      ) (reparse-symbol indented_block_body) [20507 20564]))                  
+                :type "class")
+                nil [793 20564])
+            ("if" code nil nil [20565 23818]))          
+    :file "MultiPlot.py"
+    :pointmax 23818
+    :fsize 24457
+    :lastmodtime '(20451 16768)
+    :unmatched-syntax '((NAME 22741 . 22742) (IF 22747 . 22749) (ELSE 22765 . 22769) (NAME 19850 . 19851) (IF 19864 . 19866) (ELSE 19882 . 19886) (NAME 19587 . 19593) (IF 19632 . 19634) (ELSE 19650 . 19654) (NAME 17762 . 17768) (IF 17802 . 17804) (ELSE 17820 . 17824) (NAME 17135 . 17137) (IF 17144 . 17146) (ELSE 17166 . 17170) (NAME 16546 . 16548) (IF 16630 . 16632) (ELSE 16652 . 16656) (NAME 16470 . 16471) (IF 16484 . 16486) (ELSE 16524 . 16528) (NAME 16311 . 16314) (IF 16328 . 16330) (ELSE 16350 . 16354) (NAME 15972 . 15978) (IF 16012 . 16014) (ELSE 16030 . 16034) (NAME 15095 . 15101) (IF 15135 . 15137) (ELSE 15153 . 15157) (NAME 14997 . 15003) (IF 15033 . 15035) (ELSE 15051 . 15055) (NAME 13364 . 13371) (IF 13388 . 13390) (ELSE 13409 . 13413) (NAME 13247 . 13261) (IF 13285 . 13287) (ELSE 13330 . 13334) (NAME 13170 . 13178) (IF 13197 . 13199) (ELSE 13218 . 13222) (NAME 11480 . 11487) (IF 11504 . 11506) (ELSE 11525 . 11529) (NAME 10605 . 10607) (IF 10631 . 10633) (ELSE 10661 . 10665) (NAME 8362 . 8364) (IF 8388 . 8390) (ELSE 8418 . 8422) (NAME 7624 . 7631) (IF 7648 . 7650) (ELSE 7669 . 7673) (NAME 2423 . 2427) (IF 2436 . 2438) (ELSE 2483 . 2487))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!designer!widgets!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,83 @@
+;; Object mem-test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mem-test/"
+  :tables (list 
+   (semanticdb-table "test.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("GetStr" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53 63]))                  
+                :type "void")
+                nil [41 93])
+            ("AllocMem" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [110 119]))                  
+                :type "char")
+                nil [95 241])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [253 262])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [263 276]))                  
+                :type "int")
+                nil [244 418]))          
+    :file "test.c"
+    :pointmax 419
+    :fsize 418
+    :lastmodtime '(20581 26444)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "test.h"
+    :pointmax 41
+    :fsize 40
+    :lastmodtime '(20429 64302)
+    :unmatched-syntax '((semantic-list 35 . 40) (symbol 27 . 35) (punctuation 26 . 27) (CHAR 21 . 25) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5) (semantic-list 34 . 39) (symbol 26 . 34) (INT 21 . 24) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5) (semantic-list 34 . 39) (symbol 26 . 34) (INT 21 . 24) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5) (semantic-list 31 . 36) (symbol 23 . 31) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5) (symbol 6 . 12) (VOID 1 . 5) (symbol 21 . 29) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5) (symbol 21 . 26) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5) (semantic-list 12 . 20) (symbol 6 . 12) (VOID 1 . 5))
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags nil
+    :file "Makefile"
+    :pointmax 77
+    :fsize 75
+    :lastmodtime '(20429 60812)
+    :unmatched-syntax '((shell-command 42 . 76) (bol 41 . 41) (shell-command 10 . 40) (bol 9 . 9) (shell-command 2 . 8) (bol 1 . 1) (shell-command 42 . 76) (bol 41 . 41) (shell-command 10 . 40) (bol 9 . 9) (shell-command 2 . 8) (bol 1 . 1))
+    )
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("ctypes" include nil nil [1 21])
+            ("random" include nil nil [22 35])
+            ("string" include nil nil [36 49])
+            ("os" include nil nil [50 59])
+            ("lib" variable nil nil [61 96])
+            ("print" code nil nil [98 137])
+            ("raw_input" code nil nil [138 182])
+            ("raw_input" code nil nil [208 257])
+            ("babbo" variable nil nil [258 300])
+            ("raw_input" code nil nil [301 346])
+            ("stringa" variable nil nil [348 360])
+            ("while" code nil nil [361 530]))          
+    :file "test.py"
+    :pointmax 530
+    :fsize 529
+    :lastmodtime '(20430 9427)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!mem-test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

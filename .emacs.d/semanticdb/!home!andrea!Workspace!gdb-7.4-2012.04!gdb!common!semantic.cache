@@ -1,0 +1,91 @@
+;; Object common/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "common/"
+  :tables (list 
+   (semanticdb-table "ptid.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("PTID_H" variable (:constant-flag t) nil [824 830])
+            ("ptid" type
+               (:members 
+                  ( ("pid" variable (:type "int") (reparse-symbol classsubparts) [1758 1766])
+                    ("lwp" variable (:type "long") (reparse-symbol classsubparts) [1805 1814])
+                    ("tid" variable (:type "long") (reparse-symbol classsubparts) [1840 1849]))                  
+                :type "struct")
+                nil [1717 1854])
+            ("ptid_t" type
+               (:typedef ("ptid" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "ptid"
+                :type "typedef")
+                nil [1856 1883])
+            ("null_ptid" variable
+               (:typemodifiers ("extern")
+                :type ("ptid_t" type (:type "class") nil nil))
+                nil [1949 1973])
+            ("minus_one_ptid" variable
+               (:typemodifiers ("extern")
+                :type ("ptid_t" type (:type "class") nil nil))
+                nil [2100 2129])
+            ("ptid_build" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [2303 2311])
+                    ("lwp" variable (:type "long") (reparse-symbol arg-sub-list) [2312 2321])
+                    ("tid" variable (:type "long") (reparse-symbol arg-sub-list) [2322 2331]))                  
+                :type ("ptid_t" type (:type "class") nil nil))
+                nil [2284 2332])
+            ("pid_to_ptid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pid" variable (:type "int") (reparse-symbol arg-sub-list) [2396 2404]))                  
+                :type ("ptid_t" type (:type "class") nil nil))
+                nil [2376 2405])
+            ("ptid_get_pid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2481 2493]))                  
+                :type "int")
+                nil [2463 2494])
+            ("ptid_get_lwp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2580 2592]))                  
+                :type "long")
+                nil [2561 2593])
+            ("ptid_get_tid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2669 2681]))                  
+                :type "long")
+                nil [2650 2682])
+            ("ptid_equal" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p1" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2749 2759])
+                    ("p2" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2760 2770]))                  
+                :type "int")
+                nil [2733 2771])
+            ("ptid_is_pid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ptid" variable (:type ("ptid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2842 2854]))                  
+                :type "int")
+                nil [2825 2855]))          
+    :file "ptid.h"
+    :pointmax 2864
+    :fsize 2863
+    :lastmodtime '(20359 9866)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PTID_H")
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!gdb-7.4-2012.04!gdb!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

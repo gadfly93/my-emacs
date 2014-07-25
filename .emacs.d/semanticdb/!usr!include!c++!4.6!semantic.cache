@@ -1,0 +1,39 @@
+;; Object 4.6/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "4.6/"
+  :tables (list 
+   (semanticdb-table "cinttypes"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GLIBCXX_CINTTYPES" variable (:constant-flag t) nil [1193 1211])
+            ("bits/c++0x_warning.h" include (:system-flag t) nil [1277 1309]))          
+    :file "cinttypes"
+    :pointmax 2343
+    :fsize 2342
+    :lastmodtime '(20363 23317)
+    :unmatched-syntax '((symbol 1227 . 1240) (symbol 1223 . 1226) (symbol 1216 . 1222) (punctuation 1215 . 1216))
+    :lexical-table 
+        '(("_GLIBCXX_CINTTYPES" . ((number "1" 1212 . 1213)))
+          )
+
+    )
+   (semanticdb-table "cstdint"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GLIBCXX_CSTDINT" variable (:constant-flag t) nil [1187 1203])
+            ("bits/c++0x_warning.h" include (:system-flag t) nil [1269 1301]))          
+    :file "cstdint"
+    :pointmax 2694
+    :fsize 2693
+    :lastmodtime '(20363 23317)
+    :unmatched-syntax '((symbol 1219 . 1232) (symbol 1215 . 1218) (symbol 1208 . 1214) (punctuation 1207 . 1208))
+    :lexical-table 
+        '(("_GLIBCXX_CSTDINT" . ((number "1" 1204 . 1205)))
+          )
+
+    )
+   )
+  :file "!usr!include!c++!4.6!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

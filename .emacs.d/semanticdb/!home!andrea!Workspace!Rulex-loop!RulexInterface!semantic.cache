@@ -1,0 +1,70 @@
+;; Object RulexInterface/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RulexInterface/"
+  :tables (list 
+   (semanticdb-table "RulexDebug.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("server.RulexServer" include nil nil [26 58])
+            ("client.RulexClient" include nil nil [59 92])
+            ("database.RulexSession" include nil nil [93 128])
+            ("threading" include nil nil [129 145])
+            ("PyQt4.QtCore" include nil nil [146 172])
+            ("PyQt4.QtGui" include nil nil [173 198])
+            ("print" code nil nil [199 234])
+            ("print" code nil nil [235 270])
+            ("print" code nil nil [271 306])
+            ("app" variable nil nil [308 340])
+            ("server" variable nil nil [342 521])
+            ("server" code nil nil [522 542])
+            ("rs" variable nil nil [543 562])
+            ("rs" code nil nil [563 593])
+            ("rs" code nil nil [594 612])
+            ("sleep" code nil nil [614 624])
+            ("rc" code nil nil [625 644])
+            ("rc" code nil nil [645 663])
+            ("rc" code nil nil [664 674])
+            ("rc" code nil nil [675 688])
+            ("rc" code nil nil [720 743])
+            ("rc" code nil nil [1420 1447])
+            ("print" code nil nil [1448 1460])
+            ("rc" code nil nil [1462 1473])
+            ("rc" code nil nil [1474 1495])
+            ("print" code nil nil [1496 1520])
+            ("sleep" code nil nil [1521 1531])
+            ("server" code nil nil [1532 1551])
+            ("print" code nil nil [1552 1566]))          
+    :file "RulexDebug.py"
+    :pointmax 1567
+    :fsize 1566
+    :lastmodtime '(20836 10629)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "run_designer.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [1 15])
+            ("PyQt4" include nil nil [16 47])
+            ("app" variable nil nil [49 83])
+            ("env" variable nil nil [202 225])
+            ("env" variable nil nil [226 270])
+            ("env" variable nil nil [271 309])
+            ("qenv" variable nil nil [310 373])
+            ("designer" variable nil nil [393 421])
+            ("designer" code nil nil [422 451])
+            ("designer_bin" variable nil nil [453 530])
+            ("if" code nil nil [532 659])
+            ("designer" code nil nil [660 688])
+            ("designer" code nil nil [689 717])
+            ("sys" code nil nil [719 748]))          
+    :file "run_designer.py"
+    :pointmax 749
+    :fsize 748
+    :lastmodtime '(20794 4161)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex-loop!RulexInterface!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

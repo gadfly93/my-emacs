@@ -1,0 +1,37 @@
+;; Object RulexManual/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RulexManual/"
+  :tables (list 
+   (semanticdb-table "conf.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [417 431])
+            ("extensions" variable nil nil [1036 1179])
+            ("templates_path" variable nil nil [1254 1285])
+            ("source_suffix" variable nil nil [1321 1343])
+            ("master_doc" variable nil nil [1440 1460])
+            ("project" variable nil nil [1503 1521])
+            ("copyright" variable nil nil [1522 1553])
+            ("version" variable nil nil [1756 1771])
+            ("release" variable nil nil [1822 1837])
+            ("exclude_patterns" variable nil nil [2307 2336])
+            ("pygments_style" variable nil nil [2881 2906])
+            ("html_theme" variable nil nil [3204 3225])
+            ("html_favicon" variable nil nil [4182 4216])
+            ("html_static_path" variable nil nil [4448 4478])
+            ("htmlhelp_basename" variable nil nil [5874 5904])
+            ("latex_elements" variable nil nil [5989 6213])
+            ("latex_documents" variable nil nil [6358 6457])
+            ("man_pages" variable nil nil [7201 7288])
+            ("texinfo_documents" variable nil nil [7605 7757]))          
+    :file "conf.py"
+    :pointmax 8007
+    :fsize 8006
+    :lastmodtime '(20470 47575)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexManual!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

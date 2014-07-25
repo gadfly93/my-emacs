@@ -1,0 +1,291 @@
+;; Object stage/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "stage/"
+  :tables (list 
+   (semanticdb-table "RulexItem.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("math" include nil nil [1 12])
+            ("PyQt4.QtCore" include nil nil [14 40])
+            ("PyQt4.QtGui" include nil nil [42 67])
+            ("globals.RulexGuiMacro" include nil nil [69 104])
+            ("globals.RulexDBMacro" include nil nil [106 140])
+            ("utilities.RulexUtilities" include nil nil [142 180])
+            ("client.RulexClient" include nil nil [182 215])
+            ("components.RulexCompSource" include nil nil [219 273])
+            ("components.RulexComponentBase" include nil nil [275 335])
+            ("components.applycluster.RulexCompApplycluster" include nil nil [944 1030])
+            ("components.applyrule.RulexCompApplyrule" include nil nil [1032 1102])
+            ("components.cacurve.RulexCompCacurve" include nil nil [1104 1168])
+            ("components.clustview.RulexCompClustview" include nil nil [1170 1240])
+            ("components.confmatrix.RulexCompConfmatrix" include nil nil [1242 1315])
+            ("components.dichotomiclm.RulexCompDichotomiclm" include nil nil [1317 1396])
+            ("components.evalcode.RulexCompEvalcode" include nil nil [1398 1465])
+            ("components.datamanager.RulexCompDatamanager" include nil nil [1467 1543])
+            ("components.discretize.RulexCompDiscretization" include nil nil [1545 1633])
+            ("components.featurerank.RulexCompFeaturerank" include nil nil [1635 1711])
+            ("components.labelclustk.RulexCompLabelclustk" include nil nil [1713 1789])
+            ("components.optimizelm.RulexCompOptimizelm" include nil nil [1791 1864])
+            ("components.ruleview.RulexCompRuleview" include nil nil [1866 1933])
+            ("components.splitdata.RulexCompSplitdata" include nil nil [1935 2005])
+            ("components.trainlm.RulexCompTrainlm" include nil nil [2007 2071])
+            ("ITEM_SIZE" variable nil nil [2083 2108])
+            ("PIN_SIZE" variable nil nil [2110 2134])
+            ("STATUS_SIZE" variable nil nil [2136 2163])
+            ("RulexItemGraphics" type
+               (:superclasses ("QGraphicsRectItem")
+                :members (("" "" The RulexItemGraphics class concerns with the graphical representation of the items on the stage\. "" "" code nil (reparse-symbol indented_block_body) [2217 2339]) ("__init__" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [2358 2362]) ("debug_f" variable nil (reparse-symbol function_parameters) [2364 2371]))) (reparse-symbol indented_block_body) [2345 3542]) ("boundingRect" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [3640 3644]))) (reparse-symbol indented_block_body) [3623 3975]) ("shape" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [3991 3995]))) (reparse-symbol indented_block_body) [3981 4345]) ("paint" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [4361 4365]) ("painter" variable nil (reparse-symbol function_parameters) [4367 4374]) ("option" variable nil (reparse-symbol function_parameters) [4376 4382]) ("widget" variable nil (reparse-symbol function_parameters) [4384 4390]))) (reparse-symbol indented_block_body) [4351 8365]) ("itemChange" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [8398 8402]) ("change" variable nil (reparse-symbol function_parameters) [8404 8410]) ("value" variable nil (reparse-symbol function_parameters) [8412 8417]))) (reparse-symbol indented_block_body) [8383 9083]) ("mousePressEvent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [9109 9113]) ("event" variable nil (reparse-symbol function_parameters) [9115 9120]))) (reparse-symbol indented_block_body) [9089 9211]) ("mouseReleaseEvent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [9239 9243]) ("event" variable nil (reparse-symbol function_parameters) [9245 9250]))) (reparse-symbol indented_block_body) [9217 9343]) ("hoverEnterEvent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [9377 9381]) ("event" variable nil (reparse-symbol function_parameters) [9383 9388]))) (reparse-symbol indented_block_body) [9357 9587]) ("hoverLeaveEvent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [9621 9625]) ("event" variable nil (reparse-symbol function_parameters) [9627 9632]))) (reparse-symbol indented_block_body) [9601 9858]) ("AddInEdge" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [9882 9886]) ("edge" variable nil (reparse-symbol function_parameters) [9888 9892]))) (reparse-symbol indented_block_body) [9868 10018]) ("AddOutEdge" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [10039 10043]) ("edge" variable nil (reparse-symbol function_parameters) [10045 10049]))) (reparse-symbol indented_block_body) [10024 10177]) ("GetEdges" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [10196 10200]))) (reparse-symbol indented_block_body) [10183 10311]) ("GetDistance" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [10337 10341]) ("point" variable nil (reparse-symbol function_parameters) [10343 10348]))) (reparse-symbol indented_block_body) [10321 10532]) ("GetPinDistance" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [10561 10565]) ("point" variable nil (reparse-symbol function_parameters) [10567 10572]) ("left_f" variable nil (reparse-symbol function_parameters) [10574 10580]))) (reparse-symbol indented_block_body) [10542 10990]) ("GetPos" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [11011 11015]) ("which_part" variable nil (reparse-symbol function_parameters) [11017 11027]))) (reparse-symbol indented_block_body) [11000 11110]) ("GetPinPos" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [11134 11138]) ("left_f" variable nil (reparse-symbol function_parameters) [11140 11146]))) (reparse-symbol indented_block_body) [11120 11403]) ("GetSize" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [11425 11429]) ("which_part" variable nil (reparse-symbol function_parameters) [11431 11441]))) (reparse-symbol indented_block_body) [11413 11715]) ("IsConnectedTo" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [11739 11743]) ("item" variable nil (reparse-symbol function_parameters) [11745 11749]))) (reparse-symbol indented_block_body) [11721 11981]))
+                :type "class")
+                nil [2167 11981])
+            ("RulexItem" type
+               (:superclasses ("RulexItemGraphics")
+                :members (("" "" The RulexItem class is the top-level class to represent items on the stage\. It provides an interface to handle both the graphic features of a given item and the component associated with it\. "" "" code nil (reparse-symbol indented_block_body) [12027 12247]) ("counter" variable nil (reparse-symbol indented_block_body) [12253 12264]) ("__init__" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [12285 12289]) ("stage" variable nil (reparse-symbol function_parameters) [12291 12296]) ("tsk_label" variable nil (reparse-symbol function_parameters) [12298 12307]) ("category" variable nil (reparse-symbol function_parameters) [12309 12317]) ("is_computable" variable nil (reparse-symbol function_parameters) [12319 12332]) ("is_atomic" variable nil (reparse-symbol function_parameters) [12334 12343]) ("is_buffer" variable nil (reparse-symbol function_parameters) [12364 12373]) ("display" variable nil (reparse-symbol function_parameters) [12375 12382]) ("family" variable nil (reparse-symbol function_parameters) [12387 12393]) ("pos" variable nil (reparse-symbol function_parameters) [12400 12403]))) (reparse-symbol indented_block_body) [12272 13875]) ("__eq__" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [13904 13908]) ("other" variable nil (reparse-symbol function_parameters) [13910 13915]))) (reparse-symbol indented_block_body) [13893 14116]) ("mouseDoubleClickEvent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [14148 14152]) ("event" variable nil (reparse-symbol function_parameters) [14154 14159]))) (reparse-symbol indented_block_body) [14122 14289]) ("Close" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [14313 14317]))) (reparse-symbol indented_block_body) [14303 14390]) ("CleanUp" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [14416 14420]) ("recursive_f" variable nil (reparse-symbol function_parameters) [14422 14433]))) (reparse-symbol indented_block_body) [14404 14580]) ("CreateComponent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [14624 14628]))) (reparse-symbol indented_block_body) [14604 15160]) ("GetChildren" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [15190 15194]) ("recursive_f" variable nil (reparse-symbol function_parameters) [15196 15207]))) (reparse-symbol indented_block_body) [15174 15547]) ("GetIconPath" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [15573 15577]))) (reparse-symbol indented_block_body) [15557 15656]) ("GetLabel" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [15675 15679]))) (reparse-symbol indented_block_body) [15662 15774]) ("GetNextValidId" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [15807 15811]))) (reparse-symbol indented_block_body) [15788 15947]) ("GetError" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [15970 15974]))) (reparse-symbol indented_block_body) [15957 16060]) ("GetParent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16084 16088]))) (reparse-symbol indented_block_body) [16070 16246]) ("GetProgress" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16272 16276]))) (reparse-symbol indented_block_body) [16256 16361]) ("GetStatus" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16385 16389]))) (reparse-symbol indented_block_body) [16371 16470]) ("GetTimes" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16493 16497]))) (reparse-symbol indented_block_body) [16480 16616]) ("HasParent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16636 16640]))) (reparse-symbol indented_block_body) [16622 16744]) ("IsAtomic" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16767 16771]))) (reparse-symbol indented_block_body) [16754 16807]) ("IsBuffer" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16826 16830]))) (reparse-symbol indented_block_body) [16813 16866]) ("IsComputable" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [16893 16897]))) (reparse-symbol indented_block_body) [16876 17018]) ("IsSelected" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [17041 17045]))) (reparse-symbol indented_block_body) [17026 17147]) ("IsSource" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [17166 17170]))) (reparse-symbol indented_block_body) [17153 17292]) ("Save" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [17311 17315]))) (reparse-symbol indented_block_body) [17302 17525]) ("Select" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [17542 17546]) ("value" variable nil (reparse-symbol function_parameters) [17548 17553]))) (reparse-symbol indented_block_body) [17531 18030]) ("Show" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [18053 18057]))) (reparse-symbol indented_block_body) [18044 18385]) ("Update" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [18402 18406]) ("recursive_f" variable nil (reparse-symbol function_parameters) [18408 18419]))) (reparse-symbol indented_block_body) [18391 18940]) ("UpdateParent" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [18979 18983]) ("recursive_f" variable nil (reparse-symbol function_parameters) [18985 18996]))) (reparse-symbol indented_block_body) [18962 19153]) ("UpdateMonitor" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [19177 19181]))) (reparse-symbol indented_block_body) [19159 19226]) ("UpdateTooltip" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [19258 19262]))) (reparse-symbol indented_block_body) [19240 19933]) ("SetError" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [19960 19964]) ("error" variable nil (reparse-symbol function_parameters) [19966 19971]))) (reparse-symbol indented_block_body) [19947 20102]) ("SetLabel" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [20133 20137]) ("tsk_label" variable nil (reparse-symbol function_parameters) [20139 20148]))) (reparse-symbol indented_block_body) [20120 20363]) ("SetProgress" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [20393 20397]) ("progress" variable nil (reparse-symbol function_parameters) [20399 20407]))) (reparse-symbol indented_block_body) [20377 20574]) ("SetStatus" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [20594 20598]) ("status" variable nil (reparse-symbol function_parameters) [20600 20606]))) (reparse-symbol indented_block_body) [20580 20771]) ("SetTimes" function (:arguments (("self" variable nil (reparse-symbol function_parameters) [20802 20806]) ("elapsed" variable nil (reparse-symbol function_parameters) [20808 20815]) ("remaining" variable nil (reparse-symbol function_parameters) [20817 20826]))) (reparse-symbol indented_block_body) [20789 20967]))
+                :type "class")
+                nil [11985 20967]))          
+    :file "RulexItem.py"
+    :pointmax 20967
+    :fsize 24834
+    :lastmodtime '(20526 2583)
+    :unmatched-syntax '((RETURN 16148 . 16154) (IF 16188 . 16190) (ELSE 16235 . 16239) (RETURN 11350 . 11356) (IF 11372 . 11374) (ELSE 11382 . 11386) (NAME 6369 . 6378) (IF 6396 . 6398) (ELSE 6411 . 6415))
+    )
+   (semanticdb-table "RulexStage.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 175])
+            ("math" include nil nil [175 197])
+            ("threading" include nil nil [198 225])
+            ("PyQt4.QtCore" include nil nil [226 252])
+            ("PyQt4.QtGui" include nil nil [253 278])
+            ("gui.stage.RulexEdge" include nil nil [279 312])
+            ("gui.stage.RulexItem" include nil nil [313 346])
+            ("gui.RulexCustomWidgets" include nil nil [347 383])
+            ("sync_f" variable nil nil [385 401])
+            ("_wait" function nil nil [403 464])
+            ("Monitor" type
+               (:superclasses ("QThread")
+                :members 
+                  ( ("update_stage" variable nil (reparse-symbol indented_block_body) [494 537])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [556 560])
+                        ("stage" variable nil (reparse-symbol function_parameters) [562 567]))                      ) (reparse-symbol indented_block_body) [543 670])
+                    ("run" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [683 687]))                      ) (reparse-symbol indented_block_body) [675 4253]))                  
+                :type "class")
+                nil [465 4253])
+            ("Delete" type
+               (:superclasses ("QThread")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4295 4299])
+                        ("stage" variable nil (reparse-symbol function_parameters) [4301 4306])
+                        ("wdg_list" variable nil (reparse-symbol function_parameters) [4308 4316]))                      ) (reparse-symbol indented_block_body) [4282 4419])
+                    ("run" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4432 4436]))                      ) (reparse-symbol indented_block_body) [4424 5506]))                  
+                :type "class")
+                nil [4254 5506])
+            ("Paste" type
+               (:superclasses ("QThread")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5547 5551])
+                        ("stage" variable nil (reparse-symbol function_parameters) [5553 5558])
+                        ("process_info" variable nil (reparse-symbol function_parameters) [5560 5572]))                      ) (reparse-symbol indented_block_body) [5534 5682])
+                    ("run" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5695 5699]))                      ) (reparse-symbol indented_block_body) [5687 7611]))                  
+                :type "class")
+                nil [5507 7611])
+            ("SelectionRect" type
+               (:superclasses ("QGraphicsRectItem")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7670 7674])
+                        ("rect" variable nil (reparse-symbol function_parameters) [7676 7680])
+                        ("parent" variable nil (reparse-symbol function_parameters) [7682 7688])
+                        ("scene" variable nil (reparse-symbol function_parameters) [7690 7695]))                      ) (reparse-symbol indented_block_body) [7657 7968]))                  
+                :type "class")
+                nil [7612 7968])
+            ("RulexScene" type
+               (:superclasses ("QGraphicsScene")
+                :members 
+                  ( (""""
+    The RulexScene class ia simple wrapper for the PyQt class QGraphicsScene.
+    This class provides a surface for managing 2D graphical object and serves as
+    a container for the RulexItem instances.
+    """" code nil (reparse-symbol indented_block_body) [8008 8223])
+                    ("w" variable nil (reparse-symbol indented_block_body) [8228 8236])
+                    ("h" variable nil (reparse-symbol indented_block_body) [8241 8249])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8268 8272])
+                        ("parent_view" variable nil (reparse-symbol function_parameters) [8274 8285]))                      ) (reparse-symbol indented_block_body) [8255 8541]))                  
+                :type "class")
+                nil [7969 8541])
+            ("RulexStage" type
+               (:superclasses ("QGraphicsView")
+                :members 
+                  ( (""""
+    The RulexStage class provides a widget for displaying the contents of a
+    RulexScene object.
+    """" code nil (reparse-symbol indented_block_body) [8580 8690])
+                    ("add_widget" variable nil (reparse-symbol indented_block_body) [8695 8730])
+                    ("remove_widget" variable nil (reparse-symbol indented_block_body) [8735 8773])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8792 8796])
+                        ("parent" variable nil (reparse-symbol function_parameters) [8798 8804])
+                        ("debug_f" variable nil (reparse-symbol function_parameters) [8806 8813]))                      ) (reparse-symbol indented_block_body) [8779 11402])
+                    ("wheelEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11422 11426])
+                        ("event" variable nil (reparse-symbol function_parameters) [11428 11433]))                      ) (reparse-symbol indented_block_body) [11407 12080])
+                    ("drawBackground" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12104 12108])
+                        ("painter" variable nil (reparse-symbol function_parameters) [12110 12117])
+                        ("rect" variable nil (reparse-symbol function_parameters) [12119 12123]))                      ) (reparse-symbol indented_block_body) [12085 13031])
+                    ("dragEnterEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13055 13059])
+                        ("event" variable nil (reparse-symbol function_parameters) [13061 13066]))                      ) (reparse-symbol indented_block_body) [13036 13274])
+                    ("dragLeaveEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13298 13302])
+                        ("event" variable nil (reparse-symbol function_parameters) [13304 13309]))                      ) (reparse-symbol indented_block_body) [13279 13548])
+                    ("dragMoveEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13571 13575])
+                        ("event" variable nil (reparse-symbol function_parameters) [13577 13582]))                      ) (reparse-symbol indented_block_body) [13553 13838])
+                    ("dropEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13857 13861])
+                        ("event" variable nil (reparse-symbol function_parameters) [13863 13868]))                      ) (reparse-symbol indented_block_body) [13843 14550])
+                    ("keyPressEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14573 14577])
+                        ("event" variable nil (reparse-symbol function_parameters) [14579 14584]))                      ) (reparse-symbol indented_block_body) [14555 15229])
+                    ("mousePressEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15254 15258])
+                        ("event" variable nil (reparse-symbol function_parameters) [15260 15265]))                      ) (reparse-symbol indented_block_body) [15234 17024])
+                    ("mouseMoveEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17048 17052])
+                        ("event" variable nil (reparse-symbol function_parameters) [17054 17059]))                      ) (reparse-symbol indented_block_body) [17029 19554])
+                    ("mouseReleaseEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19581 19585])
+                        ("event" variable nil (reparse-symbol function_parameters) [19587 19592]))                      ) (reparse-symbol indented_block_body) [19559 23263])
+                    ("timerEvent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23283 23287])
+                        ("event" variable nil (reparse-symbol function_parameters) [23289 23294]))                      ) (reparse-symbol indented_block_body) [23268 23311])
+                    ("AddEdge" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23328 23332])
+                        ("src" variable nil (reparse-symbol function_parameters) [23334 23337])
+                        ("dst" variable nil (reparse-symbol function_parameters) [23339 23342]))                      ) (reparse-symbol indented_block_body) [23316 23746])
+                    ("AddItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23763 23767])
+                        ("tsk_label" variable nil (reparse-symbol function_parameters) [23769 23778])
+                        ("category" variable nil (reparse-symbol function_parameters) [23780 23788])
+                        ("pos" variable nil (reparse-symbol function_parameters) [23790 23793])
+                        ("dont_snap" variable nil (reparse-symbol function_parameters) [23800 23809]))                      ) (reparse-symbol indented_block_body) [23751 24356])
+                    ("ClearStage" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [24376 24380]))                      ) (reparse-symbol indented_block_body) [24361 25124])
+                    ("ComputeItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [25145 25149])
+                        ("label" variable nil (reparse-symbol function_parameters) [25151 25156])
+                        ("mode" variable nil (reparse-symbol function_parameters) [25158 25162]))                      ) (reparse-symbol indented_block_body) [25129 27153])
+                    ("ComputeProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27177 27181]))                      ) (reparse-symbol indented_block_body) [27158 27293])
+                    ("ComputeOnwards" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27317 27321])
+                        ("label" variable nil (reparse-symbol function_parameters) [27323 27328]))                      ) (reparse-symbol indented_block_body) [27298 27380])
+                    ("ComputeDownOn" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27403 27407])
+                        ("label" variable nil (reparse-symbol function_parameters) [27409 27414]))                      ) (reparse-symbol indented_block_body) [27385 27465])
+                    ("Stop" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27479 27483]))                      ) (reparse-symbol indented_block_body) [27470 27560])
+                    ("CreateEdge" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27580 27584])
+                        ("src" variable nil (reparse-symbol function_parameters) [27586 27589])
+                        ("dst" variable nil (reparse-symbol function_parameters) [27591 27594])
+                        ("thread_f" variable nil (reparse-symbol function_parameters) [27596 27604]))                      ) (reparse-symbol indented_block_body) [27565 28170])
+                    ("CreateItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28190 28194])
+                        ("category" variable nil (reparse-symbol function_parameters) [28196 28204])
+                        ("pos" variable nil (reparse-symbol function_parameters) [28206 28209])
+                        ("thread_f" variable nil (reparse-symbol function_parameters) [28211 28219]))                      ) (reparse-symbol indented_block_body) [28175 29057])
+                    ("DeleteSelectedWidgets" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29088 29092]))                      ) (reparse-symbol indented_block_body) [29062 29332])
+                    ("DeleteEdge" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29352 29356])
+                        ("edge" variable nil (reparse-symbol function_parameters) [29358 29362])
+                        ("from_item_f" variable nil (reparse-symbol function_parameters) [29369 29380])
+                        ("thread_f" variable nil (reparse-symbol function_parameters) [29388 29396]))                      ) (reparse-symbol indented_block_body) [29337 30041])
+                    ("DeleteItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [30061 30065])
+                        ("item" variable nil (reparse-symbol function_parameters) [30067 30071])
+                        ("thread_f" variable nil (reparse-symbol function_parameters) [30078 30086]))                      ) (reparse-symbol indented_block_body) [30046 30689])
+                    ("DeselectAll" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [30710 30714])
+                        ("quite_f" variable nil (reparse-symbol function_parameters) [30716 30723]))                      ) (reparse-symbol indented_block_body) [30694 31054])
+                    ("HandleEdgeChange" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31080 31084])
+                        ("dst" variable nil (reparse-symbol function_parameters) [31086 31089]))                      ) (reparse-symbol indented_block_body) [31059 31695])
+                    ("ItemMoved" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [31714 31718])
+                        ("which_item" variable nil (reparse-symbol function_parameters) [31720 31730])
+                        ("shift" variable nil (reparse-symbol function_parameters) [31732 31737]))                      ) (reparse-symbol indented_block_body) [31700 32411])
+                    ("IsBusy" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32427 32431]))                      ) (reparse-symbol indented_block_body) [32416 32470])
+                    ("LoadProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32491 32495])
+                        ("set_label" variable nil (reparse-symbol function_parameters) [32497 32506])
+                        ("prc_label" variable nil (reparse-symbol function_parameters) [32508 32517]))                      ) (reparse-symbol indented_block_body) [32475 34024])
+                    ("GetNearestItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [34048 34052])
+                        ("point" variable nil (reparse-symbol function_parameters) [34054 34059]))                      ) (reparse-symbol indented_block_body) [34029 34575])
+                    ("GetNearestPin" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [34598 34602])
+                        ("point" variable nil (reparse-symbol function_parameters) [34604 34609]))                      ) (reparse-symbol indented_block_body) [34580 35428])
+                    ("SaveChanges" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [35449 35453]))                      ) (reparse-symbol indented_block_body) [35433 35805])
+                    ("ImportProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [35828 35832]))                      ) (reparse-symbol indented_block_body) [35810 36331])
+                    ("ExportProcess" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [36354 36358]))                      ) (reparse-symbol indented_block_body) [36336 36800])
+                    ("SelectItems" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [36821 36825])
+                        ("label" variable nil (reparse-symbol function_parameters) [36827 36832])
+                        ("value" variable nil (reparse-symbol function_parameters) [36834 36839]))                      ) (reparse-symbol indented_block_body) [36805 37263])
+                    ("RemoveEdge" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37283 37287])
+                        ("edge" variable nil (reparse-symbol function_parameters) [37289 37293]))                      ) (reparse-symbol indented_block_body) [37268 37490])
+                    ("RemoveItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37510 37514])
+                        ("item" variable nil (reparse-symbol function_parameters) [37516 37520]))                      ) (reparse-symbol indented_block_body) [37495 37804])
+                    ("ShowItem" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [37822 37826])
+                        ("label" variable nil (reparse-symbol function_parameters) [37828 37833]))                      ) (reparse-symbol indented_block_body) [37809 37984])
+                    ("UpdateStage" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38005 38009])
+                        ("update_info" variable nil (reparse-symbol function_parameters) [38011 38022])
+                        ("update_stat" variable nil (reparse-symbol function_parameters) [38024 38035])
+                        ("update" variable nil (reparse-symbol function_parameters) [38037 38043]))                      ) (reparse-symbol indented_block_body) [37989 38732])
+                    ("UpdateTaskInfo" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [38756 38760]))                      ) (reparse-symbol indented_block_body) [38737 39055])
+                    ("Copy" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [39069 39073])
+                        ("save_process_f" variable nil (reparse-symbol function_parameters) [39075 39089]))                      ) (reparse-symbol indented_block_body) [39060 40978])
+                    ("Paste" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [40993 40997])
+                        ("copy_info" variable nil (reparse-symbol function_parameters) [40999 41008]))                      ) (reparse-symbol indented_block_body) [40983 41143])
+                    ("TAddWidget" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [41163 41167])
+                        ("which_widget" variable nil (reparse-symbol function_parameters) [41169 41181])
+                        ("args" variable nil (reparse-symbol function_parameters) [41183 41187]))                      ) (reparse-symbol indented_block_body) [41148 41614])
+                    ("TRemoveWidget" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [41637 41641])
+                        ("which_widget" variable nil (reparse-symbol function_parameters) [41643 41655])
+                        ("args" variable nil (reparse-symbol function_parameters) [41657 41661]))                      ) (reparse-symbol indented_block_body) [41619 41923]))                  
+                :type "class")
+                nil [8542 41923])
+            ("if" code nil nil [41924 42223]))          
+    :file "RulexStage.py"
+    :pointmax 42223
+    :fsize 42222
+    :lastmodtime '(20526 13381)
+    :unmatched-syntax '((NAME 39376 . 39385) (IF 39402 . 39404) (ELSE 39424 . 39428) (NAME 39262 . 39264) (IF 39295 . 39297) (ELSE 39317 . 39321) (INDENT_BLOCK 36754 . 36800) (NEWLINE 36753 . 36754) (COLON 36752 . 36753) (NAME 36728 . 36732) (NAME 36733 . 36737) (AS 36747 . 36749) (INDENT_BLOCK 36236 . 36265) (NEWLINE 36235 . 36236) (COLON 36234 . 36235) (NAME 36210 . 36214) (NAME 36215 . 36219) (AS 36229 . 36231) (NAME 35187 . 35191) (IF 35214 . 35216) (ELSE 35259 . 35263) (NAME 26415 . 26416) (IF 26440 . 26442) (ELSE 26472 . 26476) (NAME 20462 . 20465) (IF 20481 . 20483) (ELSE 20500 . 20504) (NAME 20382 . 20385) (IF 20401 . 20403) (ELSE 20420 . 20424) (NAME 16893 . 16897) (IF 16923 . 16925) (ELSE 16956 . 16960) (NAME 7144 . 7156) (IF 7221 . 7223) (ELSE 7248 . 7252) (NAME 5903 . 5905) (IF 5931 . 5933) (ELSE 5949 . 5953) (NAME 5764 . 5773) (IF 5794 . 5796) (ELSE 5823 . 5827) (NAME 3191 . 3193) (IF 3334 . 3336) (ELSE 3353 . 3357) ($EOI 42223 . 42223) (NAME 7144 . 7156) (IF 7221 . 7223) (ELSE 7248 . 7252) (NAME 5903 . 5905) (IF 5931 . 5933) (ELSE 5949 . 5953) (NAME 5764 . 5773) (IF 5794 . 5796) (ELSE 5823 . 5827) (NAME 7144 . 7156) (IF 7221 . 7223) (ELSE 7248 . 7252) (NAME 5903 . 5905) (IF 5931 . 5933) (ELSE 5949 . 5953) (NAME 5764 . 5773) (IF 5794 . 5796) (ELSE 5823 . 5827) (NAME 3191 . 3193) (IF 3334 . 3336) (ELSE 3353 . 3357) (INDENT_BLOCK 539 . 4253) (NEWLINE 537 . 538))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex!RulexInterface!gui!stage!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

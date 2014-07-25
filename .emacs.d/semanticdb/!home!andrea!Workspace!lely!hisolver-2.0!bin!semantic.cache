@@ -1,0 +1,45 @@
+;; Object bin/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bin/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/parser" "-I$(top_srcdir)/matrix" "-I$(top_srcdir)/buffer" "-I$(top_srcdir)/filter")) nil [144 250])
+            ("AM_CFLAGS" variable (:default-value ("-Wall" "-Werror" "-pedantic" "-std=c99" "-D_BSD_SOURCE" "-D_XOPEN_SOURCE=600")) nil [271 348])
+            ("EXTRA_DIST" variable (:default-value ("cmdhisolver.c" "test_parser.c" "test_hisolver.c" "cluster_parser.c" "cluster_hisolver.c" "cluster.sh")) nil [397 499])
+            ("AM_LDFLAGS" variable (:default-value ("-lm" "@osdep_libraries@" "@lapack_libraries@" "-llci-util" "-llci-data" "-llci-math")) nil [500 586])
+            ("bin_PROGRAMS" variable (:default-value ("clusterparser")) nil [606 652])
+            ("clusterparser_SOURCES" variable (:default-value ("cluster_parser.c")) nil [652 693])
+            ("clusterparser_LDADD" variable (:default-value ("$(top_srcdir)/parser/libparser.la")) nil [693 749])
+            ("clusterparser_LDFLAGS" variable (:default-value ("-static" "-lm" "@osdep_libraries@" "@cluster_libraries@")) nil [749 823])
+            ("cluster_hisolver_SOURCES" variable (:default-value ("cluster_hisolver.c")) nil [824 870])
+            ("cluster_hisolver_LDADD" variable (:default-value ("$(top_srcdir)/parser/lib_hisolver.la")) nil [870 932])
+            ("cluster_hisolver_LDFLAGS" variable (:default-value ("-lm" "@osdep_libraries@" "@cluster_libraries@")) nil [932 1001])
+            ("bin_PROGRAMS" variable (:default-value ("testhisolver")) nil [1006 1073])
+            ("testhisolver_SOURCES" variable (:default-value ("test_hisolver.c")) nil [1074 1113])
+            ("testhisolver_LDADD" variable (:default-value ("$(top_srcdir)/parser/lib_hisolver.la")) nil [1113 1171])
+            ("testhisolver_LDFLAGS" variable (:default-value ("-lm" "@osdep_libraries@")) nil [1171 1216])
+            ("cmdhisolver_SOURCES" variable (:default-value ("cmdhisolver.c")) nil [1217 1253])
+            ("cmdhisolver_LDADD" variable (:default-value ("$(top_srcdir)/parser/lib_hisolver.la")) nil [1253 1310])
+            ("cmdhisolver_LDFLAGS" variable (:default-value ("-lm" "-llci-util" "-llci-data" "-llci-math" "@osdep_libraries@")) nil [1310 1387])
+            ("mastitis_SOURCES" variable (:default-value ("mastitis.c")) nil [1388 1418])
+            ("mastitis_LDADD" variable (:default-value ("$(top_srcdir)/parser/lib_hisolver.la")) nil [1418 1472])
+            ("mastitis_LDFLAGS" variable (:default-value ("-lm" "@osdep_libraries@")) nil [1472 1513])
+            ("mqc2_det_SOURCES" variable (:default-value ("mqc2_det.c")) nil [1514 1544])
+            ("mqc2_det_LDADD" variable (:default-value ("$(top_srcdir)/parser/lib_hisolver.la")) nil [1544 1598])
+            ("mqc2_det_LDFLAGS" variable (:default-value ("-lm" "@osdep_libraries@")) nil [1598 1639])
+            ("mqc2_cal_SOURCES" variable (:default-value ("mqc2_cal.c")) nil [1640 1670])
+            ("mqc2_cal_LDADD" variable (:default-value ("$(top_srcdir)/parser/lib_hisolver.la")) nil [1670 1724])
+            ("mqc2_cal_LDFLAGS" variable (:default-value ("-lm" "@osdep_libraries@")) nil [1724 1766]))          
+    :file "Makefile.am"
+    :pointmax 1844
+    :fsize 1843
+    :lastmodtime '(21347 44347 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!lely!hisolver-2.0!bin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

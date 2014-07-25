@@ -1,0 +1,71 @@
+;; Object datamanager/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "datamanager/"
+  :tables (list 
+   (semanticdb-table "RulexCompDatamanager.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [1 140])
+            ("datamanager" include nil nil [141 179])
+            ("RulexDataPlotPanel" include nil nil [180 229])
+            ("RulexDataUndo" include nil nil [230 276])
+            ("gui.models.RulexAttributeList" include nil nil [277 336])
+            ("components.common.RulexDataTable" include nil nil [337 417])
+            ("RulexValueTable" include nil nil [418 483])
+            ("components.RulexComponentBase" include nil nil [484 527])
+            ("RulexCompDatamanager" type
+               (:superclasses ("RulexComponentBase" "Ui_Datamanager")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [610 614])
+                        ("item" variable nil (reparse-symbol function_parameters) [616 620])
+                        ("parent" variable nil (reparse-symbol function_parameters) [622 628])
+                        ("debug_f" variable nil (reparse-symbol function_parameters) [635 642]))                      ) (reparse-symbol indented_block_body) [597 3689])
+                    ("AttContextMenu" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3721 3725])
+                        ("point" variable nil (reparse-symbol function_parameters) [3727 3732]))                      ) (reparse-symbol indented_block_body) [3702 5070])
+                    ("HandleMenu" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5098 5102]))                      ) (reparse-symbol indented_block_body) [5083 7402])
+                    ("UpdateComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7439 7443])
+                        ("full_update_f" variable nil (reparse-symbol function_parameters) [7445 7458]))                      ) (reparse-symbol indented_block_body) [7419 8458])
+                    ("RefreshComponent" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8484 8488]))                      ) (reparse-symbol indented_block_body) [8463 11551])
+                    ("OnAttributeCheck" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11577 11581])
+                        ("index_t" variable nil (reparse-symbol function_parameters) [11583 11590])
+                        ("index_b" variable nil (reparse-symbol function_parameters) [11597 11604]))                      ) (reparse-symbol indented_block_body) [11556 11743])
+                    ("OnClearFilter" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11766 11770])
+                        ("index" variable nil (reparse-symbol function_parameters) [11772 11777]))                      ) (reparse-symbol indented_block_body) [11748 12605])
+                    ("OnChangeDataView" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12631 12635])
+                        ("index" variable nil (reparse-symbol function_parameters) [12637 12642]))                      ) (reparse-symbol indented_block_body) [12610 12810])
+                    ("OnEditAttribute" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12835 12839]))                      ) (reparse-symbol indented_block_body) [12815 17233])
+                    ("OnSelectAttribute" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17276 17280])
+                        ("selected" variable nil (reparse-symbol function_parameters) [17282 17290])
+                        ("deselected" variable nil (reparse-symbol function_parameters) [17292 17302]))                      ) (reparse-symbol indented_block_body) [17254 17676])
+                    ("OnShowDataFilter" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17702 17706]))                      ) (reparse-symbol indented_block_body) [17681 19066])
+                    ("Export" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19098 19102]))                      ) (reparse-symbol indented_block_body) [19087 20993])
+                    ("Save" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21023 21027]))                      ) (reparse-symbol indented_block_body) [21014 21405])
+                    ("ShowAttribute" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21444 21448]))                      ) (reparse-symbol indented_block_body) [21426 27811]))                  
+                :type "class")
+                nil [529 27811])
+            ("if" code nil nil [27812 28283]))          
+    :file "RulexCompDatamanager.py"
+    :pointmax 28284
+    :fsize 28901
+    :lastmodtime '(20688 28311)
+    :unmatched-syntax '((NAME 16414 . 16425) (IF 16496 . 16498) (ELSE 16509 . 16513) (NAME 16121 . 16132) (IF 16203 . 16205) (ELSE 16216 . 16220) (NAME 15839 . 15850) (IF 15893 . 15895) (ELSE 15931 . 15935) (NAME 15571 . 15582) (IF 15617 . 15619) (ELSE 15655 . 15659) (NAME 15292 . 15303) (IF 15336 . 15338) (ELSE 15374 . 15378) (NAME 15019 . 15030) (IF 15063 . 15065) (ELSE 15101 . 15105) (NAME 14746 . 14757) (IF 14790 . 14792) (ELSE 14828 . 14832) (NAME 14491 . 14502) (IF 14532 . 14534) (ELSE 14570 . 14574) (NAME 14241 . 14252) (IF 14282 . 14284) (ELSE 14320 . 14324) (NAME 13980 . 13991) (IF 14031 . 14033) (ELSE 14069 . 14073) (NAME 13709 . 13720) (IF 13762 . 13764) (ELSE 13800 . 13804) (NAME 11266 . 11267) (IF 11296 . 11298) (ELSE 11316 . 11320) (NAME 11145 . 11146) (IF 11170 . 11172) (ELSE 11185 . 11189) (NAME 10717 . 10718) (IF 10799 . 10801) (ELSE 10812 . 10816) (NAME 9779 . 9780) (IF 9857 . 9859) (ELSE 9871 . 9875) (NAME 9607 . 9608) (IF 9687 . 9689) (ELSE 9701 . 9705) (NAME 6211 . 6216) (IF 6224 . 6226) (ELSE 6295 . 6299) (NAME 5627 . 5630) (IF 5635 . 5637) (ELSE 5655 . 5659) (NAME 5508 . 5513) (IF 5544 . 5546) (ELSE 5591 . 5595))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex_tag!RulexInterface!components!datamanager!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

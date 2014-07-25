@@ -1,0 +1,33 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "comm.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "comm.c"
+    :pointmax 5189
+    :fsize 5188
+    :lastmodtime '(21351 15210 461069 102000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/include")) nil [1 39])
+            ("lib_LTLIBRARIES" variable (:default-value ("liblci-comm.la")) nil [40 73])
+            ("liblci_comm_la_LDFLAGS" variable (:default-value ("-version-number" "0:1:0" "-no-undefined")) nil [74 135])
+            ("liblci_comm_la_SOURCES" variable (:default-value ("lci-comm.h" "comm.c" "comm.h" "input.c" "output.c")) nil [136 218])
+            ("liblci_comm_la_CFLAGS" variable (:default-value ("${lci_util_CFLAGS}" "${lci_data_CFLAGS}")) nil [219 287])
+            ("liblci_comm_la_LIBADD" variable (:default-value ("${lci_util_LIBS}" "${lci_data_LIBS}")) nil [288 352]))          
+    :file "Makefile.am"
+    :pointmax 353
+    :fsize 352
+    :lastmodtime '(21351 15210 457067 153000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!LCI!liblci-comm!trunk!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

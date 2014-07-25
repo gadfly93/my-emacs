@@ -1,0 +1,416 @@
+;; Object sort/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sort/"
+  :tables (list 
+   (semanticdb-table "quicksort.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("NRANSI" variable (:constant-flag t) nil [9 15])
+            ("nrutil.h" include nil nil [16 35])
+            ("SWAP" variable (:constant-flag t) nil [44 48])
+            ("M" variable (:constant-flag t) nil [89 90])
+            ("NSTACK" variable (:constant-flag t) nil [101 107])
+            ("sort" function
+               (:arguments 
+                  ( ("n" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [122 138])
+                    ("arr" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [139 149]))                  
+                :type "void")
+                nil [112 1323]))          
+    :file "quicksort.c"
+    :pointmax 1374
+    :fsize 1319
+    :lastmodtime '(20958 44761)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hpsort.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "hpsort.c"
+    :pointmax 1
+    :fsize 536
+    :lastmodtime '(20958 26552)
+    :unmatched-syntax '((semantic-list 197 . 1370) (punctuation 193 . 194) (symbol 180 . 193) (symbol 173 . 179) (symbol 169 . 172) (symbol 166 . 168) (symbol 159 . 165) (symbol 156 . 158) (symbol 147 . 155) (symbol 144 . 146) (symbol 141 . 143) (symbol 127 . 128) (punctuation 125 . 126) (symbol 116 . 125) (USING 97 . 102) (symbol 91 . 96) (symbol 81 . 90) (symbol 71 . 80) (symbol 66 . 70) (semantic-list 59 . 65) (symbol 57 . 59) (symbol 51 . 56) (symbol 48 . 50) (symbol 42 . 47) (semantic-list 12 . 41) (symbol 6 . 12) (VOID 1 . 5) (semantic-list 197 . 1371) (punctuation 193 . 194) (symbol 180 . 193) (symbol 173 . 179) (symbol 169 . 172) (symbol 166 . 168) (symbol 159 . 165) (symbol 156 . 158) (symbol 147 . 155) (symbol 144 . 146) (symbol 141 . 143) (symbol 127 . 128) (punctuation 125 . 126) (symbol 116 . 125) (USING 97 . 102) (symbol 91 . 96) (symbol 81 . 90) (symbol 71 . 80) (symbol 66 . 70) (semantic-list 59 . 65) (symbol 57 . 59) (symbol 51 . 56) (symbol 48 . 50) (symbol 42 . 47) (semantic-list 12 . 41) (symbol 6 . 12) (VOID 1 . 5))
+    )
+   (semanticdb-table "quicksort_omp.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("math.h" include (:system-flag t) nil [60 77])
+            ("omp.h" include (:system-flag t) nil [78 94])
+            ("VERBOSE" variable (:constant-flag t) nil [252 259])
+            ("stdlib.h" include (:system-flag t) nil [95 114])
+            ("stdio.h" include (:system-flag t) nil [115 133])
+            ("string.h" include (:system-flag t) nil [134 153])
+            ("math.h" include (:system-flag t) nil [154 171])
+            ("omp.h" include (:system-flag t) nil [172 188])
+            ("VERBOSE" variable (:constant-flag t) nil [198 205])
+            ("srand48" function
+               (:prototype-flag t
+                :type "void")
+                nil [209 224])
+            ("drand48" function
+               (:prototype-flag t
+                :type "double")
+                nil [225 242])
+            ("VERBOSE" variable (:constant-flag t) nil [252 259])
+            ("srand48" function
+               (:prototype-flag t
+                :type "void")
+                nil [263 278])
+            ("drand48" function
+               (:prototype-flag t
+                :type "double")
+                nil [279 296])
+            ("hpsort" function
+               (:arguments 
+                  ( ("n" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [311 327])
+                    ("ra" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [328 337]))                  
+                :type "void")
+                nil [299 800])
+            ("CmpInt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [821 835])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [836 850]))                  
+                :type "int")
+                nil [803 888])
+            ("merge" function
+               (:arguments 
+                  ( ("A" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [971 979])
+                    ("B" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [980 988])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [989 995])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [996 1002]))                  
+                :type "void")
+                nil [960 1350])
+            ("arraymerge" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1447 1454])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1455 1464])
+                    ("index" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1465 1476])
+                    ("N" variable (:type "int") (reparse-symbol arg-sub-list) [1477 1483]))                  
+                :type "void")
+                nil [1431 1950])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1961 1970])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1970 1982]))                  
+                :type "int")
+                nil [1952 4827]))          
+    :file "quicksort_omp.c"
+    :pointmax 4829
+    :fsize 4345
+    :lastmodtime '(20958 45130)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("VERBOSE" . ((number "0" 260 . 261)))
+          )
+
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("quicksort" function nil nil [2 61])
+            ("bench_all" function nil nil [61 147])
+            ("quicksortglibc" function nil nil [147 290]))          
+    :file "Makefile"
+    :pointmax 290
+    :fsize 289
+    :lastmodtime '(20959 53047)
+    :unmatched-syntax '((shell-command 228 . 290) (bol 227 . 227))
+    )
+   (semanticdb-table "bench_all.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("math.h" include (:system-flag t) nil [60 77])
+            ("omp.h" include (:system-flag t) nil [78 94])
+            ("VERBOSE" variable (:constant-flag t) nil [104 111])
+            ("srand48" function
+               (:prototype-flag t
+                :type "void")
+                nil [115 130])
+            ("drand48" function
+               (:prototype-flag t
+                :type "double")
+                nil [131 148])
+            ("sort" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("n" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [159 175])
+                    ("arr" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [176 186]))                  
+                :type "void")
+                nil [149 187])
+            ("hpsort" function
+               (:arguments 
+                  ( ("n" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [201 217])
+                    ("ra" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [218 227]))                  
+                :type "void")
+                nil [189 690])
+            ("CmpInt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [711 725])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [726 740]))                  
+                :type "int")
+                nil [693 778])
+            ("merge" function
+               (:arguments 
+                  ( ("A" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [861 869])
+                    ("B" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [870 878])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [879 885])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [886 892]))                  
+                :type "void")
+                nil [850 1240])
+            ("arraymerge" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1337 1344])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1345 1354])
+                    ("index" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1355 1366])
+                    ("N" variable (:type "int") (reparse-symbol arg-sub-list) [1367 1373]))                  
+                :type "void")
+                nil [1321 1840])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1851 1860])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1860 1872]))                  
+                :type "int")
+                nil [1842 4696]))          
+    :file "bench_all.c"
+    :pointmax 4699
+    :fsize 4697
+    :lastmodtime '(20958 49169)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("VERBOSE" . ((number "0" 113 . 114)))
+          )
+
+    )
+   (semanticdb-table "sort2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("NRANSI" variable (:constant-flag t) nil [10 16])
+            ("nrutil.h" include nil nil [17 36])
+            ("SWAP" variable (:constant-flag t) nil [45 49])
+            ("M" variable (:constant-flag t) nil [90 91])
+            ("NSTACK" variable (:constant-flag t) nil [102 108])
+            ("sort2" function
+               (:arguments 
+                  ( ("n" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [124 140])
+                    ("arr" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [141 153])
+                    ("brr" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [154 166]))                  
+                :type "void")
+                nil [113 1473]))          
+    :file "sort2.c"
+    :pointmax 1523
+    :fsize 1605
+    :lastmodtime '(20958 46054)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "glibc_qsort.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("alloca.h" include (:system-flag t) nil [1144 1163])
+            ("limits.h" include (:system-flag t) nil [1164 1183])
+            ("stdlib.h" include (:system-flag t) nil [1184 1203])
+            ("string.h" include (:system-flag t) nil [1204 1223])
+            ("stdio.h" include (:system-flag t) nil [1224 1242])
+            ("omp.h" include (:system-flag t) nil [1243 1259])
+            ("VERBOSE" variable (:constant-flag t) nil [1269 1276])
+            ("SWAP" variable (:constant-flag t) nil [1334 1338])
+            ("MAX_THRESH" variable (:constant-flag t) nil [2046 2056])
+            ("stack_node" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("lo" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2158 2167])
+                          ("hi" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2170 2179]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2139 2193])
+            ("STACK_SIZE" variable (:constant-flag t) nil [2511 2521])
+            ("PUSH" variable (:constant-flag t) nil [2558 2562])
+            ("POP" variable (:constant-flag t) nil [2638 2641])
+            ("STACK_NOT_EMPTY" variable (:constant-flag t) nil [2713 2728])
+            ("_quicksort" function
+               (:arguments 
+                  ( ("pbase" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3932 3950])
+                    ("total_elems" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3951 3970])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3971 3983])
+                    ("cmp" variable (:type ("__compar_d_fn_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3989 4009])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4010 4020]))                  
+                :type "void")
+                nil [3915 8683])
+            ("qsort2" function
+               (:arguments 
+                  ( ("b" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8699 8707])
+                    ("n" variable (:type "long int") (reparse-symbol arg-sub-list) [8708 8719])
+                    ("s" variable (:type "long int") (reparse-symbol arg-sub-list) [8720 8731])
+                    ("cmp" variable (:type ("__compar_fn_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8732 8750]))                  
+                :type "void")
+                nil [8686 8814])
+            ("CmpInt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8834 8848])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8849 8863]))                  
+                :type "int")
+                nil [8816 8901])
+            ("merge" function
+               (:arguments 
+                  ( ("A" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8984 8992])
+                    ("B" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8993 9001])
+                    ("m" variable (:type "long int") (reparse-symbol arg-sub-list) [9002 9013])
+                    ("n" variable (:type "long int") (reparse-symbol arg-sub-list) [9014 9025]))                  
+                :type "void")
+                nil [8973 9408])
+            ("arraymerge" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [9505 9512])
+                    ("size" variable (:type "long int") (reparse-symbol arg-sub-list) [9513 9527])
+                    ("index" variable
+                       (:pointer 1
+                        :type "long int")
+                        (reparse-symbol arg-sub-list) [9528 9544])
+                    ("N" variable (:type "long int") (reparse-symbol arg-sub-list) [9545 9556]))                  
+                :type "void")
+                nil [9489 10039])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [10051 10060])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10060 10072]))                  
+                :type "int")
+                nil [10042 11453]))          
+    :file "glibc_qsort.c"
+    :pointmax 11454
+    :fsize 11453
+    :lastmodtime '(20977 20373)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("STACK_SIZE" . ((semantic-list "(CHAR_BIT * sizeof(size_t))" 2522 . 2549)))
+          ("MAX_THRESH" . ((number "4" 2057 . 2058)))
+          ("SWAP" (spp-arg-list ("a" "b" "size") 1338 . 1350) . 
+              ((DO "do" 1378 . 1380) (semantic-list "{                                             \\
+    register size_t __size = (size);            \\
+    register char *__a = (a), *__b = (b);       \\
+    do                                          \\
+    {                                           \\
+      char __tmp = *__a;                        \\
+      *__a++ = *__b;                            \\
+      *__b++ = __tmp;                           \\
+    } while (--__size > 0);                     \\
+  }" 1428 . 1879) (WHILE "while" 1880 . 1885) (semantic-list "(0)" 1886 . 1889)))
+          ("POP" (spp-arg-list ("low" "high") 2641 . 2652) . ((semantic-list "((void) (--top, (low = top->lo), (high = top->hi)))" 2653 . 2704)))
+          ("STACK_NOT_EMPTY" . ((semantic-list "(stack < top)" 2729 . 2742)))
+          ("VERBOSE" . ((number "0" 1277 . 1278)))
+          ("PUSH" (spp-arg-list ("low" "high") 2562 . 2573) . ((semantic-list "((void) ((top->lo = (low)), (top->hi = (high)), ++top))" 2574 . 2629)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!sort!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

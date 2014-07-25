@@ -1,0 +1,1647 @@
+;; Object tpl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tpl/"
+  :tables (list 
+   (semanticdb-table "tpl.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TPL_H" variable (:constant-flag t) nil [1160 1165])
+            ("stddef.h" include (:system-flag t) nil [1168 1187])
+            ("inttypes.h" include (:system-flag t) nil [1366 1387])
+            ("tpl_jot" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4315 4324])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4325 4329]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4303 4330])
+            ("tpl_gather" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4240 4249])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4250 4254]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4224 4255])
+            ("tpl_peek" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4158 4167])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4168 4172]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4143 4173])
+            ("tpl_Alen" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("tpl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4079 4091])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [4092 4098]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4066 4099])
+            ("tpl_load" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("tpl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4000 4012])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4013 4022])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4023 4027]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3987 4028])
+            ("tpl_dump" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("tpl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3922 3934])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [3935 3944])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3945 3949]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3909 3950])
+            ("tpl_unpack" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("tpl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3845 3857])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3858 3864]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3830 3865])
+            ("tpl_pack" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("tpl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3766 3778])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3779 3785]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3753 3786])
+            ("tpl_free" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("tpl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3698 3710]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3684 3711])
+            ("tpl_map" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("tpl_node" type (:type "class") nil nil)
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3624 3634])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3634 3638]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3606 3639])
+            ("tpl_gather_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3414 3424])
+                    ("len" variable (:type "int") (reparse-symbol classsubparts) [3429 3437]))                  )
+                (reparse-symbol extern-c-contents) [3380 3453])
+            ("tpl_gather_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "tpl_gather_t"
+                :typedef ("tpl_gather_t" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [3380 3453])
+            ("tpl_bin" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [3291 3302])
+                    ("sz" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3307 3319]))                  )
+                (reparse-symbol extern-c-contents) [3262 3330])
+            ("tpl_bin" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "tpl_bin"
+                :typedef ("tpl_bin" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [3262 3330])
+            ("tpl_node" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [2749 2758])
+                    ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2763 2774])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2779 2790])
+                    ("num" variable (:type "int") (reparse-symbol classsubparts) [2862 2870])
+                    ("ser_osz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2933 2948])
+                    ("children" variable
+                       (:pointer 1
+                        :type ("tpl_node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3010 3036])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("tpl_node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3074 3102])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("tpl_node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3074 3102])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("tpl_node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3151 3175]))                  )
+                (reparse-symbol extern-c-contents) [2719 3207])
+            ("tpl_node" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "tpl_node"
+                :typedef ("tpl_node" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [2719 3207])
+            ("tpl_hook_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("oops" variable
+                       (:pointer 1
+                        :type ("tpl_print_fcn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2552 2572])
+                    ("malloc" variable
+                       (:pointer 1
+                        :type ("tpl_malloc_fcn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2577 2600])
+                    ("realloc" variable
+                       (:pointer 1
+                        :type ("tpl_realloc_fcn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2605 2630])
+                    ("free" variable
+                       (:pointer 1
+                        :type ("tpl_free_fcn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2635 2654])
+                    ("fatal" variable
+                       (:pointer 1
+                        :type ("tpl_fatal_fcn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2659 2680])
+                    ("gather_max" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2685 2703]))                  )
+                (reparse-symbol extern-c-contents) [2520 2717])
+            ("tpl_hook_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :superclasses "tpl_hook_t"
+                :typedef ("tpl_hook_t" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [2520 2717])
+            ("TPL_GATHER_MEM" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2189 2203])
+            ("TPL_GATHER_NONBLOCKING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2156 2178])
+            ("TPL_GATHER_BLOCKING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2123 2142])
+            ("TPL_GETSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1991 2002])
+            ("TPL_FXLENS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1958 1968])
+            ("TPL_DATAPEEK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1925 1937])
+            ("TPL_UFREE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1892 1901])
+            ("TPL_FD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1861 1867])
+            ("TPL_EXCESS_OK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1830 1843])
+            ("TPL_PREALLOCD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1799 1812])
+            ("TPL_MEM" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1768 1775])
+            ("TPL_FILE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1737 1745])
+            ("TPL_API" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1686 1693])
+            ("C" extern (:members 
+              ( ("TPL_API" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1686 1693])
+                ("TPL_FILE" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1737 1745])
+                ("TPL_MEM" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1768 1775])
+                ("TPL_PREALLOCD" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1799 1812])
+                ("TPL_EXCESS_OK" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1830 1843])
+                ("TPL_FD" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1861 1867])
+                ("TPL_UFREE" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1892 1901])
+                ("TPL_DATAPEEK" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1925 1937])
+                ("TPL_FXLENS" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1958 1968])
+                ("TPL_GETSIZE" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [1991 2002])
+                ("TPL_GATHER_BLOCKING" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [2123 2142])
+                ("TPL_GATHER_NONBLOCKING" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [2156 2178])
+                ("TPL_GATHER_MEM" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :constant-flag t)
+                    (reparse-symbol extern-c-contents) [2189 2203])
+                ("tpl_hook_t" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "typedef"
+                    :superclasses "tpl_hook_t"
+                    :typedef ("tpl_hook_t" type (:type "struct") nil nil))
+                    (reparse-symbol extern-c-contents) [2520 2717])
+                ("tpl_hook_t" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "struct"
+                    :members 
+                      ( ("oops" variable
+                           (:pointer 1
+                            :type ("tpl_print_fcn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [2552 2572])
+                        ("malloc" variable
+                           (:pointer 1
+                            :type ("tpl_malloc_fcn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [2577 2600])
+                        ("realloc" variable
+                           (:pointer 1
+                            :type ("tpl_realloc_fcn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [2605 2630])
+                        ("free" variable
+                           (:pointer 1
+                            :type ("tpl_free_fcn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [2635 2654])
+                        ("fatal" variable
+                           (:pointer 1
+                            :type ("tpl_fatal_fcn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [2659 2680])
+                        ("gather_max" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2685 2703]))                      )
+                    (reparse-symbol extern-c-contents) [2520 2717])
+                ("tpl_node" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "typedef"
+                    :superclasses "tpl_node"
+                    :typedef ("tpl_node" type (:type "struct") nil nil))
+                    (reparse-symbol extern-c-contents) [2719 3207])
+                ("tpl_node" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "struct"
+                    :members 
+                      ( ("type" variable (:type "int") (reparse-symbol classsubparts) [2749 2758])
+                        ("addr" variable
+                           (:pointer 1
+                            :type "void")
+                            (reparse-symbol classsubparts) [2763 2774])
+                        ("data" variable
+                           (:pointer 1
+                            :type "void")
+                            (reparse-symbol classsubparts) [2779 2790])
+                        ("num" variable (:type "int") (reparse-symbol classsubparts) [2862 2870])
+                        ("ser_osz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2933 2948])
+                        ("children" variable
+                           (:pointer 1
+                            :type ("tpl_node" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol classsubparts) [3010 3036])
+                        ("prev" variable
+                           (:pointer 1
+                            :type ("tpl_node" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol classsubparts) [3074 3102])
+                        ("next" variable
+                           (:pointer 1
+                            :type ("tpl_node" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol classsubparts) [3074 3102])
+                        ("parent" variable
+                           (:pointer 1
+                            :type ("tpl_node" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol classsubparts) [3151 3175]))                      )
+                    (reparse-symbol extern-c-contents) [2719 3207])
+                ("tpl_bin" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "typedef"
+                    :superclasses "tpl_bin"
+                    :typedef ("tpl_bin" type (:type "struct") nil nil))
+                    (reparse-symbol extern-c-contents) [3262 3330])
+                ("tpl_bin" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "struct"
+                    :members 
+                      ( ("addr" variable
+                           (:pointer 1
+                            :type "void")
+                            (reparse-symbol classsubparts) [3291 3302])
+                        ("sz" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3307 3319]))                      )
+                    (reparse-symbol extern-c-contents) [3262 3330])
+                ("tpl_gather_t" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "typedef"
+                    :superclasses "tpl_gather_t"
+                    :typedef ("tpl_gather_t" type (:type "struct") nil nil))
+                    (reparse-symbol extern-c-contents) [3380 3453])
+                ("tpl_gather_t" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "struct"
+                    :members 
+                      ( ("img" variable
+                           (:pointer 1
+                            :type "char")
+                            (reparse-symbol classsubparts) [3414 3424])
+                        ("len" variable (:type "int") (reparse-symbol classsubparts) [3429 3437]))                      )
+                    (reparse-symbol extern-c-contents) [3380 3453])
+                ("tpl_map" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("tpl_node" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("fmt" variable
+                           (:pointer 1
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [3624 3634])
+                        ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3634 3638]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [3606 3639])
+                ("tpl_free" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("r" variable
+                           (:pointer 1
+                            :type ("tpl_node" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [3698 3710]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [3684 3711])
+                ("tpl_pack" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("r" variable
+                           (:pointer 1
+                            :type ("tpl_node" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [3766 3778])
+                        ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3779 3785]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [3753 3786])
+                ("tpl_unpack" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("r" variable
+                           (:pointer 1
+                            :type ("tpl_node" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [3845 3857])
+                        ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3858 3864]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [3830 3865])
+                ("tpl_dump" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("r" variable
+                           (:pointer 1
+                            :type ("tpl_node" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [3922 3934])
+                        ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [3935 3944])
+                        ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3945 3949]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [3909 3950])
+                ("tpl_load" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("r" variable
+                           (:pointer 1
+                            :type ("tpl_node" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [4000 4012])
+                        ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4013 4022])
+                        ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4023 4027]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [3987 4028])
+                ("tpl_Alen" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("r" variable
+                           (:pointer 1
+                            :type ("tpl_node" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [4079 4091])
+                        ("i" variable (:type "int") (reparse-symbol arg-sub-list) [4092 4098]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [4066 4099])
+                ("tpl_peek" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "char"
+                    :arguments 
+                      ( ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4158 4167])
+                        ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4168 4172]))                      
+                    :pointer 1
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [4143 4173])
+                ("tpl_gather" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4240 4249])
+                        ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4250 4254]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [4224 4255])
+                ("tpl_jot" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4315 4324])
+                        ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4325 4329]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [4303 4330]))              ) nil [1437 4403]))          
+    :file "tpl.h"
+    :pointmax 4432
+    :fsize 4431
+    :lastmodtime '(20394 54495)
+    :unmatched-syntax '((punctuation 3578 . 3579) (semantic-list 3544 . 3578) (semantic-list 3529 . 3544) (INT 3525 . 3528) (TYPEDEF 3517 . 3524) (punctuation 2517 . 2518) (semantic-list 2501 . 2517) (semantic-list 2486 . 2501) (VOID 2481 . 2485) (TYPEDEF 2473 . 2480) (punctuation 2471 . 2472) (semantic-list 2460 . 2471) (semantic-list 2446 . 2460) (VOID 2441 . 2445) (TYPEDEF 2433 . 2440) (punctuation 2431 . 2432) (semantic-list 2409 . 2431) (semantic-list 2392 . 2409) (punctuation 2391 . 2392) (VOID 2386 . 2390) (TYPEDEF 2378 . 2385) (punctuation 2376 . 2377) (semantic-list 2365 . 2376) (semantic-list 2349 . 2365) (punctuation 2348 . 2349) (VOID 2343 . 2347) (TYPEDEF 2335 . 2342) (punctuation 2333 . 2334) (semantic-list 2311 . 2333) (semantic-list 2296 . 2311) (INT 2292 . 2295) (TYPEDEF 2284 . 2291))
+    :lexical-table 
+        '(("TPL_API")
+          ("TPL_FD" . ((semantic-list "(1 << 4)" 1875 . 1883)))
+          ("TPL_GATHER_MEM" . ((number "3" 2212 . 2213)))
+          ("TPL_PREALLOCD" . ((semantic-list "(1 << 2)" 1813 . 1821)))
+          ("TPL_EXCESS_OK" . ((semantic-list "(1 << 3)" 1844 . 1852)))
+          ("TPL_FXLENS" . ((semantic-list "(1 << 7)" 1972 . 1980)))
+          ("TPL_DATAPEEK" . ((semantic-list "(1 << 6)" 1939 . 1947)))
+          ("TPL_GATHER_BLOCKING" . ((number "1" 2146 . 2147)))
+          ("TPL_H")
+          ("TPL_GATHER_NONBLOCKING" . ((number "2" 2179 . 2180)))
+          ("TPL_FILE" . ((semantic-list "(1 << 0)" 1751 . 1759)))
+          ("TPL_MEM" . ((semantic-list "(1 << 1)" 1782 . 1790)))
+          ("TPL_UFREE" . ((semantic-list "(1 << 5)" 1906 . 1914)))
+          ("TPL_GETSIZE" . ((semantic-list "(1 << 8)" 2005 . 2013)))
+          )
+
+    )
+     (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("all" function nil nil [1 103]))          
+    :file "Makefile"
+    :pointmax 103
+    :fsize 102
+    :lastmodtime '(20394 55211)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "deserialize.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tpl.h" include nil nil [1 17])
+            ("lexical.h" include nil nil [18 38])
+            ("stdio.h" include (:system-flag t) nil [39 57])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [68 77])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [78 91]))                  
+                :type "int")
+                nil [59 350]))          
+    :file "deserialize.c"
+    :pointmax 348
+    :fsize 351
+    :lastmodtime '(20394 55256)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "serialize.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("tpl.h" include nil nil [1 17])
+            ("Rulex.h" include nil nil [18 36])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [47 56])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [57 70]))                  
+                :type "int")
+                nil [38 341]))          
+    :file "serialize.c"
+    :pointmax 323
+    :fsize 341
+    :lastmodtime '(20394 55556)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "lexical.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("NodeEnum" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("NODEUNKNOWN" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [15 27])
+                          ("NODEINT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [28 36])
+                          ("NODEVAR" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [37 45])
+                          ("NODEOPR" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [46 54])
+                          ("NODESETVALUE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [55 68])
+                          ("NODESTRING" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [83 94])
+                          ("NODEFLOAT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [95 105])
+                          ("NODETYPE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [106 115])
+                          ("NODENONE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [116 125])
+                          ("NODEVOID" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [126 135]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1 145])
+            ("ValType" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("VALUNKNOWN" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [160 171])
+                          ("VALSTRING" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [172 182])
+                          ("VALINT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [183 190])
+                          ("VALFLOAT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [191 200])
+                          ("VALPOINT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [201 210])
+                          ("VALSETVALUE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [225 237])
+                          ("VALDATA" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [238 246])
+                          ("VALNONE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [247 255])
+                          ("VALTYPE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [256 264]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [146 273])
+            ("OprNodeType" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("oper" variable (:type "int") (reparse-symbol classsubparts) [310 319])
+                          ("nops" variable (:type "int") (reparse-symbol classsubparts) [355 364])
+                          ("op" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type ("NodeTypeTag" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil))
+                              (reparse-symbol classsubparts) [410 436]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [291 480])
+            ("NodeType" type
+               (:typedef ("NodeTypeTag" type (:type "struct") nil nil)
+                :superclasses "NodeTypeTag"
+                :type "typedef")
+                nil [482 1186])
+            ("NodeTypeTag" type
+               (:members 
+                  ( ("type" variable (:type ("NodeEnum" type (:type "class") nil nil)) (reparse-symbol classsubparts) [513 527])
+                    ("line" variable (:type "int") (reparse-symbol classsubparts) [562 571])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [624 633])
+                    ("restype" variable (:type ("ValType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [684 700])
+                    ("isleft" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [746 761])
+                    ("returning" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [874 892])
+                    ("isfunc" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [895 910])
+                    ("exfunc" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [913 928])
+                    ("isarg" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [931 945])
+                    ("resval" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1045 1062])
+                    ("i_resval" variable (:type "int") (reparse-symbol classsubparts) [1098 1111])
+                    ("varname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1114 1128])
+                    ("opr" variable (:type ("OprNodeType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1131 1147]))                  
+                :type "struct")
+                nil [482 1186])
+            ("tk" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("iValue" variable (:type "int") (reparse-symbol classsubparts) [1207 1218])
+                          ("fValue" variable (:type "float") (reparse-symbol classsubparts) [1257 1270])
+                          ("strValue" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1305 1320])
+                          ("nPtr" variable
+                             (:pointer 1
+                              :type ("NodeType" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1342 1357]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1188 1394])
+            ("ParseParam" type
+               (:typedef ("parse_parm_s" type (:type "struct") nil nil)
+                :superclasses "parse_parm_s"
+                :type "typedef")
+                nil [1396 1873])
+            ("parse_parm_s" type
+               (:members 
+                  ( ("yyscanner" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1428 1447])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1479 1492])
+                    ("source_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1524 1553])
+                    ("pos" variable (:type "int") (reparse-symbol classsubparts) [1583 1594])
+                    ("length" variable (:type "int") (reparse-symbol classsubparts) [1631 1645])
+                    ("result" variable (:type "int") (reparse-symbol classsubparts) [1670 1684])
+                    ("ispace" variable (:type "int") (reparse-symbol classsubparts) [1687 1702])
+                    ("level" variable (:type "int") (reparse-symbol classsubparts) [1705 1727])
+                    ("line" variable (:type "int") (reparse-symbol classsubparts) [1759 1780])
+                    ("graph" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1812 1834])
+                    ("solve" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1837 1859]))                  
+                :type "struct")
+                nil [1396 1873])
+            ("parse" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1886 1896])
+                    ("result" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1897 1909]))                  
+                :type "void")
+                nil [1875 1910])
+            ("YYSTYPE" variable (:constant-flag t) nil [1920 1927])
+            ("YY_EXTRA_TYPE" variable (:constant-flag t) nil [1940 1953])
+            ("yylex" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("tk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2077 2087])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2088 2095]))                  
+                :type "int")
+                nil [2066 2096])
+            ("yylex_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2113 2121]))                  
+                :type "int")
+                nil [2097 2122])
+            ("yylex_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2142 2149]))                  
+                :type "int")
+                nil [2123 2150])
+            ("yyset_extra" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("ParseParam" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2176 2190])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2191 2198]))                  
+                :type "void")
+                nil [2151 2199])
+            ("yyparse" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("ParseParam" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2213 2226])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2227 2234]))                  
+                :type "int")
+                nil [2200 2235])
+            ("yyerror" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("ParseParam" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2258 2271])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2272 2279])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2280 2287]))                  
+                :type "void")
+                nil [2236 2288]))          
+    :file "lexical.h"
+    :pointmax 2292
+    :fsize 2291
+    :lastmodtime '(20394 55370)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("YY_EXTRA_TYPE" . ((symbol "ParseParam" 1954 . 1964) (punctuation "*" 1965 . 1966)))
+          ("YYSTYPE" . ((symbol "tk" 1929 . 1931)))
+          )
+
+    )
+   (semanticdb-table "Rulex-defs.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_CRT_SECURE_NO_WARNINGS" variable (:constant-flag t) nil [414 437])
+            ("_CRT_SECURE_NO_DEPRECATE" variable (:constant-flag t) nil [446 470])
+            ("stdio.h" include (:system-flag t) nil [520 538])
+            ("stdlib.h" include (:system-flag t) nil [539 558])
+            ("stdarg.h" include (:system-flag t) nil [559 578])
+            ("math.h" include (:system-flag t) nil [579 596])
+            ("string.h" include (:system-flag t) nil [597 616])
+            ("ctype.h" include (:system-flag t) nil [617 635])
+            ("limits.h" include (:system-flag t) nil [636 655])
+            ("float.h" include (:system-flag t) nil [656 674])
+            ("signal.h" include (:system-flag t) nil [675 694])
+            ("setjmp.h" include (:system-flag t) nil [695 714])
+            ("time.h" include (:system-flag t) nil [715 732])
+            ("unistd.h" include (:system-flag t) nil [854 875])
+            ("sys/socket.h" include (:system-flag t) nil [876 901])
+            ("sys/types.h" include (:system-flag t) nil [902 926])
+            ("netinet/in.h" include (:system-flag t) nil [927 952])
+            ("arpa/inet.h" include (:system-flag t) nil [953 977])
+            ("asm/errno.h" include (:system-flag t) nil [978 1002])
+            ("INVALID_SOCKET" variable (:constant-flag t) nil [1013 1027])
+            ("SOCKET_ERROR" variable (:constant-flag t) nil [1043 1055])
+            ("Sleep" variable (:constant-flag t) nil [1073 1078])
+            ("JOURNAL" variable (:constant-flag t) nil [1248 1255])
+            ("HASP" variable (:constant-flag t) nil [1380 1384])
+            ("LICENSE" variable (:constant-flag t) nil [1414 1421])
+            ("BuildNF" variable (:constant-flag t) nil [1570 1577])
+            ("LINPROG" variable (:constant-flag t) nil [1622 1629])
+            ("FALSE" variable (:constant-flag t) nil [1664 1669])
+            ("TRUE" variable (:constant-flag t) nil [1698 1702])
+            ("EPS" variable (:constant-flag t) nil [1732 1735])
+            ("EPSERR" variable (:constant-flag t) nil [1772 1778])
+            ("EPSERR" variable (:constant-flag t) nil [1772 1778])
+            ("EPS2" variable (:constant-flag t) nil [1812 1816])
+            ("EPS2" variable (:constant-flag t) nil [1812 1816])
+            ("EPSERR2" variable (:constant-flag t) nil [1852 1859])
+            ("EPS4" variable (:constant-flag t) nil [1892 1896])
+            ("TINY" variable (:constant-flag t) nil [1932 1936])
+            ("HUGEINT" variable (:constant-flag t) nil [1973 1980])
+            ("HUGEFLOAT" variable (:constant-flag t) nil [2016 2025])
+            ("MISSING" variable (:constant-flag t) nil [2054 2061])
+            ("HOLDVAL" variable (:constant-flag t) nil [2089 2096])
+            ("NUMBITS" variable (:constant-flag t) nil [2130 2137])
+            ("PI" variable (:constant-flag t) nil [2187 2189])
+            ("CLAMP" variable (:constant-flag t) nil [2232 2237])
+            ("Max" variable (:constant-flag t) nil [2345 2348])
+            ("Min" variable (:constant-flag t) nil [2395 2398])
+            ("Sign" variable (:constant-flag t) nil [2445 2449])
+            ("Round" variable (:constant-flag t) nil [2509 2514])
+            ("Log2" variable (:constant-flag t) nil [2557 2561])
+            ("Free" variable (:constant-flag t) nil [2620 2624])
+            ("Swap" variable (:constant-flag t) nil [2677 2681])
+            ("Check" variable (:constant-flag t) nil [2745 2750])
+            ("Bit" variable (:constant-flag t) nil [2813 2816])
+            ("IsBoolean" variable (:constant-flag t) nil [2868 2877])
+            ("Space" variable (:constant-flag t) nil [2945 2950])
+            ("Separator" variable (:constant-flag t) nil [3014 3023])
+            ("Relation" variable (:constant-flag t) nil [3069 3077])
+            ("Brace" variable (:constant-flag t) nil [3124 3129])
+            ("Rulebuilder" variable (:constant-flag t) nil [3179 3190])
+            ("Delimiter" variable (:constant-flag t) nil [3237 3246])
+            ("Control" variable (:constant-flag t) nil [3314 3321])
+            ("DVal" variable (:constant-flag t) nil [3386 3390])
+            ("CVal" variable (:constant-flag t) nil [3435 3439])
+            ("SVal" variable (:constant-flag t) nil [3484 3488])
+            ("G" variable (:constant-flag t) nil [3532 3533])
+            ("TypeEq" variable (:constant-flag t) nil [3586 3592])
+            ("SetBit" variable (:constant-flag t) nil [3720 3726])
+            ("ClearBit" variable (:constant-flag t) nil [3790 3798])
+            ("BitSet" variable (:constant-flag t) nil [3861 3867])
+            ("MAXSPACE" variable (:constant-flag t) nil [3931 3939])
+            ("MAXNAME" variable (:constant-flag t) nil [3967 3974])
+            ("MAXNOMINAL" variable (:constant-flag t) nil [4003 4013])
+            ("MAXSTRING" variable (:constant-flag t) nil [4037 4046])
+            ("MAXATTVAL" variable (:constant-flag t) nil [4074 4083])
+            ("MAXTRIALS" variable (:constant-flag t) nil [4114 4123])
+            ("MAXWARN" variable (:constant-flag t) nil [4150 4157])
+            ("OVERLAP" variable (:constant-flag t) nil [4186 4193])
+            ("MAXATT" variable (:constant-flag t) nil [4224 4230])
+            ("MAXDATA" variable (:constant-flag t) nil [4263 4270])
+            ("HIGHINC" variable (:constant-flag t) nil [4306 4313])
+            ("LOWINC" variable (:constant-flag t) nil [4342 4348])
+            ("INCORD" variable (:constant-flag t) nil [4377 4383])
+            ("NBLOCK" variable (:constant-flag t) nil [4415 4421])
+            ("NCOUNT" variable (:constant-flag t) nil [4449 4455])
+            ("MAXSTAT" variable (:constant-flag t) nil [4484 4491])
+            ("NSTATVAL" variable (:constant-flag t) nil [4519 4527])
+            ("NPROGRESS" variable (:constant-flag t) nil [4553 4562])
+            ("PROGFACT" variable (:constant-flag t) nil [4588 4596])
+            ("CLOCKTIME" variable (:constant-flag t) nil [4626 4635])
+            ("TIMETOSAVE" variable (:constant-flag t) nil [4663 4673])
+            ("TIMETOPRINT" variable (:constant-flag t) nil [4699 4710])
+            ("PASSTOSAVE" variable (:constant-flag t) nil [4734 4744])
+            ("COMPUTHRESH" variable (:constant-flag t) nil [4770 4781])
+            ("TIMECONSTGREEDY" variable (:constant-flag t) nil [4806 4821])
+            ("TIMECONSTEX" variable (:constant-flag t) nil [4842 4853])
+            ("NRULCONSTGREEDY" variable (:constant-flag t) nil [4878 4893])
+            ("NRULCONSTEX" variable (:constant-flag t) nil [4916 4927])
+            ("VERSION" variable (:constant-flag t) nil [4954 4961]))          
+    :file "Rulex-defs.h"
+    :pointmax 4984
+    :fsize 5140
+    :lastmodtime '(20394 55544)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_CRT_SECURE_NO_WARNINGS")
+          ("EPSERR" . ((number "1.0E-5f" 1795 . 1802)))
+          ("TypeEq" (spp-arg-list ("t1" "t2") 3614 . 3621) . ((semantic-list "(t2 == 0 || ((int)t2 > 0 && t1 == t2) || \\
+				                          ((int)t2 < 0 && t1 != -t2))" 3631 . 3731)))
+          ("OVERLAP" . ((number "0.4f" 4231 . 4235)))
+          ("NRULCONSTEX" . ((number "5E8" 4961 . 4964)))
+          ("SOCKET_ERROR" . ((semantic-list "(-1)" 1078 . 1082)))
+          ("NUMBITS" . ((semantic-list "(int)" 2175 . 2180) (semantic-list "(8*sizeof(Bitmask))" 2180 . 2199)))
+          ("Sign" (spp-arg-list ("a" "b") 2471 . 2476) . ((semantic-list "((b) >= 0 ? fabs(a) : -fabs(a))" 2490 . 2521)))
+          ("HIGHINC" . ((number "128" 4351 . 4354)))
+          ("VERSION" . ((string "\"1.6\"" 4999 . 5004)))
+          ("LICENSE" . ((number "0" 1454 . 1455)))
+          ("MISSING" . ((punctuation "-" 2099 . 2100) (number "1" 2100 . 2101)))
+          ("Brace" (spp-arg-list ("s") 3151 . 3154) . ((semantic-list "(s == '{' || s == '}')" 3169 . 3191)))
+          ("MAXSTRING" . ((number "1024" 4082 . 4086)))
+          ("PROGFACT" . ((number "100.0" 4633 . 4638)))
+          ("INVALID_SOCKET" . ((semantic-list "(-1)" 1048 . 1052)))
+          ("BuildNF" . ((symbol "BuildNormalFormGlpk" 1612 . 1631)))
+          ("Delimiter" (spp-arg-list ("s") 3268 . 3271) . ((semantic-list "(Separator(s) || Rulebuilder(s) || s == ':')" 3282 . 3326)))
+          ("MAXATTVAL" . ((number "1000000" 4119 . 4126)))
+          ("NBLOCK" . ((number "3" 4460 . 4461)))
+          ("EPS" . ((number "5.0E-8f" 1775 . 1782)))
+          ("EPS2" . ((number "3.0E-16" 1835 . 1842)))
+          ("HUGEFLOAT" . ((number "1e37f" 2061 . 2066)))
+          ("HOLDVAL" . ((punctuation "-" 2134 . 2135) (number "1000000" 2135 . 2142)))
+          ("Max" (spp-arg-list ("a" "b") 2370 . 2375) . ((semantic-list "((a)>(b) ? a : b)" 2390 . 2407)))
+          ("INCORD" . ((number "1024" 4422 . 4426)))
+          ("NPROGRESS" . ((number "10" 4598 . 4600)))
+          ("TIMECONSTEX" . ((number "1.0" 4887 . 4890)))
+          ("Round" (spp-arg-list ("x") 2536 . 2539) . ((semantic-list "((int) (x+0.5))" 2554 . 2569)))
+          ("Log2" (spp-arg-list ("x") 2583 . 2586) . ((semantic-list "(1.442695041*log((double)(x)))" 2602 . 2632)))
+          ("Relation" (spp-arg-list ("s") 3099 . 3102) . ((semantic-list "(s == '=' || s == '!')" 3114 . 3136)))
+          ("Control" (spp-arg-list ("s") 3343 . 3346) . ((semantic-list "(iscntrl(s) && s != '\\t' && s != '\\n')" 3359 . 3397)))
+          ("MAXATT" . ((number "100000" 4269 . 4275)))
+          ("EPS4" . ((number "1.0E-32" 1937 . 1944)))
+          ("Min" (spp-arg-list ("a" "b") 2420 . 2425) . ((semantic-list "((a)<(b) ? a : b)" 2440 . 2457)))
+          ("Free" (spp-arg-list ("x") 2646 . 2649) . ((semantic-list "(FreeSafe((void **)(x)))" 2665 . 2689)))
+          ("Swap" (spp-arg-list ("a" "b") 2703 . 2708) . ((semantic-list "{temp=(a); (a) = (b); (b) = temp;}" 2722 . 2756)))
+          ("Rulebuilder" (spp-arg-list ("s") 3212 . 3215) . ((semantic-list "(Relation(s) || Brace(s))" 3224 . 3249)))
+          ("CVal" (spp-arg-list ("Item") 3461 . 3467) . 
+              ((semantic-list "(Item)" 3480 . 3486) (punctuation "." 3486 . 3487) (symbol "_cont_val" 3487 . 3496)))
+          ("G" (spp-arg-list ("Item") 3555 . 3561) . ((semantic-list "(spaces[ispace].Item)" 3577 . 3598)))
+          ("MAXSPACE" . ((number "128" 3976 . 3979)))
+          ("MAXTRIALS" . ((number "100" 4159 . 4162)))
+          ("NCOUNT" . ((number "5" 4494 . 4495)))
+          ("TINY" . ((number "1.0E-20f" 1977 . 1985)))
+          ("Check" (spp-arg-list ("v" "l" "h") 2772 . 2779) . ((semantic-list "((l <= v && v <= h) ? FALSE : TRUE)" 2790 . 2825)))
+          ("IsBoolean" (spp-arg-list ("s") 2899 . 2902) . ((semantic-list "(Bit(s) || s == '2' || s == '-' || s == '*')" 2913 . 2957)))
+          ("MAXNAME" . ((number "256" 4012 . 4015)))
+          ("LINPROG" . ((number "0" 1664 . 1665)))
+          ("TRUE" . ((number "1" 1741 . 1742)))
+          ("HUGEINT" . ((number "2147483647" 2018 . 2028)))
+          ("Separator" (spp-arg-list ("s") 3045 . 3048) . ((semantic-list "(Space(s) || s == ',')" 3059 . 3081)))
+          ("SVal" (spp-arg-list ("Item") 3510 . 3516) . 
+              ((semantic-list "(Item)" 3529 . 3535) (punctuation "." 3535 . 3536) (symbol "_str_val" 3536 . 3544)))
+          ("_CRT_SECURE_NO_DEPRECATE")
+          ("Space" (spp-arg-list ("s") 2972 . 2975) . ((semantic-list "(s == ' ' || s == '\\t' || s == '\\n')" 2990 . 3026)))
+          ("ClearBit" (spp-arg-list ("data" "i") 3820 . 3828) . ((semantic-list "(data[G(bitref)[i]] &= ~G(bitmask)[i])" 3835 . 3873)))
+          ("MAXDATA" . ((number "100000000" 4308 . 4317)))
+          ("COMPUTHRESH" . ((number "1E7" 4815 . 4818)))
+          ("NRULCONSTGREEDY" . ((number "40000" 4923 . 4928)))
+          ("Bit" (spp-arg-list ("s") 2838 . 2841) . ((semantic-list "(s == '0' || s == '1')" 2858 . 2880)))
+          ("SetBit" (spp-arg-list ("data" "i") 3748 . 3756) . ((semantic-list "(data[G(bitref)[i]] |= G(bitmask)[i])" 3765 . 3802)))
+          ("MAXWARN" . ((number "100" 4195 . 4198)))
+          ("MAXSTAT" . ((number "20" 4529 . 4531)))
+          ("CLOCKTIME" . ((number "1800" 4671 . 4675)))
+          ("TIMETOSAVE" . ((number "300" 4708 . 4711)))
+          ("TIMECONSTGREEDY" . ((number "3.5" 4851 . 4854)))
+          ("JOURNAL" . ((number "0" 1290 . 1291)))
+          ("EPSERR2" . ((number "1.0E-14" 1897 . 1904)))
+          ("PI" . ((number "3.141592654f" 2232 . 2244)))
+          ("DVal" (spp-arg-list ("Item") 3412 . 3418) . 
+              ((semantic-list "(Item)" 3431 . 3437) (punctuation "." 3437 . 3438) (symbol "_disc_val" 3438 . 3447)))
+          ("BitSet" (spp-arg-list ("data" "i") 3889 . 3897) . ((semantic-list "(data[G(bitref)[i]] & G(bitmask)[i])" 3906 . 3942)))
+          ("MAXNOMINAL" . ((number "5" 4048 . 4049)))
+          ("LOWINC" . ((number "16" 4387 . 4389)))
+          ("NSTATVAL" . ((number "4" 4564 . 4565)))
+          ("TIMETOPRINT" . ((number "10" 4744 . 4746)))
+          ("Sleep" (spp-arg-list ("x") 1098 . 1101) . ((symbol "sleep" 1115 . 1120) (semantic-list "(x)" 1120 . 1123)))
+          ("HASP" . ((number "1" 1420 . 1421)))
+          ("FALSE" . ((number "0" 1707 . 1708)))
+          ("CLAMP" . ((number "0.95f" 2277 . 2282)))
+          ("PASSTOSAVE" . ((number "10" 4779 . 4781)))
+          )
+
+    )
+   (semanticdb-table "Rulex.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("SNNDLL_API" variable (:constant-flag t) nil [218 228])
+            ("Rulex-defs.h" include nil nil [238 261])
+            ("Rulex-types.h" include nil nil [262 286])
+            ("lexical.h" include nil nil [287 307])
+            ("parser.h" include nil nil [308 327])
+            ("tolowc" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type "char")
+                nil [329 353])
+            ("tolowconv" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type "char")
+                nil [354 377])
+            ("busyspace" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("Boolean" type (:type "class") nil nil))
+                nil [378 404])
+            ("nspace" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [437 455])
+            ("spaces" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("SpaceStruct" type (:type "class") nil nil))
+                nil [499 526])
+            ("Rulex-funs.h" include nil nil [590 613])
+            ("Rulex-exps.h" include nil nil [614 637]))          
+    :file "Rulex.h"
+    :pointmax 639
+    :fsize 669
+    :lastmodtime '(20394 55673)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SNNDLL_API")
+          )
+
+    )
+   (semanticdb-table "language.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("Rulex.h" include nil nil [431 449])
+            ("string.h" include (:system-flag t) nil [450 469])
+            ("SIZEOF_NODETYPE" variable (:constant-flag t) nil [478 493])
+            ("GRAPH_COL_DIST" variable (:constant-flag t) nil [550 564])
+            ("GRAPH_LN_DIST" variable (:constant-flag t) nil [614 627])
+            ("GRAPH_L_MAX" variable (:constant-flag t) nil [676 687])
+            ("GRAPH_C_MAX" variable (:constant-flag t) nil [700 711])
+            ("MAXVARDIM" variable (:constant-flag t) nil [724 733])
+            ("graph" variable
+               (:dereference 2
+                :type "char")
+                nil [822 859])
+            ("graphnumber" variable (:type "int") nil [890 910])
+            ("ValTypeToAttType" function
+               (:arguments 
+                  ( ("type" variable (:type ("ValType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1136 1149]))                  
+                :type ("AttType" type (:type "enum") nil nil))
+                nil [1106 1359])
+            ("OperandToAttType" function
+               (:arguments 
+                  ( ("type" variable (:type ("OperandType" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [1586 1608]))                  
+                :type ("AttType" type (:type "enum") nil nil))
+                nil [1556 1785])
+            ("GetNodeTypeString" function
+               (:arguments 
+                  ( ("nodetype" variable (:type ("NodeEnum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2029 2047])
+                    ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2048 2058]))                  
+                :type "void")
+                nil [2006 2645])
+            ("GetValTypeString" function
+               (:arguments 
+                  ( ("valtype" variable (:type ("ValType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2886 2902])
+                    ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2903 2913]))                  
+                :type "void")
+                nil [2864 3431])
+            ("GetOperatorString" function
+               (:arguments 
+                  ( ("optype" variable (:type ("OperatorType" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [3674 3699])
+                    ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3700 3710]))                  
+                :type "void")
+                nil [3651 4124])
+            ("CreateNodeVoid" function
+               (:pointer 1
+                :arguments 
+                  ( ("line" variable (:type "int") (reparse-symbol arg-sub-list) [4356 4365])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [4366 4377]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [4330 4816])
+            ("CreateNodeNone" function
+               (:pointer 1
+                :arguments 
+                  ( ("line" variable (:type "int") (reparse-symbol arg-sub-list) [5048 5057])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [5058 5069]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [5022 5505])
+            ("CreateNodeInt" function
+               (:pointer 1
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [5742 5752])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [5753 5762])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [5763 5774]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [5717 6263])
+            ("CreateNodeFloat" function
+               (:pointer 1
+                :arguments 
+                  ( ("value" variable (:type "float") (reparse-symbol arg-sub-list) [6502 6514])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [6515 6524])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [6525 6536]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [6475 7023])
+            ("CreateNodeCol" function
+               (:pointer 1
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7258 7274])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [7275 7284])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [7285 7296]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [7233 7892])
+            ("CreateNodeType" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable (:type ("ValType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8126 8139])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [8140 8149])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [8150 8161]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [8100 8669])
+            ("CreateNodeVar" function
+               (:pointer 1
+                :arguments 
+                  ( ("varname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8901 8915])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [8916 8925])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [8926 8937]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [8876 9474])
+            ("CreateNodeString" function
+               (:pointer 1
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9712 9720])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [9721 9730])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [9731 9742]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [9684 10470])
+            ("CreateNodeOpr" function
+               (:pointer 1
+                :arguments 
+                  ( ("oper" variable (:type "int") (reparse-symbol arg-sub-list) [10707 10716])
+                    ("nops" variable (:type "int") (reparse-symbol arg-sub-list) [10717 10726])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [10727 10736])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [10737 10748])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [10748 10752]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [10683 11551])
+            ("CopyNode" function
+               (:arguments 
+                  ( ("p1" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11778 11791])
+                    ("p2" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11792 11805])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [11806 11817]))                  
+                :type "int")
+                nil [11765 12595])
+            ("FindNodeIsArg" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12883 12895])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [12896 12906]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [12859 12987])
+            ("FindNodeIsArgRec" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13302 13314])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [13315 13325])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [13326 13333]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [13275 13629])
+            ("FindNodeOpr" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13900 13912])
+                    ("oper" variable (:type "int") (reparse-symbol arg-sub-list) [13913 13922])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [13923 13933]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [13878 14018])
+            ("FindNodeOprRec" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14315 14327])
+                    ("oper" variable (:type "int") (reparse-symbol arg-sub-list) [14328 14337])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [14338 14348])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [14349 14356]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [14290 14706])
+            ("FindNode" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14965 14977])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [14978 14987])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [14988 14998]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [14946 15080])
+            ("FindNodeRec" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15340 15352])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [15353 15362])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [15363 15373])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [15374 15381]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [15318 15676])
+            ("FindNodeExpr" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15950 15962])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [15963 15973]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [15927 16053])
+            ("FindNodeExprRec" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16329 16341])
+                    ("nfind" variable (:type "int") (reparse-symbol arg-sub-list) [16342 16352])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [16353 16360]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [16303 16659])
+            ("FindNodeReturning" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16928 16940]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [16900 17233])
+            ("CountNodeIsArg" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17465 17477]))                  
+                :type "int")
+                nil [17446 17554])
+            ("CountNodeIsArgRec" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17800 17812])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [17813 17820]))                  
+                :type "void")
+                nil [17777 17985])
+            ("CountNodeExpr" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18223 18235]))                  
+                :type "int")
+                nil [18205 18311])
+            ("CountNodeExprRec" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18558 18570])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18571 18578]))                  
+                :type "void")
+                nil [18536 18744])
+            ("CountNode" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18987 18999])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [19000 19009]))                  
+                :type "int")
+                nil [18973 19087])
+            ("CountNodeRec" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19317 19329])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [19330 19339])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [19340 19347]))                  
+                :type "void")
+                nil [19299 19512])
+            ("CountNodeOpr" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19758 19770])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [19771 19780]))                  
+                :type "int")
+                nil [19741 19861])
+            ("CountNodeOprRec" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20094 20106])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [20107 20116])
+                    ("n" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [20117 20124]))                  
+                :type "void")
+                nil [20073 20318])
+            ("RmFuncPointers" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20571 20583]))                  
+                :type "void")
+                nil [20551 20801])
+            ("FreeNode" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21007 21019])
+                    ("base" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21020 21033])
+                    ("extention" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21034 21052])
+                    ("alsofunc" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21053 21070])
+                    ("recursive" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21085 21103])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [21104 21115]))                  
+                :type "void")
+                nil [20993 21750])
+            ("LoadFunc" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21968 21980])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [21981 21992]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [21949 22941])
+            ("ExecFuncMultiRet" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23192 23204])
+                    ("parm" variable
+                       (:pointer 1
+                        :type ("ParseParam" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23205 23222]))                  
+                :type ("NodeType" type (:type "class") nil nil))
+                nil [23165 24055])
+            ("SolveNode" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24263 24275])
+                    ("parm" variable
+                       (:pointer 1
+                        :type ("ParseParam" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24276 24294]))                  
+                :type "void")
+                nil [24248 47885])
+            ("GraphNode" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48114 48126])
+                    ("addr" variable (:type "int") (reparse-symbol arg-sub-list) [48127 48136])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [48137 48148]))                  
+                :type "int")
+                nil [48099 48274])
+            ("SolveNodeGraph" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("NodeType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48633 48645])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [48646 48652])
+                    ("l" variable (:type "int") (reparse-symbol arg-sub-list) [48653 48659])
+                    ("ce" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [48660 48668])
+                    ("cm" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [48669 48677])
+                    ("addr" variable (:type "int") (reparse-symbol arg-sub-list) [48678 48687])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [48688 48699]))                  
+                :type "void")
+                nil [48613 52908])
+            ("GraphTest" function
+               (:arguments 
+                  ( ("l" variable (:type "int") (reparse-symbol arg-sub-list) [53109 53115])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [53116 53122])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [53123 53134]))                  
+                :type "void")
+                nil [53093 53423])
+            ("GraphInit" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [53625 53630]))                  
+                :type "void")
+                nil [53609 53759])
+            ("GraphFinish" function
+               (:arguments 
+                  ( ("" variable (:type ("ispace" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53963 53970]))                  
+                :type "void")
+                nil [53946 54417])
+            ("GraphBox" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [54594 54602])
+                    ("w" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [54603 54610])
+                    ("h" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [54611 54618]))                  
+                :type "void")
+                nil [54579 54675])
+            ("GraphDrawBox" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [54856 54864])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [54865 54871])
+                    ("l" variable (:type "int") (reparse-symbol arg-sub-list) [54872 54878])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [54879 54890]))                  
+                :type "void")
+                nil [54837 55054])
+            ("GraphDrawArrow" function
+               (:arguments 
+                  ( ("c1" variable (:type "int") (reparse-symbol arg-sub-list) [55237 55244])
+                    ("l1" variable (:type "int") (reparse-symbol arg-sub-list) [55245 55252])
+                    ("c2" variable (:type "int") (reparse-symbol arg-sub-list) [55253 55260])
+                    ("l2" variable (:type "int") (reparse-symbol arg-sub-list) [55261 55268])
+                    ("ispace" variable (:type "int") (reparse-symbol arg-sub-list) [55269 55280]))                  
+                :type "void")
+                nil [55216 55618]))          
+    :file "language.c"
+    :pointmax 55621
+    :fsize 57551
+    :lastmodtime '(20394 55834)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SIZEOF_NODETYPE" . ((SIZEOF "sizeof" 494 . 500) (semantic-list "(NodeType)" 500 . 510)))
+          ("GRAPH_C_MAX" . ((number "200" 712 . 715)))
+          ("GRAPH_COL_DIST" . ((number "1" 566 . 567)))
+          ("MAXVARDIM" . ((number "4" 734 . 735)))
+          ("GRAPH_LN_DIST" . ((number "3" 629 . 630)))
+          ("GRAPH_L_MAX" . ((number "200" 688 . 691)))
+          )
+
+    )
+   )
+  :file "!home!andrea!Workspace!tpl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

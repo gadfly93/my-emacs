@@ -1,0 +1,26 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("$(top_srcdir)/Makefile.tool-tests.am" include nil nil [2 47])
+            ("dist_noinst_SCRIPTS" variable (:default-value ("check_isa-2_06_cap" "check_makefile_consistency" "check_vmx_cap" "filter_addresses" "filter_discards" "filter_libc" "filter_numbers" "filter_stderr_basic" "filter_sink" "platform_test" "vg_regtest")) nil [48 280])
+            ("noinst_HEADERS" variable (:default-value ("asm.h" "malloc.h" "sys_mman.h")) nil [281 333])
+            ("check_PROGRAMS" variable (:default-value ("arch_test")) nil [334 423])
+            ("AM_CFLAGS" variable (:default-value ("$(AM_FLAG_M3264_PRI)")) nil [424 460])
+            ("AM_CXXFLAGS" variable (:default-value ("$(AM_FLAG_M3264_PRI)")) nil [460 496])
+            ("x86_amd64_features_CFLAGS" variable (:default-value ("$(AM_CFLAGS)" "-mdynamic-no-pic")) nil [520 578])
+            ("x86_amd64_features_CFLAGS" variable (:default-value ("$(AM_CFLAGS)")) nil [583 624]))          
+    :file "Makefile.am"
+    :pointmax 631
+    :fsize 630
+    :lastmodtime '(20136 31370)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Downloads!valgrind-3.7.0!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,59 @@
+;; Object html/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "html/"
+  :tables (list 
+   (semanticdb-table "intro.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Rulex Overview &mdash; Rulex 2.0 documentation" section nil nil [260 474])
+            ("var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };" section nil nil [474 709])
+            ("Navigation" section nil nil [709 778])
+            ("Navigation" section nil nil [778 851])
+            ("Navigation" section nil nil [851 922])
+            ("Navigation" section nil nil [922 1342])
+            ("Navigation" section (:members 
+              ( ("Navigation" anchor nil nil [1436 1439])
+                ("Navigation" section (:members 
+                  ( ("next" anchor nil nil [1681 1684])
+                    ("previous" anchor nil nil [1807 1810])
+                    ("home" anchor nil nil [1929 1932])
+                    ("search" anchor nil nil [1983 1986]))                  ) nil [1586 2132])
+                ("Table Of Contents" section (:members 
+                  ( ("Table Of Contents" anchor nil nil [2136 2139])
+                    ("Previous topic" section (:members 
+                      ( ("Welcome to Rulex&#8217;s documentation!" anchor nil nil [2913 2916]))                      ) nil [2868 3033])
+                    ("Next topic" section (:members 
+                      ( ("A Rulex session" anchor nil nil [3074 3077]))                      ) nil [3033 3168]))                  ) nil [2132 3168])
+                ("This Page" section (:members 
+                  ( ("Show Source" anchor nil nil [3225 3228]))                  ) nil [3168 3354])
+                ("Quick search" section nil nil [3354 3773]))              ) nil [1342 3773])
+            ("$('#searchbox').show(0);" section (:members 
+              ( ("Rulex Overview<a class="headerlink" href="#rulex-overview" title="Permalink to this headline">¶" section (:members 
+                  ( ("Intelligible and black-box models<a class="headerlink" href="#intelligible-and-black-box-models" title="Permalink to this headline">¶" section nil nil [5236 6486])
+                    ("Dataset, examples and attributes<a class="headerlink" href="#dataset-examples-and-attributes" title="Permalink to this headline">¶" section nil nil [6486 8658])
+                    ("Problems approached by Rulex<a class="headerlink" href="#problems-approached-by-rulex" title="Permalink to this headline">¶" section nil nil [8658 10792])
+                    ("Roles, labels, ignored attributes and missing values<a class="headerlink" href="#roles-labels-ignored-attributes-and-missing-values" title="Permalink to this headline">¶" section nil nil [10792 13134])
+                    ("Processes and tasks<a class="headerlink" href="#processes-and-tasks" title="Permalink to this headline">¶" section (:members 
+                      ( ("Navigation" section (:members 
+                          ( ("next" anchor nil nil [14247 14250])
+                            ("previous" anchor nil nil [14360 14363])
+                            ("home" anchor nil nil [14469 14472])
+                            ("search" anchor nil nil [14523 14526])
+                            ("Sphinx" anchor nil nil [14680 14683]))                          ) nil [14152 14762]))                      ) nil [13134 14762]))                  ) nil [4038 14762]))              ) nil [3773 14762]))          
+    :file "intro.html"
+    :pointmax 14762
+    :fsize 14771
+    :lastmodtime '(20689 61887)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex_tag!new_manual!_build!html!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

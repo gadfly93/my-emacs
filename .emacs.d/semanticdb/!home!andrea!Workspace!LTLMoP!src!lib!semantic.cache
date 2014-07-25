@@ -1,0 +1,348 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "specCompiler.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("os" include nil nil [1 15])
+            ("sys" include nil nil [1 15])
+            ("re" include nil nil [16 25])
+            ("time" include nil nil [26 37])
+            ("math" include nil nil [38 49])
+            ("subprocess" include nil nil [50 67])
+            ("numpy" include nil nil [68 80])
+            ("glob" include nil nil [81 92])
+            ("StringIO" include nil nil [93 108])
+            ("logging" include nil nil [109 123])
+            ("multiprocessing" include nil nil [125 157])
+            ("project" include nil nil [159 173])
+            ("regions" include nil nil [174 188])
+            ("parseLP" include nil nil [189 203])
+            ("createJTLVinput" include nil nil [204 313])
+            ("parseEnglishToLTL" include nil nil [314 393])
+            ("fsa" include nil nil [394 404])
+            ("copy" include nil nil [405 430])
+            ("cores.coreUtils" include nil nil [431 460])
+            ("handlerSubsystem" include nil nil [461 484])
+            ("asyncProcesses" include nil nil [486 538])
+            ("strategy" include nil nil [540 555])
+            ("_SLURP_SPEC_GENERATOR" variable nil nil [598 626])
+            ("SpecCompiler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [709 738])
+                            ("self" variable nil (reparse-symbol indented_block_body) [747 779])
+                            ("if" code nil (reparse-symbol indented_block_body) [789 860]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [674 678])
+                            ("spec_filename" variable nil (reparse-symbol function_parameters) [680 693]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [661 860])
+                    ("loadSpec" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [878 882])
+                            ("spec_filename" variable nil (reparse-symbol function_parameters) [883 896]))                          
+                        :documentation "
+        Load the project object
+        ")
+                        (reparse-symbol indented_block_body) [865 1428])
+                    ("loadSimpleSpec" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1452 1456])
+                            ("text" variable nil (reparse-symbol function_parameters) [1457 1461])
+                            ("regionList" variable nil (reparse-symbol function_parameters) [1466 1476])
+                            ("sensors" variable nil (reparse-symbol function_parameters) [1481 1488])
+                            ("actuators" variable nil (reparse-symbol function_parameters) [1493 1502])
+                            ("customs" variable nil (reparse-symbol function_parameters) [1507 1514])
+                            ("adj" variable nil (reparse-symbol function_parameters) [1519 1522])
+                            ("outputfile" variable nil (reparse-symbol function_parameters) [1527 1537]))                          
+                        :documentation "
+        Load a simple spec given by the arguments without reading from a spec file
+
+        For Slurp
+
+        region, sensors, actuators, customs are lists of strings representing props
+        adj is a list of tuples [(region1,region2),...]
+        ")
+                        (reparse-symbol indented_block_body) [1433 3003])
+                    ("_decompose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3023 3027]))                          )
+                        (reparse-symbol indented_block_body) [3008 4471])
+                    ("_writeSMVFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4494 4498]))                          )
+                        (reparse-symbol indented_block_body) [4476 5425])
+                    ("_writeLTLFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5448 5452]))                          )
+                        (reparse-symbol indented_block_body) [5430 17755])
+                    ("substituteMacros" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17781 17785])
+                            ("text" variable nil (reparse-symbol function_parameters) [17787 17791]))                          
+                        :documentation "
+        Replace any macros passed to us by the parser.  In general, this is only necessary in cases
+        where bitX propositions are needed, since the parser is not supposed to know about them.
+        ")
+                        (reparse-symbol indented_block_body) [17760 19962])
+                    ("postprocessLTL" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19987 19991])
+                            ("text" variable nil (reparse-symbol function_parameters) [19993 19997])
+                            ("sensorList" variable nil (reparse-symbol function_parameters) [19999 20009])
+                            ("robotPropList" variable nil (reparse-symbol function_parameters) [20011 20024]))                          )
+                        (reparse-symbol indented_block_body) [19968 21329])
+                    ("splitSpecIntoComponents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21362 21366])
+                            ("env" variable nil (reparse-symbol function_parameters) [21368 21371])
+                            ("sys" variable nil (reparse-symbol function_parameters) [21373 21376]))                          )
+                        (reparse-symbol indented_block_body) [21334 21942])
+                    ("_checkForEmptyGaits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21971 21975]))                          )
+                        (reparse-symbol indented_block_body) [21947 22846])
+                    ("_getSlugsCommand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22872 22876]))                          )
+                        (reparse-symbol indented_block_body) [22851 23387])
+                    ("_getGROneCommand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23413 23417])
+                            ("module" variable nil (reparse-symbol function_parameters) [23419 23425]))                          )
+                        (reparse-symbol indented_block_body) [23392 24264])
+                    ("_autIsNonTrivial" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24290 24294]))                          
+                        :documentation "
+        Check for a) empty automaton, or b) trivial initial-state automaton
+         with no transitions
+        (This can indicate unsatisfiable system initial conditions (case a),
+         or an unsat environment (case b).)
+
+        TODO: Do this in the Java code; it's super inefficient to
+        load the whole aut just to check this.
+        ")
+                        (reparse-symbol indented_block_body) [24269 25322])
+                    ("_analyze" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25340 25344]))                          )
+                        (reparse-symbol indented_block_body) [25327 29446])
+                    ("_coreFinding" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29470 29474])
+                            ("to_highlight" variable nil (reparse-symbol function_parameters) [29476 29488])
+                            ("unsat" variable nil (reparse-symbol function_parameters) [29490 29495])
+                            ("badInit" variable nil (reparse-symbol function_parameters) [29497 29504]))                          )
+                        (reparse-symbol indented_block_body) [29453 34021])
+                    ("unsatCores" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34044 34048])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [34050 34053])
+                            ("topo" variable nil (reparse-symbol function_parameters) [34055 34059])
+                            ("badInit" variable nil (reparse-symbol function_parameters) [34061 34068])
+                            ("conjuncts" variable nil (reparse-symbol function_parameters) [34070 34079])
+                            ("maxDepth" variable nil (reparse-symbol function_parameters) [34080 34088])
+                            ("numRegions" variable nil (reparse-symbol function_parameters) [34089 34099]))                          )
+                        (reparse-symbol indented_block_body) [34029 34788])
+                    ("unrealCores" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34811 34815])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [34817 34820])
+                            ("topo" variable nil (reparse-symbol function_parameters) [34822 34826])
+                            ("badStatesLTL" variable nil (reparse-symbol function_parameters) [34828 34840])
+                            ("conjuncts" variable nil (reparse-symbol function_parameters) [34842 34851])
+                            ("deadlockFlag" variable nil (reparse-symbol function_parameters) [34853 34865]))                          )
+                        (reparse-symbol indented_block_body) [34795 36260])
+                    ("_getPicosatCommand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36292 36296]))                          )
+                        (reparse-symbol indented_block_body) [36269 36870])
+                    ("ltlConjunctsFromBadLines" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36908 36912])
+                            ("to_highlight" variable nil (reparse-symbol function_parameters) [36914 36926])
+                            ("useInitFlag" variable nil (reparse-symbol function_parameters) [36928 36939]))                          )
+                        (reparse-symbol indented_block_body) [36879 38016])
+                    ("_synthesize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38037 38041]))                          
+                        :documentation " Call the synthesis tool, and block until it completes.
+            Returns success flags `realizable` and `realizableFS`, and the raw
+            synthesizer log output. ")
+                        (reparse-symbol indented_block_body) [38021 38488])
+                    ("prepareSlugsInput" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38515 38519]))                          
+                        :documentation " Convert from JTLV input format (.smv+.ltl) to Slugs input format (.slugsin)
+            using the script provided by Slugs.
+
+            This is a stop-gap fix; eventually we should just produce the input
+            directly instead of using the conversion script. ")
+                        (reparse-symbol indented_block_body) [38493 39449])
+                    ("_synthesizeAsync" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39475 39479])
+                            ("log_function" variable nil (reparse-symbol function_parameters) [39481 39493])
+                            ("completion_callback_function" variable nil (reparse-symbol function_parameters) [39500 39528]))                          
+                        :documentation " Asynchronously call the synthesis tool.  This function will return immediately after
+            spawning a subprocess.  `log_function` will be called with a string argument every time
+            the subprocess generates a line of text.  `completion_callback_function` will be called
+            when synthesis finishes, with two arguments: the success flags `realizable`
+            and `realizableFS`. ")
+                        (reparse-symbol indented_block_body) [39454 42475])
+                    ("abortSynthesis" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42499 42503]))                          
+                        :documentation " Kill any running synthesis process. ")
+                        (reparse-symbol indented_block_body) [42480 42793])
+                    ("compile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42810 42814]))                          )
+                        (reparse-symbol indented_block_body) [42798 43268]))                  
+                :type "class")
+                nil [629 43268]))          
+    :file "specCompiler.py"
+    :pointmax 43269
+    :fsize 43268
+    :lastmodtime '(21447 50821 762796 360000)
+    :unmatched-syntax '((NAME 23906 . 23911) (IF 23918 . 23920) (ELSE 23937 . 23941))
+    )
+   (semanticdb-table "project.py"
+    :file "project.py"
+    :fsize 10118
+    :lastmodtime '(21447 50821 758796 411000)
+    )
+   (semanticdb-table "regions.py"
+    :file "regions.py"
+    :fsize 41770
+    :lastmodtime '(21447 50821 758796 411000)
+    )
+   (semanticdb-table "parseLP.py"
+    :file "parseLP.py"
+    :fsize 14969
+    :lastmodtime '(21447 50821 758796 411000)
+    )
+   (semanticdb-table "createJTLVinput.py"
+    :file "createJTLVinput.py"
+    :fsize 7188
+    :lastmodtime '(21447 50821 742796 612000)
+    )
+   (semanticdb-table "parseEnglishToLTL.py"
+    :file "parseEnglishToLTL.py"
+    :fsize 63769
+    :lastmodtime '(21447 50821 758796 411000)
+    )
+   (semanticdb-table "fsa.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("re" include nil nil [48 57])
+            ("strategy" include nil nil [58 73])
+            ("logging" include nil nil [74 88])
+            ("sys" include nil nil [89 99])
+            ("time" include nil nil [100 111])
+            ("collections" include nil nil [112 147])
+            ("FSAStrategy" type
+               (:documentation "
+    An automaton object is a collection of state objects along with information about the
+    current state of the automaton when being executed.
+    "
+                :superclasses ("strategy.Strategy")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [382 417])
+                            ("self" variable nil (reparse-symbol indented_block_body) [494 534])
+                            ("self" variable nil (reparse-symbol indented_block_body) [618 675]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [367 371]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [354 702])
+                    ("_loadFromFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [725 729])
+                            ("filename" variable nil (reparse-symbol function_parameters) [731 739]))                          
+                        :documentation "
+        Create an automaton by reading in a file produced by a synthesizer,
+        such as JTLV or Slugs.
+
+        Basically just a lot of regexes.
+        ")
+                        (reparse-symbol indented_block_body) [707 4485])
+                    ("searchForStates" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4510 4514])
+                            ("prop_assignments" variable nil (reparse-symbol function_parameters) [4516 4532])
+                            ("state_list" variable nil (reparse-symbol function_parameters) [4534 4544]))                          
+                        :documentation " Returns an iterator for the subset of all known states (or a subset
+            specified in `state_list`) that satisfy `prop_assignments`. ")
+                        (reparse-symbol indented_block_body) [4490 4897])
+                    ("findTransitionableStates" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4931 4935])
+                            ("prop_assignments" variable nil (reparse-symbol function_parameters) [4937 4953])
+                            ("from_state" variable nil (reparse-symbol function_parameters) [4955 4965]))                          
+                        :documentation " Return a list of states that can be reached from `from_state`
+            and satisfy `prop_assignments`.  If `from_state` is omitted,
+            the strategy's current state will be used. ")
+                        (reparse-symbol indented_block_body) [4902 5547]))                  
+                :type "class")
+                nil [149 5547]))          
+    :file "fsa.py"
+    :pointmax 5547
+    :fsize 5546
+    :lastmodtime '(21447 50821 742796 612000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "handlerSubsystem.py"
+    :file "handlerSubsystem.py"
+    :fsize 32034
+    :lastmodtime '(21447 50821 742796 612000)
+    )
+   (semanticdb-table "asyncProcesses.py"
+    :file "asyncProcesses.py"
+    :fsize 3309
+    :lastmodtime '(21447 50821 738796 662000)
+    )
+   (semanticdb-table "strategy.py"
+    :file "strategy.py"
+    :fsize 31042
+    :lastmodtime '(21447 50821 766796 310000)
+    )
+   )
+  :file "!home!andrea!Workspace!LTLMoP!src!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

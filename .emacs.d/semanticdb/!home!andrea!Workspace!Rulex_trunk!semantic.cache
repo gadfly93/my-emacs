@@ -1,0 +1,49 @@
+;; Object Rulex_trunk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Rulex_trunk/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("MANUAL_DIR" variable (:default-value ("new_manual")) nil [1212 1236])
+            ("ENGINE_DIR" variable (:default-value ("RulexEngine")) nil [1236 1261])
+            ("INTERFACE_DIR" variable (:default-value ("RulexInterface")) nil [1261 1292])
+            ("LIB_NAME_LIN" variable (:default-value ("librulex.so")) nil [1292 1318])
+            ("LIB_NAME_WIN" variable (:default-value ("Rulex.dll")) nil [1318 1342])
+            ("LIB_SUB_DIR" variable (:default-value ("Lib")) nil [1342 1360])
+            ("TEST_DIR" variable (:default-value ("test")) nil [1360 1376])
+            ("RM_LINUX" variable (:default-value ("rm")) nil [1376 1389])
+            ("RM_WIN" variable (:default-value ("del")) nil [1389 1401])
+            ("MODE" variable (:default-value ("Debug")) nil [1401 1413])
+            ("ARCH" variable (:default-value ("Win32")) nil [1413 1425])
+            ("RLGEN" variable (:default-value ("False")) nil [1425 1438])
+            ("install" function (:arguments ("build")) nil [1439 1454])
+            ("build" function (:arguments ("set_enviroment")) nil [1637 1659])
+            ("clean" function (:arguments ("set_enviroment")) nil [2387 2409])
+            ("rl_gen" function nil nil [3929 3937])
+            ("run" function (:arguments ("install")) nil [4372 4426])
+            ("rundebug" function (:arguments ("install")) nil [4426 4489])
+            ("runtest" function (:arguments ("install")) nil [4489 4567])
+            ("valgrind" function (:arguments ("install")) nil [4569 4866])
+            ("valgrind_gui" function (:arguments ("install")) nil [4867 5164])
+            ("valgrind_incremental" function (:arguments ("install")) nil [5165 5433])
+            ("valgrind_client_server_test" function (:arguments ("install")) nil [5434 5773])
+            ("valgrind_rulex_session" function (:arguments ("install")) nil [5774 6103])
+            ("callgrind" function (:arguments ("install")) nil [6104 6237])
+            ("profile" function (:arguments ("rundebug")) nil [6238 6386])
+            ("kill" function nil nil [6387 6470])
+            ("killdebug" function nil nil [6471 6563])
+            ("killtest" function nil nil [6564 6666])
+            ("manual" function nil nil [6667 6841])
+            ("set_enviroment" function nil nil [6842 6893]))          
+    :file "Makefile"
+    :pointmax 7077
+    :fsize 7076
+    :lastmodtime '(21050 3831)
+    :unmatched-syntax '((shell-command 7047 . 7067) (bol 7046 . 7046) (shell-command 7013 . 7045) (bol 7012 . 7012) (shell-command 6980 . 7006) (bol 6979 . 6979) (shell-command 6956 . 6978) (bol 6955 . 6955) (shell-command 6922 . 6954) (bol 6921 . 6921) (shell-command 4302 . 4364) (bol 4301 . 4301) (shell-command 4231 . 4300) (bol 4230 . 4230) (shell-command 4174 . 4224) (bol 4173 . 4173) (shell-command 4099 . 4172) (bol 4098 . 4098) (shell-command 4039 . 4097) (bol 4038 . 4038) (shell-command 3966 . 4037) (bol 3965 . 3965) (shell-command 3854 . 3920) (bol 3853 . 3853) (shell-command 3786 . 3852) (bol 3785 . 3785) (shell-command 3718 . 3784) (bol 3717 . 3717) (shell-command 3650 . 3716) (bol 3649 . 3649) (shell-command 3594 . 3648) (bol 3593 . 3593) (shell-command 3538 . 3592) (bol 3537 . 3537) (shell-command 3482 . 3536) (bol 3481 . 3481) (shell-command 3426 . 3480) (bol 3425 . 3425) (shell-command 3368 . 3424) (bol 3367 . 3367) (shell-command 3330 . 3366) (bol 3329 . 3329) (shell-command 3276 . 3328) (bol 3275 . 3275) (shell-command 3232 . 3274) (bol 3231 . 3231) (shell-command 3195 . 3230) (bol 3194 . 3194) (shell-command 3158 . 3193) (bol 3157 . 3157) (shell-command 3112 . 3156) (bol 3111 . 3111) (shell-command 3066 . 3110) (bol 3065 . 3065) (shell-command 3046 . 3064) (bol 3045 . 3045) (shell-command 2981 . 3044) (bol 2980 . 2980) (shell-command 2873 . 2979) (bol 2872 . 2872) (shell-command 2853 . 2871) (bol 2852 . 2852) (shell-command 2745 . 2851) (bol 2744 . 2744) (shell-command 2702 . 2737) (bol 2701 . 2701) (shell-command 2664 . 2700) (bol 2663 . 2663) (shell-command 2623 . 2662) (bol 2622 . 2622) (shell-command 2586 . 2621) (bol 2585 . 2585) (shell-command 2552 . 2584) (bol 2551 . 2551) (shell-command 2520 . 2550) (bol 2519 . 2519) (shell-command 2479 . 2518) (bol 2478 . 2478) (shell-command 2438 . 2477) (bol 2437 . 2437) (shell-command 2327 . 2379) (bol 2326 . 2326) (shell-command 2296 . 2320) (bol 2295 . 2295) (ENDIF 2289 . 2294) (bol 2285 . 2285) (shell-command 2192 . 2284) (bol 2191 . 2191) (semantic-list 2172 . 2190) (IFEQ 2167 . 2171) (bol 2163 . 2163) (ENDIF 2157 . 2162) (bol 2153 . 2153) (shell-command 2074 . 2152) (bol 2073 . 2073) (semantic-list 2052 . 2072) (IFEQ 2047 . 2051) (bol 2043 . 2043) (ENDIF 2037 . 2042) (bol 2033 . 2033) (shell-command 1943 . 2032) (bol 1942 . 1942) (semantic-list 1926 . 1941) (IFEQ 1921 . 1925) (bol 1917 . 1917) (ENDIF 1911 . 1916) (bol 1907 . 1907) (shell-command 1831 . 1906) (bol 1830 . 1830) (semantic-list 1812 . 1829) (IFEQ 1807 . 1811) (bol 1803 . 1803) (shell-command 1783 . 1802) (bol 1782 . 1782) (shell-command 1735 . 1781) (bol 1734 . 1734) (shell-command 1681 . 1698) (bol 1680 . 1680) (shell-command 1483 . 1543) (bol 1482 . 1482))
+    )
+   )
+  :file "!home!andrea!Workspace!Rulex_trunk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

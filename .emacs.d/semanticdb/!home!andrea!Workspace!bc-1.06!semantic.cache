@@ -1,0 +1,22 @@
+;; Object bc-1.06/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bc-1.06/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("SUBDIRS" variable (:default-value ("lib" "bc" "dc" "doc")) nil [60 84])
+            ("MAINTAINERCLEANFILES" variable (:default-value ("aclocal.m4" "config.h.in" "configure" "Makefile.in" "$(distdir).tar.gz" "h/number.h")) nil [85 188])
+            ("dist-hook" function nil nil [189 551])
+            ("timetest" function nil nil [552 595]))          
+    :file "Makefile.am"
+    :pointmax 595
+    :fsize 594
+    :lastmodtime '(14694 26865)
+    :unmatched-syntax '((shell-command 563 . 594) (bol 562 . 562))
+    )
+   )
+  :file "!home!andrea!Workspace!bc-1.06!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

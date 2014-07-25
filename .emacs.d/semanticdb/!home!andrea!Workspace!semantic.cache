@@ -1,0 +1,81 @@
+;; Object Workspace/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Workspace/"
+  :tables (list 
+   (semanticdb-table "hello.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 52]))                  
+                :type "int")
+                nil [21 95]))          
+    :file "hello.c"
+    :pointmax 97
+    :fsize 96
+    :lastmodtime '(20339 20445)
+    :unmatched-syntax '((close-paren 97 . 98))
+    )
+   (semanticdb-table "colori.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [1 13])
+            ("colorsys" include nil nil [14 29])
+            ("GetMatplotlibColours" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [56 57]))              ) nil [31 514])
+            ("colors" function (:arguments 
+              ( ("N" variable nil (reparse-symbol function_parameters) [527 528]))              ) nil [515 678])
+            ("for" code nil nil [680 756]))          
+    :file "colori.py"
+    :pointmax 756
+    :fsize 755
+    :lastmodtime '(20414 14465)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "accelerometer.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("android" include nil nil [1 15])
+            ("time" include nil nil [16 27])
+            ("droid" variable nil nil [28 53])
+            ("dt" variable nil nil [54 62])
+            ("endTime" variable nil nil [87 101])
+            ("timeSensed" variable nil nil [121 133])
+            ("droid" code nil nil [134 163])
+            ("while" code nil nil [164 288])
+            ("droid" code nil nil [288 307]))          
+    :file "accelerometer.py"
+    :pointmax 308
+    :fsize 307
+    :lastmodtime '(20415 37607)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "kyvy.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("kivy.app" include nil nil [1 25])
+            ("kivy.uix.button" include nil nil [26 60])
+            ("TestApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [96 100]))                      ) (reparse-symbol indented_block_body) [86 145]))                  
+                :type "class")
+                nil [62 145])
+            ("if" code nil nil [147 211]))          
+    :file "kyvy.py"
+    :pointmax 211
+    :fsize 210
+    :lastmodtime '(20415 40052)
+    :unmatched-syntax '((INDENT_BLOCK 155 . 246))
+    )
+   )
+  :file "!home!andrea!Workspace!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

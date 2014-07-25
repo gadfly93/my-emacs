@@ -1,0 +1,210 @@
+;; Object impl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "impl/"
+  :tables (list 
+   (semanticdb-table "sort.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("hadoop/Pipes.hh" include nil nil [809 835])
+            ("hadoop/TemplateFactory.hh" include nil nil [836 872])
+            ("SortMap" type
+               (:superclasses 
+                  ( ("HadoopPipes::Mapper" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [918 926])
+                    ("keepFraction" variable (:type "float") (reparse-symbol classsubparts) [980 999])
+                    ("keptRecords" variable (:type "long long") (reparse-symbol classsubparts) [1044 1066])
+                    ("totalRecords" variable (:type "long long") (reparse-symbol classsubparts) [1105 1128])
+                    ("MAP_KEEP_PERCENT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1131 1173])
+                    ("public" label nil (reparse-symbol classsubparts) [1174 1181])
+                    ("SortMap" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::TaskContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1268 1302]))                          
+                        :type ("SortMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1260 1561])
+                    ("map" function
+                       (:arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::MapContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1574 1607]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1565 1798]))                  
+                :type "class")
+                nil [874 1801])
+            ("MAP_KEEP_PERCENT" function
+               (:prototype-flag t
+                :parent "SortMap"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1803 1894])
+            ("SortReduce" type
+               (:superclasses 
+                  ( ("HadoopPipes::Reducer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [1944 1952])
+                    ("keepFraction" variable (:type "float") (reparse-symbol classsubparts) [2006 2025])
+                    ("keptRecords" variable (:type "long long") (reparse-symbol classsubparts) [2070 2092])
+                    ("totalRecords" variable (:type "long long") (reparse-symbol classsubparts) [2131 2154])
+                    ("REDUCE_KEEP_PERCENT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2157 2202])
+                    ("public" label nil (reparse-symbol classsubparts) [2203 2210])
+                    ("SortReduce" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::TaskContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2224 2258]))                          
+                        :type ("SortReduce" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2213 2523])
+                    ("reduce" function
+                       (:arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::ReduceContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2539 2575]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2527 2816]))                  
+                :type "class")
+                nil [1896 2819])
+            ("REDUCE_KEEP_PERCENT" function
+               (:prototype-flag t
+                :parent "SortReduce"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2821 2924])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2935 2944])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2945 2958]))                  
+                :type "int")
+                nil [2926 3105]))          
+    :file "sort.cc"
+    :pointmax 3107
+    :fsize 3106
+    :lastmodtime '(21074 19516)
+    :unmatched-syntax '((string 2874 . 2922) (string 1847 . 1892))
+    )
+   (semanticdb-table "wordcount-simple.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("hadoop/Pipes.hh" include nil nil [809 835])
+            ("hadoop/TemplateFactory.hh" include nil nil [836 872])
+            ("hadoop/StringUtils.hh" include nil nil [873 905])
+            ("WORDCOUNT" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [907 949])
+            ("INPUT_WORDS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [950 996])
+            ("OUTPUT_WORDS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [997 1045])
+            ("WordCountMap" type
+               (:superclasses 
+                  ( ("HadoopPipes::Mapper" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1096 1103])
+                    ("inputWords" variable
+                       (:pointer 1
+                        :type ("HadoopPipes::TaskContext::Counter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1106 1152])
+                    ("WordCountMap" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::TaskContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1171 1205]))                          
+                        :type ("WordCountMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1158 1272])
+                    ("map" function
+                       (:arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::MapContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1287 1320]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1278 1574]))                  
+                :type "class")
+                nil [1047 1577])
+            ("WordCountReduce" type
+               (:superclasses 
+                  ( ("HadoopPipes::Reducer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1632 1639])
+                    ("outputWords" variable
+                       (:pointer 1
+                        :type ("HadoopPipes::TaskContext::Counter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1642 1689])
+                    ("WordCountReduce" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::TaskContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1709 1743]))                          
+                        :type ("WordCountReduce" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1693 1812])
+                    ("reduce" function
+                       (:arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :type ("HadoopPipes::ReduceContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1828 1864]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1816 2101]))                  
+                :type "class")
+                nil [1579 2104])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2115 2124])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2125 2138]))                  
+                :type "int")
+                nil [2106 2267]))          
+    :file "wordcount-simple.cc"
+    :pointmax 2269
+    :fsize 2268
+    :lastmodtime '(21074 19516)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!andrea!Desktop!hadoop-2.2.0-src!hadoop-tools!hadoop-pipes!src!main!native!examples!impl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

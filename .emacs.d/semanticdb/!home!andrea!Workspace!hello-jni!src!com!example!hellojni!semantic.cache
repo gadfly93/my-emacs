@@ -1,0 +1,42 @@
+;; Object hellojni/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hellojni/"
+  :tables (list 
+   (semanticdb-table "HelloJni.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.example.hellojni" package nil nil [621 650])
+            ("android.app.Activity" include nil nil [652 680])
+            ("android.widget.TextView" include nil nil [681 712])
+            ("android.os.Bundle" include nil nil [713 738])
+            ("HelloJni" type
+               (:typemodifiers ("public")
+                :superclasses "Activity"
+                :members 
+                  ( ("onCreate" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("savedInstanceState" variable (:type "Bundle") (reparse-symbol formal_parameters) [875 900]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [854 1204])
+                    ("stringFromJNI" function
+                       (:typemodifiers ("public" "native")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1351 1389])
+                    ("unimplementedStringFromJNI" function
+                       (:typemodifiers ("public" "native")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1846 1897]))                  
+                :type "class")
+                nil [741 2205]))          
+    :file "HelloJni.java"
+    :pointmax 2206
+    :fsize 2205
+    :lastmodtime '(20339 4546)
+    :unmatched-syntax '((punctuation 840 . 841))
+    )
+   )
+  :file "!home!andrea!Workspace!hello-jni!src!com!example!hellojni!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
