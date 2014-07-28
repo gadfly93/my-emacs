@@ -1,3 +1,6 @@
+;; incomplete list of some packages
+;; sudo apt-get install doxymacs anything-el ecb
+
 (column-number-mode)
 (show-paren-mode 1)
 (setq line-move-visual nil)
@@ -34,7 +37,7 @@
     ;; (doxymacs-font-lock)
     ))
 
-(setq doxymacs-doxygen-style "JavaDoc")
+(setq doxymacs-doxygen-style "Qt")
 
 (defadvice pdb (before gud-query-cmdline activate)
   "Provide a better default command line when called interactively."
