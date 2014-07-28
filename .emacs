@@ -37,7 +37,7 @@
     ;; (doxymacs-font-lock)
     ))
 
-(setq doxymacs-doxygen-style "Qt")
+(setq doxymacs-doxygen-style "JavaDoc")
 
 (defadvice pdb (before gud-query-cmdline activate)
   "Provide a better default command line when called interactively."
