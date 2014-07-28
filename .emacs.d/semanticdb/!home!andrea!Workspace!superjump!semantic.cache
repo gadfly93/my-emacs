@@ -2,76 +2,7 @@
 ;; SEMANTICDB Tags save file
 (semanticdb-project-database-file "superjump/"
   :tables (list 
-   (semanticdb-table "jump.c"
-    :major-mode 'c-mode
-    :tags 
-        '( ("stdlib.h" include (:system-flag t) nil [1 20])
-            ("string.h" include (:system-flag t) nil [21 40])
-            ("unistd.h" include (:system-flag t) nil [41 60])
-            ("stdio.h" include (:system-flag t) nil [61 79])
-            ("ucontext.h" include (:system-flag t) nil [80 101])
-            ("STACK_START" variable (:constant-flag t) nil [111 122])
-            ("reg_buf" variable
-               (:typemodifiers ("static")
-                :type ("ucontext_t" type (:type "class") nil nil))
-                nil [145 171])
-            ("fp" variable
-               (:pointer 1
-                :typemodifiers ("static")
-                :type ("FILE" type (:type "class") nil nil))
-                nil [172 188])
-            ("sizeof_reg" variable (:type "long int") nil [201 235])
-            ("sizeof_stack" variable (:type "long int") nil [201 235])
-            ("state" variable
-               (:typemodifiers ("static")
-                :type "int")
-                nil [236 255])
-            ("StoreStack" function (:type "int") nil [257 806])
-            ("LoadStack" function (:type "int") nil [808 1856])
-            ("main" function
-               (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1868 1877])
-                    ("argv" variable
-                       (:pointer 1
-                        :dereference 1
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [1878 1891]))                  
-                :type "int")
-                nil [1858 2258]))          
-    :file "jump.c"
-    :pointmax 2081
-    :fsize 820
-    :lastmodtime '(20641 3212)
-    :unmatched-syntax 'nil
-    :lexical-table 
-        '(("STACK_START" . ((semantic-list "(void*)" 123 . 130) (number "0x7fffffffe0d0" 130 . 144)))
-          )
-
-    )
-   (semanticdb-table "ucontext.c"
-    :major-mode 'c-mode
-    :tags 
-        '( ("stdio.h" include (:system-flag t) nil [1 19])
-            ("ucontext.h" include (:system-flag t) nil [20 41])
-            ("unistd.h" include (:system-flag t) nil [42 61])
-            ("main" function
-               (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [72 81])
-                    ("argv" variable
-                       (:pointer 1
-                        :dereference 1
-                        :constant-flag t
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [82 101]))                  
-                :type "int")
-                nil [63 222]))          
-    :file "ucontext.c"
-    :pointmax 223
-    :fsize 222
-    :lastmodtime '(20642 4654)
-    :unmatched-syntax 'nil
-    )
-   (semanticdb-table "heap.c"
+     (semanticdb-table "heap.c"
     :major-mode 'c-mode
     :tags 
         '( ("stdlib.h" include (:system-flag t) nil [1 20])
@@ -84,31 +15,31 @@
                   ( ("heap_start" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [122 139]))                  
+                        (reparse-symbol arg-sub-list) [144 161]))                  
                 :type "int")
-                nil [108 464])
+                nil [130 648])
             ("LoadHeap" function
                (:arguments 
                   ( ("heap_start" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [479 496]))                  
+                        (reparse-symbol arg-sub-list) [683 700]))                  
                 :type "int")
-                nil [466 1141])
+                nil [670 1486])
             ("main" function
                (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1153 1162])
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1498 1507])
                     ("argv" variable
                        (:pointer 1
                         :dereference 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [1163 1176]))                  
+                        (reparse-symbol arg-sub-list) [1508 1521]))                  
                 :type "int")
-                nil [1143 1606]))          
+                nil [1488 2180]))          
     :file "heap.c"
-    :pointmax 1607
-    :fsize 1606
-    :lastmodtime '(20642 8678)
+    :pointmax 2005
+    :fsize 2180
+    :lastmodtime '(21458 30490 180871 709000)
     :unmatched-syntax 'nil
     :lexical-table 
         '(("SFILE" . ((SIZEOF "sizeof" 94 . 100) (semantic-list "(FILE)" 100 . 106)))
@@ -136,8 +67,8 @@
                 nil [189 681]))          
     :file "stack.c"
     :pointmax 682
-    :fsize 2979
-    :lastmodtime '(20643 31164)
+    :fsize 2604
+    :lastmodtime '(21458 30260 370726 259000)
     :unmatched-syntax 'nil
     :lexical-table 
         '(("ADDR_NO_RANDOMIZE" . ((number "0x0040000" 177 . 186)))
@@ -157,8 +88,8 @@
             ("asm" function nil nil [398 509]))          
     :file "Makefile"
     :pointmax 509
-    :fsize 508
-    :lastmodtime '(20643 42080)
+    :fsize 233
+    :lastmodtime '(21458 30260 370726 259000)
     :unmatched-syntax '((shell-command 502 . 509) (bol 501 . 501))
     )
    )

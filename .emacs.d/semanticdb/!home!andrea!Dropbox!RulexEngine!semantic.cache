@@ -21834,6 +21834,879 @@
           )
 
     )
+   (semanticdb-table "rules.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Rulex.h" include nil nil [426 444])
+            ("ReadAttVal" function
+               (:arguments 
+                  ( ("fil" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [663 673])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [674 690])
+                    ("attr_ref" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [691 708])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [729 740]))                  
+                :type ("Boolean" type (:type "class") nil nil))
+                nil [644 1430])
+            ("NominalTerms" function
+               (:arguments 
+                  ( ("fil" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1662 1672])
+                    ("rule" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1673 1687])
+                    ("ncond" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1688 1698])
+                    ("iatt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1699 1708])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1726 1741])
+                    ("natt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1742 1751])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1752 1767])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1768 1779]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [1645 3954])
+            ("OrderedTerms" function
+               (:arguments 
+                  ( ("fil" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4187 4197])
+                    ("rule" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4198 4212])
+                    ("ncond" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4213 4223])
+                    ("iatt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4224 4233])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4253 4268])
+                    ("natt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4269 4278])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4279 4294])
+                    ("integer" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4314 4330])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4331 4342]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [4170 9433])
+            ("ReadFloatStat" function
+               (:arguments 
+                  ( ("fil" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9641 9651])
+                    ("comma" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9652 9663])
+                    ("accepteof" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9664 9682])
+                    ("fval" variable
+                       (:pointer 1
+                        :type ("Float" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9683 9695])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9714 9725]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [9623 11074])
+            ("ReadIntStat" function
+               (:arguments 
+                  ( ("fil" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11283 11293])
+                    ("comma" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11294 11305])
+                    ("accepteof" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11306 11324])
+                    ("ival" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11325 11335])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11352 11363]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [11267 12675])
+            ("WhichRuleRight" function
+               (:arguments 
+                  ( ("rul1_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13042 13060])
+                    ("rul2_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13061 13079]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [13023 13968])
+            ("SortRulesRight" function
+               (:arguments 
+                  ( ("rulevec" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14207 14224])
+                    ("nelem" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14225 14235]))                  
+                :type "void")
+                nil [14187 14890])
+            ("WhichRuleOut" function
+               (:arguments 
+                  ( ("rul1_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15275 15293])
+                    ("rul2_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15294 15312]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [15258 16201])
+            ("SortRulesOut" function
+               (:arguments 
+                  ( ("rulevec" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16436 16453])
+                    ("nelem" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16454 16464]))                  
+                :type "void")
+                nil [16418 17115])
+            ("WhichRuleWrong" function
+               (:arguments 
+                  ( ("rul1_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17482 17500])
+                    ("rul2_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17501 17519]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [17463 18408])
+            ("SortRulesWrong" function
+               (:arguments 
+                  ( ("rulevec" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18647 18664])
+                    ("nelem" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18665 18675]))                  
+                :type "void")
+                nil [18627 19330])
+            ("InputRules" function
+               (:arguments 
+                  ( ("ext" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19559 19575])
+                    ("indout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19576 19587])
+                    ("rulevec" variable
+                       (:pointer 2
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19588 19606])
+                    ("numrule" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19633 19646])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19647 19662])
+                    ("natt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19663 19672])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19699 19714])
+                    ("nout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19715 19724])
+                    ("indata" variable
+                       (:pointer 2
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19725 19743])
+                    ("ndata" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19770 19780])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19781 19792]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [19544 31787])
+            ("InsertValue" function
+               (:arguments 
+                  ( ("attval" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32050 32067])
+                    ("attr" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32068 32081])
+                    ("convnom" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32082 32098])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32115 32126]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [32034 33306])
+            ("AddRuleValues" function
+               (:arguments 
+                  ( ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33549 33564])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33565 33575])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33576 33591])
+                    ("natt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33621 33630])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33631 33646])
+                    ("nout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33647 33656])
+                    ("auxatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33686 33701])
+                    ("whatatts" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33702 33719])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33720 33731]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [33531 37981])
+            ("ConvertBooleanRuleset" function
+               (:arguments 
+                  ( ("rules_ref" variable
+                       (:pointer 2
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38223 38243])
+                    ("nrule_ref" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38244 38259])
+                    ("cubes" variable
+                       (:pointer 1
+                        :type ("CubeRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38287 38302])
+                    ("ncube" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38303 38313])
+                    ("ninp" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38314 38323])
+                    ("nout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38324 38333])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38361 38372]))                  
+                :type "void")
+                nil [38196 41199])
+            ("ConvertCubes" function
+               (:arguments 
+                  ( ("rulevec" variable
+                       (:pointer 2
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41436 41454])
+                    ("numrule" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41455 41468])
+                    ("indrule" variable
+                       (:pointer 2
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41469 41483])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41501 41516])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41517 41532])
+                    ("nout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41533 41542])
+                    ("indout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41543 41554])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41572 41583]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [41419 50859])
+            ("InpCover" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51077 51092])
+                    ("rule_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51093 51111])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51112 51127])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51141 51158])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51159 51170]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [51064 54395])
+            ("InpCoverNew" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54617 54632])
+                    ("rule_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54633 54651])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54652 54667])
+                    ("natt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54685 54694])
+                    ("dist" variable
+                       (:pointer 1
+                        :type ("Boolean" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54695 54709])
+                    ("ndist_ref" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54710 54725])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54743 54760])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54761 54772]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [54601 58485])
+            ("OutCover" function
+               (:arguments 
+                  ( ("data" variable (:type ("AttValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58709 58723])
+                    ("rule_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58724 58742])
+                    ("attrout_ref" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58743 58763])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58782 58799])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58800 58811]))                  
+                :type ("Boolean" type (:type "class") nil nil))
+                nil [58692 60655])
+            ("SimplifyRulesC" function
+               (:arguments 
+                  ( ("indata" variable
+                       (:pointer 2
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60866 60884])
+                    ("ndata" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [60885 60895])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60896 60912])
+                    ("outval" variable
+                       (:pointer 1
+                        :type ("Boolean" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60934 60950])
+                    ("rules_ref" variable
+                       (:pointer 2
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60951 60971])
+                    ("nrule_ref" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60972 60987])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61009 61026])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61027 61038]))                  
+                :type "void")
+                nil [60846 62196])
+            ("SimplifyRulesR" function
+               (:arguments 
+                  ( ("indata" variable
+                       (:pointer 2
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62432 62450])
+                    ("ndata" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62451 62461])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62462 62478])
+                    ("floatval" variable
+                       (:pointer 1
+                        :type ("Float" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62500 62516])
+                    ("rules_ref" variable
+                       (:pointer 2
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62517 62537])
+                    ("nrule_ref" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62538 62553])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62575 62592])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62593 62604]))                  
+                :type "void")
+                nil [62412 63833])
+            ("RuleStatistics" function
+               (:arguments 
+                  ( ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64073 64088])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64089 64099])
+                    ("meastype" variable (:type ("MeasureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64132 64153])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64154 64165]))                  
+                :type "void")
+                nil [64053 65324])
+            ("SingleRuleCovering" function
+               (:arguments 
+                  ( ("indata" variable
+                       (:pointer 2
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65565 65583])
+                    ("indx" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65584 65594])
+                    ("nset" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65631 65640])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65641 65657])
+                    ("iout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65694 65703])
+                    ("attrout_ref" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65704 65724])
+                    ("rulep" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65761 65776])
+                    ("reset" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65777 65791])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65828 65845])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65846 65857]))                  
+                :type "void")
+                nil [65541 70195])
+            ("RuleCovering" function
+               (:arguments 
+                  ( ("indata" variable
+                       (:pointer 2
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70489 70507])
+                    ("indset" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70508 70520])
+                    ("nsetin" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70521 70532])
+                    ("infodata" variable
+                       (:pointer 1
+                        :type ("InfoDataRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70563 70585])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70586 70602])
+                    ("nratt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70633 70643])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70644 70659])
+                    ("indout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70660 70671])
+                    ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70702 70717])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70718 70728])
+                    ("reset" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70729 70743])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70774 70791])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70792 70803]))                  
+                :type "void")
+                nil [70471 72293])
+            ("PrintRules" function
+               (:arguments 
+                  ( ("outname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [72506 72526])
+                    ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72527 72542])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72543 72553])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72580 72595])
+                    ("natt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72596 72605])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72606 72621])
+                    ("nout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72648 72657])
+                    ("indok" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72658 72669])
+                    ("nok" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72670 72678])
+                    ("simple" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72679 72694])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72721 72738])
+                    ("onfile" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72739 72754])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72755 72766]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [72491 79163])
+            ("CheckCondition" function
+               (:arguments 
+                  ( ("cond_ref" variable
+                       (:pointer 1
+                        :type ("CondRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79412 79430])
+                    ("covright" variable (:type ("Float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79431 79446])
+                    ("covwrong" variable (:type ("Float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79447 79462])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79487 79503])
+                    ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [79504 79521])
+                    ("bound" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79545 79561])
+                    ("nbound" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79562 79573])
+                    ("btype" variable (:type ("AttType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79574 79588])
+                    ("ftype" variable (:type ("FindType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79612 79627])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79628 79645])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79646 79657]))                  
+                :type ("Boolean" type (:type "class") nil nil))
+                nil [79389 81224])
+            ("SelectConditions" function
+               (:arguments 
+                  ( ("rule_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81464 81482])
+                    ("indcond" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81483 81496])
+                    ("nicond" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81497 81508])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81535 81551])
+                    ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [81552 81569])
+                    ("bound" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81595 81611])
+                    ("nbound" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81612 81623])
+                    ("btype" variable (:type ("AttType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81624 81638])
+                    ("ftype" variable (:type ("FindType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81664 81679])
+                    ("condsel" variable
+                       (:pointer 1
+                        :type ("Boolean" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81680 81697])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81723 81740])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81741 81752]))                  
+                :type ("Boolean" type (:type "class") nil nil))
+                nil [81439 82210])
+            ("CheckRule" function
+               (:arguments 
+                  ( ("rule_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82441 82459])
+                    ("indcond" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82460 82473])
+                    ("nicond" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82474 82485])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82504 82520])
+                    ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [82521 82538])
+                    ("bound" variable
+                       (:pointer 1
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82539 82555])
+                    ("nbound" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82574 82585])
+                    ("btype" variable (:type ("AttType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82586 82600])
+                    ("ftype" variable (:type ("FindType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82601 82616])
+                    ("condsel" variable
+                       (:pointer 1
+                        :type ("Boolean" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82635 82652])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82653 82670])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82671 82682]))                  
+                :type ("Boolean" type (:type "class") nil nil))
+                nil [82423 85795])
+            ("SelectRules" function
+               (:arguments 
+                  ( ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86028 86043])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86044 86054])
+                    ("indsel_ref" variable
+                       (:pointer 2
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86055 86072])
+                    ("nsel_ref" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86101 86115])
+                    ("indcond_ref" variable
+                       (:pointer 3
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86116 86135])
+                    ("nicond_ref" variable
+                       (:pointer 2
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86164 86181])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86182 86198])
+                    ("items" variable
+                       (:pointer 1
+                        :type ("String" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86227 86241])
+                    ("nitem" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86242 86252])
+                    ("bounds" variable
+                       (:pointer 2
+                        :type ("AttValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86253 86271])
+                    ("nbound" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86300 86312])
+                    ("btype" variable
+                       (:pointer 1
+                        :type ("AttType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86313 86328])
+                    ("ftype" variable
+                       (:pointer 1
+                        :type ("FindType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86357 86373])
+                    ("logoper" variable (:type ("SelectOper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86402 86421])
+                    ("selected_ref" variable
+                       (:pointer 2
+                        :type ("Boolean" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86450 86473])
+                    ("condsel_ref" variable
+                       (:pointer 3
+                        :type ("Boolean" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86502 86525])
+                    ("modsel" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86526 86541])
+                    ("selcond" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86570 86586])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86587 86604])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86605 86616]))                  
+                :type "void")
+                nil [86011 92733])
+            ("DeleteRules" function
+               (:arguments 
+                  ( ("rulevec" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92949 92966])
+                    ("numrule" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92967 92980])
+                    ("ruleapp" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93009 93026])
+                    ("nappr" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93027 93038])
+                    ("indok" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93039 93050])
+                    ("nok" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93079 93087])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93088 93099]))                  
+                :type "void")
+                nil [92932 93630])
+            ("ConvertSingleRule" function
+               (:arguments 
+                  ( ("rulep" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93898 93913])
+                    ("curratt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93914 93930])
+                    ("nattc" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93959 93969])
+                    ("newatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93970 93985])
+                    ("nattn" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93986 93996])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94025 94040])
+                    ("nout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94041 94050])
+                    ("init" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94051 94064])
+                    ("merge" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94094 94108])
+                    ("todirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94109 94126])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94127 94138]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [93876 96988])
+            ("ConvertRules" function
+               (:arguments 
+                  ( ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97250 97265])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97266 97276])
+                    ("curratt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97277 97293])
+                    ("nattc" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97322 97332])
+                    ("newatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97333 97348])
+                    ("nattn" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97349 97359])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97388 97403])
+                    ("nout" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97404 97413])
+                    ("merge" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97414 97428])
+                    ("todirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97457 97474])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97475 97486]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [97233 98269])
+            ("CopyCondRec" function
+               (:arguments 
+                  ( ("condcopy" variable
+                       (:pointer 1
+                        :type ("CondRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98487 98505])
+                    ("condorig_ref" variable
+                       (:pointer 1
+                        :type ("CondRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98506 98528])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98557 98572])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98573 98590])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98619 98630]))                  
+                :type "void")
+                nil [98470 99271])
+            ("CopyRuleRec" function
+               (:arguments 
+                  ( ("rulecopy" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99484 99502])
+                    ("ruleorig_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99503 99525])
+                    ("inpatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99554 99569])
+                    ("outatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99570 99585])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99614 99631])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99632 99643]))                  
+                :type "void")
+                nil [99467 101577])
+            ("CopyRules" function
+               (:arguments 
+                  ( ("rulenew" variable
+                       (:pointer 2
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101795 101813])
+                    ("nrulenew" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101814 101828])
+                    ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101855 101870])
+                    ("indrule" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101871 101884])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101885 101895])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101923 101939])
+                    ("indirect" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101940 101957])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101958 101969]))                  
+                :type "void")
+                nil [101780 102705])
+            ("ChangeRuleatt" function
+               (:arguments 
+                  ( ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [102945 102960])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102961 102971])
+                    ("ruleatt" variable
+                       (:pointer 1
+                        :type ("AttRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [102972 102988])
+                    ("nratt" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103018 103028])
+                    ("merge" variable (:type ("Boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103029 103043])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103044 103055]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [102927 104078])
+            ("RuleMeasure" function
+               (:arguments 
+                  ( ("rule_ref" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104310 104328])
+                    ("meastype" variable (:type ("MeasureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104329 104350]))                  
+                :type ("Float" type (:type "class") nil nil))
+                nil [104292 104645])
+            ("MaxDistinctCovProb" function
+               (:arguments 
+                  ( ("rules" variable
+                       (:pointer 1
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104936 104951])
+                    ("nrule" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104952 104962])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104963 104974]))                  
+                :type ("Int" type (:type "class") nil nil))
+                nil [104913 105583])
+            ("FreeRules" function
+               (:arguments 
+                  ( ("rules_ref" variable
+                       (:pointer 2
+                        :type ("RuleRec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105801 105821])
+                    ("nrule_ref" variable
+                       (:pointer 1
+                        :type ("Int" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105822 105837])
+                    ("ispace" variable (:type ("Int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105864 105875]))                  
+                :type "void")
+                nil [105786 105940]))          
+    :file "rules.cpp"
+    :pointmax 105944
+    :fsize 109504
+    :lastmodtime '(21334 28057 0 0)
+    :unmatched-syntax '((symbol 105775 . 105785) (symbol 104902 . 104912) (symbol 104281 . 104291) (symbol 102916 . 102926) (symbol 101769 . 101779) (symbol 99456 . 99466) (symbol 98459 . 98469) (symbol 97222 . 97232) (symbol 93865 . 93875) (symbol 92921 . 92931) (symbol 86000 . 86010) (symbol 72480 . 72490) (symbol 70460 . 70470) (symbol 65530 . 65540) (symbol 64042 . 64052) (symbol 33520 . 33530) (symbol 19533 . 19543))
+    )
    )
   :file "!home!andrea!Dropbox!RulexEngine!semantic.cache"
   :semantic-tag-version "2.0"

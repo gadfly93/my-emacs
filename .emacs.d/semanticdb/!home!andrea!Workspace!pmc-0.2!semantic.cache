@@ -47,12 +47,13 @@
             ("valgrind-crule" function (:arguments ("pmc-crule")) nil [4023 4147])
             ("callgrind" function (:arguments ("pmc")) nil [4148 4241])
             ("countlines" function nil nil [4242 4327])
-            ("profile" function nil nil [4327 4367]))          
+            ("profile" function nil nil [4327 4367])
+            ("doc" function (:arguments ("$(OBJ)")) nil [4367 4397]))          
     :file "Makefile"
-    :pointmax 4367
-    :fsize 4366
-    :lastmodtime '(21458 23917 583525 783000)
-    :unmatched-syntax '((shell-command 4337 . 4366) (bol 4336 . 4336))
+    :pointmax 4397
+    :fsize 4396
+    :lastmodtime '(21462 13840 153490 608000)
+    :unmatched-syntax 'nil
     )
    (semanticdb-table "build_2d_chess.py"
     :major-mode 'python-mode
@@ -2042,348 +2043,349 @@
    (semanticdb-table "pmcmem.c"
     :major-mode 'c-mode
     :tags 
-        '( ("pmc.h" include nil nil [1094 1110])
+        '( ("WARRANTY" variable (:type ("ANY" type (:type "class") nil nil)) nil [733 746])
+            ("pmc.h" include nil nil [1113 1129])
             ("FindNEl" function
                (:arguments 
                   ( ("v" variable
                        (:pointer 1
                         :type "float")
-                        (reparse-symbol arg-sub-list) [1126 1135])
-                    ("ind" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1136 1147]))                  
+                        (reparse-symbol arg-sub-list) [1366 1375])
+                    ("ind" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1376 1387]))                  
                 :type "float")
-                nil [1112 1279])
+                nil [1352 1519])
             ("CharReplace" function
                (:arguments 
                   ( ("str" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [1298 1308])
-                    ("origc" variable (:type "char") (reparse-symbol arg-sub-list) [1309 1320])
-                    ("newc" variable (:type "char") (reparse-symbol arg-sub-list) [1321 1331]))                  
+                        (reparse-symbol arg-sub-list) [1697 1707])
+                    ("origc" variable (:type "char") (reparse-symbol arg-sub-list) [1708 1719])
+                    ("newc" variable (:type "char") (reparse-symbol arg-sub-list) [1720 1730]))                  
                 :type "void")
-                nil [1281 1402])
+                nil [1680 1801])
             ("CmpFloat" function
                (:arguments 
                   ( ("a" variable
                        (:pointer 1
                         :constant-flag t
                         :type "void")
-                        (reparse-symbol arg-sub-list) [1419 1433])
+                        (reparse-symbol arg-sub-list) [1980 1994])
                     ("b" variable
                        (:pointer 1
                         :constant-flag t
                         :type "void")
-                        (reparse-symbol arg-sub-list) [1434 1449]))                  
+                        (reparse-symbol arg-sub-list) [1995 2010]))                  
                 :type ("int32" type (:type "class") nil nil))
-                nil [1404 1517])
+                nil [1965 2078])
             ("CmpInt32" function
                (:arguments 
                   ( ("a" variable
                        (:pointer 1
                         :constant-flag t
                         :type "void")
-                        (reparse-symbol arg-sub-list) [1534 1548])
+                        (reparse-symbol arg-sub-list) [2241 2255])
                     ("b" variable
                        (:pointer 1
                         :constant-flag t
                         :type "void")
-                        (reparse-symbol arg-sub-list) [1549 1564]))                  
+                        (reparse-symbol arg-sub-list) [2256 2271]))                  
                 :type ("int32" type (:type "class") nil nil))
-                nil [1519 1611])
+                nil [2226 2318])
             ("FindElChArray" function
                (:arguments 
                   ( ("carray" variable
                        (:pointer 1
                         :type ("CharArray" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [1634 1652])
+                        (reparse-symbol arg-sub-list) [2461 2479])
                     ("str" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [1653 1663]))                  
+                        (reparse-symbol arg-sub-list) [2480 2490]))                  
                 :type ("size_t" type (:type "class") nil nil))
-                nil [1613 1852])
+                nil [2440 2679])
             ("ResizeCharArray" function
                (:arguments 
                   ( ("carray" variable
                        (:pointer 1
                         :type ("CharArray" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [1875 1893])
-                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1894 1906]))                  
+                        (reparse-symbol arg-sub-list) [2938 2956])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2957 2969]))                  
                 :type "void")
-                nil [1854 2107])
+                nil [2917 3170])
             ("FreeCharArray" function
                (:arguments 
                   ( ("carray" variable
                        (:pointer 1
                         :type ("CharArray" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [2128 2146]))                  
+                        (reparse-symbol arg-sub-list) [3383 3401]))                  
                 :type "void")
-                nil [2109 2233])
+                nil [3364 3488])
             ("AddStrToCharArray" function
                (:arguments 
                   ( ("str" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [2260 2270])
+                        (reparse-symbol arg-sub-list) [3850 3860])
                     ("carray" variable
                        (:pointer 1
                         :type ("CharArray" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [2271 2289])
-                    ("checkdup" variable (:type "char") (reparse-symbol arg-sub-list) [2290 2304]))                  
+                        (reparse-symbol arg-sub-list) [3861 3879])
+                    ("checkdup" variable (:type "char") (reparse-symbol arg-sub-list) [3880 3894]))                  
                 :type ("size_t" type (:type "class") nil nil))
-                nil [2235 2628])
+                nil [3825 4218])
             ("InitCharArrray" function
                (:arguments 
                   ( ("carray" variable
                        (:pointer 1
                         :type ("CharArray" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [2650 2668]))                  
+                        (reparse-symbol arg-sub-list) [4439 4457]))                  
                 :type "void")
-                nil [2630 2740])
+                nil [4419 4529])
             ("InitRules" function
                (:pointer 1
                 :arguments 
-                  ( ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2759 2770]))                  
+                  ( ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4781 4792]))                  
                 :type ("Rules" type (:type "class") nil nil))
-                nil [2742 3108])
+                nil [4764 5130])
             ("FreeRules" function
                (:arguments 
                   ( ("rules" variable
                        (:pointer 1
                         :type ("Rules" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [3124 3137])
-                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3138 3149]))                  
+                        (reparse-symbol arg-sub-list) [5334 5347])
+                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5348 5359]))                  
                 :type "void")
-                nil [3109 3388])
+                nil [5319 5598])
             ("ResizeRules" function
                (:arguments 
                   ( ("rules" variable
                        (:pointer 1
                         :type ("Rules" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [3407 3420])
-                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3421 3433]))                  
+                        (reparse-symbol arg-sub-list) [5867 5880])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5881 5893]))                  
                 :type "void")
-                nil [3390 4097])
+                nil [5850 6557])
             ("AppendRule" function
                (:arguments 
-                  ( ("nclass" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4115 4128])
-                    ("ncond" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4129 4142])
+                  ( ("nclass" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6822 6835])
+                    ("ncond" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6836 6849])
                     ("str" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [4143 4153])
+                        (reparse-symbol arg-sub-list) [6850 6860])
                     ("rules" variable
                        (:pointer 1
                         :type ("Rules" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [4154 4167]))                  
+                        (reparse-symbol arg-sub-list) [6861 6874]))                  
                 :type "void")
-                nil [4099 4278])
+                nil [6806 6985])
             ("AppendEd" function
                (:pointer 1
                 :arguments 
                   ( ("ed" variable
                        (:pointer 1
                         :type ("Edges" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [4305 4315])
-                    ("nclass" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4316 4329])
-                    ("nextract" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4330 4346])
-                    ("cov" variable (:type "double") (reparse-symbol arg-sub-list) [4350 4361])
-                    ("err" variable (:type "double") (reparse-symbol arg-sub-list) [4362 4373])
+                        (reparse-symbol arg-sub-list) [7586 7596])
+                    ("nclass" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7597 7610])
+                    ("nextract" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7611 7627])
+                    ("cov" variable (:type "double") (reparse-symbol arg-sub-list) [7631 7642])
+                    ("err" variable (:type "double") (reparse-symbol arg-sub-list) [7643 7654])
                     ("comb" variable
                        (:pointer 1
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [4374 4387])
-                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4388 4400])
+                        (reparse-symbol arg-sub-list) [7655 7668])
+                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7669 7681])
                     ("edcoll" variable
                        (:pointer 1
                         :type ("EdgesCollector" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [4404 4427]))                  
+                        (reparse-symbol arg-sub-list) [7685 7708]))                  
                 :type ("EdgesCollector" type (:type "class") nil nil))
-                nil [4280 4864])
+                nil [7561 8145])
             ("ResizeChunk" function
                (:pointer 1
                 :arguments 
                   ( ("p" variable
                        (:pointer 1
                         :type ("KChunk" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [4886 4896])
-                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4897 4909]))                  
+                        (reparse-symbol arg-sub-list) [8466 8476])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8477 8489]))                  
                 :type ("KChunk" type (:type "class") nil nil))
-                nil [4866 5243])
+                nil [8446 8823])
             ("ResizeEdgesColletor" function
                (:pointer 1
                 :arguments 
                   ( ("p" variable
                        (:pointer 1
                         :type ("EdgesCollector" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5281 5299])
-                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5300 5312]))                  
+                        (reparse-symbol arg-sub-list) [9085 9103])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9104 9116]))                  
                 :type ("EdgesCollector" type (:type "class") nil nil))
-                nil [5245 5484])
+                nil [9049 9288])
             ("FreeEdgesCollector" function
                (:arguments 
                   ( ("p" variable
                        (:pointer 1
                         :type ("EdgesCollector" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5510 5528]))                  
+                        (reparse-symbol arg-sub-list) [9504 9522]))                  
                 :type "void")
-                nil [5486 5603])
+                nil [9480 9597])
             ("FindIndInt64" function
                (:arguments 
                   ( ("v" variable
                        (:pointer 1
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5625 5635])
-                    ("el" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5636 5646])
-                    ("maxlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5647 5661]))                  
+                        (reparse-symbol arg-sub-list) [9900 9910])
+                    ("el" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9911 9921])
+                    ("maxlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9922 9936]))                  
                 :type ("size_t" type (:type "class") nil nil))
-                nil [5605 5749])
+                nil [9880 10024])
             ("FindIndInt32" function
                (:arguments 
                   ( ("v" variable
                        (:pointer 1
                         :type ("int32" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5771 5780])
-                    ("el" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5781 5790])
-                    ("maxlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5791 5805]))                  
+                        (reparse-symbol arg-sub-list) [10345 10354])
+                    ("el" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10355 10364])
+                    ("maxlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10365 10379]))                  
                 :type ("size_t" type (:type "class") nil nil))
-                nil [5751 5893])
+                nil [10325 10467])
             ("FindIndFloat" function
                (:arguments 
                   ( ("v" variable
                        (:pointer 1
                         :type "float")
-                        (reparse-symbol arg-sub-list) [5915 5924])
-                    ("el" variable (:type "float") (reparse-symbol arg-sub-list) [5925 5934])
-                    ("maxlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5935 5949]))                  
+                        (reparse-symbol arg-sub-list) [10779 10788])
+                    ("el" variable (:type "float") (reparse-symbol arg-sub-list) [10789 10798])
+                    ("maxlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10799 10813]))                  
                 :type ("size_t" type (:type "class") nil nil))
-                nil [5895 6032])
+                nil [10759 10896])
             ("FindNewEl" function
                (:pointer 1
                 :arguments 
                   ( ("filebuf" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [6050 6064])
-                    ("sep" variable (:type "char") (reparse-symbol arg-sub-list) [6065 6074]))                  
+                        (reparse-symbol arg-sub-list) [11151 11165])
+                    ("sep" variable (:type "char") (reparse-symbol arg-sub-list) [11166 11175]))                  
                 :type "char")
-                nil [6034 6186])
+                nil [11135 11287])
             ("InitChunksInd" function
                (:pointer 2
                 :arguments 
-                  ( ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6209 6220])
+                  ( ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11623 11634])
                     ("chunks" variable
                        (:pointer 3
                         :type ("KChunk" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [6221 6238])
-                    ("nsample" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6239 6254]))                  
+                        (reparse-symbol arg-sub-list) [11635 11652])
+                    ("nsample" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11653 11668]))                  
                 :type "char")
-                nil [6188 6535])
+                nil [11602 11949])
             ("SetChunksInd" function
                (:arguments 
                   ( ("ind" variable
                        (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [6555 6566])
-                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6567 6578])
+                        (reparse-symbol arg-sub-list) [12283 12294])
+                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12295 12306])
                     ("chunks" variable
                        (:pointer 3
                         :type ("KChunk" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [6579 6596])
-                    ("nsample" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6599 6614]))                  
+                        (reparse-symbol arg-sub-list) [12307 12324])
+                    ("nsample" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12327 12342]))                  
                 :type "void")
-                nil [6537 7038])
+                nil [12265 12766])
             ("FreeChunksInd" function
                (:arguments 
                   ( ("cind" variable
                        (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [7059 7071])
-                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7072 7083]))                  
+                        (reparse-symbol arg-sub-list) [12991 13003])
+                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13004 13015]))                  
                 :type "void")
-                nil [7040 7152])
+                nil [12972 13084])
             ("InitEdges" function
                (:pointer 1
                 :arguments 
-                  ( ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7171 7183]))                  
+                  ( ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13373 13385]))                  
                 :type ("Edges" type (:type "class") nil nil))
-                nil [7154 7675])
+                nil [13356 13877])
             ("FreeEdges" function
                (:arguments 
                   ( ("ed" variable
                        (:pointer 1
                         :type ("Edges" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [7692 7702]))                  
+                        (reparse-symbol arg-sub-list) [14084 14094]))                  
                 :type "void")
-                nil [7677 7783])
+                nil [14069 14175])
             ("InitVoidChunks" function
                (:arguments 
                   ( ("chunks_ref" variable
                        (:pointer 4
                         :type ("KChunk" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [7805 7827])
-                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7828 7840])
-                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7841 7852]))                  
+                        (reparse-symbol arg-sub-list) [14407 14429])
+                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14430 14442])
+                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14443 14454]))                  
                 :type "void")
-                nil [7785 8065])
+                nil [14387 14667])
             ("InitChunks" function
                (:arguments 
                   ( ("chunks_ref" variable
                        (:pointer 4
                         :type ("KChunk" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [8083 8105])
-                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8106 8118])
-                    ("nelem" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8119 8132])
+                        (reparse-symbol arg-sub-list) [15116 15138])
+                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15139 15151])
+                    ("nelem" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15152 15165])
                     ("noutclass" variable
                        (:pointer 1
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [8149 8167])
-                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8168 8179])
+                        (reparse-symbol arg-sub-list) [15182 15200])
+                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15201 15212])
                     ("types" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [8180 8192]))                  
+                        (reparse-symbol arg-sub-list) [15213 15225]))                  
                 :type "void")
-                nil [8067 8616])
+                nil [15100 15649])
             ("SetTrValChunks" function
                (:arguments 
                   ( ("chunks" variable
                        (:pointer 3
                         :type ("KChunk" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [8638 8655])
-                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8656 8668])
-                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8669 8680])
-                    ("validperc" variable (:type "double") (reparse-symbol arg-sub-list) [8683 8700]))                  
+                        (reparse-symbol arg-sub-list) [15909 15926])
+                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15927 15939])
+                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15940 15951])
+                    ("validperc" variable (:type "double") (reparse-symbol arg-sub-list) [15954 15971]))                  
                 :type "void")
-                nil [8618 8973])
+                nil [15889 16109])
             ("FreeCombs" function
                (:arguments 
                   ( ("combs" variable
                        (:pointer 2
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [8991 9006])
-                    ("ncomb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9007 9020]))                  
+                        (reparse-symbol arg-sub-list) [16320 16335])
+                    ("ncomb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16336 16349]))                  
                 :type "void")
-                nil [8976 9093])
+                nil [16305 16422])
             ("FreeChunks" function
                (:arguments 
                   ( ("chunks" variable
                        (:pointer 3
                         :type ("KChunk" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [9111 9128])
-                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9129 9141])
+                        (reparse-symbol arg-sub-list) [16632 16649])
+                    ("ncol" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16650 16662])
                     ("noutclass" variable
                        (:pointer 1
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [9142 9160])
-                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9177 9188]))                  
+                        (reparse-symbol arg-sub-list) [16663 16681])
+                    ("nout" variable (:type ("int32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16698 16709]))                  
                 :type "void")
-                nil [9095 9346])
-            ("Error" function (:type "void") nil [9348 9420]))          
+                nil [16616 16867])
+            ("Error" function (:type "void") nil [17064 17136]))          
     :file "pmcmem.c"
-    :pointmax 9421
-    :fsize 9420
-    :lastmodtime '(21458 24693 453632 895000)
+    :pointmax 17137
+    :fsize 17135
+    :lastmodtime '(21462 14773 629755 222000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "pmc-crule.c"
@@ -3233,31 +3235,31 @@
    (semanticdb-table "pmc.c"
     :major-mode 'c-mode
     :tags 
-        '( ("pmc.h" include nil nil [1072 1088])
+        '( ("pmc.h" include nil nil [1091 1107])
             ("outfile" variable
                (:pointer 1
                 :type ("FILE" type (:type "class") nil nil))
-                nil [1447 1461])
+                nil [1466 1480])
             ("argp_program_version" variable
                (:pointer 1
                 :constant-flag t
                 :type "char")
-                nil [1462 1508])
+                nil [1481 1527])
             ("argp_program_bug_address" variable
                (:pointer 1
                 :constant-flag t
                 :type "char")
-                nil [1509 1577])
+                nil [1528 1596])
             ("doc" variable
                (:dereference 1
                 :typemodifiers ("static")
                 :type "char")
-                nil [1607 1713])
+                nil [1627 1733])
             ("args_doc" variable
                (:dereference 1
                 :typemodifiers ("static")
                 :type "char")
-                nil [1760 1794])
+                nil [1781 1815])
             ("options" variable
                (:dereference 1
                 :typemodifiers ("static")
@@ -3265,7 +3267,7 @@
                      (:prototype t
                       :type "struct")
                       nil nil))
-                nil [1824 3335])
+                nil [1846 3357])
             ("Arguments" type
                (:typedef ("" type
                      (:members 
@@ -3273,96 +3275,95 @@
                              (:pointer 1
                               :dereference 1
                               :type "char")
-                              (reparse-symbol classsubparts) [3390 3404])
-                          ("autodim" variable (:type "char") (reparse-symbol classsubparts) [3433 3446])
-                          ("longname" variable (:type "int") (reparse-symbol classsubparts) [3448 3511])
-                          ("ncondmin" variable (:type "int") (reparse-symbol classsubparts) [3448 3511])
-                          ("ncondmax" variable (:type "int") (reparse-symbol classsubparts) [3448 3511])
-                          ("silent" variable (:type "int") (reparse-symbol classsubparts) [3448 3511])
-                          ("interactive" variable (:type "int") (reparse-symbol classsubparts) [3448 3511])
-                          ("verbose" variable (:type "int") (reparse-symbol classsubparts) [3448 3511])
-                          ("probability" variable (:type "double") (reparse-symbol classsubparts) [3513 3578])
-                          ("validperc" variable (:type "double") (reparse-symbol classsubparts) [3513 3578])
-                          ("maxerrperc" variable (:type "double") (reparse-symbol classsubparts) [3513 3578])
-                          ("mincov" variable (:type "double") (reparse-symbol classsubparts) [3513 3578])
-                          ("startcovering" variable (:type "double") (reparse-symbol classsubparts) [3513 3578])
+                              (reparse-symbol classsubparts) [3413 3427])
+                          ("autodim" variable (:type "char") (reparse-symbol classsubparts) [3456 3469])
+                          ("longname" variable (:type "int") (reparse-symbol classsubparts) [3471 3534])
+                          ("ncondmin" variable (:type "int") (reparse-symbol classsubparts) [3471 3534])
+                          ("ncondmax" variable (:type "int") (reparse-symbol classsubparts) [3471 3534])
+                          ("silent" variable (:type "int") (reparse-symbol classsubparts) [3471 3534])
+                          ("interactive" variable (:type "int") (reparse-symbol classsubparts) [3471 3534])
+                          ("verbose" variable (:type "int") (reparse-symbol classsubparts) [3471 3534])
+                          ("probability" variable (:type "double") (reparse-symbol classsubparts) [3536 3601])
+                          ("validperc" variable (:type "double") (reparse-symbol classsubparts) [3536 3601])
+                          ("maxerrperc" variable (:type "double") (reparse-symbol classsubparts) [3536 3601])
+                          ("mincov" variable (:type "double") (reparse-symbol classsubparts) [3536 3601])
+                          ("startcovering" variable (:type "double") (reparse-symbol classsubparts) [3536 3601])
                           ("outfile" variable
                              (:pointer 1
                               :type "char")
-                              (reparse-symbol classsubparts) [3580 3594]))                        
+                              (reparse-symbol classsubparts) [3603 3617]))                        
                       :type "struct")
                       nil nil)
                 :type "typedef")
-                nil [3372 3607])
+                nil [3395 3630])
             ("ParseOpt" function
-               (:typemodifiers ("static")
-                :arguments 
-                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [3662 3670])
+               (:arguments 
+                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [3866 3874])
                     ("arg" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [3671 3681])
+                        (reparse-symbol arg-sub-list) [3875 3885])
                     ("state" variable
                        (:pointer 1
                         :type ("argp_state" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [3682 3707]))                  
+                        (reparse-symbol arg-sub-list) [3886 3911]))                  
                 :type ("error_t" type (:type "class") nil nil))
-                nil [3637 4865])
+                nil [3848 4962])
             ("argp" variable
                (:typemodifiers ("static")
                 :type ("argp" type
                      (:prototype t
                       :type "struct")
                       nil nil))
-                nil [4889 4952])
+                nil [4987 5050])
             ("InteractiveOtp" function
                (:arguments 
                   ( ("nextractmin" variable
                        (:pointer 1
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [4975 4995])
+                        (reparse-symbol arg-sub-list) [5306 5326])
                     ("ncondmax" variable
                        (:pointer 1
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [4996 5013])
+                        (reparse-symbol arg-sub-list) [5327 5344])
                     ("ncol" variable
                        (:pointer 1
                         :type ("size_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5014 5027])
+                        (reparse-symbol arg-sub-list) [5345 5358])
                     ("autodim" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [5030 5044])
+                        (reparse-symbol arg-sub-list) [5361 5375])
                     ("mincov" variable
                        (:pointer 1
                         :type "double")
-                        (reparse-symbol arg-sub-list) [5045 5060])
+                        (reparse-symbol arg-sub-list) [5376 5391])
                     ("maxerrperc" variable
                        (:pointer 1
                         :type "double")
-                        (reparse-symbol arg-sub-list) [5061 5080])
+                        (reparse-symbol arg-sub-list) [5392 5411])
                     ("validperc" variable
                        (:pointer 1
                         :type "double")
-                        (reparse-symbol arg-sub-list) [5083 5101]))                  
+                        (reparse-symbol arg-sub-list) [5414 5432]))                  
                 :type "void")
-                nil [4955 6153])
+                nil [5286 6484])
             ("main" function
                (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6164 6173])
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6576 6585])
                     ("argv" variable
                        (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [6174 6186]))                  
+                        (reparse-symbol arg-sub-list) [6586 6598]))                  
                 :type "int")
-                nil [6155 11892]))          
+                nil [6567 12656]))          
     :file "pmc.c"
-    :pointmax 11893
-    :fsize 11892
-    :lastmodtime '(21458 24273 952767 373000)
+    :pointmax 12657
+    :fsize 12656
+    :lastmodtime '(21462 13797 934021 378000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "pmcfile.c"
@@ -3788,7 +3789,7 @@
     :lastmodtime '(21458 25037 785047 897000)
     :unmatched-syntax 'nil
     )
-    )
+   )
   :file "!home!andrea!Workspace!pmc-0.2!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.0"

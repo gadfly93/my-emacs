@@ -27,6 +27,15 @@
 (add-to-list 'auto-mode-alist '("NOTES.txt" . org-mode))
 (delete-selection-mode)
 
+(add-hook 'c-mode-common-hook
+  (lambda ()
+    (require 'doxymacs)
+    (doxymacs-mode t)
+    ;; (doxymacs-font-lock)
+    ))
+
+(setq doxymacs-doxygen-style "JavaDoc")
+
 (defadvice pdb (before gud-query-cmdline activate)
   "Provide a better default command line when called interactively."
   (interactive
