@@ -1,6 +1,6 @@
 *
-!.emacs.d/ac-comphist.dat
-!.emacs.d/semanticdb/
-!.emacs
-!.emacs.d
-!.gitignore
+! .emacs.d/ac-comphist.dat
+! .emacs.d/semanticdb/
+! .emacs
+! .emacs.d/
+! .gitignore
