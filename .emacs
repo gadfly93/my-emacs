@@ -1,5 +1,5 @@
-;; incomplete list of some packages
-;; sudo apt-get install doxymacs anything-el ecb
+;; list of packages to install from the distro repo
+;; sudo apt-get install emacs doxymacs anything-el ecb python-mode
 
 (column-number-mode)
 (show-paren-mode 1)
@@ -46,8 +46,8 @@
                             (file-name-nondirectory buffer-file-name)))))
 
 
-(add-to-list 'load-path "/home/andrea/.emacs.d/lisp/")
-(add-to-list 'load-path "/home/andrea/.emacs.d/lisp/slime-master/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
 (set-default 'compile-command "make")
 
