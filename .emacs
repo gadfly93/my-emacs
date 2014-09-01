@@ -1,5 +1,6 @@
 ;; list of packages to install from the distro repo
 ;; sudo apt-get install emacs doxymacs anything-el ecb python-mode
+;; sudo apt-get install gcc gdb g++ bison flex
 
 (column-number-mode)
 (show-paren-mode 1)
