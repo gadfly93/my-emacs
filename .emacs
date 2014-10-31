@@ -1,6 +1,6 @@
 ;; list of packages to install from the distro repo
 ;; sudo apt-get install emacs doxymacs anything-el ecb python-mode
-;; sudo apt-get install gcc gdb g++ bison flex git make 
+;; sudo apt-get install gcc gdb g++ bison flex git make
 
 (column-number-mode)
 (show-paren-mode 1)
@@ -27,7 +27,7 @@
 (add-to-list 'auto-mode-alist '("\\.l$" . flex-mode))
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.yy\\'" . bison-mode))
+(add-to-list 'auto-mode-alist '("\\.yy$" . bison-mode))
 (add-to-list 'auto-mode-alist '("NOTES.txt" . org-mode))
 (delete-selection-mode)
 
@@ -98,6 +98,8 @@
 (require 'python-mode)
 (require 'ido)
 (require 'slime-autoloads)
+(type-break-mode)
+
 (setq inferior-lisp-program "sbcl")
                                         ;(setq inferior-lisp-program "clisp")
 (setq slime-contribs '(slime-fancy))
@@ -208,7 +210,7 @@
 
 (setq py-shell-name "ipython")
 
-;;(server-start)
+(server-start)
 
 (fset 'graphnode
       "call graph_node(dag,value_n,0)")
@@ -284,3 +286,8 @@ characters."
 (require 'whitespace)
 (setq whitespace-style '(face lines-tail trailing))
 (global-whitespace-mode t)
+;;find . -type f -iname "*.[chS]" | xargs etags -a
+
+(defun create-tags ()
+  "Create tags file."
+  (shell-command "find . -type f -iname \"*.[chS]\" | xargs etags -a"))
