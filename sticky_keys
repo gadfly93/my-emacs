@@ -1,0 +1,12 @@
+ # Enable "sticky keys" for all modifier keys, while also enabling "latchlock"
+ # (i.e., pressing any modifier key twice in a row locks that key
+ # on) and disabling "twokey" (i.e., pressing any modifier key and another key
+ # at the same time permanently disables "sticky keys"). Note that enabling
+ # "sticky" automatically enables sticky keys for Apple- and Windows-specific
+ # modifier keys as well, including: <Shift>, <Ctrl>, <Alt>, <Fn>, and <Apple>.
+ xkbset -bell -feedback sticky -twokey latchlock
+
+ # Disable expiration of "sticky keys" after the specified time in seconds. When
+ # expiration is enabled, sticky keys are permanently disabled after that many
+ # seconds. This is quite unhelpful.
+ xkbset exp 64 '=sticky' '=twokey' '=latchlock'
