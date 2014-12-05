@@ -9,4 +9,4 @@
  # Disable expiration of "sticky keys" after the specified time in seconds. When
  # expiration is enabled, sticky keys are permanently disabled after that many
  # seconds. This is quite unhelpful.
- xkbset exp 64 '=sticky' '=twokey' '=latchlock'
+ # xkbset exp 64 '=sticky' '=twokey' '=latchlock'
