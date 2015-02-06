@@ -2,6 +2,7 @@
 ;; sudo apt-get install emacs doxymacs anything-el ecb python-mode xkbset
 ;; sudo apt-get install gcc gdb g++ bison flex git valgrind
 ;; sudo apt-get install libcunit1 libcunit1-dev
+;; sudo apt-get install gnome-tweak-tool
 
 (column-number-mode)
 (show-paren-mode 1)
