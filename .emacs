@@ -1,6 +1,8 @@
 ;; list of packages to install from the distro repo
-;; sudo apt-get install emacs doxymacs anyhing-el ecb python-mode
-;; sudo apt-get install gcc gdb g++ bison flex git make
+;; sudo apt-get install emacs doxymacs anything-el ecb python-mode xkbset
+;; sudo apt-get install gcc gdb g++ bison flex git valgrind
+;; sudo apt-get install libcunit1 libcunit1-dev
+;; sudo apt-get install gnome-tweak-tool
 
 (column-number-mode)
 (show-paren-mode 1)
@@ -51,7 +53,12 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
+<<<<<<< HEAD
 (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+=======
+(set-default 'compile-command "make")
+;(set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+>>>>>>> 9084778569186944feef51b35c44bd2212fb01b6
 
 (setq-default indent-tabs-mode nil)
 
