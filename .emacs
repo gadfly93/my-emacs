@@ -1,6 +1,6 @@
 ;; list of packages to install from the distro repo
 ;; sudo apt-get install emacs doxymacs anything-el ecb python-mode
-;; sudo apt-get install gcc gdb g++ bison flex git make
+;; sudo apt-get install gcc gdb g++ bison flex git make valgrind
 
 (column-number-mode)
 (show-paren-mode 1)
@@ -51,6 +51,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
 (set-default 'compile-command "make")
+;(set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
 
 (setq-default indent-tabs-mode nil)
 
