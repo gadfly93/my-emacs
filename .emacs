@@ -1,5 +1,5 @@
 ;; list of packages to install from the distro repo
-;; sudo apt-get install emacs doxymacs anything-el ecb python-mode
+;; sudo apt-get install emacs doxymacs anyhing-el ecb python-mode
 ;; sudo apt-get install gcc gdb g++ bison flex git make
 
 (column-number-mode)
@@ -16,6 +16,7 @@
 (global-set-key (kbd "<f4>") 'compile)
 (global-set-key (kbd "<f5>") 'gud-gdb)
 (global-set-key (kbd "<f6>") 'pdb)
+(global-set-key (kbd "<f7>") 'create-tags)
 
 (global-set-key [f8]  'graphnode_addr)
 (global-set-key [f9]  'graphnode)
@@ -50,12 +51,12 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
-(set-default 'compile-command "make")
+(set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
 
 (setq-default indent-tabs-mode nil)
 
 (setq c-default-style "K&R"
-      c-basic-offset 4)
+      c-basic-offset 2)
 
 
 (defun c-lineup-arglist-tabs-only (ignored)
@@ -67,35 +68,35 @@
     (* (max steps 1)
        c-basic-offset)))
 
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            ;; Add kernel style
-            (c-add-style
-             "linux-tabs-only"
-             '("linux" (c-offsets-alist
-                        (arglist-cont-nonempty
-                         c-lineup-gcc-asm-reg
-                         c-lineup-arglist-tabs-only))))))
+;; (add-hook 'c-mode-common-hook
+;;           (lambda ()
+;;             ;; Add kernel style
+;;             (c-add-style
+;;              "linux-tabs-only"
+;;              '("linux" (c-offsets-alist
+;;                         (arglist-cont-nonempty
+;;                          c-lineup-gcc-asm-reg
+;;                          c-lineup-arglist-tabs-only))))))
 
-(add-hook 'c-mode-hook
-          (lambda ()
-            (let ((filename (buffer-file-name)))
-              ;; Enable kernel mode for the appropriate files
-              (when (and filename
-                         (string-match (expand-file-name "~/Workspace/")
-                                       filename))
-                (setq indent-tabs-mode t)
-                (c-set-style "linux-tabs-only")))))
+;; (add-hook 'c-mode-hook
+;;           (lambda ()
+;;             (let ((filename (buffer-file-name)))
+;;               ;; Enable kernel mode for the appropriate files
+;;               (when (and filename
+;;                          (string-match (expand-file-name "~/Workspace/")
+;;                                        filename))
+;;                 (setq indent-tabs-mode t)
+;;                 (c-set-style "linux-tabs-only")))))
 
 (require 'cc-fonts)
-(require 'ecb)
+;;(require 'ecb)
 (require 'bison-mode)
 (require 'flex-mode)
-(require 'anything)
+;;(require 'anything)
 (require 'auto-complete-config)
-(require 'python-pep8)
-(require 'python-pylint)
-(require 'python-mode)
+;;(require 'python-pep8)
+;;(require 'python-pylint)
+;;(require 'python-mode)
 (require 'ido)
 (require 'slime-autoloads)
 (type-break-mode)
@@ -290,4 +291,4 @@ characters."
 
 (defun create-tags ()
   "Create tags file."
-  (shell-command "find . -type f -iname \"*.[chS]\" | xargs etags -a"))
+  (shell-command "find . -type f -iname "*.[chS]" | xargs etags -a"))
