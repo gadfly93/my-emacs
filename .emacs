@@ -306,7 +306,7 @@ characters."
                 (func-decl-cont . *); Guessed value
                 (statement . 0)    ; Guessed value
                 (statement-block-intro . +) ; Guessed value
-                (statement-cont . +); Guessed value
+                (statement-cont . +)
                 (substatement . +); Guessed value
                 (substatement-open . 0); Guessed value
                 (topmost-intro . 0); Guessed value
