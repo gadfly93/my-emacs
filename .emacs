@@ -18,6 +18,7 @@
 (global-set-key (kbd "<f4>") 'compile)
 (global-set-key (kbd "<f5>") 'gud-gdb)
 (global-set-key (kbd "<f6>") 'pdb)
+(global-set-key (kbd "<f7>") 'create-tags)
 
 (global-set-key [f8]  'graphnode_addr)
 (global-set-key [f9]  'graphnode)
@@ -54,12 +55,12 @@
 
 ;(set-default 'compile-command "make")
 (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
-(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
+;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
 (setq-default indent-tabs-mode nil)
 
 (setq c-default-style "K&R"
-      c-basic-offset 4)
+      c-basic-offset 2)
 
 
 (defun c-lineup-arglist-tabs-only (ignored)
@@ -72,14 +73,14 @@
        c-basic-offset)))
 
 (require 'cc-fonts)
-(require 'ecb)
+;;(require 'ecb)
 (require 'bison-mode)
 (require 'flex-mode)
-(require 'anything)
+;;(require 'anything)
 (require 'auto-complete-config)
-(require 'python-pep8)
-(require 'python-pylint)
-(require 'python-mode)
+;;(require 'python-pep8)
+;;(require 'python-pylint)
+;;(require 'python-mode)
 (require 'ido)
 (require 'slime-autoloads)
 (type-break-mode)
@@ -275,6 +276,7 @@ characters."
 (defun create-tags ()
   "Create tags file."
   (shell-command "find . -type f -iname "*.[chS]" | xargs etags -a"))
+
 
 (defcustom type-break-interval (* 30 30)
   "Number of seconds between scheduled typing breaks."
