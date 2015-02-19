@@ -60,7 +60,7 @@
 (setq-default indent-tabs-mode nil)
 
 (setq c-default-style "K&R"
-      c-basic-offset 2)
+      c-basic-offset 4)
 
 
 (defun c-lineup-arglist-tabs-only (ignored)
@@ -413,4 +413,5 @@ characters."
               (when (and filename
                          (string-match (expand-file-name "~/pbm/")
                                        filename))
+                (setq indent-tabs-mode nil)
                 (c-set-style "HyStyle")))))
