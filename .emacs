@@ -52,8 +52,9 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
-(set-default 'compile-command "make")
-;(set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+;(set-default 'compile-command "make")
+(set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
 (setq-default indent-tabs-mode nil)
 
@@ -69,26 +70,6 @@
          (steps (floor offset c-basic-offset)))
     (* (max steps 1)
        c-basic-offset)))
-
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            ;; Add kernel style
-            (c-add-style
-             "linux-tabs-only"
-             '("linux" (c-offsets-alist
-                        (arglist-cont-nonempty
-                         c-lineup-gcc-asm-reg
-                         c-lineup-arglist-tabs-only))))))
-
-(add-hook 'c-mode-hook
-          (lambda ()
-            (let ((filename (buffer-file-name)))
-              ;; Enable kernel mode for the appropriate files
-              (when (and filename
-                         (string-match (expand-file-name "~/Workspace/")
-                                       filename))
-                (setq indent-tabs-mode t)
-                (c-set-style "linux-tabs-only")))))
 
 (require 'cc-fonts)
 (require 'ecb)
@@ -293,4 +274,141 @@ characters."
 
 (defun create-tags ()
   "Create tags file."
-  (shell-command "find . -type f -iname \"*.[chS]\" | xargs etags -a"))
+  (shell-command "find . -type f -iname "*.[chS]" | xargs etags -a"))
+
+(defcustom type-break-interval (* 30 30)
+  "Number of seconds between scheduled typing breaks."
+  :type 'integer
+  :group 'type-break)
+
+
+;; Hyperstone stuffs
+
+;; open Hyperstone Makefile (*.mak) in makefile-mode
+(setq auto-mode-alist (cons '("\\.mak" . makefile-mode) auto-mode-alist))
+
+;; C indent
+
+(c-add-style "HyStyle"
+             '("linux"
+               (c-basic-offset . 2); Guessed value
+               (c-offsets-alist
+                (arglist-cont . 0); Guessed value
+                (arglist-intro . 0); Guessed value
+                (block-close . 0); Guessed value
+                (cpp-macro-cont . ++); Guessed value
+                (defun-block-intro . +); Guessed value
+                (defun-close . 0); Guessed value
+                (defun-open . 0); Guessed value
+                (else-clause . 0); Guessed value
+                (func-decl-cont . *); Guessed value
+                (statement . 0)    ; Guessed value
+                (statement-block-intro . +) ; Guessed value
+                (statement-cont . +); Guessed value
+                (substatement . +); Guessed value
+                (substatement-open . 0); Guessed value
+                (topmost-intro . 0); Guessed value
+                (access-label . -)
+                (annotation-top-cont . 0)
+                (annotation-var-cont . +)
+                (arglist-close . c-lineup-close-paren)
+                (arglist-cont-nonempty . c-lineup-arglist)
+                (block-open . 0)
+                (brace-entry-open . 0)
+                (brace-list-close . 0)
+                (brace-list-entry . 0)
+                (brace-list-intro . +)
+                (brace-list-open . 0)
+                (c . c-lineup-C-comments)
+                (case-label . 2)
+                (catch-clause . 0)
+                (class-close . 0)
+                (class-open . 0)
+                (comment-intro . c-lineup-comment)
+                (composition-close . 0)
+                (composition-open . 0)
+                (cpp-define-intro c-lineup-cpp-define +)
+                (cpp-macro . -1000)
+                (do-while-closure . 0)
+                (extern-lang-close . 0)
+                (extern-lang-open . 0)
+                (friend . 0)
+                (inclass . +)
+                (incomposition . +)
+                (inexpr-class . +)
+                (inexpr-statement . +)
+                (inextern-lang . +)
+                (inher-cont . c-lineup-multi-inher)
+                (inher-intro . +)
+                (inlambda . c-lineup-inexpr-block)
+                (inline-close . 0)
+                (inline-open . +)
+                (inmodule . +)
+                (innamespace . +)
+                (knr-argdecl . 0)
+                (knr-argdecl-intro . 0)
+                (label . 0)
+                (lambda-intro-cont . +)
+                (member-init-cont . c-lineup-multi-inher)
+                (member-init-intro . +)
+                (module-close . 0)
+                (module-open . 0)
+                (namespace-close . 0)
+                (namespace-open . 0)
+                (objc-method-args-cont . c-lineup-ObjC-method-args)
+                (objc-method-call-cont c-lineup-ObjC-method-call-colons c-lineup-ObjC-method-call +)
+                (objc-method-intro .
+                                   [0])
+                (statement-case-intro . +)
+                (statement-case-open . 0)
+                (stream-op . c-lineup-streamop)
+                (string . -1000)
+                (substatement-label . 0)
+                (template-args-cont c-lineup-template-args +)
+                (topmost-intro-cont . c-lineup-topmost-intro-cont))))
+
+
+
+;; (setq c-default-style "HyStyle")
+;; (setq c-mode-hook
+;;     (function (lambda ()
+;;                 (setq indent-tabs-mode nil)
+;;                 (setq c-indent-level 2))))
+
+(setq objc-mode-hook
+      (function (lambda ()
+                  (setq indent-tabs-mode nil)
+                  (setq c-indent-level 2))))
+(setq c++-mode-hook
+      (function (lambda ()
+                  (setq indent-tabs-mode nil)
+                  (setq c-indent-level 2))))
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            ;; Add kernel style
+            (c-add-style
+             "linux-tabs-only"
+             '("linux" (c-offsets-alist
+                        (arglist-cont-nonempty
+                         c-lineup-gcc-asm-reg
+                         c-lineup-arglist-tabs-only))))))
+
+(add-hook 'c-mode-hook
+          (lambda ()
+            (let ((filename (buffer-file-name)))
+              ;; Enable kernel mode for the appropriate files
+              (when (and filename
+                         (string-match (expand-file-name "~/pmc-0.2/")
+                                       filename))
+                (setq indent-tabs-mode t)
+                (c-set-style "linux-tabs-only")))))
+
+(add-hook 'c-mode-hook
+          (lambda ()
+            (let ((filename (buffer-file-name)))
+              ;; Enable kernel mode for the appropriate files
+              (when (and filename
+                         (string-match (expand-file-name "~/pbm/")
+                                       filename))
+                (c-set-style "HyStyle")))))
