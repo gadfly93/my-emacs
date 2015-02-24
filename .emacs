@@ -275,7 +275,8 @@ characters."
 
 (defun create-tags ()
   "Create tags file."
-  (shell-command "find . -type f -iname "*.[chS]" | xargs etags -a"))
+  (interactive)
+  (shell-command "find . -type f -iname \"*.[chS]\" | xargs etags -a"))
 
 
 (defcustom type-break-interval (* 30 30)
