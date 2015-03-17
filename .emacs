@@ -424,3 +424,5 @@ characters."
                                        filename))
                 (setq indent-tabs-mode nil)
                 (c-set-style "HyStyle")))))
+
+(put 'upcase-region 'disabled nil)
