@@ -20,6 +20,11 @@
 (global-set-key (kbd "<f6>") 'pdb)
 (global-set-key (kbd "<f7>") 'create-tags)
 
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
 (global-set-key [f8]  'graphnode_addr)
 (global-set-key [f9]  'graphnode)
 
@@ -276,7 +281,7 @@ characters."
 (defun create-tags ()
   "Create tags file."
   (interactive)
-  (shell-command "find . -type f -iname \"*.[chS]\" | xargs etags -a")
+  (shell-command "find . -type f -iname \"*.[chS\"def\"]\" | xargs etags -a")
   (visit-tags-table "./"))
 
 
