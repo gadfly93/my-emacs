@@ -77,6 +77,8 @@
     (* (max steps 1)
        c-basic-offset)))
 
+(require 'git)
+(require 'git-blame)
 (require 'cc-fonts)
 ;;(require 'ecb)
 (require 'bison-mode)
