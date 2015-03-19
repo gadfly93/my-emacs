@@ -283,8 +283,10 @@ characters."
 (defun create-tags ()
   "Create tags file."
   (interactive)
-  (shell-command "find . -type f -iname \"*.[chS\"def\"]\" | xargs etags -a")
-  (visit-tags-table "./"))
+  (let ((default-directory (read-directory-name "create tags for dir: ")))
+   (shell-command
+    (concat "find "". -type f -iname \"*.[chS\"def\"]\" | xargs etags -a"))
+   (visit-tags-table "./")))
 
 
 (defcustom type-break-interval (* 30 30)
