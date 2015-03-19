@@ -284,8 +284,7 @@ characters."
   "Create tags file."
   (interactive)
   (let ((default-directory (read-directory-name "create tags for dir: ")))
-   (shell-command
-    (concat "find "". -type f -iname \"*.[chS\"def\"]\" | xargs etags -a"))
+   (shell-command "find . -type f -iname \"*.[chS\"def\"]\" | xargs etags -a")
    (visit-tags-table "./")))
 
 
