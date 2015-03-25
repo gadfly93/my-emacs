@@ -293,6 +293,7 @@ characters."
   :type 'integer
   :group 'type-break)
 
+(setq c-backslash-max-column 79)
 
 ;; Hyperstone stuffs
 
