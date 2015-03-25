@@ -32,6 +32,7 @@
 
 ;(add-to-list 'auto-mode-alist '("valsumm.out$" . compilation-minor-mode))
 (add-to-list 'auto-mode-alist '("\\.cl$" . c-mode))
+(add-to-list 'auto-mode-alist '("\\.def$" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.l$" . flex-mode))
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
