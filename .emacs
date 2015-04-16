@@ -26,7 +26,7 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 (global-set-key [f8]  'graphnode_addr)
-(global-set-key [f9]  'graphnode)
+(global-set-key [f9]  'mem-expl)
 
 (setq tramp-default-method "scp")
 
@@ -60,7 +60,8 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
 ;(set-default 'compile-command "make")
-(set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+(set-default 'compile-command
+             "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANESS=BIG")
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
 (setq-default indent-tabs-mode nil)
@@ -205,8 +206,8 @@
 
 (server-start)
 
-(fset 'graphnode
-      "call graph_node(dag,value_n,0)")
+(fset 'mem-expl
+      "x /10bfx ")
 (fset 'graphnode_addr
       "call graph_node(dag,value_n,1)")
 
