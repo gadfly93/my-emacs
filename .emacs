@@ -38,7 +38,9 @@
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.yy$" . bison-mode))
 (add-to-list 'auto-mode-alist '("NOTES.txt" . org-mode))
+
 (delete-selection-mode)
+(setq ediff-diff-options "-w")
 
 (add-hook 'c-mode-common-hook
   (lambda ()
