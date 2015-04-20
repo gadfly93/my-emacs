@@ -61,6 +61,7 @@
 
 ;(set-default 'compile-command "make")
 (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+;(set-default 'compile-command "make __TARGET__=m34.1 DEBUG=1 NOCOV=1 -B)
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
 (setq-default indent-tabs-mode nil)
@@ -100,7 +101,7 @@
 
 (add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
 (ac-config-default)
-(setq gud-gdb-command-name "gdb --annotate=3 python")
+(setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb --annotate=3 python")
 (global-ede-mode 1)                       ; Enable the Project management system
 (semantic-mode)                           ; Enable prototype help and smart completion
                                         ;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
