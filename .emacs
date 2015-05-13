@@ -64,7 +64,7 @@
 ;(set-default 'compile-command "make")
 (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
 (set-default 'compile-command
-             "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANESS=BIG")
+             "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG")
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
 (setq-default indent-tabs-mode nil)
