@@ -19,6 +19,7 @@
 (global-set-key (kbd "<f5>") 'gud-gdb)
 (global-set-key (kbd "<f6>") 'pdb)
 (global-set-key (kbd "<f7>") 'create-tags)
+(global-set-key (kbd "<f8>") 'rename-buffer-shell)
 
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
@@ -433,3 +434,12 @@ characters."
                 (c-set-style "HyStyle")))))
 
 (put 'upcase-region 'disabled nil)
+
+
+(defun rename-buffer-shell ()
+  "Renames current shell buffer with the directory in it."
+  (interactive)
+  (rename-buffer
+   (concat "*"
+           (car (last (butlast (split-string default-directory "/") 1)))
+           "-shell*")))
