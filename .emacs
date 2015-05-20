@@ -26,7 +26,7 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-(global-set-key [f8]  'graphnode_addr)
+;; (global-set-key [f8]  'graphnode_addr)
 (global-set-key [f9]  'mem-expl)
 
 (setq tramp-default-method "scp")
