@@ -413,6 +413,17 @@ characters."
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
+
+(add-hook 'c-mode-hook
+          (lambda ()
+            (let ((filename (buffer-file-name)))
+              ;; Enable kernel mode for the appropriate files
+              (when (and filename
+                         (string-match (expand-file-name "~/")
+                                       filename))
+                (setq indent-tabs-mode nil)
+                (c-set-style "HyStyle")))))
+
 (add-hook 'c-mode-hook
           (lambda ()
             (let ((filename (buffer-file-name)))
@@ -428,10 +439,10 @@ characters."
             (let ((filename (buffer-file-name)))
               ;; Enable kernel mode for the appropriate files
               (when (and filename
-                         (string-match (expand-file-name "~/pbm/")
+                         (string-match (expand-file-name "~/Workspace/")
                                        filename))
-                (setq indent-tabs-mode nil)
-                (c-set-style "HyStyle")))))
+                (setq indent-tabs-mode t)
+                (c-set-style "linux-tabs-only")))))
 
 (put 'upcase-region 'disabled nil)
 
