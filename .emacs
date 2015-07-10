@@ -66,6 +66,7 @@
 (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
 (set-default 'compile-command
              "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG FILE_FORMAT=DUMP")
+; FILE_TARGET_FORMAT=S8
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
 (setq-default indent-tabs-mode nil)
@@ -310,6 +311,7 @@ characters."
 
 (c-add-style "HyStyle"
              '("linux"
+               (c-backslash-max-column . 79)
                (c-basic-offset . 2); Guessed value
                (c-offsets-alist
                 (arglist-cont . 0); Guessed value
