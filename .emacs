@@ -4,6 +4,14 @@
 ;; sudo apt-get install libcunit1 libcunit1-dev
 ;; sudo apt-get install gnome-tweak-tool
 
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
 (column-number-mode)
 (show-paren-mode 1)
 (setq line-move-visual nil)
@@ -66,6 +74,7 @@
 (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
 (set-default 'compile-command
              "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG FILE_FORMAT=DUMP")
+; make __TARGET__=t34.1 XLOADER=2
 ; FILE_TARGET_FORMAT=S8
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
@@ -107,6 +116,7 @@
 (add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
 (ac-config-default)
 (setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb --annotate=3 testcase")
+;~/hstone-r151/bin/e1-elf-gdb  --fullname --command=start_debug.gdb
 (global-ede-mode 1)                       ; Enable the Project management system
 (semantic-mode)                           ; Enable prototype help and smart completion
                                         ;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
