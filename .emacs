@@ -106,6 +106,7 @@
 ;;(require 'python-mode)
 (require 'ido)
 (require 'slime-autoloads)
+(require 'vlf)
 (type-break-mode)
 
 (setq inferior-lisp-program "sbcl")
@@ -301,8 +302,9 @@ characters."
   "Create tags file."
   (interactive)
   (let ((default-directory (read-directory-name "create tags for dir: ")))
-   (shell-command "find . -type f -iname \"*.[chS\"def\"]\" | xargs etags -a")
-   (visit-tags-table "./")))
+    (delete-file "TAGS")
+    (shell-command "find . -type f -iname \"*.[chS\"def\"]\" | xargs etags -a")
+    (visit-tags-table "./")))
 
 
 (defcustom type-break-interval (* 30 30)
