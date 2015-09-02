@@ -71,9 +71,13 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
 ;(set-default 'compile-command "make")
-(set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
-(set-default 'compile-command
-             "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG FILE_FORMAT=DUMP")
+;; (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+;; (set-default 'compile-command
+;;              "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG FILE_FORMAT=DUMP")
+(set-default 'compile-command "make __TARGET__=t51.2 DEBUG=2 NOCOV=1 FILE_TARGET_FORMAT=S8")
+;; (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
+;; (set-default 'compile-command
+;;              "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG FILE_FORMAT=DUMP")
 ; make __TARGET__=t34.1 XLOADER=2
 ; FILE_TARGET_FORMAT=S8
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
