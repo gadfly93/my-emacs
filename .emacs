@@ -127,6 +127,9 @@
                                         ;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
                                         ;(global-srecode-minor-mode 1)            ; Enable template insertion menu
 
+;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
+;(global-srecode-minor-mode 1)            ; Enable template insertion menu
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -306,8 +309,8 @@ characters."
   "Create tags file."
   (interactive)
   (let ((default-directory (read-directory-name "create tags for dir: ")))
-    (delete-file "TAGS")
-    (shell-command "find . -type f -iname \"*.[chS\"def\"]\" | xargs etags -a")
+    ;; (delete-file "TAGS")
+    (shell-command "find . -type f -iname \"*.[chS]\" -o -name \"*.def\"| xargs etags")
     (visit-tags-table "./")))
 
 
@@ -472,3 +475,8 @@ characters."
    (concat "*"
            (car (last (butlast (split-string default-directory "/") 1)))
            "-shell*")))
+
+(require 'semantic/bovine/gcc)
+(ede-cpp-root-project "PBM" 
+                      :file "/home/acorallo/pbm/.gitignore"
+                      :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
