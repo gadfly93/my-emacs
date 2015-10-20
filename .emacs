@@ -82,6 +82,8 @@
 ; FILE_TARGET_FORMAT=S8
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
+; cd ~/pbm/src/u8 && make __TARGET__=m34.1 XLOADER=2 && cp -r ~/pbm/src/u8/o_m34.1/* ~/hsfmt/u8/
+
 (setq-default indent-tabs-mode nil)
 
 (setq c-default-style "K&R"
@@ -120,8 +122,11 @@
 
 (add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
 (ac-config-default)
-(setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb --annotate=3 testcase")
-;~/hstone-r151/bin/e1-elf-gdb  --fullname --command=start_debug.gdb
+(setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb --fullname testcase")
+;;sudo /usr/hstone-r158/bin/e1-elf-gdb --fullname --command=/home/acorallo/pbm/gdb/start-gdb
+;;dd.txt -features=00000003
+;;XLOADER=2
+
 (global-ede-mode 1)                       ; Enable the Project management system
 (semantic-mode)                           ; Enable prototype help and smart completion
                                         ;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
@@ -477,6 +482,6 @@ characters."
            "-shell*")))
 
 (require 'semantic/bovine/gcc)
-(ede-cpp-root-project "PBM" 
+(ede-cpp-root-project "PBM"
                       :file "/home/acorallo/pbm/.gitignore"
                       :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
