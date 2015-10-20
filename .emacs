@@ -477,6 +477,10 @@ characters."
            "-shell*")))
 
 (require 'semantic/bovine/gcc)
-(ede-cpp-root-project "PBM" 
+(ede-cpp-root-project "PBM"
                       :file "/home/acorallo/pbm/.gitignore"
+                      :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
+
+(ede-cpp-root-project "PBM2"
+                      :file "/local/acorallo/pbm_m38/.gitignore"
                       :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
