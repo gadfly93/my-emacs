@@ -488,3 +488,6 @@ characters."
 
 (fset 'dmesg-buff
       "\C-u\C-[xshell\C-m\C-mcd\C-mdmesg -wH\C-m\C-[xrename-buffer\C-mdmesg\C-m")
+(ede-cpp-root-project "PBM2"
+                      :file "/local/acorallo/pbm_m38/.gitignore"
+                      :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
