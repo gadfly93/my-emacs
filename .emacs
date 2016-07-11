@@ -547,3 +547,22 @@ characters."
 
 (fset 'dmesg-buff
       "\C-u\C-[xshell\C-m\C-mcd\C-mdmesg -wH\C-m\C-[xrename-buffer\C-mdmesg\C-m")
+(fset 'pbm-shell
+      "\C-u\C-[xshell\C-m\C-mcd ~/pbm\C-m\C-[[19~")
+(fset 'u8-shell
+      "\C-u\C-[xshell\C-m\C-mcd ~/pbm/src/u8\C-m\C-[[19~")
+(fset 's8-shell
+      "\C-u\C-[xshell\C-m\C-mcd ~/pbm/src/s8\C-m\C-[[19~")
+(fset 'u9-shell
+      "\C-u\C-[xshell\C-m\C-mcd ~/pbm/src/u9\C-m\C-[[19~")
+(fset 'hsfmt-shell
+      "\C-u\C-[xshell\C-m\C-mcd ~/hsfmt\C-m\C-[[19~")
+
+(defun startup-shells ()
+  (interactive)
+  (execute-kbd-macro 'dmesg-buff)
+  (execute-kbd-macro 'pbm-shell)
+  (execute-kbd-macro 's8-shell)
+  (execute-kbd-macro 'u8-shell)
+  (execute-kbd-macro 'u9-shell)
+  (execute-kbd-macro 'hsfmt-shell))
