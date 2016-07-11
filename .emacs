@@ -55,6 +55,7 @@
   (lambda ()
     (require 'doxymacs)
     (doxymacs-mode t)
+    (semantic-stickyfunc-mode t)
     ;; (doxymacs-font-lock)
     ))
 
@@ -83,6 +84,8 @@
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
 ; cd ~/pbm/src/u8 && make __TARGET__=m34.1 XLOADER=2 && cp -r ~/pbm/src/u8/o_m34.1/* ~/hsfmt/u8/
+
+; make __TARGET__=m38.1 DEBUG=2 NOCOV=1 FILE_TARGET_FORMAT=S8 FILE_ENDIANNESS=SMALL
 
 (setq-default indent-tabs-mode nil)
 
@@ -431,6 +434,7 @@ characters."
 
 (add-hook 'c-mode-common-hook
           (lambda ()
+            (semantic-stickyfunc-mode t)
             ;; Add kernel style
             (c-add-style
              "linux-tabs-only"
@@ -445,7 +449,7 @@ characters."
             (let ((filename (buffer-file-name)))
               ;; Enable kernel mode for the appropriate files
               (when (and filename
-                         (string-match (expand-file-name "~/")
+                         (string-match (expand-file-name "pbm")
                                        filename))
                 (setq indent-tabs-mode nil)
                 (c-set-style "HyStyle")))))
