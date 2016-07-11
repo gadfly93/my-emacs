@@ -1,8 +1,9 @@
 ;; list of packages to install from the distro repo
-;; sudo apt-get install emacs doxymacs anything-el ecb python-mode xkbset
+;; sudo apt-get install emacs doxymacs ecb python-mode xkbset
 ;; sudo apt-get install gcc gdb g++ bison flex git valgrind
 ;; sudo apt-get install libcunit1 libcunit1-dev
 ;; sudo apt-get install gnome-tweak-tool
+;; sudo apt-get install global  (gtags)
 
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
@@ -24,8 +25,8 @@
 (global-set-key (kbd "<f2>") 'ecb-activate)
 (global-set-key (kbd "<f3>") 'compilation-shell-minor-mode)
 (global-set-key (kbd "<f4>") 'compile)
-(global-set-key (kbd "<f5>") 'gud-gdb)
-(global-set-key (kbd "<f6>") 'pdb)
+(global-set-key (kbd "<f5>") 'gdb)
+(global-set-key (kbd "<f6>") 'gdb-restore-windows)
 (global-set-key (kbd "<f7>") 'create-tags)
 (global-set-key (kbd "<f8>") 'rename-buffer-shell)
 
@@ -105,7 +106,6 @@
 ;;(require 'ecb)
 (require 'bison-mode)
 (require 'flex-mode)
-;;(require 'anything)
 (require 'auto-complete-config)
 ;;(require 'python-pep8)
 ;;(require 'python-pylint)
@@ -122,13 +122,20 @@
 
 (add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
 (ac-config-default)
-(setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb --fullname testcase")
+(setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb -i=mi")
+
+(setq ;; use gdb-many-windows by default
+ gdb-many-windows t
+ ;; Non-nil means display source file containing the main routine at startup
+ gdb-show-main t)
+
 ;;sudo /usr/hstone-r162/bin/e1-elf-gdb --fullname --command=/home/acorallo/pbm/gdb/start-gdb
 ;;dd.txt -features=00000003
 ;;XLOADER=2
 
 (global-ede-mode 1)                       ; Enable the Project management system
 (semantic-mode)                           ; Enable prototype help and smart completion
+(global-semantic-idle-summary-mode 1)
                                         ;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
                                         ;(global-srecode-minor-mode 1)            ; Enable template insertion menu
 
@@ -308,6 +315,7 @@ characters."
 (require 'whitespace)
 (setq whitespace-style '(face lines-tail trailing))
 (global-whitespace-mode t)
+(global-semantic-stickyfunc-mode t)
 ;;find . -type f -iname "*.[chS]" | xargs etags -a
 
 (defun create-tags ()
@@ -472,6 +480,57 @@ characters."
 
 (put 'upcase-region 'disabled nil)
 
+;; new c ide customization from http://tuhdo.github.io/c-ide.htm
+(require 'ggtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+              (ggtags-mode 1))))
+
+(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
+(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
+(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
+(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
+(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
+(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
+
+(define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
+
+
+(setq
+ helm-gtags-ignore-case t
+ helm-gtags-auto-update t
+ helm-gtags-use-input-at-cursor t
+ helm-gtags-pulse-at-cursor t
+ helm-gtags-prefix-key "\C-cg"
+ helm-gtags-suggested-key-mapping t)
+
+(require 'helm-gtags)
+;; Enable helm-gtags-mode
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode 'dired-mode)
+              (helm-gtags-mode))))
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (hs-minor-mode))))
+
+(define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
+(define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
+(define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+(define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+(define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+(define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+
+(setq-local imenu-create-index-function #'ggtags-build-imenu-index)
+
 
 (defun rename-buffer-shell ()
   "Renames current shell buffer with the directory in it."
@@ -488,6 +547,3 @@ characters."
 
 (fset 'dmesg-buff
       "\C-u\C-[xshell\C-m\C-mcd\C-mdmesg -wH\C-m\C-[xrename-buffer\C-mdmesg\C-m")
-(ede-cpp-root-project "PBM2"
-                      :file "/local/acorallo/pbm_m38/.gitignore"
-                      :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
