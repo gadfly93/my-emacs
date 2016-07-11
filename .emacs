@@ -56,7 +56,6 @@
   (lambda ()
     (require 'doxymacs)
     (doxymacs-mode t)
-    (semantic-stickyfunc-mode t)
     ;; (doxymacs-font-lock)
     ))
 
@@ -442,7 +441,6 @@ characters."
 
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (semantic-stickyfunc-mode t)
             ;; Add kernel style
             (c-add-style
              "linux-tabs-only"
