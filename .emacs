@@ -126,7 +126,7 @@
 (add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
 (ac-config-default)
 (setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb --fullname testcase")
-;;sudo /usr/hstone-r158/bin/e1-elf-gdb --fullname --command=/home/acorallo/pbm/gdb/start-gdb
+;;sudo /usr/hstone-r162/bin/e1-elf-gdb --fullname --command=/home/acorallo/pbm/gdb/start-gdb
 ;;dd.txt -features=00000003
 ;;XLOADER=2
 
@@ -191,7 +191,7 @@
 
 (defun python-add-breakpoint ()
   (interactive)
-  (py-newline-and-indent)
+  ;; (py-newline-and-indent)
   (insert "import ipdb; ipdb.set_trace()")
   (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))
                                         ;(define-key (kbd "C-c C-t") 'python-add-breakpoint)
@@ -490,6 +490,8 @@ characters."
                       :file "/home/acorallo/pbm/.gitignore"
                       :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
 
+(fset 'dmesg-buff
+      "\C-u\C-[xshell\C-m\C-mcd\C-mdmesg -wH\C-m\C-[xrename-buffer\C-mdmesg\C-m")
 (ede-cpp-root-project "PBM2"
                       :file "/local/acorallo/pbm_m38/.gitignore"
                       :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
