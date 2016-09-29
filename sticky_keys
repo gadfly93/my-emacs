@@ -10,3 +10,6 @@
  # expiration is enabled, sticky keys are permanently disabled after that many
  # seconds. This is quite unhelpful.
  # xkbset exp 64 '=sticky' '=twokey' '=latchlock'
+ 
+ # caps lock as second ctrl
+ setxkbmap -option caps:ctrl_modifier
