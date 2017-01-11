@@ -83,7 +83,8 @@
 ; FILE_TARGET_FORMAT=S8
 ;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
 
-; cd ~/pbm/src/u8 && make __TARGET__=m34.1 XLOADER=2 && cp -r ~/pbm/src/u8/o_m34.1/* ~/hsfmt/u8/
+                                        ; cd ~/pbm/src/u8 &&
+; make __TARGET__=m34.1 XLOADER=2 && cp -r ~/pbm/src/u8/o_m34.1/* ~/hsfmt/u8/
 
 ; make __TARGET__=m38.1 DEBUG=2 NOCOV=1 FILE_TARGET_FORMAT=S8 FILE_ENDIANNESS=SMALL
 
@@ -152,8 +153,9 @@
  '(ecb-layout-window-sizes nil)
  '(ecb-options-version "2.40")
  '(ecb-source-path (quote ("" "/home/andrea/Workspace/")))
-                                        ; '(initial-buffer-choice "~/Workspace/Rulex/")
- )
+ '(package-selected-packages
+   (quote
+    (markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -568,3 +570,26 @@ characters."
   (execute-kbd-macro 'u8-shell)
   (execute-kbd-macro 'u9-shell)
   (execute-kbd-macro 'hsfmt-shell))
+
+(autoload 'cflow-mode "cflow-mode")
+(setq auto-mode-alist (append auto-mode-alist
+                              '(("\\.cflow$" . cflow-mode))))
+
+(custom-set-variables
+ '(verilog-align-ifelse t)
+ '(verilog-auto-delete-trailing-whitespace t)
+ '(verilog-auto-inst-param-value t)
+ '(verilog-auto-inst-vector nil)
+ '(verilog-auto-lineup (quote all))
+ '(verilog-auto-newline nil)
+ '(verilog-auto-save-policy nil)
+ '(verilog-auto-template-warn-unused t)
+ '(verilog-case-indent 8)
+ '(verilog-cexp-indent 8)
+ '(verilog-highlight-grouping-keywords t)
+ '(verilog-highlight-modules t)
+ '(verilog-indent-level 8)
+ '(verilog-indent-level-behavioral 8)
+ '(verilog-indent-level-declaration 8)
+ '(verilog-indent-level-module 8)
+ '(verilog-tab-to-comment t))
