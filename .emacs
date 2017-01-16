@@ -158,7 +158,8 @@
  '(ecb-source-path (quote ("" "/home/andrea/Workspace/")))
  '(package-selected-packages
    (quote
-    (bash-completion markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+    (bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
@@ -175,7 +176,8 @@
  '(verilog-indent-level-behavioral 8)
  '(verilog-indent-level-declaration 8)
  '(verilog-indent-level-module 8)
- '(verilog-tab-to-comment t))
+ '(verilog-tab-to-comment nil))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -596,4 +598,4 @@ characters."
 (setq auto-mode-alist (append auto-mode-alist
                               '(("\\.cflow$" . cflow-mode))))
 
-(standard-display-ascii ?\t "\t")
+;(standard-display-ascii ?\t "\t")
