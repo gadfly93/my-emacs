@@ -1,6 +1,7 @@
 ;; list of packages to install from the distro repo
 ;; sudo apt-get install emacs doxymacs ecb python-mode xkbset
 ;; sudo apt-get install gcc gdb g++ bison flex git valgrind
+;; sudo apt-get install make automake texinfo git libgnutls-dev libncurses-dev
 ;; sudo apt-get install libcunit1 libcunit1-dev
 ;; sudo apt-get install gnome-tweak-tool
 ;; sudo apt-get install global  (gtags)
@@ -114,8 +115,10 @@
 ;;(require 'python-pylint)
 ;;(require 'python-mode)
 (require 'ido)
-(require 'slime-autoloads)
+;;(require 'slime-autoloads)
 (require 'vlf)
+(require 'bash-completion)
+(bash-completion-setup)
 (type-break-mode)
 
 (setq inferior-lisp-program "sbcl")
@@ -155,7 +158,24 @@
  '(ecb-source-path (quote ("" "/home/andrea/Workspace/")))
  '(package-selected-packages
    (quote
-    (markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company))))
+    (bash-completion markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+ '(verilog-align-ifelse t)
+ '(verilog-auto-delete-trailing-whitespace t)
+ '(verilog-auto-inst-param-value t)
+ '(verilog-auto-inst-vector nil)
+ '(verilog-auto-lineup (quote all))
+ '(verilog-auto-newline nil)
+ '(verilog-auto-save-policy nil)
+ '(verilog-auto-template-warn-unused t)
+ '(verilog-case-indent 8)
+ '(verilog-cexp-indent 8)
+ '(verilog-highlight-grouping-keywords t)
+ '(verilog-highlight-modules t)
+ '(verilog-indent-level 8)
+ '(verilog-indent-level-behavioral 8)
+ '(verilog-indent-level-declaration 8)
+ '(verilog-indent-level-module 8)
+ '(verilog-tab-to-comment t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -574,22 +594,3 @@ characters."
 (autoload 'cflow-mode "cflow-mode")
 (setq auto-mode-alist (append auto-mode-alist
                               '(("\\.cflow$" . cflow-mode))))
-
-(custom-set-variables
- '(verilog-align-ifelse t)
- '(verilog-auto-delete-trailing-whitespace t)
- '(verilog-auto-inst-param-value t)
- '(verilog-auto-inst-vector nil)
- '(verilog-auto-lineup (quote all))
- '(verilog-auto-newline nil)
- '(verilog-auto-save-policy nil)
- '(verilog-auto-template-warn-unused t)
- '(verilog-case-indent 8)
- '(verilog-cexp-indent 8)
- '(verilog-highlight-grouping-keywords t)
- '(verilog-highlight-modules t)
- '(verilog-indent-level 8)
- '(verilog-indent-level-behavioral 8)
- '(verilog-indent-level-declaration 8)
- '(verilog-indent-level-module 8)
- '(verilog-tab-to-comment t))
