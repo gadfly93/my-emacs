@@ -566,7 +566,7 @@ characters."
 
 (require 'semantic/bovine/gcc)
 (ede-cpp-root-project "PBM"
-                      :file "/home/acorallo/pbm/.gitignore"
+                      :file "/local/acorallo/pbm/.gitignore"
                       :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
 
 (fset 'dmesg-buff
@@ -591,6 +591,9 @@ characters."
   (execute-kbd-macro 'u9-shell)
   (execute-kbd-macro 'hsfmt-shell))
 
+
 (autoload 'cflow-mode "cflow-mode")
 (setq auto-mode-alist (append auto-mode-alist
                               '(("\\.cflow$" . cflow-mode))))
+
+(standard-display-ascii ?\t "\t")
