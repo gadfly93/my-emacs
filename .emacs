@@ -158,8 +158,7 @@
  '(ecb-source-path (quote ("" "/home/andrea/Workspace/")))
  '(package-selected-packages
    (quote
-    (bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
-
+    (undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
@@ -190,6 +189,9 @@
 ;; (autopair-global-mode)
 ;; (add-hook 'lisp-mode-hook
 ;;           #'(lambda () (setq autopair-dont-activate t)))
+
+(add-hook 'verilog-mode-hook
+          (setq-default indent-tabs-mode t))
 
 (add-hook 'python-mode-hook
           #'(lambda ()
