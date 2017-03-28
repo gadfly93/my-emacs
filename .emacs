@@ -17,6 +17,7 @@
 (column-number-mode)
 (show-paren-mode 1)
 (setq line-move-visual nil)
+; toggle-truncate-lines
 
 (global-set-key (kbd "C-x <up>") 'windmove-up)
 (global-set-key (kbd "C-x <down>") 'windmove-down)
