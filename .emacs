@@ -607,3 +607,5 @@ characters."
             (lambda ()
               (add-to-list 'ac-sources 'ac-source-c-headers)
               (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
+
+; pkill -SIGUSR2 emacs
