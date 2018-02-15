@@ -19,6 +19,10 @@
 (setq line-move-visual nil)
 ; toggle-truncate-lines
 
+(require 'git-gutter) ;; If you enable global minor mode
+(global-git-gutter-mode t) ;;
+
+
 (global-set-key (kbd "C-x <up>") 'windmove-up)
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
