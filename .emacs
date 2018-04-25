@@ -110,7 +110,7 @@
        c-basic-offset)))
 
 (require 'git)
-(require 'git-blame)
+
 (require 'cc-fonts)
 ;;(require 'ecb)
 (require 'bison-mode)
@@ -574,9 +574,9 @@ characters."
            "-shell*")))
 
 (require 'semantic/bovine/gcc)
-(ede-cpp-root-project "PBM"
-                      :file "/local/acorallo/pbm/.gitignore"
-                      :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
+;; (ede-cpp-root-project "PBM"
+;;                       :file "/local/acorallo/pbm/.gitignore"
+;;                       :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
 
 (fset 'dmesg-buff
       "\C-u\C-[xshell\C-m\C-mcd\C-mdmesg -wH\C-m\C-[xrename-buffer\C-mdmesg\C-m")
