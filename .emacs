@@ -54,6 +54,7 @@
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.yy$" . bison-mode))
 (add-to-list 'auto-mode-alist '("NOTES.txt" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.vc" . verilog-mode))
 
 (delete-selection-mode)
 (setq ediff-diff-options "-w")
@@ -172,15 +173,23 @@
  '(verilog-auto-newline nil)
  '(verilog-auto-save-policy nil)
  '(verilog-auto-template-warn-unused t)
- '(verilog-case-indent 8)
- '(verilog-cexp-indent 8)
+ '(verilog-case-indent 2)
+ '(verilog-cexp-indent 2)
  '(verilog-highlight-grouping-keywords t)
  '(verilog-highlight-modules t)
- '(verilog-indent-level 8)
- '(verilog-indent-level-behavioral 8)
- '(verilog-indent-level-declaration 8)
- '(verilog-indent-level-module 8)
+ '(verilog-indent-level 2)
+ '(verilog-indent-level-behavioral 2)
+ '(verilog-indent-level-declaration 2)
+ '(verilog-indent-level-module 2)
  '(verilog-tab-to-comment nil))
+
+(add-hook 'verilog-mode-hook '(lambda ()
+  (add-hook 'write-file-functions (lambda()
+      (untabify (point-min) (point-max))
+      nil))))
+
+
+(remove-hook 'before-save-hook 'untabify)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -574,9 +583,9 @@ characters."
            "-shell*")))
 
 (require 'semantic/bovine/gcc)
-;; (ede-cpp-root-project "PBM"
-;;                       :file "/local/acorallo/pbm/.gitignore"
-;;                       :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
+(ede-cpp-root-project "PBM"
+                      :file "/home/andcor03/asterix/.gitignore"
+                      :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
 
 (fset 'dmesg-buff
       "\C-u\C-[xshell\C-m\C-mcd\C-mdmesg -wH\C-m\C-[xrename-buffer\C-mdmesg\C-m")
