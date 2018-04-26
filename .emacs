@@ -183,13 +183,8 @@
  '(verilog-indent-level-module 2)
  '(verilog-tab-to-comment nil))
 
-(add-hook 'verilog-mode-hook '(lambda ()
-  (add-hook 'write-file-functions (lambda()
-      (untabify (point-min) (point-max))
-      nil))))
 
 
-(remove-hook 'before-save-hook 'untabify)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -204,8 +199,6 @@
 ;; (add-hook 'lisp-mode-hook
 ;;           #'(lambda () (setq autopair-dont-activate t)))
 
-(add-hook 'verilog-mode-hook
-          (setq-default indent-tabs-mode t))
 
 (add-hook 'python-mode-hook
           #'(lambda ()
