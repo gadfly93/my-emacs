@@ -14,10 +14,39 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
 
+(setq package-list '(bash-completion
+                     helm-gtags
+                     magit
+                     undo-tree
+                     async
+                     auto-complete
+                     bison-mode
+                     dash
+                     f
+                     ghub
+                     git
+                     git-blamed
+                     git-commit
+                     git-gutter
+                     helm
+                     helm-core
+                     let-alist
+                     magit-popup
+                     popup
+                     s
+                     vlf
+                     with-editor))
+
+(or (file-exists-p package-user-dir) (package-refresh-contents))
+
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+
 (column-number-mode)
 (show-paren-mode 1)
 (setq line-move-visual nil)
-; toggle-truncate-lines
 
 (require 'git-gutter) ;; If you enable global minor mode
 (global-git-gutter-mode t) ;;
@@ -28,21 +57,22 @@
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 
-(global-set-key (kbd "<f2>") 'ecb-activate)
+(global-set-key (kbd "<f2>") 'debug-rtx)
 (global-set-key (kbd "<f3>") 'compilation-shell-minor-mode)
 (global-set-key (kbd "<f4>") 'compile)
 (global-set-key (kbd "<f5>") 'gdb)
 (global-set-key (kbd "<f6>") 'gdb-restore-windows)
 (global-set-key (kbd "<f7>") 'create-tags)
 (global-set-key (kbd "<f8>") 'rename-buffer-shell)
+(global-set-key (kbd "<f9>") 'mem-expl)
 
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-;; (global-set-key [f8]  'graphnode_addr)
-(global-set-key [f9]  'mem-expl)
+(global-set-key [f8]  'debug_rtx)
+
 
 (setq tramp-default-method "scp")
 
@@ -59,47 +89,11 @@
 (delete-selection-mode)
 (setq ediff-diff-options "-w")
 
-(add-hook 'c-mode-common-hook
-  (lambda ()
-    (require 'doxymacs)
-    (doxymacs-mode t)
-    ;; (doxymacs-font-lock)
-    ))
-
-(setq doxymacs-doxygen-style "JavaDoc")
-
-(defadvice pdb (before gud-query-cmdline activate)
-  "Provide a better default command line when called interactively."
-  (interactive
-   (list (gud-query-cmdline pdb-path
-                            (file-name-nondirectory buffer-file-name)))))
-
-
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(add-to-list 'load-path "~/.emacs.d/lisp/slime-master/")
 
-;(set-default 'compile-command "make")
-;; (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
-;; (set-default 'compile-command
-;;              "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG FILE_FORMAT=DUMP")
-(set-default 'compile-command "make __TARGET__=t51.2 DEBUG=2 NOCOV=1 FILE_TARGET_FORMAT=S8")
-;; (set-default 'compile-command "make __TARGET__=t53.1 DEBUG=1 NOCOV=1")
-;; (set-default 'compile-command
-;;              "make __TARGET__=t53.1 DEBUG=1 NOCOV=1 FILE_ENDIANNESS=BIG FILE_FORMAT=DUMP")
-; make __TARGET__=t34.1 XLOADER=2
-; FILE_TARGET_FORMAT=S8
-;(set-default 'compile-command "make __TARGET__=m27.1 DEBUG=1 NOCOV=1 -B")
+(set-default 'compile-command "make -j4")
 
-                                        ; cd ~/pbm/src/u8 &&
-; make __TARGET__=m34.1 XLOADER=2 && cp -r ~/pbm/src/u8/o_m34.1/* ~/hsfmt/u8/
-
-; make __TARGET__=m38.1 DEBUG=2 NOCOV=1 FILE_TARGET_FORMAT=S8 FILE_ENDIANNESS=SMALL
-
-(setq-default indent-tabs-mode nil)
-
-(setq c-default-style "K&R"
-      c-basic-offset 4)
-
+(setq-default indent-tabs-mode t)
 
 (defun c-lineup-arglist-tabs-only (ignored)
   "Line up argument lists by tabs, not spaces"
@@ -111,57 +105,40 @@
        c-basic-offset)))
 
 (require 'git)
-
 (require 'cc-fonts)
-;;(require 'ecb)
 (require 'bison-mode)
 (require 'flex-mode)
 (require 'auto-complete-config)
-;;(require 'python-pep8)
-;;(require 'python-pylint)
-;;(require 'python-mode)
 (require 'ido)
-;;(require 'slime-autoloads)
 (require 'vlf)
 (require 'bash-completion)
+(require 'whitespace)
+(require 'helm-gtags)
+
 (bash-completion-setup)
 (type-break-mode)
 
-(setq inferior-lisp-program "sbcl")
-                                        ;(setq inferior-lisp-program "clisp")
-(setq slime-contribs '(slime-fancy))
 (ido-mode)
 
 (add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
 (ac-config-default)
-(setq gud-gdb-command-name "~/gdb-7.9/gdb/gdb -i=mi")
+(setq gud-gdb-command-name "~/gdb-8.1/gdb/gdb -i=mi")
 
 (setq ;; use gdb-many-windows by default
  gdb-many-windows t
  ;; Non-nil means display source file containing the main routine at startup
  gdb-show-main t)
 
-;;sudo /usr/hstone-r162/bin/e1-elf-gdb --fullname --command=/home/acorallo/pbm/gdb/start-gdb
-;;dd.txt -features=00000003
-;;XLOADER=2
 
 (global-ede-mode 1)                       ; Enable the Project management system
 (semantic-mode)                           ; Enable prototype help and smart completion
 (global-semantic-idle-summary-mode 1)
-                                        ;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
-                                        ;(global-srecode-minor-mode 1)            ; Enable template insertion menu
-
-;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
-;(global-srecode-minor-mode 1)            ; Enable template insertion menu
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ecb-layout-window-sizes nil)
- '(ecb-options-version "2.40")
- '(ecb-source-path (quote ("" "/home/andrea/Workspace/")))
  '(package-selected-packages
    (quote
     (undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
@@ -186,41 +163,15 @@
 
 
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-                                        ;(ecb-activate)
-
 ;; (autoload 'autopair-global-mode "autopair" nil t)
 ;; (autopair-global-mode)
 ;; (add-hook 'lisp-mode-hook
 ;;           #'(lambda () (setq autopair-dont-activate t)))
 
 
-(add-hook 'python-mode-hook
-          #'(lambda ()
-              (push '(?' . ?')
-                    (getf autopair-extra-pairs :code))
-              (setq autopair-handle-action-fns
-                    (list #'autopair-default-handle-action
-                          #'autopair-python-triple-quote-action))))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(autoload 'pylookup-lookup "pylookup")
-(autoload 'pylookup-update "pylookup")
-(setq pylookup-program "~/.emacs.d/lisp/pylookup/pylookup.py")
-(setq pylookup-db-file "~/.emacs.d/lisp/pylookup/pylookup.db")
-(global-set-key "\C-ch" 'pylookup-lookup)
-
-(defun compile-debug ()
-  (interactive)
-  (compile "make")
-                                        ;  (gdb "gdb --annotate=3 python")
-  )
 
 (defun annotate-pdb ()
   (interactive)
@@ -230,17 +181,9 @@
 
 (defun python-add-breakpoint ()
   (interactive)
-  ;; (py-newline-and-indent)
   (insert "import ipdb; ipdb.set_trace()")
   (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))
                                         ;(define-key (kbd "C-c C-t") 'python-add-breakpoint)
-
-(defun doxygen-comment()
-  (interactive)
-  (search-backward "/*")
-  (forward-char 2)
-  (insert "!")
-  )
 
 (defun rulex-to-c ()
   (interactive)
@@ -272,49 +215,16 @@
   (shell-command (concat "adb push " buffer-file-name " /mnt/sdcard/sl4a/scripts/project/"))
   )
 
-(setq py-shell-name "ipython")
 
 (server-start)
 
 (fset 'mem-expl
       "x /10bfx ")
-(fset 'graphnode_addr
-      "call graph_node(dag,value_n,1)")
-
-(defun forward-open-bracket ()
-  "Move cursor to the next occurrence of left bracket or quotation mark."
-  (interactive)
-  (forward-char 1)
-  (search-forward-regexp "(\\|{\\|\\[\\|<\\|〔\\|【\\|〖\\|〈\\|「\\|『\\|“\\|‘\\|‹\\|«")
-  (backward-char 1)
-  )
-
-(defun backward-open-bracket ()
-  "Move cursor to the previous occurrence of left bracket or quotation mark.."
-  (interactive)
-  (search-backward-regexp "(\\|{\\|\\[\\|<\\|〔\\|【\\|〖\\|〈\\|「\\|『\\|“\\|‘\\|‹\\|«")
-  )
-
-(defun forward-close-bracket ()
-  "Move cursor to the next occurrence of right bracket or quotation mark."
-  (interactive)
-  (search-forward-regexp ")\\|\\]\\|}\\|>\\|〕\\|】\\|〗\\|〉\\|」\\|』\\|”\\|’\\|›\\|»")
-  )
-
-(defun backward-close-bracket ()
-  "Move cursor to the next occurrence of right bracket or quotation mark."
-  (interactive)
-  (backward-char 1)
-  (search-backward-regexp ")\\|\\]\\|}\\|>\\|〕\\|】\\|〗\\|〉\\|」\\|』\\|”\\|’\\|›\\|»")
-  (forward-char 1)
-  )
-
-(global-set-key (kbd "<M-left>") 'backward-open-bracket) ; Alt+←
-(global-set-key (kbd "<M-right>") 'forward-close-bracket) ; Alt+→
+(fset 'debug_rtx
+      "call debug_rtx(insn)")
 
 (defalias 'list-buffers 'ibuffer)
 
-(require 'bash-completion)
 (bash-completion-setup)
 
 (defun cleanup-document ()
@@ -329,25 +239,6 @@ characters."
         (forward-char 1)
       (delete-char 1 ()))))
 
-(defun sbcl-debug-keys ()
-  "Binds locally some keys to send clisp debugger commands to the inferior-lisp
-<f5> step into
-<f6> next
-<f7> step over
-<f8> continue
-"
-  (interactive)
-  (macrolet ((cmd (string)
-                  `(lambda ()
-                     (interactive)
-                     (comint-send-string (inferior-lisp-proc)
-                                         ,(format "%s\n" string)))))
-    (local-set-key (kbd "<f5>") (cmd "step"))
-    (local-set-key (kbd "<f6>") (cmd "next"))
-    (local-set-key (kbd "<f7>") (cmd "over"))
-    (local-set-key (kbd "<f8>") (cmd "out"))))
-
-(require 'whitespace)
 (setq whitespace-style '(face lines-tail trailing))
 (global-whitespace-mode t)
 (global-semantic-stickyfunc-mode t)
@@ -358,7 +249,7 @@ characters."
   (interactive)
   (let ((default-directory (read-directory-name "create tags for dir: ")))
     ;; (delete-file "TAGS")
-    (shell-command "find . -type f -iname \"*.[chS]\" -o -name \"*.def\"| xargs etags")
+    (shell-command "~/ctags/ctags -e -R . *.cpp *.hpp *.c *.h *.s")
     (visit-tags-table "./")))
 
 
@@ -369,104 +260,7 @@ characters."
 
 (setq c-backslash-max-column 79)
 
-;; Hyperstone stuffs
-
-;; open Hyperstone Makefile (*.mak) in makefile-mode
-(setq auto-mode-alist (cons '("\\.mak" . makefile-mode) auto-mode-alist))
-
 ;; C indent
-
-(c-add-style "HyStyle"
-             '("linux"
-               (c-backslash-max-column . 79)
-               (c-basic-offset . 2); Guessed value
-               (c-offsets-alist
-                (arglist-cont . 0); Guessed value
-                (arglist-intro . 0); Guessed value
-                (block-close . 0); Guessed value
-                (cpp-macro-cont . ++); Guessed value
-                (defun-block-intro . +); Guessed value
-                (defun-close . 0); Guessed value
-                (defun-open . 0); Guessed value
-                (else-clause . 0); Guessed value
-                (func-decl-cont . *); Guessed value
-                (statement . 0)    ; Guessed value
-                (statement-block-intro . +) ; Guessed value
-                (statement-cont . +)
-                (substatement . +); Guessed value
-                (substatement-open . 0); Guessed value
-                (topmost-intro . 0); Guessed value
-                (access-label . -)
-                (annotation-top-cont . 0)
-                (annotation-var-cont . +)
-                (arglist-close . c-lineup-close-paren)
-                (arglist-cont-nonempty . c-lineup-arglist)
-                (block-open . 0)
-                (brace-entry-open . 0)
-                (brace-list-close . 0)
-                (brace-list-entry . 0)
-                (brace-list-intro . +)
-                (brace-list-open . 0)
-                (c . c-lineup-C-comments)
-                (case-label . 2)
-                (catch-clause . 0)
-                (class-close . 0)
-                (class-open . 0)
-                (comment-intro . c-lineup-comment)
-                (composition-close . 0)
-                (composition-open . 0)
-                (cpp-define-intro c-lineup-cpp-define +)
-                (cpp-macro . -1000)
-                (do-while-closure . 0)
-                (extern-lang-close . 0)
-                (extern-lang-open . 0)
-                (friend . 0)
-                (inclass . +)
-                (incomposition . +)
-                (inexpr-class . +)
-                (inexpr-statement . +)
-                (inextern-lang . +)
-                (inher-cont . c-lineup-multi-inher)
-                (inher-intro . +)
-                (inlambda . c-lineup-inexpr-block)
-                (inline-close . 0)
-                (inline-open . +)
-                (inmodule . +)
-                (innamespace . +)
-                (knr-argdecl . 0)
-                (knr-argdecl-intro . 0)
-                (label . 0)
-                (lambda-intro-cont . +)
-                (member-init-cont . c-lineup-multi-inher)
-                (member-init-intro . +)
-                (module-close . 0)
-                (module-open . 0)
-                (namespace-close . 0)
-                (namespace-open . 0)
-                (objc-method-args-cont . c-lineup-ObjC-method-args)
-                (objc-method-call-cont c-lineup-ObjC-method-call-colons c-lineup-ObjC-method-call +)
-                (objc-method-intro .
-                                   [0])
-                (statement-case-intro . +)
-                (statement-case-open . 0)
-                (stream-op . c-lineup-streamop)
-                (string . -1000)
-                (substatement-label . 0)
-                (template-args-cont c-lineup-template-args +)
-                (topmost-intro-cont . c-lineup-topmost-intro-cont))))
-
-
-
-;; (setq c-default-style "HyStyle")
-;; (setq c-mode-hook
-;;     (function (lambda ()
-;;                 (setq indent-tabs-mode nil)
-;;                 (setq c-indent-level 2))))
-
-(setq objc-mode-hook
-      (function (lambda ()
-                  (setq indent-tabs-mode nil)
-                  (setq c-indent-level 2))))
 (setq c++-mode-hook
       (function (lambda ()
                   (setq indent-tabs-mode nil)
@@ -482,55 +276,17 @@ characters."
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
-
-(add-hook 'c-mode-hook
-          (lambda ()
-            (let ((filename (buffer-file-name)))
-              ;; Enable kernel mode for the appropriate files
-              (when (and filename
-                         (string-match (expand-file-name "pbm")
-                                       filename))
-                (setq indent-tabs-mode nil)
-                (c-set-style "HyStyle")))))
-
-(add-hook 'c-mode-hook
-          (lambda ()
-            (let ((filename (buffer-file-name)))
-              ;; Enable kernel mode for the appropriate files
-              (when (and filename
-                         (string-match (expand-file-name "~/pmc-0.2/")
-                                       filename))
-                (setq indent-tabs-mode t)
-                (c-set-style "linux-tabs-only")))))
-
-(add-hook 'c-mode-hook
-          (lambda ()
-            (let ((filename (buffer-file-name)))
-              ;; Enable kernel mode for the appropriate files
-              (when (and filename
-                         (string-match (expand-file-name "~/Workspace/")
-                                       filename))
-                (setq indent-tabs-mode t)
-                (c-set-style "linux-tabs-only")))))
+;; (add-hook 'c-mode-hook
+;;           (lambda ()
+;;             (let ((filename (buffer-file-name)))
+;;               ;; Enable kernel mode for the appropriate files
+;;               (when (and filename
+;;                          (string-match (expand-file-name "pbm")
+;;                                        filename))
+;;                 (setq indent-tabs-mode nil)
+;;                 (c-set-style "K&r")))))
 
 (put 'upcase-region 'disabled nil)
-
-;; new c ide customization from http://tuhdo.github.io/c-ide.htm
-(require 'ggtags)
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
-              (ggtags-mode 1))))
-
-(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
-(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
-(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
-(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
-(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
-(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
-
-(define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
-
 
 (setq
  helm-gtags-ignore-case t
@@ -540,7 +296,6 @@ characters."
  helm-gtags-prefix-key "\C-cg"
  helm-gtags-suggested-key-mapping t)
 
-(require 'helm-gtags)
 ;; Enable helm-gtags-mode
 (add-hook 'dired-mode-hook 'helm-gtags-mode)
 (add-hook 'eshell-mode-hook 'helm-gtags-mode)
@@ -566,7 +321,6 @@ characters."
 
 (setq-local imenu-create-index-function #'ggtags-build-imenu-index)
 
-
 (defun rename-buffer-shell ()
   "Renames current shell buffer with the directory in it."
   (interactive)
@@ -575,43 +329,13 @@ characters."
            (car (last (butlast (split-string default-directory "/") 1)))
            "-shell*")))
 
-(require 'semantic/bovine/gcc)
-(ede-cpp-root-project "PBM"
-                      :file "/home/andcor03/asterix/.gitignore"
-                      :header-match-regexp "\\.\\(h\\(h\\|xx\\|pp\\|\\+\\+\\)?\\|H\\|def\\)$\\|\\<\\w+$")
-
-(fset 'dmesg-buff
-      "\C-u\C-[xshell\C-m\C-mcd\C-mdmesg -wH\C-m\C-[xrename-buffer\C-mdmesg\C-m")
-(fset 'pbm-shell
-      "\C-u\C-[xshell\C-m\C-mcd ~/pbm\C-m\C-[[19~")
-(fset 'u8-shell
-      "\C-u\C-[xshell\C-m\C-mcd ~/pbm/src/u8\C-m\C-[[19~")
-(fset 's8-shell
-      "\C-u\C-[xshell\C-m\C-mcd ~/pbm/src/s8\C-m\C-[[19~")
-(fset 'u9-shell
-      "\C-u\C-[xshell\C-m\C-mcd ~/pbm/src/u9\C-m\C-[[19~")
-(fset 'hsfmt-shell
-      "\C-u\C-[xshell\C-m\C-mcd ~/hsfmt\C-m\C-[[19~")
-
-(defun startup-shells ()
-  (interactive)
-  (execute-kbd-macro 'dmesg-buff)
-  (execute-kbd-macro 'pbm-shell)
-  (execute-kbd-macro 's8-shell)
-  (execute-kbd-macro 'u8-shell)
-  (execute-kbd-macro 'u9-shell)
-  (execute-kbd-macro 'hsfmt-shell))
-
-
-(autoload 'cflow-mode "cflow-mode")
-(setq auto-mode-alist (append auto-mode-alist
-                              '(("\\.cflow$" . cflow-mode))))
-
-;(standard-display-ascii ?\t "\t")
 
   (add-hook 'c-mode-hook
             (lambda ()
               (add-to-list 'ac-sources 'ac-source-c-headers)
               (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
 
+(global-undo-tree-mode)
+
+; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
