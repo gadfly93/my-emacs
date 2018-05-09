@@ -149,7 +149,6 @@
 (setq mu4e-html2text-command 'my-render-html-message)
 
 (bash-completion-setup)
-(type-break-mode)
 
 (ido-mode)
 
@@ -284,12 +283,6 @@ characters."
     ;; (delete-file "TAGS")
     (shell-command "~/ctags/ctags -e -R . *.cpp *.hpp *.c *.h *.s")
     (visit-tags-table "./")))
-
-
-(defcustom type-break-interval (* 30 30)
-  "Number of seconds between scheduled typing breaks."
-  :type 'integer
-  :group 'type-break)
 
 (setq c-backslash-max-column 79)
 
