@@ -125,17 +125,33 @@
   mu4e-refile-folder "/Saved")           ;; saved messages
 
 ;; set offlineimap fro fetching mails
-(setq
-  mu4e-get-mail-command "offlineimap"
-  mu4e-update-interval 300)             ;; update every 5 minutes
+(setq mu4e-get-mail-command "offlineimap"
+      mu4e-update-interval 300)             ;; update every 5 minutes
 
 ;; use mu4e for e-mail in emacs
 (setq mail-user-agent 'mu4e-user-agent)
-(setq
-   message-send-mail-function   'smtpmail-send-it
-   smtpmail-default-smtp-server "smtp.office365.com"
-   smtpmail-smtp-server         "smtp.office365.com"
-   smtpmail-local-domain        "arm.com")
+
+(require 'starttls)
+(setq starttls-use-gnutls t)
+
+(setq send-mail-function  'smtpmail-send-it
+      message-send-mail-function 'smtpmail-send-it
+      smtpmail-stream-type 'starttls
+      smtpmail-default-smtp-server "smtp.office365.com"
+      smtpmail-smtp-server "smtp.office365.com"
+      smtpmail-smtp-service 587
+      smtpmail-smtp-user "andrea.corallo@arm.com"
+      user-mail-address "andrea.corallo@arm.com"
+      user-full-name  "Andrea Corallo")
+
+ ;; mu4e-maildir-shortcuts  '(("/iCloud/INBOX"    . ?i)
+ ;;                             ("/Sent Items"   . ?s)
+ ;;                             ("/Trash"        . ?t)
+ ;;                             ("/All Mail"     . ?a))
+
+(setq mu4e-compose-signature (concat
+			      "Andrea Corallo\n\n"
+			      "Sent by Emacs\n"))
 
 ;; use 'fancy' non-ascii characters in various places in mu4e
 (setq mu4e-use-fancy-chars t)

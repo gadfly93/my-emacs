@@ -1,0 +1,62 @@
+[general]
+
+accounts = arm
+
+### arm ### {{{
+[Account arm]
+localrepository = arm-Local
+remoterepository = arm-Remote
+# autorefresh = 5
+quick = 10
+postsynchook = mu index --maildir ~/.mail
+status_backend = sqlite
+
+[Repository arm-Local]
+type = Maildir
+localfolders = ~/.mail/arm
+
+[Account bristol]
+localrepository = bristol-Local
+remoterepository = bristol-Remote
+status_backend = sqlite
+maxsyncaccounts = 6
+
+[Repository bristol-Local]
+type = Maildir
+localfolders = ~/Mail/bristol
+
+[Repository arm-Remote]
+auth_mechanisms = GSSAPI, CRAM-MD5, PLAIN, LOGIN
+type = IMAP
+maxconnections = 3
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remotehost = outlook.office365.com
+remoteuser = andrea.corallo@arm.com
+remoteport = 993
+ssl = yes
+folderfilter = lambda folder: folder not in [
+	     'Calendar',
+	     'Calendar/Birthdays',
+	     'Calendar/Sub Folder 1',
+	     'Calendar/Sub Folder 2',
+	     'Calendar/United States holidays',
+	     'Contacts',
+	     'Contacts/Sub Folder 1',
+	     'Contacts/Sub Folder 2',
+	     'Contacts/Skype for Business Contacts',
+	     'Deleted Items',
+	     'Drafts',
+	     'Journal',
+	     'Junk Email',
+	     'Notes',
+	     'Outbox',
+	     'Sync Issues',
+	     'Sync Issues/Conflicts',
+	     'Sync Issues/Local Failures',
+	     'Sync Issues/Server Failures',
+	     'Tasks',
+	     'Tasks/Sub Folder 1',
+	     'Tasks/Sub Folder 2'
+	     ]
+
+### End arm### }}}
