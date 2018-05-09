@@ -3,12 +3,13 @@
 ;; sudo apt-get install gcc gdb g++ bison flex git valgrind
 ;; sudo apt-get install make automake texinfo git libgnutls-dev libncurses-dev
 ;; sudo apt-get install libcunit1 libcunit1-dev
-;; sudo apt-get install gnome-tweak-tool
 ;; sudo apt-get install global  (gtags)
+;; sudo apt-get install offlineimap mu4e libwebkit-dev
 
 (require 'package) ;; You might already have this line
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
@@ -88,6 +89,7 @@
 (setq ediff-diff-options "-w")
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
 
 (set-default 'compile-command "make -j4")
 
@@ -112,6 +114,39 @@
 (require 'bash-completion)
 (require 'whitespace)
 (require 'helm-gtags)
+(require 'mu4e)
+
+;; m4e setup
+(setq
+  mu4e-maildir       "~/.mail"           ;; top-level Maildir
+  mu4e-sent-folder   "/Sent Items"       ;; folder for sent messages
+  mu4e-drafts-folder "/Drafts"           ;; unfinished messages
+  mu4e-trash-folder  "/Deleted Items"    ;; trashed messages
+  mu4e-refile-folder "/Saved")           ;; saved messages
+
+;; set offlineimap fro fetching mails
+(setq
+  mu4e-get-mail-command "offlineimap"
+  mu4e-update-interval 300)             ;; update every 5 minutes
+
+;; use mu4e for e-mail in emacs
+(setq mail-user-agent 'mu4e-user-agent)
+(setq
+   message-send-mail-function   'smtpmail-send-it
+   smtpmail-default-smtp-server "smtp.office365.com"
+   smtpmail-smtp-server         "smtp.office365.com"
+   smtpmail-local-domain        "arm.com")
+
+;; use 'fancy' non-ascii characters in various places in mu4e
+(setq mu4e-use-fancy-chars t)
+
+;; render html shit
+(defun my-render-html-message ()
+  (let ((dom (libxml-parse-html-region (point-min) (point-max))))
+    (erase-buffer)
+    (shr-insert-document dom)
+    (goto-char (point-min))))
+(setq mu4e-html2text-command 'my-render-html-message)
 
 (bash-completion-setup)
 (type-break-mode)
@@ -139,7 +174,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+    (evil-mu4e twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
@@ -337,3 +372,10 @@ characters."
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
