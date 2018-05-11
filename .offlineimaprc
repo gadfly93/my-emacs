@@ -2,6 +2,9 @@
 
 accounts = arm
 
+# Path to file with arbitrary Python code to be loaded
+pythonfile = ~/.offlineimap.py
+
 ### arm ### {{{
 [Account arm]
 localrepository = arm-Local
@@ -32,6 +35,7 @@ maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remotehost = outlook.office365.com
 remoteuser = andrea.corallo@arm.com
+remotepasseval = get_pass("arm")
 remoteport = 993
 ssl = yes
 folderfilter = lambda folder: folder not in [
