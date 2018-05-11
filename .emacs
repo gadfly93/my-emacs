@@ -6,6 +6,9 @@
 ;; sudo apt-get install global  (gtags)
 ;; sudo apt-get install offlineimap mu4e libwebkit-dev
 
+;; Define to t to enable mu4e
+(setq mail-setup nil)
+
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
@@ -137,7 +140,8 @@
 (setq ediff-diff-options "-w")
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+(if mail-setup
+    (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/"))
 
 (set-default 'compile-command "make -j4")
 
@@ -162,51 +166,53 @@
 (require 'bash-completion)
 (require 'whitespace)
 (require 'helm-gtags)
-(require 'mu4e)
+(if mail-setup
+    (progn
+      (require 'mu4e)
+      (require 'mu4e-contrib)
 
-;; m4e setup
-(setq
-  mu4e-maildir       "~/.mail"           ;; top-level Maildir
-  mu4e-sent-folder   "/Sent Items"       ;; folder for sent messages
-  mu4e-drafts-folder "/Drafts"           ;; unfinished messages
-  mu4e-trash-folder  "/Deleted Items"    ;; trashed messages
-  mu4e-refile-folder "/Saved")           ;; saved messages
+      ;; m4e setup
+      (setq
+       mu4e-maildir       "~/.mail"           ;; top-level Maildir
+       mu4e-sent-folder   "/Sent Items"       ;; folder for sent messages
+       mu4e-drafts-folder "/Drafts"           ;; unfinished messages
+       mu4e-trash-folder  "/Deleted Items"    ;; trashed messages
+       mu4e-refile-folder "/Saved")           ;; saved messages
 
-;; set offlineimap fro fetching mails
-(setq mu4e-get-mail-command "offlineimap"
-      mu4e-update-interval 300)             ;; update every 5 minutes
+      ;; set offlineimap fro fetching mails
+      (setq mu4e-get-mail-command "offlineimap"
+	    mu4e-update-interval 300)             ;; update every 5 minutes
 
-;; use mu4e for e-mail in emacs
-(setq mail-user-agent 'mu4e-user-agent)
+      ;; use mu4e for e-mail in emacs
+      (setq mail-user-agent 'mu4e-user-agent)
 
-(require 'starttls)
-(setq starttls-use-gnutls t)
+      (require 'starttls)
+      (setq starttls-use-gnutls t)
 
-(setq send-mail-function  'smtpmail-send-it
-      message-send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'starttls
-      smtpmail-default-smtp-server "smtp.office365.com"
-      smtpmail-smtp-server "smtp.office365.com"
-      smtpmail-smtp-service 587
-      smtpmail-smtp-user "andrea.corallo@arm.com"
-      user-mail-address "andrea.corallo@arm.com"
-      user-full-name  "Andrea Corallo")
+      (setq send-mail-function  'smtpmail-send-it
+	    message-send-mail-function 'smtpmail-send-it
+	    smtpmail-stream-type 'starttls
+	    smtpmail-default-smtp-server "smtp.office365.com"
+	    smtpmail-smtp-server "smtp.office365.com"
+	    smtpmail-smtp-service 587
+	    smtpmail-smtp-user "andrea.corallo@arm.com"
+	    user-mail-address "andrea.corallo@arm.com"
+	    user-full-name  "Andrea Corallo")
 
- ;; mu4e-maildir-shortcuts  '(("/iCloud/INBOX"    . ?i)
- ;;                             ("/Sent Items"   . ?s)
- ;;                             ("/Trash"        . ?t)
- ;;                             ("/All Mail"     . ?a))
+      ;; mu4e-maildir-shortcuts  '(("/iCloud/INBOX"    . ?i)
+      ;;                             ("/Sent Items"   . ?s)
+      ;;                             ("/Trash"        . ?t)
+      ;;                             ("/All Mail"     . ?a))
 
-(setq mu4e-compose-signature (concat
-			      "Andrea Corallo\n\n"
-			      "Sent by GNU Emacs\n"))
+      (setq mu4e-compose-signature (concat
+				    "Andrea Corallo\n\n"
+				    "Sent by GNU Emacs\n"))
 
-;; use 'fancy' non-ascii characters in various places in mu4e
-(setq mu4e-use-fancy-chars t)
+      ;; use 'fancy' non-ascii characters in various places in mu4e
+      (setq mu4e-use-fancy-chars t)
 
-(require 'mu4e-contrib)
-(setq mu4e-html2text-command 'mu4e-shr2text)
-(add-to-list 'mu4e-view-actions '("ViewInBrowser" . mu4e-action-view-in-browser) t)
+      (setq mu4e-html2text-command 'mu4e-shr2text)
+      (add-to-list 'mu4e-view-actions '("ViewInBrowser" . mu4e-action-view-in-browser) t)))
 
 (bash-completion-setup)
 
