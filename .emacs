@@ -6,14 +6,13 @@
 ;; sudo apt-get install global  (gtags)
 ;; sudo apt-get install offlineimap mu4e libwebkit-dev
 
-(require 'package) ;; You might already have this line
+(require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-(package-initialize) ;; You might already have this line
 
 (setq package-list '(bash-completion
                      helm-gtags
@@ -37,6 +36,8 @@
                      s
                      vlf
                      with-editor))
+
+(package-initialize)
 
 (or (file-exists-p package-user-dir) (package-refresh-contents))
 
@@ -92,7 +93,10 @@
   (winner-mode 1))
 
 ;; When entering eww, use cursors to scroll without changing point.
-; (add-hook 'eww-mode-hook 'scroll-lock-mode)
+;; (add-hook 'eww-mode-hook 'scroll-lock-mode)
+
+;; Use undo tree mode everywhere by default.
+(global-undo-tree-mode)
 
 (column-number-mode)
 (show-paren-mode 1)
@@ -194,7 +198,7 @@
 
 (setq mu4e-compose-signature (concat
 			      "Andrea Corallo\n\n"
-			      "Sent by Emacs\n"))
+			      "Sent by GNU Emacs\n"))
 
 ;; use 'fancy' non-ascii characters in various places in mu4e
 (setq mu4e-use-fancy-chars t)
@@ -415,8 +419,6 @@ characters."
             (lambda ()
               (add-to-list 'ac-sources 'ac-source-c-headers)
               (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
-
-(global-undo-tree-mode)
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
