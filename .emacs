@@ -166,6 +166,7 @@
 (require 'bash-completion)
 (require 'whitespace)
 (require 'helm-gtags)
+
 (if mail-setup
     (progn
       (require 'mu4e)
@@ -205,7 +206,7 @@
       ;;                             ("/All Mail"     . ?a))
 
       (setq mu4e-compose-signature (concat
-				    "Andrea Corallo\n\n"
+				    "\n  Andrea Corallo\n\n"
 				    "Sent by GNU Emacs\n"))
 
       ;; use 'fancy' non-ascii characters in various places in mu4e
@@ -321,7 +322,47 @@
 (fset 'debug_rtx
       "call debug_rtx(insn)")
 
+;; Ibuffer conf
 (defalias 'list-buffers 'ibuffer)
+(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
+
+(setq ibuffer-saved-filter-groups
+      (quote (("default"
+	       ("shell" (or
+			 (mode . shell-mode)
+			 (mode . eshell-mode)))
+	       ("C" (or
+		    (mode . c-mode)
+		    (mode . c++-mode)))
+	       ("asm" (mode . asm-mode))
+	       ("verilog" (mode . verilog-mode))
+	       ("dired" (mode . dired-mode))
+	       ("planner" (or
+			   (name . "^\\*Calendar\\*$")
+			   (name . "^diary$")
+			   (mode . muse-mode)))
+	       ("emacs" (or
+			 (name . "^\\*scratch\\*$")
+			 (name . "^\\*Messages\\*$")))
+	       ("mail" (or
+			(mode . message-mode)
+			(mode . bbdb-mode)
+			(mode . mail-mode)
+			(mode . gnus-group-mode)
+			(mode . gnus-summary-mode)
+			(mode . gnus-article-mode)
+			(mode . mu4e-compose-mode)
+			(name . "*mu4e*")
+			(name . "^\\.bbdb$")
+			(name . "^\\.newsrc-dribble")))
+	       ("misc" (name . "^\\*[0-9A-Za-z_]+\\*$"))))))
+
+(add-hook 'ibuffer-mode-hook
+	  (lambda ()
+	    (ibuffer-switch-to-saved-filter-groups "default")))
+
+(setq ibuffer-show-empty-filter-groups nil)
+
 
 (bash-completion-setup)
 
