@@ -44,19 +44,62 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+;; Disable startup message
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
+;; Do not display GUI Toolbar
+(tool-bar-mode 0)
+;; Disable scroll bars
+(scroll-bar-mode -1)
+
+;; Shortcut for changing font-size
+(define-key global-map (kbd "C-1") 'text-scale-increase)
+(define-key global-map (kbd "C-2") 'text-scale-decrease)
+
+;; Store backups and auto-saved files in TEMPORARY-FILE-DIRECTORY (which defaults
+;; to /tmp on Unix), instead of in the same directory as the file.
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+;; Confirm before closing Emacs
+(setq confirm-kill-emacs 'y-or-n-p)
+
+;; Human readable units in dired-mode
+(setq-default dired-listing-switches "-alh")
+
+;; Ask y/n instead of yes/no
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Auto revert files on change
+(global-auto-revert-mode t)
+
+;; Enable Narrow To Region
+;; Enable narrow-to-region (C-x n n / C-x n w). This is disabled by default to not
+;; confuse beginners.
+(put 'narrow-to-region 'disabled nil)
+
+;; Windmove is built into Emacs. It lets you move point from window to window using
+;; Shift and the arrow keys. This is easier to type than ‘C-x o’ when there are multiple
+;; windows open.
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+;; Allows to ‘undo’ (and ‘redo’) changes in the window configuration with the key
+;; commands ‘C-c left’ and ‘C-c right’.
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
+
+;; When entering eww, use cursors to scroll without changing point.
+; (add-hook 'eww-mode-hook 'scroll-lock-mode)
 
 (column-number-mode)
 (show-paren-mode 1)
 (setq line-move-visual nil)
 
 (require 'git-gutter) ;; If you enable global minor mode
-(global-git-gutter-mode t) ;;
-
-
-(global-set-key (kbd "C-x <up>") 'windmove-up)
-(global-set-key (kbd "C-x <down>") 'windmove-down)
-(global-set-key (kbd "C-x <right>") 'windmove-right)
-(global-set-key (kbd "C-x <left>") 'windmove-left)
+(global-git-gutter-mode t) ;; Show uncommitted git diffs
 
 (global-set-key (kbd "<f2>") 'debug-rtx)
 (global-set-key (kbd "<f3>") 'compilation-shell-minor-mode)
@@ -156,13 +199,9 @@
 ;; use 'fancy' non-ascii characters in various places in mu4e
 (setq mu4e-use-fancy-chars t)
 
-;; render html shit
-(defun my-render-html-message ()
-  (let ((dom (libxml-parse-html-region (point-min) (point-max))))
-    (erase-buffer)
-    (shr-insert-document dom)
-    (goto-char (point-min))))
-(setq mu4e-html2text-command 'my-render-html-message)
+(require 'mu4e-contrib)
+(setq mu4e-html2text-command 'mu4e-shr2text)
+(add-to-list 'mu4e-view-actions '("ViewInBrowser" . mu4e-action-view-in-browser) t)
 
 (bash-completion-setup)
 
