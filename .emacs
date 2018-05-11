@@ -13,9 +13,6 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 (setq package-list '(bash-completion
                      helm-gtags
@@ -40,6 +37,9 @@
                      vlf
                      with-editor
 		     minimap))
+
+(if mail-setup
+    (add-to-list 'package-list 'mu4e-alert))
 
 (package-initialize)
 
@@ -140,8 +140,6 @@
 (setq ediff-diff-options "-w")
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(if mail-setup
-    (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/"))
 
 (set-default 'compile-command "make -j4")
 
@@ -167,12 +165,15 @@
 (require 'whitespace)
 (require 'helm-gtags)
 
+;; mu4e setup
+
 (if mail-setup
     (progn
       (require 'mu4e)
       (require 'mu4e-contrib)
 
-      ;; m4e setup
+      (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+
       (setq
        mu4e-maildir       "~/.mail"           ;; top-level Maildir
        mu4e-sent-folder   "/Sent Items"       ;; folder for sent messages
@@ -213,7 +214,11 @@
       (setq mu4e-use-fancy-chars t)
 
       (setq mu4e-html2text-command 'mu4e-shr2text)
-      (add-to-list 'mu4e-view-actions '("ViewInBrowser" . mu4e-action-view-in-browser) t)))
+      (add-to-list 'mu4e-view-actions '("ViewInBrowser" . mu4e-action-view-in-browser) t)
+      (mu4e-alert-set-default-style 'libnotify)
+      (add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
+      (add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
+      ))
 
 (bash-completion-setup)
 
@@ -240,7 +245,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (minimap evil-mu4e twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+    (mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
