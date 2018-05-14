@@ -58,8 +58,8 @@
 (scroll-bar-mode -1)
 
 ;; Shortcut for changing font-size
-(define-key global-map (kbd "C-1") 'text-scale-increase)
-(define-key global-map (kbd "C-2") 'text-scale-decrease)
+(define-key global-map (kbd "C-1") 'text-scale-decrease)
+(define-key global-map (kbd "C-2") 'text-scale-increase)
 
 ;; Store backups and auto-saved files in TEMPORARY-FILE-DIRECTORY (which defaults
 ;; to /tmp on Unix), instead of in the same directory as the file.
@@ -123,6 +123,7 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 (global-set-key (kbd "C-x g") 'magit-status)
+;; (global-set-key (kbd "M-.") 'xref-find-definitions-other-frame)
 
 (setq tramp-default-method "scp")
 
@@ -208,7 +209,7 @@
 
       (setq mu4e-compose-signature (concat
 				    "\n  Andrea Corallo\n\n"
-				    "Sent by GNU Emacs\n"))
+				    "Sent with GNU Emacs\n"))
 
       ;; use 'fancy' non-ascii characters in various places in mu4e
       (setq mu4e-use-fancy-chars t)
@@ -328,7 +329,7 @@
 
 (fset 'mem-expl
       "x /10bfx ")
-(fset 'debug_rtx
+(fset 'debug-rtx
       "call debug_rtx(insn)")
 
 ;; Ibuffer conf
