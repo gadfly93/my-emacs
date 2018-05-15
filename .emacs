@@ -74,6 +74,9 @@
 ;; Human readable units in dired-mode
 (setq-default dired-listing-switches "-alh")
 
+;; automatically update dired buffers
+(setq dired-auto-revert-buffer t)
+
 ;; Ask y/n instead of yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -213,6 +216,9 @@
 
       ;; use 'fancy' non-ascii characters in various places in mu4e
       (setq mu4e-use-fancy-chars t)
+
+      ;; automatically update header-mail buffers
+      (setq mu4e-headers-auto-update t)
 
       (setq mu4e-html2text-command 'mu4e-shr2text)
       (add-to-list 'mu4e-view-actions '("ViewInBrowser" . mu4e-action-view-in-browser) t)
