@@ -126,6 +126,7 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x C-m") 'mu4e)
 ;; (global-set-key (kbd "M-.") 'xref-find-definitions-other-frame)
 
 (setq tramp-default-method "scp")
