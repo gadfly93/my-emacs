@@ -225,7 +225,25 @@
       (mu4e-alert-set-default-style 'libnotify)
       (add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
       (add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
-      ))
+
+      ;; attach files using dired
+
+      (require 'gnus-dired)
+      ;; make the `gnus-dired-mail-buffers' function also work on
+      ;; message-mode derived modes, such as mu4e-compose-mode
+      (defun gnus-dired-mail-buffers ()
+	"Return a list of active message buffers."
+	(let (buffers)
+	  (save-current-buffer
+	    (dolist (buffer (buffer-list t))
+	      (set-buffer buffer)
+	      (when (and (derived-mode-p 'message-mode)
+			 (null message-sent-message-via))
+		(push (buffer-name buffer) buffers))))
+	  (nreverse buffers)))
+
+      (setq gnus-dired-mail-mode 'mu4e-user-agent)
+      (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)))
 
 (bash-completion-setup)
 
