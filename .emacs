@@ -566,6 +566,10 @@ characters."
 (setq org-todo-keywords
       '((sequence "TODO" "WAITING" "ONGOING" "|" "DONE" "DELEGATED")))
 
+; eww search usign google
+(setq eww-search-prefix "https://www.google.com/search?q=")
+; eww better render for google results
+(setq shr-color-visible-luminance-min 60)
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
