@@ -561,6 +561,11 @@ characters."
               (add-to-list 'ac-sources 'ac-source-c-headers)
               (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
 
+; extend org-mode keywords
+(setq org-todo-keywords
+      '((sequence "TODO" "WAITING" "ONGOING" "|" "DONE" "DELEGATED")))
+
+
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
 
