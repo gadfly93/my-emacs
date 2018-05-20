@@ -481,7 +481,8 @@ characters."
   (interactive)
   (let ((default-directory (read-directory-name "create tags for dir: ")))
     ;; (delete-file "TAGS")
-    (shell-command "~/ctags/ctags -e -R . *.cpp *.hpp *.c *.h *.s")
+    (shell-command
+     "~/ctags/ctags -e -R . \"*.cpp\" \"*.hpp\" \"*.c\" \"*.h\" \"*.s\"")
     (visit-tags-table "./")))
 
 (setq c-backslash-max-column 79)
