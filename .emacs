@@ -564,7 +564,7 @@ characters."
 
 ; extend org-mode keywords
 (setq org-todo-keywords
-      '((sequence "TODO" "WAITING" "ONGOING" "|" "DONE" "DELEGATED")))
+      '((sequence "TODO" "WAITING" "ONGOING" "|" "DONE" "DELEGATED" "WONTDO")))
 
 ; eww search usign google
 (setq eww-search-prefix "https://www.google.com/search?q=")
