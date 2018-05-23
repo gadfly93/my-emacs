@@ -37,6 +37,7 @@
                      vlf
                      with-editor
 		     minimap
+		     google-translate
 		     color-theme-sanityinc-tomorrow))
 
 (if mail-setup
@@ -110,9 +111,6 @@
 (show-paren-mode 1)
 (setq line-move-visual nil)
 
-(require 'git-gutter) ;; If you enable global minor mode
-(global-git-gutter-mode t) ;; Show uncommitted git diffs
-
 (global-set-key (kbd "<f2>") 'debug-rtx)
 (global-set-key (kbd "<f3>") 'compilation-shell-minor-mode)
 (global-set-key (kbd "<f4>") 'compile)
@@ -128,6 +126,9 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x C-m") 'mu4e)
+(global-set-key (kbd "C-c t") 'google-translate-at-point)
+(global-set-key (kbd "C-c T") 'google-translate-query-translate)
+
 ;; (global-set-key (kbd "M-.") 'xref-find-definitions-other-frame)
 
 (setq tramp-default-method "scp")
@@ -170,6 +171,12 @@
 (require 'bash-completion)
 (require 'whitespace)
 (require 'helm-gtags)
+(require 'git-gutter)
+(require 'google-translate)
+(require 'google-translate-default-ui)
+
+(global-git-gutter-mode t) ;; Show uncommitted git diffs
+
 
 ;; mu4e setup
 
@@ -276,7 +283,7 @@
     ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(package-selected-packages
    (quote
-    (sanityinc-tomorrow-eighties color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+    (google-translate color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
