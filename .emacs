@@ -59,10 +59,6 @@
 ;; Disable scroll bars
 (scroll-bar-mode -1)
 
-;; Shortcut for changing font-size
-(define-key global-map (kbd "C-1") 'text-scale-decrease)
-(define-key global-map (kbd "C-2") 'text-scale-increase)
-
 ;; Store backups and auto-saved files in TEMPORARY-FILE-DIRECTORY (which defaults
 ;; to /tmp on Unix), instead of in the same directory as the file.
 (setq backup-directory-alist
@@ -128,6 +124,15 @@
 (global-set-key (kbd "C-x C-m") 'mu4e)
 (global-set-key (kbd "C-c t") 'google-translate-at-point)
 (global-set-key (kbd "C-c T") 'google-translate-query-translate)
+
+;; Shortcut for undo redo changes in the window configuration
+(global-set-key (kbd "C-c C-<right>") 'winner-redo)
+(global-set-key (kbd "C-c C-<left>") 'winner-undo)
+
+
+;; Shortcut for changing font-size
+(define-key global-map (kbd "C-1") 'text-scale-decrease)
+(define-key global-map (kbd "C-2") 'text-scale-increase)
 
 ;; (global-set-key (kbd "M-.") 'xref-find-definitions-other-frame)
 
