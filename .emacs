@@ -54,8 +54,10 @@
 ;; Disable startup message
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+;; Disable menu bar
+(menu-bar-mode -1)
 ;; Do not display GUI Toolbar
-(tool-bar-mode 0)
+(tool-bar-mode -1)
 ;; Disable scroll bars
 (scroll-bar-mode -1)
 
@@ -153,6 +155,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(add-to-list 'load-path "~/nve/")
+(require 'nve-mode)
+
 (set-default 'compile-command "make -j4")
 
 (setq-default indent-tabs-mode t)
@@ -225,7 +230,6 @@
       ;;                             ("/All Mail"     . ?a))
 
       (setq mu4e-compose-signature (concat
-				    "\n  Andrea Corallo\n\n"
 				    "Sent with GNU Emacs\n"))
 
       ;; use 'fancy' non-ascii characters in various places in mu4e
