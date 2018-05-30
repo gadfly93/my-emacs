@@ -126,6 +126,7 @@
 (global-set-key (kbd "C-x C-m") 'mu4e)
 (global-set-key (kbd "C-c t") 'google-translate-at-point)
 (global-set-key (kbd "C-c T") 'google-translate-query-translate)
+(global-set-key (kbd "C-c l") 'org-link-generate)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
@@ -573,6 +574,16 @@ characters."
            (car (last (butlast (split-string default-directory "/") 1)))
            "-shell*")))
 
+(defun org-link-generate ()
+  "Put into the kill ring a valid org link for the current cursor position."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new (concat "[[" filename "::" (int-to-string (line-number-at-pos))
+			"]]"))
+      (message "Org link for file name '%s' to the kill ring." filename))))
 
   (add-hook 'c-mode-hook
             (lambda ()
