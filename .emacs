@@ -39,6 +39,7 @@
 		     minimap
 		     google-translate
 		     browse-kill-ring
+		     beacon
 		     color-theme-sanityinc-tomorrow))
 
 (if mail-setup
@@ -198,6 +199,9 @@
 
 (global-git-gutter-mode t) ;; Show uncommitted git diffs
 
+;; Whenever the window scrolls a light will shine on top of your cursor.
+(require 'beacon)
+(beacon-mode 1)
 
 ;; mu4e setup
 
@@ -302,7 +306,7 @@
     ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(package-selected-packages
    (quote
-    (browse-kill-ring google-translate color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+    (beacon browse-kill-ring google-translate color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
