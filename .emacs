@@ -127,6 +127,7 @@
 (global-set-key (kbd "C-c t") 'google-translate-at-point)
 (global-set-key (kbd "C-c T") 'google-translate-query-translate)
 (global-set-key (kbd "C-c l") 'org-link-generate)
+(global-set-key (kbd "C-c f") ' find-name-dired)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
@@ -230,8 +231,7 @@
       ;;                             ("/Trash"        . ?t)
       ;;                             ("/All Mail"     . ?a))
 
-      (setq mu4e-compose-signature (concat
-				    "Sent with GNU Emacs\n"))
+      (setq mu4e-compose-signature "Sent with GNU Emacs\n")
 
       ;; use 'fancy' non-ascii characters in various places in mu4e
       (setq mu4e-use-fancy-chars t)
