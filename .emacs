@@ -96,6 +96,12 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
+;; Make windmove work in org-mode when possible.
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
+
 ;; Allows to ‘undo’ (and ‘redo’) changes in the window configuration with the key
 ;; commands ‘C-c left’ and ‘C-c right’.
 (when (fboundp 'winner-mode)
@@ -129,7 +135,7 @@
 (global-set-key (kbd "C-c t") 'google-translate-at-point)
 (global-set-key (kbd "C-c T") 'google-translate-query-translate)
 (global-set-key (kbd "C-c l") 'org-link-generate)
-(global-set-key (kbd "C-c f") ' find-name-dired)
+(global-set-key (kbd "C-c f") 'find-name-dired)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
