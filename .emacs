@@ -534,6 +534,10 @@ characters."
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
+(add-hook 'verilog-mode-hook
+      (lambda ()
+	(setq indent-tabs-mode nil)))
+
 ;; (add-hook 'c-mode-hook
 ;;           (lambda ()
 ;;             (let ((filename (buffer-file-name)))
