@@ -137,6 +137,7 @@
 (global-set-key (kbd "C-c l") 'org-link-generate)
 (global-set-key (kbd "C-c f") 'find-name-dired)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
