@@ -136,6 +136,7 @@
 (global-set-key (kbd "C-c T") 'google-translate-query-translate)
 (global-set-key (kbd "C-c l") 'org-link-generate)
 (global-set-key (kbd "C-c f") 'find-name-dired)
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
@@ -164,8 +165,7 @@
 (setq ediff-diff-options "-w")
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-
-(add-to-list 'load-path "~/nve/")
+(add-to-list 'load-path "~/nve-mode/")
 (require 'nve-mode)
 
 (set-default 'compile-command "make -j4")
@@ -187,6 +187,7 @@
 (require 'flex-mode)
 (require 'auto-complete-config)
 (require 'ido)
+(require 'helm-config)
 (require 'vlf)
 (require 'bash-completion)
 (require 'whitespace)
