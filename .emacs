@@ -48,6 +48,7 @@
 		     color-theme-sanityinc-tomorrow))
 (when exwm-setup
   (add-to-list 'package-list 'exwm)
+  (add-to-list 'package-list 'desktop-environment)
   (add-to-list 'package-list 'pulseaudio-control))
 
 (if mail-setup
@@ -742,23 +743,55 @@ characters."
               ;; search
               ([?\C-s] . [?\C-f])))
 
-      ;; You can hide the minibuffer and echo area when they're not used, by
-      ;; uncommenting the following line.
+      ;; Hide the minibuffer and echo area when they're not used.
       (setq exwm-workspace-minibuffer-position 'bottom)
+
 
       ;; Do not forget to enable EXWM. It will start by itself when things are
       ;; ready.  You can put it _anywhere_ in your configuration.
       (exwm-enable)
 
-      ;; Key binding.
-      (global-set-key (kbd "<XF86AudioMute>")
-		      'pulseaudio-control-toggle-current-sink-mute)
-      (global-set-key (kbd "<XF86AudioRaiseVolume>")
-		      'pulseaudio-control-increase-volume)
-      (global-set-key (kbd "<XF86AudioLowerVolume>")
-		      'pulseaudio-control-decrease-volume)
-      ))
+      (require 'exwm-randr)
 
+      (add-hook 'exwm-randr-screen-change-hook
+		(lambda ()
+		  (start-process-shell-command
+		   "xrandr" nil "xrandr --output DP-2-2 --right-of DP-2-1 --auto")))
+      (exwm-randr-enable)
+
+      (if nil
+	  (setq exwm-randr-workspace-output-plist '(0 "DP-2-1"
+						      1 "DP-2-2"
+						      2 "DP-2-1"
+						      3 "DP-2-2"
+						      4 "DP-2-1"
+						      5 "DP-2-2")))
+      (defun exwm-auto-toggle-screen ()
+	(with-temp-buffer
+	  (call-process "xrandr" nil t nil)
+	  (beginning-of-buffer)
+	  (if (search-forward "DP-2-2 connected" nil 'noerror)
+              (start-process-shell-command
+               "xrandr" nil "xrandr --output DP-2-2 --primary --auto --output LVDS1 --off")
+	    (start-process-shell-command
+	     "xrandr" nil "xrandr --output LVDS1 --auto"))))
+
+
+      ;; Avoid floating windows.
+      (setq exwm-manage-force-tiling nil)
+
+      (require 'desktop-environment)
+      (desktop-environment-mode)
+      ;; Key binding.
+      ;; (global-set-key (kbd "<XF86AudioMute>")
+      ;; 		      'pulseaudio-control-toggle-current-sink-mute)
+      ;; (global-set-key (kbd "<XF86AudioRaiseVolume>")
+      ;; 		      'pulseaudio-control-increase-volume)
+      ;; (global-set-key (kbd "<XF86AudioLowerVolume>")
+      ;; 		      'pulseaudio-control-decrease-volume))
+
+      ;; Open new url in new windows
+      (setq browse-url-new-window-flag t)))
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
