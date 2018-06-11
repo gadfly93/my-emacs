@@ -49,7 +49,8 @@
 (when exwm-setup
   (add-to-list 'package-list 'exwm)
   (add-to-list 'package-list 'desktop-environment)
-  (add-to-list 'package-list 'pulseaudio-control))
+  (add-to-list 'package-list 'pulseaudio-control)
+  (add-to-list 'package-list 'exwm-edit))
 
 (if mail-setup
     (add-to-list 'package-list 'mu4e-alert))
@@ -326,7 +327,7 @@
     ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(package-selected-packages
    (quote
-    (pulseaudio-control helm-exwm exwm jira beacon browse-kill-ring google-translate color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+    (exwm-edit pulseaudio-control helm-exwm exwm jira beacon browse-kill-ring google-translate color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
@@ -761,11 +762,11 @@ characters."
 
       (if nil
 	  (setq exwm-randr-workspace-output-plist '(0 "DP-2-1"
-						      1 "DP-2-2"
-						      2 "DP-2-1"
-						      3 "DP-2-2"
-						      4 "DP-2-1"
-						      5 "DP-2-2")))
+						      1 "DP-2-1"
+						      2 "DP-2-2"
+						      3 "DP-2-1"
+						      4 "DP-2-2"
+						      5 "DP-2-1")))
       (defun exwm-auto-toggle-screen ()
 	(with-temp-buffer
 	  (call-process "xrandr" nil t nil)
@@ -789,6 +790,12 @@ characters."
       ;; 		      'pulseaudio-control-increase-volume)
       ;; (global-set-key (kbd "<XF86AudioLowerVolume>")
       ;; 		      'pulseaudio-control-decrease-volume))
+
+      ;; Enable exwm-edit:
+      ;; C-c '​ or C-c C-'​ - edit
+      ;; C-c '​ or C-c C-c - finish editing
+      ;; C-c C-k - cancel editing
+      (require 'exwm-edit)
 
       ;; Open new url in new windows
       (setq browse-url-new-window-flag t)))
