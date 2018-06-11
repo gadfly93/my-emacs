@@ -747,39 +747,61 @@ characters."
       ;; Hide the minibuffer and echo area when they're not used.
       (setq exwm-workspace-minibuffer-position 'bottom)
 
-
       ;; Do not forget to enable EXWM. It will start by itself when things are
       ;; ready.  You can put it _anywhere_ in your configuration.
       (exwm-enable)
 
       (require 'exwm-randr)
 
-      (add-hook 'exwm-randr-screen-change-hook
-		(lambda ()
-		  (start-process-shell-command
-		   "xrandr" nil "xrandr --output DP-2-2 --right-of DP-2-1 --auto")))
+      ;;    (add-hook 'exwm-randr-screen-change-hook
+      ;;	'exwm-auto-toggle-screen)
+
       (exwm-randr-enable)
 
-      (if nil
-	  (setq exwm-randr-workspace-output-plist '(0 "DP-2-1"
-						      1 "DP-2-1"
-						      2 "DP-2-2"
-						      3 "DP-2-1"
-						      4 "DP-2-2"
-						      5 "DP-2-1")))
+      (defun exwm-enable-laptop-screen ()
+	(interactive)
+	(setq exwm-randr-workspace-output-plist nil)
+	(start-process-shell-command
+	 "xrandr" nil "xrandr --output eDP-1 --auto"))
+
       (defun exwm-auto-toggle-screen ()
+	(interactive)
 	(with-temp-buffer
 	  (call-process "xrandr" nil t nil)
-	  (beginning-of-buffer)
-	  (if (search-forward "DP-2-2 connected" nil 'noerror)
-              (start-process-shell-command
-               "xrandr" nil "xrandr --output DP-2-2 --primary --auto --output LVDS1 --off")
-	    (start-process-shell-command
-	     "xrandr" nil "xrandr --output LVDS1 --auto"))))
-
+	  (goto-char (point-min))
+	  (if (and (search-forward "DP-2-1 connected" nil 'noerror)
+		   (search-forward "DP-2-2 connected" nil 'noerror))
+	      (progn
+		(start-process-shell-command
+		 "xrandr" nil "xrandr --output eDP-1 --off")
+		(start-process-shell-command
+		 "xrandr" nil "xrandr --output DP-2-1 --auto")
+		(start-process-shell-command
+		 "xrandr" nil "xrandr --output DP-2-2 --primary --auto --right-of DP-2-1")
+		(setq exwm-randr-workspace-output-plist '(0 "DP-2-1"
+							    1 "DP-2-1"
+							    2 "DP-2-2"
+							    3 "DP-2-1"
+							    4 "DP-2-2"
+							    5 "DP-2-1")))
+	    (if (progn
+		  (goto-char (point-min))
+		  (search-forward "HDMI-2 connected" nil 'noerror))
+		(progn
+		  (start-process-shell-command
+		   "xrandr" nil "xrandr --output eDP-1 --off")
+		  (start-process-shell-command
+		   "xrandr" nil "xrandr --output HDMI-2 --auto")
+		  (start-process-shell-command
+		   "setxkbmap -layout us -option ctrl:nocaps"))
+	      (setq exwm-randr-workspace-output-plist nil)
+	      (start-process-shell-command
+ 	       "xrandr" nil "xrandr --output eDP-1 --auto")))
+	  (start-process-shell-command
+	   "setxkbmap -layout gb -option ctrl:nocaps")))
 
       ;; Avoid floating windows.
-      (setq exwm-manage-force-tiling nil)
+      (setq exwm-manage-force-tiling t)
 
       (require 'desktop-environment)
       (desktop-environment-mode)
@@ -790,6 +812,9 @@ characters."
       ;; 		      'pulseaudio-control-increase-volume)
       ;; (global-set-key (kbd "<XF86AudioLowerVolume>")
       ;; 		      'pulseaudio-control-decrease-volume))
+
+      (global-set-key (kbd "<XF86Display>")
+		      'exwm-auto-toggle-screen)
 
       ;; Enable exwm-edit:
       ;; C-c '​ or C-c C-'​ - edit
