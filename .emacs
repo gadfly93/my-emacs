@@ -149,6 +149,11 @@
 (define-key global-map (kbd "C-1") 'text-scale-decrease)
 (define-key global-map (kbd "C-2") 'text-scale-increase)
 
+;; In magit-mode bind original vc keybindings to magit ones.
+(require 'magit-mode)
+(define-key magit-mode-map (kbd "C-x v l") 'magit-log-buffer-file)
+(define-key magit-mode-map (kbd "C-x v L") 'magit-log-head)
+
 ;; (global-set-key (kbd "M-.") 'xref-find-definitions-other-frame)
 
 (setq tramp-default-method "scp")
