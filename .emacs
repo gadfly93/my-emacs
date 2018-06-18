@@ -6,8 +6,13 @@
 ;; sudo apt-get install global  (gtags)
 ;; sudo apt-get install offlineimap mu4e libwebkit-dev
 
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+
 ;; Define to t to enable mu4e
 (setq mail-setup t)
+
+;; Define to t to enable exwm setup
+(setq exwm-setup t)
 
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -42,6 +47,11 @@
 		     beacon
 		     yaml-mode
 		     color-theme-sanityinc-tomorrow))
+(when exwm-setup
+  (add-to-list 'package-list 'exwm)
+  (add-to-list 'package-list 'desktop-environment)
+  (add-to-list 'package-list 'pulseaudio-control)
+  (add-to-list 'package-list 'exwm-edit))
 
 (if mail-setup
     (add-to-list 'package-list 'mu4e-alert))
@@ -53,6 +63,9 @@
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
+
+;; Increase garbage collection threshold
+(setq gc-cons-threshold 20000000)
 
 ;; Disable startup message
 (setq inhibit-splash-screen t)
@@ -320,7 +333,7 @@
     ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(package-selected-packages
    (quote
-    (beacon browse-kill-ring google-translate sanityinc-tomorrow-eighties color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
+    (exwm-edit pulseaudio-control helm-exwm exwm beacon browse-kill-ring google-translate sanityinc-tomorrow-eighties color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
  '(verilog-align-ifelse t)
  '(verilog-auto-delete-trailing-whitespace t)
  '(verilog-auto-inst-param-value t)
@@ -408,6 +421,7 @@
 
 (setq ibuffer-saved-filter-groups
       (quote (("default"
+	       ("exwm" (mode . exwm-mode))
 	       ("lisp" (or
 			(mode . lisp-mode)
 			(mode . slime-repl-mode)
@@ -632,12 +646,192 @@ characters."
 
 ; extend org-mode keywords
 (setq org-todo-keywords
-      '((sequence "TODO" "INVESTIGATING" "WAITING"  "ONGOING" "|" "DONE" "DELEGATED" "WONTDO")))
+      '((sequence "TODO" "INVESTIGATING" "WAITING" "ONGOING" "|" "DONE"
+		  "DELEGATED" "WONTDO")))
 
 ; eww search usign google
 (setq eww-search-prefix "https://www.google.com/search?q=")
 ; eww better render for google results
 (setq shr-color-visible-luminance-min 60)
+
+;; EXWM setup
+(if exwm-setup
+    (progn
+      ;; Also shrink fringes to 1 pixel.
+      (fringe-mode 1)
+
+      ;; Turn on `display-time-mode' if you don't use an external bar.
+      (setq display-time-default-load-average nil)
+      (display-time-mode t)
+
+      ;; Load EXWM.
+      (require 'exwm)
+
+      ;; Fix problems with Ido (if you use it).
+      (require 'exwm-config)
+      (exwm-config-ido)
+
+      ;; Set the initial number of workspaces (they can also be created later).
+      (setq exwm-workspace-number 4)
+
+      ;; All buffers created in EXWM mode are named "*EXWM*". You may want to
+      ;; change it in `exwm-update-class-hook' and `exwm-update-title-hook', which
+      ;; are run when a new X window class name or title is available.  Here's
+      ;; some advice on this topic:
+      ;; + Always use `exwm-workspace-rename-buffer` to avoid naming conflict.
+      ;; + For applications with multiple windows (e.g. GIMP), the class names of
+					;    all windows are probably the same.  Using window titles for them makes
+      ;;   more sense.
+      ;; In the following example, we use class names for all windows expect for
+      ;; Java applications and GIMP.
+      (add-hook 'exwm-update-class-hook
+		(lambda ()
+		  (unless (or (string-prefix-p "sun-awt-X11-" exwm-instance-name)
+                              (string= "gimp" exwm-instance-name))
+		    (exwm-workspace-rename-buffer exwm-class-name))))
+      (add-hook 'exwm-update-title-hook
+		(lambda ()
+		  (when (or (not exwm-instance-name)
+			    (string-prefix-p "sun-awt-X11-" exwm-instance-name)
+			    (string= "gimp" exwm-instance-name))
+		    (exwm-workspace-rename-buffer exwm-title))))
+
+      ;; Global keybindings can be defined with `exwm-input-global-keys'.
+      ;; Here are a few examples:
+      (setq exwm-input-global-keys
+            `(
+              ;; Bind "s-r" to exit char-mode and fullscreen mode.
+              ([?\s-r] . exwm-reset)
+              ;; Bind "s-w" to switch workspace interactively.
+              ([?\s-w] . exwm-workspace-switch)
+              ;; Bind "s-0" to "s-9" to switch to a workspace by its index.
+              ,@(mapcar (lambda (i)
+                          `(,(kbd (format "s-%d" i)) .
+                            (lambda ()
+                              (interactive)
+                              (exwm-workspace-switch-create ,i))))
+                        (number-sequence 0 9))
+              ;; Bind "s-&" to launch applications ('M-&' also works if the output
+              ;; buffer does not bother you).
+              ([?\s-&] . (lambda (command)
+      			   (interactive (list (read-shell-command "$ ")))
+      			   (start-process-shell-command command nil command)))
+              ;; Bind "s-<f2>" to "slock", a simple X display locker.
+              ([s-f2] . (lambda ()
+      			  (interactive)
+      			  (start-process "" nil "/usr/bin/slock")))))
+
+      ;; To add a key binding only available in line-mode, simply define it in
+      ;; `exwm-mode-map'.  The following example shortens 'C-c q' to 'C-q'.
+      (define-key exwm-mode-map [?\C-q] #'exwm-input-send-next-key)
+
+      ;; The following example demonstrates how to use simulation keys to mimic
+      ;; the behavior of Emacs.  The value of `exwm-input-simulation-keys` is a
+      ;; list of cons cells (SRC . DEST), where SRC is the key sequence you press
+      ;; and DEST is what EXWM actually sends to application.  Note that both SRC
+      ;; and DEST should be key sequences (vector or string).
+      (setq exwm-input-simulation-keys
+            '(
+              ;; movement
+              ([?\C-b] . [left])
+              ([?\M-b] . [C-left])
+              ([?\C-f] . [right])
+              ([?\M-f] . [C-right])
+              ([?\C-p] . [up])
+              ([?\C-n] . [down])
+              ([?\C-a] . [home])
+              ([?\C-e] . [end])
+              ([?\M-v] . [prior])
+              ([?\C-v] . [next])
+              ([?\C-d] . [delete])
+              ([?\C-k] . [S-end delete])
+              ;; cut/paste.
+              ([?\C-w] . [?\C-x])
+              ([?\M-w] . [?\C-c])
+              ([?\C-y] . [?\C-v])
+              ;; search
+              ([?\C-s] . [?\C-f])))
+
+      ;; Hide the minibuffer and echo area when they're not used.
+      (setq exwm-workspace-minibuffer-position 'bottom)
+
+      ;; Do not forget to enable EXWM. It will start by itself when things are
+      ;; ready.  You can put it _anywhere_ in your configuration.
+      (exwm-enable)
+
+      (require 'exwm-randr)
+
+      ;;    (add-hook 'exwm-randr-screen-change-hook
+      ;;	'exwm-auto-toggle-screen)
+
+      (exwm-randr-enable)
+
+      (defun exwm-enable-laptop-screen ()
+	(interactive)
+	(setq exwm-randr-workspace-output-plist nil)
+	(start-process-shell-command
+	 "xrandr" nil "xrandr --output eDP-1 --auto"))
+
+      (defun exwm-auto-toggle-screen ()
+	(interactive)
+	(with-temp-buffer
+	  (call-process "xrandr" nil t nil)
+	  (goto-char (point-min))
+	  (if (and (search-forward "DP-2-1 connected" nil 'noerror)
+		   (search-forward "DP-2-2 connected" nil 'noerror))
+	      (progn
+		(start-process-shell-command
+		 "xrandr" nil "xrandr --output eDP-1 --off")
+		(start-process-shell-command
+		 "xrandr" nil "xrandr --output DP-2-1 --auto")
+		(start-process-shell-command
+		 "xrandr" nil "xrandr --output DP-2-2 --primary --auto --right-of DP-2-1")
+		(setq exwm-randr-workspace-output-plist '(0 "DP-2-1"
+							    1 "DP-2-1"
+							    2 "DP-2-2"
+							    3 "DP-2-1"
+							    4 "DP-2-2"
+							    5 "DP-2-1")))
+	    (if (progn
+		  (goto-char (point-min))
+		  (search-forward "HDMI-2 connected" nil 'noerror))
+		(progn
+		  (start-process-shell-command
+		   "xrandr" nil "xrandr --output eDP-1 --off")
+		  (start-process-shell-command
+		   "xrandr" nil "xrandr --output HDMI-2 --auto")
+		  (start-process-shell-command
+		   "setxkbmap -layout us -option ctrl:nocaps"))
+	      (setq exwm-randr-workspace-output-plist nil)
+	      (start-process-shell-command
+ 	       "xrandr" nil "xrandr --output eDP-1 --auto")))
+	  (start-process-shell-command
+	   "setxkbmap -layout gb -option ctrl:nocaps")))
+
+      ;; Avoid floating windows.
+      (setq exwm-manage-force-tiling t)
+
+      (require 'desktop-environment)
+      (desktop-environment-mode)
+      ;; Key binding.
+      ;; (global-set-key (kbd "<XF86AudioMute>")
+      ;; 		      'pulseaudio-control-toggle-current-sink-mute)
+      ;; (global-set-key (kbd "<XF86AudioRaiseVolume>")
+      ;; 		      'pulseaudio-control-increase-volume)
+      ;; (global-set-key (kbd "<XF86AudioLowerVolume>")
+      ;; 		      'pulseaudio-control-decrease-volume))
+
+      (global-set-key (kbd "<XF86Display>")
+		      'exwm-auto-toggle-screen)
+
+      ;; Enable exwm-edit:
+      ;; C-c '​ or C-c C-'​ - edit
+      ;; C-c '​ or C-c C-c - finish editing
+      ;; C-c C-k - cancel editing
+      (require 'exwm-edit)
+
+      ;; Open new url in new windows
+      (setq browse-url-new-window-flag t)))
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
