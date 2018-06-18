@@ -754,8 +754,8 @@ characters."
               ;; search
               ([?\C-s] . [?\C-f])))
 
-      ;; Hide the minibuffer and echo area when they're not used.
-      (setq exwm-workspace-minibuffer-position 'bottom)
+      ;; Hide the minibuffer and echo area when they're not used?
+      ;; (setq exwm-workspace-minibuffer-position 'bottom)
 
       ;; Do not forget to enable EXWM. It will start by itself when things are
       ;; ready.  You can put it _anywhere_ in your configuration.
@@ -763,8 +763,8 @@ characters."
 
       (require 'exwm-randr)
 
-      ;;    (add-hook 'exwm-randr-screen-change-hook
-      ;;	'exwm-auto-toggle-screen)
+      ;; (add-hook 'exwm-randr-screen-change-hook
+      ;; 'exwm-auto-toggle-screen)
 
       (exwm-randr-enable)
 
@@ -810,8 +810,8 @@ characters."
 	  (start-process-shell-command
 	   "setxkbmap -layout gb -option ctrl:nocaps")))
 
-      ;; Avoid floating windows.
-      (setq exwm-manage-force-tiling t)
+      ;; Avoid floating windows?
+      (setq exwm-manage-force-tiling nil)
 
       (require 'desktop-environment)
       (desktop-environment-mode)
