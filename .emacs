@@ -771,7 +771,7 @@ characters."
 	      (start-process-shell-command
  	       "xrandr" nil "xrandr --output eDP-1 --auto")))
 	  (start-process-shell-command
-	   "setxkbmap -layout gb -option ctrl:nocaps")))
+	   "xrandr" nil "setxkbmap -layout gb -option ctrl:nocaps")))
 
       ;; Avoid floating windows?
       (setq exwm-manage-force-tiling nil)
