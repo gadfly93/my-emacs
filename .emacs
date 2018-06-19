@@ -323,49 +323,12 @@
 (semantic-mode)                           ; Enable prototype help and smart completion
 (global-semantic-idle-summary-mode 1)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (sanityinc-tomorrow-eighties)))
- '(custom-safe-themes
-   (quote
-    ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
- '(package-selected-packages
-   (quote
-    (htmlize helm-mu exwm-edit pulseaudio-control helm-exwm exwm beacon browse-kill-ring google-translate sanityinc-tomorrow-eighties color-theme-sanityinc-tomorrow mu4e-alert minimap twittering-mode undo-tree epresent stickyfunc-enhance sr-speedbar sos realgud bash-completion gh-md markdown-mode flymd sos dictcc stickyfunc-enhance sr-speedbar realgud magit helm-gtags helm-git ggtags dismal csv-mode company)))
-
- '(verilog-align-ifelse t)
- '(verilog-auto-delete-trailing-whitespace t)
- '(verilog-auto-inst-param-value t)
- '(verilog-auto-inst-vector nil)
- '(verilog-auto-lineup (quote all))
- '(verilog-auto-newline nil)
- '(verilog-auto-save-policy nil)
- '(verilog-auto-template-warn-unused t)
- '(verilog-case-indent 2)
- '(verilog-cexp-indent 2)
- '(verilog-highlight-grouping-keywords t)
- '(verilog-highlight-modules t)
- '(verilog-indent-level 2)
- '(verilog-indent-level-behavioral 2)
- '(verilog-indent-level-declaration 2)
- '(verilog-indent-level-module 2)
- '(verilog-tab-to-comment nil))
-
-
-
-
 ;; (autoload 'autopair-global-mode "autopair" nil t)
 ;; (autopair-global-mode)
 ;; (add-hook 'lisp-mode-hook
 ;;           #'(lambda () (setq autopair-dont-activate t)))
 
-
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 
 (defun annotate-pdb ()
   (interactive)
@@ -834,6 +797,11 @@ characters."
 
       ;; Open new url in new windows
       (setq browse-url-new-window-flag t)))
+
+;; move custom pkg dependency generated list out of here
+(setq custom-file "~/.emacs.d/custom.el")
+(write-region "" nil custom-file 'append)
+(load custom-file)
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
