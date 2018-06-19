@@ -140,6 +140,7 @@
 (global-set-key (kbd "<f7>") 'create-tags)
 (global-set-key (kbd "<f8>") 'rename-buffer-shell)
 (global-set-key (kbd "<f9>") 'mem-expl)
+(global-set-key (kbd "<f12>") 'shell-clean-exec-last)
 
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
@@ -803,12 +804,9 @@ characters."
 (write-region "" nil custom-file 'append)
 (load custom-file)
 
+(defun shell-clean-exec-last ()
+  (interactive)
+  (execute-kbd-macro "\C-xh\C-[[3~\C-[[1;5A\C-m"))
+
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
