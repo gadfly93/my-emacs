@@ -727,8 +727,8 @@ characters."
 
       (require 'exwm-randr)
 
-      ;; (add-hook 'exwm-randr-screen-change-hook
-      ;; 'exwm-auto-toggle-screen)
+      (add-hook 'exwm-randr-screen-change-hook
+		'exwm-auto-toggle-screen)
 
       (exwm-randr-enable)
 
@@ -775,7 +775,7 @@ characters."
 	   "xrandr" nil "setxkbmap -layout gb -option ctrl:nocaps")))
 
       ;; Avoid floating windows?
-      (setq exwm-manage-force-tiling nil)
+      (setq exwm-manage-force-tiling t)
 
       (require 'desktop-environment)
       (desktop-environment-mode)
