@@ -767,7 +767,7 @@ characters."
 		  (start-process-shell-command
 		   "xrandr" nil "xrandr --output HDMI-2 --auto")
 		  (start-process-shell-command
-		   "setxkbmap -layout us -option ctrl:nocaps"))
+		   "xrandr" nil "setxkbmap -layout us -option ctrl:nocaps"))
 	      (setq exwm-randr-workspace-output-plist nil)
 	      (start-process-shell-command
  	       "xrandr" nil "xrandr --output eDP-1 --auto")))
