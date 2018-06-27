@@ -1,4 +1,8 @@
-(defun midas-indent-all ()
+(defun midas-init ()
+  "Function called during Midas mode initialization."
+  (auto-complete-mode))
+
+(defun midas-electric-indent ()
   "Function called when TAB is pressed in Midas mode."
   (interactive)
   (save-excursion
@@ -18,7 +22,7 @@
 
 (progn
   (setq midas-mode-map (make-sparse-keymap))
-  (define-key midas-mode-map (kbd "TAB") 'midas-indent-all)
+  (define-key midas-mode-map (kbd "TAB") 'midas-electric-indent)
   ;; by convention, major mode's keys should begin with the form C-c C-‹key›
   ;; by convention, keys of the form C-c ‹letter› are reserved for user. don't define such keys in your major mode
   )
@@ -29,7 +33,7 @@
   verilog-mode
   "MIDAS"
   "Major mode for working in MIDAS hardware description language."
-  nil)
+  (midas-init))
 
 (provide 'midas-mode)
 
