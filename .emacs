@@ -181,7 +181,6 @@
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.yy$" . bison-mode))
 (add-to-list 'auto-mode-alist '("\\.vc" . verilog-mode))
-(add-to-list 'auto-mode-alist '("\\.mds" . verilog-mode))
 
 (delete-selection-mode)
 (setq ediff-diff-options "-w")
@@ -410,9 +409,10 @@
 		     (derived-mode . c-mode)
 		     (mode . c++-mode)))
 	       ("asm" (mode . asm-mode))
-	       ("verilog/yaml-shit" (or
-				     (mode . verilog-mode)
-				     (mode . yaml-mode)))
+	       ("verilog/mds/yaml-shit" (or
+					 (mode . verilog-mode)
+					 (mode . midas-mode)
+					 (mode . yaml-mode)))
 	       ("dired" (or
 			 (mode . dired-mode)
 			 (mode . wdired-mode)
