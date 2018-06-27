@@ -1,21 +1,39 @@
+(require 'verilog-mode)
+
 (defun midas-init ()
   "Function called during Midas mode initialization."
   (auto-complete-mode))
 
-(defun midas-electric-indent ()
-  "Function called when TAB is pressed in Midas mode."
+(defun midas-demidisify ()
+  "Transform midas directive into comments."
   (interactive)
   (save-excursion
     (goto-char 0)
     (while (search-forward-regexp "\n[ ]*%%" nil t)
-      (replace-match "\n//%%")))
-  (electric-verilog-tab)
+      (replace-match "\n//%%"))))
+
+(defun midas-remidisify ()
+  "Reinsert midas directive back and align them."
   (save-excursion
     (goto-char 0)
     (while (search-forward-regexp "\n[ ]*//%%" nil t)
       (replace-match "\n%%"))))
 
-(defvar midas-mode-map nil "Keymap for `midas-mode-mode'")
+(defun midas-electric-indent ()
+  "Function called when TAB is pressed in Midas mode."
+  (interactive)
+  (midas-demidisify)
+  (electric-verilog-tab)
+  (midas-remidisify))
+
+(defun midas-indent-buffer ()
+  "Function called when TAB is pressed in Midas mode."
+  (interactive)
+  (midas-demisify)
+  (verilog-indent-buffer)
+  (midas-remidisify))
+
+(defvar midas-mode-map nil "Keymap for `midas-mode'")
 ;; make sure that the var name is your mode name followed by -map.
 ;; That way, define-derived-mode will automatically set it as local map
 ;; also, by comidasntion, variable names for keymap should end in -map
