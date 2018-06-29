@@ -1,23 +1,31 @@
 (require 'verilog-mode)
 
-(defconst midas-mode-magic-str "$^&#~")
+(defconst midas-mode-magic-str "$3^2&d#~"
+  "Hope we don't find this string in your code...")
 
 (defun midas-init ()
   "Function called during Midas mode initialization."
   (auto-complete-mode))
+
+(defun midas-comment-line ()
+  "Comment a single line."
+  (interactive)
+  (save-excursion
+    (search-backward "\n" nil t)
+    (replace-match "\n%!")))
 
 (defun midas-demidisify ()
   "Mask midas directive as comments."
   (interactive)
   (save-excursion
     (goto-char (point-min))
-    (while (search-forward-regexp "\n[ ]*%%" nil t)
-      (replace-match (concat "\n//"
+    (while (search-forward-regexp "^[ ]*%%" nil t)
+      (replace-match (concat "//"
 			     midas-mode-magic-str
 			     "%%")))
     (goto-char (point-min))
-    (while (search-forward-regexp "\n[ ]*%!" nil t)
-      (replace-match (concat "\n//"
+    (while (search-forward-regexp "^[ ]*%!" nil t)
+      (replace-match (concat "//"
 			     midas-mode-magic-str
 			     "%!")))
     (goto-char (point-min))
@@ -36,17 +44,17 @@
   (interactive)
   (save-excursion
     (goto-char (point-min))
-    (while (search-forward (concat "\n//"
+    (while (search-forward (concat "//"
 				   midas-mode-magic-str
 				   "%%")
 			   nil t)
-      (replace-match "\n%%"))
+      (replace-match "%%"))
     (goto-char (point-min))
-    (while (search-forward (concat "\n//"
+    (while (search-forward (concat "//"
 				   midas-mode-magic-str
 				   "!%")
 			   nil t)
-      (replace-match "\n!%"))
+      (replace-match "!%"))
     (goto-char (point-min))
     (while (search-forward (concat "/*"
 				   midas-mode-magic-str
@@ -82,10 +90,10 @@
 (progn
   (setq midas-mode-map (make-sparse-keymap))
   (define-key midas-mode-map (kbd "TAB") 'midas-electric-indent)
+  (define-key midas-mode-map (kbd "C-c C-c") 'midas-comment-line)
   ;; by convention, major mode's keys should begin with the form C-c C-‹key›
   ;; by convention, keys of the form C-c ‹letter› are reserved for user. don't define such keys in your major mode
   )
-
 
 (define-derived-mode
   midas-mode
