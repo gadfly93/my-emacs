@@ -1,29 +1,64 @@
 (require 'verilog-mode)
 
+(defconst midas-mode-magic-str "$^&#~")
+
 (defun midas-init ()
   "Function called during Midas mode initialization."
   (auto-complete-mode))
 
 (defun midas-demidisify ()
-  "Transform midas directive into comments."
+  "Mask midas directive as comments."
   (interactive)
   (save-excursion
-    (goto-char 0)
+    (goto-char (point-min))
     (while (search-forward-regexp "\n[ ]*%%" nil t)
-      (replace-match "\n//%%"))
-    (goto-char 0)
+      (replace-match (concat "\n//"
+			     midas-mode-magic-str
+			     "%%")))
+    (goto-char (point-min))
     (while (search-forward-regexp "\n[ ]*%!" nil t)
-      (replace-match "\n//%!"))))
+      (replace-match (concat "\n//"
+			     midas-mode-magic-str
+			     "%!")))
+    (goto-char (point-min))
+    (while (search-forward "{%" nil t)
+      (replace-match (concat "/*"
+			     midas-mode-magic-str
+			     "{%")))
+    (goto-char (point-min))
+    (while (search-forward "%}" nil t)
+      (replace-match (concat "%}"
+			     midas-mode-magic-str
+			     "*/")))))
 
 (defun midas-remidisify ()
-  "Reinsert midas directive back and align them."
+  "Reinsert midas directive back."
+  (interactive)
   (save-excursion
-    (goto-char 0)
-    (while (search-forward-regexp "\n[ ]*//%%" nil t)
+    (goto-char (point-min))
+    (while (search-forward (concat "\n//"
+				   midas-mode-magic-str
+				   "%%")
+			   nil t)
       (replace-match "\n%%"))
-    (goto-char 0)
-    (while (search-forward-regexp "\n[ ]*//!%" nil t)
-      (replace-match "\n!%"))))
+    (goto-char (point-min))
+    (while (search-forward (concat "\n//"
+				   midas-mode-magic-str
+				   "!%")
+			   nil t)
+      (replace-match "\n!%"))
+    (goto-char (point-min))
+    (while (search-forward (concat "/*"
+				   midas-mode-magic-str
+				   "{%")
+			   nil t)
+      (replace-match "{%"))
+    (goto-char (point-min))
+    (while (search-forward (concat "%}"
+				   midas-mode-magic-str
+				   "*/")
+			   nil t)
+      (replace-match "%}"))))
 
 (defun midas-electric-indent ()
   "Function called when TAB is pressed in Midas mode."
