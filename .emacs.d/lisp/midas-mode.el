@@ -1,3 +1,30 @@
+;;; -*- lexical-binding: t; -*-
+
+;;; midas-mode.el --- major mode for editing midas source in Emacs
+
+;; Copyright (C) 2018 Andrea Corallo.
+
+;; Author: Andrea Corallo <andrea.corallo@arm.com>
+
+;; This mode is based on verilog-mode. I usually use and raccomend the verilog mode form:
+;; <http://www.veripool.com/verilog-mode>
+
+;; INSTALLING THE MODE
+;; ===================
+
+;; The short list of installation instructions are:
+;; Install verilog-mode from <http://www.veripool.com/verilog-mode>.
+;; Put this file in your load path.
+;; Add the following in code (please un comment it first!) in your
+;; .emacs.
+
+;;   (require 'midas-mode)
+
+;; USAGE
+;; =====
+
+;; Once in an midas file: M-x describe-mode
+
 (require 'verilog-mode)
 
 (defconst midas-mode-magic-str "$3^2&d#~"
