@@ -7,12 +7,21 @@
   "Function called during Midas mode initialization."
   (auto-complete-mode))
 
+;; FIXME use font-lock instead
+;; (defconst midas-comment-start-regexp "%!"
+;;   "Dual comment value for `comment-start-regexp'.")
+
+(defun midas-highlight-comments ()
+  "Highlight correctly midas comments."
+  (highlight-regexp "%!.*" font-lock-comment-face))
+
 (defun midas-comment-line ()
   "Comment a single line."
   (interactive)
   (save-excursion
     (search-backward "\n" nil t)
-    (replace-match "\n%!")))
+    (replace-match "\n%!"))
+  (midas-highlight-comments))
 
 (defun midas-comment-region (start end)
   "Comment a region."
@@ -25,6 +34,7 @@
       (forward-char)
       (while (re-search-forward "^" nil t)
 	(replace-match "%!"))))
+    (midas-highlight-comments))
 
 (defun midas-comment (start end)
   "Generic comment function.
