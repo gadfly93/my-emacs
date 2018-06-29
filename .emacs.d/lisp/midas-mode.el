@@ -10,14 +10,20 @@
   (save-excursion
     (goto-char 0)
     (while (search-forward-regexp "\n[ ]*%%" nil t)
-      (replace-match "\n//%%"))))
+      (replace-match "\n//%%"))
+    (goto-char 0)
+    (while (search-forward-regexp "\n[ ]*%!" nil t)
+      (replace-match "\n//%!"))))
 
 (defun midas-remidisify ()
   "Reinsert midas directive back and align them."
   (save-excursion
     (goto-char 0)
     (while (search-forward-regexp "\n[ ]*//%%" nil t)
-      (replace-match "\n%%"))))
+      (replace-match "\n%%"))
+    (goto-char 0)
+    (while (search-forward-regexp "\n[ ]*//!%" nil t)
+      (replace-match "\n!%"))))
 
 (defun midas-electric-indent ()
   "Function called when TAB is pressed in Midas mode."
