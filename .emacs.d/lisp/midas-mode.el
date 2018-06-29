@@ -14,6 +14,26 @@
     (search-backward "\n" nil t)
     (replace-match "\n%!")))
 
+(defun midas-comment-region (start end)
+  "Comment a region."
+  (interactive "r")
+  (save-excursion
+    (save-restriction
+      (goto-char start)
+      (insert "%!")
+      (narrow-to-region (point) (1+ end))
+      (forward-char)
+      (while (re-search-forward "^" nil t)
+	(replace-match "%!"))))
+
+(defun midas-comment (start end)
+  "Generic comment function.
+This is called on C-c C-c"
+  (interactive "r")
+  (if (use-region-p)
+      (midas-comment-region start end)
+    (midas-comment-line)))
+
 (defun midas-demidisify ()
   "Mask midas directive as comments."
   (interactive)
@@ -90,7 +110,7 @@
 (progn
   (setq midas-mode-map (make-sparse-keymap))
   (define-key midas-mode-map (kbd "TAB") 'midas-electric-indent)
-  (define-key midas-mode-map (kbd "C-c C-c") 'midas-comment-line)
+  (define-key midas-mode-map (kbd "C-c C-c") 'midas-comment)
   ;; by convention, major mode's keys should begin with the form C-c C-‹key›
   ;; by convention, keys of the form C-c ‹letter› are reserved for user. don't define such keys in your major mode
   )
