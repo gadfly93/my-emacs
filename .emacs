@@ -39,6 +39,7 @@
                      let-alist
                      magit-popup
                      popup
+		     nov
                      s
                      vlf
                      with-editor
@@ -182,6 +183,7 @@
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.yy$" . bison-mode))
 (add-to-list 'auto-mode-alist '("\\.vc" . verilog-mode))
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 
 (delete-selection-mode)
 (setq ediff-diff-options "-w")
