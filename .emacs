@@ -40,6 +40,7 @@
                      magit-popup
                      popup
 		     nov
+		     slime
                      s
                      vlf
                      with-editor
@@ -805,15 +806,19 @@ characters."
 
 ;; Lisp configuration stuffs
 
-
 ;; M-. runs the command elisp-slime-nav-find-elisp-thing-at-point
 ;; M-, to navigate back
-(require 'elisp-slime-nav) ;; optional if installed via package.el
+(require 'elisp-slime-nav)
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
   (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
-
-
+;; SLIME and sbcl
+(let ((sbcl-path "/usr/local/bin/sbcl")
+      (slime-helper-path "~/quicklisp/slime-helper.el"))
+  (when (and (file-exists-p sbcl-path)
+	     (file-exists-p slime-helper-path))
+    (load (expand-file-name slime-helper-path))
+    (setq inferior-lisp-program sbcl-path)))
 
 ;; move custom pkg dependency generated list out of here
 (setq custom-file "~/.emacs.d/custom.el")
