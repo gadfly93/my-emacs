@@ -18,7 +18,7 @@
 ;; Add the following in code (please un comment it first!) in your
 ;; .emacs.
 
-;;   (require 'midas-mode)
+;; (require 'midas-mode)
 
 ;; USAGE
 ;; =====

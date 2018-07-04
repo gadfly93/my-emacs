@@ -33,6 +33,7 @@
                      git-blamed
                      git-commit
                      git-gutter
+		     elisp-slime-nav
                      helm
                      helm-core
                      let-alist
@@ -799,6 +800,18 @@ characters."
 
       ;; Open new url in new windows
       (setq browse-url-new-window-flag t)))
+
+;; Lisp configuration stuffs
+
+
+;; M-. runs the command elisp-slime-nav-find-elisp-thing-at-point
+;; M-, to navigate back
+(require 'elisp-slime-nav) ;; optional if installed via package.el
+(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+  (add-hook hook 'turn-on-elisp-slime-nav-mode))
+
+
+
 
 ;; move custom pkg dependency generated list out of here
 (setq custom-file "~/.emacs.d/custom.el")
