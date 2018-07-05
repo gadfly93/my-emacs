@@ -825,6 +825,30 @@ characters."
 (write-region "" nil custom-file 'append)
 (load custom-file)
 
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(uvm
+	       "^# \\(UVM_INFO\\|UVM_WARNING\\|UVM_ERROR\\|UVM_FATAL\\) \\(.+\\)(\\([0-9]+\\)).*$"
+	       2 3))
+
+(add-to-list 'compilation-error-regexp-alist 'uvm)
+
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(arm-sva
+	       "^.*File: \\(.+\\) Line: \\([0-9]+\\).*$"
+	       1 2))
+
+(add-to-list 'compilation-error-regexp-alist 'arm-sva)
+
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(mti
+	       "^ | \\*\\* \\(Warning\\|Error\\): \\(.+\\)(\\([0-9]+\\)).*$"
+	       2 3))
+
+(add-to-list 'compilation-error-regexp-alist 'mti)
+
+;; (add-to-list 'compilation-directory-matcher
+;; 	     '("^  working_dir: \\([/A-Za-z0-9_.]+\\)" 1))
+
 (defun shell-clean-exec-last ()
   (interactive)
   (execute-kbd-macro "\C-xh\C-[[3~\C-[[1;5A\C-m"))
