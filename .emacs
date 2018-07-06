@@ -9,7 +9,7 @@
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
 
 ;; Define to t to enable mu4e
-(setq mail-setup t)
+(setq mail-setup nil)
 
 ;; Define to t to enable exwm setup
 (setq exwm-setup t)
@@ -62,11 +62,11 @@
 
 (package-initialize)
 
-(or (file-exists-p package-user-dir) (package-refresh-contents))
-
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
+;; (with-demoted-errors
+;;     (or (file-exists-p package-user-dir) (package-refresh-contents))
+;;   (dolist (package package-list)
+;;     (unless (package-installed-p package)
+;;       (package-install package))))
 
 ;; Increase garbage collection threshold
 (setq gc-cons-threshold 20000000)
@@ -808,46 +808,42 @@ characters."
 
 ;; M-. runs the command elisp-slime-nav-find-elisp-thing-at-point
 ;; M-, to navigate back
-(require 'elisp-slime-nav)
-(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
-  (add-hook hook 'turn-on-elisp-slime-nav-mode))
+;; (require 'elisp-slime-nav)
+;; (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+;;   (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
-;; SLIME and sbcl
-(let ((sbcl-path "/usr/local/bin/sbcl")
-      (slime-helper-path "~/quicklisp/slime-helper.el"))
-  (when (and (file-exists-p sbcl-path)
-	     (file-exists-p slime-helper-path))
-    (load (expand-file-name slime-helper-path))
-    (setq inferior-lisp-program sbcl-path)))
+;; ;; SLIME and sbcl
+;; (let ((sbcl-path "/usr/local/bin/sbcl")
+;;       (slime-helper-path "~/quicklisp/slime-helper.el"))
+;;   (when (and (file-exists-p sbcl-path)
+;; 	     (file-exists-p slime-helper-path))
+;;     (load (expand-file-name slime-helper-path))
+;;     (setq inferior-lisp-program sbcl-path)))
 
 ;; move custom pkg dependency generated list out of here
 (setq custom-file "~/.emacs.d/custom.el")
 (write-region "" nil custom-file 'append)
 (load custom-file)
 
+;; These regexp are used in compilation-mode and compilation-shell-minor-mode
+;; UVM
 (add-to-list 'compilation-error-regexp-alist-alist
 	     '(uvm
 	       "^# \\(UVM_INFO\\|UVM_WARNING\\|UVM_ERROR\\|UVM_FATAL\\) \\(.+\\)(\\([0-9]+\\)).*$"
 	       2 3))
-
-(add-to-list 'compilation-error-regexp-alist 'uvm)
-
+(push 'uvm compilation-error-regexp-alist)
+;; Mentor QuestaSim
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(questa
+	       "^ | \\*\\* \\(Warning\\|Error\\): \\(.+\\)(\\([0-9]+\\)).*$"
+	       2 3))
+(push 'questa compilation-error-regexp-alist)
+;; Sva assertions
 (add-to-list 'compilation-error-regexp-alist-alist
 	     '(arm-sva
 	       "^.*File: \\(.+\\) Line: \\([0-9]+\\).*$"
 	       1 2))
-
-(add-to-list 'compilation-error-regexp-alist 'arm-sva)
-
-(add-to-list 'compilation-error-regexp-alist-alist
-	     '(mti
-	       "^ | \\*\\* \\(Warning\\|Error\\): \\(.+\\)(\\([0-9]+\\)).*$"
-	       2 3))
-
-(add-to-list 'compilation-error-regexp-alist 'mti)
-
-;; (add-to-list 'compilation-directory-matcher
-;; 	     '("^  working_dir: \\([/A-Za-z0-9_.]+\\)" 1))
+(push 'arm-sva compilation-error-regexp-alist)
 
 (defun shell-clean-exec-last ()
   (interactive)
