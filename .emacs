@@ -818,7 +818,8 @@ characters."
   (when (and (file-exists-p sbcl-path)
 	     (file-exists-p slime-helper-path))
     (load (expand-file-name slime-helper-path))
-    (setq inferior-lisp-program sbcl-path)))
+    (setq inferior-lisp-program sbcl-path)
+    (setq slime-contribs '(slime-fancy))))
 
 ;; move custom pkg dependency generated list out of here
 (setq custom-file "~/.emacs.d/custom.el")
