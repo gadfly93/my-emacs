@@ -849,6 +849,10 @@ characters."
 ;; (add-to-list 'compilation-directory-matcher
 ;; 	     '("^  working_dir: \\([/A-Za-z0-9_.]+\\)" 1))
 
+;; Wdired (C-x C-q)
+;; Make permissions bits of the files are editable.
+(setq wdired-allow-to-change-permissions t)
+
 (defun shell-clean-exec-last ()
   (interactive)
   (execute-kbd-macro "\C-xh\C-[[3~\C-[[1;5A\C-m"))
