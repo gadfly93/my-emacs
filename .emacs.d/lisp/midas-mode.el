@@ -108,12 +108,12 @@ This is called on C-c C-c"
   (interactive)
   (save-excursion
     (goto-char (point-min))
-    (while (search-forward-regexp "^[ ]*%%" nil t)
+    (while (re-search-forward "^[ ]*%%" nil t)
       (replace-match (concat "//"
 			     midas-mode-magic-str
 			     "%%")))
     (goto-char (point-min))
-    (while (search-forward-regexp "^[ ]*%!" nil t)
+    (while (re-search-forward "^[ ]*%!" nil t)
       (replace-match (concat "//"
 			     midas-mode-magic-str
 			     "%!")))
