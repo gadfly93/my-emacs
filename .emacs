@@ -25,6 +25,7 @@
                      undo-tree
                      async
                      auto-complete
+		     elfeed
                      bison-mode
                      dash
                      f
@@ -490,6 +491,19 @@
 (setq ibuffer-jump-offer-only-visible-buffers t)
 
 (bash-completion-setup)
+
+;; Elfeed
+(global-set-key (kbd "C-x w") 'elfeed)
+
+;; List of RSS feeds its good to follow
+(setq elfeed-feeds
+      '("https://static.fsf.org/fsforg/rss/news.xml"
+	"http://planet.gnu.org/rss20.xml"
+	"http://nullprogram.com/feed/"
+        "http://planet.emacsen.org/atom.xml"
+	"http://feed.dilbert.com/dilbert/daily_strip?format=xml"
+	"http://tromey.com/blog/?feed=rss2"
+	"http://tromey.com/blog/?feed=comments-rss2"))
 
 (defun cleanup-document ()
   "Examines every character in the document, removing any 'special'
