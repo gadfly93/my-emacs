@@ -38,6 +38,38 @@
 ;; (defconst midas-comment-start-regexp "%!"
 ;;   "Dual comment value for `comment-start-regexp'.")
 
+(defun midas-max-opening-col ()
+  "Return the max column indentation of an opening parenthesis."
+  (goto-char (point-min))
+  (let ((col 0))
+    (while (search-forward "(" nil t)
+      (when (>= (current-column) col)
+	(setq col (current-column))))
+    (1- col)))
+
+(defun midas-line-up-opening (col)
+  "Line up opening parenthesis to column COL."
+  (goto-char (point-min))
+  (while (search-forward "(" nil t)
+    (backward-char)
+    (dotimes (_ (- col (current-column)))
+      (insert " "))
+    (forward-char)))
+
+(defun midas-cedricsify-port-connection-region (start end)
+  "Align a region with 2 spaces indentation plus line-up all opening
+parenthesis."
+  (interactive "r")
+  (when (use-region-p)
+    (save-excursion
+      (save-restriction
+	(narrow-to-region start end)
+	(goto-char (point-min))
+	(while (re-search-forward "^[ \t]*" nil t)
+	  (replace-match "  "))
+	(midas-line-up-opening
+	 (1+ (midas-max-opening-col)))))))
+
 (defun midas-highlight-comments ()
   "Highlight correctly midas comments."
   (highlight-regexp "%!.*" font-lock-comment-face))
@@ -76,12 +108,12 @@ This is called on C-c C-c"
   (interactive)
   (save-excursion
     (goto-char (point-min))
-    (while (search-forward-regexp "^[ ]*%%" nil t)
+    (while (re-search-forward "^[ ]*%%" nil t)
       (replace-match (concat "//"
 			     midas-mode-magic-str
 			     "%%")))
     (goto-char (point-min))
-    (while (search-forward-regexp "^[ ]*%!" nil t)
+    (while (re-search-forward "^[ ]*%!" nil t)
       (replace-match (concat "//"
 			     midas-mode-magic-str
 			     "%!")))

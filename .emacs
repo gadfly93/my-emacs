@@ -25,6 +25,7 @@
                      undo-tree
                      async
                      auto-complete
+		     elfeed
                      bison-mode
                      dash
                      f
@@ -491,6 +492,19 @@
 
 (bash-completion-setup)
 
+;; Elfeed
+(global-set-key (kbd "C-x w") 'elfeed)
+
+;; List of RSS feeds its good to follow
+(setq elfeed-feeds
+      '("https://static.fsf.org/fsforg/rss/news.xml"
+	"http://planet.gnu.org/rss20.xml"
+	"http://nullprogram.com/feed/"
+        "http://planet.emacsen.org/atom.xml"
+	"http://feed.dilbert.com/dilbert/daily_strip?format=xml"
+	"http://tromey.com/blog/?feed=rss2"
+	"http://tromey.com/blog/?feed=comments-rss2"))
+
 (defun cleanup-document ()
   "Examines every character in the document, removing any 'special'
 characters."
@@ -808,17 +822,18 @@ characters."
 
 ;; M-. runs the command elisp-slime-nav-find-elisp-thing-at-point
 ;; M-, to navigate back
-;; (require 'elisp-slime-nav)
-;; (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
-;;   (add-hook hook 'turn-on-elisp-slime-nav-mode))
+(require 'elisp-slime-nav)
+(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+  (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
-;; ;; SLIME and sbcl
-;; (let ((sbcl-path "/usr/local/bin/sbcl")
-;;       (slime-helper-path "~/quicklisp/slime-helper.el"))
-;;   (when (and (file-exists-p sbcl-path)
-;; 	     (file-exists-p slime-helper-path))
-;;     (load (expand-file-name slime-helper-path))
-;;     (setq inferior-lisp-program sbcl-path)))
+;; SLIME and sbcl
+(let ((sbcl-path "/usr/local/bin/sbcl")
+      (slime-helper-path "~/quicklisp/slime-helper.el"))
+  (when (and (file-exists-p sbcl-path)
+	     (file-exists-p slime-helper-path))
+    (load (expand-file-name slime-helper-path))
+    (setq inferior-lisp-program sbcl-path)
+    (setq slime-contribs '(slime-fancy))))
 
 ;; move custom pkg dependency generated list out of here
 (setq custom-file "~/.emacs.d/custom.el")
@@ -844,6 +859,10 @@ characters."
 	       "^.*File: \\(.+\\) Line: \\([0-9]+\\).*$"
 	       1 2))
 (push 'arm-sva compilation-error-regexp-alist)
+
+;; Wdired (C-x C-q)
+;; Make permissions bits of the files are editable.
+(setq wdired-allow-to-change-permissions t)
 
 (defun shell-clean-exec-last ()
   (interactive)
