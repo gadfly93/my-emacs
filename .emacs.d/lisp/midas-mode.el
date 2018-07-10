@@ -42,19 +42,39 @@
   "Return the max column indentation of an opening parenthesis."
   (goto-char (point-min))
   (let ((col 0))
-    (while (search-forward "(" nil t)
-      (when (>= (current-column) col)
-	(setq col (current-column))))
-    (1- col)))
+    (catch 'done
+      (while t
+	(re-search-forward "^[ ]*" nil t)
+	(unless (looking-at "%")
+	  (if (equal (search-forward "(" nil t) nil)
+	      (throw 'done (1- col))
+	    (when (>= (current-column) col)
+	      (setq col (current-column))))))
+	  (1- col))))
 
 (defun midas-line-up-opening (col)
   "Line up opening parenthesis to column COL."
   (goto-char (point-min))
-  (while (search-forward "(" nil t)
-    (backward-char)
-    (dotimes (_ (- col (current-column)))
-      (insert " "))
-    (forward-char)))
+  (catch 'done
+    (while t
+      (re-search-forward "^[ ]*" nil t)
+      (unless (looking-at "%")
+	(if (equal (search-forward "(" nil t) nil)
+	    (throw 'done nil)
+	  (backward-char)
+	  (dotimes (_ (- col (current-column)))
+	    (insert " ")))))))
+
+(defun midas-align-midas-directive ()
+  "Move %% and %! at the beginning of line."
+  (save-excursion
+    (save-restriction
+      (goto-char (point-min))
+      (while (re-search-forward "^[ \t]+%%" nil t)
+	(replace-match "%%"))
+      (goto-char (point-min))
+      (while (re-search-forward "^[ \t]+%!" nil t)
+	(replace-match "%!")))))
 
 (defun midas-cedricsify-port-connection-region (start end)
   "Align a region with 2 spaces indentation plus line-up all opening
@@ -84,7 +104,8 @@ The indented and lined-up output looks like this:
 	(while (re-search-forward "^[ \t]*" nil t)
 	  (replace-match "    "))
 	(midas-line-up-opening
-	 (1+ (midas-max-opening-col)))))))
+	 (1+ (midas-max-opening-col)))
+	(midas-align-midas-directive)))))
 
 (defun midas-highlight-comments ()
   "Highlight correctly midas comments."
