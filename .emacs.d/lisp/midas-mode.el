@@ -58,15 +58,31 @@
 
 (defun midas-cedricsify-port-connection-region (start end)
   "Align a region with 2 spaces indentation plus line-up all opening
-parenthesis."
+parenthesis.
+The indented and lined-up output looks like this:
+
+  scpu_icore u_icore(
+    // outputs
+    .aarch64_state_ia (),
+    .any_mop_vld_rr   (dut_if.any_mop_vld_rr),
+    .bx0_brn_cond_e1  (),
+    .bx0_resolved_e2  (),
+    .bx1_brn_cond_e1  ()
+    );
+"
   (interactive "r")
   (when (use-region-p)
     (save-excursion
       (save-restriction
-	(narrow-to-region start end)
+	(goto-char start)
+	(re-search-backward "^" nil t)
+	(narrow-to-region (point) end)
+	(goto-char (point-min))
+	(while (re-search-forward "[ ]*(" nil t)
+	  (replace-match "("))
 	(goto-char (point-min))
 	(while (re-search-forward "^[ \t]*" nil t)
-	  (replace-match "  "))
+	  (replace-match "    "))
 	(midas-line-up-opening
 	 (1+ (midas-max-opening-col)))))))
 
