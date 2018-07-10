@@ -9,7 +9,7 @@
 ;; This mode is based on verilog-mode. I usually use and raccomend the verilog mode form:
 ;; <http://www.veripool.com/verilog-mode>
 
-;; V0.2
+;; V0.2.1
 
 ;; INSTALLING THE MODE
 ;; ===================
@@ -207,7 +207,7 @@ This is called on C-c C-c"
 (defun midas-indent-buffer ()
   "Function called when TAB is pressed in Midas mode."
   (interactive)
-  (midas-demisify)
+  (midas-demidisify)
   (verilog-indent-buffer)
   (midas-remidisify))
 
