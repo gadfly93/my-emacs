@@ -67,20 +67,22 @@
 	  (dotimes (_ (- col (current-column)))
 	    (insert " ")))))))
 
-(defun midas-align-midas-directive ()
+(defun midas-align-midas-directive (&rest comments)
   "Move %% and %! at the beginning of line."
   (save-excursion
     (save-restriction
       (goto-char (point-min))
       (while (re-search-forward "^[ \t]+%%" nil t)
 	(replace-match "%%"))
-      (goto-char (point-min))
-      (while (re-search-forward "^[ \t]+%!" nil t)
-	(replace-match "%!")))))
+      (when comments
+	(goto-char (point-min))
+	(while (re-search-forward "^[ \t]+%!" nil t)
+	  (replace-match "%!"))))))
 
 (defun midas-cedricsify-port-connection-region (start end)
   "Align a region with 2 spaces indentation plus line-up all opening
 parenthesis.
+Use di command after having selected the region with all the connections.
 The indented and lined-up output looks like this:
 
   scpu_icore u_icore(
@@ -107,7 +109,7 @@ The indented and lined-up output looks like this:
 	  (replace-match "    "))
 	(midas-line-up-opening
 	 (1+ (midas-max-opening-col)))
-	(midas-align-midas-directive)))))
+	(midas-align-midas-directive 'comments)))))
 
 (defun midas-highlight-comments ()
   "Highlight correctly midas comments."
@@ -153,9 +155,9 @@ This is called on C-c C-c"
 			     "%%")))
     (goto-char (point-min))
     (while (re-search-forward "^[ ]*%!" nil t)
-      (replace-match (concat "//"
-			     midas-mode-magic-str
-			     "%!")))
+      (backward-char 2)
+      (insert  (concat "//"
+		       midas-mode-magic-str)))
     (goto-char (point-min))
     (while (search-forward "{%" nil t)
       (replace-match (concat "/*"
@@ -180,9 +182,9 @@ This is called on C-c C-c"
     (goto-char (point-min))
     (while (search-forward (concat "//"
 				   midas-mode-magic-str
-				   "!%")
+				   "%!")
 			   nil t)
-      (replace-match "!%"))
+      (replace-match "%!"))
     (goto-char (point-min))
     (while (search-forward (concat "/*"
 				   midas-mode-magic-str
