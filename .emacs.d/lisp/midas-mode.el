@@ -9,7 +9,7 @@
 ;; This mode is based on verilog-mode. I usually use and raccomend the verilog mode form:
 ;; <http://www.veripool.com/verilog-mode>
 
-;; V0.2.1
+;; V0.2.3
 
 ;; INSTALLING THE MODE
 ;; ===================
@@ -34,7 +34,8 @@
 
 (defun midas-init ()
   "Function called during Midas mode initialization."
-  (auto-complete-mode))
+  ;;(auto-complete-mode)
+  )
 
 ;; FIXME use font-lock instead
 ;; (defconst midas-comment-start-regexp "%!"
@@ -202,7 +203,8 @@ This is called on C-c C-c"
   "Function called when TAB is pressed in Midas mode."
   (interactive)
   (midas-demidisify)
-  (electric-verilog-tab)
+  (ignore-errors
+    (electric-verilog-tab))
   (midas-remidisify)
   (midas-align-midas-directive))
 
@@ -210,7 +212,8 @@ This is called on C-c C-c"
   "Function called when TAB is pressed in Midas mode."
   (interactive)
   (midas-demidisify)
-  (verilog-indent-buffer)
+  (ignore-errors
+    (verilog-indent-buffer))
   (midas-remidisify))
 
 (defvar midas-mode-map nil "Keymap for `midas-mode'")
