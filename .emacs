@@ -203,6 +203,7 @@
 (add-to-list 'auto-mode-alist '("\\.yy$" . bison-mode))
 (add-to-list 'auto-mode-alist '("\\.vc" . verilog-mode))
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+(add-to-list 'auto-mode-alist '("\\.app\\'" . verilog-mode))
 
 (delete-selection-mode)
 (setq ediff-diff-options "-w")
@@ -432,10 +433,9 @@
 		     (derived-mode . c-mode)
 		     (mode . c++-mode)))
 	       ("asm" (mode . asm-mode))
-	       ("verilog/mds/yaml-shit" (or
-					 (mode . verilog-mode)
-					 (mode . midas-mode)
-					 (mode . yaml-mode)))
+	       ("midas" (mode . midas-mode))
+	       ("yaml" (mode . yaml-mode))
+	       ("verilog " (mode . verilog-mode))
 	       ("dired" (or
 			 (mode . dired-mode)
 			 (mode . wdired-mode)
