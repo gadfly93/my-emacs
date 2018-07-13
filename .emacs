@@ -82,6 +82,11 @@
 ;; Disable scroll bars
 (scroll-bar-mode -1)
 
+;; Display date + time into status bar
+(setq display-time-day-and-date t)
+(setq  display-time-24hr-format t)
+(display-time)
+
 ;; Store backups and auto-saved files in TEMPORARY-FILE-DIRECTORY (which defaults
 ;; to /tmp on Unix), instead of in the same directory as the file.
 (setq backup-directory-alist
