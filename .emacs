@@ -180,6 +180,7 @@
 (global-set-key (kbd "C-c f") 'find-name-dired)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x G") 'helm-grep-do-git-grep)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
