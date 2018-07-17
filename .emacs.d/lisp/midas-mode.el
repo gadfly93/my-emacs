@@ -28,14 +28,41 @@
 ;; Once in an midas file: M-x describe-mode
 
 (require 'verilog-mode)
+(require 'find-lisp)
 
 (defconst midas-mode-magic-str "$3^2&d#~"
   "Hope we don't find this string in your code...")
+
+(defcustom midas-src-project-dir nil
+  "Root project folder to search for mds sources.")
 
 (defun midas-init ()
   "Function called during Midas mode initialization."
   ;;(auto-complete-mode)
   )
+
+(defun midas-find-src-point ()
+  "Try to guess the source point of a verilog rendered line.
+Request midas-src-project-dir to be customized if not already."
+  (interactive)
+  (unless midas-src-project-dir
+    (customize-variable 'midas-src-project-dir))
+  (let ((col (current-column))
+	(src-file (car (find-lisp-find-files
+			(symbol-name midas-src-project-dir)
+			(format "%s.mds"
+				(file-name-nondirectory (buffer-file-name))))))
+	(regex
+	 (replace-regexp-in-string "[0-9]+" ".+"
+				   (regexp-quote (thing-at-point 'line)))))
+    (if src-file
+	(progn
+	  (find-file src-file)
+	  (goto-char (point-min))
+	  (re-search-forward regex)
+	  (goto-char (match-beginning 0))
+	  (move-to-column col))
+      (message "Can't find source file."))))
 
 ;; FIXME use font-lock instead
 ;; (defconst midas-comment-start-regexp "%!"
@@ -229,6 +256,14 @@ This is called on C-c C-c"
   ;; by convention, keys of the form C-c ‹letter› are reserved for user. don't define such keys in your major mode
   )
 
+(define-minor-mode midas-render-mode
+  "Minor mode to be used into rendered files."
+  :lighter " mds-render"
+  :keymap (let ((map (make-sparse-keymap)))
+            (define-key map (kbd "C-j") 'midas-find-src-point)
+            map)
+  )
+
 (define-derived-mode
   midas-mode
   verilog-mode
@@ -239,3 +274,5 @@ This is called on C-c C-c"
 (provide 'midas-mode)
 
 (add-to-list 'auto-mode-alist '("\\.mds" . midas-mode))
+
+(add-hook 'verilog-mode-hook #'midas-render-mode)
