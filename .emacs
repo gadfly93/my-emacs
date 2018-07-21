@@ -215,9 +215,17 @@
 (setq ediff-diff-options "-w")
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(add-to-list 'load-path "~/nve-mode/")
-(require 'nve-mode)
-(require 'midas-mode)
+
+;; If present load nve veri-kompass and midas-mode
+(when (file-exists-p "~/nve-mode/")
+    (add-to-list 'load-path "~/nve-mode/")
+  (require 'nve-mode))
+(when (file-exists-p "~/veri-kompass/")
+    (add-to-list 'load-path "~/veri-kompass/")
+  (require 'veri-kompass-mode))
+(when (file-exists-p "~/midas-mode/")
+    (add-to-list 'load-path "~/midas-mode/")
+  (require 'midas-mode))
 
 (set-default 'compile-command "make -j4")
 
