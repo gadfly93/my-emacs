@@ -339,7 +339,6 @@
 
 (ido-mode)
 
-(add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
 (ac-config-default)
 (setq gud-gdb-command-name "~/gdb-8.1/gdb/gdb -i=mi")
 
