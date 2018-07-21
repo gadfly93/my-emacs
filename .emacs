@@ -26,6 +26,7 @@
                      async
                      auto-complete
 		     elfeed
+		     epresent
 		     which-key
                      bison-mode
                      dash
