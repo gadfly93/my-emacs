@@ -26,6 +26,7 @@
                      async
                      auto-complete
 		     elfeed
+		     which-key
                      bison-mode
                      dash
                      f
@@ -81,6 +82,9 @@
 (tool-bar-mode -1)
 ;; Disable scroll bars
 (scroll-bar-mode -1)
+
+;; Display available keybindings in popup
+(which-key-mode 1)
 
 ;; Display date + time into status bar
 (setq display-time-day-and-date t)
