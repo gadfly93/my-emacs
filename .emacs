@@ -12,7 +12,7 @@
 (setq mail-setup nil)
 
 ;; Define to t to enable exwm setup
-(setq exwm-setup t)
+(setq exwm-setup nil)
 
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
