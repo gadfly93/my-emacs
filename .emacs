@@ -211,7 +211,12 @@
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 (add-to-list 'auto-mode-alist '("\\.app\\'" . verilog-mode))
 
+;; When Delete Selection mode is enabled, typed text replaces the selection
+;; if the selection is active.  Otherwise, typed text is just inserted at
+;; point regardless of any selection.
 (delete-selection-mode)
+
+;; Whitespace diff insensitivity
 (setq ediff-diff-options "-w")
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -227,8 +232,10 @@
     (add-to-list 'load-path "~/midas-mode/")
   (require 'midas-mode))
 
+;; By default we run compilation on 4 cores
 (set-default 'compile-command "make -j4")
 
+;; Indentation can insert tabs
 (setq-default indent-tabs-mode t)
 
 (defun c-lineup-arglist-tabs-only (ignored)
@@ -343,11 +350,16 @@
       (setq gnus-dired-mail-mode 'mu4e-user-agent)
       (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)))
 
+;; Register bash completion for the shell buffer and shell command line.
 (bash-completion-setup)
 
+;; Toggle Ido mode on. Helm suggests not to do so. REVISIT
 (ido-mode)
 
+;; auto-complete default configuation
 (ac-config-default)
+
+;; Default gdb command I use
 (setq gud-gdb-command-name "~/gdb-8.1/gdb/gdb -i=mi")
 
 (setq ;; use gdb-many-windows by default
