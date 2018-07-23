@@ -66,10 +66,10 @@
 (package-initialize)
 
 (with-demoted-errors
-    (or (file-exists-p package-user-dir) (package-refresh-contents))
-  (dolist (package package-list)
-    (unless (package-installed-p package)
-      (package-install package))))
+    (if (or (file-exists-p package-user-dir) (package-refresh-contents))
+	(dolist (package package-list)
+	  (unless (package-installed-p package)
+	    (package-install package)))))
 
 ;; Increase garbage collection threshold
 (setq gc-cons-threshold 20000000)
