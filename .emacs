@@ -6,7 +6,7 @@
 ;; sudo apt-get install global  (gtags)
 ;; sudo apt-get install offlineimap mu4e libwebkit-dev
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+(add-to-list 'load-path "~/.guix-profile/share/emacs/site-lisp/")
 
 ;; Define to t to enable mu4e
 (setq mail-setup nil)
@@ -287,9 +287,7 @@
     (progn
       (require 'mu4e)
       (require 'mu4e-contrib)
-
-      (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
-
+      (setq mu4e-mu-binary "~/.guix-profile/bin/mu")
       (setq
        mu4e-maildir       "~/.mail"           ;; top-level Maildir
        mu4e-sent-folder   "/Sent Items"       ;; folder for sent messages
