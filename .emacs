@@ -6,13 +6,13 @@
 ;; sudo apt-get install global  (gtags)
 ;; sudo apt-get install offlineimap mu4e libwebkit-dev
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+(add-to-list 'load-path "~/.guix-profile/share/emacs/site-lisp/")
 
 ;; Define to t to enable mu4e
 (setq mail-setup nil)
 
 ;; Define to t to enable exwm setup
-(setq exwm-setup t)
+(setq exwm-setup nil)
 
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -26,6 +26,8 @@
                      async
                      auto-complete
 		     elfeed
+		     epresent
+		     which-key
                      bison-mode
                      dash
                      f
@@ -64,10 +66,10 @@
 (package-initialize)
 
 (with-demoted-errors
-    (or (file-exists-p package-user-dir) (package-refresh-contents))
-  (dolist (package package-list)
-    (unless (package-installed-p package)
-      (package-install package))))
+    (when (or (file-exists-p package-user-dir) (package-refresh-contents))
+      (dolist (package package-list)
+	(unless (package-installed-p package)
+	  (package-install package)))))
 
 ;; Increase garbage collection threshold
 (setq gc-cons-threshold 20000000)
@@ -81,6 +83,9 @@
 (tool-bar-mode -1)
 ;; Disable scroll bars
 (scroll-bar-mode -1)
+
+;; Display available keybindings in popup
+(which-key-mode 1)
 
 ;; Display date + time into status bar
 (setq display-time-day-and-date t)
@@ -211,19 +216,31 @@
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 (add-to-list 'auto-mode-alist '("\\.app\\'" . verilog-mode))
 
+;; When Delete Selection mode is enabled, typed text replaces the selection
+;; if the selection is active.  Otherwise, typed text is just inserted at
+;; point regardless of any selection.
 (delete-selection-mode)
+
+;; Whitespace diff insensitivity
 (setq ediff-diff-options "-w")
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(add-to-list 'load-path "~/nve-mode/")
-(require 'nve-mode)
 
+;; If present load nve veri-kompass and midas-mode
+(when (file-exists-p "~/nve-mode/")
+    (add-to-list 'load-path "~/nve-mode/")
+  (require 'nve-mode))
+(when (file-exists-p "~/veri-kompass/")
+    (add-to-list 'load-path "~/veri-kompass/")
+  (require 'veri-kompass-mode))
 (when (file-exists-p "~/midas-mode/")
-  (add-to-list 'load-path "~/midas-mode/")
+    (add-to-list 'load-path "~/midas-mode/")
   (require 'midas-mode))
 
+;; By default we run compilation on 4 cores
 (set-default 'compile-command "make -j4")
 
+;; Indentation can insert tabs
 (setq-default indent-tabs-mode t)
 
 (defun c-lineup-arglist-tabs-only (ignored)
@@ -270,9 +287,7 @@
     (progn
       (require 'mu4e)
       (require 'mu4e-contrib)
-
-      (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
-
+      (setq mu4e-mu-binary "~/.guix-profile/bin/mu")
       (setq
        mu4e-maildir       "~/.mail"           ;; top-level Maildir
        mu4e-sent-folder   "/Sent Items"       ;; folder for sent messages
@@ -338,12 +353,16 @@
       (setq gnus-dired-mail-mode 'mu4e-user-agent)
       (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)))
 
+;; Register bash completion for the shell buffer and shell command line.
 (bash-completion-setup)
 
+;; Toggle Ido mode on. Helm suggests not to do so. REVISIT
 (ido-mode)
 
-(add-to-list 'ac-dictionary-directories "/home/andrea/.emacs.d/lisp//ac-dict")
+;; auto-complete default configuation
 (ac-config-default)
+
+;; Default gdb command I use
 (setq gud-gdb-command-name "~/gdb-8.1/gdb/gdb -i=mi")
 
 (setq ;; use gdb-many-windows by default
@@ -817,7 +836,7 @@ characters."
 	      (start-process-shell-command
  	       "xrandr" nil "xrandr --output eDP-1 --auto")))
 	  (start-process-shell-command
-	   "xrandr" nil "setxkbmap -layout gb -option ctrl:nocaps")))
+	   "setxkbmap" nil "setxkbmap -layout gb -option ctrl:nocaps")))
 
       ;; Avoid floating windows?
       (setq exwm-manage-force-tiling t)
