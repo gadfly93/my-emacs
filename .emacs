@@ -181,7 +181,6 @@
 (global-set-key (kbd "C-x C-m") 'mu4e)
 (global-set-key (kbd "C-c t") 'google-translate-at-point)
 (global-set-key (kbd "C-c T") 'google-translate-query-translate)
-(global-set-key (kbd "C-c l") 'org-link-generate)
 (global-set-key (kbd "C-c f") 'find-name-dired)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
@@ -657,22 +656,6 @@ characters."
    (concat "*"
            (car (last (butlast (split-string default-directory "/") 1)))
            "-shell*")))
-
-(defun org-link-generate ()
-  "Put into the kill ring a valid org link for the current cursor position."
-  (interactive)
-  (let ((filename (if (equal major-mode 'dired-mode)
-                      default-directory
-                    (buffer-file-name))))
-    (when filename
-      (kill-new (concat "[[" filename "::" (int-to-string (line-number-at-pos))
-			"]]"))
-      (message "Org link for file name '%s' to the kill ring." filename))))
-
-  (add-hook 'c-mode-hook
-            (lambda ()
-              (add-to-list 'ac-sources 'ac-source-c-headers)
-              (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
 
 ; extend org-mode keywords
 (setq org-todo-keywords
