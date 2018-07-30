@@ -878,8 +878,8 @@ characters."
 ;; Mentor QuestaSim
 (add-to-list 'compilation-error-regexp-alist-alist
 	     '(questa
-	       "^ | \\*\\* \\(Warning\\|Error\\): \\(.+\\)(\\([0-9]+\\)).*$"
-	       2 3))
+	       "^ | .* \\(/[a-z0-9/_.]+\\)(\\([0-9]+\\)).*$"
+	       1 2))
 (push 'questa compilation-error-regexp-alist)
 ;; Sva assertions
 (add-to-list 'compilation-error-regexp-alist-alist
