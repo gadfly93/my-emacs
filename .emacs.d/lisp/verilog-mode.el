@@ -122,7 +122,7 @@
 ;;
 
 ;; This variable will always hold the version number of the mode
-(defconst verilog-mode-version "2018-05-09-c8300a3-vpo"
+(defconst verilog-mode-version "2018-07-18-b1e6a89-vpo"
   "Version of this Verilog mode.")
 (defconst verilog-mode-release-emacs nil
   "If non-nil, this version of Verilog mode was released with Emacs itself.")
@@ -527,8 +527,7 @@ you to the next lint error."
   :group 'verilog-mode-actions)
 ;; We don't mark it safe, as it's used as a shell command
 
-(defcustom
-  verilog-preprocessor
+(defcustom verilog-preprocessor
   ;; Very few tools give preprocessed output, so we'll default to Verilog-Perl
   "vppreproc __FLAGS__ __FILE__"
   "Program and arguments to use to preprocess Verilog source.
@@ -1402,7 +1401,7 @@ See also `verilog-case-fold'."
     ("*Variables*"  "^\\s-*\\(reg\\|wire\\|logic\\)\\s-+\\(\\|\\[[^]]+\\]\\s-+\\)\\([A-Za-z0-9_]+\\)" 3)
     ("*Classes*"    "^\\s-*\\(?:\\(?:virtual\\|interface\\)\\s-+\\)?class\\s-+\\([A-Za-z_][A-Za-z0-9_]+\\)" 1)
     ("*Tasks*"      "^\\s-*\\(?:\\(?:static\\|pure\\|virtual\\|local\\|protected\\)\\s-+\\)*task\\s-+\\(?:\\(?:static\\|automatic\\)\\s-+\\)?\\([A-Za-z_][A-Za-z0-9_:]+\\)" 1)
-    ("*Functions*"  "^\\s-*\\(?:\\(?:static\\|pure\\|virtual\\|local\\|protected\\)\\s-+\\)*function\\s-+\\(?:\\(?:static\\|automatic\\)\\s-+\\)?\\(?:\\w+\\s-+\\)?\\([A-Za-z_][A-Za-z0-9_:]+\\)" 1)
+    ("*Functions*"  "^\\s-*\\(?:\\(?:static\\|pure\\|virtual\\|local\\|protected\\)\\s-+\\)*function\\s-+\\(?:\\(?:static\\|automatic\\)\\s-+\\)?\\(?:\\w+\\s-+\\)?\\(?:\\(?:un\\)signed\\s-+\\)?\\([A-Za-z_][A-Za-z0-9_:]+\\)" 1)
     ("*Interfaces*" "^\\s-*interface\\s-+\\([a-zA-Z_0-9]+\\)" 1)
     ("*Types*"      "^\\s-*typedef\\s-+.*\\s-+\\([a-zA-Z_0-9]+\\)\\s-*;" 1))
   "Imenu expression for Verilog mode.  See `imenu-generic-expression'.")
@@ -9533,8 +9532,8 @@ warning message, you need to add to your init file:
       (when recurse
 	(goto-char (point-min))
 	(while (re-search-forward "^\\s-*`include\\s-+\\([^ \t\n\f]+\\)" nil t)
-	  (let ((inc (verilog-string-replace-matches
-		      "\"" "" nil nil (match-string-no-properties 1))))
+	  (let ((inc (verilog-substitute-include-name
+                      (match-string-no-properties 1))))
 	    (unless (verilog-inside-comment-or-string-p)
 	      (verilog-read-defines inc recurse t)))))
       ;; Read `defines
@@ -9606,7 +9605,7 @@ foo.v (an include file):
     (verilog-getopt-flags)
     (goto-char (point-min))
     (while (re-search-forward "^\\s-*`include\\s-+\\([^ \t\n\f]+\\)" nil t)
-      (let ((inc (verilog-string-replace-matches "\"" "" nil nil (match-string 1))))
+      (let ((inc (verilog-substitute-include-name (match-string 1))))
 	(verilog-read-defines inc nil t)))))
 
 (defun verilog-read-signals (&optional start end)
@@ -9757,6 +9756,12 @@ Use DEFAULT-DIR to anchor paths if non-nil."
   (if default-dir
       (expand-file-name (substitute-in-file-name filename) default-dir)
   (substitute-in-file-name filename)))
+
+(defun verilog-substitute-include-name (filename)
+  "Return FILENAME for include with define substituted."
+  (setq filename (verilog-string-replace-matches "\"" "" nil nil filename))
+  (verilog-string-replace-matches "\"" "" nil nil
+                                  (verilog-symbol-detick filename t)))
 
 (defun verilog-add-list-unique (varref object)
   "Append to VARREF list the given OBJECT,
