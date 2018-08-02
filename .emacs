@@ -23,6 +23,7 @@
                      helm-gtags
                      magit
                      undo-tree
+		     helm-git-grep
                      async
                      auto-complete
 		     elfeed
@@ -235,6 +236,15 @@
 (when (file-exists-p "~/midas-mode/")
     (add-to-list 'load-path "~/midas-mode/")
   (require 'midas-mode))
+
+;; helm-git-grep conf
+(require 'helm-git-grep)
+(global-set-key (kbd "C-c g") 'helm-git-grep)
+;; Invoke `helm-git-grep' from isearch.
+(define-key isearch-mode-map (kbd "C-c g") 'helm-git-grep-from-isearch)
+;; Invoke `helm-git-grep' from other helm.
+(eval-after-load 'helm
+  '(define-key helm-map (kbd "C-c g") 'helm-git-grep-from-helm))
 
 ;; By default we run compilation on 4 cores
 (set-default 'compile-command "make -j4")
