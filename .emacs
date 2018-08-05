@@ -27,6 +27,7 @@
                      async
                      auto-complete
 		     elfeed
+		     ace-jump-mode
 		     epresent
 		     which-key
                      bison-mode
@@ -186,6 +187,7 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x G") 'helm-grep-do-git-grep)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
