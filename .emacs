@@ -19,45 +19,48 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 
-(setq package-list '(bash-completion
-                     helm-gtags
-                     magit
-		     projectile
-                     undo-tree
-		     helm-git-grep
-                     async
-                     auto-complete
-		     elfeed
-		     expand-region
+(setq package-list '(
 		     ace-jump-mode
-		     epresent
-		     which-key
-                     bison-mode
-                     dash
-                     f
-                     ghub
-                     git
-                     git-blamed
-                     git-commit
-                     git-gutter
-		     elisp-slime-nav
-                     helm
-                     helm-core
-                     let-alist
-                     magit-popup
-                     popup
-		     nov
-		     slime
-                     s
-                     vlf
-                     with-editor
-		     minimap
-		     google-translate
-		     browse-kill-ring
+		     async
+		     auto-complete
+		     bash-completion
 		     beacon
-		     yaml-mode
+		     bison-mode
+		     browse-kill-ring
+		     color-theme-sanityinc-tomorrow
+		     dash
+		     elfeed
+		     elisp-slime-nav
+		     epresent
+		     expand-region
+		     f
+		     ghub
+		     git
+		     git-blamed
+		     git-commit
+		     git-gutter
+		     google-translate
+		     helm
+		     helm-core
+		     helm-git-grep
+		     helm-gtags
 		     htmlize
-		     color-theme-sanityinc-tomorrow))
+		     let-alist
+		     magit
+		     magit-popup
+		     minimap
+		     nov
+		     popup
+		     projectile
+		     s
+		     slime
+		     undo-tree
+		     vlf
+		     which-key
+		     with-editor
+		     yaml-mode
+		     ))
+
 (when exwm-setup
   (add-to-list 'package-list 'exwm)
   (add-to-list 'package-list 'desktop-environment)
