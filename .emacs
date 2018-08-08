@@ -886,33 +886,50 @@ characters."
 (write-region "" nil custom-file 'append)
 (load custom-file)
 
-;; These regexp are used in compilation-mode and compilation-shell-minor-mode
-;; UVM
-(add-to-list 'compilation-error-regexp-alist-alist
-	     '(uvm
-	       "^# \\(UVM_INFO\\|UVM_WARNING\\|UVM_ERROR\\|UVM_FATAL\\) \\(.+\\)(\\([0-9]+\\)).*$"
-	       2 3))
-(push 'uvm compilation-error-regexp-alist)
-;; Mentor QuestaSim
-(add-to-list 'compilation-error-regexp-alist-alist
-	     '(questa
-	       "^ | .* \\(/[a-z0-9/_.]+\\)(\\([0-9]+\\)).*$"
-	       1 2))
-(push 'questa compilation-error-regexp-alist)
-;; Sva assertions
-(add-to-list 'compilation-error-regexp-alist-alist
-	     '(arm-sva
-	       "^.*File: \\(.+\\) Line: \\([0-9]+\\).*$"
-	       1 2))
-(push 'arm-sva compilation-error-regexp-alist)
-
 ;; Wdired (C-x C-q)
 ;; Make permissions bits of the files are editable.
 (setq wdired-allow-to-change-permissions t)
 
+
+;; ;; These regexp are used in compilation-mode and compilation-shell-minor-mode
+;; ;; UVM
+;; (add-to-list 'compilation-error-regexp-alist-alist
+;; 	     '(uvm
+;; 	       "^# \\(UVM_INFO\\|UVM_WARNING\\|UVM_ERROR\\|UVM_FATAL\\) \\(.+\\)(\\([0-9]+\\)).*$"
+;; 	       2 3))
+;; (push 'uvm compilation-error-regexp-alist)
+;; ;; Mentor QuestaSim
+;; (add-to-list 'compilation-error-regexp-alist-alist
+;; 	     '(questa
+;; 	       "^ | .* \\(/[a-z0-9/_.]+\\)(\\([0-9]+\\)).*$"
+;; 	       1 2))
+;; (push 'questa compilation-error-regexp-alist)
+;; ;; Sva assertions
+
+(add-to-list 'compilation-error-regexp-alist-alist
+ 	     '(core-tb1
+ 	       "^.*File: \\(.+\\) Line: \\([0-9]+\\).*$"
+ 	       1 2))
+(push 'core-tb1 compilation-error-regexp-alist)
+
+(setq compilation-directory-matcher
+      '("\\(?:Entering\\|Leavin\\(g\\)\\) directory [`']\\(.+\\)univent_tarmac_build'$"
+	(2 . 1)))
+
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(core-tb2
+	       "^ | .* \\(.*\\)(\\([0-9]+\\)).*$"
+	       1 2))
+(push 'core-tb2 compilation-error-regexp-alist)
+
 (defun shell-clean-exec-last ()
   (interactive)
-  (execute-kbd-macro "\C-xh\C-[[3~\C-[[1;5A\C-m"))
+  (delete-region (point-min) (point-max))
+  (comint-previous-input 1)
+  (comint-send-input)
+  (fundamental-mode)
+  (shell-mode)
+  (compilation-shell-minor-mode))
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
