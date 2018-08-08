@@ -22,6 +22,7 @@
 (setq package-list '(bash-completion
                      helm-gtags
                      magit
+		     projectile
                      undo-tree
 		     helm-git-grep
                      async
