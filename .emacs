@@ -54,6 +54,7 @@
 		     popup
 		     projectile
 		     s
+		     simple-call-tree
 		     slime
 		     undo-tree
 		     vlf
