@@ -39,6 +39,7 @@
 		     git-blamed
 		     git-commit
 		     git-gutter
+		     git-timemachine
 		     google-translate
 		     helm
 		     helm-core
