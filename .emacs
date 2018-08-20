@@ -17,7 +17,8 @@
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
+                         ("melpa" . "https://melpa.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")))
 
 (setq package-list '(
 		     ace-jump-mode
@@ -51,6 +52,9 @@
 		     magit-popup
 		     minimap
 		     nov
+		     org
+		     org-plus-contrib
+		     ox-reveal
 		     popup
 		     projectile
 		     s
