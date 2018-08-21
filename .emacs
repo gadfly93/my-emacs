@@ -235,16 +235,16 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-;; If present load nve veri-kompass and midas-mode
+;; If present load nve veri-kompass and smime
 (when (file-exists-p "~/nve-mode/")
     (add-to-list 'load-path "~/nve-mode/")
   (require 'nve-mode))
 (when (file-exists-p "~/veri-kompass/")
     (add-to-list 'load-path "~/veri-kompass/")
   (require 'veri-kompass-mode))
-(when (file-exists-p "~/midas-mode/")
-    (add-to-list 'load-path "~/midas-mode/")
-  (require 'midas-mode))
+(when (file-exists-p "~/smime/")
+    (add-to-list 'load-path "~/smime/")
+  (require 'smime))
 
 ;; helm-git-grep conf
 (require 'helm-git-grep)
@@ -479,7 +479,7 @@
 		     (derived-mode . c-mode)
 		     (mode . c++-mode)))
 	       ("asm" (mode . asm-mode))
-	       ("midas" (mode . midas-mode))
+	       ("midas" (mode . smime))
 	       ("yaml" (mode . yaml-mode))
 	       ("verilog " (mode . verilog-mode))
 	       ("dired" (or
