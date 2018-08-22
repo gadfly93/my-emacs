@@ -247,8 +247,8 @@
 (when (file-exists-p "~/veri-kompass/")
     (add-to-list 'load-path "~/veri-kompass/")
   (require 'veri-kompass-mode))
-(when (file-exists-p "~/smime/")
-    (add-to-list 'load-path "~/smime/")
+(when (file-exists-p "~/midas/")
+    (add-to-list 'load-path "~/midas/etc/SMIME/")
   (require 'smime))
 
 ;; helm-git-grep conf
