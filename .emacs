@@ -290,6 +290,7 @@
 (require 'google-translate)
 (require 'google-translate-default-ui)
 (require 'browse-kill-ring)
+(require 'ox-reveal)
 
 ;; explore kill ring history
 (setq browse-kill-ring-highlight-inserted-item t
