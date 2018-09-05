@@ -54,6 +54,7 @@
 		     org
 		     org-plus-contrib
 		     ox-reveal
+		     paredit
 		     popup
 		     projectile
 		     s
