@@ -928,6 +928,12 @@ characters."
 	       1 2))
 (push 'core-tb2 compilation-error-regexp-alist)
 
+(add-to-list 'compilation-error-regexp-alist-alist
+ 	     '(uvm-err
+ 	       "\\(UVM_ERROR\\|UVM_FATAL\\) \\(.+\\)(\\([0-9]+\\)).*$"
+ 	       2 3))
+(push 'uvm-err compilation-error-regexp-alist)
+
 (defun shell-clean-exec-last ()
   (interactive)
   (delete-region (point-min) (point-max))
