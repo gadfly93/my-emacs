@@ -570,7 +570,6 @@
 	"http://planet.gnu.org/rss20.xml"
 	"http://nullprogram.com/feed/"
         "http://planet.emacsen.org/atom.xml"
-	"http://feed.dilbert.com/dilbert/daily_strip?format=xml"
 	"http://tromey.com/blog/?feed=rss2"
 	"http://planet.lisp.org/rss20.xml"
 	"http://tromey.com/blog/?feed=comments-rss2"))
