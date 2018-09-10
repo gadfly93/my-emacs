@@ -200,6 +200,8 @@
 (global-set-key (kbd "C-x G") 'helm-grep-do-git-grep)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "M-=") 'er/expand-region)
+(global-set-key (kbd "M--") 'er/contract-region)
+(require 'verilog-mode-expansions)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
