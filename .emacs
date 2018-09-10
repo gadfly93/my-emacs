@@ -383,6 +383,17 @@
 ;; Toggle Ido mode on. Helm suggests not to do so. REVISIT
 (ido-mode)
 
+;; ido-other-window
+
+;; C-o	open file/buffer in other window sensibly
+;; C-2	open file/buffer in a vertically-split window
+;; C-3	open file/buffer in a horizontally-split window
+;; C-4	open file/buffer in other window (same as C-o)
+;; C-5	open file/buffer in a new frame
+;; C-o will try to use split-window-preferred-function if that is defined,
+;; before falling back with split-window-sensibly.
+(require 'ido-other-window)
+
 ;; auto-complete default configuation
 (ac-config-default)
 
