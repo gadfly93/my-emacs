@@ -97,6 +97,10 @@
 ;; Disable scroll bars
 (scroll-bar-mode -1)
 
+;; enable automatic saving of the desktop when you exit Emacs, and automatic
+;; restoration of the last saved desktop when Emacs starts
+(desktop-save-mode 1)
+
 ;; Display available keybindings in popup
 (which-key-mode 1)
 
