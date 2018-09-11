@@ -297,6 +297,7 @@
 (require 'google-translate-default-ui)
 (require 'browse-kill-ring)
 (require 'ox-reveal)
+(provide 'elisp-depend)
 
 ;; explore kill ring history
 (setq browse-kill-ring-highlight-inserted-item t
