@@ -7,6 +7,7 @@
 ;; sudo apt-get install offlineimap mu4e libwebkit-dev
 
 (add-to-list 'load-path "~/.guix-profile/share/emacs/site-lisp/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; Define to t to enable mu4e
 (setq mail-setup nil)
@@ -250,8 +251,6 @@
 
 ;; Whitespace diff insensitivity
 (setq ediff-diff-options "-w")
-
-(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; If present load nve veri-kompass and smime
 (when (file-exists-p "~/nve-mode/")
