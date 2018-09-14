@@ -45,6 +45,7 @@
 		     helm-core
 		     helm-git-grep
 		     helm-gtags
+		     helm-swoop
 		     htmlize
 		     let-alist
 		     magit
@@ -220,6 +221,12 @@
 (require 'magit-mode)
 (define-key magit-mode-map (kbd "C-x v l") 'magit-log-buffer-file)
 (define-key magit-mode-map (kbd "C-x v L") 'magit-log-head)
+
+(require 'helm-swoop)
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
 
 ;; (global-set-key (kbd "M-.") 'xref-find-definitions-other-frame)
 
