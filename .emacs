@@ -908,11 +908,8 @@ characters."
   (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
 ;; SLIME and sbcl
-(let ((sbcl-path "/usr/local/bin/sbcl")
-      (slime-helper-path "~/quicklisp/slime-helper.el"))
-  (when (and (file-exists-p sbcl-path)
-	     (file-exists-p slime-helper-path))
-    (load (expand-file-name slime-helper-path))
+(let ((sbcl-path "/usr/local/bin/sbcl"))
+  (when (file-exists-p sbcl-path)
     (setq inferior-lisp-program sbcl-path)
     (setq slime-contribs '(slime-fancy))))
 
