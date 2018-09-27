@@ -99,9 +99,10 @@
 ;; Disable scroll bars
 (scroll-bar-mode -1)
 
-;;Enable Projectile. A project interaction library for Emacs.
+;; Projectile is a project interaction library for Emacs.
 (require 'projectile)
 (projectile-global-mode)
+(global-set-key (kbd "C-M-x C-M-f") 'projectile-find-file)
 
 ;; in case enable automatic saving of the desktop when you exit Emacs, and
 ;; automatic restoration of the last saved desktop when Emacs starts
