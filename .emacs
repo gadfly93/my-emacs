@@ -33,7 +33,6 @@
 		     elfeed
 		     elisp-slime-nav
 		     epresent
-		     expand-region
 		     f
 		     ghub
 		     git
@@ -212,7 +211,6 @@
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "M-=") 'er/expand-region)
 (global-set-key (kbd "M--") 'er/contract-region)
-(require 'verilog-mode-expansions)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "C-c C-<right>") 'winner-redo)
@@ -265,8 +263,11 @@
     (add-to-list 'load-path "~/veri-kompass/")
   (require 'veri-kompass-mode))
 (when (file-exists-p "~/midas/")
-    (add-to-list 'load-path "~/midas/etc/SMIME/")
+  (add-to-list 'load-path "~/midas/etc/SMIME/")
   (require 'smime))
+(when (file-exists-p "~/expand-region.el/")
+    (add-to-list 'load-path "~/expand-region.el/")
+  (require 'expand-region))
 
 ;; helm-git-grep conf
 (require 'helm-git-grep)
