@@ -917,6 +917,18 @@ characters."
 (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+(eval-after-load 'paredit
+  '(progn (define-key paredit-mode-map (kbd "C-<right>") #'right-word)
+	  (define-key paredit-mode-map (kbd "M-<right>") #'paredit-forward-slurp-sexp)
+	  (define-key paredit-mode-map (kbd "C-<left>") #'left-word)
+	  (define-key paredit-mode-map (kbd "M-<left>") #'paredit-backward-slurp-sexp)))
+(add-hook 'paredit-mode-hook
+	  (lambda ()
+	    (pcase major-mode
+	      ('lisp-interaction-mode
+	       (define-key paredit-mode-map (kbd "C-j") 'eval-print-last-sexp))
+	      ('slime-repl-mode
+	       (define-key paredit-mode-map (kbd "M-r") 'slime-repl-previous-matching-input)))))
 
 ;; SLIME and sbcl
 (let ((sbcl-path "/usr/local/bin/sbcl"))
