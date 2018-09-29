@@ -923,6 +923,8 @@ characters."
   (when (file-exists-p sbcl-path)
     (setq inferior-lisp-program sbcl-path)
     (setq slime-contribs '(slime-fancy))))
+(require 'slime)
+(require 'slime-repl-ansi-color)
 
 ;; move custom pkg dependency generated list out of here
 (setq custom-file "~/.emacs.d/custom.el")
