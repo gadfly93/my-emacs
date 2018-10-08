@@ -307,16 +307,8 @@
 (require 'git-gutter)
 (require 'google-translate)
 (require 'google-translate-default-ui)
-(require 'browse-kill-ring)
 (require 'ox-reveal)
 (provide 'elisp-depend)
-
-;; explore kill ring history
-(setq browse-kill-ring-highlight-inserted-item t
-      browse-kill-ring-highlight-current-entry nil
-      browse-kill-ring-show-preview t)
-(define-key browse-kill-ring-mode-map (kbd "<up>") 'browse-kill-ring-previous)
-(define-key browse-kill-ring-mode-map (kbd "<down>") 'browse-kill-ring-forward)
 
 (global-git-gutter-mode t) ;; Show uncommitted git diffs
 
