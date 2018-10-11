@@ -27,7 +27,6 @@
 		     bash-completion
 		     beacon
 		     bison-mode
-		     browse-kill-ring
 		     color-theme-sanityinc-tomorrow
 		     dash
 		     elfeed
