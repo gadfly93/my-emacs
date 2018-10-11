@@ -730,7 +730,7 @@ characters."
   (start-process-shell-command
    "setxkbmap" nil (concat "setxkbmap -layout "
 			   (symbol-name layout)
-			   " -option ctrls:nocaps")))
+			   " -option ctrl:nocaps")))
 ;; EXWM setup
 (if exwm-setup
     (progn
@@ -854,34 +854,30 @@ characters."
 	(with-temp-buffer
 	  (call-process "xrandr" nil t nil)
 	  (goto-char (point-min))
-	  (if (and (search-forward "DP-2-1 connected" nil 'noerror)
-		   (search-forward "DP-2-2 connected" nil 'noerror))
-	      (progn
-		(start-process-shell-command
-		 "xrandr" nil "xrandr --output eDP-1 --off")
-		(start-process-shell-command
-		 "xrandr" nil "xrandr --output DP-2-1 --auto")
-		(start-process-shell-command
-		 "xrandr" nil "xrandr --output DP-2-2 --primary --auto --right-of DP-2-1")
-		(setq exwm-randr-workspace-output-plist '(0 "DP-2-1"
-							    1 "DP-2-1"
-							    2 "DP-2-2"
-							    3 "DP-2-1"
-							    4 "DP-2-2"
-							    5 "DP-2-1")))
-	    (if (progn
-		  (goto-char (point-min))
-		  (search-forward "HDMI-2 connected" nil 'noerror))
-		(progn
-		  (start-process-shell-command
+	  (cond ((and (search-forward "DP-2-1 connected" nil 'noerror)
+		      (search-forward "DP-2-2 connected" nil 'noerror))
+		 (start-process-shell-command
+		  "xrandr" nil "xrandr --output eDP-1 --off")
+		 (start-process-shell-command
+		  "xrandr" nil "xrandr --output DP-2-1 --auto")
+		 (start-process-shell-command
+		  "xrandr" nil "xrandr --output DP-2-2 --primary --auto --right-of DP-2-1")
+		 (setq exwm-randr-workspace-output-plist '(0 "DP-2-1"
+							     1 "DP-2-1"
+							     2 "DP-2-2"
+							     3 "DP-2-1"
+							     4 "DP-2-2"
+							     5 "DP-2-1"))
+		 (setup-keyboard 'gb))
+		((progn
+		   (goto-char (point-min))
+		   (search-forward "HDMI-2 connected" nil 'noerror))
+		 (start-process-shell-command
 		   "xrandr" nil "xrandr --output eDP-1 --off")
 		  (start-process-shell-command
 		   "xrandr" nil "xrandr --output HDMI-2 --auto")
 		  (setup-keyboard 'us))
-	      (setq exwm-randr-workspace-output-plist nil)
-	      (start-process-shell-command
- 	       "xrandr" nil "xrandr --output eDP-1 --auto")))
-	  (setup-keyboard 'gb)))
+		(t (setup-keyboard 'gb)))))
 
       ;; Avoid floating windows?
       (setq exwm-manage-force-tiling t)
