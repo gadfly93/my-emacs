@@ -724,6 +724,13 @@ characters."
 ; eww better render for google results
 (setq shr-color-visible-luminance-min 60)
 
+(defun setup-keyboard (layout)
+  "How do I like my keyboard."
+  (start-process-shell-command "xset" nil "xset r rate 180 45")
+  (start-process-shell-command
+   "setxkbmap" nil (concat "setxkbmap -layout "
+			   (symbol-name layout)
+			   " -option ctrls:nocaps")))
 ;; EXWM setup
 (if exwm-setup
     (progn
@@ -870,13 +877,11 @@ characters."
 		   "xrandr" nil "xrandr --output eDP-1 --off")
 		  (start-process-shell-command
 		   "xrandr" nil "xrandr --output HDMI-2 --auto")
-		  (start-process-shell-command
-		   "xrandr" nil "setxkbmap -layout us -option ctrl:nocaps"))
+		  (setup-keyboard 'us))
 	      (setq exwm-randr-workspace-output-plist nil)
 	      (start-process-shell-command
  	       "xrandr" nil "xrandr --output eDP-1 --auto")))
-	  (start-process-shell-command
-	   "setxkbmap" nil "setxkbmap -layout gb -option ctrl:nocaps")))
+	  (setup-keyboard 'gb)))
 
       ;; Avoid floating windows?
       (setq exwm-manage-force-tiling t)
