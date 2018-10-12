@@ -990,14 +990,18 @@ characters."
  	       2 3))
 (push 'uvm-err compilation-error-regexp-alist)
 
+(defun reset-compilation-shell-mode ()
+  (interactive)
+  (fundamental-mode)
+  (shell-mode)
+  (compilation-shell-minor-mode))
+
 (defun shell-clean-exec-last ()
   (interactive)
   (delete-region (point-min) (point-max))
   (comint-previous-input 1)
   (comint-send-input)
-  (fundamental-mode)
-  (shell-mode)
-  (compilation-shell-minor-mode))
+  (reset-compilation-shell-mode))
 
 ; (standard-display-ascii ?\t "\t")
 ; pkill -SIGUSR2 emacs
