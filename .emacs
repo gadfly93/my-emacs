@@ -46,6 +46,7 @@
 		     helm-gtags
 		     helm-swoop
 		     htmlize
+		     iedit
 		     let-alist
 		     magit
 		     magit-popup
