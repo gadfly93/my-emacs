@@ -697,11 +697,14 @@ characters."
 
 (defun setup-keyboard (layout)
   "How do I like my keyboard."
+  ;; Set repeat rate
   (start-process-shell-command "xset" nil "xset r rate 180 45")
-  (start-process-shell-command
-   "setxkbmap" nil (concat "setxkbmap -layout "
-			   (symbol-name layout)
-			   " -option ctrl:nocaps")))
+  ;; Set the main language layout
+  (call-process-shell-command(concat "setxkbmap -layout "
+				     (symbol-name layout)))
+  ;; Move Ctrl onto the CapsLock and make Ctrl Hyper
+  (start-process-shell-command "xmodmap" nil "xmodmap ~/.Xmodmap"))
+
 ;; EXWM setup
 (if exwm-setup
     (progn

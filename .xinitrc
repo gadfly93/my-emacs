@@ -37,9 +37,6 @@ export EDITOR="$VISUAL"
 # Set keyboard repeat rate
 xset r rate 180 45
 
-# Set capslock as ctrl
-setxkbmap -layout gb -option ctrl:nocaps
-
 # Programs to start upon startup
 xfce4-power-manager &
 # xfce4-panel&                    # Systray
