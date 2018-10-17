@@ -215,6 +215,9 @@
 (global-set-key (kbd "H-G") 'helm-grep-do-git-grep)
 (global-set-key (kbd "H-f") 'find-name-dired)
 (global-set-key (kbd "H-SPC") 'ace-jump-mode)
+(global-set-key (kbd "H-c") #'(lambda ()
+				(interactive)
+				(execute-kbd-macro (read-kbd-macro "C-c C-c"))))
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "H-<right>") 'winner-redo)
