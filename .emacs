@@ -101,7 +101,7 @@
 ;; Projectile is a project interaction library for Emacs.
 (require 'projectile)
 (projectile-global-mode)
-(global-set-key (kbd "C-M-x C-M-f") 'projectile-find-file)
+(global-set-key (kbd "H-x H-f") 'projectile-find-file)
 
 ;; in case enable automatic saving of the desktop when you exit Emacs, and
 ;; automatic restoration of the last saved desktop when Emacs starts
@@ -204,18 +204,21 @@
 (global-set-key (kbd "C-x C-m") 'mu4e)
 (global-set-key (kbd "C-c t") 'google-translate-at-point)
 (global-set-key (kbd "C-c T") 'google-translate-query-translate)
-(global-set-key (kbd "C-c f") 'find-name-dired)
+;; (global-set-key (kbd "C-c f") 'find-name-dired)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "C-x G") 'helm-grep-do-git-grep)
-(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "M-=") 'er/expand-region)
 (global-set-key (kbd "M--") 'er/contract-region)
 (global-set-key (kbd "<insert>") nil)
+(global-set-key (kbd "H-r") 'rgrep)
+(global-set-key (kbd "H-g") 'projectile-grep)
+(global-set-key (kbd "H-G") 'helm-grep-do-git-grep)
+(global-set-key (kbd "H-f") 'find-name-dired)
+(global-set-key (kbd "H-SPC") 'ace-jump-mode)
 
 ;; Shortcut for undo redo changes in the window configuration
-(global-set-key (kbd "C-c C-<right>") 'winner-redo)
-(global-set-key (kbd "C-c C-<left>") 'winner-undo)
+(global-set-key (kbd "H-<right>") 'winner-redo)
+(global-set-key (kbd "H-<left>") 'winner-undo)
 
 
 ;; Shortcut for changing font-size
