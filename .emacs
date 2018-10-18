@@ -451,37 +451,6 @@
   (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))
                                         ;(define-key (kbd "C-c C-t") 'python-add-breakpoint)
 
-(defun rulex-to-c ()
-  (interactive)
-  (beginning-of-buffer)
-  (replace-regexp "AND" "&&")
-  (beginning-of-buffer)
-  (replace-regexp "IF" "if")
-  (beginning-of-buffer)
-  (replace-regexp "THEN" "")
-  (beginning-of-buffer)
-  (replace-regexp "AND" "&&")
-  (beginning-of-buffer)
-  (replace-regexp "([0-9.,) ]+$" ";")
-  (beginning-of-buffer)
-                                        ;  (search-forward-regexp "[0-9.]+ [<=>]+ [a-zA-z0-9]+ [<=>]+ [0-9.]+")
-                                        ;  (search-backward-regexp " [a-zA-Z0-9]+ ")
-                                        ;  (mark-word)
-                                        ;  (query-replace-regexp)
-                                        ;  (kill-region)
-                                        ;  (yank)
-                                        ;  (insert "&&")
-  (highlight-regexp "[0-9.]+ [<=>]+ [a-zA-z0-9]+ [<=>]+ [0-9.]+")
-  )
-
-
-(defun copy-android-scripts ()
-  (interactive)
-  (save-buffer)
-  (shell-command (concat "adb push " buffer-file-name " /mnt/sdcard/sl4a/scripts/project/"))
-  )
-
-
 (server-start)
 
 (fset 'mem-expl
