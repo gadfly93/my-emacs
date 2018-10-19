@@ -209,7 +209,7 @@
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "M-=") 'er/expand-region)
 (global-set-key (kbd "M--") 'er/contract-region)
-(global-set-key (kbd "<insert>") nil)
+(global-set-key (kbd "<insert>") 'undo-tree-undo)
 (global-set-key (kbd "H-r") 'rgrep)
 (global-set-key (kbd "H-g") 'projectile-grep)
 (global-set-key (kbd "H-G") 'helm-grep-do-git-grep)
@@ -222,7 +222,6 @@
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "H-<right>") 'winner-redo)
 (global-set-key (kbd "H-<left>") 'winner-undo)
-
 
 ;; Shortcut for changing font-size
 (define-key global-map (kbd "C-1") 'text-scale-decrease)
