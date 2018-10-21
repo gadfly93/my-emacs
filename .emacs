@@ -216,6 +216,7 @@
 (global-set-key (kbd "H-f") 'find-name-dired)
 (global-set-key (kbd "H-SPC") 'ace-jump-mode)
 (define-key key-translation-map (kbd "H-c") (kbd "C-c C-c"))
+(global-set-key (kbd "H-l") 'list-bookmarks)
 
 ;; Shortcut for undo redo changes in the window configuration
 (global-set-key (kbd "H-<right>") 'winner-redo)
